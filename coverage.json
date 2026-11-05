@@ -1,17 +1,17 @@
 {
-  "articles": 247,
-  "configs": 424,
-  "choices": 3322,
+  "articles": 250,
+  "configs": 421,
+  "choices": 3314,
   "groups": 17,
-  "images": 190,
+  "images": 354,
   "itemAudit": {
-    "version": "2.8.14.97.4",
+    "version": "2.8.14.98.2",
     "articles": 59,
     "items": 57,
     "missing": []
   },
   "entityAudit": {
-    "version": "2.8.14.97.4",
+    "version": "2.8.14.98.2",
     "articles": 67,
     "characters": 25,
     "buildings": 22,
@@ -19,13 +19,13 @@
     "missing": []
   },
   "lifeAudit": {
-    "version": "2.8.14.97.4",
+    "version": "2.8.14.98.2",
     "articles": 48,
     "food": 15,
     "creatures": 33,
     "missing": []
   },
-  "notedSettings": 424,
+  "notedSettings": 421,
   "implementationDifferences": [
     {
       "key": "Shadow Prefab Setting",

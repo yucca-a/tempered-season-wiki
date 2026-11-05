@@ -9,8 +9,8 @@ for(const entry of await fs.readdir(out,{withFileTypes:true}))if(entry.isFile()&
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const rawValue=v=>typeof v==='string'?`"${v}"`:String(v);
 const href=id=>`${id}.html`;
-const versions=['2.8.14.97.4','2.8.14.97.3','2.8.14.97.2','2.8.14.97.1','2.8.14.97','2.8.14.96.1','2.8.14.96'];
-const releaseTitles=['穿越机制、性能优化与陷阱必中','多人穿越与交互修复','沃尔特弹弓权限修正','弹弓崩溃热修','夜视、炮塔与穿越更新','淬炼之季更名','战斗机制与角色修复'];
+const versions=['2.8.14.98.2','2.8.14.98.1','2.8.14.98','2.8.14.97.4','2.8.14.97.3','2.8.14.97.2','2.8.14.97.1','2.8.14.97','2.8.14.96.1','2.8.14.96'];
+const releaseTitles=['世界协同、巨兽摧毁与岛屿冒险修复','角色夜视合并、暗影分身与兼容修复','游戏内 Wiki、角色修复与寒霜美术更新','穿越机制、性能优化与陷阱必中','多人穿越与交互修复','沃尔特弹弓权限修正','弹弓崩溃热修','夜视、炮塔与穿越更新','淬炼之季更名','战斗机制与角色修复'];
 await fs.mkdir(path.join(root,'releases'),{recursive:true});
 for(const [i,v] of versions.entries()){
  const file=`update-notes-${v}.txt`,copy=path.join(root,'releases',file);
@@ -34,25 +34,35 @@ const counts={articles:articles.length,configs:configs.length,choices:configs.re
 const catName=id=>categories.find(c=>c.id===id)?.name??id;
 const symbols={search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',close:'<path d="m6 6 12 12M6 18 12-12"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 1.5 1.5M5 19l1.5-1.5M17.5 6.5 1.5-1.5"/>',arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',link:'<path d="m9 15 6-6M8 16l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M16 8l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(0 -1) scale(.92)"/>',star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',book:'<path d="M12 6v15M12 6C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Z"/>',external:'<path d="M14 4h6v6M20 4 10 14M10 4H4v16h16v-6"/>'};
 const icon=(name,size=18)=>`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[name]??symbols.book}</svg>`;
-const iconTerms=Object.keys(iconLabels).filter(t=>t.length>1&&iconManifest[iconLabels[t]]).sort((a,b)=>b.length-a.length);
+for(const [term,key] of Object.entries(iconLabels)){
+ if(!iconManifest[key])throw Error('Missing icon '+key+' for '+term);
+}
+const iconTerms=Object.keys(iconLabels).filter(t=>t.length>1).sort((a,b)=>b.length-a.length);
 const termRegex=new RegExp(iconTerms.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'g');
 const termTargets=new Map();
 for(const term of iconTerms){const a=articles.find(a=>a.title===term)??articles.find(a=>a.id.startsWith('role-')&&a.title.startsWith(term+' ·'))??articles.find(a=>a.title.startsWith(term+' ·')||a.title.startsWith(term+'与'));if(a)termTargets.set(term,a.id);}
-function rich(text,self=''){
+function rich(text,self='',linkTerms=true){
  let last=0,html='';text=String(text??'');
- for(const match of text.matchAll(termRegex)){
-  html+=esc(text.slice(last,match.index));const term=match[0],asset=iconManifest[iconLabels[term]],target=termTargets.get(term);
-  const label=`<img class="inline-icon" src="${asset.path}" alt="" width="24" height="24" loading="lazy">${esc(term)}`;
+ // Only decorate one-character labels such as 冰 when the cell names the item.
+ const standalone=/^([^\s])(?:\s*[×x]?\s*\d+(?:\s*[个块份])?)?$/u.exec(text);
+ const matches=standalone&&Object.hasOwn(iconLabels,standalone[1])
+  ?[{0:standalone[1],index:0}]:text.matchAll(termRegex);
+ for(const match of matches){
+  html+=esc(text.slice(last,match.index));const term=match[0],asset=iconManifest[iconLabels[term]],target=linkTerms&&termTargets.get(term);
+  const label=`${esc(term)}<img class="inline-icon" src="${asset.path}" alt="" width="24" height="24" loading="lazy">`;
   html+=target&&target!==self?`<a class="term-link" href="${href(target)}">${label}</a>`:`<span class="item-term">${label}</span>`;last=match.index+term.length;
  }return html+esc(text.slice(last));
 }
-function articleIcon(a){if(a.icon&&iconManifest[a.icon])return iconManifest[a.icon].path;const term=iconTerms.find(t=>a.title.includes(t));return term?iconManifest[iconLabels[term]].path:null;}
+function articleIcon(a){
+ const term=iconTerms.find(t=>a.title.startsWith(t))??iconTerms.find(t=>a.title.includes(t));
+ return iconManifest[a.icon??iconLabels[a.title]??iconLabels[term]]?.path??null;
+}
 const articleLink=id=>{const a=articleMap.get(id);if(!a)throw Error('Missing linked article '+id);return `<a href="${href(id)}">${esc(a.title)} ${icon('arrow',13)}</a>`;};
 function configLink(key){const c=configMap.get(key);if(!c)throw Error('Missing config '+key);return `<a href="settings.html#${c.id}">${esc(c.label)}</a>`;}
 function optionSummary(c){const opt=defaultChoice(c);return choiceText(opt)+(c.options.filter(o=>o.label===opt?.label).length>1&&opt?.description?' · '+opt.description:'');}
 function sectionHTML(s,index,a,continuous=false){
  const level=continuous?3:2,id=`${a.id}-s${index+1}`;
- return `<section class="article-section" id="${id}"><h${level}><a href="#${id}">${esc(s.title)}<span class="anchor-hash">#</span></a></h${level}>${s.callout?`<div class="callout">${rich(s.callout,a.id)}</div>`:''}${(s.paragraphs??[]).map(p=>`<p>${rich(p,a.id)}</p>`).join('')}${s.table?`<div class="table-wrap" tabindex="0" role="region" aria-label="${esc(s.title)}"><table><thead><tr>${s.table.headers.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map(c=>`<td>${rich(c,a.id)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.list?.length?`<ul>${s.list.map(p=>`<li>${rich(p,a.id)}</li>`).join('')}</ul>`:''}${s.links?`<div class="related-links">${s.links.map(articleLink).join('')}</div>`:''}${s.externalLinks?`<div class="related-links">${s.externalLinks.map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ${icon('external',13)}</a>`).join('')}</div>`:''}</section>`;
+ return `<section class="article-section" id="${id}"><h${level}><a href="#${id}">${rich(s.title,a.id,false)}<span class="anchor-hash">#</span></a></h${level}>${s.callout?`<div class="callout">${rich(s.callout,a.id)}</div>`:''}${(s.paragraphs??[]).map(p=>`<p>${rich(p,a.id)}</p>`).join('')}${s.table?`<div class="table-wrap" tabindex="0" role="region" aria-label="${esc(s.title)}"><table><thead><tr>${s.table.headers.map(h=>`<th scope="col">${rich(h,a.id,false)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map(c=>`<td>${rich(c,a.id)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.list?.length?`<ul>${s.list.map(p=>`<li>${rich(p,a.id)}</li>`).join('')}</ul>`:''}${s.links?`<div class="related-links">${s.links.map(articleLink).join('')}</div>`:''}${s.externalLinks?`<div class="related-links">${s.externalLinks.map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ${icon('external',13)}</a>`).join('')}</div>`:''}</section>`;
 }
 function configStrip(a){
  if(!a.configKeys.length)return '';

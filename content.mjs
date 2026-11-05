@@ -1,4 +1,4 @@
-export const meta = { version: '2.8.14.97.4', date: '2026-11-04', workshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3832182265', originalWorkshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2886753796' };
+export const meta = { version: '2.8.14.98.2', date: '2026-11-05', workshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3832182265', originalWorkshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2886753796' };
 export const categories = [
   { id: 'start', name: '开始游玩', symbol: '01', description: '了解模组，找到适合自己的起点。' },
   { id: 'mechanics', name: '核心机制', symbol: '02', description: '战斗、生存与两个世界之间的规则。' },
@@ -10,25 +10,26 @@ export const categories = [
 export const articles = [
   { id: 'getting-started', title: '初入淬炼之季', category: 'start', tag: '入门', summary: '模组是什么、从哪里订阅，以及第一次开荒前需要了解的事。', keywords: '新手 安装 下载 开荒 介绍', source: ['README.md', 'workshop/workshop-description.txt', 'content/modinfo.lua'], sections: [
     { title: '淬炼之季是什么', paragraphs: ['淬炼之季是基于《为爽而虐》制作的二改模组。在原模组的玩法基础上，调整角色、装备、建筑、Boss 与生存规则，并修复游玩中遇到的问题。', '随机生物大小、暗影世界、简单模式、困难模式可以分别配置。简单模式和困难模式也可以同时开启：先选择需要的便利功能，再调整挑战内容。'], externalLinks:[{label:'《为爽而虐》原作工坊',url:'https://steamcommunity.com/sharedfiles/filedetails/?id=2886753796'}] },
-    { title: '订阅与配置', list: ['打开本 Wiki 的“创意工坊”链接，订阅淬炼之季的工坊条目。手机端可在右上角页面操作菜单中找到入口。', '在世界的模组设置中启用本模组，查看简单模式、困难模式及各子项。', '使用地面与洞穴时，两层的穿越机制设置应保持一致。', '旧世界会保留已保存的明确配置；更新模组不会自动把它们换成新的默认值。'] },
+    { title: '订阅与配置', list: ['打开本 Wiki 的“创意工坊”链接，订阅淬炼之季的工坊条目。手机端可在右上角页面操作菜单中找到入口。', '在世界的模组设置中启用本模组，查看简单模式、困难模式及各子项。', '使用世界协同时，所有分片的穿越机制设置应保持一致。', '多数配置保留旧世界的选择。升级到 2.8.14.98.2 时，穿越机制和巨兽摧毁有专门的旧档迁移规则。'] },
+    { title: '在游戏里打开 Wiki', paragraphs: ['在游戏控制台输入“/wiki”并回车，或点击聊天区的小扫把，在模组面板选择“打开淬炼之季 Wiki”。网页会在系统默认浏览器中打开。'], links: ['mod-interface'] },
     { title: '先了解这三件事', links: ['configuration', 'combat', 'world-exchange'], paragraphs: ['先确认房间设置，再查看战斗与穿越规则。不同开关会显著改变体验，其他房间的打法不一定适用于你的世界。'] },
     { title: '资料覆盖范围', paragraphs: ['本 Wiki 整理了淬炼之季的核心机制、角色、道具、建筑、食物和生物改动，并关联当前版本的全部配置。它侧重模组带来的变化；原版游戏基础知识请结合饥荒联机版资料查阅。', '远古宝珠目前只有设计草案，不属于已发布内容。未实装的设想不会作为现有玩法写入词条。'] },
   ] },
   { id: 'configuration', title: '模组设置速查', category: 'start', tag: '配置', summary: '核心开关的默认值、生效条件与旧存档设置。', keywords: '配置 设置 默认 开关 简单模式 困难模式', source: ['content/modinfo.lua', 'development/gameplay-options-2026-11-04.txt'], sections: [
     { title: '先检查上级开关', paragraphs: ['多数子选项需要其所属模式和分类总开关一起开启。某个选项显示为启用，并不代表它在当前房间已经生效。明确标注“独立开关”的功能另行判断。'] },
     { title: '常用设置', table: { headers: ['选项', '当前默认', '生效条件 / 说明'], rows: [
-      ['战斗险境', '锋芒渐敛', '困难模式 + 角色改动'], ['巨兽装甲', '遇强则坚', '困难模式 + 怪物改动'], ['穿越机制', '双界协同', '需开启容器按钮；地面与洞穴档位一致'], ['陷阱必中', '开启', '简单模式；可单独关闭'], ['怪物角色夜视', '开启', '独立开关；不依赖模式或角色总开关'], ['沃托姆夜视优化', '开启', '独立开关；通用怪物夜视也可能启用该优化'], ['维希：移除幽闭恐惧', '开启', '简单模式 + 角色加强；仅启用永不妥协时显示'], ['维希（Wixie）', '开启', '困难模式 + 角色改动；仅启用永不妥协时显示'], ['沃尔特可使用 Wixie 弹弓', '关闭', '只控制维希专属弹弓的使用权限'],
+      ['战斗险境', '锋芒渐敛', '困难模式 + 角色改动'], ['巨兽装甲', '遇强则坚', '困难模式 + 怪物改动'], ['穿越机制', '世界协同（实验性）', '需开启容器按钮；所有分片档位一致'], ['巨兽摧毁', '80%', '旧档中的 100% 自动按 80% 生效，可重新选回 100%'], ['陷阱必中', '开启', '简单模式；可单独关闭'], ['怪物角色夜视', '开启', '独立开关；不依赖模式或角色总开关'], ['沃托姆夜视优化', '开启', '仅启用永不妥协正式版或测试版时显示；怪物角色夜视也可触发'], ['维希：移除幽闭恐惧', '开启', '简单模式 + 角色加强；仅启用永不妥协时显示'], ['维希（Wixie）', '开启', '困难模式 + 角色改动；仅启用永不妥协时显示'], ['沃尔特可使用维希弹弓', '开启', '仅启用永不妥协时显示；沃尔特使用原版弹药'], ['永不妥协补丁', '开启', '需要加载永不妥协；旧有启用档统一视为开启'],
     ] } },
-    { title: '旧存档为什么不同', paragraphs: ['新建或未明确配置的房间采用当前默认值；旧存档保留原先的选择。例如，旧房间可能仍使用传统战斗险境或传统巨兽装甲。请在房间配置中确认实际档位。', '游戏内查看模组配置时，优先展示当前世界实际设置，包括已关闭项目和非默认值。'] },
-    { title: '进一步阅读', links: ['combat', 'armor', 'world-exchange', 'night-vision', 'wixie'] },
+    { title: '旧存档为什么不同', paragraphs: ['多数明确保存的设置会保留，例如传统战斗险境或传统巨兽装甲。升级时，旧穿越设置默认迁移到世界协同，旧版 100% 巨兽摧毁迁移到 80%。升级后仍可手动调整。', '游戏内查看模组配置时，优先展示当前世界实际设置，包括已关闭项目和非默认值。'] },
+    { title: '进一步阅读', links: ['combat', 'armor', 'world-exchange', 'mechanic-epic-ruin', 'night-vision', 'wixie', 'um-item-compatibility'] },
   ] },
   { id: 'faq', title: '常见问题', category: 'start', tag: '帮助', summary: '设置不生效、穿越等待、夜视和旧版本说明。', keywords: 'FAQ 问答 修复 问题', source: ['README.md', 'content/modinfo.lua', 'workshop/update-notes-2.8.14.97.txt'], sections: [
     { title: '为什么打开了子选项，效果还是没有出现？', paragraphs: ['检查对应的简单 / 困难模式与分类总开关。维希相关选项还需要当前启用永不妥协正式版、测试版或对应本地副本。'], links: ['configuration'] },
-    { title: '穿越提示等待，是需要其他玩家同意吗？', paragraphs: ['双界协同由地面与洞穴自动确认，无需其他玩家同意。全新世界等待另一层连接时，不会因此锁住角色移动；异常恢复时的保护流程仍然保留。'], links: ['world-exchange'] },
+    { title: '穿越提示等待，是需要其他玩家同意吗？', paragraphs: ['世界协同由参与的世界分片自动确认，无需其他玩家同意。全新世界等待分片连接时可以正常移动，异常回档时仍会进入恢复保护。'], links: ['world-exchange'] },
     { title: '有夜视就一定不会被黑暗伤害吗？', paragraphs: ['不能跨配置这样推断。“漫漫长夜”的危险经典档保留夜视不再安全的规则；新增怪物角色夜视不额外授予查理免疫。'], links: ['night-vision'] },
     { title: '为什么关闭 Wixie 弹弓选项后，沃尔特仍能使用原版弹弓？', paragraphs: ['这是当前版本的预期行为。该开关只控制维希专属弹弓，沃尔特的原版与改装弹弓使用权限不受它影响。'], links: ['walter'] },
     { title: '参考 Wiki 的内容能直接套用吗？', paragraphs: ['本分支持续独立调整，其他分支的数值、默认配置与新机制可能不同。遇到不一致时，按当前淬炼之季版本和房间实际设置判断。'] },
-    { title: '远古宝珠已经加入了吗？', paragraphs: ['没有。当前项目仅有设计草案，2.8.14.97.4 未包含远古宝珠玩法。'] },
+    { title: '远古宝珠已经加入了吗？', paragraphs: ['没有。当前项目仅有设计草案，当前发布版未包含远古宝珠玩法。'] },
   ] },
   { id: 'combat', title: '战斗险境 · 锋芒渐敛', category: 'mechanics', tag: '战斗', summary: '高额增伤逐渐递减，普通伤害与位面伤害分别结算。', keywords: '伤害 倍率 增伤 沃尔夫冈 沃托姆 拳击袋', source: ['development/战斗险境与巨兽装甲_实装说明.md', 'workshop/update-notes-2.8.14.96.txt'], sections: [
     { title: '生效条件', callout: '困难模式 → 角色改动 → 战斗险境：锋芒渐敛。当前默认档位；旧世界的明确选择不会自动替换。' },
@@ -44,12 +45,13 @@ export const articles = [
     { title: '火药与传统装甲', paragraphs: ['火药仍保留原版爆炸抗性，同时受到单次上限与动态装甲约束。当前没有额外加入“爆炸记忆”机制。', '遇强则坚不附带传统装甲的固定无敌期、回血或陨石。传统档位保留其原有规则。'] },
     { title: '保存与适用范围', paragraphs: ['支持保存读档及已适配 Boss 的阶段继承。正常伤害结算会受到约束；直接设定生命值或强制击杀类效果不能等同于普通伤害。'], links: ['combat', 'configuration'] },
   ] },
-  { id: 'world-exchange', title: '穿越机制与双界协同', category: 'mechanics', tag: '探索', summary: '三档穿越方式、地面与洞穴的自动协调，以及回档恢复。', keywords: '穿越 末影箱 容器 双界协同 地面 洞穴 回档 存档 地图', source: ['content/modinfo.lua', 'workshop/update-notes-2.8.14.97.txt', 'workshop/update-notes-2.8.14.97.3.txt', 'workshop/update-notes-2.8.14.97.4.txt'], sections: [
-    { title: '三种穿越设置', table: { headers: ['档位', '说明'], rows: [['关闭', '关闭穿越功能；整理与收集另行配置。'], ['传统', '沿用为爽原有整箱交换方式和辅助暂停按钮。'], ['双界协同（默认）', '地面与洞穴自动协调交换，无需其他玩家同意；正常穿越不逐次存档。']] } },
-    { title: '使用条件', paragraphs: ['需要开启容器按钮，并使地面与洞穴使用相同的穿越档位。双界协同当前面向地面 + 洞穴的双层结构，不支持三层以上共同交换。', '交换过程保留锁箱、格位、堆叠、耐久与物品一致性检查。双方同时操作、短暂断线或单层重启时，会进行相应恢复处理。'] },
-    { title: '回档与异常恢复', callout: '异常恢复以双方最近可验证的共同保存点为准，可能撤销该保存点之后的游玩进度。', paragraphs: ['地面、洞穴与玩家状态需要恢复到一致状态，避免新旧进度混用。切换穿越档位不会跳过旧存档尚未完成的恢复保护。', '2.8.14.97.3 修复了回档后已探索地图丢失、多人进出洞穴后持续等待等问题，并减少回档后的不必要控制等待。'] },
-    { title: '当前版本的进入世界优化', paragraphs: ['新建或重新生成世界后，不再立即额外进行双层完整存档。首个保护快照在正常保存或首次穿越时建立。', '全新世界等待另一层连接时，不会因此锁住角色移动。旧快照恢复与存储错误保护依然有效。'] },
-    { title: '相关条目', links: ['containers', 'update-2-8-14-97-4', 'faq'] },
+  { id: 'world-exchange', title: '穿越机制与世界协同', category: 'mechanics', tag: '探索', summary: '三档穿越方式、多层世界自动协调，以及旧档迁移与回档恢复。', keywords: '穿越 末影箱 容器 世界协同 双界协同 多分片 地面 洞穴 回档 存档 地图', source: ['content/modinfo.lua', 'content/easy_other/containersort.lua', 'content/easy_other/worldexchangefast.lua', 'content/scripts/components/worldexchange2hm.lua', 'workshop/update-notes-2.8.14.98.2.txt'], sections: [
+    { title: '三种穿越设置', table: { headers: ['档位', '说明'], rows: [['关闭', '关闭穿越功能；整理与收集另行配置。'], ['传统', '沿用为爽原有整箱交换方式和辅助暂停按钮。'], ['世界协同（默认·实验性）', '自动发现并协调参与的分片，支持地面、洞穴及额外世界。常规穿越无需逐次完整存档。']] } },
+    { title: '使用条件', paragraphs: ['需要开启容器按钮，并在所有分片选择同一档位。世界协同仍处于实验阶段，配置说明建议在性能较高的主机或服务器上使用。', '交换过程保留锁箱、格位、堆叠、耐久与物品一致性检查。多个分片同时操作、短暂断线或单层重启时，会进行相应恢复处理。'] },
+    { title: '旧档迁移', paragraphs: ['升级到 2.8.14.98.2 后，旧存档中的传统与关闭档都会切换到世界协同，原双界协同档继续使用世界协同。希望继续使用原整箱交换的房间可重新选择“传统”，也可手动关闭。'] },
+    { title: '回档与异常恢复', callout: '异常恢复以参与分片最近可验证的共同保存点为准，可能撤销该保存点之后的游玩进度。', paragraphs: ['参与穿越的世界分片与玩家需要恢复到一致状态，避免新旧进度混用。切换穿越档位不会跳过旧存档尚未完成的恢复保护。', '2.8.14.98.2 修复回档、重登或等待分片同步时角色载入后可能无法移动的问题，也修复共同存档确认丢失及房主在洞穴退出、多分片同时关服时可能卡住的问题。'] },
+    { title: '当前版本的进入世界优化', paragraphs: ['新建或重新生成世界后，不再立即额外进行多分片完整存档。首个保护快照在正常保存或首次穿越时建立。', '全新世界等待其他分片连接时，不会因此锁住角色移动。旧快照恢复与存储错误保护依然有效。'] },
+    { title: '相关条目', links: ['containers', 'update-2-8-14-98-2', 'faq'] },
   ] },
   { id: 'skill-tree', title: '技能树与洞察点', category: 'mechanics', tag: '成长', summary: '按实际技能节点计算上限，避免满树后继续积累溢出经验。', keywords: '技能树 技能点 洞察点 经验 提示', source: ['workshop/update-notes-2.8.14.96.txt', 'content/modinfo.lua'], sections: [
     { title: '洞察点上限', paragraphs: ['启用技能点扩展时，洞察点上限按角色实际技能节点计算，避免固定上限与角色技能树不匹配。满树后不再继续累积溢出经验，无可用点时也不会继续给出相应提示。'] },
@@ -70,7 +72,7 @@ export const articles = [
     { title: '多人动作表现', paragraphs: ['弹弓动作速度按发射者选择配置，避免不同角色、不同饥饿值玩家之间互相影响动作时间线。'], links: ['walter'] },
   ] },
   { id: 'walter', title: '沃尔特 · 弹弓权限', category: 'characters', tag: '角色', summary: '原版、改装与维希专属弹弓的使用范围。', keywords: 'Walter 沃尔特 弹弓 装弹 蓄力 废料框架', source: ['workshop/update-notes-2.8.14.97.2.txt', 'workshop/update-notes-2.8.14.97.3.txt'], sections: [
-    { title: '开关只影响维希专属弹弓', paragraphs: ['“沃尔特可使用 Wixie 弹弓”默认关闭，只控制维希专属弹弓。沃尔特使用原版及改装弹弓时，无论该项是否开启，都应能正常装备、装弹和射击。'] },
+    { title: '开关只影响维希专属弹弓', paragraphs: ['“沃尔特可使用维希弹弓”默认开启，只控制维希专属弹弓。沃尔特使用原版及改装弹弓时，无论该项是否开启，都应能正常装备、装弹和射击。'] },
     { title: '永不妥协兼容', paragraphs: ['兼容正式版与测试版。已修复开启上述选项后原版弹弓误变近身推击的问题。', '2.8.14.97.3 修复废料框架弹弓及升级版的蓄力、松键发射问题，并补齐升级废料框架弹弓的普通射击权限。'] },
     { title: '相关条目', links: ['wixie', 'update-2-8-14-97-3'] },
   ] },
@@ -91,9 +93,10 @@ export const articles = [
     { title: '捕获时机', paragraphs: ['普通捕兽陷阱在开始合拢时立即结算有效目标的捕获，同时保留合拢动画，减少动画过程中目标逃离而抓空的情况。'] },
     { title: '保持原有的范围与消耗', paragraphs: ['捕获范围、耐久和掉落不变。“必中”指有效目标触发后的捕获时机，不表示可以捕捉任意生物，也不扩大捕获范围。'], links: ['configuration', 'update-2-8-14-97-4'] },
   ] },
-  { id: 'containers', title: '收集与容器整理', category: 'items', tag: '便利', summary: '整理按钮、制作材料补齐与穿越设置的关系。', keywords: '容器 整理 收集 制作 材料 箱子 存放', source: ['workshop/workshop-description.txt', 'content/modinfo.lua', 'workshop/update-notes-2.8.14.97.3.txt'], sections: [
+  { id: 'containers', title: '收集与容器整理', category: 'items', tag: '便利', summary: '整理按钮、制作材料补齐与穿越设置的关系。', keywords: '容器 整理 收集 制作 材料 箱子 存放', source: ['workshop/workshop-description.txt', 'content/modinfo.lua', 'content/easy_other/containersort.lua', 'workshop/update-notes-2.8.14.98.txt'], sections: [
     { title: '管理整理按钮', paragraphs: ['模组内置快捷存取与容器整理收纳功能。游戏内输入“显示整理”“隐藏整理”或“默认整理”管理整理按钮。', '容器整理收集按钮提供不同档位，可配置跨容器整理、锁定等功能，具体以房间设置为准。'] },
     { title: '制作材料按缺口补齐', paragraphs: ['右键收集制作材料时，按当前随身数量补齐本次制作缺少的部分，避免直接收来整组。已经带够材料后，再次右键才继续收集更多。'] },
+    { title: '懒人护符收集照明果实', paragraphs: ['手持懒人护符点击“收集”，身上已有同款时可以收集地上的发光浆果、闪电蓝莓、暗影蓝莓及各自的小型版本。其他存活玩家靠近果实时，护符会把果实留给他们照明。'] },
     { title: '穿越另行选择', paragraphs: ['穿越机制有独立三档设置；关闭穿越不等于关闭整理和收集。穿越本身需要开启容器按钮。'], links: ['world-exchange'] },
   ] },
   { id: 'frostjaw', title: '大霜鲨交易', category: 'items', tag: '交易', summary: '开启额外改动后，交易次数随 Boss 血量倍率增长。', keywords: '大霜鲨 鲨鱼 Frostjaw 交易 次数 BOSS', source: ['workshop/update-notes-2.8.14.96.txt'], sections: [

@@ -10,6 +10,17 @@ const pages=new Map(await Promise.all(html.map(async f=>[f.replaceAll('\\','/'),
 const paths=new Set(all.map(f=>f.replaceAll('\\','/'))),errors=[];let links=0;
 function checkLink(file,value){if(/^(https?:|mailto:|data:)/.test(value))return;links++;const url=new URL(value,`https://wiki.example/${file}`),target=decodeURIComponent(url.pathname.slice(1));if(!paths.has(target))errors.push(`${file}: missing ${value}`);if(url.hash&&pages.has(target)&&!pages.get(target).includes(`id="${decodeURIComponent(url.hash.slice(1))}"`))errors.push(`${file}: missing anchor ${value}`);}
 for(const [file,text] of pages){const ids=[...text.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);if(new Set(ids).size!==ids.length)errors.push(`${file}: duplicate ID`);if((text.match(/<h1(?:\s[^>]*)?>/g)||[]).length!==1)errors.push(`${file}: expected one h1`);for(const [,value] of text.matchAll(/(?:href|src)="([^"]+)"/g))checkLink(file,value);}
+for(const [file,term,asset] of [
+ ['thulecite-club.html','远古铥矿盔甲','armorruins'],
+ ['thulecite-club.html','铥矿','thulecite'],
+ ['equipment-repair.html','铥矿甲','armorruins'],
+ ['equipment-repair.html','金块','goldnugget'],
+ ['frost-shrine.html','冰','ice'],
+]){
+ if(!pages.get(file)?.includes(`${term}<img class="inline-icon" src="assets/icons/${asset}.png"`)){
+  errors.push(`${file}: incorrect or missing icon for ${term}`);
+ }
+}
 for(const file of ['app.js','theme.js','search-index.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
 const context={window:{}};vm.runInNewContext(await fs.readFile(path.join(root,'search-index.js'),'utf8'),context);
 for(const a of context.window.WIKI_INDEX){checkLink('index.html',a.href);if(!a.text||!a.title)errors.push('Invalid search entry '+a.id);}

@@ -99,7 +99,6 @@ role('webber','韦伯','webber_easy','吃肉招募、涂鸦升级、蜘蛛容器
  ['Webber Murder Spider Get Switcherdoodle','谋杀获得涂鸦','谋杀非黑蜘蛛有对应涂鸦产出，饥饿条件超过149，默认消耗75饥饿。'],
  ['Webber 200 Sanity','理智上限','理智上限提高为200。'],
  ['Webber Right Self Overcoming Arachnophobia','右键自身','默认档1施放蛛网恐惧，冷却15秒；档2打开3×3蜘蛛专用容器，内部蜘蛛缓慢恢复新鲜度；档0关闭。'],
- ['Webber Night Version','稳定夜视','黄昏、夜晚或洞穴中稳定夜视，不受夜间理智流失影响；危险经典长夜档才附带对应微光。'],
  ['Webber Uprade SpiderDen SpiderQueen','三级蜘蛛巢','允许三级蜘蛛巢升级为蜘蛛女王；困难蜘蛛巢规则可能要求喂食升级。'],
  ['Spider Help Work','蜘蛛工作','蜘蛛随从可协助相应工作。'],
  ['Hat Trick','帽子戏法','通过佩戴帽子触发韦伯专属能力，当前不推广到全角色。']
@@ -128,7 +127,7 @@ role('walter','沃尔特','walter_easy','沃比收放、骑乘保护与弹弓动
  ['Walter Hide Woby','收回沃比','Ctrl+右键自身收回沃比。'],
  ['Walter Ride Better','骑乘保护','沃比可帮助闪避攻击，有冷却；从坐骑摔下时给予短暂无敌。'],
  ["Walter press Ctrl can't Dodge",'Ctrl动作取舍','调整按Ctrl时滑铲与原有右键动作的优先关系；永不妥协弹弓配置可能限制装备弹弓时的冲刺。'],
- ['Walter Use Wixie Slingshot','维希专属弹弓权限','默认关闭，独立于简单模式与沃尔特总开关，仅控制维希专属弹弓。原版及改装弹弓始终按沃尔特原生权限使用。']
+ ['Walter Use Wixie Slingshot','维希专属弹弓权限','默认开启，独立于简单模式与沃尔特总开关，仅控制维希专属弹弓。原版及改装弹弓始终按沃尔特原生权限使用。']
 ],[], 'walter','延长弹弓蓄力过程，并调整永不妥协部分特殊弹药。当前与维希配置分离，各自按发射者读取选项。');
 role('wortox','沃拓克斯','wortox_easy','灵魂容量、免费跳跃与高三维增伤。',[
  ['Wortox Eat Food Normal','食物吸收','食物生命、饥饿、理智吸收倍率均设为0.75。'],
@@ -158,7 +157,6 @@ role('wurt','沃特','wurt_easy','招募鱼人、鱼类交易、肉食与鱼人�
  ['Trade Fish with Merm','普通鱼人交易','普通鱼人每天首次可进行类似鱼人王的海鱼交易，并允许给予武器。'],
  ['Wurt can eat any','食用肉类','允许吃肉类，但相关收益按30%处理。'],
  ['Wurt Can Craft Book Fish','鱼类之书','允许制作鱼类之书。'],
- ['Wurt Night Version','稳定夜视','黄昏、夜晚与洞穴中稳定夜视，保留夜间理智保护；危险经典长夜档另行补光。'],
  ['wurt_merm_stronger','堡垒与守卫强化','实际属于困难角色脚本：堡垒材料为10木板、2触手皮、2长矛、2猪皮；无王守卫600生命/40伤害，有王守卫800生命/70伤害。']
 ],[sec('堡垒配置的实际入口',['“鱼人堡垒材料增加”虽然显示在简单模式角色区，当前执行位置位于困难模式的沃特改动中。需要困难模式、困难角色总开关与沃特困难选项。'])], 'wurt','鱼人王建造阶段额外需要一把刺耳三叉戟。“鱼人堡垒材料增加”开启时还强化鱼人守卫；月灵守卫额外生命200、反伤50，鱼人王三叉戟三连击的每段伤害倍率设为1。');
 role('wanda','旺达','wanda_easy','不老表、警钟、倒走动作与自助复活。',[
@@ -180,7 +178,6 @@ role('wonkey','芜猴','wonkey_easy','开局可选、短助跑、投掷便便与
  ['Start With Wonkey Disable Transform','直接选择芜猴','允许开局选择芜猴，诅咒饰品不再导致相应自动变身，理智采用威尔逊基础上限。'],
  ['Wonkey Run Wait Time','助跑时间','当前默认1秒后奔跑；提示中写的0.5秒不是默认值。步行移速惩罚移除，奔跑饥饿倍率设为0.5。'],
  ['Wonkey Right Self summon the powder_monkey','海棠小分队','右键自身召唤粉末猴小队作战，相关召唤会消耗饥饿。'],
- ['Wonkey Night Version','稳定夜视','黄昏、夜晚或洞穴稳定夜视，并保护夜间理智；危险经典长夜档单独处理微光。'],
  ['Wonkey Attack Steal item','攻击偷物','配置定义与实际读取键的Item大小写不同；当前不能保证打开此项会加载偷物能力。'],
  ['Wonkey Toss Poop','投掷便便','芜猴可投掷便便，涉及攻击者与目标理智变化。'],
  ['Wonkey Remove Curse','食物消除诅咒','吃香蕉或浆果有机会消除诅咒饰品；由他人喂食时，可为喂食者处理诅咒。']
@@ -188,7 +185,7 @@ role('wonkey','芜猴','wonkey_easy','开局可选、短助跑、投掷便便与
 role('wathom','沃托姆','other_role_easy','永不妥协的能量、激活伤害和承伤调整。',[
  ['wathom upgrade','激活与能量','默认档2为激活伤害4倍、承伤2.5倍；档1为2倍伤害、1.6倍承伤。若困难模式或困难角色总开关未启用，则统一采用4倍伤害、1.6倍承伤。']
 ],[sec('能量与生存',['需要永不妥协及其他角色总开关。饥饿上限设为150，关闭额外护甲损伤；攻击或受击后20秒内暂停对应脱战恢复过程。退出激活时把能量调至20%，对应虚弱阶段约7.5秒。','读档后的能量恢复与稳定夜视是不同功能。夜视有独立开关，不应把关闭“其他角色总开关”等同于关闭沃托姆夜视。'])]);
-articles.push({id:'role-wixie',title:'维希 · 角色改动',category:'characters',tag:'永不妥协',summary:'幽闭恐惧与弹弓调整分别配置，不再依附沃尔特。',keywords:'维希 Wixie 幽闭 弹弓',source:['content/modinfo.lua','content/modmain.lua','content/easy_role/wixie_easy.lua','content/role/walter.lua','development/维希独立配置与幽闭恐惧兼容.md'],configKeys:['Wixie No Claustrophobia','wixie'],sections:[sec('移除幽闭恐惧',['默认开启，需简单模式与简单角色总开关，并且当前启用永不妥协。清除幽闭积累、恐慌及相关装备不适、视觉和声音效果；不依赖沃尔特选项。']),sec('弹弓困难调整',['困难模式、困难角色总开关及“维希”选项一起启用时，独立调整弹弓蓄力、普通动作减速及特殊弹药。基础动作系数为1.6，沃尔特对应为1.7；随后还结合发射者自身饥饿状态。']),sec('显示与权限',['维希设置仅在启用永不妥协正式版、测试版或对应本地副本时显示。沃尔特使用维希专属弹弓的权限是另一个默认关闭的开关，不限制维希使用自己的武器。'])]});
+articles.push({id:'role-wixie',title:'维希 · 角色改动',category:'characters',tag:'永不妥协',summary:'幽闭恐惧与弹弓调整分别配置，不再依附沃尔特。',keywords:'维希 Wixie 幽闭 弹弓',source:['content/modinfo.lua','content/modmain.lua','content/easy_role/wixie_easy.lua','content/role/walter.lua','development/维希独立配置与幽闭恐惧兼容.md'],configKeys:['Wixie No Claustrophobia','wixie'],sections:[sec('移除幽闭恐惧',['默认开启，需简单模式与简单角色总开关，并且当前启用永不妥协。清除幽闭积累、恐慌及相关装备不适、视觉和声音效果；不依赖沃尔特选项。']),sec('弹弓困难调整',['困难模式、困难角色总开关及“维希”选项一起启用时，独立调整弹弓蓄力、普通动作减速及特殊弹药。基础动作系数为1.6，沃尔特对应为1.7；随后还结合发射者自身饥饿状态。']),sec('显示与权限',['维希设置仅在启用永不妥协正式版、测试版或对应本地副本时显示。沃尔特使用维希专属弹弓的权限是另一个默认开启的开关，不限制维希使用自己的武器。'])]});
 function mechanic(id,title,summary,keys,sections,sources) { articles.push({id,title,category:'mechanics',tag:'机制详解',summary,keywords:title+' '+keys.join(' '),source:['content/modinfo.lua','content/modmain.lua',...sources],configKeys:keys,sections}); }
 mechanic('survival-danger','生存险境','扩大生命损失、降低治疗，并改变制作代价和上限恢复。',['role_battle'],[sec('档位与条件',['默认-1档为伤害增加20%、正向回血降低20%；-2档为33%。需要困难模式与困难角色总开关。']),sec('生命制作成本',['制作栏消耗生命不会再乘承伤倍率，但会额外增加相当于该生命成本一半的生命上限惩罚。年龄角色按相应年龄伤害路径处理。']),sec('恢复上限',['成功使用治疗道具可恢复一部分生命上限，当前实现不要求先把生命回满。犁地草膏改为三种杂草各1加木炭1，移除新鲜度，并额外恢复5%生命上限。强心针配方额外需要2个蚊子血囊。'])],['content/role/health.lua']);
 mechanic('sanity-danger','理智险境与饱食溢出','受伤时同步理智，吃撑也有代价。',['role_sanity'],[sec('受伤同步',['默认-2档按生命损失等量扣理智；-1档为一半。理智上限小于生命上限时按两者比例缩放。普通理智模式中，理智比例已经低于生命比例时不继续触发该次同步；启蒙状态使用对应反向处理。']),sec('饱食溢出',['食物增加的饥饿超过当前可用上限时，溢出值的一半扣作理智；启蒙时方向反转。骑乘沃比时，溢出值优先流向沃比饥饿，过量可能导致被甩下。']),sec('光环与制作',['同种单位的理智光环不简单堆叠，取同类型的较强贡献。部分制作造成的理智损失还会留下120秒的理智上限惩罚。'])],['content/role/sanity.lua']);
@@ -219,7 +216,7 @@ note('Wonkey Run Wait Time','当前默认1秒。实现直接采用所选秒数�
 note('Wonkey Attack Steal item','选项定义的item是小写，但当前实现读取的是Item。两个键并不相同，因此不能把这一默认开启项视作已正常加载的偷物能力。',[...easy,'wonkey_easy'],'inactive');
 note('Wigfrid Ride Right Dodge','当前代码实际读取Wilson Right Dodge来决定冷却；本项只控制是否添加骑乘冲刺。默认一般为1秒，调整本项数值不一定改变冷却。',[...easy,'wigfrid_easy'],'mismatch');
 note('Walter Right Dodge Longer','实际冷却为配置值+1；默认配置2对应3秒。还会把沃比两种形态的饥饿上限改用牛的基准值。',[...easy,'walter_easy'],'mismatch');
-note('Walter Use Wixie Slingshot','默认关闭，仅控制沃尔特使用维希专属弹弓。该权限在公共兼容入口执行，不依赖简单模式、沃尔特角色总开关或弹弓优化；原版及改装弹弓不受影响。',[]);
+note('Walter Use Wixie Slingshot','默认开启，仅控制沃尔特使用维希专属弹弓。该权限在公共兼容入口执行，不依赖简单模式、沃尔特角色总开关或弹弓优化；原版及改装弹弓不受影响。',[]);
 note('wurt_merm_stronger','实际在困难沃特入口读取：堡垒10木板+2触手皮+2长矛+2猪皮，同时调整鱼人守卫数值。界面所在的简单角色总开关不是它的加载条件。',[...hard,'wurt'],'mismatch');
 note('Woodie Moose Random Scale','实际读取在随机生物大小入口。需Random Sized开启，鹿形态随机获得0.75～1.5倍率；恢复人形按现有生命比例还原。',['Random Sized']);
 note('Charged Elding Spear negative buff','位于困难模式薇格弗德脚本，并需同时开启奔雷冲刺无前摇；仅简单模式打开该项不会加载这一材料限制。',[...hard,'wigfrid','Valkyrie thunder sprints without shaking']);

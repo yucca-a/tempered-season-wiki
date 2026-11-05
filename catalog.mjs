@@ -8,10 +8,12 @@ export const categories = [
   {id:'food',name:'食物与农业'}, {id:'creatures',name:'生物与首领'}, {id:'updates',name:'版本记录'},
 ];
 export const configData=JSON.parse(await fs.readFile(new URL('./data/configs.json',import.meta.url),'utf8'));
+if(configData.version!==meta.version)throw Error('Wiki and configuration snapshot versions differ');
 export const iconManifest=JSON.parse(await fs.readFile(new URL('./data/icon-manifest.json',import.meta.url),'utf8'));
 export const iconLabels=JSON.parse(await fs.readFile(new URL('./data/icon-labels.json',import.meta.url),'utf8'));
 export const notes={};
 export const articles=structuredClone(initial);
+const sourceAuditVersion='2.8.14.97.4';
 for(const part of ['general','items','characters','world']){
   try {
     const content=await import(`./research/${part}.mjs`);
@@ -19,7 +21,7 @@ for(const part of ['general','items','characters','world']){
     Object.assign(notes,content.configNotes??{});
   }catch(error){if(error.code!=='ERR_MODULE_NOT_FOUND')throw error;}
 }
-const originalKeys={ 'configuration':['enable easy mode','enable hard mode'],combat:['combat'],armor:['epic_armor_5'], 'world-exchange':['World Exchange','Container Sort'], 'skill-tree':['More Skill Points'], 'night-vision':['Monster Night Vision','wathom nightvision','Webber Night Version','Wurt Night Version','Wonkey Night Version'], wixie:['Wixie No Claustrophobia','wixie'], walter:['Walter Use Wixie Slingshot','walter'], wanda:['wanda strengthen',"Wanda Don't Auto Drop Age",'regen_danger'], eyeturret:['eyeturret'],trap:['Trap Guaranteed Catch'], containers:['Container Sort','Items collect'], frostjaw:['boss_health','sharkboi','extra_change'] };
+const originalKeys={ 'configuration':['enable easy mode','enable hard mode','World Exchange','epic_ruin'],combat:['combat'],armor:['epic_armor_5'], 'world-exchange':['World Exchange','Container Sort'], 'skill-tree':['More Skill Points'], 'night-vision':['Monster Night Vision','wathom nightvision'], wixie:['Wixie No Claustrophobia','wixie'], walter:['Walter Use Wixie Slingshot','walter'], wanda:['wanda strengthen',"Wanda Don't Auto Drop Age",'regen_danger'], eyeturret:['eyeturret'],trap:['Trap Guaranteed Catch'], containers:['Container Sort','Items collect'], frostjaw:['boss_health','sharkboi','extra_change'] };
 for(const a of articles){a.configKeys??=originalKeys[a.id]??[];a.keywords??='';a.source??=[];}
 export const itemAuditIds=new Set();
 for(const part of ['custom','equipment','utility','general']){
@@ -27,7 +29,7 @@ for(const part of ['custom','equipment','utility','general']){
   for(const patch of audit.patches){
     const article=articles.find(a=>a.id===patch.id);
     if(!article||itemAuditIds.has(patch.id))throw Error(`Invalid or duplicate item audit: ${patch.id}`);
-    Object.assign(article,patch,{auditedVersion:meta.version});
+    Object.assign(article,patch,{auditedVersion:sourceAuditVersion});
     itemAuditIds.add(patch.id);
   }
   for(const [key,note] of Object.entries(audit.configNotes??{}))notes[key]={...notes[key],...note};
@@ -38,7 +40,7 @@ for(const part of ['characters','buildings','bosses','general']){
   for(const patch of audit.patches){
     const article=articles.find(a=>a.id===patch.id);
     if(!article||entityAuditIds.has(patch.id))throw Error(`Invalid or duplicate entity audit: ${patch.id}`);
-    Object.assign(article,patch,{auditedVersion:meta.version});
+    Object.assign(article,patch,{auditedVersion:sourceAuditVersion});
     if(article.category==='characters'||article.category==='buildings'||article.id.startsWith('boss-'))entityAuditIds.add(patch.id);
   }
   for(const [key,note] of Object.entries(audit.configNotes??{}))notes[key]={...notes[key],...note};
@@ -49,7 +51,7 @@ for(const part of ['food','creatures','shadows','general']){
   for(const patch of audit.patches){
     const article=articles.find(a=>a.id===patch.id);
     if(!article||lifeAuditIds.has(patch.id))throw Error(`Invalid or duplicate life audit: ${patch.id}`);
-    Object.assign(article,patch,{auditedVersion:meta.version});
+    Object.assign(article,patch,{auditedVersion:sourceAuditVersion});
     lifeAuditIds.add(patch.id);
   }
   for(const [key,note] of Object.entries(audit.configNotes??{}))notes[key]={...notes[key],...note};
@@ -92,7 +94,7 @@ about.sections[0].paragraphs=['本资料库面向《为爽而虐 / 暗影世界 
 about.sections[2].paragraphs=['阅读布局参考 QiNeko Wiki；正文依据淬炼之季本地源码和更新日志独立整理。两个分支的机制、数值与默认配置不同，参考站的新内容不代表本分支已经实装。','图标从已安装的饥荒联机版与本模组资源中提取，仅用于识别相关游戏内容，权利归 Klei Entertainment 及相应作者。'];
 about.sections[2].externalLinks[0].url='https://qineko.wiki/ws/';
 const gettingStarted=articles.find(a=>a.id==='getting-started');
-gettingStarted.sections.at(-1).paragraphs=['配置大全覆盖当前 424 项实际配置。百科按玩法分类阅读，每篇可跳转到对应开关查看全部档位；遇到名称不同的配置，检索也支持配置键。','远古宝珠目前只有设计草案，未包含在当前发布版中。贝爷求生、德爷生存等参考站其他分支规则也不能直接套用。'];
+gettingStarted.sections.at(-1).paragraphs=[`配置大全覆盖当前 ${configData.total} 项实际配置。百科按玩法分类阅读，每篇可跳转到对应开关查看全部档位；遇到名称不同的配置，检索也支持配置键。`,'远古宝珠目前只有设计草案，未包含在当前发布版中。贝爷求生、德爷生存等参考站其他分支规则也不能直接套用。'];
 const configByKey=new Map(configData.configs.map(c=>[c.key,c]));
 export const configId=key=>'cfg-'+createHash('sha1').update(key).digest('hex').slice(0,12);
 export const groupId=(mode,group)=>'group-'+createHash('sha1').update(mode+'/'+group).digest('hex').slice(0,10);

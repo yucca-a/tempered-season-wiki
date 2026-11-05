@@ -41,7 +41,7 @@ export const patches = [
   ]),
 
   patch('frost-shrine', '用海鱼兑换出逃腿靴，并能改造腿靴、升级冰杖和冷却物品的建筑。', [
-    'content/scripts/recipes2hm.lua', 'content/scripts/prefabs/frostshrine2hm.lua', 'content/epic/sharkboi.lua', 'content/modmain.lua', base('recipes.lua'), base('tuning.lua')
+    'content/scripts/recipes2hm.lua', 'content/scripts/prefabs/frostshrine2hm.lua', 'content/scripts/frostshrinefx2hm.lua', 'content/epic/sharkboi.lua', 'content/modmain.lua', base('recipes.lua'), base('tuning.lua')
   ], hardShark, [
     T('制作配方', ['材料', '数量'], [['霜冻核心', '1'], ['石砖', '4'], ['冰', '10']]),
     P('蓝图获取', '需要先学习寒霜之祠蓝图。大霜鲨首次战败进入交易状态时会给 1 张；尚未学会配方的玩家，在竞技场冰钓洞每次成功钓鱼也有 2.5% 概率额外获得蓝图。'),
@@ -53,6 +53,7 @@ export const patches = [
       ['带温度的物品，例如暖石', '将物品冷却到其最低温度后返还']
     ]),
     P('冰杖升级', '冰杖升级使用当前世界的贝壳编织配方检查材料。当前原版两次升级各需 1 个盐晶，材料须放在给予者身上。升级后保留原杖剩余的使用次数。', '普通出逃腿靴的兑换和防滑改造都不额外消耗霜冻核心。海鱼必须能够称重，普通鱼肉不能兑换。'),
+    P('寒焰与反馈', '靠近寒霜之祠会点亮眼部寒焰。放置、交易和升级时会播放相应的动画与音效。'),
     P('拆除', '用锤子敲击 4 次可拆除寒霜之祠，并按建筑拆除规则返还材料。'),
     P('相关配置', '制作配方由“大霜鲨加强”开启。正常取得核心和蓝图，还需要开启“困难模式总开关”与“困难模式怪物改动总开关”。')
   ]),
