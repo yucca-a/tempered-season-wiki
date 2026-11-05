@@ -173,3 +173,6 @@
  .wiki-entry,.config-group,.directory-group,.wiki-heading{box-shadow:none}
 }
 @media print{.wiki-welcome,.catalog-heading,.entry-outline,.breadcrumbs,.config-filter-panel,.settings-onboarding,.adjacent-entries{display:none}.entry-lead{font-size:12px}}
+
+.welcome-cover{float:right;width:clamp(96px,26%,160px);height:auto;margin:14px 0 14px 20px;border-radius:10px}
+.wiki-welcome .start-paths{clear:both}
