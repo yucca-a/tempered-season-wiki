@@ -74,11 +74,13 @@ for(const a of globalResults){
  checkLink('index.html',a.href);
  if(a.image)checkLink('index.html',a.image);
 }
-for(const [term,href] of [['附魔','um-beta/gemology.html#gemology-s2'],['宝石','um-beta/gemology.html'],['宝石升级','um-beta/gemology.html#gemology-s5'],['附魔效果','um-beta/gemology.html#gemology-s6'],['静电琥珀','um-beta/gemology.html#gem-yellowgem2'],['料理','um-beta/cooking-guide.html']]){
+for(const [term,href] of [['附魔','um-beta/gemology.html#gemology-s2'],['宝石','um-beta/gemology.html'],['宝石升级','um-beta/gemology.html#gemology-s5'],['附魔效果','um-beta/gemology.html#gemology-s6'],['静电琥珀','um-beta/gemology.html#gem-yellowgem2'],['附魔宝石获取','um-beta/gemology.html#gemology-s7'],['静电琥珀获取','um-beta/gemology.html#gem-source-yellowgem2'],['粪便晶洞','um-beta/gemology.html#geode-source-guano'],['料理','um-beta/cooking-guide.html']]){
  if(!globalResults.some(a=>a.jump&&a.href===href&&a.aliases.includes(term)))errors.push('Missing direct search result for '+term);
 }
 const gemology=pages.get('um-beta/gemology.html');
-if((gemology?.match(/<tr id="gem-/g)||[]).length!==14||(gemology?.match(/class="table-wrap guide-table\b/g)||[]).length!==2)errors.push('Incomplete Beta gem guide tables');
+for(const [pattern,count] of [[/<tr id="gem-\w+gem[12]"/g,14],[/<tr id="gem-source-/g,14],[/<tr id="geode-source-/g,11],[/class="table-wrap guide-table\b/g,4]]){
+ if((gemology?.match(pattern)||[]).length!==count)errors.push('Incomplete Beta gem guide tables: '+pattern);
+}
 const context={window:{}};vm.runInNewContext(await fs.readFile(path.join(root,'search-index.js'),'utf8'),context);
 for(const a of context.window.WIKI_INDEX){checkLink('index.html',a.href);if(!a.text||!a.title)errors.push('Invalid search entry '+a.id);}
 for(const [id,aliases] of Object.entries({

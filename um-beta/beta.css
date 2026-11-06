@@ -58,6 +58,17 @@
 .guide-trades thead th:nth-child(2){width:16%}
 .guide-trades thead th:nth-child(3),.guide-trades thead th:nth-child(4){width:12%}
 .guide-trades thead th:last-child{width:48%}
+.guide-gem-sources thead th:first-child{width:32%}
+.guide-geode-sources thead th:first-child{width:24%}
+.guide-geode-sources thead th:nth-child(2){width:25%}
+.guide-geode-sources thead th:last-child{width:51%}
+.article-section .guide-gem-sources table{min-width:0}
+.article-section .guide-geode-sources table{min-width:490px}
+.entry-body .guide-cell-links{padding:0;margin:0;list-style:none}
+.guide-cell-links li+li{margin-top:.25em}
+.guide-cell-links small,.guide-row-link{color:var(--muted)}
+.guide-row-link{display:block;font-weight:400}
+.guide-table a{text-decoration:underline;text-underline-offset:.18em}
 .guide-table tbody img{display:inline-block;vertical-align:middle;object-fit:contain;margin-right:5px}
 .guide-table tr{scroll-margin-top:108px}
 .guide-table tr:target>*{background:var(--beta-tint)}
@@ -66,6 +77,7 @@
  .entry-body .guide-table-hint{display:block}
  .guide-table th:first-child{position:sticky;inset-inline-start:0;background:var(--popup);z-index:1;box-shadow:1px 0 var(--line)}
  .guide-table tr:target>th:first-child{background:linear-gradient(var(--beta-tint),var(--beta-tint)),var(--popup)}
+ .guide-gem-sources .guide-cell-links small{display:block}
 }
 @media(max-width:1000px){.beta-topic-items{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.beta-topic-items{grid-template-columns:1fr}}

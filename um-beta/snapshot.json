@@ -9299,6 +9299,10 @@
       "en": "Spear",
       "zh": "长矛"
     },
+    "spear_wathgrithr_lightning": {
+      "en": "Elding Spear",
+      "zh": "奔雷矛"
+    },
     "spidergland": {
       "en": "Spider Gland",
       "zh": "蜘蛛腺"
@@ -9503,9 +9507,41 @@
       "en": "Glass Geode",
       "zh": "玻璃晶洞"
     },
+    "um_gemology_geode_green": {
+      "en": "Green Fungal Geode",
+      "zh": "绿色菌类晶洞"
+    },
+    "um_gemology_geode_guano": {
+      "en": "Fecal Geode",
+      "zh": "粪便晶洞"
+    },
+    "um_gemology_geode_lobster": {
+      "en": "Fetal Geode",
+      "zh": "胚胎晶洞"
+    },
     "um_gemology_geode_magma": {
       "en": "Molten Geode",
       "zh": null
+    },
+    "um_gemology_geode_red": {
+      "en": "Red Fungal Geode",
+      "zh": "红色菌类晶洞"
+    },
+    "um_gemology_geode_ruins": {
+      "en": "Junk Geode",
+      "zh": "垃圾晶洞"
+    },
+    "um_gemology_geode_sink": {
+      "en": "Mossy Geode",
+      "zh": "苔藓晶洞"
+    },
+    "um_gemology_geode_slime": {
+      "en": "Slimy Geode",
+      "zh": "黏液晶洞"
+    },
+    "um_gemology_geode_vent": {
+      "en": "Pumice Geode",
+      "zh": "浮石晶洞"
     },
     "um_gemology_pouch": {
       "en": "Gemology Pouch",
@@ -9891,6 +9927,10 @@
       "en": "Wes",
       "zh": "韦斯"
     },
+    "wickerbottom": {
+      "en": "Wickerbottom",
+      "zh": "薇克巴顿"
+    },
     "willow": {
       "en": "Willow",
       "zh": "薇洛"
@@ -9915,6 +9955,10 @@
       "en": "woby_treat_small",
       "zh": null
     },
+    "wolfgang": {
+      "en": "Wolfgang",
+      "zh": "沃尔夫冈"
+    },
     "woodie": {
       "en": "Woodie",
       "zh": "伍迪"
@@ -9923,9 +9967,21 @@
       "en": "Woodpecker",
       "zh": "啄木鸟"
     },
+    "wormwood": {
+      "en": "Wormwood",
+      "zh": "沃姆伍德"
+    },
+    "wortox": {
+      "en": "Wortox",
+      "zh": "沃拓克斯"
+    },
     "wurt": {
       "en": "Wurt",
       "zh": "沃特"
+    },
+    "wx78": {
+      "en": "WX-78",
+      "zh": "WX-78"
     },
     "yellowamulet": {
       "en": "Magiluminescence",
@@ -10001,11 +10057,24 @@
     "slingshot_jessie",
     "slingshot_matilda",
     "snowcone",
+    "spear_wathgrithr_lightning",
     "stuffed_peeper_poppers",
+    "um_armor_bramble_rimeweed",
     "um_backpack_amuletuse",
     "um_boom_tart",
     "um_boomberrypie",
     "um_durian_cream_marshcake",
+    "um_gemology_geode_blue",
+    "um_gemology_geode_glass",
+    "um_gemology_geode_green",
+    "um_gemology_geode_guano",
+    "um_gemology_geode_lobster",
+    "um_gemology_geode_magma",
+    "um_gemology_geode_red",
+    "um_gemology_geode_ruins",
+    "um_gemology_geode_sink",
+    "um_gemology_geode_slime",
+    "um_gemology_geode_vent",
     "um_gemology_pouch",
     "um_gemologybluegem1",
     "um_gemologybluegem2",
@@ -10031,17 +10100,113 @@
     "warly",
     "wendy",
     "wes",
+    "wickerbottom",
     "willow",
     "winona",
     "winona_toolbox",
     "winona_upgradekit_electrical",
+    "wolfgang",
     "woodie",
-    "wurt"
+    "wormwood",
+    "wortox",
+    "wurt",
+    "wx78"
   ],
+  "geodePools": {
+    "um_gemology_geode_red": {
+      "um_gemologyredgem1": 1,
+      "um_gemologyredgem2": 1,
+      "um_gemologyorangegem1": 0.5,
+      "redgem": 0.5
+    },
+    "um_gemology_geode_green": {
+      "um_gemologygreengem1": 1,
+      "um_gemologygreengem2": 1,
+      "um_gemologypalegem1": 0.5,
+      "greengem": 0.05
+    },
+    "um_gemology_geode_blue": {
+      "um_gemologybluegem1": 1,
+      "um_gemologybluegem2": 1,
+      "um_gemologypurplegem2": 0.5,
+      "bluegem": 0.5
+    },
+    "um_gemology_geode_guano": {
+      "um_gemologyyellowgem2": 1,
+      "um_gemologyredgem2": 1,
+      "um_gemologyorangegem1": 0.5,
+      "yellowgem": 0.1,
+      "redgem": 0.5
+    },
+    "um_gemology_geode_lobster": {
+      "um_gemologyyellowgem1": 1,
+      "um_gemologypalegem2": 1,
+      "um_gemologyorangegem2": 1,
+      "um_gemologybluegem1": 1,
+      "yellowgem": 0.1,
+      "redgem": 0.5
+    },
+    "um_gemology_geode_glass": {
+      "um_gemologyyellowgem2": 1,
+      "um_gemologypalegem1": 1,
+      "um_gemologybluegem1": 1,
+      "um_gemologygreengem1": 1,
+      "yellowgem": 0.1,
+      "bluegem": 0.5
+    },
+    "um_gemology_geode_slime": {
+      "um_gemologybluegem2": 1,
+      "um_gemologyredgem1": 1,
+      "um_gemologypalegem1": 1,
+      "um_gemologypalegem2": 1,
+      "bluegem": 0.5,
+      "redgem": 0.5
+    },
+    "um_gemology_geode_ruins": {
+      "um_gemologygreengem1": 1,
+      "um_gemologyyellowgem1": 1,
+      "um_gemologypurplegem2": 1,
+      "um_gemologypurplegem1": 1,
+      "bluegem": 0.5,
+      "redgem": 0.5,
+      "purplegem": 0.5,
+      "orangegem": 0.25,
+      "yellowgem": 0.25,
+      "greengem": 0.25
+    },
+    "um_gemology_geode_sink": {
+      "um_gemologygreengem1": 1,
+      "um_gemologyyellowgem2": 1,
+      "um_gemologyorangegem2": 1,
+      "um_gemologyorangegem1": 1,
+      "orangegem": 0.1,
+      "greengem": 0.05,
+      "yellowgem": 0.05
+    },
+    "um_gemology_geode_vent": {
+      "um_gemologypurplegem2": 1,
+      "um_gemologypurplegem1": 1,
+      "um_gemologyorangegem2": 1,
+      "purplegem": 0.1,
+      "orangegem": 0.05
+    },
+    "um_gemology_geode_magma": {
+      "um_gemologypalegem2": 1,
+      "um_gemologyyellowgem1": 1,
+      "um_gemologygreengem2": 1,
+      "um_gemologyredgem2": 1,
+      "redgem": 0.5,
+      "um_fyrite": 0.5
+    }
+  },
   "sourceFiles": {
     "beta/init/init_actions.lua": {
       "sha256": "46a894b619a08c2319ae4b0fecacd338531184f501e9674d9b8cc9fa8da5941d",
       "lines": 949
+    },
+    "beta/init/init_character_changes/skilltree_wormwood.lua": {
+      "sha256": "be52eec3d76afccd74a9efdbb4e35c8115417c0356b8efddaf05e4a7975264b6",
+      "lines": 513
     },
     "beta/init/init_character_changes/walter.lua": {
       "sha256": "2a6cff7dafac65a32ebf15fcf4dc2f56370113dce3c5035f51159de62b22b239",
@@ -10055,9 +10220,17 @@
       "sha256": "3e60a68ab96f60e582a3dc20656cc7d7dd2974a506b89a2968b4e862f9f36f9d",
       "lines": 144
     },
+    "beta/init/init_character_changes/wathgrithr.lua": {
+      "sha256": "b35614071a8821197aeaece09fd3f1f38440b9f48a31d9de73a7465900c1eff6",
+      "lines": 126
+    },
     "beta/init/init_character_changes/wes.lua": {
       "sha256": "496d88259824dcfbd01aba6fc1c0108aeeaedefb6dd0c1feaf01b899f46109df",
       "lines": 150
+    },
+    "beta/init/init_character_changes/wickerbottom.lua": {
+      "sha256": "7446d57fe2ec59b83d73e2d262bf2e28cc934a61d047d69ff00f5196cd86d79f",
+      "lines": 502
     },
     "beta/init/init_character_changes/willow.lua": {
       "sha256": "a993a5ed44ba1a1e57690f18b0d4f34342e6bf2c5642c10ca62ac79abd10233c",
@@ -10071,13 +10244,33 @@
       "sha256": "4f971e474cc6762efe0f51bdba8094d4bc1aa98fe04625ccc191153007a0c51f",
       "lines": 503
     },
+    "beta/init/init_character_changes/wolfgang.lua": {
+      "sha256": "0fdfd71814ddcdd31a754e908ca077873cf8a902a909934bdc23e17f5467e187",
+      "lines": 545
+    },
     "beta/init/init_character_changes/woodie.lua": {
       "sha256": "dc455744d1e9e2692ebb98b7d9a591a3cec60f084049c797ae6e4c7da422f814",
       "lines": 115
     },
+    "beta/init/init_character_changes/wormwood.lua": {
+      "sha256": "9e16231c4c0ef113fa49563e964186c1feb1d92678a7b2a3f368b5d574d3c86f",
+      "lines": 753
+    },
+    "beta/init/init_character_changes/wortox.lua": {
+      "sha256": "7b7911cf9d122d60e0d2c8489d8295b5201f302fa735fae7e3c7825eb854f9c8",
+      "lines": 1429
+    },
     "beta/init/init_character_changes/wurt.lua": {
       "sha256": "f1426b9b1eac8f4f38ec599f3adcedae7a21e1656639ed3144f070bc653932d1",
       "lines": 47
+    },
+    "beta/init/init_character_changes/wx78.lua": {
+      "sha256": "870b6b67790ea6cf802b0ed58babe28db80ba711d8f4fd653ac13ca3e48a7c1a",
+      "lines": 781
+    },
+    "beta/init/init_compat.lua": {
+      "sha256": "b5f9f81da323ac2fdb39e20cdafbb31df34b041e0688fc5c0d420f8e26cb00de",
+      "lines": 477
     },
     "beta/init/init_configs.lua": {
       "sha256": "a12c559e95503da88cf02c2ad12983da8558ad52d6a1b62940ba7b84819f39e7",
@@ -10106,6 +10299,10 @@
     "beta/init/init_gamemodes/init_uncompromising_mode.lua": {
       "sha256": "6f46bd19c8a8358be88accfce92ac93dca8762369350d3c74afd0885c0e2c90e",
       "lines": 265
+    },
+    "beta/init/init_gemology/misc.lua": {
+      "sha256": "57837fad7f0c3c4af5140002d0c65b9b40b3b2cf80a42efe22b7ab019552733c",
+      "lines": 270
     },
     "beta/init/init_gemology/special.lua": {
       "sha256": "7e5a68b2edb88f8776324c9cee405cd1c52973965c3a5f299e78942927000744",
@@ -10163,6 +10360,10 @@
       "sha256": "9cff1c879ad8938364102c1109d2ec2371e55aa1586c9c6d526765a570943475",
       "lines": 157
     },
+    "beta/init/um_tree_rock_data.lua": {
+      "sha256": "9b44bbdad021177e3ddee964f2bd74878225a3161006fa5e60bcbc862b1567fb",
+      "lines": 245
+    },
     "beta/modinfo.lua": {
       "sha256": "2d2cb1a0123c36055cc41300d169b376a53b9c0922ef1201afdd0aef31c725e5",
       "lines": 1630
@@ -10170,6 +10371,10 @@
     "beta/modmain.lua": {
       "sha256": "32c535951a31ddecaefbb7eb04c8a8c35846635c2bca9f7e29205872cdb0e392",
       "lines": 469
+    },
+    "beta/modworldgenmain.lua": {
+      "sha256": "e0c7bd42267cafc096116bb782ad0207c735c5cc036f78e535b66549dc890c8f",
+      "lines": 48
     },
     "beta/postinit/components/freezable.lua": {
       "sha256": "c1acedb1091ed40bc9f2f94a8f78e649485a21424d02c5b893ff82e5442b62b3",
@@ -10183,6 +10388,14 @@
       "sha256": "aa13884d1188cc15b57fba5d0db01da31fc50583a679afa77c9531a843f71b57",
       "lines": 13
     },
+    "beta/postinit/prefabs/cave_vent_mite.lua": {
+      "sha256": "917ec324ce733bfc02b2e2ddc8b1d08868bc11b434115e60e678dd5950a3f2ab",
+      "lines": 52
+    },
+    "beta/postinit/prefabs/chessjunk.lua": {
+      "sha256": "897a7e447ed66e853a6e301707781315358b730ad1970f4227277d306e904ba4",
+      "lines": 106
+    },
     "beta/postinit/prefabs/heatrock.lua": {
       "sha256": "393cd53a4483aad05475c76affbd3f04088ae714069b8e23049d4bd3ba13838c",
       "lines": 37
@@ -10195,9 +10408,25 @@
       "sha256": "a91abc6ba0c828ef3ab87e667b97a156e25a93ae294764c551e523e519b13405",
       "lines": 78
     },
+    "beta/postinit/prefabs/mushtrees.lua": {
+      "sha256": "a6b8130f9a594777196d7a01c150f4359f36318f448df08316e58ad8eccb93b7",
+      "lines": 94
+    },
     "beta/postinit/prefabs/petals.lua": {
       "sha256": "bc93f76f16934c6871a94f770d51a41ee5d132c791f7067755ff4905b6037653",
       "lines": 24
+    },
+    "beta/postinit/prefabs/rocky.lua": {
+      "sha256": "8df41e7b2efcc20b86bf52965dd44de2d12f19aa37375695f6c78a147a3a0b48",
+      "lines": 67
+    },
+    "beta/postinit/prefabs/spear_wathgrithr.lua": {
+      "sha256": "c55d7a9e7696a68ebe87c931050b9adb031ad5f3de05cc0a612fdd5a1632e383",
+      "lines": 178
+    },
+    "beta/scripts/components/featsofstrength.lua": {
+      "sha256": "4ac9a0ec63bd7ac9185bfb5b49ee522042055453ef04f07cce8b9f18ea60332b",
+      "lines": 255
     },
     "beta/scripts/components/gem_enchantable.lua": {
       "sha256": "cec58c057952b6597c13bebb070fa3fa949ac83ea877126d83920e32e80d4746",
@@ -10235,6 +10464,22 @@
       "sha256": "8cbeacfd713271396ebd04c01b14e7a3eafab97f8756e19f6ab105e5e222ebf3",
       "lines": 943
     },
+    "beta/scripts/map/rooms/caves/gemology.lua": {
+      "sha256": "be8204c36b0c026540289977121802d1aac5bbfd86ab0a04dc77b3cb0d63b876",
+      "lines": 297
+    },
+    "beta/scripts/map/rooms/caves/moltenregions.lua": {
+      "sha256": "0332727c0db6c9b1ff70e3624651d344857600db02b3b8e4dd870a803ce0d224",
+      "lines": 388
+    },
+    "beta/scripts/map/rooms/caves/moonregions.lua": {
+      "sha256": "4ed8554ac698e58f4d4fd42968cb50abb83d13492d3233ce22cb95c49e275d6c",
+      "lines": 420
+    },
+    "beta/scripts/map/tasks/caves/gemology.lua": {
+      "sha256": "f9bb6d1e36410a37fc70ced123c95df6df0e858f2f28784e091811e346361061",
+      "lines": 195
+    },
     "beta/scripts/map/tasks/caves/magma_cave.lua": {
       "sha256": "c92dcc3715feab67d0da2554e1b0172bc7a242e0db5fcd2c68138b0a82af72fd",
       "lines": 154
@@ -10242,6 +10487,10 @@
     "beta/scripts/map/tasks/caves/mushroom_tasks.lua": {
       "sha256": "0b5a3f488b03a0d67fc8eabe1ae7006cbb3506dd5d902c043dc3c6e9103c04ca",
       "lines": 189
+    },
+    "beta/scripts/map/tasks/forest/giant_trees.lua": {
+      "sha256": "50a13ed8727f57989e324ebd5267af64f21539f86c8f592f9865ab61becdd08d",
+      "lines": 91
     },
     "beta/scripts/map/tasks/forest/make_a_pick.lua": {
       "sha256": "d87d39a40e4a2ba47c5f72bb3061fcacf8c245c36851c470760dbf0a162a0f83",
@@ -10303,6 +10552,10 @@
       "sha256": "6d171174a1b98612e9eedf50468db1a4adecb96107526ba6e7ed6ac376daae47",
       "lines": 344
     },
+    "beta/scripts/prefabs/um_armor_bramble_rimeweed.lua": {
+      "sha256": "1a9a73da9e6b4a27ef08176d148f27f471a4f2efb1b63ccd97dd66b71f120c5e",
+      "lines": 143
+    },
     "beta/scripts/prefabs/um_backpack_amuletuse.lua": {
       "sha256": "db3eab7c48ba3131165386e7e35142deb8dad37a9f4af341291d9277d895a8eb",
       "lines": 260
@@ -10319,13 +10572,29 @@
       "sha256": "a1b9c1cb6cdc9045335915151755e4501c7dad225c30a615e7d91a50078eb3c9",
       "lines": 167
     },
+    "beta/scripts/prefabs/um_guano_rock.lua": {
+      "sha256": "7226f98993986a8f2618b548d93a6adfa267cf37463c8233633bab0f21924e44",
+      "lines": 180
+    },
     "beta/scripts/prefabs/um_ice_shield.lua": {
       "sha256": "a036ff45b581ff408247435628c586256031be7038ae411356c7ff73e30e18b0",
       "lines": 235
     },
+    "beta/scripts/prefabs/um_magmastone.lua": {
+      "sha256": "a5f4285b8d5f91d2c6c1a0c2ee4216c569ec7bba1588906ac86baeaa957b4d50",
+      "lines": 321
+    },
     "beta/scripts/prefabs/um_magnifier.lua": {
       "sha256": "3371351e164e858d9e8c01d4643d772dc0e02f168b21881f17d85b98903f9595",
       "lines": 58
+    },
+    "beta/scripts/prefabs/um_moonglass_ceiling.lua": {
+      "sha256": "ae9eac624a4e8cbf470fc536d2b0081d9f76c1e0945a932d0b4157530861734f",
+      "lines": 150
+    },
+    "beta/scripts/prefabs/um_mushtrees_petri.lua": {
+      "sha256": "4bda2a4d4f1192edb867fff77e7091dabb740785c1a03d422a6aca78cc95b7d3",
+      "lines": 249
     },
     "beta/scripts/prefabs/um_preparedfoods.lua": {
       "sha256": "cae5a7e36182ab89cc630debf955ec0db24ec01abc89483e2a3f04ad3d5be32f",
@@ -10334,6 +10603,18 @@
     "beta/scripts/prefabs/um_rimeweed.lua": {
       "sha256": "18c958ea5412a94d214a7ec2bed0b7168c82e854368a26f79134c8d5c409445a",
       "lines": 1099
+    },
+    "beta/scripts/prefabs/um_rocklobster_rock.lua": {
+      "sha256": "a0b27145d6c13c133d9458b016ae08c89596f798d75f8f3b9944b0b6148703ac",
+      "lines": 98
+    },
+    "beta/scripts/prefabs/um_sinkmound_rock.lua": {
+      "sha256": "7fb3691b2587fa70dfd30b49003b4b688c776abef1e142dd42616a4a691c52ef",
+      "lines": 187
+    },
+    "beta/scripts/prefabs/um_slimestone_rock.lua": {
+      "sha256": "2ec89bfda89726c8701122ea4a0abbce4f77fc6208a13eebefea466538722ec5",
+      "lines": 254
     },
     "beta/scripts/prefabs/uncompromising_buffs.lua": {
       "sha256": "a935c2a0ac63cc6cd61e08e623b7682125adcdf8007bae877f9d39c9ed548ac3",
@@ -10355,6 +10636,14 @@
       "sha256": "bc5c6ec7289f2f60d5dba5c409a331e822bf32dbc9080f642b34a2ec6f07d1ab",
       "lines": 846
     },
+    "beta/scripts/prefabs/webbedcreature.lua": {
+      "sha256": "b8d5ec990d434bb956f7c20b5f262e3e7162ac18aec1cf9b7612562de0a3a984",
+      "lines": 320
+    },
+    "beta/scripts/prefabs/widowsgrasp.lua": {
+      "sha256": "85d71ca4e5fb49cf57e59245dc36116b862b451d769533ea744f1f191c01d543",
+      "lines": 94
+    },
     "beta/scripts/prefabs/winky.lua": {
       "sha256": "e40b45a2f5091aa716e01516cf371d16f3f9058ef39889d95cbbb63db72e959f",
       "lines": 244
@@ -10371,13 +10660,29 @@
       "sha256": "a9800e99f0632fb619e5e4869095a787ec6feab3f48db44f02132dd31b171068",
       "lines": 367
     },
+    "beta/scripts/prefabs/zaspberry.lua": {
+      "sha256": "1706268a63d758491593902015bd43c169bfb9aee3c43e02427dce96ea56c884",
+      "lines": 170
+    },
+    "beta/scripts/prefabs/zaspberryparfait.lua": {
+      "sha256": "74b55e5328aae6012f11386d142be9b4003cf18429307ecc515992178372c3d2",
+      "lines": 66
+    },
     "beta/scripts/stategraphs/SGsnowmong.lua": {
       "sha256": "c358cde3ae7307065bea0af5abb7c76ef75fb824890dc7e8d6abdbbf54de0552",
       "lines": 387
     },
+    "beta/scripts/um_gemology_geode_defs.lua": {
+      "sha256": "4b3b4be987fb683c9d9c33b068a747493a0068d84615e1b78b1c9ebb3013eb85",
+      "lines": 196
+    },
     "beta/scripts/um_preparedfoods.lua": {
       "sha256": "741546cbaf8c01b1d2dcc610820c487168da7651e8a5a86b2493d71eab6a974a",
       "lines": 837
+    },
+    "beta/scripts/webbedcreatureloot.lua": {
+      "sha256": "5a4758247ab41cd3739ceff31e8145bda612eef57857dfa83b62e5daddd35701",
+      "lines": 1394
     },
     "beta/wixie_postinit/prefabs/wobybig.lua": {
       "sha256": "cdaf2e1c582d69683b17d84dc71a3590c82822e0749a793fcbf68c34e5149dde",
@@ -10395,9 +10700,17 @@
       "sha256": "777973d7d370909465cb65575b7f92b2caae70dcf7996d893008ee497d96844e",
       "lines": 78
     },
+    "cn/init/init_character_dst.lua": {
+      "sha256": "0e4f0f94c0c1daa33e74f63a4b1ba22cb09208628e251dbaba63bd5ee16c73af",
+      "lines": 78
+    },
     "cn/init/init_character_um.lua": {
       "sha256": "7632856f02e38edb4bdbb9bae7eaa407b67e0741a99598fbcbbf6bf13a76ee89",
       "lines": 59
+    },
+    "cn/init/init_strings/init_descriptions/skilltreestrings.lua": {
+      "sha256": "32afeae6f69f02990fb5edc5d4a38967c0779cc2ed0a3a59c35fdd85b4817658",
+      "lines": 461
     },
     "cn/init/init_strings/init_names.lua": {
       "sha256": "4cc44a71b44927285a55b319f717852bd126217c1b0843adf18b47ca613eb22d",

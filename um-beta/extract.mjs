@@ -167,6 +167,12 @@ for(const [module,guard] of [['recipes',[]],['recipes_wixie',['UM_CONFIG.WIXIE_W
 }
 await read(betaDir,'init/init_recipes/recipe_changes.lua');
 await read(betaDir,'init/init_configs.lua');
+const geodeDefinitions=ast(await read(betaDir,'scripts/um_gemology_geode_defs.lua'));
+const geodePools=Object.fromEntries([...fields(assignment(geodeDefinitions,'GEODE_LOOT_TABLE'))].map(([prefab,node])=>{
+ const pool=Object.fromEntries([...fields(fields(node).get('gemloot'))].map(([item,weight])=>[item,scalar(weight)]));
+ if(!Object.keys(pool).length||Object.values(pool).some(weight=>!Number.isFinite(weight)||weight<=0))throw Error('Unsupported geode loot table '+prefab);
+ return [prefab,pool];
+}));
 const artworkIds=itemGroups.flatMap(g=>g.ids);
 const articleArtIds=[...new Set(articles.flatMap(a=>[a.icon??a.prefab,...a.sections.flatMap(([, ,guide])=>guide?.prefabs??[])].filter(Boolean)))].sort();
 const usedNames=new Set([...artworkIds,...articleArtIds,...recipes.flatMap(r=>[r.id,r.product,...r.ingredients.map(i=>i.id)])]);
@@ -180,7 +186,7 @@ for(const source of articles.flatMap(a=>a.sources)){
  if(!sourceFiles[key])await read(dir,source.file);
  if(source.line<1||sourceFiles[key].lines<source.line)throw Error('Invalid source line '+key+':'+source.line);
 }
-const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,articleArtIds,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
+const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,articleArtIds,geodePools,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
 const json=JSON.stringify(result,null,2)+'\n';
 if(check){
  const current=await fs.readFile(resultFile,'utf8');

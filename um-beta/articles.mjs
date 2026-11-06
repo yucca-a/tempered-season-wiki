@@ -1,7 +1,9 @@
 import { characterArticles } from './character-articles.mjs';
 import { exclusiveArticles } from './exclusive-articles.mjs';
 import { foodArticles } from './food-articles.mjs';
+import { additionalArticles } from './additional-articles.mjs';
 import { effectTable, gemEffects, tradeTable } from './gemology-tables.mjs';
+import { gemSources, gemSourceTitle, geodeSources, geodeSourceTitle, sourceJumps } from './gemology-sources.mjs';
 
 export const auditedVersion='6.0.3.8';
 export const auditedCnVersion='20260926.1';
@@ -70,29 +72,38 @@ export const articles=[
   configs:['worldgenmastertoggle','magma_caves','flooded_caves','gemology'],
   sections:[
    ['潮湿陷坑的三种档位','默认 lunar_cave 在月岛提供潮湿陷坑入口，对应离大陆洞穴区域。cave 将相关区域放在蓝蘑菇林方向。off 保留原版月亮石窟。'],
-   ['熔岩洞穴与锻造台','熔岩洞穴和宝石学默认开启。两者同时启用时，新洞穴在熔岩区域要求生成宝石学锻造台。关闭熔岩洞穴并保留宝石学时，锻造台转入远古遗迹。'],
+   ['熔岩洞穴与锻造台','熔岩洞穴和宝石学默认开启。两者同时启用时，新洞穴在熔岩区域要求生成宝石学锻造台。关闭熔岩洞穴并保留宝石学时，锻造台转入远古遗迹。',null,[{href:'gemology.html#gemology-s8',label:'查洞穴各地形的晶洞'}]],
   ],
   sources:[cfg(556),beta('scripts/map/tasks/forest/moonisland.lua',19),beta('scripts/map/tasks/caves/mushroom_tasks.lua',46),beta('scripts/map/tasks/caves/magma_cave.lua',103),names(784)],
  },
  {
   id:'gemology',category:'mechanics',title:'宝石学与装备附魔',aliases:['Gemology','晶洞','宝石学锻造台','鉴定'],
-  searchJumps:[{terms:['宝石','宝石学','晶洞']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石']},{section:'鉴定工具',terms:['鉴定','宝石鉴定']},
+  searchJumps:[{terms:['宝石','宝石学','宝石附魔学']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石']},{section:'鉴定工具',terms:['鉴定','宝石鉴定']},
    {section:'宝石升级与交易速查',terms:['附魔升级','宝石升级','交易升级','宝石交易','宝石升级路径','附魔宝石升级路径']},
    {section:'三级附魔效果',terms:['附魔效果','宝石品质','三级附魔','附魔宝石效果']},
-   ...gemEffects.map(gem=>({section:'三级附魔效果',prefab:gem.prefab,title:gem.name,terms:[gem.name,gem.english,gem.prefab],summary:gem.levels[2]}))],
-  summary:'查晶洞、鉴定与锻造，再按颜色查交易升级，或对照 14 种宝石的三档附魔效果。',
-  configs:['gemology','magma_caves'],
+   ...gemEffects.map(gem=>({section:'三级附魔效果',prefab:gem.prefab,title:gem.name,terms:[gem.name,gem.english,gem.prefab],summary:gem.levels[2]})),...sourceJumps],
+  summary:'逐种查 14 种附魔宝石的晶洞来源、地形、交易升级和三档附魔效果。',
+  configs:['gemology','magma_caves','worldgenmastertoggle'],
   sections:[
-   ['晶洞掉落','按晶洞种类选择掉落池。每个晶洞基础抽取三次非宝石池、一次宝石池，并有 5% 概率再抽一次宝石池。如果该次抽到宝石学宝石，则三级概率 1%，二级概率 4%，其余为一级。'],
+   ['晶洞掉落','把晶洞放在地上，用镐敲开。每个晶洞抽三次普通材料、一次宝石池，并有 5% 概率额外抽一次宝石池。抽到附魔宝石后再判定品质，一级 95%、二级 4%、三级 1%。',null,[{href:'#gemology-s7',label:'按宝石查来源'},{href:'#gemology-s8',label:'按地形查晶洞'}]],
    ['锻造台操作','第一槽放装备，第二槽放宝石。装备与宝石相容时才能附魔。成功会消耗宝石，新附魔耐久设满。重复同种附魔会替换同种，槽满时新增不同种会移除旧附魔。普通附魔组件默认一个槽，具体装备可以有特例。'],
-   ['配置的作用','宝石学开关与资源生成及若干配方有关。已有装备与附魔还涉及单独载入的运行代码。'],
+   ['配置的作用','宝石学和世界生成总开关默认开启，共同控制新洞穴的宝石学地形与资源。既有地图不会因打开这两个开关而补生成相应房间。已有装备与附魔还涉及单独载入的运行代码。'],
    ['鉴定工具','宝石放大镜有 100 点鉴定耐久，远古宝石放大镜和宝石熔岩镜各有 400 点。可以鉴定整叠宝石，每枚消耗 1 点耐久。耐久不足时，只会鉴定能够负担的数量。'],
    ['宝石升级与交易速查','以下概率按单颗宝石结算，适用于各颜色的两种附魔宝石。三级已经封顶，交出去有风险。红色交蜗龙只有 25% 留在三级，绿色交龟类只有 40% 留在三级。蚁狮和石虾都不会返还三级，雪怪吃下三级蓝色只掉普通蓝宝石。',tradeTable],
    ['三级附魔效果','汉化中的「碎裂的」「微瑕的」「无暇的」分别对应一级、二级、三级。表中的伤害、回复与触发率按当前测试版代码计算。装备自身还须支持附魔。',effectTable],
+   [gemSourceTitle,'同色的两种宝石，能掉落它们的晶洞也可能不同。表中百分比是每次从该晶洞的宝石池抽取时，命中指定宝石的概率，已计入普通宝石等候选掉落。点击晶洞名可查看对应的地形和采集方法。',gemSources],
+   [geodeSourceTitle,'先从下表的地形取得晶洞，再放到地上用镐敲开。石化蘑菇树与几类矿物都有外观相近的无晶洞版本。',geodeSources,[{href:'cave-worldgen.html',label:'查洞穴地形与房间设置'}]],
+   ['巨石枝与旧档','斧砍长成的巨石枝时，藤上掉落按种植位置所属地形的池子抽取。三色蘑菇林、混合菌类区、月亮洞窟、苔藓区、岩石平原、蝙蝠洞、遗迹、喷气孔区和落水洞的池子均能提供对应晶洞。旧树沿用已经保存的掉落，在现有对应地形重新种植可以抽当前池。开启宝石学和蘑菇树调整时，绿树入夏、红树入秋、蓝树入春也有机会自然石化。秋天已有的石虾附近还可能生成孕育中的岩石。'],
+   ['虫茧的高品质宝石','到地表连帽森林的黑寡妇巢旁，用寡妇之爪破开茧。蛞蝓龟或蜗牛龟型、雪怪型、蜗龙型、石虾型的茧各随机给一颗绿、蓝、红、白色附魔宝石，同色两种都可能出现。每颗有 90% 概率为二级、10% 为三级。遗迹迷宫和远古守护者的箱子还可能提供已经附魔的装备。'],
+   ['岛屿冒险的额外来源','海难的熔岩地与火山中，开采普通或含金熔岩矿时，14 种附魔宝石都以相同的低权重加入额外掉落池。黑曜石岩石和龙骑士蛋各有 10% 概率给熔岩晶洞，木炭岩有 10% 概率给浮石晶洞。启用岛屿冒险的老虎机战利品时，部分老虎机奖池还会给晶洞。'],
   ],
   sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),
    ...[87,247,261,411,493].map(line=>beta('init/init_gemology/trades.lua',line)),beta('scripts/prefabs/snowmong.lua',122),beta('scripts/stategraphs/SGsnowmong.lua',329),
-   ...[90,228,301,353,421,450,472,581,648,689,742,789,842].map(line=>beta('scripts/gemology_defs.lua',line)),beta('init/init_tuning.lua',399),beta('init/init_gemology/special.lua',5),beta('postinit/components/freezable.lua',21),beta('scripts/prefabs/um_ice_shield.lua',37),names(752),names(764),names(770),names(821),names(853)],
+   ...[90,228,301,353,421,450,472,581,648,689,742,789,842].map(line=>beta('scripts/gemology_defs.lua',line)),beta('init/init_tuning.lua',399),beta('init/init_gemology/special.lua',5),beta('postinit/components/freezable.lua',21),beta('scripts/prefabs/um_ice_shield.lua',37),names(752),names(764),names(770),names(821),names(853),
+   cfg(167),beta('modworldgenmain.lua',31),beta('scripts/um_gemology_geode_defs.lua',1),beta('scripts/prefabs/um_gemology_geodes.lua',97),
+   ...[3,47,127,140,167].map(line=>beta('scripts/map/tasks/caves/gemology.lua',line)),...[2,55,117,166,198,231,249].map(line=>beta('scripts/map/rooms/caves/gemology.lua',line)),beta('scripts/map/rooms/caves/moonregions.lua',243),beta('scripts/map/rooms/caves/moltenregions.lua',311),
+   beta('scripts/prefabs/um_mushtrees_petri.lua',179),beta('scripts/prefabs/um_guano_rock.lua',17),beta('scripts/prefabs/um_rocklobster_rock.lua',19),beta('scripts/prefabs/um_moonglass_ceiling.lua',50),beta('scripts/prefabs/um_moonglass_ceiling.lua',144),beta('scripts/prefabs/um_slimestone_rock.lua',18),beta('scripts/prefabs/um_sinkmound_rock.lua',34),beta('scripts/prefabs/um_magmastone.lua',19),beta('scripts/prefabs/um_magmastone.lua',59),beta('postinit/prefabs/chessjunk.lua',78),beta('postinit/prefabs/cave_vent_mite.lua',19),beta('init/init_strings/init_names.lua',830),names(842),
+   beta('init/um_tree_rock_data.lua',34),beta('init/um_tree_rock_data.lua',78),beta('init/init_gamemodes/init_uncompromising_mode.lua',256),beta('postinit/prefabs/mushtrees.lua',34),beta('postinit/prefabs/mushtrees.lua',84),beta('postinit/prefabs/rocky.lua',19),beta('scripts/map/tasks/forest/giant_trees.lua',10),...[404,515,615,713].map(line=>beta('scripts/webbedcreatureloot.lua',line)),beta('scripts/prefabs/webbedcreature.lua',108),beta('scripts/prefabs/widowsgrasp.lua',22),beta('init/init_gemology/misc.lua',10),beta('init/init_compat.lua',244),beta('init/init_compat.lua',282),beta('init/init_compat.lua',320),names(233),names(303)],
  },
  {
   id:'winky',category:'characters',title:'温奇',aliases:['Winky','鼠人','定居鼠穴'],
@@ -194,4 +205,5 @@ export const articles=[
  ...characterArticles,
  ...exclusiveArticles,
  ...foodArticles,
+ ...additionalArticles,
 ];

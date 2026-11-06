@@ -903,12 +903,76 @@
     "height": 64,
     "workshop": true
   },
+  "um_gemology_geode_green": {
+    "path": "assets/um-beta/um_gemology_geode_green.png",
+    "source": "images/inventoryimages/um_gemology_geode_green.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_green.xml",
+    "width": 63,
+    "height": 57,
+    "workshop": true
+  },
+  "um_gemology_geode_guano": {
+    "path": "assets/um-beta/um_gemology_geode_guano.png",
+    "source": "images/inventoryimages/um_gemology_geode_guano.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_guano.xml",
+    "width": 59,
+    "height": 62,
+    "workshop": true
+  },
+  "um_gemology_geode_lobster": {
+    "path": "assets/um-beta/um_gemology_geode_lobster.png",
+    "source": "images/inventoryimages/um_gemology_geode_lobster.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_lobster.xml",
+    "width": 62,
+    "height": 61,
+    "workshop": true
+  },
   "um_gemology_geode_magma": {
     "path": "assets/um-beta/um_gemology_geode_magma.png",
     "source": "images/inventoryimages/um_gemology_geode_magma.tex",
     "atlas": "images/inventoryimages/um_gemology_geode_magma.xml",
     "width": 63,
     "height": 64,
+    "workshop": true
+  },
+  "um_gemology_geode_red": {
+    "path": "assets/um-beta/um_gemology_geode_red.png",
+    "source": "images/inventoryimages/um_gemology_geode_red.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_red.xml",
+    "width": 62,
+    "height": 62,
+    "workshop": true
+  },
+  "um_gemology_geode_ruins": {
+    "path": "assets/um-beta/um_gemology_geode_ruins.png",
+    "source": "images/inventoryimages/um_gemology_geode_ruins.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_ruins.xml",
+    "width": 64,
+    "height": 62,
+    "workshop": true
+  },
+  "um_gemology_geode_sink": {
+    "path": "assets/um-beta/um_gemology_geode_sink.png",
+    "source": "images/inventoryimages/um_gemology_geode_sink.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_sink.xml",
+    "width": 63,
+    "height": 63,
+    "workshop": true
+  },
+  "um_gemology_geode_slime": {
+    "path": "assets/um-beta/um_gemology_geode_slime.png",
+    "source": "images/inventoryimages/um_gemology_geode_slime.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_slime.xml",
+    "width": 62,
+    "height": 61,
+    "workshop": true
+  },
+  "um_gemology_geode_vent": {
+    "path": "assets/um-beta/um_gemology_geode_vent.png",
+    "source": "images/inventoryimages/um_gemology_geode_vent.tex",
+    "atlas": "images/inventoryimages/um_gemology_geode_vent.xml",
+    "width": 64,
+    "height": 62,
     "workshop": true
   },
   "um_gemology_pouch": {

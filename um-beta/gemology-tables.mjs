@@ -1,4 +1,5 @@
 export const tradeTable = {
+  style: 'guide-trades',
   headers: ['宝石颜色', '交易对象', '一级升二级', '二级升三级', '其余回报与注意事项'],
   rows: [
     ['红色', '蜗龙（刺／管）', '25%', '25%', '一级：55% 退回同级，20% 得 3–5 个爆燃黏液。二级：45% 退回同级，20% 得普通红宝石，10% 得 5–9 个爆燃黏液。交易后对玩家中立，喂蓝色会激怒它。'],
@@ -28,8 +29,11 @@ export const gemEffects = [
   { prefab: 'um_gemologypurplegem2', name: '奥术紫水晶', english: 'Arcane Amethyst', levels: ['死亡掉落时把附魔装备送回附近亡者物品栏，满耐久可触发 1 次。', '另尝试拾回 2 件附近物品，可触发 4 次。', '另尝试拾回 3 件附近物品，可触发 8 次。'], note: '掉落处 10 距离内查找玩家，再判断其是否刚死亡或处于鬼魂状态。拾回范围以该玩家为中心，半径 8。' },
 ];
 
+export const gemSourceRowId = prefab => 'gem-source-'+prefab.replace(/^um_gemology/,'');
+
 export const effectTable = {
   headers: ['附魔宝石', '一级', '二级', '三级', '适用条件'],
   rows: gemEffects.map(gem => [gem.name, ...gem.levels, gem.note]),
   prefabs: gemEffects.map(gem => gem.prefab),
+  rowLinks: gemEffects.map(gem => ({href:'#'+gemSourceRowId(gem.prefab),label:'获取地形'})),
 };

@@ -35,7 +35,8 @@ const articleIcons={
  'veterans-curse':'veteranshrine','thermal-stone':'heatrock','sewing-kit':'sewing_kit',
 };
 const entryArticles=articles.map(a=>({...a,tag:'公开测试版',
- configKeys:a.configs,sections:a.sections.map(([title,text,guide])=>({title,text,guide}))}));
+ configKeys:a.configs,sections:a.sections.map(([title,text,guide,links])=>({title,text,links,
+  guide:guide?.makeRows?{...guide,rows:guide.makeRows(snapshot.geodePools)}:guide}))}));
 const articleById=new Map(entryArticles.map(a=>[a.id,a]));
 const articleByPrefab=new Map(entryArticles.filter(a=>a.category==='new-items'&&a.prefab).map(a=>[a.prefab,a]));
 const artFor=id=>artwork[id]??(icons[id]?.source.startsWith('DST images.zip/')?icons[id]:null);
@@ -121,17 +122,22 @@ const table=(headers,rows,label,css='')=>`<div class="table-wrap${css?' '+css:''
 const sourceList=a=>a.sources.map(s=>`<li>${s.kind==='cn'?'汉化补丁':'测试版'} · ${code(s.file+':'+s.line)}</li>`).join('');
 const sectionId=(a,i)=>a.id+'-s'+(i+1);
 const guideRowId=prefab=>'gem-'+prefab.replace(/^um_gemology/,'');
+const guideAnchors=guide=>guide?.rowAnchors??guide?.prefabs?.map(guideRowId)??[];
+const guideCellText=cell=>Array.isArray(cell)?cell.map(({label,detail})=>[label,detail].filter(Boolean).join(' ')).join(' '):cell;
+const guideCell=cell=>Array.isArray(cell)?`<ul class="guide-cell-links">${cell.map(({href,label,detail})=>`<li>${link(href,label)}${detail?` <small>${esc(detail)}</small>`:''}</li>`).join('')}</ul>`:esc(cell);
 function guideTable(s){
- const {headers,rows,prefabs=[]}=s.guide;
- return '<p class="guide-table-hint">在窄屏可横滑查看其余列。</p>'+table(headers,rows.map(([name,...cells],i)=>{
-  const prefab=prefabs[i];
-  return `<tr${prefab?` id="${guideRowId(prefab)}"`:''}><th scope="row">${prefab?artImage(prefab,28):''}${esc(name)}</th>${cells.map(cell=>`<td>${esc(cell)}</td>`).join('')}</tr>`;
- }),s.title,prefabs.length?'guide-table':'guide-table guide-trades');
+ const {headers,rows,prefabs=[],rowLinks=[],style}=s.guide,anchors=guideAnchors(s.guide);
+ const hint=headers.length>2?'<p class="guide-table-hint">在窄屏可横滑查看其余列。</p>':'';
+ return hint+table(headers,rows.map(([name,...cells],i)=>{
+  const prefab=prefabs[i],anchor=anchors[i],related=rowLinks[i];
+  return `<tr${anchor?` id="${esc(anchor)}"`:''}><th scope="row">${prefab?artImage(prefab,28):''}${esc(name)}${related?`<small class="guide-row-link">${link(related.href,related.label)}</small>`:''}</th>${cells.map(cell=>`<td>${guideCell(cell)}</td>`).join('')}</tr>`;
+ }),s.title,['guide-table',style].filter(Boolean).join(' '));
 }
 function sectionHTML(s,i,a,continuous){
  const id=sectionId(a,i),heading=continuous?3:2;
  const guide=s.guide?(continuous?`<p>${link(articleHref(a)+'#'+id,'查看完整表格 →')}</p>`:guideTable(s)):'';
- return `<section class="article-section" id="${id}"><h${heading}><a href="#${id}">${esc(s.title)}<span class="anchor-hash">#</span></a></h${heading}><p>${esc(s.text)}</p>${guide}</section>`;
+ const links=s.links?.map(({href,label})=>link(continuous&&href.startsWith('#')?articleHref(a)+href:href,label)).join(' · ');
+ return `<section class="article-section" id="${id}"><h${heading}><a href="#${id}">${esc(s.title)}<span class="anchor-hash">#</span></a></h${heading}><p>${esc(s.text)}</p>${links?`<p>${links}</p>`:''}${guide}</section>`;
 }
 function configStrip(a){
  const rows=a.configs.map(key=>configByKey.get(key));
@@ -230,7 +236,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   ...entryArticles.map(a=>{
    const art=artFor(a.icon??a.prefab??articleIcons[a.id]);
    return {id:a.id,kind:'article',href:articleHref(a),title:a.title,summary:a.summary,category:categories.find(c=>c.id===a.category).name,topic:a.category,aliases:a.aliases,
-    text:a.sections.flatMap(s=>[s.title,s.text,...(s.guide?.rows.flat()??[])]).join(' '),image:art?'../'+art.path:undefined,featured:true};
+    text:a.sections.flatMap(s=>[s.title,s.text,...(s.guide?.rows.flat().map(guideCellText)??[])]).join(' '),image:art?'../'+art.path:undefined,featured:true};
   }),
   ...configs.map(c=>{const group=groupByKey.get(c.key),related=entryArticles.filter(a=>a.configs.includes(c.key));return {
    id:configId(c.key),kind:'config',href:'configs.html#'+configId(c.key),title:configName(c),category:group.mode+' / '+group.name,summary:c.title+' · 默认 '+modeLabel(standard(c)),keywords:c.key,
@@ -242,8 +248,8 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  ];
  const jumps=entryArticles.flatMap(a=>(a.searchJumps??[]).map(jump=>{
   const i=jump.section?a.sections.findIndex(s=>s.title===jump.section):-1;
-  if(jump.section&&i<0||jump.prefab&&!a.sections[i]?.guide?.prefabs?.includes(jump.prefab))throw Error('Unknown Beta search target '+jump.section);
-  const row=jump.prefab&&guideRowId(jump.prefab);
+  const row=jump.anchor??(jump.prefab&&guideRowId(jump.prefab));
+  if(jump.section&&i<0||row&&!guideAnchors(a.sections[i]?.guide).includes(row))throw Error('Unknown Beta search target '+jump.section);
   const art=artFor(jump.prefab);
   return {id:a.id+'-jump-'+(row||i+1),kind:'article',href:articleHref(a)+(i<0?'':'#'+(row||sectionId(a,i))),
    title:jump.title??(jump.section?a.title+' · '+jump.section:a.title),category:categories.find(c=>c.id===a.category).name,
