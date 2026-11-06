@@ -16,14 +16,32 @@ for(const [file,term,asset] of [
  ['equipment-repair.html','铥矿甲','armorruins'],
  ['equipment-repair.html','金块','goldnugget'],
  ['frost-shrine.html','冰','ice'],
+ ['role-wormwood.html','西瓜帽','watermelonhat'],
+ ['role-wormwood.html','胡萝卜鼠诱饵甲','armor_carrotlure'],
+ ['dried-vegetables.html','西瓜干','watermelon'],
+ ['trap.html','草','cutgrass'],
+ ['trap.html','树枝','twigs'],
+ ['eyeturret.html','龙鳞皮','dragon_scales'],
+ ['eyeturret.html','蘑菇皮','shroom_skin'],
+ ['frost-core.html','寒霜之祠蓝图','blueprint'],
+ ['frost-core.html','普通出逃腿靴','bootleg'],
 ]){
- if(!pages.get(file)?.includes(`${term}<img class="inline-icon" src="assets/icons/${asset}.png"`)){
+ const label=`>${term.slice(0,-1)}<span class="icon-tail">${term.slice(-1)}`;
+ if(!pages.get(file)?.includes(`${label}<img class="inline-icon" src="assets/icons/${asset}.png"`)){
   errors.push(`${file}: incorrect or missing icon for ${term}`);
  }
 }
 for(const file of ['app.js','theme.js','search-index.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
 const context={window:{}};vm.runInNewContext(await fs.readFile(path.join(root,'search-index.js'),'utf8'),context);
 for(const a of context.window.WIKI_INDEX){checkLink('index.html',a.href);if(!a.text||!a.title)errors.push('Invalid search entry '+a.id);}
+for(const [id,aliases] of Object.entries({
+ 'role-wortox':['小恶魔','恶魔人','恶魔'],
+ 'role-wormwood':['植物人'],
+ 'role-wx78':['机器人','WX78'],
+})){
+ const entry=context.window.WIKI_INDEX.find(a=>a.id===id);
+ if(!aliases.every(alias=>entry?.aliases?.includes(alias))||!pages.get(entry?.href)?.includes('class="role-aliases"'))errors.push('Missing character aliases for '+id);
+}
 const configData=JSON.parse(await fs.readFile(new URL('./data/configs.json',import.meta.url),'utf8'));
 const coverage=JSON.parse(await fs.readFile(new URL('./coverage.json',import.meta.url),'utf8'));
 const settings=pages.get('settings.html');

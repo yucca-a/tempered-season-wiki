@@ -1,6 +1,18 @@
 {
+  "beefalohat": {
+    "path": "assets/icons/beefalohat.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "book_research_station": {
     "path": "assets/icons/book_research_station.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "berries_juicy_cooked": {
+    "path": "assets/icons/berries_juicy_cooked.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "batnose": {
+    "path": "assets/icons/batnose.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "bearger_fur": {
@@ -27,8 +39,20 @@
     "path": "assets/icons/armorsnurtleshell.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "armor_bramble": {
+    "path": "assets/icons/armor_bramble.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "beehat": {
+    "path": "assets/icons/beehat.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "book_fish": {
     "path": "assets/icons/book_fish.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "blue_cap_cooked": {
+    "path": "assets/icons/blue_cap_cooked.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "boneshard": {
@@ -45,6 +69,10 @@
   },
   "book_sleep": {
     "path": "assets/icons/book_sleep.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "carrat": {
+    "path": "assets/icons/carrat.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "battlesong_instant_revive": {
@@ -67,8 +95,16 @@
     "path": "assets/icons/carpentry_station.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "chesspiece_crabking_sketch": {
+    "path": "assets/icons/chesspiece_crabking_sketch.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "cane": {
     "path": "assets/icons/cane.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "bushhat": {
+    "path": "assets/icons/bushhat.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "asparagus": {
@@ -79,8 +115,16 @@
     "path": "assets/icons/abigail_flower.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "berries": {
+    "path": "assets/icons/berries.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "bugnet": {
     "path": "assets/icons/bugnet.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "butterfly": {
+    "path": "assets/icons/butterfly.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "armor_lunarplant": {
@@ -89,6 +133,10 @@
   },
   "archive_resonator_item": {
     "path": "assets/icons/archive_resonator_item.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "compass": {
+    "path": "assets/icons/compass.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "bullkelp_root": {
@@ -131,6 +179,18 @@
     "path": "assets/icons/butterflywings.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "canary_poisoned": {
+    "path": "assets/icons/canary_poisoned.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "cactus_flower": {
+    "path": "assets/icons/cactus_flower.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "ancientfruit_nightvision": {
+    "path": "assets/icons/ancientfruit_nightvision.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "battlesong_instant_taunt": {
     "path": "assets/icons/battlesong_instant_taunt.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
@@ -147,8 +207,20 @@
     "path": "assets/icons/compost.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "deserthat": {
+    "path": "assets/icons/deserthat.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "armormarble": {
     "path": "assets/icons/armormarble.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "cactus_meat_cooked": {
+    "path": "assets/icons/cactus_meat_cooked.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "batwing_cooked": {
+    "path": "assets/icons/batwing_cooked.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "beargervest": {
@@ -163,8 +235,16 @@
     "path": "assets/icons/antliontrinket.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "canary": {
+    "path": "assets/icons/canary.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "beargerfur_sack": {
     "path": "assets/icons/beargerfur_sack.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "birdtrap": {
+    "path": "assets/icons/birdtrap.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "boards": {
@@ -183,12 +263,24 @@
     "path": "assets/icons/chester_eyebone.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "armor_carrotlure": {
+    "path": "assets/icons/armor_carrotlure.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "book_temperature": {
     "path": "assets/icons/book_temperature.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "bee": {
+    "path": "assets/icons/bee.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "antlionhat": {
     "path": "assets/icons/antlionhat.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "barnacle": {
+    "path": "assets/icons/barnacle.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "book_tentacles": {
@@ -211,12 +303,28 @@
     "path": "assets/icons/deerclopseyeball_sentryward_kit.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "chesspiece_wagboss_lunar_sketch": {
+    "path": "assets/icons/chesspiece_wagboss_lunar_sketch.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "bonesoup": {
+    "path": "assets/icons/bonesoup.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "armordreadstone": {
+    "path": "assets/icons/armordreadstone.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "bundlewrap": {
     "path": "assets/icons/bundlewrap.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "deerclops_eyeball": {
     "path": "assets/icons/deerclops_eyeball.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "book_moon": {
+    "path": "assets/icons/book_moon.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "blowdart_pipe": {
@@ -235,16 +343,36 @@
     "path": "assets/icons/book_brimstone.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "battlesong_instant_panic": {
+    "path": "assets/icons/battlesong_instant_panic.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "chesspiece_malbatross_sketch": {
+    "path": "assets/icons/chesspiece_malbatross_sketch.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "armordragonfly": {
     "path": "assets/icons/armordragonfly.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "book_light": {
+    "path": "assets/icons/book_light.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "chestupgrade_stacksize": {
     "path": "assets/icons/chestupgrade_stacksize.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "cookedmonstermeat": {
+    "path": "assets/icons/cookedmonstermeat.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "beebox": {
     "path": "assets/icons/beebox.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "berries_cooked": {
+    "path": "assets/icons/berries_cooked.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "cannonball_rock_item": {
@@ -263,8 +391,20 @@
     "path": "assets/icons/armor_sanity.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "bird_egg": {
+    "path": "assets/icons/bird_egg.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "blue_cap": {
+    "path": "assets/icons/blue_cap.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "axe": {
     "path": "assets/icons/axe.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "crow": {
+    "path": "assets/icons/crow.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "butter": {
@@ -295,6 +435,10 @@
     "path": "assets/icons/book_silviculture.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
+  "blue_mushroomhat": {
+    "path": "assets/icons/blue_mushroomhat.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
   "boomerang": {
     "path": "assets/icons/boomerang.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
@@ -309,6 +453,10 @@
   },
   "batnosehat": {
     "path": "assets/icons/batnosehat.png",
+    "source": "DST images.zip/images/inventoryimages1.tex"
+  },
+  "cutlichen": {
+    "path": "assets/icons/cutlichen.png",
     "source": "DST images.zip/images/inventoryimages1.tex"
   },
   "fishingrod": {
@@ -331,12 +479,20 @@
     "path": "assets/icons/ghostflower.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "dreadstonehat": {
+    "path": "assets/icons/dreadstonehat.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "eggplant": {
     "path": "assets/icons/eggplant.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "orangestaff": {
     "path": "assets/icons/orangestaff.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_small_5_inv": {
+    "path": "assets/icons/oceanfish_small_5_inv.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "moonglassaxe": {
@@ -367,6 +523,18 @@
     "path": "assets/icons/goldenpitchfork.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "fishmeat_small_cooked": {
+    "path": "assets/icons/fishmeat_small_cooked.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "nitre": {
+    "path": "assets/icons/nitre.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "green_cap": {
+    "path": "assets/icons/green_cap.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "greenstaff": {
     "path": "assets/icons/greenstaff.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -375,12 +543,20 @@
     "path": "assets/icons/eyebrellahat.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "ghostlyelixir_lunar": {
+    "path": "assets/icons/ghostlyelixir_lunar.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "lunar_seed": {
     "path": "assets/icons/lunar_seed.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "froglegs": {
     "path": "assets/icons/froglegs.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_small_9_inv": {
+    "path": "assets/icons/oceanfish_small_9_inv.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "elixir_container": {
@@ -395,6 +571,10 @@
     "path": "assets/icons/horrorfuel.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "ghostlyelixir_shadow": {
+    "path": "assets/icons/ghostlyelixir_shadow.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "malbatross_feathered_weave": {
     "path": "assets/icons/malbatross_feathered_weave.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -403,12 +583,24 @@
     "path": "assets/icons/fishmeat_small.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "monstermeat_dried": {
+    "path": "assets/icons/monstermeat_dried.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "giftwrap": {
     "path": "assets/icons/giftwrap.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "ghostlyelixir_attack": {
+    "path": "assets/icons/ghostlyelixir_attack.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "papyrus": {
     "path": "assets/icons/papyrus.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "minerhat": {
+    "path": "assets/icons/minerhat.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "milkywhites": {
@@ -439,6 +631,10 @@
     "path": "assets/icons/icestaff2.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "gelblob_bottle": {
+    "path": "assets/icons/gelblob_bottle.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "lureplantbulb": {
     "path": "assets/icons/lureplantbulb.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -455,6 +651,10 @@
     "path": "assets/icons/firestaff.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "featherhat": {
+    "path": "assets/icons/featherhat.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "hammer": {
     "path": "assets/icons/hammer.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -467,8 +667,20 @@
     "path": "assets/icons/malbatross_feather.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "oceanfish_medium_7_inv": {
+    "path": "assets/icons/oceanfish_medium_7_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "nightsword": {
     "path": "assets/icons/nightsword.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "ghostlyelixir_revive": {
+    "path": "assets/icons/ghostlyelixir_revive.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "kelphat": {
+    "path": "assets/icons/kelphat.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "log": {
@@ -483,6 +695,10 @@
     "path": "assets/icons/panflute.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "moon_tree_blossom": {
+    "path": "assets/icons/moon_tree_blossom.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "onion_seeds": {
     "path": "assets/icons/onion_seeds.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -495,12 +711,28 @@
     "path": "assets/icons/houndstooth.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "oceanfish_small_3_inv": {
+    "path": "assets/icons/oceanfish_small_3_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_medium_4_inv": {
+    "path": "assets/icons/oceanfish_medium_4_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "eyeturret_item": {
     "path": "assets/icons/eyeturret_item.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "ghostlyelixir_shield": {
     "path": "assets/icons/ghostlyelixir_shield.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_medium_1_inv": {
+    "path": "assets/icons/oceanfish_medium_1_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "green_mushroomhat": {
+    "path": "assets/icons/green_mushroomhat.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "moonstorm_static_item": {
@@ -525,6 +757,10 @@
   },
   "orangegem": {
     "path": "assets/icons/orangegem.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "guacamole": {
+    "path": "assets/icons/guacamole.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "greengem": {
@@ -559,6 +795,14 @@
     "path": "assets/icons/oceanfish_small_7_inv.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "moon_mushroomhat": {
+    "path": "assets/icons/moon_mushroomhat.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "dug_bananabush": {
+    "path": "assets/icons/dug_bananabush.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "moonbutterflywings": {
     "path": "assets/icons/moonbutterflywings.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -573,6 +817,10 @@
   },
   "nutrientsgoggleshat": {
     "path": "assets/icons/nutrientsgoggleshat.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "moon_cap": {
+    "path": "assets/icons/moon_cap.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "icestaff3": {
@@ -597,6 +845,14 @@
   },
   "oceanfishingrod": {
     "path": "assets/icons/oceanfishingrod.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "nightmarepie": {
+    "path": "assets/icons/nightmarepie.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "palmcone_scale": {
+    "path": "assets/icons/palmcone_scale.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "ghostlyelixir_fastregen": {
@@ -627,8 +883,16 @@
     "path": "assets/icons/gears.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "kelp_dried": {
+    "path": "assets/icons/kelp_dried.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "moonglass_charged": {
     "path": "assets/icons/moonglass_charged.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_medium_6_inv": {
+    "path": "assets/icons/oceanfish_medium_6_inv.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "messagebottle": {
@@ -643,6 +907,14 @@
     "path": "assets/icons/gelblob_storage_kit.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "hawaiianshirt": {
+    "path": "assets/icons/hawaiianshirt.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "frogfishbowl": {
+    "path": "assets/icons/frogfishbowl.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "houndstooth_blowpipe": {
     "path": "assets/icons/houndstooth_blowpipe.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -651,12 +923,28 @@
     "path": "assets/icons/pickaxe_lunarplant.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "oceanfish_medium_5_inv": {
+    "path": "assets/icons/oceanfish_medium_5_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "lifeinjector": {
     "path": "assets/icons/lifeinjector.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "dragonpie": {
+    "path": "assets/icons/dragonpie.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "garlic": {
     "path": "assets/icons/garlic.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "moon_cap_cooked": {
+    "path": "assets/icons/moon_cap_cooked.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "green_cap_cooked": {
+    "path": "assets/icons/green_cap_cooked.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "forgetmelots": {
@@ -665,6 +953,14 @@
   },
   "heatrock": {
     "path": "assets/icons/heatrock.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_small_2_inv": {
+    "path": "assets/icons/oceanfish_small_2_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "lunarplanthat": {
+    "path": "assets/icons/lunarplanthat.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "garlic_seeds": {
@@ -687,8 +983,16 @@
     "path": "assets/icons/molehat.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "drumstick": {
+    "path": "assets/icons/drumstick.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "flowerhat": {
     "path": "assets/icons/flowerhat.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_medium_9_inv": {
+    "path": "assets/icons/oceanfish_medium_9_inv.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "goldnugget": {
@@ -711,12 +1015,20 @@
     "path": "assets/icons/gunpowder.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "mermhat": {
+    "path": "assets/icons/mermhat.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "minotaurhorn": {
     "path": "assets/icons/minotaurhorn.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "mushroom_light": {
     "path": "assets/icons/mushroom_light.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "killerbee": {
+    "path": "assets/icons/killerbee.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "footballhat": {
@@ -747,6 +1059,10 @@
     "path": "assets/icons/dragonfruit_seeds.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "froglegs_cooked": {
+    "path": "assets/icons/froglegs_cooked.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "ice": {
     "path": "assets/icons/ice.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -771,6 +1087,10 @@
     "path": "assets/icons/icebox.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "phlegm": {
+    "path": "assets/icons/phlegm.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "pickaxe": {
     "path": "assets/icons/pickaxe.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -783,6 +1103,10 @@
     "path": "assets/icons/fig.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "fertilizer": {
+    "path": "assets/icons/fertilizer.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "goldenaxe": {
     "path": "assets/icons/goldenaxe.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
@@ -791,12 +1115,48 @@
     "path": "assets/icons/monstermeat.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "manrabbit_tail": {
+    "path": "assets/icons/manrabbit_tail.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "gazpacho": {
+    "path": "assets/icons/gazpacho.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_small_1_inv": {
+    "path": "assets/icons/oceanfish_small_1_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_small_4_inv": {
+    "path": "assets/icons/oceanfish_small_4_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "orangemooneye": {
+    "path": "assets/icons/orangemooneye.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "krampus_sack": {
     "path": "assets/icons/krampus_sack.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
+  "dragonfruit_cooked": {
+    "path": "assets/icons/dragonfruit_cooked.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_medium_2_inv": {
+    "path": "assets/icons/oceanfish_medium_2_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "klaussackkey": {
+    "path": "assets/icons/klaussackkey.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
   "oceanfish_small_6_inv": {
     "path": "assets/icons/oceanfish_small_6_inv.png",
+    "source": "DST images.zip/images/inventoryimages2.tex"
+  },
+  "oceanfish_medium_3_inv": {
+    "path": "assets/icons/oceanfish_medium_3_inv.png",
     "source": "DST images.zip/images/inventoryimages2.tex"
   },
   "horn": {
@@ -815,6 +1175,10 @@
     "path": "assets/icons/sewing_mannequin.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "walrushat": {
+    "path": "assets/icons/walrushat.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "spicepack": {
     "path": "assets/icons/spicepack.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
@@ -825,6 +1189,10 @@
   },
   "quagmire_onion": {
     "path": "assets/icons/quagmire_onion.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "spider_hider": {
+    "path": "assets/icons/spider_hider.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "twigs": {
@@ -875,12 +1243,20 @@
     "path": "assets/icons/pocketwatch_heal.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "spider_healer": {
+    "path": "assets/icons/spider_healer.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "siestahut": {
     "path": "assets/icons/siestahut.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "ruins_bat": {
     "path": "assets/icons/ruins_bat.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "seeds_cooked": {
+    "path": "assets/icons/seeds_cooked.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "spear_wathgrithr_lightning_charged": {
@@ -903,6 +1279,10 @@
     "path": "assets/icons/ruinshat.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "potato": {
+    "path": "assets/icons/potato.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "tillweed": {
     "path": "assets/icons/tillweed.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
@@ -911,12 +1291,28 @@
     "path": "assets/icons/trap.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "security_pulse_cage_full": {
+    "path": "assets/icons/security_pulse_cage_full.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "portablecookpot_item": {
     "path": "assets/icons/portablecookpot_item.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "red_cap": {
+    "path": "assets/icons/red_cap.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "saddle_shadow": {
+    "path": "assets/icons/saddle_shadow.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "saltrock": {
     "path": "assets/icons/saltrock.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "raincoat": {
+    "path": "assets/icons/raincoat.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "rocks": {
@@ -927,8 +1323,16 @@
     "path": "assets/icons/pocketwatch_revive.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "trinket_6": {
+    "path": "assets/icons/trinket_6.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "pocketwatch_portal": {
     "path": "assets/icons/pocketwatch_portal.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "spidereggsack": {
+    "path": "assets/icons/spidereggsack.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "trap_bramble": {
@@ -951,6 +1355,10 @@
     "path": "assets/icons/spear_wathgrithr_lightning.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "trunkvest_summer": {
+    "path": "assets/icons/trunkvest_summer.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "scraphat": {
     "path": "assets/icons/scraphat.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
@@ -967,8 +1375,16 @@
     "path": "assets/icons/rock_avocado_fruit_ripe_cooked.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "trunkvest_winter": {
+    "path": "assets/icons/trunkvest_winter.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "treegrowthsolution": {
     "path": "assets/icons/treegrowthsolution.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "turf_marsh": {
+    "path": "assets/icons/turf_marsh.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "pocketwatch_parts": {
@@ -999,12 +1415,24 @@
     "path": "assets/icons/slurtleslime.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "spider_warrior": {
+    "path": "assets/icons/spider_warrior.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "saddle_basic": {
     "path": "assets/icons/saddle_basic.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "sword_lunarplant": {
     "path": "assets/icons/sword_lunarplant.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "potato_cooked": {
+    "path": "assets/icons/potato_cooked.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "robin_winter": {
+    "path": "assets/icons/robin_winter.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "spore_medium": {
@@ -1019,8 +1447,16 @@
     "path": "assets/icons/shadowheart.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "slurper_pelt": {
+    "path": "assets/icons/slurper_pelt.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "scandata": {
     "path": "assets/icons/scandata.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "pinecone": {
+    "path": "assets/icons/pinecone.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "townportaltalisman": {
@@ -1059,6 +1495,10 @@
     "path": "assets/icons/voidcloth.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "trinket_1": {
+    "path": "assets/icons/trinket_1.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "townportal": {
     "path": "assets/icons/townportal.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
@@ -1073,6 +1513,14 @@
   },
   "pocketwatch_weapon": {
     "path": "assets/icons/pocketwatch_weapon.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "trunk_winter": {
+    "path": "assets/icons/trunk_winter.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "robin": {
+    "path": "assets/icons/robin.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "redgem": {
@@ -1103,12 +1551,24 @@
     "path": "assets/icons/thurible.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "red_cap_cooked": {
+    "path": "assets/icons/red_cap_cooked.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "tophat": {
     "path": "assets/icons/tophat.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "portableblender_item": {
     "path": "assets/icons/portableblender_item.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "seeds": {
+    "path": "assets/icons/seeds.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "steelwool": {
+    "path": "assets/icons/steelwool.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "pocketwatch_recall": {
@@ -1123,8 +1583,20 @@
     "path": "assets/icons/shieldofterror.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "quagmire_tomato": {
+    "path": "assets/icons/quagmire_tomato.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "transistor": {
     "path": "assets/icons/transistor.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "red_mushroomhat": {
+    "path": "assets/icons/red_mushroomhat.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "sleepbomb": {
+    "path": "assets/icons/sleepbomb.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "trident": {
@@ -1139,12 +1611,20 @@
     "path": "assets/icons/researchlab3.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "rabbit": {
+    "path": "assets/icons/rabbit.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "spoiled_food": {
     "path": "assets/icons/spoiled_food.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "slurtlehat": {
     "path": "assets/icons/slurtlehat.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "trinket_25": {
+    "path": "assets/icons/trinket_25.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "thulecite": {
@@ -1155,12 +1635,20 @@
     "path": "assets/icons/spidergland.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
+  "slurtle_shellpieces": {
+    "path": "assets/icons/slurtle_shellpieces.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
   "trunk_summer": {
     "path": "assets/icons/trunk_summer.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "thulecite_pieces": {
     "path": "assets/icons/thulecite_pieces.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "spice_garlic": {
+    "path": "assets/icons/spice_garlic.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "reskin_tool": {
@@ -1185,6 +1673,10 @@
   },
   "reviver": {
     "path": "assets/icons/reviver.png",
+    "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "sculptingtable": {
+    "path": "assets/icons/sculptingtable.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
   },
   "seafaring_prototyper": {
@@ -1251,8 +1743,20 @@
     "path": "assets/icons/wx78module_movespeed.png",
     "source": "DST images.zip/images/inventoryimages4.tex"
   },
+  "woodcarvedhat": {
+    "path": "assets/icons/woodcarvedhat.png",
+    "source": "DST images.zip/images/inventoryimages4.tex"
+  },
   "wormlight": {
     "path": "assets/icons/wormlight.png",
+    "source": "DST images.zip/images/inventoryimages4.tex"
+  },
+  "wx78_shadowdrone_debuffer": {
+    "path": "assets/icons/wx78_shadowdrone_debuffer.png",
+    "source": "DST images.zip/images/inventoryimages4.tex"
+  },
+  "watermelonhat": {
+    "path": "assets/icons/watermelonhat.png",
     "source": "DST images.zip/images/inventoryimages4.tex"
   },
   "wormlight_lesser": {
@@ -1271,12 +1775,20 @@
     "path": "assets/icons/waxwelljournal.png",
     "source": "DST images.zip/images/inventoryimages4.tex"
   },
+  "wx78module_light2": {
+    "path": "assets/icons/wx78module_light2.png",
+    "source": "DST images.zip/images/inventoryimages4.tex"
+  },
   "yellowgem": {
     "path": "assets/icons/yellowgem.png",
     "source": "DST images.zip/images/inventoryimages4.tex"
   },
   "wx78module_maxhunger1": {
     "path": "assets/icons/wx78module_maxhunger1.png",
+    "source": "DST images.zip/images/inventoryimages4.tex"
+  },
+  "wetgoop": {
+    "path": "assets/icons/wetgoop.png",
     "source": "DST images.zip/images/inventoryimages4.tex"
   },
   "wx78module_nightvision": {

@@ -11,6 +11,7 @@ export const configData=JSON.parse(await fs.readFile(new URL('./data/configs.jso
 if(configData.version!==meta.version)throw Error('Wiki and configuration snapshot versions differ');
 export const iconManifest=JSON.parse(await fs.readFile(new URL('./data/icon-manifest.json',import.meta.url),'utf8'));
 export const iconLabels=JSON.parse(await fs.readFile(new URL('./data/icon-labels.json',import.meta.url),'utf8'));
+export const protectedIconNames=JSON.parse(await fs.readFile(new URL('./data/icon-protected-names.json',import.meta.url),'utf8'));
 export const notes={};
 export const articles=structuredClone(initial);
 const sourceAuditVersion='2.8.14.97.4';
@@ -65,6 +66,18 @@ for(const article of articles.filter(a=>entityAuditIds.has(a.id))){
  }
 }
 articles.find(a=>a.id==='armor').sections.at(-1).paragraphs.push('遇强则坚作用于符合条件的巨兽，并排除蚁狮与果蝇王。蚁狮的沙尘暴减伤由自身技能控制，不能套用这套动态装甲。');
+const characterAliases={
+ wilson:['威尔森','科学家'], willow:['火女','纵火女'], wolfgang:['大力士'], wendy:['鬼女','幽灵女孩'],
+ wx78:['机器人','WX78','WX 78'], wickerbottom:['老奶奶','图书管理员','薇克伯顿'],
+ woodie:['伐木工'], wes:['小丑','默剧演员','维斯'], waxwell:['老麦','麦克斯韦','Maxwell'],
+ wigfrid:['女武神','维格弗里德'], webber:['蜘蛛人','蜘蛛男孩','小蜘蛛'], winona:['女工','女工人'],
+ warly:['厨师','大厨'], walter:['童子军','小童子军'], wortox:['小恶魔','恶魔人','恶魔','沃托克斯'],
+ wormwood:['植物人','树人'], wurt:['鱼妹','鱼人妹'], wanda:['表姐','钟表匠','旺妲'],
+ wonkey:['猴子','猴人'], wathom:['Wathom'], wixie:['Wixie'],
+};
+for(const article of articles){
+ if(article.id.startsWith('role-'))article.aliases=characterAliases[article.id.slice(5)]??[];
+}
 const itemReadingLinks={
  'frost-core':['frostjaw','frost-shrine','frost-core-staff'],
  'frost-core-staff':['frost-core','frost-shrine'],
@@ -93,6 +106,13 @@ const about=articles.find(a=>a.id==='about');
 about.sections[0].paragraphs=['本资料库面向《为爽而虐 / 暗影世界 淬炼之季》玩家，包含当前全部配置的默认值、可选档位与关联玩法，以及按源码整理的角色、道具、建筑、食物、生物和世界机制。','机制说明按当前版本源码核对。页面标注的版本是资料基线，工坊版本变化后需要再次核对更新。配置说明与当前实现存在差异时会单独标注。'];
 about.sections[2].paragraphs=['阅读布局参考 QiNeko Wiki；正文依据淬炼之季本地源码和更新日志独立整理。两个分支的机制、数值与默认配置不同，参考站的新内容不代表本分支已经实装。','图标从已安装的饥荒联机版与本模组资源中提取，仅用于识别相关游戏内容，权利归 Klei Entertainment 及相应作者。'];
 about.sections[2].externalLinks[0].url='https://qineko.wiki/ws/';
+about.sections[2].paragraphs.push('角色词条保留游戏角色名，并列出玩家攻略和讨论中常用的称呼，方便查找。');
+about.sections[2].externalLinks.push(
+ {label:'灰机 Wiki · 饥荒联机版角色',url:'https://dontstarve.huijiwiki.com/wiki/角色'},
+ {label:'3DM · 角色昵称与介绍',url:'https://www.3dmgame.com/gl/3787258.html'},
+ {label:'小黑盒 · 角色技能加点攻略',url:'https://playblackbox.com/guides/2070708/'},
+ {label:'Steam 社区 · 联机版角色攻略',url:'https://steamcommunity.com/sharedfiles/filedetails/?id=2066554357'},
+);
 const gettingStarted=articles.find(a=>a.id==='getting-started');
 gettingStarted.sections.at(-1).paragraphs=[`配置大全覆盖当前 ${configData.total} 项实际配置。百科按玩法分类阅读，每篇可跳转到对应开关查看全部档位；遇到名称不同的配置，检索也支持配置键。`,'远古宝珠目前只有设计草案，未包含在当前发布版中。贝爷求生、德爷生存等参考站其他分支规则也不能直接套用。'];
 const configByKey=new Map(configData.configs.map(c=>[c.key,c]));

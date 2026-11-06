@@ -40,6 +40,48 @@ def save(image, name):
 
 names = '''spear hambat nightsword armorwood armorgrass armormarble armorruins ruinshat ruins_bat axe pickaxe multitool_axe_pickaxe glasscutter glassaxe tophat icestaff firestaff yellowstaff orangeamulet yellowamulet greenamulet orangegem yellowgem greengem bluegem redgem purplegem thulecite thulecite_pieces nightmarefuel livinglog log rocks cutgrass twigs gears papyrus boards cutstone silk spidergland reviver lifeinjector minotaurhorn deerclops_eyeball eyeturret_item eyeturret rainhat eyebrellahat umbrella slurtlehat shieldofterror mask_of_terror shadowthurible skeletonhat armorskeleton dragon_scales armordragonfly alterguardianhat lunarplant_husk purebrilliance horrorfuel dreadstone sword_lunarplant armor_lunarplant armor_voidcloth voidcloth_scythe voidclothhat pickaxe_lunarplant staff_lunarplant beargerfur_sack townportaltalisman beef_bell saddle_basic chestupgrade_stacksize gelblob_storage_kit trap trap_teeth trap_bramble tacklecontainer supertacklecontainer tackle_station boat_item boat_bumper_crabking_kit shadowheart shadowheart_infused bootleg oceanfish_small_6_inv oceanfish_small_7_inv oceanfish_small_8_inv oceanfish_medium_8_inv carrot onion onion_seeds monstermeat meat fish smallmeat honey royal_jelly forgetmelots glommerfuel goldenpitchfork turfcraftingstation researchlab researchlab2 researchlab3 researchlab4 cartographydesk townportal dragonflyfurnace mushroom_light mushroom_light2 cookpot meatrack tent siestahut bedroll_straw bedroll_furry portablecookpot portableblender lightninggoathorn moonglass moonrocknugget moonbutterflywings sewing_tape pocketwatch_heal pocketwatch_weapon pocketwatch_warp pocketwatch_portal pocketwatch_recall pocketwatch_revive book_brimstone book_tentacles book_horticulture_upgrade book_silviculture book_temperature book_fish spiderhat spiderden chester_eyebone hutch_fishbowl abigail_flower bernie_inactive torch lantern malbatross_beak mast_malbatross_item trident skeleton_player panflute flint lunar_seed opalpreciousgem spore_small spore_medium spore_tall beargervest icepack blueprint waxpaper bundlewrap fishingrod oceanfishingrod lightbulb batbat cave_banana wormlight pepper garlic chili carrotcake tropicalbouillabaisse smallcandy'''.split()
 aliases = {
+    '草': 'cutgrass',
+    '割下的草': 'cutgrass',
+    '干草': 'cutgrass',
+    '龙鳞皮': 'dragon_scales',
+    '龙鳞': 'dragon_scales',
+    '西瓜帽': 'watermelonhat',
+    '胡萝卜鼠': 'carrat',
+    '胡萝卜鼠诱饵甲': 'armor_carrotlure',
+    '胡萝卜外套': 'armor_carrotlure',
+    '矿工帽': 'minerhat',
+    '养蜂帽': 'beehat',
+    '夏季背心': 'trunkvest_summer',
+    '寒冬背心': 'trunkvest_winter',
+    '浆果丛帽': 'bushhat',
+    '花衬衫': 'hawaiianshirt',
+    '鱼人帽': 'mermhat',
+    '羽毛帽': 'featherhat',
+    '海花冠': 'kelphat',
+    '荆棘甲': 'armor_bramble',
+    '雨衣': 'raincoat',
+    '海带': 'kelp',
+    '海带干': 'kelp_dried',
+    '种子干': 'seeds',
+    '睡袋炸弹': 'sleepbomb',
+    '中毒金丝雀': 'canary_poisoned',
+    '红蘑菇': 'red_cap',
+    '绿蘑菇': 'green_cap',
+    '蓝蘑菇': 'blue_cap',
+    '烤肉': 'cookedmeat',
+    '烤蝙蝠翅膀': 'batwing_cooked',
+    '烤怪物肉': 'cookedmonstermeat',
+    '电羊奶': 'goatmilk',
+    '晨星': 'nightstick',
+    '烤土豆': 'potato_cooked',
+    '烤火龙果': 'dragonfruit_cooked',
+    '烤仙人掌肉': 'cactus_meat_cooked',
+    '烤蛙腿': 'froglegs_cooked',
+    '烤红蘑菇': 'red_cap_cooked',
+    '烤绿蘑菇': 'green_cap_cooked',
+    '烤蓝蘑菇': 'blue_cap_cooked',
+    '烤月亮蘑菇': 'moon_cap_cooked',
+    '铥矿甲': 'armorruins',
     '远古铥矿盔甲': 'armorruins',
     '远古铥矿甲': 'armorruins',
     '铥矿盔甲': 'armorruins',
@@ -118,6 +160,28 @@ wx78module_cold wx78module_heat wx78module_maxhealth wx78module_maxhealth2 wx78m
 wx78module_movespeed2 wx78module_nightvision wx78module_taser
 '''.split())
 names.extend(aliases.values())
+names.extend('blue_mushroomhat green_mushroomhat red_mushroomhat moon_mushroomhat'.split())
+# Inventory items found in Wiki recipes, drop tables and equipment tables.
+names.extend('''
+ancientfruit_nightvision armordreadstone barnacle batnose battlesong_instant_panic bee beefalohat berries
+berries_cooked berries_juicy_cooked bird_egg birdtrap bonesoup book_light book_moon butterfly cactus_flower
+canary chesspiece_crabking_sketch chesspiece_malbatross_sketch chesspiece_wagboss_lunar_sketch compass crow
+cutlichen deserthat dragonpie dreadstonehat drumstick dug_bananabush fertilizer fishmeat_small_cooked flowerhat
+footballhat frogfishbowl gazpacho gelblob_bottle ghostlyelixir_attack ghostlyelixir_lunar ghostlyelixir_revive
+ghostlyelixir_shadow guacamole killerbee klaussackkey lunarplanthat manrabbit_tail molehat monstermeat_dried
+moon_cap moon_tree_blossom nightmarepie nitre nutrientsgoggleshat oceanfish_medium_1_inv oceanfish_medium_2_inv
+oceanfish_medium_3_inv oceanfish_medium_4_inv oceanfish_medium_5_inv oceanfish_medium_6_inv oceanfish_medium_7_inv
+oceanfish_medium_9_inv oceanfish_small_1_inv oceanfish_small_2_inv oceanfish_small_3_inv oceanfish_small_4_inv
+oceanfish_small_5_inv oceanfish_small_9_inv orangemooneye palmcone_scale petals phlegm pinecone rabbit robin
+robin_winter saddle_shadow sculptingtable security_pulse_cage_full seeds seeds_cooked sleepbomb slurper_pelt
+slurtle_shellpieces spice_garlic spider_healer spider_hider spider_warrior spidereggsack steelwool trinket_1
+trinket_6 trinket_25 trunk_winter turf_marsh walrushat wetgoop woodcarvedhat wx78_shadowdrone_debuffer wx78module_light2
+'''.split())
+# dryplants2hm uses the raw produce art, with two Quagmire sprite overrides.
+dry_plants = 'carrot corn pumpkin eggplant durian pomegranate dragonfruit watermelon tomato potato asparagus onion garlic pepper fig cave_banana cactus_meat'.split()
+dry_overrides = {'tomato': 'quagmire_tomato', 'onion': 'quagmire_onion'}
+names.extend(dry_plants)
+names.extend(dry_overrides.values())
 manifest = {}
 with ZipFile(GAME/'images.zip') as archive:
     for xmlname in ['images/inventoryimages1.xml','images/inventoryimages2.xml','images/inventoryimages3.xml','images/inventoryimages4.xml','images/avatars.xml']:
@@ -156,11 +220,20 @@ for name in ['zaspberry', 'viperfruit']:
         save(decode(file.read_bytes()), name)
         manifest[name] = {'path': f'assets/icons/{name}.png', 'source': f'Uncompromising Mode Workshop 2039181790/{asset}'}
 labels={}
+localized_names=set()
+localized_by_prefab={}
 with ZipFile(GAME/'scripts.zip') as archive:
     po=archive.read('scripts/languages/chinese_s.po').decode('utf-8-sig')
     for prefab, english, chinese in re.findall(r'msgctxt "STRINGS.NAMES\.([A-Z0-9_]+)"\s+msgid "([^"\n]*)"\s+msgstr "([^"\n]*)"',po):
         prefab=prefab.lower()
+        if len(chinese) > 1:
+            localized_names.add(chinese)
+            localized_by_prefab[prefab]=chinese
         if prefab in manifest and chinese: labels[chinese]=prefab
+for plant in dry_plants:
+    art=dry_overrides.get(plant,plant)
+    if plant in localized_by_prefab and art in manifest:
+        labels[localized_by_prefab[plant]+'干']=art
 labels.update({'霜冻核心':'frostcore2hm','寒霜之祠':'frostshrine2hm','灵魂瓶':'bottle_soul','涡流':'sword_vortex2hm','裂开的不老表':'pocketwatch_heal2hm','永恒-出逃腿靴':'bootleg2hm','小糖豆':'smallcandy2hm','猪鼻胡萝卜蛋糕':'carrotcake2hm','四季鱼汤':'tropicalbouillabaisse2hm','哀悼之穴':'tomb_repair','眼球炮塔':'eyeturret_item','沃特':'wurt'})
 labels.update(aliases)
 for label, name in {'闪电蓝莓': 'zaspberry', '暗影蓝莓': 'viperfruit'}.items():
@@ -168,4 +241,8 @@ for label, name in {'闪电蓝莓': 'zaspberry', '暗影蓝莓': 'viperfruit'}.i
         labels[label] = name
 (ROOT/'wiki/data/icon-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (ROOT/'wiki/data/icon-labels.json').write_text(json.dumps(labels,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+# Keep compound names intact even when only a shorter ingredient has an icon.
+protected_names = sorted(name for name in localized_names - labels.keys()
+                         if any(label in name for label in labels if len(label) > 1))
+(ROOT/'wiki/data/icon-protected-names.json').write_text(json.dumps(protected_names,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f'Exported {len(manifest)} local game/mod icons.')

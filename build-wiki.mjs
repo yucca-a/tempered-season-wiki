@@ -2,7 +2,7 @@ import {createUI} from './ui.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {articles,configs,groups,categories,meta,iconManifest,iconLabels,defaultChoice,choiceText,itemAuditIds,entityAuditIds,lifeAuditIds} from './catalog.mjs';
+import {articles,configs,groups,categories,meta,iconManifest,iconLabels,protectedIconNames,defaultChoice,choiceText,itemAuditIds,entityAuditIds,lifeAuditIds} from './catalog.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url)),out=path.join(root,'dist');
 await fs.mkdir(out,{recursive:true});
 for(const entry of await fs.readdir(out,{withFileTypes:true}))if(entry.isFile()&&entry.name.endsWith('.html'))await fs.unlink(path.join(out,entry.name));
@@ -37,32 +37,45 @@ const icon=(name,size=18)=>`<svg width="${size}" height="${size}" viewBox="0 0 2
 for(const [term,key] of Object.entries(iconLabels)){
  if(!iconManifest[key])throw Error('Missing icon '+key+' for '+term);
 }
-const iconTerms=Object.keys(iconLabels).filter(t=>t.length>1).sort((a,b)=>b.length-a.length);
-const termRegex=new RegExp(iconTerms.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'g');
+const terms=new Map(Object.entries(iconLabels));
+for(const name of [...protectedIconNames,...articles.filter(a=>['items','food','creatures','buildings'].includes(a.category)).map(a=>a.title)]){
+ if(!terms.has(name))terms.set(name,null);
+}
+for(const term of Object.keys(iconLabels).filter(t=>t.length>1)){
+ for(const suffix of ['蓝图','图纸']){
+  const name=term+suffix;
+  if(!terms.get(name))terms.set(name,'blueprint');
+ }
+}
+const termRegex=new RegExp([...terms.keys()].sort((a,b)=>b.length-a.length).map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'gu');
 const termTargets=new Map();
-for(const term of iconTerms){const a=articles.find(a=>a.title===term)??articles.find(a=>a.id.startsWith('role-')&&a.title.startsWith(term+' ·'))??articles.find(a=>a.title.startsWith(term+' ·')||a.title.startsWith(term+'与'));if(a)termTargets.set(term,a.id);}
+for(const term of Object.keys(iconLabels)){const a=articles.find(a=>a.title===term)??articles.find(a=>a.title.startsWith(term+' ·'));if(a)termTargets.set(term,a.id);}
+function isSingleItem(text,start){
+ const before=text.slice(0,start),after=text.slice(start+1);
+ const listStart=/(?:^|[，,、；;：:（(/／→])\s*$/u.test(before);
+ const listEnd=/^\s*(?:[×x]\s*)?\d*(?:\s*(?:个|根|块|份))?\s*(?:$|[，,、；;。)）/／→])/u.test(after);
+ return listStart&&listEnd;
+}
 function rich(text,self='',linkTerms=true){
  let last=0,html='';text=String(text??'');
- // Only decorate one-character labels such as 冰 when the cell names the item.
- const standalone=/^([^\s])(?:\s*[×x]?\s*\d+(?:\s*[个块份])?)?$/u.exec(text);
- const matches=standalone&&Object.hasOwn(iconLabels,standalone[1])
-  ?[{0:standalone[1],index:0}]:text.matchAll(termRegex);
- for(const match of matches){
-  html+=esc(text.slice(last,match.index));const term=match[0],asset=iconManifest[iconLabels[term]],target=linkTerms&&termTargets.get(term);
-  const label=`${esc(term)}<img class="inline-icon" src="${asset.path}" alt="" width="24" height="24" loading="lazy">`;
+ for(const match of text.matchAll(termRegex)){
+  const term=match[0],asset=iconManifest[terms.get(term)];
+  if(!asset||(term.length===1&&!isSingleItem(text,match.index)))continue;
+  html+=esc(text.slice(last,match.index));const target=linkTerms&&termTargets.get(term);
+  const label=`${esc(term.slice(0,-1))}<span class="icon-tail">${esc(term.slice(-1))}<img class="inline-icon" src="${asset.path}" alt="" width="24" height="24" loading="lazy"></span>`;
   html+=target&&target!==self?`<a class="term-link" href="${href(target)}">${label}</a>`:`<span class="item-term">${label}</span>`;last=match.index+term.length;
  }return html+esc(text.slice(last));
 }
 function articleIcon(a){
- const term=iconTerms.find(t=>a.title.startsWith(t))??iconTerms.find(t=>a.title.includes(t));
- return iconManifest[a.icon??iconLabels[a.title]??iconLabels[term]]?.path??null;
+ const topic=a.title.split(/\s+·\s+/u)[0];
+ return iconManifest[a.icon??iconLabels[a.title]??iconLabels[topic]]?.path??null;
 }
 const articleLink=id=>{const a=articleMap.get(id);if(!a)throw Error('Missing linked article '+id);return `<a href="${href(id)}">${esc(a.title)} ${icon('arrow',13)}</a>`;};
 function configLink(key){const c=configMap.get(key);if(!c)throw Error('Missing config '+key);return `<a href="settings.html#${c.id}">${esc(c.label)}</a>`;}
 function optionSummary(c){const opt=defaultChoice(c);return choiceText(opt)+(c.options.filter(o=>o.label===opt?.label).length>1&&opt?.description?' · '+opt.description:'');}
 function sectionHTML(s,index,a,continuous=false){
  const level=continuous?3:2,id=`${a.id}-s${index+1}`;
- return `<section class="article-section" id="${id}"><h${level}><a href="#${id}">${rich(s.title,a.id,false)}<span class="anchor-hash">#</span></a></h${level}>${s.callout?`<div class="callout">${rich(s.callout,a.id)}</div>`:''}${(s.paragraphs??[]).map(p=>`<p>${rich(p,a.id)}</p>`).join('')}${s.table?`<div class="table-wrap" tabindex="0" role="region" aria-label="${esc(s.title)}"><table><thead><tr>${s.table.headers.map(h=>`<th scope="col">${rich(h,a.id,false)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map(c=>`<td>${rich(c,a.id)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.list?.length?`<ul>${s.list.map(p=>`<li>${rich(p,a.id)}</li>`).join('')}</ul>`:''}${s.links?`<div class="related-links">${s.links.map(articleLink).join('')}</div>`:''}${s.externalLinks?`<div class="related-links">${s.externalLinks.map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ${icon('external',13)}</a>`).join('')}</div>`:''}</section>`;
+ return `<section class="article-section" id="${id}"><h${level}><a href="#${id}">${rich(s.title,a.id,false)}<span class="anchor-hash">#</span></a></h${level}>${s.callout?`<div class="callout">${rich(s.callout,a.id)}</div>`:''}${(s.paragraphs??[]).map(p=>`<p>${rich(p,a.id)}</p>`).join('')}${s.table?`<div class="table-wrap" tabindex="0" role="region" aria-label="${esc(s.title)}" style="--table-columns:${s.table.headers.length}"><table><thead><tr>${s.table.headers.map(h=>`<th scope="col">${rich(h,a.id,false)}</th>`).join('')}</tr></thead><tbody>${s.table.rows.map(row=>`<tr>${row.map(c=>`<td>${rich(c,a.id)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`:''}${s.list?.length?`<ul>${s.list.map(p=>`<li>${rich(p,a.id)}</li>`).join('')}</ul>`:''}${s.links?`<div class="related-links">${s.links.map(articleLink).join('')}</div>`:''}${s.externalLinks?`<div class="related-links">${s.externalLinks.map(l=>`<a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ${icon('external',13)}</a>`).join('')}</div>`:''}</section>`;
 }
 function configStrip(a){
  if(!a.configKeys.length)return '';
@@ -90,7 +103,7 @@ for(const a of articles){
  const body=`<nav class="breadcrumbs" aria-label="当前位置"><a href="index.html">百科首页</a><span>/</span><a href="index.html?category=${a.category}#encyclopedia">${catName(a.category)}</a><span>/</span><span>${esc(a.title)}</span></nav>${articleHTML(a)}${adjacent}<div class="article-bottom"><span>按 v${meta.version} 核对 · ${meta.date}</span><a href="index.html#entry-${a.id}">回到连续阅读 ${icon('arrow',13)}</a></div>`;
  await fs.writeFile(path.join(out,href(a.id)),shell(a.id,a.title,a.summary,body,toc));
 }
-const articleIndex=articles.map(a=>({id:a.id,href:href(a.id),kind:'article',title:a.title,category:catName(a.category),categoryId:a.category,summary:a.summary,keywords:[a.keywords,...a.configKeys].join(' '),text:a.sections.map(s=>[s.title,s.callout,...(s.paragraphs??[]),...(s.list??[]),...(s.table?.rows.flat()??[])].filter(Boolean).join(' ')).join(' ')}));
+const articleIndex=articles.map(a=>({id:a.id,href:href(a.id),kind:'article',title:a.title,category:catName(a.category),categoryId:a.category,summary:a.summary,aliases:a.aliases??[],keywords:[a.keywords,...a.configKeys].join(' '),text:a.sections.map(s=>[s.title,s.callout,...(s.paragraphs??[]),...(s.list??[]),...(s.table?.rows.flat()??[])].filter(Boolean).join(' ')).join(' ')}));
 const configIndex=configs.map(c=>({id:c.id,href:'settings.html#'+c.id,kind:'config',title:c.label,category:c.mode+' / '+c.group,summary:c.note.paragraphs?.[0]||c.description||`默认：${optionSummary(c)}`,keywords:c.key,text:[c.description,...(c.note.paragraphs??[]),...c.options.flatMap(o=>[o.label,o.description,rawValue(o.value)]),...c.requires.map(k=>configMap.get(k).label)].join(' '),status:c.note.status||''}));
 await fs.writeFile(path.join(out,'search-index.js'),`window.WIKI_INDEX=${JSON.stringify([...articleIndex,...configIndex]).replaceAll('<','\\u003c')};\n`);
 await fs.cp(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});
