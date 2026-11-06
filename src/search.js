@@ -95,7 +95,13 @@
   input.focus();
  }
  document.querySelectorAll('[data-search]').forEach(button=>button.addEventListener('click',open));
- document.querySelector('#header-search')?.addEventListener('input',event=>{input.value=event.currentTarget.value;open();});
+ const headerSearch=document.querySelector('#header-search');
+ function openFromHeader(){input.value=headerSearch.value;open();}
+ headerSearch?.addEventListener('input',event=>{if(!event.isComposing)openFromHeader();});
+ headerSearch?.addEventListener('compositionend',()=>{if(headerSearch.value.trim())openFromHeader();});
+ headerSearch?.addEventListener('keydown',event=>{
+  if(event.key==='Enter'&&!event.isComposing){event.preventDefault();openFromHeader();}
+ });
  dialog.querySelector('#search-close').addEventListener('click',()=>dialog.close());
  input.addEventListener('input',()=>{pendingEnter=null;render();});
  branch.addEventListener('change',()=>{pendingEnter=null;render();});

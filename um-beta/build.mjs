@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {createUI,searchDialog} from '../ui.mjs';
+import {createUI} from '../ui.mjs';
+import {buildPortal} from '../portal.mjs';
 import {betaTopics} from '../topics.mjs';
 import {articles,auditedVersion,auditedCnVersion} from './articles.mjs';
 import {configName,groupName,techName,extraNames} from './labels.mjs';
@@ -128,8 +129,6 @@ featured:[],configFilterLabel:'筛选配置类别',configAllLabel:'全部类别'
  routes:[['../index.html','模组 Wiki 总览',''],['index.html','测试版百科','index'],['configs.html','配置大全','settings'],['recipes.html','制作与兑换','recipes'],[newItemsHref,'新增物品',''],['sources.html','版本与来源','sources']],
  recipeNav:recipeGroups.map(g=>({...g,count:g.rows.length})),
 };
-const portalShell=(body,icon)=>`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="淬炼之季与永不妥协测试版的中文 Wiki 入口。"><title>饥荒联机版模组 Wiki</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="hub.css"><script src="theme.js"></script><script src="search.js" defer></script></head><body data-wiki="hub"><header class="site"><strong>饥荒联机版模组 Wiki</strong><button class="hub-search-button" data-search>${icon('search',17)} <span>搜索两个 Wiki</span></button></header><main class="content" id="main">${body}</main>${searchDialog(icon)}</body></html>`;
-const hero=(tag,title,body)=>`<section class="hero"><div class="eyebrow">${esc(tag)}</div><h1>${esc(title)}</h1>${body}</section>`;
 const badge=(label,color='#7b526d')=>`<span class="tag" style="--tag-color:${color}"><i></i>${esc(label)}</span>`;
 const count={articles:entryArticles.length,configs:configs.length,choices:configs.reduce((n,c)=>n+c.options.length,0)};
 const articleHref=a=>a.id+'.html';
@@ -150,12 +149,14 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  for(const file of await fs.readdir(dir,{withFileTypes:true})){
   if(file.isFile()&&file.name.endsWith('.html'))await fs.unlink(path.join(dir,file.name));
  }
- const portalCards=`<div class="cols"><article class="card"><img class="cover" src="assets/workshop-cover.png" width="112" height="112" alt=""><span class="badge">v${esc(tempered.version)}</span><h2>${link('tempered.html','淬炼之季')}</h2><p>查阅角色、战斗、世界协同和道具改动，也可按房间配置查默认值与生效条件。</p><nav class="section-nav" aria-label="淬炼之季快捷入口">${link('tempered.html','进入百科 →')}${link('directory.html','分类索引')}${link('settings.html','配置大全')}</nav></article><article class="card"><img class="cover" src="${artwork.cover.path}" width="112" height="112" alt="永不妥协测试版工坊封面"><span class="badge">Public Beta v${esc(betaVersion)}</span><h2>${link('um-beta/index.html','永不妥协测试版')}</h2><p>从测试版源码核对角色、季节、洞穴和宝石学。中文术语参照社区测试版汉化补丁。</p><nav class="section-nav" aria-label="永不妥协测试版快捷入口">${link('um-beta/index.html','进入百科 →')}${link('um-beta/configs.html','配置')}${link('um-beta/'+newItemsHref,'新增物品')}${link('um-beta/recipes.html','制作与兑换')}</nav></article></div>`;
- const portal=hero('中文模组资料','饥荒联机版模组 Wiki','<p>选择你房间启用的模组，查看对应版本的玩法、配方和配置。</p>')+portalCards+
- `<script src="legacy-home.js"></script>`;
- await fs.writeFile(path.join(out,'index.html'),portalShell(portal,icon));
- await fs.copyFile(new URL('./legacy-home.js',import.meta.url),path.join(out,'legacy-home.js'));
- await fs.copyFile(new URL('./hub.css',import.meta.url),path.join(out,'hub.css'));
+ await buildPortal(out,[
+  {id:'tempered',name:'淬炼之季',href:'tempered.html',cover:'assets/workshop-cover.png',version:'v'+tempered.version,
+   summary:'暗影世界、战斗险境与角色改动。',source:'about.html',
+   links:[['directory.html','分类索引'],['settings.html','配置大全']]},
+  {id:'beta',name:'永不妥协测试版',href:'um-beta/index.html',cover:artwork.cover.path,version:'Public Beta · v'+betaVersion,
+   summary:'测试版角色、宝石学、季节与配方。',source:'um-beta/sources.html',
+   links:[['um-beta/configs.html','配置大全'],['um-beta/'+newItemsHref,'新增物品'],['um-beta/recipes.html','制作与兑换']]},
+ ],icon);
 
  const meta={version:betaVersion,workshop};
  const ui=createUI({articles:entryArticles,configs:configs.map(c=>({...c,mode:groupByKey.get(c.key).mode})),groups:configGroups,

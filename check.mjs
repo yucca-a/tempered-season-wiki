@@ -31,7 +31,12 @@ for(const [file,term,asset] of [
   errors.push(`${file}: incorrect or missing icon for ${term}`);
  }
 }
-for(const file of ['app.js','theme.js','search.js','search-index.js','legacy-home.js','um-beta/filter.js','um-beta/legacy-items.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
+for(const file of ['app.js','theme.js','search.js','search-index.js','hub.js','legacy-home.js','um-beta/filter.js','um-beta/legacy-items.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
+const portal=pages.get('index.html');
+for(const href of ['tempered.html','um-beta/index.html']){
+ if(!portal?.includes(`class="hub-library-entry" href="${href}"`))errors.push('Missing clickable Wiki cover for '+href);
+}
+if(!portal?.includes('id="header-search"')||!portal.includes('data-hub-theme'))errors.push('Missing portal search or theme control');
 const beta=JSON.parse(await fs.readFile(new URL('./um-beta/snapshot.json',import.meta.url),'utf8'));
 for(const [file,marker] of [['index.html','href="tempered.html"'],['index.html','href="um-beta/index.html"'],['tempered.html','data-page="index"'],['um-beta/index.html',beta.betaVersion],['um-beta/sources.html',beta.cnVersion]]){
  if(!pages.get(file)?.includes(marker))errors.push('Missing Wiki route or version marker in '+file);
