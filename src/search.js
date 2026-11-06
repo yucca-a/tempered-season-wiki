@@ -32,7 +32,7 @@
    entries=prepare(window.WIKI_GLOBAL_INDEX,indexUrl);
    return;
   }
-  loading=true;
+  loading=true;failed=false;
   const script=document.createElement('script');
   script.src=indexUrl.href;
   script.onload=()=>{
@@ -41,7 +41,7 @@
    else failed=true;
    if(dialog.open)render();
   };
-  script.onerror=()=>{loading=false;failed=true;if(dialog.open)render();};
+  script.onerror=()=>{loading=false;failed=true;loadStarted=false;script.remove();if(dialog.open)render();};
   document.head.append(script);
  }
  function rank(entry,q,terms){
@@ -63,7 +63,7 @@
    candidates.filter(e=>!e.jump&&(kind!=='all'||e.featured||['getting-started','settings-guide','combat','armor','world-exchange','eyeturret','upgrade-frost-staff'].includes(e.id)));
   const unique=ranked.filter(e=>!seen.has(e.url)&&seen.add(e.url));
   const shown=unique.slice(0,q?70:16);
-  status.textContent=loading?'正在载入两套 Wiki 的索引…':failed?'全站索引暂时无法载入，显示当前百科的结果。':
+  status.textContent=loading?'正在载入两套 Wiki 的索引…':failed?(entries.length?'全站索引暂时无法载入，显示当前百科的结果。':'全站索引暂时无法载入，请关闭后重新打开搜索。'):
    q?`找到 ${unique.length} 个结果${unique.length>70?' · 先显示前 70 条':''}`:'可搜索词条、章节、配置键、产物或材料';
   results.innerHTML=shown.length?shown.map(e=>{
    let snippet=e.summary;
@@ -102,6 +102,7 @@
  });
  results.addEventListener('click',event=>{if(event.target.closest('a'))dialog.close();});
  dialog.addEventListener('keydown',event=>{
+  if(event.isComposing||event.target===branch)return;
   const links=[...results.querySelectorAll('a')];
   if(event.key==='ArrowDown'||event.key==='ArrowUp'){
    event.preventDefault();
