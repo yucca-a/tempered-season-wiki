@@ -8891,6 +8891,10 @@
       "en": "Honey Log Roll",
       "zh": "蜂蜜原木卷"
     },
+    "hooded_fern": {
+      "en": "Thicket",
+      "zh": "高齿蕨"
+    },
     "hoodedwidow": {
       "en": "Hooded Widow",
       "zh": "黑寡妇"
@@ -9166,6 +9170,14 @@
     "redgem": {
       "en": "Red Gem",
       "zh": "红宝石"
+    },
+    "riceplant": {
+      "en": "riceplant",
+      "zh": null
+    },
+    "rimeweed_main": {
+      "en": "Spiny Rimeweed",
+      "zh": "尖刺霜草"
     },
     "rockjawleather": {
       "en": "Rocky Hide",
@@ -9527,6 +9539,10 @@
       "en": "Carrion Bee",
       "zh": "腐臭蜂"
     },
+    "um_beehive_moon": {
+      "en": "Carrion Bee Hive",
+      "zh": "腐臭蜂巢"
+    },
     "um_beemine_moon_item": {
       "en": "Carrion Bee Mine",
       "zh": "腐臭蜂地雷"
@@ -9734,6 +9750,10 @@
     "um_hat_rime": {
       "en": "Normong Helmet",
       "zh": "霜兽头盔"
+    },
+    "um_hotspring": {
+      "en": "Boiling Spring",
+      "zh": "沸腾温泉"
     },
     "um_ice_sicle": {
       "en": "Ice Sickle",
@@ -10177,11 +10197,14 @@
     "dragonfly",
     "fruitbat",
     "glacialhound",
+    "hooded_fern",
     "hoodedwidow",
     "klaus",
     "minotaur",
     "moose",
     "powercell",
+    "riceplant",
+    "rimeweed_main",
     "rocky",
     "seafoodpaella",
     "shadow_knight",
@@ -10202,9 +10225,11 @@
     "toadstool",
     "um_armor_bramble_rimeweed",
     "um_backpack_amuletuse",
+    "um_beehive_moon",
     "um_boom_tart",
     "um_boomberrypie",
     "um_durian_cream_marshcake",
+    "um_gem_repair_kit",
     "um_gemology_geode_blue",
     "um_gemology_geode_glass",
     "um_gemology_geode_green",
@@ -10232,6 +10257,7 @@
     "um_gemologyyellowgem1",
     "um_gemologyyellowgem2",
     "um_ghost_fajita",
+    "um_hotspring",
     "um_rice_pudding",
     "um_rimeweed_spagett",
     "um_rimeweed_tequila",
@@ -10350,7 +10376,8 @@
       "lines": 949,
       "citations": [
         140,
-        499
+        499,
+        699
       ]
     },
     "beta/init/init_bosshealth.lua": {
@@ -10557,7 +10584,10 @@
     },
     "beta/init/init_configs.lua": {
       "sha256": "a12c559e95503da88cf02c2ad12983da8558ad52d6a1b62940ba7b84819f39e7",
-      "lines": 60
+      "lines": 60,
+      "citations": [
+        21
+      ]
     },
     "beta/init/init_containers.lua": {
       "sha256": "825105cf0020fcf64e7254a4e97249c3e196264b7037da8c1139db1d00415a42",
@@ -10569,7 +10599,8 @@
         628,
         665,
         668,
-        833
+        833,
+        1000
       ]
     },
     "beta/init/init_creatures/init_harder_shadows.lua": {
@@ -10593,6 +10624,7 @@
         79,
         549,
         553,
+        555,
         570,
         572,
         577,
@@ -10614,6 +10646,7 @@
       "lines": 265,
       "citations": [
         92,
+        93,
         169,
         217,
         227,
@@ -10628,14 +10661,20 @@
         10,
         105,
         118,
-        152
+        152,
+        247
       ]
     },
     "beta/init/init_gemology/special.lua": {
       "sha256": "7e5a68b2edb88f8776324c9cee405cd1c52973965c3a5f299e78942927000744",
       "lines": 179,
       "citations": [
-        5
+        5,
+        44,
+        83,
+        111,
+        129,
+        149
       ]
     },
     "beta/init/init_gemology/trades.lua": {
@@ -10691,6 +10730,7 @@
       "sha256": "e9ab11cd4a7a18674acce93530c56218cbc9f3e12d0c6c43b0a71991687eb88a",
       "lines": 477,
       "citations": [
+        154,
         354
       ]
     },
@@ -10699,6 +10739,7 @@
       "lines": 744,
       "citations": [
         83,
+        88,
         99,
         127,
         289,
@@ -10735,7 +10776,8 @@
       "lines": 874,
       "citations": [
         324,
-        830
+        830,
+        872
       ]
     },
     "beta/init/init_tuning.lua": {
@@ -10752,6 +10794,7 @@
         198,
         339,
         400,
+        514,
         596,
         644,
         672,
@@ -10772,6 +10815,13 @@
       "lines": 1646,
       "citations": [
         1576
+      ]
+    },
+    "beta/init/init_weather/init_harder_weather.lua": {
+      "sha256": "e07ae49db5f54f791c2d197093e7d4b9413e99df8047bef09201d58ff7037dcc",
+      "lines": 143,
+      "citations": [
+        130
       ]
     },
     "beta/init/init_weather/init_snowstorm_structures.lua": {
@@ -10828,10 +10878,12 @@
         451,
         463,
         539,
+        552,
         553,
         556,
         558,
         578,
+        614,
         661,
         685,
         700,
@@ -10845,6 +10897,7 @@
         830,
         831,
         837,
+        871,
         893,
         927,
         944,
@@ -10888,6 +10941,7 @@
       "sha256": "e0c7bd42267cafc096116bb782ad0207c735c5cc036f78e535b66549dc890c8f",
       "lines": 48,
       "citations": [
+        7,
         31
       ]
     },
@@ -10896,6 +10950,15 @@
       "lines": 71,
       "citations": [
         42
+      ]
+    },
+    "beta/postinit/components/combat.lua": {
+      "sha256": "30e656b31979ce8323a66a8e67f72f8a198a1f26b985bd9e62a0bd7c55127aa2",
+      "lines": 216,
+      "citations": [
+        79,
+        92,
+        121
       ]
     },
     "beta/postinit/components/freezable.lua": {
@@ -10926,6 +10989,13 @@
         194,
         197,
         203
+      ]
+    },
+    "beta/postinit/components/moonstorms.lua": {
+      "sha256": "6df3404df382f5ccf07c3bc88760799fac49ea404f4394c23c9cfe12027fbe6e",
+      "lines": 49,
+      "citations": [
+        40
       ]
     },
     "beta/postinit/components/oldager.lua": {
@@ -11299,6 +11369,13 @@
         13
       ]
     },
+    "beta/scripts/components/gemrepairer.lua": {
+      "sha256": "99a3732a91117ba90a142b525dd4611da6df371deac8a4f8bc05899b21aeb307",
+      "lines": 61,
+      "citations": [
+        17
+      ]
+    },
     "beta/scripts/components/hayfever.lua": {
       "sha256": "d254756db78cf0c74b81f421dcde9714bc0be95a8d44ffeeba102dbec8b4731c",
       "lines": 181,
@@ -11322,20 +11399,28 @@
         301
       ]
     },
-    "beta/scripts/components/snowstorminitiator.lua": {
-      "sha256": "4965677ba2ceba5837718fdf1420273c7967abe72941a2f9943db67a7d704f07",
-      "lines": 217,
-      "citations": [
-        21
-      ]
-    },
     "beta/scripts/components/snowstormwatcher.lua": {
       "sha256": "e8674b553b076f4c5e7755e3c25d4efb59479d6b9722c4ea05a7d980e531e6d2",
       "lines": 174,
       "citations": [
         45,
+        49,
         97,
         133
+      ]
+    },
+    "beta/scripts/components/um_snow_stormspawner.lua": {
+      "sha256": "b13e4edee8996eacf9355d76e39d0f3fee59c722814c242170b3e4c5dcfd56a4",
+      "lines": 223,
+      "citations": [
+        11,
+        21,
+        30,
+        100,
+        121,
+        123,
+        141,
+        176
       ]
     },
     "beta/scripts/components/uncompromising_shadowcreaturespawner.lua": {
@@ -11397,7 +11482,26 @@
       "sha256": "a612ab9c356aba07a50b0d15c7ba327932851aa866623de56dc3954c20f42f6c",
       "lines": 244,
       "citations": [
-        47
+        47,
+        52,
+        144
+      ]
+    },
+    "beta/scripts/map/rooms/forest/UM_LightningBluff.lua": {
+      "sha256": "6afab67f4d11c91e1ae285648687b19a22e9435aa8cd2f756ca1e9eeabe22cd3",
+      "lines": 94,
+      "citations": [
+        41,
+        63,
+        78
+      ]
+    },
+    "beta/scripts/map/rooms/forest/UM_moonisland.lua": {
+      "sha256": "d16fd0010795f928d799281f3841b64b3bcda9f93f9c2f96534a96528c1799f7",
+      "lines": 89,
+      "citations": [
+        1,
+        31
       ]
     },
     "beta/scripts/map/rooms/forest/gianttreesrooms.lua": {
@@ -11405,7 +11509,9 @@
       "lines": 374,
       "citations": [
         41,
-        146
+        146,
+        173,
+        258
       ]
     },
     "beta/scripts/map/tasks/caves/gemology.lua": {
@@ -11441,7 +11547,10 @@
       "lines": 110,
       "citations": [
         12,
-        51
+        23,
+        51,
+        52,
+        103
       ]
     },
     "beta/scripts/map/tasks/forest/giant_trees.lua": {
@@ -11449,7 +11558,10 @@
       "lines": 91,
       "citations": [
         1,
-        11
+        4,
+        11,
+        55,
+        84
       ]
     },
     "beta/scripts/map/tasks/forest/make_a_pick.lua": {
@@ -11459,11 +11571,31 @@
         6
       ]
     },
+    "beta/scripts/map/tasks/forest/merged_desert.lua": {
+      "sha256": "f87b91ab28fe51d0ebd53fe412db14176fbc999157af521b9470b24a9de0af41",
+      "lines": 40,
+      "citations": [
+        4,
+        16,
+        29
+      ]
+    },
     "beta/scripts/map/tasks/forest/moonisland.lua": {
       "sha256": "ee99182d6e1e53c396b0e524dd67b0a24ff3a3e4386f60961968c3bf9a8c9c8d",
       "lines": 36,
       "citations": [
+        1,
         19
+      ]
+    },
+    "beta/scripts/map/tasks/forest/squeltch.lua": {
+      "sha256": "b1b59d82619869b6a38ace8d720c93167f565b12ba11dbdbc77ebaea7d769cca",
+      "lines": 127,
+      "citations": [
+        7,
+        36,
+        70,
+        85
       ]
     },
     "beta/scripts/map/tasks/forest/the_hunters.lua": {
@@ -11507,6 +11639,17 @@
         159,
         212,
         237
+      ]
+    },
+    "beta/scripts/prefabs/giant_tree.lua": {
+      "sha256": "8bbb5d8fcd0049a5336b1fd55dd7cde538af076a7f93d75bd7fb06e1da25e13b",
+      "lines": 727,
+      "citations": [
+        98,
+        361,
+        430,
+        441,
+        452
       ]
     },
     "beta/scripts/prefabs/glacialhound_icespike.lua": {
@@ -11585,7 +11728,27 @@
       "sha256": "c4df5466aca4728fe180e2eea8a845efa959e62f6d5968fb2a99c2196def2907",
       "lines": 156,
       "citations": [
+        55,
+        120,
+        125,
         154
+      ]
+    },
+    "beta/scripts/prefabs/riceplant.lua": {
+      "sha256": "4bf4d57f82ac0adf654f47b2dceb078c884c9dd1ad9cfeb0a58cb4bc9087fc2e",
+      "lines": 133,
+      "citations": [
+        24,
+        47,
+        100,
+        122
+      ]
+    },
+    "beta/scripts/prefabs/riceplantspawner.lua": {
+      "sha256": "d2c529385b448233e19f51f57c7068e81e363d10218f13e69448fd00a27a4c9d",
+      "lines": 154,
+      "citations": [
+        116
       ]
     },
     "beta/scripts/prefabs/shadow_goo.lua": {
@@ -11730,6 +11893,34 @@
         181
       ]
     },
+    "beta/scripts/prefabs/um_bee_moon.lua": {
+      "sha256": "88cc81065265235d85b5557132481a7280b5bd46731d8fe1bb153baec7a9cbe9",
+      "lines": 302,
+      "citations": [
+        116,
+        133,
+        153,
+        257,
+        264
+      ]
+    },
+    "beta/scripts/prefabs/um_beehive_moon.lua": {
+      "sha256": "fac17cd2e249cba312d6e0b59ecdd8a4b81e391d74f1ec8747db2784d7a52c88",
+      "lines": 275,
+      "citations": [
+        125,
+        208,
+        233
+      ]
+    },
+    "beta/scripts/prefabs/um_gem_repair_kit.lua": {
+      "sha256": "25626989b16e08ea5d4397350fac70d55af7f9d672daf315b2ee2c95078fbc3f",
+      "lines": 56,
+      "citations": [
+        35,
+        55
+      ]
+    },
     "beta/scripts/prefabs/um_gemology_geodes.lua": {
       "sha256": "739345c68a3b8a88a0f8331b1b003ebb37f331026e70d16d0ac0ba998a163462",
       "lines": 175,
@@ -11759,13 +11950,27 @@
         17
       ]
     },
+    "beta/scripts/prefabs/um_hotspring.lua": {
+      "sha256": "e70477aeb7418435579d3bf64a7dff35532ad8bd12f736466ccdb6c4e072d814",
+      "lines": 363,
+      "citations": [
+        95,
+        106,
+        145,
+        152,
+        197,
+        343
+      ]
+    },
     "beta/scripts/prefabs/um_ice_shield.lua": {
       "sha256": "a036ff45b581ff408247435628c586256031be7038ae411356c7ff73e30e18b0",
       "lines": 235,
       "citations": [
         15,
         37,
-        53
+        53,
+        69,
+        108
       ]
     },
     "beta/scripts/prefabs/um_magmastone.lua": {
@@ -11810,9 +12015,19 @@
       "sha256": "18c958ea5412a94d214a7ec2bed0b7168c82e854368a26f79134c8d5c409445a",
       "lines": 1099,
       "citations": [
+        43,
         48,
         70,
         148,
+        273,
+        383,
+        450,
+        463,
+        496,
+        519,
+        603,
+        634,
+        726,
         977
       ]
     },
@@ -11855,8 +12070,10 @@
       "sha256": "a935c2a0ac63cc6cd61e08e623b7682125adcdf8007bae877f9d39c9ed548ac3",
       "lines": 453,
       "citations": [
+        6,
         127,
-        442
+        442,
+        451
       ]
     },
     "beta/scripts/prefabs/uncompromising_hounds.lua": {
@@ -12092,9 +12309,11 @@
         424,
         454,
         658,
+        660,
         673,
         674,
         694,
+        696,
         712,
         719,
         733,
@@ -12192,14 +12411,18 @@
         147,
         148,
         149,
+        168,
         176,
         177,
         180,
+        186,
         188,
+        190,
         192,
         212,
         215,
         221,
+        232,
         233,
         234,
         235,
@@ -12245,6 +12468,7 @@
         686,
         692,
         695,
+        696,
         697,
         698,
         701,
@@ -12254,6 +12478,10 @@
         713,
         722,
         726,
+        729,
+        731,
+        732,
+        739,
         747,
         748,
         752,

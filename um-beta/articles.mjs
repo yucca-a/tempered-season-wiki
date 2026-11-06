@@ -6,6 +6,7 @@ import { gemCreatureArticles } from './gem-creature-articles.mjs';
 import { caveBossArticles } from './cave-boss-articles.mjs';
 import { creatureArticles } from './creature-articles.mjs';
 import { surfaceBossArticles } from './surface-boss-articles.mjs';
+import { worldExpansionArticles } from './world-expansion-articles.mjs';
 import { effectTable, gemEffects, tradeTable } from './gemology-tables.mjs';
 import { gemSources, gemSourceTitle, geodeSources, geodeSourceTitle, sourceJumps } from './gemology-sources.mjs';
 
@@ -78,18 +79,18 @@ export const articles=[
   summary:'冬季暴风雪分全域和局部天气，防护装备与近距离掩体能抵消移动惩罚。',
   configs:['snowstorms','weatherhazard_winter'],
   sections:[
-   ['触发','暴风雪默认开启。全域暴雪达到世界周期门槛后，先预警并增加降水，约 60 秒后进入暴雪。默认门槛为 5 个世界周期，冬季最后两天不会发起新的全域暴雪。'],
+   ['触发','暴风雪默认开启。进入冬季或载入世界时，世界周期达到默认门槛 5 后可以启动或恢复计时。新计时为 3 个游戏日再加 0–120 秒。计时到期后，通常先预警约 60 秒，再进入持续 320–360 秒的暴雪。冬季结束会停止暴雪与计时。'],
    ['移动和防护','全域暴雪或局部暴雪中，无防护玩家移速乘 0.75。护目镜视野、骑乘、熊皮背心、雨罩，或角色 6 单位内有适用的墙、火或掩体，均可免去该移动惩罚。'],
-   ['雪堆','玩家监测器可以在暴雪中生成雪堆。建筑脚本中隐藏容器的积雪逻辑当前处于注释状态，岩浆池和龙鳞火炉等仍有防雪堆标签。'],
+   ['雪堆','玩家监测器可以在暴雪中生成雪堆。建筑脚本中隐藏容器的积雪逻辑当前处于注释状态，岩浆池和龙鳞火炉等仍有防雪堆标签。',null,[{href:'rimeweed.html',label:'尖刺霜草与局部暴雪'},{href:'snowmong.html',label:'雪怪与雪堆'}]],
   ],
-  sources:[cfg(451),cfg(463),beta('scripts/components/snowstorminitiator.lua',21),beta('scripts/components/snowstormwatcher.lua',45),beta('init/init_weather/init_snowstorm_structures.lua',126),names(35),names(692)],
+  sources:[cfg(451),cfg(463),beta('init/init_weather/init_harder_weather.lua',130),...[11,100,123,141,176].map(line=>beta('scripts/components/um_snow_stormspawner.lua',line)),beta('scripts/components/snowstormwatcher.lua',45),beta('init/init_weather/init_snowstorm_structures.lua',126),names(35),names(692)],
  },
  {
   id:'cave-worldgen',category:'world',title:'熔岩洞穴与潮湿陷坑',aliases:['Magma Caves','Flooded Caves','月岛','蓝蘑菇林'],
   summary:'洞穴配置会改变新世界的地形、入口和宝石学锻造台的位置。',
   configs:['worldgenmastertoggle','magma_caves','flooded_caves','gemology'],
   sections:[
-   ['潮湿陷坑的三种档位','默认 lunar_cave 在月岛提供潮湿陷坑入口，对应离大陆洞穴区域。cave 将相关区域放在蓝蘑菇林方向。off 保留原版月亮石窟。'],
+   ['潮湿陷坑的三种档位','默认 lunar_cave 在月岛提供潮湿陷坑入口，对应离大陆洞穴区域。cave 将相关区域放在蓝蘑菇林方向。off 保留原版月亮石窟。',null,[{href:'lunar-island.html',label:'月岛地形与入口'}]],
    ['熔岩洞穴与锻造台','熔岩洞穴和宝石学默认开启。两者同时启用时，新洞穴在熔岩区域要求生成宝石学锻造台。关闭熔岩洞穴并保留宝石学时，锻造台转入远古遗迹。',null,[{href:'gemology.html#gemology-s8',label:'查洞穴各地形的晶洞'}]],
   ],
   sources:[cfg(556),beta('scripts/map/tasks/forest/moonisland.lua',19),beta('scripts/map/tasks/caves/mushroom_tasks.lua',46),beta('scripts/map/tasks/caves/magma_cave.lua',103),names(784)],
@@ -99,16 +100,16 @@ export const articles=[
   searchJumps:[{terms:['宝石','宝石学','宝石附魔学']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石']},{section:'鉴定工具',terms:['鉴定','宝石鉴定']},
    {section:'宝石升级与交易速查',terms:['附魔升级','宝石升级','交易升级','宝石交易','宝石升级路径','附魔宝石升级路径']},
    {section:'三级附魔效果',terms:['附魔效果','宝石品质','三级附魔','附魔宝石效果']},
-   ...gemEffects.map(gem=>({section:'三级附魔效果',prefab:gem.prefab,title:gem.name,terms:[gem.name,gem.english,gem.prefab],summary:gem.levels[2]})),...sourceJumps],
+   ...gemEffects.map(gem=>({section:'三级附魔效果',prefab:gem.prefab,title:gem.name,terms:[gem.name,gem.english,gem.prefab,...(gem.prefab==='um_gemologyyellowgem1'?['迅疾黄玉移速','迅疾黄玉加速']:[])],summary:gem.levels[2]})),...sourceJumps],
   summary:'逐种查 14 种附魔宝石的晶洞来源、地形、交易升级和三档附魔效果。',
   configs:['gemology','magma_caves','worldgenmastertoggle'],
   sections:[
    ['晶洞掉落','把晶洞放在地上，用镐敲开。每个晶洞抽三次普通材料、一次宝石池，并有 5% 概率额外抽一次宝石池。抽到附魔宝石后再判定品质，一级 95%、二级 4%、三级 1%。',null,[{href:'#gemology-s7',label:'按宝石查来源'},{href:'#gemology-s8',label:'按地形查晶洞'}]],
-   ['锻造台操作','第一槽放装备，第二槽放宝石。装备与宝石相容时才能附魔。成功会消耗宝石，新附魔耐久设满。重复同种附魔会替换同种，槽满时新增不同种会移除旧附魔。普通附魔组件默认一个槽，具体装备可以有特例。'],
+   ['锻造台操作','第一槽放装备，第二槽放宝石。装备与宝石相容时才能附魔。成功会消耗宝石，新附魔耐久设满。重复同种附魔会替换同种，槽满时新增不同种会移除旧附魔。普通附魔组件默认一个槽，具体装备可以有特例。',null,[{href:'mending-kit.html',label:'修补装备与附魔耐久'}]],
    ['配置的作用','宝石学和世界生成总开关默认开启，共同控制新洞穴的宝石学地形与资源。既有地图不会因打开这两个开关而补生成相应房间。已有装备与附魔还涉及单独载入的运行代码。'],
    ['鉴定工具','宝石放大镜有 100 点鉴定耐久，远古宝石放大镜和宝石熔岩镜各有 400 点。可以鉴定整叠宝石，每枚消耗 1 点耐久。耐久不足时，只会鉴定能够负担的数量。'],
    ['宝石升级与交易速查','以下概率按单颗宝石结算，适用于各颜色的两种附魔宝石。三级已经封顶，交出去有风险。红色交蜗龙只有 25% 留在三级，绿色交龟类只有 40% 留在三级。蚁狮和石虾都不会返还三级，雪怪吃下三级蓝色只掉普通蓝宝石。',tradeTable],
-   ['三级附魔效果','汉化中的「碎裂的」「微瑕的」「无暇的」分别对应一级、二级、三级。表中的伤害、回复与触发率按当前测试版代码计算。装备自身还须支持附魔。',effectTable],
+   ['三级附魔效果','汉化中的「碎裂的」「微瑕的」「无暇的」分别对应一级、二级、三级。表中同时列出装备附魔和角色组件触发的效果，涉及移速、工作、战斗、理智和拾取。装备自身还须支持附魔。',effectTable],
    [gemSourceTitle,'同色的两种宝石，能掉落它们的晶洞也可能不同。表中百分比是每次从该晶洞的宝石池抽取时，命中指定宝石的概率，已计入普通宝石等候选掉落。点击晶洞名可查看对应的地形和采集方法。',gemSources],
    [geodeSourceTitle,'先从下表的地形取得晶洞，再放到地上用镐敲开。石化蘑菇树与几类矿物都有外观相近的无晶洞版本。',geodeSources,[{href:'cave-worldgen.html',label:'查洞穴地形与房间设置'}]],
    ['巨石枝与旧档','斧砍长成的巨石枝时，藤上掉落按种植位置所属地形的池子抽取。三色蘑菇林、混合菌类区、月亮洞窟、苔藓区、岩石平原、蝙蝠洞、遗迹、喷气孔区和落水洞的池子均能提供对应晶洞。旧树沿用已经保存的掉落，在现有对应地形重新种植可以抽当前池。开启宝石学和蘑菇树调整时，绿树入夏、红树入秋、蓝树入春也有机会自然石化。秋天已有的石虾附近还可能生成孕育中的岩石。'],
@@ -118,6 +119,8 @@ export const articles=[
   sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),
    ...[87,247,261,411,493].map(line=>beta('init/init_gemology/trades.lua',line)),beta('scripts/prefabs/snowmong.lua',123),beta('scripts/stategraphs/SGsnowmong.lua',329),
    ...[90,228,301,353,421,450,472,581,648,689,742,789,842].map(line=>beta('scripts/gemology_defs.lua',line)),beta('init/init_tuning.lua',400),beta('init/init_gemology/special.lua',5),beta('postinit/components/freezable.lua',21),beta('scripts/prefabs/um_ice_shield.lua',37),names(752),names(764),names(770),names(821),names(853),
+   ...[44,83,111,129,149].map(line=>beta('init/init_gemology/special.lua',line)),beta('init/init_gamemodes/init_uncompromising_mode.lua',93),...[79,92,121].map(line=>beta('postinit/components/combat.lua',line)),
+   beta('scripts/prefabs/uncompromising_buffs.lua',6),beta('scripts/prefabs/uncompromising_buffs.lua',451),beta('scripts/prefabs/um_ice_shield.lua',69),beta('scripts/prefabs/um_ice_shield.lua',108),beta('init/init_containers.lua',1000),
    cfg(167),beta('modworldgenmain.lua',31),beta('scripts/um_gemology_geode_defs.lua',1),beta('scripts/prefabs/um_gemology_geodes.lua',97),
    ...[3,47,128,141,167].map(line=>beta('scripts/map/tasks/caves/gemology.lua',line)),...[2,55,117,166,198,231,249].map(line=>beta('scripts/map/rooms/caves/gemology.lua',line)),beta('scripts/map/rooms/caves/moonregions.lua',243),beta('scripts/map/rooms/caves/moltenregions.lua',311),
    beta('scripts/prefabs/um_mushtrees_petri.lua',179),beta('scripts/prefabs/um_guano_rock.lua',17),beta('scripts/prefabs/um_rocklobster_rock.lua',19),beta('scripts/prefabs/um_moonglass_ceiling.lua',50),beta('scripts/prefabs/um_moonglass_ceiling.lua',144),beta('scripts/prefabs/um_slimestone_rock.lua',18),beta('scripts/prefabs/um_sinkmound_rock.lua',34),beta('scripts/prefabs/um_magmastone.lua',19),beta('scripts/prefabs/um_magmastone.lua',59),beta('postinit/prefabs/chessjunk.lua',78),beta('postinit/prefabs/cave_vent_mite.lua',20),beta('init/init_strings/init_names.lua',830),names(842),
@@ -208,6 +211,17 @@ export const articles=[
   sources:[cfg(244),beta('init/init_creatures/init_harder_shadows.lua',71),beta('scripts/components/uncompromising_shadowcreaturespawner.lua',84),beta('scripts/prefabs/dreadeye.lua',280),beta('scripts/prefabs/dreadeye.lua',509),names(16)],
  },
  {
+  id:'mending-kit',category:'new-items',prefab:'um_gem_repair_kit',title:'修补工具包',aliases:['Mending Kit','宝石修补工具包','修理附魔','附魔耐久'],
+  summary:'同时修补符合条件的装备本体和附魔耐久，同一件装备修得越多，每次恢复越少。',
+  configs:['gemology'],
+  sections:[
+   ['制作与使用','开启宝石学后，用坚钢钻石 ×1、钢丝绒 ×2、海象牙 ×1 在暗影操纵器制作。拿起工具包对装备右键修理。一个工具包最多成功使用 5 次。'],
+   ['恢复量','同一件装备第 1、2、3、4 次及以后，分别恢复本体耐久上限的 60%、40%、20%、10%。有独立附魔耐久的附魔在前 3 次分别恢复 50%、20%、0%，之后仍为 0%。次数记在装备上并随存档保存。'],
+   ['适用范围','本体修理适用于有使用次数的装备和可破坏护甲。附魔修理要求该附魔启用独立耐久。即使后期附魔的恢复量已经是 0，只要它还未满且进入该修理分支，操作仍会计为成功并消耗工具包次数。',null,[{href:'gemology.html#gemology-s6',label:'查附魔效果'}]],
+  ],
+  sources:[recipe(88),beta('scripts/prefabs/um_gem_repair_kit.lua',35),beta('scripts/prefabs/um_gem_repair_kit.lua',55),beta('init/init_actions.lua',699),beta('scripts/components/gemrepairer.lua',17),beta('init/init_tuning.lua',514),beta('init/init_gemology/misc.lua',247),beta('init/init_strings/init_names.lua',872)],
+ },
+ {
   id:'cooking-guide',category:'mechanics',icon:'cookpot',title:'测试版料理速查',aliases:['烹饪','锅料理','新料理','Crock Pot'],
   searchJumps:[{terms:['料理','食谱','测试版料理','妥协料理']}],
   summary:'按菜名查配料、基础三维、保鲜时间与特殊效果，涵盖 12 道测试版锅料理。',
@@ -228,4 +242,5 @@ export const articles=[
  ...caveBossArticles,
  ...creatureArticles,
  ...surfaceBossArticles,
+ ...worldExpansionArticles,
 ];

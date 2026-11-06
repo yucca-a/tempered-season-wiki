@@ -89,6 +89,11 @@ for(const [page,links] of Object.entries({
  if(links.some(href=>!pages.get('um-beta/'+page)?.includes('href="'+href+'"')))errors.push('Missing creature guide crosslink in '+page);
 }
 const gemology=pages.get('um-beta/gemology.html');
+const hastyTopaz=gemology?.match(/<tr id="gem-yellowgem1">.*?<\/tr>/)?.[0]??'';
+for(const effect of ['每分钟 +1 理智','每分钟 +2 理智','每分钟 +4 理智','移速倍率额外 +0.2','移速倍率额外 +0.3','原移速倍率已高于 ×1']){
+ if(!hastyTopaz.includes(effect))errors.push('Missing Hasty Topaz effect: '+effect);
+}
+if(!globalResults.some(a=>a.jump&&a.href==='um-beta/gemology.html#gem-yellowgem1'&&a.aliases.includes('迅疾黄玉移速')))errors.push('Missing Hasty Topaz speed search jump');
 for(const [pattern,count] of [[/<tr id="gem-\w+gem[12]"/g,14],[/<tr id="gem-source-/g,14],[/<tr id="geode-source-/g,11],[/class="table-wrap guide-table\b/g,4]]){
  if((gemology?.match(pattern)||[]).length!==count)errors.push('Incomplete Beta gem guide tables: '+pattern);
 }

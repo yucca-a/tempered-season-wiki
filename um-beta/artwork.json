@@ -207,6 +207,14 @@
     "height": 36,
     "workshop": true
   },
+  "hooded_fern": {
+    "path": "assets/um-beta/hooded_fern.png",
+    "source": "images/scrapbook/hooded_fern.tex",
+    "atlas": "images/scrapbook/hooded_fern.xml",
+    "width": 63,
+    "height": 96,
+    "workshop": true
+  },
   "hoodedwidow": {
     "path": "assets/um-beta/hoodedwidow.png",
     "source": "images/scrapbook/hoodedwidow.tex",
@@ -365,6 +373,22 @@
     "atlas": "images/inventoryimages/ratpoisonbottle.xml",
     "width": 43,
     "height": 63,
+    "workshop": true
+  },
+  "riceplant": {
+    "path": "assets/um-beta/riceplant.png",
+    "source": "images/scrapbook/riceplant.tex",
+    "atlas": "images/scrapbook/riceplant.xml",
+    "width": 62,
+    "height": 96,
+    "workshop": true
+  },
+  "rimeweed_main": {
+    "path": "assets/um-beta/rimeweed_main.png",
+    "source": "images/scrapbook/rimeweed_main.tex",
+    "atlas": "images/scrapbook/rimeweed_main.xml",
+    "width": 54,
+    "height": 96,
     "workshop": true
   },
   "rockjawleather": {
@@ -807,6 +831,14 @@
     "height": 62,
     "workshop": true
   },
+  "um_beehive_moon": {
+    "path": "assets/um-beta/um_beehive_moon.png",
+    "source": "images/scrapbook/um_beehive_moon.tex",
+    "atlas": "images/scrapbook/um_beehive_moon.xml",
+    "width": 89,
+    "height": 96,
+    "workshop": true
+  },
   "um_beemine_moon_item": {
     "path": "assets/um-beta/um_beemine_moon_item.png",
     "source": "images/inventoryimages/um_beemine_moon_item.tex",
@@ -1221,6 +1253,14 @@
     "atlas": "images/inventoryimages/um_hat_rime.xml",
     "width": 63,
     "height": 49,
+    "workshop": true
+  },
+  "um_hotspring": {
+    "path": "assets/um-beta/um_hotspring.png",
+    "source": "images/scrapbook/um_hotspring.tex",
+    "atlas": "images/scrapbook/um_hotspring.xml",
+    "width": 89,
+    "height": 96,
     "workshop": true
   },
   "um_ice_sicle": {
