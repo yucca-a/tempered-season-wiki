@@ -31,7 +31,14 @@ for(const [file,term,asset] of [
   errors.push(`${file}: incorrect or missing icon for ${term}`);
  }
 }
-for(const file of ['app.js','theme.js','search-index.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
+for(const file of ['app.js','theme.js','search-index.js','legacy-home.js','um-beta/filter.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
+const beta=JSON.parse(await fs.readFile(new URL('./um-beta/snapshot.json',import.meta.url),'utf8'));
+for(const [file,marker] of [['index.html','href="tempered.html"'],['index.html','href="um-beta/index.html"'],['tempered.html','data-page="index"'],['um-beta/index.html',beta.betaVersion],['um-beta/sources.html',beta.cnVersion]]){
+ if(!pages.get(file)?.includes(marker))errors.push('Missing Wiki route or version marker in '+file);
+}
+for(const [file,count] of [['um-beta/configs.html',beta.configs.length],['um-beta/recipes.html',beta.recipes.length]]){
+ if((pages.get(file)?.match(/data-find="/g)||[]).length!==count)errors.push('Beta index coverage mismatch: '+file);
+}
 const context={window:{}};vm.runInNewContext(await fs.readFile(path.join(root,'search-index.js'),'utf8'),context);
 for(const a of context.window.WIKI_INDEX){checkLink('index.html',a.href);if(!a.text||!a.title)errors.push('Invalid search entry '+a.id);}
 for(const [id,aliases] of Object.entries({
