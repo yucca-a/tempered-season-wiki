@@ -27,7 +27,7 @@ export const additionalArticles=[
    ['改进光合作用','点出技能后，季节切换到春季或夏季时会获得一次促进绽放的施肥效果。这两个季节也会加快有肥料时的绽放进度，阻止绽放结束阶段的自然衰减。'],
   ],
   related:[link('rimeweed-bramble-armor','霜冻外壳')],
-  sources:[cfg(418),cfg(420),cfg(422),cfg(425),beta('init/init_tuning.lua',195),beta('init/init_tuning.lua',596),role('wormwood',24),role('wormwood',127),role('wormwood',172),role('wormwood',196),role('wormwood',237),role('skilltree_wormwood',22),beta('init/init_recipes/recipe_changes.lua',353),cn('init/init_strings/init_descriptions/skilltreestrings.lua',158)],
+  sources:[cfg(418),cfg(420),cfg(422),cfg(425),beta('init/init_tuning.lua',195),beta('init/init_tuning.lua',596),role('wormwood',24),role('wormwood',127),role('wormwood',172),role('wormwood',196),role('wormwood',237),role('skilltree_wormwood',22),beta('init/init_recipes/recipe_changes.lua',354),cn('init/init_strings/init_descriptions/skilltreestrings.lua',158)],
  },
  {
   id:'wx78',category:'characters',icon:'wx78',title:'WX-78',aliases:['WX78','机器人','电路','生物扫描','备份底盘'],
@@ -74,7 +74,7 @@ export const additionalArticles=[
    ['奔雷矛','默认奔雷矛和充能奔雷矛的最大使用次数均为 200。启用奔雷矛恢复档后，充能奔雷矛冲刺命中合格目标可以恢复耐久，并受单次冲刺的修复次数上限限制。'],
   ],
   related:[link('dreadstone-shield','绝望石圆盾')],
-  sources:[cfg(359),beta('init/init_tuning.lua',748),role('wathgrithr',4),role('wathgrithr',18),role('wathgrithr',37),role('wathgrithr',91),beta('postinit/prefabs/spear_wathgrithr.lua',106),beta('postinit/prefabs/spear_wathgrithr.lua',163),cn('init/init_character_dst.lua',44),names(92)],
+  sources:[cfg(359),beta('init/init_tuning.lua',748),role('wathgrithr',4),role('wathgrithr',18),role('wathgrithr',37),role('wathgrithr',91),beta('postinit/prefabs/spear_wathgrithr.lua',107),beta('postinit/prefabs/spear_wathgrithr.lua',163),names(92)],
  },
  {
   id:'rimeweed-bramble-armor',category:'new-items',prefab:'um_armor_bramble_rimeweed',title:'霜冻外壳',aliases:['霜草荆棘甲','霜冻荆棘甲','Rime Bramble'],
@@ -86,6 +86,6 @@ export const additionalArticles=[
    ['沃姆伍德技能','点出荆棘护甲后，沃姆伍德可连续命中 3 次主动释放冰刺。点出荆棘爆发后，受击触发时还会在 0.6 秒后再放一次。'],
   ],
   related:[link('wormwood','沃姆伍德'),link('snowstorms','暴风雪与雪堆')],
-  sources:[cfg(463),beta('init/init_recipes/recipes.lua',127),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',14),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',31),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',39),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',123),beta('scripts/prefabs/um_rimeweed.lua',44),beta('scripts/prefabs/um_rimeweed.lua',70),beta('scripts/prefabs/um_rimeweed.lua',148),cn('init/init_strings/init_descriptions/skilltreestrings.lua',200),names(695),names(701)],
+  sources:[cfg(463),beta('init/init_recipes/recipes.lua',127),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',14),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',31),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',39),beta('scripts/prefabs/um_armor_bramble_rimeweed.lua',123),beta('scripts/prefabs/um_rimeweed.lua',48),beta('scripts/prefabs/um_rimeweed.lua',70),beta('scripts/prefabs/um_rimeweed.lua',148),cn('init/init_strings/init_descriptions/skilltreestrings.lua',200),names(695),names(701)],
  },
 ];

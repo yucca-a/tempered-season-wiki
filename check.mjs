@@ -103,6 +103,10 @@ for(const [id,aliases] of Object.entries({
  if(!aliases.every(alias=>entry?.aliases?.includes(alias))||!pages.get(entry?.href)?.includes('class="role-aliases"'))errors.push('Missing character aliases for '+id);
 }
 const configData=JSON.parse(await fs.readFile(new URL('./data/configs.json',import.meta.url),'utf8'));
+for(const page of ['multitool.html','thulecite-club.html','horn-enchant.html']){
+ const text=pages.get(page);
+ if(!text||/微瑕的犀牛角|破损的犀牛角|微瑕角与破损角/.test(text))errors.push(page+': retired horn variants in the current guide');
+}
 const coverage=JSON.parse(await fs.readFile(new URL('./coverage.json',import.meta.url),'utf8'));
 const settings=pages.get('settings.html');
 if((settings.match(/data-config="/g)||[]).length!==configData.configs.length)errors.push('Config coverage mismatch');
@@ -117,6 +121,15 @@ for(const [file,text] of pages)if(/yucca/i.test(text))errors.push(`${file}: pers
 if(/yucca/i.test(await fs.readFile(path.join(root,'search-index.js'),'utf8')))errors.push('Search index contains personal credit');
 if(context.window.WIKI_INDEX.length!==coverage.articles+coverage.configs)errors.push('Search coverage mismatch');
 for(const c of configData.configs){if(!c.options.some(o=>o.value===c.default))errors.push('Default absent '+c.key);}
-try{const source=await fs.readFile(new URL('../content/modinfo.lua',import.meta.url));if(createHash('sha256').update(source).digest('hex')!==configData.sourceHash)errors.push('Configuration source changed; rerun extract-config.py');}catch(e){if(e.code!=='ENOENT')throw e;}
+const modRoot=process.env.WIKI_TEMPERED_SOURCE;
+try{const source=await fs.readFile(modRoot?path.join(modRoot,'modinfo.lua'):new URL('../content/modinfo.lua',import.meta.url));if(createHash('sha256').update(source).digest('hex')!==configData.sourceHash)errors.push('Configuration source differs from the published snapshot; check WIKI_TEMPERED_SOURCE or rerun extract-config.py');}catch(e){if(e.code!=='ENOENT'||modRoot)throw e;}
+const provenance=JSON.parse(await fs.readFile(new URL('./content-sources.json',import.meta.url),'utf8'));
+for(const article of provenance.articles)if(!article.source?.length)errors.push('Missing source reference for '+article.id);
+if(modRoot){
+ const files=new Set(provenance.articles.flatMap(a=>a.source).filter(file=>file.startsWith('content/')));
+ await Promise.all([...files].map(async file=>{
+  try{await fs.access(path.join(modRoot,file.slice('content/'.length)));}catch(e){if(e.code!=='ENOENT')throw e;errors.push('Missing published source '+file);}
+ }));
+}
 if(errors.length){console.error([...new Set(errors)].join('\n'));process.exitCode=1;}
 else console.log(`PASS: ${html.length} pages; ${links} local links and anchors; ${coverage.configs} settings / ${choiceCount} choices; ${context.window.WIKI_INDEX.length} searchable entries; JavaScript syntax.`);

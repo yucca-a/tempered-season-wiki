@@ -9,13 +9,13 @@ export const caveBossArticles = [
     id: 'ancient-guardian', category: 'creatures', icon: 'minotaur', title: '远古守护者',
     aliases: ['远古犀牛', '犀牛', 'Ancient Guardian', 'Minotaur', '大号华丽箱子', '守护者之角'],
     summary: '遗迹迷宫末端的首领。重做加入连跳、暗影黏液和返场，华丽箱可开出满附魔耐久的二级武器。',
-    configs: ['rework_minotaur', 'minotaur_health_'],
+    configs: ['rework_minotaur', 'minotaur_health_', 'vetcurse'],
     sections: [
       ['在哪里遇到', '在洞穴远古遗迹的迷宫末端找守护者的柱阵。默认 10,000 生命、普通攻击 100 伤害，生命设置默认 ×1。重做默认开启。守护者离出生点超过 32 距离后会尝试起跳返场，落地仍会震击。'],
       ['打法', '冲锋时用侧跑绕柱，看到它被柱子绊停再回身输出，注意撞击后周围的落石。生命低于 60% 后，蓄力跳可能接连续跳，低于 30% 后连段更长，等它真正落地停住再贴近。它还会喷出多轮黏液，落点附近会受到 50 点伤害并扣 5 理智，部分黏液会生成大暗影触手。'],
-      ['掉落与二级附魔装备', '击败后会掉守护者之角、肉、支柱脚手架蓝图、雕塑草图和测试版追加的骷髅箱蓝图，随后出现大号华丽箱子。世界尚未记录找到远古钥匙时，箱内会放入一把。其余战利品随机抽取，包括铥矿、齿轮、普通宝石与遗迹装备。铥矿棒、懒人魔杖或唤星者魔杖若抽中，会带一项随机二级附魔，附魔耐久全满。提高首领生命档会增加箱内额外战利品的机会，远古钥匙排除在复制范围外。', null, [{ href: 'gemology.html#gemology-s10', label: '回到宝石学的高品质来源' }, { href: 'gemology.html#gemology-s6', label: '查二级附魔效果' }, { href: 'ancient-fuelweaver.html', label: '远古钥匙的下一站' }]],
+      ['掉落与二级附魔装备', '击败后会掉守护者之角、肉、支柱脚手架蓝图、雕塑草图和测试版追加的骷髅箱蓝图，随后出现大号华丽箱子。老兵诅咒房间设置为默认或始终开启时，首领额外掉犀牛帽。世界尚未记录找到远古钥匙时，箱内会放入一把。其余战利品随机抽取，包括铥矿、齿轮、普通宝石与遗迹装备。铥矿棒、懒人魔杖或唤星者魔杖若抽中，会带一项随机二级附魔，附魔耐久全满。提高首领生命档会增加箱内额外战利品的机会，远古钥匙排除在复制范围外。', null, [{ href: 'gemology.html#gemology-s10', label: '回到宝石学的高品质来源' }, { href: 'gemology.html#gemology-s6', label: '查二级附魔效果' }, { href: 'ancient-fuelweaver.html', label: '远古钥匙的下一站' }]],
     ],
-    sources: [cfg(959), cfg(999), health(2), health(227), health(263), beta('init/init_postinit.lua', 422), prefab('minotaur', 15), prefab('minotaur', 118), prefab('minotaur_drops', 6), beta('postinit/stategraphs/SGminotaur.lua', 134), beta('postinit/stategraphs/SGminotaur.lua', 213), beta('scripts/prefabs/shadow_goo.lua', 73), beta('scripts/prefabs/shadow_goo.lua', 274), beta('init/init_gemology/misc.lua', 105), beta('init/init_gemology/misc.lua', 118), beta('init/init_gemology/misc.lua', 152), names(336)],
+    sources: [cfg(959), cfg(999), health(2), health(227), health(263), beta('init/init_postinit.lua', 422), prefab('minotaur', 15), prefab('minotaur', 118), prefab('minotaur_drops', 6), prefab('vetcurse_drops', 20), beta('postinit/stategraphs/SGminotaur.lua', 141), beta('postinit/stategraphs/SGminotaur.lua', 213), beta('scripts/prefabs/shadow_goo.lua', 73), beta('scripts/prefabs/shadow_goo.lua', 274), beta('init/init_gemology/misc.lua', 105), beta('init/init_gemology/misc.lua', 118), beta('init/init_gemology/misc.lua', 152), names(324), names(336)],
   },
   {
     id: 'ancient-fuelweaver', category: 'creatures', icon: 'stalker_atrium', title: '远古织影者',
@@ -39,7 +39,7 @@ export const caveBossArticles = [
       ['分阶段处理蘑菇树', '普通形态默认 52,500 生命，悲惨形态默认 99,999。两者在 70%、40% 血线进入新阶段，悲惨形态在 20% 时还有一阶段。它召出增益蘑菇树后先用斧头清树以降低减伤，看到脚边孢子炸弹或地面毒雾就移到空地。'],
       ['掉落', '普通形态死亡必掉 1 张蘑菇皮，悲惨形态必掉 2 张。两者另有雕塑草图、肉类和蘑菇。活着切入新阶段时也会抛出蘑菇皮，普通逐阶段可再拿 2 张、悲惨可再拿 3 张，单次伤害跨过血线时基础阶段掉落可能减少。测试版在较高生命档的阶段咆哮上也会追加掷骰。'],
     ],
-    sources: [cfg(167), cfg(1223), cfg(1307), beta('modworldgenmain.lua', 31), beta('scripts/map/tasks/caves/mushroom_tasks.lua', 4), health(20), health(436), health(452)],
+    sources: [cfg(167), cfg(1223), cfg(1307), beta('modworldgenmain.lua', 31), beta('scripts/map/tasks/caves/mushroom_tasks.lua', 5), health(20), health(436), health(452)],
   },
   {
     id: 'nightmare-werepig', category: 'creatures', icon: 'daywalker', title: '梦魇疯猪与拾荒疯猪',

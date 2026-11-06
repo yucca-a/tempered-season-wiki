@@ -1,6 +1,6 @@
 {
-  "version": "2.8.14.98.2",
-  "sourceHash": "0061000c287fb0e89f11ef603d171e3919b979fdd450d0cdc7e0d0b43a454e4f",
+  "version": "2.8.14.98.6",
+  "sourceHash": "0268a2023753802f62ea4635ca4fb4d05b673ac0e5adf0ff781363f7a55b39f8",
   "total": 421,
   "configs": [
     {
@@ -63,12 +63,12 @@
       "line": 231,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 80
-        },
-        {
           "file": "content/easy_other/ui.lua",
           "line": 6
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 80
         }
       ]
     },
@@ -100,12 +100,12 @@
       "line": 233,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 85
-        },
-        {
           "file": "content/easy_other/mod.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 85
         }
       ]
     },
@@ -258,10 +258,6 @@
       "line": 242,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 89
-        },
-        {
           "file": "content/common/temp.lua",
           "line": 23
         },
@@ -272,6 +268,10 @@
         {
           "file": "content/easy_other/worldexchangefast.lua",
           "line": 7
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 89
         }
       ]
     },
@@ -345,10 +345,6 @@
       "line": 266,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 89
-        },
-        {
           "file": "content/common/temp.lua",
           "line": 23
         },
@@ -359,6 +355,10 @@
         {
           "file": "content/easy_other/worldexchangefast.lua",
           "line": 7
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 89
         }
       ]
     },
@@ -413,20 +413,20 @@
       "line": 271,
       "references": [
         {
-          "file": "content/modworldgenmain.lua",
-          "line": 7
-        },
-        {
-          "file": "content/modworldgenmain.lua",
-          "line": 11
-        },
-        {
           "file": "content/common/common.lua",
           "line": 13
         },
         {
           "file": "content/common/common.lua",
           "line": 119
+        },
+        {
+          "file": "content/modworldgenmain.lua",
+          "line": 7
+        },
+        {
+          "file": "content/modworldgenmain.lua",
+          "line": 11
         }
       ]
     },
@@ -453,12 +453,12 @@
       "line": 278,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 106
-        },
-        {
           "file": "content/easy_role/wx78_easy.lua",
           "line": 1269
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 106
         }
       ]
     },
@@ -639,22 +639,6 @@
       "line": 303,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 100
-        },
-        {
-          "file": "content/modmain.lua",
-          "line": 218
-        },
-        {
-          "file": "content/shadowworld.lua",
-          "line": 1
-        },
-        {
-          "file": "content/shadow_nerf.lua",
-          "line": 121
-        },
-        {
           "file": "content/epic/antlion.lua",
           "line": 1
         },
@@ -673,6 +657,22 @@
         {
           "file": "content/food/plant.lua",
           "line": 174
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 100
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 218
+        },
+        {
+          "file": "content/shadow_nerf.lua",
+          "line": 121
+        },
+        {
+          "file": "content/shadowworld.lua",
+          "line": 1
         }
       ]
     },
@@ -2749,12 +2749,12 @@
       "line": 495,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 37
-        },
-        {
           "file": "content/epic/daywalker2.lua",
           "line": 1139
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 37
         }
       ]
     },
@@ -9089,12 +9089,12 @@
       "line": 888,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 43
-        },
-        {
           "file": "content/easy_role/gym.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 43
         }
       ]
     },
@@ -9205,10 +9205,6 @@
       "line": 903,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 146
-        },
-        {
           "file": "content/easy_other/containersort.lua",
           "line": 25
         },
@@ -9303,6 +9299,10 @@
         {
           "file": "content/easy_role/wx78_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 146
         },
         {
           "file": "content/tech/prototyper.lua",
@@ -10041,12 +10041,12 @@
       "line": 991,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 168
-        },
-        {
           "file": "content/easy_role/willow_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 168
         }
       ]
     },
@@ -10101,12 +10101,12 @@
       "line": 995,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 171
-        },
-        {
           "file": "content/easy_role/wendy_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 171
         }
       ]
     },
@@ -10170,16 +10170,16 @@
       "line": 1006,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 173
-        },
-        {
           "file": "content/easy_role/wickerbottom_easy.lua",
           "line": 1
         },
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
           "line": 435
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 173
         },
         {
           "file": "content/role/wickerbottom.lua",
@@ -10214,12 +10214,12 @@
       "line": 1013,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 174
-        },
-        {
           "file": "content/easy_role/wigfrid_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 174
         }
       ]
     },
@@ -10274,12 +10274,12 @@
       "line": 1017,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 169
-        },
-        {
           "file": "content/easy_role/webber_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 169
         }
       ]
     },
@@ -10334,12 +10334,12 @@
       "line": 1020,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 179
-        },
-        {
           "file": "content/easy_role/walter_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 179
         },
         {
           "file": "content/role/walter.lua",
@@ -10430,12 +10430,12 @@
       "line": 1027,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 176
-        },
-        {
           "file": "content/easy_role/wortox_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 176
         }
       ]
     },
@@ -10462,12 +10462,12 @@
       "line": 1028,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 175
-        },
-        {
           "file": "content/easy_role/wormwood_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 175
         }
       ]
     },
@@ -10494,12 +10494,12 @@
       "line": 1030,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 177
-        },
-        {
           "file": "content/easy_role/wurt_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 177
         }
       ]
     },
@@ -10526,16 +10526,16 @@
       "line": 1034,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 178
-        },
-        {
           "file": "content/easy_role/rightaction.lua",
           "line": 576
         },
         {
           "file": "content/easy_role/wanda_easy.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 178
         }
       ]
     },
@@ -11018,12 +11018,12 @@
       "line": 1073,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 187
-        },
-        {
           "file": "content/epic/alterguardian.lua",
           "line": 85
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 187
         },
         {
           "file": "content/monster/lunarthrall_plant.lua",
@@ -11258,6 +11258,10 @@
       "line": 1105,
       "references": [
         {
+          "file": "content/common/common.lua",
+          "line": 119
+        },
+        {
           "file": "content/modmain.lua",
           "line": 130
         },
@@ -11268,10 +11272,6 @@
         {
           "file": "content/modworldgenmain.lua",
           "line": 11
-        },
-        {
-          "file": "content/common/common.lua",
-          "line": 119
         }
       ]
     },
@@ -11514,12 +11514,12 @@
       "line": 1132,
       "references": [
         {
-          "file": "content/modworldgenmain.lua",
-          "line": 11
-        },
-        {
           "file": "content/common/common.lua",
           "line": 119
+        },
+        {
+          "file": "content/modworldgenmain.lua",
+          "line": 11
         }
       ]
     },
@@ -12087,16 +12087,16 @@
       "line": 1175,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 199
-        },
-        {
           "file": "content/common/patch.lua",
           "line": 338
         },
         {
           "file": "content/food/fooddata.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 199
         }
       ]
     },
@@ -12133,12 +12133,12 @@
       "line": 1179,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 200
-        },
-        {
           "file": "content/food/cooking.lua",
           "line": 2
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 200
         }
       ]
     },
@@ -12198,12 +12198,12 @@
       "line": 1195,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 202
-        },
-        {
           "file": "content/food/oceanfish.lua",
           "line": 420
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 202
         }
       ]
     },
@@ -12235,12 +12235,12 @@
       "line": 1199,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 203
-        },
-        {
           "file": "content/food/container_live.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 203
         }
       ]
     },
@@ -12567,16 +12567,16 @@
       "line": 1206,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 204
-        },
-        {
           "file": "content/food/animal.lua",
           "line": 1
         },
         {
           "file": "content/food/koalefant.lua",
           "line": 4
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 204
         },
         {
           "file": "content/monster/walrus.lua",
@@ -12762,12 +12762,12 @@
       "line": 1212,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 209
-        },
-        {
           "file": "content/food/seeds.lua",
           "line": 2
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 209
         }
       ]
     },
@@ -13039,12 +13039,12 @@
       "line": 1214,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 212
-        },
-        {
           "file": "content/food/farm_plant.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 212
         }
       ]
     },
@@ -13144,12 +13144,12 @@
       "line": 1217,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 211
-        },
-        {
           "file": "content/food/nutrient.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 211
         }
       ]
     },
@@ -13476,12 +13476,12 @@
       "line": 1224,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 207
-        },
-        {
           "file": "content/food/plant.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 207
         },
         {
           "file": "content/role/wickerbottom.lua",
@@ -13540,16 +13540,16 @@
       "line": 1231,
       "references": [
         {
+          "file": "content/easy_role/wigfrid_easy.lua",
+          "line": 402
+        },
+        {
           "file": "content/modmain.lua",
           "line": 215
         },
         {
           "file": "content/shadowworld.lua",
           "line": 159
-        },
-        {
-          "file": "content/easy_role/wigfrid_easy.lua",
-          "line": 402
         }
       ]
     },
@@ -14420,12 +14420,12 @@
       "line": 1275,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 236
-        },
-        {
           "file": "content/easy_role/wigfrid_easy.lua",
           "line": 402
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 236
         }
       ]
     },
@@ -14989,16 +14989,16 @@
       "line": 1325,
       "references": [
         {
+          "file": "content/epic/deerclops.lua",
+          "line": 3
+        },
+        {
           "file": "content/modmain.lua",
           "line": 219
         },
         {
           "file": "content/modmain.lua",
           "line": 263
-        },
-        {
-          "file": "content/epic/deerclops.lua",
-          "line": 3
         }
       ]
     },
@@ -15242,14 +15242,6 @@
       "line": 1350,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 252
-        },
-        {
-          "file": "content/shadow_nerf.lua",
-          "line": 11
-        },
-        {
           "file": "content/easy_other/containersort.lua",
           "line": 2428
         },
@@ -15259,6 +15251,14 @@
         },
         {
           "file": "content/epic/crabking_deprecated.lua",
+          "line": 11
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 252
+        },
+        {
+          "file": "content/shadow_nerf.lua",
           "line": 11
         }
       ]
@@ -15286,12 +15286,12 @@
       "line": 1352,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 218
-        },
-        {
           "file": "content/epic/lunarepic.lua",
           "line": 3
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 218
         }
       ]
     },
@@ -15323,12 +15323,12 @@
       "line": 1356,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 261
-        },
-        {
           "file": "content/epic/shadowchesspieces.lua",
           "line": 5
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 261
         }
       ]
     },
@@ -15387,12 +15387,12 @@
       "line": 1364,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 284
-        },
-        {
           "file": "content/easy_other/easy_structures.lua",
           "line": 25
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 284
         }
       ]
     },
@@ -15467,16 +15467,16 @@
       "line": 1368,
       "references": [
         {
+          "file": "content/epic/alterguardian.lua",
+          "line": 3
+        },
+        {
           "file": "content/modmain.lua",
           "line": 282
         },
         {
           "file": "content/shadowworld.lua",
           "line": 169
-        },
-        {
-          "file": "content/epic/alterguardian.lua",
-          "line": 3
         }
       ]
     },
@@ -15531,16 +15531,16 @@
       "line": 1383,
       "references": [
         {
-          "file": "content/shadowworld.lua",
-          "line": 16
+          "file": "content/epic/alterguardian.lua",
+          "line": 4
         },
         {
           "file": "content/shadow_nerf.lua",
           "line": 10
         },
         {
-          "file": "content/epic/alterguardian.lua",
-          "line": 4
+          "file": "content/shadowworld.lua",
+          "line": 16
         }
       ]
     },
@@ -15605,28 +15605,28 @@
       "line": 1387,
       "references": [
         {
+          "file": "content/easy_other/easy_equipments.lua",
+          "line": 4938
+        },
+        {
+          "file": "content/easy_other/easy_equipments.lua",
+          "line": 4938
+        },
+        {
+          "file": "content/easy_other/easy_items.lua",
+          "line": 1040
+        },
+        {
+          "file": "content/easy_other/easy_items.lua",
+          "line": 1040
+        },
+        {
           "file": "content/modmain.lua",
           "line": 255
         },
         {
           "file": "content/shadowworld.lua",
           "line": 160
-        },
-        {
-          "file": "content/easy_other/easy_equipments.lua",
-          "line": 4938
-        },
-        {
-          "file": "content/easy_other/easy_equipments.lua",
-          "line": 4938
-        },
-        {
-          "file": "content/easy_other/easy_items.lua",
-          "line": 1040
-        },
-        {
-          "file": "content/easy_other/easy_items.lua",
-          "line": 1040
         }
       ]
     },
@@ -15663,16 +15663,16 @@
       "line": 1394,
       "references": [
         {
+          "file": "content/epic/atriumstalker.lua",
+          "line": 3
+        },
+        {
           "file": "content/modmain.lua",
           "line": 272
         },
         {
           "file": "content/shadowworld.lua",
           "line": 168
-        },
-        {
-          "file": "content/epic/atriumstalker.lua",
-          "line": 3
         }
       ]
     },
@@ -15724,12 +15724,12 @@
       "line": 1401,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 273
-        },
-        {
           "file": "content/epic/epic_armor.lua",
           "line": 74
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 273
         }
       ]
     },
@@ -15776,12 +15776,12 @@
       "line": 1418,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 279
-        },
-        {
           "file": "content/epic/epic_ruin.lua",
           "line": 1
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 279
         }
       ]
     },
@@ -15818,10 +15818,6 @@
       "line": 1427,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 280
-        },
-        {
           "file": "content/epic/pig_boss.lua",
           "line": 243
         },
@@ -15832,6 +15828,10 @@
         {
           "file": "content/epic/poor_armor.lua",
           "line": 104
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 280
         }
       ]
     },
@@ -15858,12 +15858,12 @@
       "line": 1439,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 281
-        },
-        {
           "file": "content/epic/pig_boss.lua",
           "line": 243
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 281
         }
       ]
     },
@@ -16117,10 +16117,6 @@
       "line": 1447,
       "references": [
         {
-          "file": "content/modmain.lua",
-          "line": 290
-        },
-        {
           "file": "content/epic/alterguardian.lua",
           "line": 1
         },
@@ -16167,6 +16163,10 @@
         {
           "file": "content/epic/um_hoodedwidow.lua",
           "line": 6
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 290
         },
         {
           "file": "content/monster/chess.lua",

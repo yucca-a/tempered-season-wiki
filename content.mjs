@@ -1,4 +1,4 @@
-export const meta = { version: '2.8.14.98.2', date: '2026-11-05', workshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3832182265', originalWorkshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2886753796' };
+export const meta = { version: '2.8.14.98.6', date: '2026-11-05', workshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3832182265', originalWorkshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2886753796' };
 export const categories = [
   { id: 'start', name: '开始游玩', symbol: '01', description: '了解模组，找到适合自己的起点。' },
   { id: 'mechanics', name: '核心机制', symbol: '02', description: '战斗、生存与两个世界之间的规则。' },
@@ -45,13 +45,13 @@ export const articles = [
     { title: '火药与传统装甲', paragraphs: ['火药仍保留原版爆炸抗性，同时受到单次上限与动态装甲约束。当前没有额外加入“爆炸记忆”机制。', '遇强则坚不附带传统装甲的固定无敌期、回血或陨石。传统档位保留其原有规则。'] },
     { title: '保存与适用范围', paragraphs: ['支持保存读档及已适配 Boss 的阶段继承。正常伤害结算会受到约束；直接设定生命值或强制击杀类效果不能等同于普通伤害。'], links: ['combat', 'configuration'] },
   ] },
-  { id: 'world-exchange', title: '穿越机制与世界协同', category: 'mechanics', tag: '探索', summary: '三档穿越方式、多层世界自动协调，以及旧档迁移与回档恢复。', keywords: '穿越 末影箱 容器 世界协同 双界协同 多分片 地面 洞穴 回档 存档 地图', source: ['content/modinfo.lua', 'content/easy_other/containersort.lua', 'content/easy_other/worldexchangefast.lua', 'content/scripts/components/worldexchange2hm.lua', 'workshop/update-notes-2.8.14.98.2.txt'], sections: [
+  { id: 'world-exchange', title: '穿越机制与世界协同', category: 'mechanics', tag: '探索', summary: '三档穿越方式、多层世界自动协调，以及旧档迁移与回档恢复。', keywords: '穿越 末影箱 容器 世界协同 双界协同 多分片 地面 洞穴 回档 存档 地图', source: ['content/modinfo.lua', 'content/easy_other/containersort.lua', 'content/easy_other/worldexchangefast.lua', 'content/scripts/components/worldexchange2hm.lua', 'content/scripts/worldexchangeengine2hm.lua', 'workshop/update-notes-2.8.14.98.2.txt', 'workshop/update-notes-2.8.14.98.6.txt'], sections: [
     { title: '三种穿越设置', table: { headers: ['档位', '说明'], rows: [['关闭', '关闭穿越功能；整理与收集另行配置。'], ['传统', '沿用为爽原有整箱交换方式和辅助暂停按钮。'], ['世界协同（默认·实验性）', '自动发现并协调参与的分片，支持地面、洞穴及额外世界。常规穿越无需逐次完整存档。']] } },
     { title: '使用条件', paragraphs: ['需要开启容器按钮，并在所有分片选择同一档位。世界协同仍处于实验阶段，配置说明建议在性能较高的主机或服务器上使用。', '交换过程保留锁箱、格位、堆叠、耐久与物品一致性检查。多个分片同时操作、短暂断线或单层重启时，会进行相应恢复处理。'] },
     { title: '旧档迁移', paragraphs: ['升级到 2.8.14.98.2 后，旧存档中的传统与关闭档都会切换到世界协同，原双界协同档继续使用世界协同。希望继续使用原整箱交换的房间可重新选择“传统”，也可手动关闭。'] },
     { title: '回档与异常恢复', callout: '异常恢复以参与分片最近可验证的共同保存点为准，可能撤销该保存点之后的游玩进度。', paragraphs: ['参与穿越的世界分片与玩家需要恢复到一致状态，避免新旧进度混用。切换穿越档位不会跳过旧存档尚未完成的恢复保护。', '2.8.14.98.2 修复回档、重登或等待分片同步时角色载入后可能无法移动的问题，也修复共同存档确认丢失及房主在洞穴退出、多分片同时关服时可能卡住的问题。'] },
-    { title: '当前版本的进入世界优化', paragraphs: ['新建或重新生成世界后，不再立即额外进行多分片完整存档。首个保护快照在正常保存或首次穿越时建立。', '全新世界等待其他分片连接时，不会因此锁住角色移动。旧快照恢复与存储错误保护依然有效。'] },
-    { title: '相关条目', links: ['containers', 'update-2-8-14-98-2', 'faq'] },
+    { title: '进入世界与穿越等待', paragraphs: ['新建或重新生成世界后，首个保护快照在正常保存或首次穿越时建立。等待其他分片连接期间，角色可以在全新世界里移动。', '2.8.14.98.6 将进出洞穴的快照校验移到后台。参与分片完成快照采集并满足迁移检查后，玩家可以继续穿越。旧快照恢复与存储错误保护仍适用。'] },
+    { title: '相关条目', links: ['containers', 'update-2-8-14-98-6', 'update-2-8-14-98-2', 'faq'] },
   ] },
   { id: 'skill-tree', title: '技能树与洞察点', category: 'mechanics', tag: '成长', summary: '按实际技能节点计算上限，避免满树后继续积累溢出经验。', keywords: '技能树 技能点 洞察点 经验 提示', source: ['workshop/update-notes-2.8.14.96.txt', 'content/modinfo.lua'], sections: [
     { title: '洞察点上限', paragraphs: ['启用技能点扩展时，洞察点上限按角色实际技能节点计算，避免固定上限与角色技能树不匹配。满树后不再继续累积溢出经验，无可用点时也不会继续给出相应提示。'] },

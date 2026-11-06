@@ -39,7 +39,7 @@ export const articles=[
   summary:'暖石有基础保温，并按持有者的冬夏保温能力分别加成。',
   configs:['insul_thermalstone'],
   sections:[
-   ['保温如何结算','重做默认开启。暖石的基础冬季保温和夏季隔热均为 60。温度变化时会分别加上持有者对应保温值的一半；没有能提供温度属性的持有者时，两项恢复到基础值。'],
+   ['保温如何结算','重做默认开启。暖石的基础冬季保温和夏季隔热均为 30，取自游戏的 INSULATION_TINY。温度变化时会分别加上持有者对应保温值的一半。没有能提供温度属性的持有者时，两项恢复到基础值。'],
   ],
   sources:[cfg(685),beta('postinit/prefabs/heatrock.lua',12),beta('init/init_postinit.lua',135)],
  },
@@ -116,12 +116,12 @@ export const articles=[
    ['岛屿冒险的额外来源','海难的熔岩地与火山中，开采普通或含金熔岩矿时，14 种附魔宝石都以相同的低权重加入额外掉落池。黑曜石岩石和龙骑士蛋各有 10% 概率给熔岩晶洞，木炭岩有 10% 概率给浮石晶洞。启用岛屿冒险的老虎机战利品时，部分老虎机奖池还会给晶洞。'],
   ],
   sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),
-   ...[87,247,261,411,493].map(line=>beta('init/init_gemology/trades.lua',line)),beta('scripts/prefabs/snowmong.lua',122),beta('scripts/stategraphs/SGsnowmong.lua',329),
-   ...[90,228,301,353,421,450,472,581,648,689,742,789,842].map(line=>beta('scripts/gemology_defs.lua',line)),beta('init/init_tuning.lua',399),beta('init/init_gemology/special.lua',5),beta('postinit/components/freezable.lua',21),beta('scripts/prefabs/um_ice_shield.lua',37),names(752),names(764),names(770),names(821),names(853),
+   ...[87,247,261,411,493].map(line=>beta('init/init_gemology/trades.lua',line)),beta('scripts/prefabs/snowmong.lua',123),beta('scripts/stategraphs/SGsnowmong.lua',329),
+   ...[90,228,301,353,421,450,472,581,648,689,742,789,842].map(line=>beta('scripts/gemology_defs.lua',line)),beta('init/init_tuning.lua',400),beta('init/init_gemology/special.lua',5),beta('postinit/components/freezable.lua',21),beta('scripts/prefabs/um_ice_shield.lua',37),names(752),names(764),names(770),names(821),names(853),
    cfg(167),beta('modworldgenmain.lua',31),beta('scripts/um_gemology_geode_defs.lua',1),beta('scripts/prefabs/um_gemology_geodes.lua',97),
-   ...[3,47,127,140,167].map(line=>beta('scripts/map/tasks/caves/gemology.lua',line)),...[2,55,117,166,198,231,249].map(line=>beta('scripts/map/rooms/caves/gemology.lua',line)),beta('scripts/map/rooms/caves/moonregions.lua',243),beta('scripts/map/rooms/caves/moltenregions.lua',311),
-   beta('scripts/prefabs/um_mushtrees_petri.lua',179),beta('scripts/prefabs/um_guano_rock.lua',17),beta('scripts/prefabs/um_rocklobster_rock.lua',19),beta('scripts/prefabs/um_moonglass_ceiling.lua',50),beta('scripts/prefabs/um_moonglass_ceiling.lua',144),beta('scripts/prefabs/um_slimestone_rock.lua',18),beta('scripts/prefabs/um_sinkmound_rock.lua',34),beta('scripts/prefabs/um_magmastone.lua',19),beta('scripts/prefabs/um_magmastone.lua',59),beta('postinit/prefabs/chessjunk.lua',78),beta('postinit/prefabs/cave_vent_mite.lua',19),beta('init/init_strings/init_names.lua',830),names(842),
-   beta('init/um_tree_rock_data.lua',34),beta('init/um_tree_rock_data.lua',78),beta('init/init_gamemodes/init_uncompromising_mode.lua',256),beta('postinit/prefabs/mushtrees.lua',34),beta('postinit/prefabs/mushtrees.lua',84),beta('postinit/prefabs/rocky.lua',19),beta('scripts/map/tasks/forest/giant_trees.lua',10),...[404,515,615,713].map(line=>beta('scripts/webbedcreatureloot.lua',line)),beta('scripts/prefabs/webbedcreature.lua',108),beta('scripts/prefabs/widowsgrasp.lua',22),beta('init/init_gemology/misc.lua',10),beta('init/init_compat.lua',244),beta('init/init_compat.lua',282),beta('init/init_compat.lua',320),names(233),names(303)],
+   ...[3,47,128,141,167].map(line=>beta('scripts/map/tasks/caves/gemology.lua',line)),...[2,55,117,166,198,231,249].map(line=>beta('scripts/map/rooms/caves/gemology.lua',line)),beta('scripts/map/rooms/caves/moonregions.lua',243),beta('scripts/map/rooms/caves/moltenregions.lua',311),
+   beta('scripts/prefabs/um_mushtrees_petri.lua',179),beta('scripts/prefabs/um_guano_rock.lua',17),beta('scripts/prefabs/um_rocklobster_rock.lua',19),beta('scripts/prefabs/um_moonglass_ceiling.lua',50),beta('scripts/prefabs/um_moonglass_ceiling.lua',144),beta('scripts/prefabs/um_slimestone_rock.lua',18),beta('scripts/prefabs/um_sinkmound_rock.lua',34),beta('scripts/prefabs/um_magmastone.lua',19),beta('scripts/prefabs/um_magmastone.lua',59),beta('postinit/prefabs/chessjunk.lua',78),beta('postinit/prefabs/cave_vent_mite.lua',20),beta('init/init_strings/init_names.lua',830),names(842),
+   beta('init/um_tree_rock_data.lua',34),beta('init/um_tree_rock_data.lua',83),beta('init/init_gamemodes/init_uncompromising_mode.lua',256),beta('postinit/prefabs/mushtrees.lua',34),beta('postinit/prefabs/mushtrees.lua',84),beta('postinit/prefabs/rocky.lua',19),beta('scripts/map/tasks/forest/giant_trees.lua',11),...[404,515,615,713].map(line=>beta('scripts/webbedcreatureloot.lua',line)),beta('scripts/prefabs/webbedcreature.lua',108),beta('scripts/prefabs/widowsgrasp.lua',22),beta('init/init_gemology/misc.lua',10),beta('init/init_compat.lua',244),beta('init/init_compat.lua',282),beta('init/init_compat.lua',320),names(233),names(303)],
  },
  {
   id:'winky',category:'characters',title:'温奇',aliases:['Winky','鼠人','定居鼠穴'],
@@ -132,7 +132,7 @@ export const articles=[
    ['鼠穴','空手右键合适的地面可打临时鼠穴。服务端要求饥饿严格大于 15 且未站在船等平台上，打洞消耗 15 饥饿，临时鼠穴约 180 秒消失。定居鼠穴消耗 20 饥饿，每个分片受一处定居鼠穴的限制。两类鼠穴在同一分片连接温奇的口袋空间。'],
    ['老兵诅咒','诅咒激活时，普通物品栏从 15 格降到 10 格，后 5 格的内容会被丢出。'],
   ],
-  sources:[cfg(265),beta('modmain.lua',113),beta('scripts/prefabs/winky.lua',61),beta('scripts/prefabs/winky.lua',145),beta('scripts/prefabs/winky.lua',170),beta('init/init_actions.lua',140),recipe(737),beta('scripts/prefabs/uncompromising_rat.lua',1463),character(5)],
+  sources:[cfg(265),beta('modmain.lua',113),beta('scripts/prefabs/winky.lua',61),beta('scripts/prefabs/winky.lua',145),beta('scripts/prefabs/winky.lua',170),beta('init/init_actions.lua',140),recipe(737),beta('scripts/prefabs/uncompromising_rat.lua',1463),character(6)],
  },
  {
   id:'wixie',category:'characters',title:'薇希',aliases:['Wixie','薇茜','维希','弹弓妹','沃尔特重做'],
@@ -143,7 +143,7 @@ export const articles=[
    ['幽闭恐惧','附近战斗生物、躲藏、骑乘、邻近墙壁或树木以及部分护具都会影响幽闭恐惧。部分头部和身体护甲各增加 0.2 的基础影响。累积到 100% 触发恐慌，降到 0 后解除并进入 10 秒冷却。'],
    ['弹弓','专属弹弓包括浮木弹弓-玛蒂尔达、活木弹弓-切齿、绝望弹弓-杰西和光芒弹弓-克莱尔。杰西和克莱尔分别在暗影与月亮制作站制作，最终生效的配方仅检查薇希制作标签和制作站。'],
   ],
-  sources:[beta('modmain.lua',355),beta('modmain.lua',382),beta('scripts/prefabs/wixie.lua',77),beta('scripts/prefabs/wixie.lua',176),beta('init/init_recipes/init_recipes.lua',81),beta('init/init_recipes/recipes_wixie.lua',11),beta('init/init_recipes/recipes_wixie.lua',141),character(16),cn('wixie_postinit/wixie_strings.lua',9),names(571)],
+  sources:[beta('modmain.lua',355),beta('modmain.lua',382),beta('scripts/prefabs/wixie.lua',77),beta('scripts/prefabs/wixie.lua',176),beta('init/init_recipes/init_recipes.lua',84),beta('init/init_recipes/recipes_wixie.lua',11),beta('init/init_recipes/recipes_wixie.lua',141),character(18),cn('wixie_postinit/wixie_strings.lua',9),names(571)],
  },
  {
   id:'wathom',category:'characters',title:'沃托姆',aliases:['Wathom','跳劈哥','肾上腺素'],
@@ -154,7 +154,7 @@ export const articles=[
    ['肾上腺素','肾上腺素至少 25% 时，符合条件的非投射物攻击会推迟自然衰减 10 秒。未进入强化或拒死状态时，25% 至不足 50%、50% 至不足 75%、75% 以上分别获得 5、4、3 点。肾上腺素至少 25%、且未强化时，部分受伤也可按伤害的 25% 向下取整增加。'],
    ['强化与代价','满肾上腺素进入强化要求对应的第二档强化技能。强化时默认承伤倍率为 5，房间可选 2 到 5，配置默认也计入护甲损耗。'],
   ],
-  sources:[cfg(266),cfg(269),beta('scripts/prefabs/wathom.lua',12),beta('scripts/prefabs/wathom.lua',359),beta('scripts/prefabs/wathom.lua',535),beta('init/init_wathom.lua',1576),character(24)],
+  sources:[cfg(266),cfg(269),beta('scripts/prefabs/wathom.lua',12),beta('scripts/prefabs/wathom.lua',359),beta('scripts/prefabs/wathom.lua',535),beta('init/init_wathom.lua',1576),character(25)],
  },
  {
   id:'summer-dragonflies',category:'creatures',title:'时令龙蝇与月光龙蝇',aliases:['Wiltfly','Moonmaw Dragonfly','注能的玻璃碎片','启迪鳞片'],

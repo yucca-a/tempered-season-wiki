@@ -14,13 +14,17 @@ if(args.length!==3)throw Error('Usage: node extract.mjs [--check] <workshop-3193
 const [betaDir,cnDir,gamePo]=args;
 const resultFile=new URL('./snapshot.json',import.meta.url);
 const sourceFiles={};
+const sourceText=new Map();
 async function read(dir,file){
+ const key=(dir===betaDir?'beta':'cn')+'/'+file;
+ if(sourceText.has(key))return sourceText.get(key);
  const bytes=await fs.readFile(path.join(dir,file));
  const value=bytes.toString('utf8').replace(/^\uFEFF/,'');
- sourceFiles[(dir===betaDir?'beta':'cn')+'/'+file]={sha256:createHash('sha256').update(bytes).digest('hex'),lines:value.split('\n').length};
+ sourceText.set(key,value);
+ sourceFiles[key]={sha256:createHash('sha256').update(bytes).digest('hex'),lines:value.split('\n').length};
  return value;
 }
-const ast=source=>lua.parse(source,{locations:true,ranges:true,comments:false,luaVersion:'5.1'});
+const ast=(source,comments=false)=>lua.parse(source,{locations:true,ranges:true,comments,luaVersion:'5.1'});
 const fields=node=>new Map((node?.fields??[]).filter(f=>f.type!=='TableValue').map(f=>[f.key.name??scalar(f.key),f.value]));
 const values=node=>(node?.fields??[]).filter(f=>f.type==='TableValue').map(f=>f.value);
 function scalar(node){
@@ -118,18 +122,43 @@ const recipeImports=await read(betaDir,recipeInit);
 const betaMain=await read(betaDir,'modmain.lua');
 const mode='init/init_gamemodes/init_uncompromising_mode';
 const modeInit=await read(betaDir,mode+'.lua');
-if(!betaMain.includes('modimport("'+mode+'")')||!modeInit.includes('modimport("init/init_recipes/init_recipes")'))throw Error('Recipe loader changed; inspect modmain.lua and '+mode+'.lua');
-function scanRecipes(body,source,file,guards=[]){
+function constantCondition(node){
+ if(!node)return true;
+ if(node.type==='UnaryExpression'&&node.operator==='not'){
+  const inner=constantCondition(node.argument);
+  return typeof inner==='boolean'?!inner:undefined;
+ }
+ const value=scalar(node);
+ return value===undefined?undefined:value!==false&&value!==null;
+}
+function* reachableStatements(body,source,guards=[]){
  for(const statement of body){
-  if(statement.type==='IfStatement'){
-   const preceding=[];
-   for(const clause of statement.clauses){
-    const test=sourceExpr(clause.condition,source);
-    scanRecipes(clause.body,source,file,[...guards,...preceding.map(t=>'!('+t+')'),...(test?[test]:[])]);
-    if(test)preceding.push(test);
-   }
+  if(statement.type!=='IfStatement'){
+   yield [statement,guards];
+   if(statement.type==='ReturnStatement')return;
    continue;
   }
+  const preceding=[];
+  for(const clause of statement.clauses){
+   const fixed=constantCondition(clause.condition);
+   if(fixed===false)continue;
+   const test=fixed===undefined?sourceExpr(clause.condition,source):null;
+   yield* reachableStatements(clause.body,source,[...guards,...preceding.map(t=>'!('+t+')'),...(test?[test]:[])]);
+   if(fixed===true)break;
+   preceding.push(test);
+  }
+ }
+}
+function importGuards(source,entry){
+ for(const [statement,guards] of reachableStatements(ast(source).body,source)){
+  const call=statement.expression;
+  if(statement.type==='CallStatement'&&call.base.name==='modimport'&&scalar(call.arguments[0])===entry)return guards;
+ }
+ throw Error('No active modimport for '+entry);
+}
+const loaderGuards=[...importGuards(betaMain,mode),...importGuards(modeInit,'init/init_recipes/init_recipes')];
+function scanRecipes(body,source,file,loaderGuards){
+ for(const [statement,guards] of reachableStatements(body,source,loaderGuards)){
   const call=statement.expression;
   if(statement.type!=='CallStatement'||!['AddRecipe2','AddCharacterRecipe'].includes(call.base.name))continue;
   const [idNode,items,tech,props]=call.arguments;
@@ -147,9 +176,9 @@ function scanRecipes(body,source,file,guards=[]){
    file,line});
  }
 }
-for(const [module,guard] of [['recipes',[]],['recipes_wixie',['UM_CONFIG.WIXIE_WALTER']],['recipes_ia',[]]]){
- if(!recipeImports.includes('modimport("init/init_recipes/'+module+'")'))throw Error('Recipe import changed for '+module);
- const file='init/init_recipes/'+module+'.lua',source=await read(betaDir,file);
+for(const module of ['recipes','recipes_wixie','recipes_ia']){
+ const entry='init/init_recipes/'+module,guard=[...loaderGuards,...importGuards(recipeImports,entry)];
+ const file=entry+'.lua',source=await read(betaDir,file);
  const {body}=ast(source);
  scanRecipes(body,source,file,guard);
  if(module==='recipes_wixie'){
@@ -180,12 +209,32 @@ const names=Object.fromEntries([...usedNames].sort().map(id=>{
  const game=gameNames[id]??{};
  return [id,{en:baseNames[id]??game.en??id,zh:cnNames[id]??game.zh??null}];
 }));
-for(const source of articles.flatMap(a=>a.sources)){
+const activeLines=new Map();
+const validatedCitations=new Map();
+const inactiveCitations=[];
+for(const [article,source] of articles.flatMap(a=>a.sources.map(s=>[a.id,s]))){
  const dir=source.kind==='cn'?cnDir:betaDir;
  const key=(source.kind??'beta')+'/'+source.file;
- if(!sourceFiles[key])await read(dir,source.file);
- if(source.line<1||sourceFiles[key].lines<source.line)throw Error('Invalid source line '+key+':'+source.line);
+ if(!activeLines.has(key)){
+  const value=await read(dir,source.file);
+  const parts=[];
+  let cursor=0;
+  for(const {range:[start,end]} of ast(value,true).comments){
+   parts.push(value.slice(cursor,start),value.slice(start,end).replace(/[^\r\n]/g,' '));
+   cursor=end;
+  }
+  parts.push(value.slice(cursor));
+  activeLines.set(key,parts.join('').split('\n').map(line=>Boolean(line.trim())));
+ }
+ if(!activeLines.get(key)[source.line-1]){
+  inactiveCitations.push(article+' '+key+':'+source.line);
+  continue;
+ }
+ if(!validatedCitations.has(key))validatedCitations.set(key,new Set());
+ validatedCitations.get(key).add(source.line);
 }
+if(inactiveCitations.length)throw Error('Citations must point to code, not comments or blank lines:\n'+inactiveCitations.join('\n'));
+for(const [key,lines] of validatedCitations)sourceFiles[key].citations=[...lines].sort((a,b)=>a-b);
 const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,articleArtIds,geodePools,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
 const json=JSON.stringify(result,null,2)+'\n';
 if(check){

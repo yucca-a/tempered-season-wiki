@@ -88,12 +88,12 @@ export const creatureArticles=[
   summary:'连帽森林的猪笼草会放出果蝠。它猎食昆虫，被击杀后会爆开。',
   configs:['hoodedforest'],
   sections:[
-   ['生成地形与条件','到地表连帽森林找猪笼草，一株猪笼草最多养一只果蝠。果蝠夜间会尝试回到猪笼草。'],
-   ['行为与打法','生命 100，基础伤害 20。它会主动追蜘蛛和昆虫，并能抓住仍存活的蚜虫。玩家平时不在主动选敌名单内，动手后它可以反击。击杀后约 1.5 秒会爆开，对附近合格目标造成 60 点基础伤害，打倒后先离开爆炸范围。'],
+   ['生成地形与条件','到地表连帽森林找猪笼草，一株猪笼草最多养一只果蝠。果蝠进入实体休眠后，夜间会尝试回到有效的猪笼草。'],
+   ['行为与打法','生命 100，基础伤害 20。它会主动追蜘蛛和昆虫，并能抓住仍存活的蚜虫。主动索敌和受击时选取目标的分支都排除了玩家。击杀后约 1.5 秒会爆开，对附近合格目标造成 60 点基础伤害，打倒后先离开爆炸范围。'],
    ['掉落','死亡爆炸时掉 1 颗爆汁蓝莓和 1 个叶翼。WX-78 也可以扫描果蝠来获取加速电路的数据。'],
   ],
   related:[link('wx78','WX-78 生物扫描'),link('blueberrypancakes','爆汁蓝莓薄饼')],
-  sources:[cfg(539),beta('scripts/map/rooms/forest/gianttreesrooms.lua',41),beta('scripts/prefabs/pitcherplant.lua',82),fruitbat(4),fruitbat(35),fruitbat(104),fruitbat(142),fruitbat(159),fruitbat(212),fruitbat(237),beta('scripts/stategraphs/SGfruitbat.lua',18),beta('scripts/stategraphs/SGfruitbat.lua',420),beta('init/init_character_changes/wx78.lua',103),names(248),names(254),names(255),names(726)],
+  sources:[cfg(539),beta('scripts/map/rooms/forest/gianttreesrooms.lua',41),beta('scripts/prefabs/pitcherplant.lua',82),fruitbat(4),fruitbat(35),fruitbat(79),fruitbat(104),fruitbat(142),fruitbat(159),fruitbat(212),fruitbat(237),beta('scripts/stategraphs/SGfruitbat.lua',18),beta('scripts/stategraphs/SGfruitbat.lua',420),beta('init/init_character_changes/wx78.lua',41),names(248),names(254),names(255),names(726)],
  },
  {
   id:'giant-batilisk',category:'creatures',title:'巨型蝙蝠',aliases:['Adult Batilisk','Vampire Bat','成年蝙蝠','酸蚀蝙蝠'],

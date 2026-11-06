@@ -11,8 +11,8 @@ for(const entry of await fs.readdir(out,{withFileTypes:true}))if(entry.isFile()&
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const rawValue=v=>typeof v==='string'?`"${v}"`:String(v);
 const href=id=>`${id}.html`;
-const versions=['2.8.14.98.2','2.8.14.98.1','2.8.14.98','2.8.14.97.4','2.8.14.97.3','2.8.14.97.2','2.8.14.97.1','2.8.14.97','2.8.14.96.1','2.8.14.96'];
-const releaseTitles=['世界协同、巨兽摧毁与岛屿冒险修复','角色夜视合并、暗影分身与兼容修复','游戏内 Wiki、角色修复与寒霜美术更新','穿越机制、性能优化与陷阱必中','多人穿越与交互修复','沃尔特弹弓权限修正','弹弓崩溃热修','夜视、炮塔与穿越更新','淬炼之季更名','战斗机制与角色修复'];
+const versions=['2.8.14.98.6','2.8.14.98.2','2.8.14.98.1','2.8.14.98','2.8.14.97.4','2.8.14.97.3','2.8.14.97.2','2.8.14.97.1','2.8.14.97','2.8.14.96.1','2.8.14.96'];
+const releaseTitles=['缩短穿越等待并修复两处崩溃','世界协同、巨兽摧毁与岛屿冒险修复','角色夜视合并、暗影分身与兼容修复','游戏内 Wiki、角色修复与寒霜美术更新','穿越机制、性能优化与陷阱必中','多人穿越与交互修复','沃尔特弹弓权限修正','弹弓崩溃热修','夜视、炮塔与穿越更新','淬炼之季更名','战斗机制与角色修复'];
 await fs.mkdir(path.join(root,'releases'),{recursive:true});
 for(const [i,v] of versions.entries()){
  const file=`update-notes-${v}.txt`,copy=path.join(root,'releases',file);

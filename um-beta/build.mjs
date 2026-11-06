@@ -173,7 +173,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   if(seen.has(a.id)||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(a.id)||!categories.some(c=>c.id===a.category)||!a.sources.length||a.configs.some(key=>!configByKey.has(key))||a.related?.some(({id})=>!articleById.has(id)))throw Error('Invalid Beta article '+a.id);
   for(const s of a.sources){
    const src=snapshot.sourceFiles[(s.kind??'beta')+'/'+s.file];
-   if(!src||s.line<1||s.line>src.lines)throw Error('Invalid citation in '+a.id);
+   if(!src?.citations?.includes(s.line))throw Error(`Unverified source citation in ${a.id}: ${s.file}:${s.line}. Run extract.mjs against the reviewed Beta source.`);
   }
   seen.add(a.id);
  }
