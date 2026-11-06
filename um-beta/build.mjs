@@ -201,9 +201,9 @@ export async function buildHub(out,tempered,icon,temperedIndex){
    id:configId(c.key),kind:'config',href:'configs.html#'+configId(c.key),title:configName(c),category:group.mode+' / '+group.name,summary:c.title+' · 默认 '+modeLabel(standard(c)),keywords:c.key,
    text:[...c.options.map(modeLabel),...related.flatMap(a=>[a.title,...a.aliases])].join(' '),status:related.length?'linked':'',
   };}),
+  ...recipeEntries.map(r=>({id:r.anchor,kind:'recipe',href:'recipes.html#'+r.anchor,title:r.title,category:techName(r.tech),summary:r.materialText||'无常规物品材料',keywords:r.id,text:recipeSearch(r),image:artFor(r.product)?'../'+artFor(r.product).path:undefined})),
   ...gallery.map(item=>({id:galleryAnchor(item.id),kind:'item',href:galleryLink(item.id),title:item.title,category:item.group.title,
    summary:item.group.description,keywords:item.id,text:names[item.id]?.en??'',image:'../'+artwork[item.id].path})),
-  ...recipeEntries.map(r=>({id:r.anchor,kind:'recipe',href:'recipes.html#'+r.anchor,title:r.title,category:techName(r.tech),summary:r.materialText||'无常规物品材料',keywords:r.id,text:recipeSearch(r),image:artFor(r.product)?'../'+artFor(r.product).path:undefined})),
  ];
  const jumps=entryArticles.flatMap(a=>(a.searchJumps??[]).map(jump=>{
   const i=jump.section?a.sections.findIndex(s=>s.title===jump.section):-1;
