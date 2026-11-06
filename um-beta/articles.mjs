@@ -2,6 +2,10 @@ import { characterArticles } from './character-articles.mjs';
 import { exclusiveArticles } from './exclusive-articles.mjs';
 import { foodArticles } from './food-articles.mjs';
 import { additionalArticles } from './additional-articles.mjs';
+import { gemCreatureArticles } from './gem-creature-articles.mjs';
+import { caveBossArticles } from './cave-boss-articles.mjs';
+import { creatureArticles } from './creature-articles.mjs';
+import { surfaceBossArticles } from './surface-boss-articles.mjs';
 import { effectTable, gemEffects, tradeTable } from './gemology-tables.mjs';
 import { gemSources, gemSourceTitle, geodeSources, geodeSourceTitle, sourceJumps } from './gemology-sources.mjs';
 
@@ -14,8 +18,22 @@ const cfg=line=>beta('modinfo.lua',line);
 const names=line=>cn('init/init_strings/init_names.lua',line);
 const recipe=line=>beta('init/init_recipes/recipes.lua',line);
 const character=line=>cn('init/init_character_um.lua',line);
+const articleLinks=entries=>entries.map(({id,title})=>({href:id+'.html',label:title}));
 
 export const articles=[
+ {
+  id:'creature-guide',category:'creatures',icon:'hoodedwidow',title:'生物与首领速查',aliases:['生物图鉴','怪物图鉴','Boss','首领攻略'],
+  searchJumps:[{terms:['生物改动','生物图鉴','首领','Boss','Boss攻略','首领攻略']}],
+  summary:'从地表、海上到洞穴和终局，按名字查生成条件、打法和战利品。',
+  configs:[],
+  sections:[
+   ['连帽森林与宝石相关生物','从黑寡妇的开战方式查到虫茧和寡妇装备，也可以直接查参与宝石交易或掉落的生物。',null,articleLinks(gemCreatureArticles)],
+   ['地表与海上首领','按首领查看出现时机、妥协测试版的战斗改动和奖励。',null,articleLinks([...surfaceBossArticles,{id:'summer-dragonflies',title:'时令龙蝇与月光龙蝇'}])],
+   ['洞穴与终局首领','从遗迹守护者查到终局战斗，也可以查季节性的洞穴威胁。',null,articleLinks(caveBossArticles)],
+   ['其他生物与变种','查座狼、深渊蠕虫、蝙蝠、蜘蛛和地热螨等生物的应对方式。',null,articleLinks([...creatureArticles,{id:'rat-raids',title:'鼠潮与鼠穴'},{id:'dread-eye',title:'恐惧之眼'}])],
+  ],
+  sources:[gemCreatureArticles[0].sources[0],surfaceBossArticles[0].sources[0],caveBossArticles[0].sources[0],creatureArticles[0].sources[0]],
+ },
  {
   id:'thermal-stone',category:'items',title:'暖石保温调整',aliases:['暖石','Thermal Stone','heatrock'],
   summary:'暖石有基础保温，并按持有者的冬夏保温能力分别加成。',
@@ -94,7 +112,7 @@ export const articles=[
    [gemSourceTitle,'同色的两种宝石，能掉落它们的晶洞也可能不同。表中百分比是每次从该晶洞的宝石池抽取时，命中指定宝石的概率，已计入普通宝石等候选掉落。点击晶洞名可查看对应的地形和采集方法。',gemSources],
    [geodeSourceTitle,'先从下表的地形取得晶洞，再放到地上用镐敲开。石化蘑菇树与几类矿物都有外观相近的无晶洞版本。',geodeSources,[{href:'cave-worldgen.html',label:'查洞穴地形与房间设置'}]],
    ['巨石枝与旧档','斧砍长成的巨石枝时，藤上掉落按种植位置所属地形的池子抽取。三色蘑菇林、混合菌类区、月亮洞窟、苔藓区、岩石平原、蝙蝠洞、遗迹、喷气孔区和落水洞的池子均能提供对应晶洞。旧树沿用已经保存的掉落，在现有对应地形重新种植可以抽当前池。开启宝石学和蘑菇树调整时，绿树入夏、红树入秋、蓝树入春也有机会自然石化。秋天已有的石虾附近还可能生成孕育中的岩石。'],
-   ['虫茧的高品质宝石','到地表连帽森林的黑寡妇巢旁，用寡妇之爪破开茧。蛞蝓龟或蜗牛龟型、雪怪型、蜗龙型、石虾型的茧各随机给一颗绿、蓝、红、白色附魔宝石，同色两种都可能出现。每颗有 90% 概率为二级、10% 为三级。遗迹迷宫和远古守护者的箱子还可能提供已经附魔的装备。'],
+   ['虫茧的高品质宝石','到地表连帽森林的黑寡妇巢旁，用寡妇之爪破开茧。蛞蝓龟或蜗牛龟型、雪怪型、蜗龙型、石虾型的茧各随机给一颗绿、蓝、红、白色附魔宝石，同色两种都可能出现。每颗有 90% 概率为二级、10% 为三级。遗迹迷宫和远古守护者的箱子还可能提供已经附魔的装备。',null,[{href:'hooded-widow.html#hooded-widow-s1',label:'黑寡妇在哪、怎么开战'},{href:'widows-grasp.html',label:'寡妇之爪与开茧'},{href:'ancient-guardian.html#ancient-guardian-s3',label:'远古守护者的附魔战利品'}]],
    ['岛屿冒险的额外来源','海难的熔岩地与火山中，开采普通或含金熔岩矿时，14 种附魔宝石都以相同的低权重加入额外掉落池。黑曜石岩石和龙骑士蛋各有 10% 概率给熔岩晶洞，木炭岩有 10% 概率给浮石晶洞。启用岛屿冒险的老虎机战利品时，部分老虎机奖池还会给晶洞。'],
   ],
   sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),
@@ -206,4 +224,8 @@ export const articles=[
  ...exclusiveArticles,
  ...foodArticles,
  ...additionalArticles,
+ ...gemCreatureArticles,
+ ...caveBossArticles,
+ ...creatureArticles,
+ ...surfaceBossArticles,
 ];

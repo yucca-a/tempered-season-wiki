@@ -26,6 +26,10 @@ export const geodeSources={
   rows:geodes.map(([,name,terrain,method])=>[name,terrain,method]),
   prefabs:geodes.map(([id])=>geodePrefab(id)),
   rowAnchors:geodes.map(([id])=>geodeRowId(id)),
+  rowLinks:geodes.map(([id])=>({
+    lobster:{href:'rock-lobster.html',label:'石虾习性'},
+    vent:{href:'geothermite.html',label:'地热螨打法'},
+  })[id]),
 };
 
 export const gemSources={

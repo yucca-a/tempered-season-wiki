@@ -36,7 +36,7 @@ export const additionalArticles=[
   sections:[
    ['雷击与充电','开启 WX-78 雷击调整后，未绝缘且存活、非无敌的 WX-78 被雷击时失去 33 理智，并增加 1 格电量。绝缘时只触发避雷事件。食用小电光浆果补 1 格，电光浆果补 3 格，电光浆果芭菲和蓄电池各补 6 格。'],
    ['备份底盘','该调整默认开启。玩家写入和读取底盘的备份属性时，只保留 WX-78 的护盾量。'],
-   ['新增扫描对象','黑寡妇对应超级强化电路，可累积的生物数据上限为 6。蚜虫对应胃增益电路，上限 2；果蝠对应加速电路，上限 2；冰川青年座狼对应制冷电路，上限 6。'],
+   ['新增扫描对象','黑寡妇对应超级强化电路，可累积的生物数据上限为 6。蚜虫对应胃增益电路，上限 2；果蝠对应加速电路，上限 2；冰川青年座狼对应制冷电路，上限 6。',null,[{href:'hooded-widow.html',label:'黑寡妇'},{href:'fruitbat.html',label:'果蝠'},{href:'glacial-hound.html',label:'冰川青年座狼'}]],
   ],
   related:[link('powercell','蓄电池')],
   sources:[cfg(304),cfg(305),role('wx78',29),role('wx78',41),role('wx78',49),role('wx78',75),role('wx78',110),beta('scripts/prefabs/zaspberry.lua',144),beta('scripts/prefabs/zaspberry.lua',162),beta('scripts/prefabs/zaspberryparfait.lua',53),beta('scripts/prefabs/powercell.lua',101),names(45),names(180),names(235),names(254),names(258),names(295),names(461)],

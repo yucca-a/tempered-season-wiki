@@ -8475,6 +8475,10 @@
       "en": "Air Conditioner",
       "zh": "空调"
     },
+    "alterguardian_phase1": {
+      "en": "Celestial Champion",
+      "zh": "天体英雄"
+    },
     "alterguardianhatshard": {
       "en": "Enlightened Shard",
       "zh": "启迪碎片"
@@ -8486,6 +8490,10 @@
     "ancient_amulet_red": {
       "en": "Ancient Soul Amulet",
       "zh": "唤灵护符"
+    },
+    "antlion": {
+      "en": "Antlion",
+      "zh": "蚁狮"
     },
     "armor_bramble": {
       "en": "Bramble Husk",
@@ -8535,9 +8543,17 @@
       "en": "Beard Hair",
       "zh": "胡须"
     },
+    "bearger": {
+      "en": "Bearger",
+      "zh": "熊獾"
+    },
     "beefalowool": {
       "en": "Beefalo Wool",
       "zh": "牛毛"
+    },
+    "beequeen": {
+      "en": "Bee Queen",
+      "zh": "蜂王"
     },
     "blueberrypancakes": {
       "en": "Boomberry Pancakes",
@@ -8623,6 +8639,10 @@
       "en": "Cat Cap",
       "zh": "猫帽"
     },
+    "cave_vent_mite": {
+      "en": "Geothermite",
+      "zh": "地热螨"
+    },
     "charcoal": {
       "en": "Charcoal",
       "zh": "木炭"
@@ -8638,6 +8658,10 @@
     "coontail": {
       "en": "Cat Tail",
       "zh": "猫尾"
+    },
+    "crabking": {
+      "en": "Crab King",
+      "zh": "帝王蟹"
     },
     "critter_figgy_builder": {
       "en": "Figgy",
@@ -8655,6 +8679,14 @@
       "en": "Cut Stone",
       "zh": "石砖"
     },
+    "daywalker": {
+      "en": "Nightmare Werepig",
+      "zh": "梦魇疯猪"
+    },
+    "deerclops": {
+      "en": "Deerclops",
+      "zh": "独眼巨鹿"
+    },
     "deerclops_eyeball": {
       "en": "Deerclops Eyeball",
       "zh": "独眼巨鹿眼球"
@@ -8662,6 +8694,10 @@
     "dormant_rain_horn": {
       "en": "Dormant Conch",
       "zh": "休眠海螺"
+    },
+    "dragonfly": {
+      "en": "Dragonfly",
+      "zh": "龙蝇"
     },
     "dreadstone": {
       "en": "Dreadstone",
@@ -8715,6 +8751,10 @@
       "en": "Frog Legs",
       "zh": "蛙腿"
     },
+    "fruitbat": {
+      "en": "Fruit Bat",
+      "zh": "果蝠"
+    },
     "gasmask": {
       "en": "Goose Mask",
       "zh": "鹅毛面具"
@@ -8726,6 +8766,10 @@
     "giant_blueberry": {
       "en": "Boomberry",
       "zh": "爆汁蓝莓"
+    },
+    "glacialhound": {
+      "en": "Glacial Varglet",
+      "zh": "冰川青年座狼"
     },
     "glass_scales": {
       "en": "Enlightened Scales",
@@ -8847,6 +8891,10 @@
       "en": "Honey Log Roll",
       "zh": "蜂蜜原木卷"
     },
+    "hoodedwidow": {
+      "en": "Hooded Widow",
+      "zh": "黑寡妇"
+    },
     "horrorfuel": {
       "en": "Pure Horror",
       "zh": "纯粹恐惧"
@@ -8878,6 +8926,10 @@
     "kelp": {
       "en": "Kelp Fronds",
       "zh": "海带叶"
+    },
+    "klaus": {
+      "en": "Klaus",
+      "zh": "克劳斯"
     },
     "lightninggoathorn": {
       "en": "Volt Goat Horn",
@@ -8923,6 +8975,10 @@
       "en": "Empty Bottle",
       "zh": "空瓶子"
     },
+    "minotaur": {
+      "en": "Ancient Guardian",
+      "zh": "远古守护者"
+    },
     "minotaurhorn": {
       "en": "Guardian's Horn",
       "zh": "守护者之角"
@@ -8958,6 +9014,10 @@
     "moonstorm_static_item": {
       "en": "Restrained Static",
       "zh": "约束静电"
+    },
+    "moose": {
+      "en": "moose",
+      "zh": null
     },
     "mosquitosack": {
       "en": "Mosquito Sack",
@@ -9115,6 +9175,10 @@
       "en": "Rocks",
       "zh": "石头"
     },
+    "rocky": {
+      "en": "Rock Lobster",
+      "zh": "石虾"
+    },
     "rope": {
       "en": "Rope",
       "zh": "绳子"
@@ -9158,6 +9222,14 @@
     "shadow_forge_kit": {
       "en": "Shadowcraft Plinth Kit",
       "zh": "暗影术基座套装"
+    },
+    "shadow_knight": {
+      "en": "Shadow Knight",
+      "zh": "暗影骑士"
+    },
+    "shockworm": {
+      "en": "Depths Eel",
+      "zh": "洞穴电鳗"
     },
     "shroom_skin": {
       "en": "Shroom Skin",
@@ -9275,9 +9347,17 @@
       "en": "Slurper Pelt",
       "zh": "啜食者皮"
     },
+    "slurtle": {
+      "en": "Slurtle",
+      "zh": "蛞蝓龟"
+    },
     "slurtleslime": {
       "en": "Slurtle Slime",
       "zh": "蛞蝓龟黏液"
+    },
+    "snaildrake_magma": {
+      "en": "Snaildrake",
+      "zh": "蜗龙"
     },
     "snappy_jaw": {
       "en": "Snappy Jaw",
@@ -9295,6 +9375,10 @@
       "en": "Cats-Eye Goggles",
       "zh": "猫眼护目镜"
     },
+    "snowmong": {
+      "en": "Abominamole",
+      "zh": "雪怪"
+    },
     "spear": {
       "en": "Spear",
       "zh": "长矛"
@@ -9302,6 +9386,14 @@
     "spear_wathgrithr_lightning": {
       "en": "Elding Spear",
       "zh": "奔雷矛"
+    },
+    "spider_trapdoor": {
+      "en": "Trapdoor Spider",
+      "zh": "地穴蜘蛛"
+    },
+    "spider_trapdoor_hooded": {
+      "en": "Hooded Widower",
+      "zh": "黑寡妇"
     },
     "spidergland": {
       "en": "Spider Gland",
@@ -9314,6 +9406,10 @@
     "sporepack": {
       "en": "Spore Pack",
       "zh": "蟾蜍背包"
+    },
+    "stalker_atrium": {
+      "en": "Ancient Fuelweaver",
+      "zh": "远古织影者"
     },
     "steelwool": {
       "en": "Steel Wool",
@@ -9338,6 +9434,10 @@
     "thulecite_pieces": {
       "en": "Thulecite Fragments",
       "zh": "铥矿碎片"
+    },
+    "toadstool": {
+      "en": "Toadstool",
+      "zh": "毒菌蟾蜍"
     },
     "townportaltalisman": {
       "en": "Desert Stone",
@@ -9787,6 +9887,10 @@
       "en": "Winky's Home Burrow",
       "zh": "温奇的定居鼠穴"
     },
+    "viperworm": {
+      "en": "Depths Viper",
+      "zh": "洞穴恶蛇"
+    },
     "voidcloth": {
       "en": "Dark Tatters",
       "zh": "暗影碎布"
@@ -9931,6 +10035,14 @@
       "en": "Wickerbottom",
       "zh": "薇克巴顿"
     },
+    "widowsgrasp": {
+      "en": "Widow's Claw",
+      "zh": "寡妇之爪"
+    },
+    "widowshead": {
+      "en": "Widow's Head",
+      "zh": "寡妇之颅"
+    },
     "willow": {
       "en": "Willow",
       "zh": "薇洛"
@@ -9966,6 +10078,10 @@
     "woodpecker": {
       "en": "Woodpecker",
       "zh": "啄木鸟"
+    },
+    "worm_boss": {
+      "en": "Great Depths Worm",
+      "zh": "巨大洞穴蠕虫"
     },
     "wormwood": {
       "en": "Wormwood",
@@ -10048,17 +10164,42 @@
     "rat_tail"
   ],
   "articleArtIds": [
+    "alterguardian_phase1",
+    "antlion",
+    "bearger",
+    "beequeen",
     "blueberrypancakes",
+    "cave_vent_mite",
     "cookpot",
+    "crabking",
+    "daywalker",
+    "deerclops",
+    "dragonfly",
+    "fruitbat",
+    "glacialhound",
+    "hoodedwidow",
+    "klaus",
+    "minotaur",
+    "moose",
     "powercell",
+    "rocky",
     "seafoodpaella",
+    "shadow_knight",
+    "shockworm",
     "slingshot_claire",
     "slingshot_gnasher",
     "slingshot_jessie",
     "slingshot_matilda",
+    "slurtle",
+    "snaildrake_magma",
     "snowcone",
+    "snowmong",
     "spear_wathgrithr_lightning",
+    "spider_trapdoor",
+    "spider_trapdoor_hooded",
+    "stalker_atrium",
     "stuffed_peeper_poppers",
+    "toadstool",
     "um_armor_bramble_rimeweed",
     "um_backpack_amuletuse",
     "um_boom_tart",
@@ -10095,18 +10236,22 @@
     "um_rimeweed_spagett",
     "um_rimeweed_tequila",
     "um_sponge_cake",
+    "viperworm",
     "walter",
     "wanda",
     "warly",
     "wendy",
     "wes",
     "wickerbottom",
+    "widowsgrasp",
+    "widowshead",
     "willow",
     "winona",
     "winona_toolbox",
     "winona_upgradekit_electrical",
     "wolfgang",
     "woodie",
+    "worm_boss",
     "wormwood",
     "wortox",
     "wurt",
@@ -10203,6 +10348,10 @@
     "beta/init/init_actions.lua": {
       "sha256": "46a894b619a08c2319ae4b0fecacd338531184f501e9674d9b8cc9fa8da5941d",
       "lines": 949
+    },
+    "beta/init/init_bosshealth.lua": {
+      "sha256": "e85fa8ddf9da61c6dd47b3304b1ddc6bc514c5b238ecae2b57c8e8a5a8988952",
+      "lines": 649
     },
     "beta/init/init_character_changes/skilltree_wormwood.lua": {
       "sha256": "be52eec3d76afccd74a9efdbb4e35c8115417c0356b8efddaf05e4a7975264b6",
@@ -10376,6 +10525,10 @@
       "sha256": "e0c7bd42267cafc096116bb782ad0207c735c5cc036f78e535b66549dc890c8f",
       "lines": 48
     },
+    "beta/postinit/components/beargerspawner.lua": {
+      "sha256": "a3c4e3b73d2d63e31a5685b8f705089f54c67c5f819dda67dbe7145b53af32af",
+      "lines": 71
+    },
     "beta/postinit/components/freezable.lua": {
       "sha256": "c1acedb1091ed40bc9f2f94a8f78e649485a21424d02c5b893ff82e5442b62b3",
       "lines": 31
@@ -10384,9 +10537,37 @@
       "sha256": "90f8f584bb867640ede6eed098cbffbf19d31eccca3c6a22b2a708b410dd1b9d",
       "lines": 271
     },
+    "beta/postinit/components/hounded.lua": {
+      "sha256": "5f55161f7d840fe1f6ff3dd14538c0617f946b741d09052f402319e976ef85af",
+      "lines": 219
+    },
     "beta/postinit/components/oldager.lua": {
       "sha256": "aa13884d1188cc15b57fba5d0db01da31fc50583a679afa77c9531a843f71b57",
       "lines": 13
+    },
+    "beta/postinit/prefabs/alterguardian.lua": {
+      "sha256": "020986fafd6276e987e48a36bf54e92c0d18cd3135da4898be360c375841b218",
+      "lines": 9
+    },
+    "beta/postinit/prefabs/antlion.lua": {
+      "sha256": "037d898c6875f39f2d92e8dde7b6f64b437b97a7cb8051487205b9cc633ba7b3",
+      "lines": 55
+    },
+    "beta/postinit/prefabs/batcave.lua": {
+      "sha256": "5d6bf14659c54fc5dd3d99697bd4cdfc48af40b42560804cef8364e01d1cfeb4",
+      "lines": 51
+    },
+    "beta/postinit/prefabs/bearger.lua": {
+      "sha256": "2189eecfd06f1843761232b98e76a584e59c953c6025c5501d9548f3d9b68678",
+      "lines": 179
+    },
+    "beta/postinit/prefabs/beequeen.lua": {
+      "sha256": "6f3bf6184524b241daf8d0deba65d926a5d7d970743cde8e0405466edfb12d11",
+      "lines": 756
+    },
+    "beta/postinit/prefabs/cave_entrance_open.lua": {
+      "sha256": "1280acd105e7742e7e8c4188228ee64ea86a8cd925e33cba23cb5a3edc726db9",
+      "lines": 99
     },
     "beta/postinit/prefabs/cave_vent_mite.lua": {
       "sha256": "917ec324ce733bfc02b2e2ddc8b1d08868bc11b434115e60e678dd5950a3f2ab",
@@ -10396,17 +10577,57 @@
       "sha256": "897a7e447ed66e853a6e301707781315358b730ad1970f4227277d306e904ba4",
       "lines": 106
     },
+    "beta/postinit/prefabs/daywalker.lua": {
+      "sha256": "94feee07498097256f76e4207e8bf24dc2f2b2bb23d0cd9de9ed0ff5998e1bcb",
+      "lines": 243
+    },
+    "beta/postinit/prefabs/deerclops.lua": {
+      "sha256": "60fae8200aee5842d70d7057e10d4f6f36e887149fdfecc8c6f58f7a37b577cd",
+      "lines": 230
+    },
+    "beta/postinit/prefabs/dragonfly_spawner.lua": {
+      "sha256": "ae0740c314ee9160d59f244892149d161c49a4a6ba941d99d40afd811a4e553e",
+      "lines": 50
+    },
     "beta/postinit/prefabs/heatrock.lua": {
       "sha256": "393cd53a4483aad05475c76affbd3f04088ae714069b8e23049d4bd3ba13838c",
       "lines": 37
+    },
+    "beta/postinit/prefabs/klaus.lua": {
+      "sha256": "21c8e062a8d5df9e57812a50e02b9b1c2a937fa02401053b97f882795e4416a1",
+      "lines": 27
+    },
+    "beta/postinit/prefabs/klaus_sack.lua": {
+      "sha256": "5815cd045d2c10d36b58804941f7c32319593c6a049cc5267857e111286067eb",
+      "lines": 22
     },
     "beta/postinit/prefabs/lantern.lua": {
       "sha256": "0a896267dcdaf6494f9c0e7918f519c22620400ab9c96a8524706b59822ceb65",
       "lines": 87
     },
+    "beta/postinit/prefabs/lavae.lua": {
+      "sha256": "e43f72c087eea344f41b49e07ce95674bcbf3992bc7c2f35e3ef62a520efa419",
+      "lines": 30
+    },
     "beta/postinit/prefabs/minerhat.lua": {
       "sha256": "a91abc6ba0c828ef3ab87e667b97a156e25a93ae294764c551e523e519b13405",
       "lines": 78
+    },
+    "beta/postinit/prefabs/minotaur.lua": {
+      "sha256": "27537f7c2536ea31af11192c7bcb8ea853cd5df1c875ccc6d921d1677c256fc0",
+      "lines": 184
+    },
+    "beta/postinit/prefabs/minotaur_drops.lua": {
+      "sha256": "a4ff9c56f4cc6a23e59f330b62188bae610ae065c4b9e961e05feab8a3724a2c",
+      "lines": 8
+    },
+    "beta/postinit/prefabs/molehat.lua": {
+      "sha256": "90bcee711fe409a8b55ccc959eef8a946d70d0db190c3cacf399e1078b12bae4",
+      "lines": 96
+    },
+    "beta/postinit/prefabs/moose.lua": {
+      "sha256": "a0ffef349d097dad7559d00ca9114bcfe9dee561373b4a56dc1be84d6986906a",
+      "lines": 227
     },
     "beta/postinit/prefabs/mushtrees.lua": {
       "sha256": "a6b8130f9a594777196d7a01c150f4359f36318f448df08316e58ad8eccb93b7",
@@ -10420,9 +10641,77 @@
       "sha256": "8df41e7b2efcc20b86bf52965dd44de2d12f19aa37375695f6c78a147a3a0b48",
       "lines": 67
     },
+    "beta/postinit/prefabs/shadowchesspieces.lua": {
+      "sha256": "90c9d1d90a6023fb3373eaba1453954ea60166ef049570e16818502f7bd083e5",
+      "lines": 37
+    },
     "beta/postinit/prefabs/spear_wathgrithr.lua": {
       "sha256": "c55d7a9e7696a68ebe87c931050b9adb031ad5f3de05cc0a612fdd5a1632e383",
       "lines": 178
+    },
+    "beta/postinit/prefabs/stalker.lua": {
+      "sha256": "27b7ef34a0b8ef373053c2ded354d3a38904736f4113d31f0df14e34f1c27d93",
+      "lines": 21
+    },
+    "beta/postinit/prefabs/vetcurse_drops.lua": {
+      "sha256": "f64db0ed26f36f92dbd8fc4fc7345b27051a3eec9470039f265e2f33c6dbac22",
+      "lines": 52
+    },
+    "beta/postinit/prefabs/walrus_camp.lua": {
+      "sha256": "c1687e70f0c9c757c760d615e78febd8a52858edb7c5816bceb3c36570496a77",
+      "lines": 513
+    },
+    "beta/postinit/prefabs/worms.lua": {
+      "sha256": "e22e7e9b17804a909c460bdd0ad3fad10effcbb55b04b44858fa133ddcdd1601",
+      "lines": 51
+    },
+    "beta/postinit/stategraphs/SGbearger.lua": {
+      "sha256": "5af1b35c3a6b1ab5fa42339e71188ed8bac75f4d8564da13b90fbc126156a082",
+      "lines": 123
+    },
+    "beta/postinit/stategraphs/SGbeequeen.lua": {
+      "sha256": "20aa0c5f50473da6fe0152bd8ba126d1012f975a11fb9b9da734d3356e922090",
+      "lines": 850
+    },
+    "beta/postinit/stategraphs/SGdeerclops.lua": {
+      "sha256": "a40f57289ff826ecad9a4eea9f0db612d28cc1f84393bbe7f6ab26d61f8583d5",
+      "lines": 1267
+    },
+    "beta/postinit/stategraphs/SGhound.lua": {
+      "sha256": "7975f5f9b45d44d6c520cd4ea9f9729b3a2bcbf2d0bea8a5fb48808332d972a0",
+      "lines": 472
+    },
+    "beta/postinit/stategraphs/SGminotaur.lua": {
+      "sha256": "4bad015b9fb0df777835967dd6f10f2fe468862c9b06f8055b9316e0f11719b3",
+      "lines": 365
+    },
+    "beta/postinit/stategraphs/SGmoose.lua": {
+      "sha256": "119ac60203e9afc08712a38e000474404b8d4acd8565225b52b33ba4928dffcc",
+      "lines": 314
+    },
+    "beta/postinit/stategraphs/SGshadow_bishop.lua": {
+      "sha256": "421b327522dff51e78a608e9665697d9a7bc292b27fe84fe384c2f3e37083315",
+      "lines": 268
+    },
+    "beta/postinit/stategraphs/SGspider.lua": {
+      "sha256": "877642972e9701648c2115eb015bdd8f660afae5777fee5c76b4b26922df8cbe",
+      "lines": 367
+    },
+    "beta/postinit/stategraphs/SGworm.lua": {
+      "sha256": "2d0b330d5a8556b8b95f48e39ee0059fdb00a20b242b3dbf9f845eddbdbae6d6",
+      "lines": 150
+    },
+    "beta/scripts/brains/hoodedwidowbrain.lua": {
+      "sha256": "9751d4ee8eea562ad9edcf3e5deda3045d1251a4ae675cc1ca1e9c6d3f3f0dc9",
+      "lines": 202
+    },
+    "beta/scripts/brains/spiderbrain_trapdoor.lua": {
+      "sha256": "15956ce32961bb8c0ceab4ba0e582a362ffa710d235b731a9bcf9c5015283909",
+      "lines": 167
+    },
+    "beta/scripts/components/deerclopsspawner.lua": {
+      "sha256": "c850a14db9d8f88e2de5f399fc9e3995a264f98bdc8be17fce51a30d19eaf40e",
+      "lines": 463
     },
     "beta/scripts/components/featsofstrength.lua": {
       "sha256": "4ac9a0ec63bd7ac9185bfb5b49ee522042055453ef04f07cce8b9f18ea60332b",
@@ -10476,6 +10765,14 @@
       "sha256": "4ed8554ac698e58f4d4fd42968cb50abb83d13492d3233ce22cb95c49e275d6c",
       "lines": 420
     },
+    "beta/scripts/map/rooms/forest/UM_BoilingFields.lua": {
+      "sha256": "a612ab9c356aba07a50b0d15c7ba327932851aa866623de56dc3954c20f42f6c",
+      "lines": 244
+    },
+    "beta/scripts/map/rooms/forest/gianttreesrooms.lua": {
+      "sha256": "19b867ab4c9781c57635827a8dc5a0b31acfbb47e3b68b36a1c7d8e75c006d42",
+      "lines": 374
+    },
     "beta/scripts/map/tasks/caves/gemology.lua": {
       "sha256": "f9bb6d1e36410a37fc70ced123c95df6df0e858f2f28784e091811e346361061",
       "lines": 195
@@ -10487,6 +10784,10 @@
     "beta/scripts/map/tasks/caves/mushroom_tasks.lua": {
       "sha256": "0b5a3f488b03a0d67fc8eabe1ae7006cbb3506dd5d902c043dc3c6e9103c04ca",
       "lines": 189
+    },
+    "beta/scripts/map/tasks/forest/broiling_hills.lua": {
+      "sha256": "16b596915d8e8fe673fb153d9673cc9a3dc52e1a0e41ed8946806bdcc6e21958",
+      "lines": 110
     },
     "beta/scripts/map/tasks/forest/giant_trees.lua": {
       "sha256": "50a13ed8727f57989e324ebd5267af64f21539f86c8f592f9865ab61becdd08d",
@@ -10500,6 +10801,10 @@
       "sha256": "ee99182d6e1e53c396b0e524dd67b0a24ff3a3e4386f60961968c3bf9a8c9c8d",
       "lines": 36
     },
+    "beta/scripts/map/tasks/forest/the_hunters.lua": {
+      "sha256": "f3e8381c2e5e098fbe0b90e9b1d5d9ad2c1431f728b8faa18ed31f004a6bf5fb",
+      "lines": 50
+    },
     "beta/scripts/prefabs/beakbasher.lua": {
       "sha256": "21679bda3e20a2c647afc57f8950aa9b8dc235cc207679c3c63b1bb1d4c98e9b",
       "lines": 78
@@ -10512,9 +10817,29 @@
       "sha256": "dcb0193575a3360d30180b9dcad4f64aafd4efd55f4c693c49329a0b8c38fcb1",
       "lines": 182
     },
+    "beta/scripts/prefabs/fruitbat.lua": {
+      "sha256": "d7df0a2fd110d1de1b2b081e2846e38cbad90e00d22d1739d1646d6ffb6c8dfb",
+      "lines": 261
+    },
+    "beta/scripts/prefabs/glacialhound_icespike.lua": {
+      "sha256": "2ee113e72f86dfd6d77a96d25a1e7e5ad04fc03e156497bc707f89c17ce46b77",
+      "lines": 434
+    },
     "beta/scripts/prefabs/healthregenbuff_vetcurse.lua": {
       "sha256": "9331d2fe261021009ea61fbcae147fea9127d193f3f1918d73fb2747fceade94",
       "lines": 324
+    },
+    "beta/scripts/prefabs/hoodedwidow.lua": {
+      "sha256": "8e902f9f89c9d7c11de9d6e405f333acbfef3a86277d2a485ac74b606cf94d7e",
+      "lines": 454
+    },
+    "beta/scripts/prefabs/hound_lightning.lua": {
+      "sha256": "b55d5fcc3ed772c5e02ce4337a28fac91fed1d08ecf38a733f73bcac77468fe5",
+      "lines": 139
+    },
+    "beta/scripts/prefabs/lavaeslime.lua": {
+      "sha256": "f7b662fc902a6300fb44874047dda263465ec3f5eb037e5dfd28d27c1c09ee2d",
+      "lines": 98
     },
     "beta/scripts/prefabs/mock_dragonfly.lua": {
       "sha256": "dfe84347f9b90efe614ed63519bd241b6b04da2cf2c61df7863dea939284b935",
@@ -10524,6 +10849,10 @@
       "sha256": "68a8318a5976d803741f994cbd20431df1c1c3bce5025f556f7aa83445d7aa58",
       "lines": 748
     },
+    "beta/scripts/prefabs/pitcherplant.lua": {
+      "sha256": "56b8721e83bff4e62fda12a0b4f3def678313c93d40f1876c49d752b9ea4d653",
+      "lines": 106
+    },
     "beta/scripts/prefabs/powercell.lua": {
       "sha256": "a0ef6ac7e744d6490e815db21a05f72915ede4ea6709fd5659a9110234c7a311",
       "lines": 112
@@ -10531,6 +10860,14 @@
     "beta/scripts/prefabs/rice.lua": {
       "sha256": "c4df5466aca4728fe180e2eea8a845efa959e62f6d5968fb2a99c2196def2907",
       "lines": 156
+    },
+    "beta/scripts/prefabs/shadow_goo.lua": {
+      "sha256": "b80d1b398c591821e97ab08d3a14aa30e7e4a1e4895e247203586fe339559523",
+      "lines": 391
+    },
+    "beta/scripts/prefabs/shockworm.lua": {
+      "sha256": "8c8239aa0adcac03a27ba3854652b546c9b0ecbbb398c22dd18cdcc768997d81",
+      "lines": 475
     },
     "beta/scripts/prefabs/slingshot_claire.lua": {
       "sha256": "950ee21ebda128bda19672ece80ecdb332605f5e527c6132a69fac7209b0296b",
@@ -10548,9 +10885,33 @@
       "sha256": "cb85df3f4434a4ee3781bdc91a463fbaa1d743656ad5837d585db77c300406da",
       "lines": 392
     },
+    "beta/scripts/prefabs/snaildrake.lua": {
+      "sha256": "d2914198103b5d82c816d94823cd279b0da6e089b03dfd3efd08631fbe7f3d42",
+      "lines": 357
+    },
+    "beta/scripts/prefabs/snaildrake_hole.lua": {
+      "sha256": "2a412d1d7c15bea3be6472aa9615ca5fb203dc14384f2969651190335e9967cd",
+      "lines": 203
+    },
     "beta/scripts/prefabs/snowmong.lua": {
       "sha256": "6d171174a1b98612e9eedf50468db1a4adecb96107526ba6e7ed6ac376daae47",
       "lines": 344
+    },
+    "beta/scripts/prefabs/snowpile.lua": {
+      "sha256": "594780f51118595e9fe6175e1b922bc64211994df6550835ad9ebfa621ec897d",
+      "lines": 574
+    },
+    "beta/scripts/prefabs/spider_trapdoor.lua": {
+      "sha256": "05f98613fcfd0a72a9c6679815610a515e2f3b92f6aecb55c82f75b1b41ea110",
+      "lines": 617
+    },
+    "beta/scripts/prefabs/trapdoor.lua": {
+      "sha256": "2cdbc805c04d8206ba0bdfd49dd533aa8df9e26d30e259ccf9148d26a0659af2",
+      "lines": 306
+    },
+    "beta/scripts/prefabs/trapdoorspawner.lua": {
+      "sha256": "92f667adada07aea45dd1963f805e6da90bb149ed0808d2f759dfd1581df9cba",
+      "lines": 51
     },
     "beta/scripts/prefabs/um_armor_bramble_rimeweed.lua": {
       "sha256": "1a9a73da9e6b4a27ef08176d148f27f471a4f2efb1b63ccd97dd66b71f120c5e",
@@ -10616,9 +10977,17 @@
       "sha256": "2ec89bfda89726c8701122ea4a0abbce4f77fc6208a13eebefea466538722ec5",
       "lines": 254
     },
+    "beta/scripts/prefabs/um_vampirebat.lua": {
+      "sha256": "83fd06cacd2837cda4477d9889dfe45fcae520d36226a63f63b5621d6e9cddbd",
+      "lines": 465
+    },
     "beta/scripts/prefabs/uncompromising_buffs.lua": {
       "sha256": "a935c2a0ac63cc6cd61e08e623b7682125adcdf8007bae877f9d39c9ed548ac3",
       "lines": 453
+    },
+    "beta/scripts/prefabs/uncompromising_hounds.lua": {
+      "sha256": "9e1a7282a64754e6b5615da4abaa994fd622ff86880e149bb21a76c3481c4f59",
+      "lines": 1309
     },
     "beta/scripts/prefabs/uncompromising_rat.lua": {
       "sha256": "228b812624eee82432691a1d27e74ab979d4e36263f901baac9aee4e354f09bb",
@@ -10627,6 +10996,14 @@
     "beta/scripts/prefabs/veteranshrine.lua": {
       "sha256": "bf0a0bb9b9b0cc05155cde3c7709961d2a0981719fac689aa8f6531f94859ee9",
       "lines": 206
+    },
+    "beta/scripts/prefabs/viperprojectile.lua": {
+      "sha256": "12a998e7c9d053a1605919a0d12100346fe34311a36fc823cd707fda7ba49879",
+      "lines": 100
+    },
+    "beta/scripts/prefabs/viperworm.lua": {
+      "sha256": "55e49382c0b23f111d2267c4d0fbeaf70c19ba737bd08bf2f5cfda0b9d34614a",
+      "lines": 608
     },
     "beta/scripts/prefabs/wathgrithr_shield_dreadstone.lua": {
       "sha256": "a41d6cf6d34bf99bd55889ad239087362d09c2cde7fa2f2c1cb1911d9aeb71a7",
@@ -10643,6 +11020,18 @@
     "beta/scripts/prefabs/widowsgrasp.lua": {
       "sha256": "85d71ca4e5fb49cf57e59245dc36116b862b451d769533ea744f1f191c01d543",
       "lines": 94
+    },
+    "beta/scripts/prefabs/widowshead.lua": {
+      "sha256": "ec2820abf805deaa313b7961c16834ca001b4523677b2955eff25aec2bf252b3",
+      "lines": 111
+    },
+    "beta/scripts/prefabs/widowweb.lua": {
+      "sha256": "d3092022f42bf3d5f23d8eba85623758e20879ed01f93f9da6a32c5735230a61",
+      "lines": 136
+    },
+    "beta/scripts/prefabs/widowwebspawner.lua": {
+      "sha256": "6f02351ce044259a69e38f24ebf699be3b7efdf99e2f4f6ea9ec5a74263b8cb0",
+      "lines": 117
     },
     "beta/scripts/prefabs/winky.lua": {
       "sha256": "e40b45a2f5091aa716e01516cf371d16f3f9058ef39889d95cbbb63db72e959f",
@@ -10668,9 +11057,21 @@
       "sha256": "74b55e5328aae6012f11386d142be9b4003cf18429307ecc515992178372c3d2",
       "lines": 66
     },
+    "beta/scripts/stategraphs/SGfruitbat.lua": {
+      "sha256": "0e58e8c27aa4ae8cb345293ba10b4f563d38affd20f17750f687aa14d89e3fb8",
+      "lines": 426
+    },
+    "beta/scripts/stategraphs/SGhoodedwidow.lua": {
+      "sha256": "7ea7c4d8790ae64ba8b94861fa848348c6d893905b7009fabcefa4432e831e18",
+      "lines": 1571
+    },
     "beta/scripts/stategraphs/SGsnowmong.lua": {
       "sha256": "c358cde3ae7307065bea0af5abb7c76ef75fb824890dc7e8d6abdbbf54de0552",
       "lines": 387
+    },
+    "beta/scripts/stategraphs/SGviperworm.lua": {
+      "sha256": "fab4d794482451606114be319c6d2d6008602b3cfebe8cbe1a07a160811da5ec",
+      "lines": 565
     },
     "beta/scripts/um_gemology_geode_defs.lua": {
       "sha256": "4b3b4be987fb683c9d9c33b068a747493a0068d84615e1b78b1c9ebb3013eb85",

@@ -51,20 +51,24 @@ def save(key, image, source, atlas, *, workshop=True):
             'width': image.width, 'height': image.height, 'workshop': workshop}
 
 
-def vanilla_images(images_zip, missing):
+def vanilla_images(images_zip, missing, article_keys):
     names = {VANILLA_IMAGE_OVERRIDES.get(key, key): key for key in sorted(missing)}
+    inventory_atlases = [f'images/inventoryimages{n}.xml' for n in range(1, 5)]
+    scrapbook_atlases = [f'images/scrapbook_icons{n}.xml' for n in range(1, 4)]
+    found = set()
     with ZipFile(images_zip) as archive:
-        for n in range(1, 5):
-            xml = f'images/inventoryimages{n}.xml'
+        for xml in inventory_atlases + scrapbook_atlases:
+            scrapbook = xml in scrapbook_atlases
             atlas = ET.fromstring(archive.read(xml))
             tex = 'images/' + atlas.find('Texture').attrib['filename']
             image = None
             for entry in atlas.findall('./Elements/Element'):
                 key = names.get(entry.attrib['name'].removesuffix('.tex'))
-                if not key:
+                if not key or scrapbook and (key in found or key not in article_keys):
                     continue
                 if image is None:
                     image = decode(archive.read(tex))
+                found.add(key)
                 yield key, save(key, extract_region(image, entry), tex, xml, workshop=False)
 
 
@@ -94,7 +98,7 @@ def export(root, game_images):
     base = json.loads((WIKI / 'data/icon-manifest.json').read_text(encoding='utf-8'))
     base_keys = {key for key, art in base.items() if art['source'].startswith('DST images.zip/')}
     mod_count = len(manifest) - 2
-    manifest.update(vanilla_images(game_images, keys - manifest.keys() - base_keys))
+    manifest.update(vanilla_images(game_images, keys - manifest.keys() - base_keys, set(snapshot['articleArtIds'])))
     ARTWORK.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(f'Exported {mod_count} Public Beta icon thumbnails, the cover and {len(manifest) - 2 - mod_count} additional game icons.')
 

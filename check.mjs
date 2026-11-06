@@ -61,6 +61,7 @@ for(const [file,id,category] of [
  ['tempered.html','frost-core','new-items'],['tempered.html','frost-core-staff','items'],['tempered.html','frostjaw','creatures'],
  ['um-beta/index.html','snowstorms','world'],['um-beta/index.html','gemology','mechanics'],['um-beta/index.html','thermal-stone','items'],
  ['um-beta/index.html','slingshot-gnasher','new-items'],['um-beta/index.html','um-rice-pudding','new-items'],['um-beta/index.html','winona','characters'],
+ ['um-beta/index.html','hooded-widow','creatures'],['um-beta/index.html','widows-grasp','new-items'],
 ]){
  if(!pages.get(file)?.includes(`data-entry="${id}" data-category="${category}"`))errors.push('Unexpected Wiki topic for '+id);
 }
@@ -76,6 +77,16 @@ for(const a of globalResults){
 }
 for(const [term,href] of [['附魔','um-beta/gemology.html#gemology-s2'],['宝石','um-beta/gemology.html'],['宝石升级','um-beta/gemology.html#gemology-s5'],['附魔效果','um-beta/gemology.html#gemology-s6'],['静电琥珀','um-beta/gemology.html#gem-yellowgem2'],['附魔宝石获取','um-beta/gemology.html#gemology-s7'],['静电琥珀获取','um-beta/gemology.html#gem-source-yellowgem2'],['粪便晶洞','um-beta/gemology.html#geode-source-guano'],['料理','um-beta/cooking-guide.html']]){
  if(!globalResults.some(a=>a.jump&&a.href===href&&a.aliases.includes(term)))errors.push('Missing direct search result for '+term);
+}
+for(const [term,href] of [['Boss','creature-guide.html'],['黑寡妇','hooded-widow.html'],['黑寡妇怎么打','hooded-widow.html#hooded-widow-s3'],['黑寡妇掉落','hooded-widow.html#hooded-widow-s4']]){
+ if(!globalResults.some(a=>a.jump&&a.href==='um-beta/'+href&&a.aliases.includes(term)))errors.push('Missing direct search result for '+term);
+}
+for(const [page,links] of Object.entries({
+ 'gemology.html':['hooded-widow.html#hooded-widow-s1','widows-grasp.html','ancient-guardian.html#ancient-guardian-s3','geothermite.html','antlion.html','snowmong.html','snaildrakes.html','slurtles.html','rock-lobster.html'],
+ 'hooded-widow.html':['gemology.html#gemology-s10','widows-grasp.html','widows-head.html'],
+ 'creature-guide.html':['hooded-widow.html','ancient-guardian.html','crab-king.html','glacial-hound.html'],
+})){
+ if(links.some(href=>!pages.get('um-beta/'+page)?.includes('href="'+href+'"')))errors.push('Missing creature guide crosslink in '+page);
 }
 const gemology=pages.get('um-beta/gemology.html');
 for(const [pattern,count] of [[/<tr id="gem-\w+gem[12]"/g,14],[/<tr id="gem-source-/g,14],[/<tr id="geode-source-/g,11],[/class="table-wrap guide-table\b/g,4]]){

@@ -151,6 +151,14 @@
     "height": 52,
     "workshop": true
   },
+  "fruitbat": {
+    "path": "assets/um-beta/fruitbat.png",
+    "source": "images/scrapbook/fruitbat.tex",
+    "atlas": "images/scrapbook/fruitbat.xml",
+    "width": 96,
+    "height": 73,
+    "workshop": true
+  },
   "gasmask": {
     "path": "assets/um-beta/gasmask.png",
     "source": "images/inventoryimages/gasmask.tex",
@@ -165,6 +173,14 @@
     "atlas": "images/inventoryimages/giant_blueberry.xml",
     "width": 62,
     "height": 61,
+    "workshop": true
+  },
+  "glacialhound": {
+    "path": "assets/um-beta/glacialhound.png",
+    "source": "images/scrapbook/glacialhound.tex",
+    "atlas": "images/scrapbook/glacialhound.xml",
+    "width": 96,
+    "height": 81,
     "workshop": true
   },
   "glass_scales": {
@@ -189,6 +205,14 @@
     "atlas": "images/inventoryimages/honey_log.xml",
     "width": 62,
     "height": 36,
+    "workshop": true
+  },
+  "hoodedwidow": {
+    "path": "assets/um-beta/hoodedwidow.png",
+    "source": "images/scrapbook/hoodedwidow.tex",
+    "atlas": "images/scrapbook/hoodedwidow.xml",
+    "width": 96,
+    "height": 69,
     "workshop": true
   },
   "jawed_scythe": {
@@ -365,6 +389,14 @@
     "atlas": "images/inventoryimages/seafoodpaella.xml",
     "width": 64,
     "height": 40,
+    "workshop": true
+  },
+  "shockworm": {
+    "path": "assets/um-beta/shockworm.png",
+    "source": "images/scrapbook/shockworm.tex",
+    "atlas": "images/scrapbook/shockworm.xml",
+    "width": 52,
+    "height": 96,
     "workshop": true
   },
   "shroom_skin_fragment": {
@@ -559,6 +591,14 @@
     "height": 56,
     "workshop": true
   },
+  "snaildrake_magma": {
+    "path": "assets/um-beta/snaildrake_magma.png",
+    "source": "images/scrapbook/snaildrake_magma.tex",
+    "atlas": "images/scrapbook/snaildrake_magma.xml",
+    "width": 96,
+    "height": 57,
+    "workshop": true
+  },
   "snappy_jaw": {
     "path": "assets/um-beta/snappy_jaw.png",
     "source": "images/inventoryimages/snappy_jaw.tex",
@@ -581,6 +621,30 @@
     "atlas": "images/inventoryimages/snowgoggles.xml",
     "width": 53,
     "height": 45,
+    "workshop": true
+  },
+  "snowmong": {
+    "path": "assets/um-beta/snowmong.png",
+    "source": "images/scrapbook/snowmong.tex",
+    "atlas": "images/scrapbook/snowmong.xml",
+    "width": 91,
+    "height": 96,
+    "workshop": true
+  },
+  "spider_trapdoor": {
+    "path": "assets/um-beta/spider_trapdoor.png",
+    "source": "images/inventoryimages/spider_trapdoor.tex",
+    "atlas": "images/inventoryimages/spider_trapdoor.xml",
+    "width": 60,
+    "height": 42,
+    "workshop": true
+  },
+  "spider_trapdoor_hooded": {
+    "path": "assets/um-beta/spider_trapdoor_hooded.png",
+    "source": "images/inventoryimages/spider_trapdoor_hooded.tex",
+    "atlas": "images/inventoryimages/spider_trapdoor_hooded.xml",
+    "width": 60,
+    "height": 38,
     "workshop": true
   },
   "sporepack": {
@@ -1455,6 +1519,14 @@
     "height": 96,
     "workshop": true
   },
+  "viperworm": {
+    "path": "assets/um-beta/viperworm.png",
+    "source": "images/scrapbook/viperworm.tex",
+    "atlas": "images/scrapbook/viperworm.xml",
+    "width": 62,
+    "height": 96,
+    "workshop": true
+  },
   "watermelon_lantern": {
     "path": "assets/um-beta/watermelon_lantern.png",
     "source": "images/inventoryimages/watermelon_lantern.tex",
@@ -1477,6 +1549,22 @@
     "atlas": "images/avatars/avatar_wathom.xml",
     "width": 64,
     "height": 58,
+    "workshop": true
+  },
+  "widowsgrasp": {
+    "path": "assets/um-beta/widowsgrasp.png",
+    "source": "images/inventoryimages/widowsgrasp.tex",
+    "atlas": "images/inventoryimages/widowsgrasp.xml",
+    "width": 61,
+    "height": 63,
+    "workshop": true
+  },
+  "widowshead": {
+    "path": "assets/um-beta/widowshead.png",
+    "source": "images/inventoryimages/widowshead.tex",
+    "atlas": "images/inventoryimages/widowshead.xml",
+    "width": 48,
+    "height": 64,
     "workshop": true
   },
   "winky": {
@@ -1861,6 +1949,150 @@
     "atlas": "images/inventoryimages4.xml",
     "width": 64,
     "height": 56,
+    "workshop": false
+  },
+  "bearger": {
+    "path": "assets/um-beta/bearger.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "beequeen": {
+    "path": "assets/um-beta/beequeen.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "dragonfly": {
+    "path": "assets/um-beta/dragonfly.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "cave_vent_mite": {
+    "path": "assets/um-beta/cave_vent_mite.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "alterguardian_phase1": {
+    "path": "assets/um-beta/alterguardian_phase1.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "antlion": {
+    "path": "assets/um-beta/antlion.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "deerclops": {
+    "path": "assets/um-beta/deerclops.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "crabking": {
+    "path": "assets/um-beta/crabking.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "daywalker": {
+    "path": "assets/um-beta/daywalker.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "klaus": {
+    "path": "assets/um-beta/klaus.png",
+    "source": "images/scrapbook_icons2.tex",
+    "atlas": "images/scrapbook_icons2.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "rocky": {
+    "path": "assets/um-beta/rocky.png",
+    "source": "images/scrapbook_icons2.tex",
+    "atlas": "images/scrapbook_icons2.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "moose": {
+    "path": "assets/um-beta/moose.png",
+    "source": "images/scrapbook_icons2.tex",
+    "atlas": "images/scrapbook_icons2.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "minotaur": {
+    "path": "assets/um-beta/minotaur.png",
+    "source": "images/scrapbook_icons2.tex",
+    "atlas": "images/scrapbook_icons2.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "slurtle": {
+    "path": "assets/um-beta/slurtle.png",
+    "source": "images/scrapbook_icons3.tex",
+    "atlas": "images/scrapbook_icons3.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "worm_boss": {
+    "path": "assets/um-beta/worm_boss.png",
+    "source": "images/scrapbook_icons3.tex",
+    "atlas": "images/scrapbook_icons3.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "stalker_atrium": {
+    "path": "assets/um-beta/stalker_atrium.png",
+    "source": "images/scrapbook_icons3.tex",
+    "atlas": "images/scrapbook_icons3.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "shadow_knight": {
+    "path": "assets/um-beta/shadow_knight.png",
+    "source": "images/scrapbook_icons3.tex",
+    "atlas": "images/scrapbook_icons3.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "toadstool": {
+    "path": "assets/um-beta/toadstool.png",
+    "source": "images/scrapbook_icons3.tex",
+    "atlas": "images/scrapbook_icons3.xml",
+    "width": 96,
+    "height": 96,
     "workshop": false
   }
 }

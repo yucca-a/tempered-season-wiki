@@ -70,6 +70,9 @@
 .guide-cell-links small,.guide-row-link{color:var(--muted)}
 .guide-row-link{display:block;font-weight:400}
 .guide-table a{text-decoration:underline;text-underline-offset:.18em}
+.entry-body .section-related-links{display:flex;flex-wrap:wrap;gap:6px;padding:0;list-style:none}
+.section-related-links a{display:inline-block;padding:3px 9px;border:1px solid var(--line);border-radius:7px;color:var(--text);font-size:.86em}
+.section-related-links a:hover,.section-related-links a:focus-visible{border-color:var(--beta-ink);background:var(--beta-tint);text-decoration:underline}
 .guide-table tbody img{display:inline-block;vertical-align:middle;object-fit:contain;margin-right:5px}
 .guide-table tr{scroll-margin-top:108px}
 .guide-table tr:target>*{background:var(--beta-tint)}
