@@ -45,10 +45,19 @@ const betaResults=betaIndex.window.WIKI_INDEX;
 if(new Set(betaResults.map(a=>a.id)).size!==betaResults.length)errors.push('Duplicate Beta search index IDs');
 for(const a of betaResults)checkLink('um-beta/index.html',a.href);
 if(betaResults.filter(a=>a.kind==='recipe').length!==beta.recipes.length||betaResults.filter(a=>a.kind==='config').length!==beta.configs.length)errors.push('Beta search coverage mismatch');
+const betaArt=JSON.parse(await fs.readFile(new URL('./um-beta/artwork.json',import.meta.url),'utf8'));
+for(const art of Object.values(betaArt))if(!paths.has(art.path))errors.push('Missing Beta artwork '+art.path);
+if(betaResults.filter(a=>a.kind==='item').length!==beta.artworkIds.length)errors.push('Beta item gallery search coverage mismatch');
+for(const [file,asset] of [['index.html','assets/um-beta/cover.png'],['um-beta/index.html','../assets/um-beta/cover.png'],['um-beta/wixie.html','../assets/um-beta/wixie.png'],['um-beta/recipes.html','../assets/um-beta/slingshot_gnasher.png'],['um-beta/items.html','../assets/um-beta/um_gemologypurplegem2.png']]){
+ if(!pages.get(file)?.includes('src="'+asset+'"'))errors.push('Missing Beta artwork reference in '+file);
+}
 const globalIndex={window:{}};
 vm.runInNewContext(await fs.readFile(path.join(root,'global-search-index.js'),'utf8'),globalIndex);
 const globalResults=globalIndex.window.WIKI_GLOBAL_INDEX;
-for(const a of globalResults)checkLink('index.html',a.href);
+for(const a of globalResults){
+ checkLink('index.html',a.href);
+ if(a.image)checkLink('index.html',a.image);
+}
 for(const [term,href] of [['附魔','um-beta/gemology.html#gemology-s2'],['宝石','um-beta/gemology.html']]){
  if(!globalResults.some(a=>a.jump&&a.href===href&&a.aliases.includes(term)))errors.push('Missing direct search result for '+term);
 }

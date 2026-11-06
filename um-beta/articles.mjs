@@ -53,15 +53,16 @@ export const articles=[
  },
  {
   id:'gemology',category:'装备与制作',title:'宝石学与装备附魔',aliases:['Gemology','晶洞','宝石学锻造台','鉴定'],
-  searchJumps:[{terms:['宝石','宝石学','晶洞']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石','鉴定']}],
+  searchJumps:[{terms:['宝石','宝石学','晶洞']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石']},{section:'鉴定工具',terms:['鉴定','宝石鉴定']}],
   summary:'从不同晶洞取得宝石，再到锻造台把相容的宝石附加到装备上。',
   configs:['gemology','magma_caves'],
   sections:[
    ['晶洞掉落','按晶洞种类选择掉落池。每个晶洞基础抽取三次非宝石池、一次宝石池，并有 5% 概率再抽一次宝石池。如果该次抽到宝石学宝石，则三级概率 1%，二级概率 4%，其余为一级。'],
    ['锻造台操作','第一槽放装备，第二槽放宝石。装备与宝石相容时才能附魔。成功会消耗宝石，新附魔耐久设满。重复同种附魔会替换同种，槽满时新增不同种会移除旧附魔。普通附魔组件默认一个槽，具体装备可以有特例。'],
    ['配置的作用','宝石学开关与资源生成及若干配方有关。已有装备与附魔还涉及单独载入的运行代码。'],
+   ['鉴定工具','宝石放大镜有 100 点鉴定耐久，远古宝石放大镜和宝石熔岩镜各有 400 点。可以鉴定整叠宝石，每枚消耗 1 点耐久。耐久不足时，只会鉴定能够负担的数量。'],
   ],
-  sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),names(752),names(821)],
+  sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),names(752),names(821),names(853)],
  },
  {
   id:'winky',category:'角色',title:'温奇',aliases:['Winky','鼠人','定居鼠穴'],

@@ -9461,25 +9461,81 @@
       "en": "Mending Kit",
       "zh": null
     },
+    "um_gemology_geode_blue": {
+      "en": "Blue Fungal Geode",
+      "zh": "蓝色菌类晶洞"
+    },
+    "um_gemology_geode_glass": {
+      "en": "Glass Geode",
+      "zh": "玻璃晶洞"
+    },
+    "um_gemology_geode_magma": {
+      "en": "Molten Geode",
+      "zh": null
+    },
     "um_gemology_pouch": {
       "en": "Gemology Pouch",
       "zh": "宝石袋"
+    },
+    "um_gemologybluegem1": {
+      "en": "Arctic Aquamarine",
+      "zh": "极地海蓝宝石"
+    },
+    "um_gemologybluegem2": {
+      "en": "Chilled Sapphire",
+      "zh": "冰鲜蓝宝石"
+    },
+    "um_gemologyforge": {
+      "en": "Ancient Gemstone Forge",
+      "zh": "宝石学锻造台"
+    },
+    "um_gemologygreengem1": {
+      "en": "Neurotic Peridot",
+      "zh": "躁动橄榄石"
+    },
+    "um_gemologygreengem2": {
+      "en": "Chaotic Emerald",
+      "zh": "混沌祖母绿"
+    },
+    "um_gemologyorangegem1": {
+      "en": "Comfy Zircon",
+      "zh": "惬意锆石"
     },
     "um_gemologyorangegem2": {
       "en": "Hoarding Citrine",
       "zh": "珍藏黄水晶"
     },
+    "um_gemologypalegem1": {
+      "en": "Peerless Jade",
+      "zh": "绝世翡翠"
+    },
     "um_gemologypalegem2": {
       "en": "Adamant Diamond",
       "zh": "坚钢钻石"
+    },
+    "um_gemologypurplegem1": {
+      "en": "Furious Fluorite",
+      "zh": "狂怒萤石"
     },
     "um_gemologypurplegem2": {
       "en": "Arcane Amethyst",
       "zh": "奥术紫水晶"
     },
+    "um_gemologyredgem1": {
+      "en": "Voracious Ruby",
+      "zh": "贪噬红宝石"
+    },
     "um_gemologyredgem2": {
       "en": "Passionate Garnet",
       "zh": "炽烈石榴石"
+    },
+    "um_gemologyyellowgem1": {
+      "en": "Hasty Topaz",
+      "zh": "迅疾黄玉"
+    },
+    "um_gemologyyellowgem2": {
+      "en": "Static Amber",
+      "zh": "静电琥珀"
     },
     "um_ghost_pepper_item": {
       "en": "Ghost Pepper",
@@ -9636,6 +9692,10 @@
     "uncompromising_fishingnet": {
       "en": "Fishing Net",
       "zh": "渔网"
+    },
+    "uncompromising_winkyhomeburrow": {
+      "en": "Winky's Home Burrow",
+      "zh": "温奇的定居鼠穴"
     },
     "voidcloth": {
       "en": "Dark Tatters",
@@ -9802,6 +9862,45 @@
       "zh": "电光浆果"
     }
   },
+  "artworkIds": [
+    "um_gemologyforge",
+    "um_magnifier_purplegem",
+    "um_magnifier",
+    "um_magnifier_obsidian",
+    "um_gemology_pouch",
+    "um_gem_repair_kit",
+    "um_gemologybluegem1",
+    "um_gemologybluegem2",
+    "um_gemologyredgem1",
+    "um_gemologyredgem2",
+    "um_gemologypurplegem1",
+    "um_gemologypurplegem2",
+    "um_gemologyyellowgem1",
+    "um_gemologyyellowgem2",
+    "um_gemologygreengem1",
+    "um_gemologygreengem2",
+    "um_gemologyorangegem1",
+    "um_gemologyorangegem2",
+    "um_gemologypalegem1",
+    "um_gemologypalegem2",
+    "um_gemology_geode_blue",
+    "um_gemology_geode_glass",
+    "um_gemology_geode_magma",
+    "slingshot_gnasher",
+    "slingshot_matilda",
+    "slingshot_jessie",
+    "slingshot_claire",
+    "snowgoggles",
+    "um_hat_rime",
+    "wathgrithr_shield_dreadstone",
+    "beakbasher",
+    "glass_scales",
+    "armor_glassmail",
+    "um_fyrite",
+    "uncompromising_winkyhomeburrow",
+    "ratpoisonbottle",
+    "rat_tail"
+  ],
   "sourceFiles": {
     "beta/init/init_actions.lua": {
       "sha256": "46a894b619a08c2319ae4b0fecacd338531184f501e9674d9b8cc9fa8da5941d",
@@ -9879,6 +9978,10 @@
       "sha256": "cec58c057952b6597c13bebb070fa3fa949ac83ea877126d83920e32e80d4746",
       "lines": 265
     },
+    "beta/scripts/components/gemologyscanner.lua": {
+      "sha256": "c12ab98b282a2c3e2f53f2b029c0145b5632e92042f8c6fc90cb7451f8cb84d6",
+      "lines": 63
+    },
     "beta/scripts/components/mock_dragonflyspawner.lua": {
       "sha256": "11678f0887c17e51196f598390e15bd3d894cdcdf2a9c980286558045c556c3b",
       "lines": 524
@@ -9942,6 +10045,10 @@
     "beta/scripts/prefabs/um_gemologyforge.lua": {
       "sha256": "a1b9c1cb6cdc9045335915151755e4501c7dad225c30a615e7d91a50078eb3c9",
       "lines": 167
+    },
+    "beta/scripts/prefabs/um_magnifier.lua": {
+      "sha256": "3371351e164e858d9e8c01d4643d772dc0e02f168b21881f17d85b98903f9595",
+      "lines": 58
     },
     "beta/scripts/prefabs/uncompromising_rat.lua": {
       "sha256": "228b812624eee82432691a1d27e74ab979d4e36263f901baac9aee4e354f09bb",

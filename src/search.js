@@ -8,7 +8,7 @@
  const kinds=[...dialog.querySelectorAll('[data-kind]')];
  const indexUrl=new URL(dialog.dataset.index,location.href);
  const wikiNames={tempered:'淬炼之季','um-beta':'永不妥协测试版'};
- const kindNames={article:'词条',config:'配置',recipe:'配方'};
+ const kindNames={article:'词条',config:'配置',recipe:'配方',item:'物品图鉴'};
  const normalize=text=>String(text??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
  const escape=text=>String(text??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function mark(text,needle){
@@ -18,13 +18,22 @@
   return escape(text.slice(0,at))+'<mark>'+escape(text.slice(at,at+needle.length))+'</mark>'+escape(text.slice(at+needle.length));
  }
  function prepare(entries,base,wiki){
-  return entries.map(entry=>({...entry,wiki:entry.wiki??wiki,url:new URL(entry.href,base).href,
+  return entries.map(entry=>({...entry,wiki:entry.wiki??wiki,url:new URL(entry.href,base).href,imageUrl:entry.image?new URL(entry.image,base).href:null,
    titleKey:normalize(entry.title),keywordsKey:normalize(entry.keywords),aliasesKey:(entry.aliases??[]).map(normalize),
    hay:normalize([entry.title,entry.summary,entry.keywords,entry.text,entry.category,...(entry.aliases??[])].join(' ')),
   }));
  }
  let entries=prepare(window.WIKI_INDEX??[],location.href,document.body.dataset.wiki);
- let kind='all',selected=-1,loading=false,failed=false,loadStarted=false;
+ let kind='all',selected=-1,loading=false,failed=false,loadStarted=false,pendingEnter=null;
+ function finishLoading(){
+  const pending=pendingEnter;
+  pendingEnter=null;
+  if(!dialog.open)return;
+  render();
+  if(pending?.query!==input.value)return;
+  const links=[...results.querySelectorAll('a')];
+  (links.find(a=>a.href===pending.url)??links[0])?.click();
+ }
  function loadIndex(){
   if(loadStarted)return;
   loadStarted=true;
@@ -39,9 +48,9 @@
    loading=false;
    if(window.WIKI_GLOBAL_INDEX)entries=prepare(window.WIKI_GLOBAL_INDEX,indexUrl);
    else failed=true;
-   if(dialog.open)render();
+   finishLoading();
   };
-  script.onerror=()=>{loading=false;failed=true;loadStarted=false;script.remove();if(dialog.open)render();};
+  script.onerror=()=>{loading=false;failed=true;loadStarted=false;script.remove();finishLoading();};
   document.head.append(script);
  }
  function rank(entry,q,terms){
@@ -74,7 +83,7 @@
     const hit=text.toLowerCase().indexOf(raw.toLowerCase());
     if(hit>=0)snippet=(hit>24?'…':'')+text.slice(Math.max(0,hit-24),hit+105)+'…';
    }
-   return `<a class="search-result" href="${escape(e.url)}"><span class="result-category">${escape([wikiNames[e.wiki],kindNames[e.kind],e.category].filter(Boolean).join(' · '))}</span><strong>${mark(e.title,raw)}</strong><p>${mark(String(snippet??'').slice(0,156),raw)}</p><span class="result-enter" aria-hidden="true">↵</span></a>`;
+   return `<a class="search-result" href="${escape(e.url)}"><span class="result-category">${escape([wikiNames[e.wiki],kindNames[e.kind],e.category].filter(Boolean).join(' · '))}</span><strong>${e.imageUrl?`<img class="search-item-icon" src="${escape(e.imageUrl)}" alt="" width="20" height="20" loading="lazy">`:''}${mark(e.title,raw)}</strong><p>${mark(String(snippet??'').slice(0,156),raw)}</p><span class="result-enter" aria-hidden="true">↵</span></a>`;
   }).join(''):(loading?'':'<div class="empty-state">没有找到匹配的内容，试试简称、配置键或材料名。</div>');
   selected=-1;
  }
@@ -88,13 +97,15 @@
  document.querySelectorAll('[data-search]').forEach(button=>button.addEventListener('click',open));
  document.querySelector('#header-search')?.addEventListener('input',event=>{input.value=event.currentTarget.value;open();});
  dialog.querySelector('#search-close').addEventListener('click',()=>dialog.close());
- input.addEventListener('input',render);
- branch.addEventListener('change',render);
+ input.addEventListener('input',()=>{pendingEnter=null;render();});
+ branch.addEventListener('change',()=>{pendingEnter=null;render();});
  kinds.forEach(button=>button.addEventListener('click',()=>{
+  pendingEnter=null;
   kind=button.dataset.kind;
   kinds.forEach(item=>{item.classList.toggle('active',item===button);item.setAttribute('aria-pressed',String(item===button));});
   render();input.focus();
  }));
+ dialog.addEventListener('close',()=>{pendingEnter=null;});
  dialog.addEventListener('click',event=>{
   if(event.target!==dialog)return;
   const r=dialog.getBoundingClientRect();
@@ -113,7 +124,8 @@
    links[selected].scrollIntoView({block:'nearest'});
   }else if(event.key==='Enter'&&event.target===input){
    event.preventDefault();
-   if(!loading)links[Math.max(0,selected)]?.click();
+   if(loading)pendingEnter={query:input.value,url:links[selected]?.href};
+   else links[Math.max(0,selected)]?.click();
   }
  });
  document.addEventListener('keydown',event=>{
