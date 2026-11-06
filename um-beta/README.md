@@ -23,7 +23,7 @@ node check.mjs
 
 ## 更新贴图
 
-从本机测试版目录按 XML 图集坐标裁切库存图标、图鉴图和角色头像。配方与材料按 prefab ID 选图，原版缺图从本机游戏图集补齐。`items.mjs` 控制物品图鉴收录，更新收录后先重新生成快照，再导出贴图。发布目录只包含网页用的缩略图。
+从本机测试版目录按 XML 图集坐标裁切库存图标、图鉴图和角色头像。配方与材料按 prefab ID 选图，原版缺图从本机游戏图集补齐。`items.mjs` 控制首页「新增物品」分类收录，更新收录后先重新生成快照，再导出贴图。发布目录只包含网页用的缩略图。
 
 ```powershell
 python um-beta/export-artwork.py '<测试版 3193922031 目录>' '<DST data/databundles/images.zip 路径>'

@@ -9914,6 +9914,10 @@
       "sha256": "2cdd9ab155beeb56357d34b59fcc0d28c8f1f3d03ae0207a139907fa6728a8c9",
       "lines": 182
     },
+    "beta/init/init_durability.lua": {
+      "sha256": "b84117209559f621dc4a4c0187757a48b5223c510b7b637013ca8b0d3aa86222",
+      "lines": 187
+    },
     "beta/init/init_food/init_foodregen.lua": {
       "sha256": "6a4b3f7bf308101cc52172ec0205b820fabcb898f2bf7193cc8a1d113e8f27fe",
       "lines": 88
@@ -9921,6 +9925,10 @@
     "beta/init/init_gamemodes/init_uncompromising_mode.lua": {
       "sha256": "6f46bd19c8a8358be88accfce92ac93dca8762369350d3c74afd0885c0e2c90e",
       "lines": 265
+    },
+    "beta/init/init_postinit.lua": {
+      "sha256": "f3fc4ef9eea53ee7d8c77e019e4499b9e9f82bf8aca9f8f79fd03dbaee1875ee",
+      "lines": 623
     },
     "beta/init/init_ratraid.lua": {
       "sha256": "82483c979bcc86969166a071c3b4f68b5b5758ddfe3922b0e900f86ef40af5e3",
@@ -9973,6 +9981,10 @@
     "beta/modmain.lua": {
       "sha256": "32c535951a31ddecaefbb7eb04c8a8c35846635c2bca9f7e29205872cdb0e392",
       "lines": 469
+    },
+    "beta/postinit/prefabs/heatrock.lua": {
+      "sha256": "393cd53a4483aad05475c76affbd3f04088ae714069b8e23049d4bd3ba13838c",
+      "lines": 37
     },
     "beta/scripts/components/gem_enchantable.lua": {
       "sha256": "cec58c057952b6597c13bebb070fa3fa949ac83ea877126d83920e32e80d4746",

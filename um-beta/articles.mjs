@@ -10,7 +10,25 @@ const character=line=>cn('init/init_character_um.lua',line);
 
 export const articles=[
  {
-  id:'rat-raids',category:'生存与世界',title:'鼠潮与鼠穴',aliases:['Rat Raids','背包鼠','穴居鼠','花衣吹笛者'],
+  id:'thermal-stone',category:'items',title:'暖石保温调整',aliases:['暖石','Thermal Stone','heatrock'],
+  summary:'暖石有基础保温，并按持有者的冬夏保温能力分别加成。',
+  configs:['insul_thermalstone'],
+  sections:[
+   ['保温如何结算','重做默认开启。暖石的基础冬季保温和夏季隔热均为 60。温度变化时会分别加上持有者对应保温值的一半；没有能提供温度属性的持有者时，两项恢复到基础值。'],
+  ],
+  sources:[cfg(685),beta('postinit/prefabs/heatrock.lua',12),beta('init/init_postinit.lua',135)],
+ },
+ {
+  id:'sewing-kit',category:'items',title:'针线包调整',aliases:['针线包','Sewing Kit','sewing_kit'],
+  summary:'启用重做后，针线包可用 10 次，每次的修补值为 1,200。',
+  configs:['sewingkit'],
+  sections:[
+   ['使用次数与修补量','重做默认开启。模组把针线包的使用上限设为 10 次，单次修补值设为 1,200。修补目标还取决于物品自身的可修补组件。'],
+  ],
+  sources:[cfg(661),beta('init/init_durability.lua',1),beta('init/init_gamemodes/init_uncompromising_mode.lua',169)],
+ },
+ {
+  id:'rat-raids',category:'creatures',title:'鼠潮与鼠穴',aliases:['Rat Raids','背包鼠','穴居鼠','花衣吹笛者'],
   summary:'食物储存和开关容器都可能影响地表鼠潮。周期嗅探与容器触发走两条路径。',
   configs:['rat_raids','rattimer','ratgrace','ratsnifftimer'],
   sections:[
@@ -21,7 +39,7 @@ export const articles=[
   sources:[cfg(229),cfg(578),beta('init/init_ratraid.lua',4),beta('init/init_ratraid.lua',35),beta('scripts/components/ratcheck.lua',213),beta('scripts/components/ratcheck.lua',301),beta('scripts/prefabs/uncompromising_rat.lua',1742),names(18)],
  },
  {
-  id:'food-recovery',category:'生存与世界',title:'食物持续恢复',aliases:['Food Regen','回血','回理智'],
+  id:'food-recovery',category:'mechanics',title:'食物持续恢复',aliases:['Food Regen','回血','回理智'],
   summary:'食物恢复较多的生命或理智时，默认会改为持续结算。',
   configs:['foodregen'],
   sections:[
@@ -31,7 +49,7 @@ export const articles=[
   sources:[cfg(226),beta('init/init_food/init_foodregen.lua',4),beta('init/init_food/init_foodregen.lua',41),beta('scripts/prefabs/healthregenbuff_vetcurse.lua',24),beta('scripts/prefabs/healthregenbuff_vetcurse.lua',101)],
  },
  {
-  id:'snowstorms',category:'生存与世界',title:'暴风雪与雪堆',aliases:['Snowstorms','猫眼护目镜','尖刺霜草'],
+  id:'snowstorms',category:'world',title:'暴风雪与雪堆',aliases:['Snowstorms','猫眼护目镜','尖刺霜草'],
   summary:'冬季暴风雪分全域和局部天气，防护装备与近距离掩体能抵消移动惩罚。',
   configs:['snowstorms','weatherhazard_winter'],
   sections:[
@@ -42,7 +60,7 @@ export const articles=[
   sources:[cfg(451),cfg(463),beta('scripts/components/snowstorminitiator.lua',21),beta('scripts/components/snowstormwatcher.lua',45),beta('init/init_weather/init_snowstorm_structures.lua',126),names(35),names(692)],
  },
  {
-  id:'cave-worldgen',category:'生存与世界',title:'熔岩洞穴与潮湿陷坑',aliases:['Magma Caves','Flooded Caves','月岛','蓝蘑菇林'],
+  id:'cave-worldgen',category:'world',title:'熔岩洞穴与潮湿陷坑',aliases:['Magma Caves','Flooded Caves','月岛','蓝蘑菇林'],
   summary:'洞穴配置会改变新世界的地形、入口和宝石学锻造台的位置。',
   configs:['worldgenmastertoggle','magma_caves','flooded_caves','gemology'],
   sections:[
@@ -52,7 +70,7 @@ export const articles=[
   sources:[cfg(556),beta('scripts/map/tasks/forest/moonisland.lua',19),beta('scripts/map/tasks/caves/mushroom_tasks.lua',46),beta('scripts/map/tasks/caves/magma_cave.lua',103),names(784)],
  },
  {
-  id:'gemology',category:'装备与制作',title:'宝石学与装备附魔',aliases:['Gemology','晶洞','宝石学锻造台','鉴定'],
+  id:'gemology',category:'mechanics',title:'宝石学与装备附魔',aliases:['Gemology','晶洞','宝石学锻造台','鉴定'],
   searchJumps:[{terms:['宝石','宝石学','晶洞']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石']},{section:'鉴定工具',terms:['鉴定','宝石鉴定']}],
   summary:'从不同晶洞取得宝石，再到锻造台把相容的宝石附加到装备上。',
   configs:['gemology','magma_caves'],
@@ -65,7 +83,7 @@ export const articles=[
   sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),names(752),names(821),names(853)],
  },
  {
-  id:'winky',category:'角色',title:'温奇',aliases:['Winky','鼠人','定居鼠穴'],
+  id:'winky',category:'characters',title:'温奇',aliases:['Winky','鼠人','定居鼠穴'],
   summary:'温奇擅长地下通道和鼠穴储物，夜间走得更快。',
   configs:['funny rat'],
   sections:[
@@ -76,7 +94,7 @@ export const articles=[
   sources:[cfg(265),beta('modmain.lua',113),beta('scripts/prefabs/winky.lua',61),beta('scripts/prefabs/winky.lua',145),beta('scripts/prefabs/winky.lua',170),beta('init/init_actions.lua',140),recipe(737),beta('scripts/prefabs/uncompromising_rat.lua',1463),character(5)],
  },
  {
-  id:'wixie',category:'角色',title:'薇希',aliases:['Wixie','薇茜','维希','弹弓妹','沃尔特重做'],
+  id:'wixie',category:'characters',title:'薇希',aliases:['Wixie','薇茜','维希','弹弓妹','沃尔特重做'],
   summary:'测试版默认启用薇希和沃尔特重做，加入幽闭恐惧与专属弹弓配方。',
   configs:['wixie_walter'],
   sections:[
@@ -87,7 +105,7 @@ export const articles=[
   sources:[beta('modmain.lua',355),beta('modmain.lua',382),beta('scripts/prefabs/wixie.lua',77),beta('scripts/prefabs/wixie.lua',176),beta('init/init_recipes/init_recipes.lua',81),beta('init/init_recipes/recipes_wixie.lua',11),character(16),cn('wixie_postinit/wixie_strings.lua',9),names(571)],
  },
  {
-  id:'wathom',category:'角色',title:'沃托姆',aliases:['Wathom','跳劈哥','肾上腺素'],
+  id:'wathom',category:'characters',title:'沃托姆',aliases:['Wathom','跳劈哥','肾上腺素'],
   summary:'沃托姆靠近战积攒肾上腺素，强化状态与技能和房间配置有关。',
   configs:["holy fucking shit it's wathom",'wathom_ampvulnerability','wathom_armordamage'],
   sections:[
@@ -98,7 +116,7 @@ export const articles=[
   sources:[cfg(266),cfg(269),beta('scripts/prefabs/wathom.lua',12),beta('scripts/prefabs/wathom.lua',359),beta('scripts/prefabs/wathom.lua',535),beta('init/init_wathom.lua',1576),character(24)],
  },
  {
-  id:'summer-dragonflies',category:'生物与首领',title:'时令龙蝇与月光龙蝇',aliases:['Wiltfly','Moonmaw Dragonfly','注能的玻璃碎片','启迪鳞片'],
+  id:'summer-dragonflies',category:'creatures',title:'时令龙蝇与月光龙蝇',aliases:['Wiltfly','Moonmaw Dragonfly','注能的玻璃碎片','启迪鳞片'],
   summary:'两种龙蝇共享地表季节生成器，月光龙蝇需要额外的世界进度和月亮条件。',
   configs:['wiltfly','wiltfly_spawn'],
   sections:[
@@ -109,7 +127,7 @@ export const articles=[
   sources:[cfg(927),cfg(1237),cfg(1349),beta('scripts/components/mock_dragonflyspawner.lua',56),beta('scripts/components/mock_dragonflyspawner.lua',186),beta('scripts/prefabs/mock_dragonfly.lua',467),beta('scripts/prefabs/moonmaw_dragonfly.lua',633),names(53)],
  },
  {
-  id:'dreadstone-shield',category:'装备与制作',title:'绝望石圆盾',aliases:['Dreadstone Shield','女武神','维格弗德'],
+  id:'dreadstone-shield',category:'new-items',title:'绝望石圆盾',aliases:['Dreadstone Shield','女武神','维格弗德'],
   summary:'女武神技能装备，可以格挡并使符合条件的攻击者恐慌。',
   configs:['wathgrithr_rework_'],
   sections:[
@@ -119,7 +137,7 @@ export const articles=[
   sources:[cfg(360),recipe(669),beta('init/init_tuning.lua',39),beta('scripts/prefabs/wathgrithr_shield_dreadstone.lua',154),beta('scripts/prefabs/wathgrithr_shield_dreadstone.lua',290),names(811)],
  },
  {
-  id:'beak-basher',category:'装备与制作',title:'喙击者',aliases:['Beak Basher','多目章鱼喙','锤子'],
+  id:'beak-basher',category:'new-items',title:'喙击者',aliases:['Beak Basher','多目章鱼喙','锤子'],
   summary:'可用来战斗和拆建筑的锤子。',
   configs:[],
   sections:[
@@ -129,7 +147,7 @@ export const articles=[
   sources:[recipe(655),beta('scripts/prefabs/beakbasher.lua',51),names(550)],
  },
  {
-  id:'veterans-curse',category:'生存与世界',title:'老兵诅咒',aliases:["Veteran's Curse",'头骨洞窟','诅咒神龛'],
+  id:'veterans-curse',category:'mechanics',title:'老兵诅咒',aliases:["Veteran's Curse",'头骨洞窟','诅咒神龛'],
   summary:'可选难度，激活方式由服务器设置决定，效果因角色而异。',
   configs:['vetcurse','ui_showvetcurse'],
   sections:[
@@ -139,7 +157,7 @@ export const articles=[
   sources:[cfg(146),cfg(231),beta('init/init_vetcurse.lua',173),beta('scripts/prefabs/veteranshrine.lua',72),beta('scripts/map/tasks/forest/make_a_pick.lua',6),beta('scripts/prefabs/winky.lua',170),names(78),cn('init/init_strings/init_strings.lua',267)],
  },
  {
-  id:'dread-eye',category:'生物与首领',title:'恐惧之眼',aliases:['Dread Eye','暗影生物','影怪'],
+  id:'dread-eye',category:'creatures',title:'恐惧之眼',aliases:['Dread Eye','暗影生物','影怪'],
   summary:'强化梦魇生物中的伏击者，能用诱饵外观伪装。',
   configs:['harder_shadows','dreadeyes_allowed'],
   sections:[

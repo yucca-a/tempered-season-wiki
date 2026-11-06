@@ -1,9 +1,10 @@
 import {buildHub} from './um-beta/build.mjs';
 import {createUI} from './ui.mjs';
+import {temperedTopics,temperedTopic} from './topics.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {articles,configs,groups,categories,meta,iconManifest,iconLabels,protectedIconNames,defaultChoice,choiceText,itemAuditIds,entityAuditIds,lifeAuditIds} from './catalog.mjs';
+import {articles,configs,groups,meta,iconManifest,iconLabels,protectedIconNames,defaultChoice,choiceText,itemAuditIds,entityAuditIds,lifeAuditIds} from './catalog.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url)),out=path.join(root,'dist');
 await fs.mkdir(out,{recursive:true});
 for(const entry of await fs.readdir(out,{withFileTypes:true}))if(entry.isFile()&&entry.name.endsWith('.html'))await fs.unlink(path.join(out,entry.name));
@@ -32,6 +33,8 @@ for(const [i,v] of versions.entries()){
 const articleMap=new Map(articles.map(a=>[a.id,a])),configMap=new Map(configs.map(c=>[c.key,c]));
 if(articleMap.size!==articles.length)throw Error('Duplicate article IDs');
 const counts={articles:articles.length,configs:configs.length,choices:configs.reduce((n,c)=>n+c.options.length,0)};
+const categories=temperedTopics;
+for(const article of articles)article.topic=temperedTopic(article);
 const catName=id=>categories.find(c=>c.id===id)?.name??id;
 const symbols={search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',globe:'<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',close:'<path d="m6 6 12 12M6 18 12-12"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 1.5 1.5M5 19l1.5-1.5M17.5 6.5 1.5-1.5"/>',arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',link:'<path d="m9 15 6-6M8 16l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M16 8l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(0 -1) scale(.92)"/>',star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',book:'<path d="M12 6v15M12 6C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Z"/>',external:'<path d="M14 4h6v6M20 4 10 14M10 4H4v16h16v-6"/>'};
 const icon=(name,size=18)=>`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[name]??symbols.book}</svg>`;
@@ -84,7 +87,7 @@ function configStrip(a){
  return `<details class="article-config"><summary>相关配置 <span>${a.configKeys.length}</span></summary><p class="entry-config-note">以下为模组默认值，实际效果取决于房间设置。点击配置名称可查看全部档位。</p><div class="table-wrap entry-config-table" tabindex="0" role="region" aria-label="${esc(a.title)}相关配置"><table><thead><tr><th scope="col">配置</th><th scope="col">默认</th><th scope="col">还需开启</th></tr></thead><tbody>${rows}</tbody></table></div></details>`;
 }
 const {ordered,articleHTML,shell,visual,homeIntro,categoryNav,settingsIntro}=createUI({articles,configs,groups,categories,meta,esc,icon,articleIcon,sectionHTML,configStrip,counts});
-const home=homeIntro()+categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或标签。</div>'+ordered.map(a=>articleHTML(a,true)).join('');
+const home=homeIntro()+categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ordered.map(a=>articleHTML(a,true)).join('');
 await fs.writeFile(path.join(out,'tempered.html'),shell('index','百科全览',`${counts.articles}篇玩法解析与${counts.configs}项配置，淬炼之季中文Wiki。`,home));
 const configHTML=c=>{
  const opt=defaultChoice(c),warn=c.note.status==='inactive'?'当前未生效':c.note.status?'实现差异':'';
@@ -95,16 +98,16 @@ const configHTML=c=>{
 };
 const settings=settingsIntro()+'<div class="empty-state" id="config-empty" hidden>没有匹配的设置，请调整搜索或筛选条件。</div>'+groups.map(g=>'<section class="config-group" data-config-group="'+g.id+'"><h2 id="'+g.id+'">'+(g.mode===g.name?'':'<span class="config-mode-label" data-mode="'+esc(g.mode)+'">'+esc(g.mode)+'</span>')+esc(g.name)+'<small>'+g.configs.length+' 项</small></h2>'+g.configs.map(configHTML).join('')+'</section>').join('');
 await fs.writeFile(path.join(out,'settings.html'),shell('settings','配置大全',`全部${counts.configs}项模组配置、默认值、档位、生效条件与实现差异。`,settings));
-const directory=`<div class="wiki-heading"><div><span class="eyebrow">ALL ENTRIES</span><h1>分类索引</h1><p>按角色、道具、建筑和世界机制查阅。</p></div></div><div class="reading-tabs"><a href="tempered.html">百科全览</a><a href="settings.html">配置大全 <span>${counts.configs}</span></a><a class="active" href="directory.html">分类索引</a></div>${categories.map(cat=>`<section class="directory-group"><h2>${cat.name}<small>${articles.filter(a=>a.category===cat.id).length} 篇</small></h2><div class="directory-grid">${articles.filter(a=>a.category===cat.id).map(a=>{const img=visual(a);return `<a href="${href(a.id)}">${img?`<img src="${img}" width="36" height="36" alt="" loading="lazy">`:`<span class="directory-symbol">${icon('book')}</span>`}<span><strong>${esc(a.title)}</strong><small>${esc(a.summary)}</small></span></a>`;}).join('')}</div></section>`).join('')}`;
+const directory=`<div class="wiki-heading"><div><span class="eyebrow">ALL ENTRIES</span><h1>分类索引</h1><p>按模组的实际改动查阅角色、机制和物品。</p></div></div><div class="reading-tabs"><a href="tempered.html">百科全览</a><a href="settings.html">配置大全 <span>${counts.configs}</span></a><a class="active" href="directory.html">分类索引</a></div>${categories.map(cat=>`<section class="directory-group"><h2>${cat.name}<small>${articles.filter(a=>a.topic===cat.id).length} 篇</small></h2><div class="directory-grid">${articles.filter(a=>a.topic===cat.id).map(a=>{const img=visual(a);return `<a href="${href(a.id)}">${img?`<img src="${img}" width="36" height="36" alt="" loading="lazy">`:`<span class="directory-symbol">${icon('book')}</span>`}<span><strong>${esc(a.title)}</strong><small>${esc(a.summary)}</small></span></a>`;}).join('')}</div></section>`).join('')}`;
 await fs.writeFile(path.join(out,'directory.html'),shell('directory','分类索引','按分类查阅全部机制、角色、道具、建筑、食物与生物条目。',directory));
 for(const a of articles){
  const toc=`<aside class="toc" aria-label="本页目录"><h2>本页目录</h2><nav>${a.sections.map((s,i)=>`<a href="#${a.id}-s${i+1}">${esc(s.title)}</a>`).join('')}</nav>${a.configKeys.length?`<h2>相关配置</h2><div class="toc-config">${a.configKeys.map(configLink).join('')}</div>`:''}</aside>`;
- const peers=articles.filter(p=>p.category===a.category),position=peers.findIndex(p=>p.id===a.id);
+ const peers=articles.filter(p=>p.topic===a.topic),position=peers.findIndex(p=>p.id===a.id);
  const adjacent='<nav class="adjacent-entries" aria-label="继续查阅">'+[peers[position-1],peers[position+1]].map((p,i)=>p?'<a href="'+p.id+'.html"><small>'+(i===0?'上一篇':'继续阅读')+'</small><strong>'+esc(p.title)+'</strong></a>':'<span></span>').join('')+'</nav>';
- const body=`<nav class="breadcrumbs" aria-label="当前位置"><a href="tempered.html">百科首页</a><span>/</span><a href="tempered.html?category=${a.category}#encyclopedia">${catName(a.category)}</a><span>/</span><span>${esc(a.title)}</span></nav>${articleHTML(a)}${adjacent}<div class="article-bottom"><span>按 v${meta.version} 核对 · ${meta.date}</span><a href="tempered.html#entry-${a.id}">回到连续阅读 ${icon('arrow',13)}</a></div>`;
+ const body=`<nav class="breadcrumbs" aria-label="当前位置"><a href="tempered.html">百科首页</a><span>/</span><a href="tempered.html?category=${a.topic}#encyclopedia">${catName(a.topic)}</a><span>/</span><span>${esc(a.title)}</span></nav>${articleHTML(a)}${adjacent}<div class="article-bottom"><span>按 v${meta.version} 核对 · ${meta.date}</span><a href="tempered.html#entry-${a.id}">回到连续阅读 ${icon('arrow',13)}</a></div>`;
  await fs.writeFile(path.join(out,href(a.id)),shell(a.id,a.title,a.summary,body,toc));
 }
-const articleIndex=articles.map(a=>({id:a.id,href:href(a.id),kind:'article',title:a.title,category:catName(a.category),categoryId:a.category,summary:a.summary,aliases:a.aliases??[],keywords:[a.keywords,...a.configKeys].join(' '),text:a.sections.map(s=>[s.title,s.callout,...(s.paragraphs??[]),...(s.list??[]),...(s.table?.rows.flat()??[])].filter(Boolean).join(' ')).join(' ')}));
+const articleIndex=articles.map(a=>({id:a.id,href:href(a.id),kind:'article',title:a.title,category:catName(a.topic),categoryId:a.topic,topic:a.topic,summary:a.summary,aliases:a.aliases??[],keywords:[a.keywords,...a.configKeys].join(' '),text:a.sections.map(s=>[s.title,s.callout,...(s.paragraphs??[]),...(s.list??[]),...(s.table?.rows.flat()??[])].filter(Boolean).join(' ')).join(' ')}));
 const configIndex=configs.map(c=>({id:c.id,href:'settings.html#'+c.id,kind:'config',title:c.label,category:c.mode+' / '+c.group,summary:c.note.paragraphs?.[0]||c.description||`默认：${optionSummary(c)}`,keywords:c.key,text:[c.description,...(c.note.paragraphs??[]),...c.options.flatMap(o=>[o.label,o.description,rawValue(o.value)]),...c.requires.map(k=>configMap.get(k).label)].join(' '),status:c.note.status||''}));
 await fs.writeFile(path.join(out,'search-index.js'),`window.WIKI_INDEX=${JSON.stringify([...articleIndex,...configIndex]).replaceAll('<','\\u003c')};\n`);
 await fs.cp(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});

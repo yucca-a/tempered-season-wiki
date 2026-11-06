@@ -31,7 +31,7 @@ for(const [file,term,asset] of [
   errors.push(`${file}: incorrect or missing icon for ${term}`);
  }
 }
-for(const file of ['app.js','theme.js','search.js','search-index.js','legacy-home.js','um-beta/filter.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
+for(const file of ['app.js','theme.js','search.js','search-index.js','legacy-home.js','um-beta/filter.js','um-beta/legacy-items.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
 const beta=JSON.parse(await fs.readFile(new URL('./um-beta/snapshot.json',import.meta.url),'utf8'));
 for(const [file,marker] of [['index.html','href="tempered.html"'],['index.html','href="um-beta/index.html"'],['tempered.html','data-page="index"'],['um-beta/index.html',beta.betaVersion],['um-beta/sources.html',beta.cnVersion]]){
  if(!pages.get(file)?.includes(marker))errors.push('Missing Wiki route or version marker in '+file);
@@ -48,9 +48,19 @@ if(betaResults.filter(a=>a.kind==='recipe').length!==beta.recipes.length||betaRe
 const betaArt=JSON.parse(await fs.readFile(new URL('./um-beta/artwork.json',import.meta.url),'utf8'));
 for(const art of Object.values(betaArt))if(!paths.has(art.path))errors.push('Missing Beta artwork '+art.path);
 if(betaResults.filter(a=>a.kind==='item').length!==beta.artworkIds.length)errors.push('Beta item gallery search coverage mismatch');
-for(const [file,asset] of [['index.html','assets/um-beta/cover.png'],['um-beta/index.html','../assets/um-beta/cover.png'],['um-beta/wixie.html','../assets/um-beta/wixie.png'],['um-beta/recipes.html','../assets/um-beta/slingshot_gnasher.png'],['um-beta/items.html','../assets/um-beta/um_gemologypurplegem2.png']]){
+for(const [file,asset] of [['index.html','assets/um-beta/cover.png'],['um-beta/index.html','../assets/um-beta/cover.png'],['um-beta/wixie.html','../assets/um-beta/wixie.png'],['um-beta/recipes.html','../assets/um-beta/slingshot_gnasher.png'],['um-beta/index.html','../assets/um-beta/um_gemologypurplegem2.png']]){
  if(!pages.get(file)?.includes('src="'+asset+'"'))errors.push('Missing Beta artwork reference in '+file);
 }
+for(const [file,id,category] of [
+ ['tempered.html','world-shadow','world'],['tempered.html','world-seasons','mechanics'],['tempered.html','role-wortox','characters'],
+ ['tempered.html','frost-core','new-items'],['tempered.html','frost-core-staff','items'],['tempered.html','frostjaw','creatures'],
+ ['um-beta/index.html','snowstorms','world'],['um-beta/index.html','gemology','mechanics'],['um-beta/index.html','thermal-stone','items'],
+ ['um-beta/index.html','item-slingshot_gnasher','new-items'],
+]){
+ if(!pages.get(file)?.includes(`data-entry="${id}" data-category="${category}"`))errors.push('Unexpected Wiki topic for '+id);
+}
+if(!pages.get('um-beta/index.html')?.includes('data-entry="item-slingshot_gnasher" data-category="new-items"><a href="recipes.html#recipe-slingshot_gnasher-11"'))errors.push('Missing direct Beta item card link');
+if(betaResults.find(a=>a.id==='item-slingshot_gnasher')?.href!=='recipes.html#recipe-slingshot_gnasher-11')errors.push('Missing direct Beta item search link');
 const globalIndex={window:{}};
 vm.runInNewContext(await fs.readFile(path.join(root,'global-search-index.js'),'utf8'),globalIndex);
 const globalResults=globalIndex.window.WIKI_GLOBAL_INDEX;

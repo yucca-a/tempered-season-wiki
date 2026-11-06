@@ -8,7 +8,7 @@
  const kinds=[...dialog.querySelectorAll('[data-kind]')];
  const indexUrl=new URL(dialog.dataset.index,location.href);
  const wikiNames={tempered:'淬炼之季','um-beta':'永不妥协测试版'};
- const kindNames={article:'词条',config:'配置',recipe:'配方',item:'物品图鉴'};
+ const kindNames={article:'词条',config:'配置',recipe:'配方',item:'新增物品'};
  const normalize=text=>String(text??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
  const escape=text=>String(text??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function mark(text,needle){
@@ -67,7 +67,7 @@
   const q=normalize(raw);
   const terms=q.split(' ').filter(Boolean);
   const seen=new Set();
-  const candidates=entries.filter(e=>(kind==='all'||kind===e.kind)&&(branch.value==='all'||branch.value===e.wiki));
+  const candidates=entries.filter(e=>(kind==='all'||kind===e.kind||kind==='item'&&e.topic==='new-items')&&(branch.value==='all'||branch.value===e.wiki));
   const ranked=q?candidates.map(e=>({e,score:rank(e,q,terms)})).filter(r=>r.score).sort((a,b)=>b.score-a.score).map(r=>r.e):
    candidates.filter(e=>!e.jump&&(kind!=='all'||e.featured||['getting-started','settings-guide','combat','armor','world-exchange','eyeturret','upgrade-frost-staff'].includes(e.id)));
   const unique=ranked.filter(e=>!seen.has(e.url)&&seen.add(e.url));

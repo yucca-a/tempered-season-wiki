@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createUI,searchDialog} from '../ui.mjs';
+import {betaTopics} from '../topics.mjs';
 import {articles,auditedVersion,auditedCnVersion} from './articles.mjs';
 import {configName,groupName,techName,extraNames} from './labels.mjs';
 import {itemGroups} from './items.mjs';
@@ -25,19 +26,14 @@ const defaultText=c=>esc(modeLabel(standard(c)))+' · '+val(c.default);
 const stale=betaVersion!==auditedVersion||cnVersion!==auditedCnVersion;
 const reviewedNotice=stale?`<p class="callout">正文核对于测试版 v${esc(auditedVersion)}、汉化 ${esc(auditedCnVersion)}，与索引快照的版本有差异。</p>`:'';
 
-const categoryDefs=[
- ['world','生存与世界'],['characters','角色'],
- ['items','装备与制作'],['creatures','生物与首领'],
-];
-const categories=categoryDefs.map(([id,name])=>({id,name}));
-const categoryId=new Map(categoryDefs.map(([id,name])=>[name,id]));
+const categories=betaTopics;
 const articleIcons={
  'rat-raids':'ratpoisonbottle','food-recovery':'cookpot','snowstorms':'snowgoggles','cave-worldgen':'cave_entrance_magmabiome',
  gemology:'um_gemologyforge',winky:'winky',wixie:'wixie',wathom:'wathom',
  'summer-dragonflies':'moonmaw_dragonfly','dreadstone-shield':'wathgrithr_shield_dreadstone','beak-basher':'beakbasher',
- 'veterans-curse':'veteranshrine',
+ 'veterans-curse':'veteranshrine','thermal-stone':'heatrock','sewing-kit':'sewing_kit',
 };
-const entryArticles=articles.map(a=>({...a,category:categoryId.get(a.category),tag:'公开测试版',
+const entryArticles=articles.map(a=>({...a,tag:'公开测试版',
  configKeys:a.configs,sections:a.sections.map(([title,text])=>({title,text}))}));
 const artFor=id=>artwork[id]??(icons[id]?.source.startsWith('DST images.zip/')?icons[id]:null);
 function artImage(id,size,css=''){
@@ -87,12 +83,24 @@ const recipeEntries=recipes.map(r=>{
 });
 const recipeGroups=recipeTypes.map(([type,name,color])=>({id:'recipes-'+type,type,name,color,rows:recipeEntries.filter(r=>r.type===type)}))
  .filter(g=>g.rows.length);
-const gallery=itemGroups.flatMap(group=>group.ids.map(id=>({
- id,group,title:itemName(id),href:group.links?.[id]??group.article,
- recipe:recipeEntries.find(r=>r.product===id),
-})));
-const galleryAnchor=id=>'item-'+id;
-const galleryLink=id=>'items.html#'+galleryAnchor(id);
+const newItems=itemGroups.flatMap(group=>group.ids.map(id=>{
+ const article=group.links?.[id]??group.article;
+ const recipe=recipeEntries.find(r=>r.product===id);
+ const primaryArticle=id==='wathgrithr_shield_dreadstone'||id==='beakbasher';
+ const href=primaryArticle?article:recipe?'recipes.html#'+recipe.anchor:article;
+ return {id:'item-'+id,prefab:id,category:'new-items',title:itemName(id),href,primaryArticle,recipe,
+  summary:recipe&&!primaryArticle?'查看配方 · '+techName(recipe.tech):'查看相关玩法',group:group.title};
+}));
+const newItemByPrefab=new Map(newItems.map(item=>[item.prefab,item]));
+const primaryItemCards=newItems.filter(item=>item.primaryArticle).map(item=>({...item,id:item.href.replace('.html','')}));
+const primaryItemIds=new Set(primaryItemCards.map(item=>item.id));
+const changedRecipeIds=new Set(['ice','shroom_skin','transmute_monstermeat','hermitshop_bootleg']);
+const changedItems=recipeEntries.filter(r=>changedRecipeIds.has(r.id)).map(r=>({
+ id:r.anchor,prefab:r.product,category:'items',title:r.title,href:'recipes.html#'+r.anchor,
+ summary:'原有物品 · 新配方或兑换',
+}));
+const extraEntries=[...changedItems,...newItems.filter(item=>!item.primaryArticle)];
+const newItemsHref='index.html?category=new-items#encyclopedia';
 const articleItems={
  gemology:['um_gemologyforge','um_magnifier_purplegem','um_gemologypurplegem2','um_gemology_geode_blue'],
  wixie:['slingshot_gnasher','slingshot_matilda','slingshot_jessie','slingshot_claire'],
@@ -110,16 +118,15 @@ function configStrip(a){
  const rows=a.configs.map(key=>configByKey.get(key));
  const items=articleItems[a.id];
  return (rows.length?`<details class="article-config"><summary>相关配置 <span>${rows.length}</span></summary>${table(['配置','默认档位'],rows.map(c=>`<tr><td>${configLink(c)}</td><td>${defaultText(c)}</td></tr>`),'相关配置')}</details>`:'')+
- (items?`<div class="beta-related-art"><strong>相关物品</strong><div>${items.map(id=>`<a href="${galleryLink(id)}">${artImage(id,28)}<span>${esc(itemName(id))}</span></a>`).join('')}</div></div>`:'')+
+ (items?`<div class="beta-related-art"><strong>相关物品</strong><div>${items.map(id=>`<a href="${newItemByPrefab.get(id).href}">${artImage(id,28)}<span>${esc(itemName(id))}</span></a>`).join('')}</div></div>`:'')+
  `<details class="source-note"><summary>版本与核对来源</summary><p>测试版 v${esc(auditedVersion)} · 汉化 ${esc(auditedCnVersion)}</p><ul>${sourceList(a)}</ul></details>`;
 }
 const site={
  id:'um-beta',name:'永不妥协测试版',subtitle:'Uncompromising Mode · Public Beta',home:'index.html',settings:'configs.html',
  sources:'sources.html',hub:'../index.html',assets:'../',mark:artwork['cover-icon'].path,extraStyles:'beta.css',
- categoryOrder:categories.map(c=>c.id),featured:[],configFilterLabel:'筛选配置类别',configAllLabel:'全部类别',
- routes:[['../index.html','模组 Wiki 总览',''],['index.html','测试版百科','index'],['configs.html','配置大全','settings'],['recipes.html','制作与兑换','recipes'],['items.html','物品图鉴','items'],['sources.html','版本与来源','sources']],
+featured:[],configFilterLabel:'筛选配置类别',configAllLabel:'全部类别',
+ routes:[['../index.html','模组 Wiki 总览',''],['index.html','测试版百科','index'],['configs.html','配置大全','settings'],['recipes.html','制作与兑换','recipes'],[newItemsHref,'新增物品',''],['sources.html','版本与来源','sources']],
  recipeNav:recipeGroups.map(g=>({...g,count:g.rows.length})),
- itemNav:itemGroups.map(g=>({id:'items-'+g.id,name:g.title,count:g.ids.length})),
 };
 const portalShell=(body,icon)=>`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="淬炼之季与永不妥协测试版的中文 Wiki 入口。"><title>饥荒联机版模组 Wiki</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="hub.css"><script src="theme.js"></script><script src="search.js" defer></script></head><body data-wiki="hub"><header class="site"><strong>饥荒联机版模组 Wiki</strong><button class="hub-search-button" data-search>${icon('search',17)} <span>搜索两个 Wiki</span></button></header><main class="content" id="main">${body}</main>${searchDialog(icon)}</body></html>`;
 const hero=(tag,title,body)=>`<section class="hero"><div class="eyebrow">${esc(tag)}</div><h1>${esc(title)}</h1>${body}</section>`;
@@ -131,9 +138,9 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  const dir=path.join(out,'um-beta');
  await fs.mkdir(dir,{recursive:true});
  const seen=new Set();
- if(gallery.length!==new Set(gallery.map(item=>item.id)).size||gallery.some(item=>!artwork[item.id]?.workshop))throw Error('Missing or duplicate Public Beta gallery artwork');
+ if(newItems.length!==newItemByPrefab.size||newItems.some(item=>!artwork[item.prefab]?.workshop||!item.href))throw Error('Missing or duplicate Public Beta item link or artwork');
  for(const a of entryArticles){
-  if(seen.has(a.id)||!/^[-a-z]+$/.test(a.id)||!a.category||!a.sources.length||a.configs.some(key=>!configByKey.has(key)))throw Error('Invalid Beta article '+a.id);
+  if(seen.has(a.id)||!/^[-a-z]+$/.test(a.id)||!categories.some(c=>c.id===a.category)||!a.sources.length||a.configs.some(key=>!configByKey.has(key)))throw Error('Invalid Beta article '+a.id);
   for(const s of a.sources){
    const src=snapshot.sourceFiles[(s.kind??'beta')+'/'+s.file];
    if(!src||s.line<1||s.line>src.lines)throw Error('Invalid citation in '+a.id);
@@ -143,7 +150,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  for(const file of await fs.readdir(dir,{withFileTypes:true})){
   if(file.isFile()&&file.name.endsWith('.html'))await fs.unlink(path.join(dir,file.name));
  }
- const portalCards=`<div class="cols"><article class="card"><img class="cover" src="assets/workshop-cover.png" width="112" height="112" alt=""><span class="badge">v${esc(tempered.version)}</span><h2>${link('tempered.html','淬炼之季')}</h2><p>查阅角色、战斗、世界协同和道具改动，也可按房间配置查默认值与生效条件。</p><nav class="section-nav" aria-label="淬炼之季快捷入口">${link('tempered.html','进入百科 →')}${link('directory.html','分类索引')}${link('settings.html','配置大全')}</nav></article><article class="card"><img class="cover" src="${artwork.cover.path}" width="112" height="112" alt="永不妥协测试版工坊封面"><span class="badge">Public Beta v${esc(betaVersion)}</span><h2>${link('um-beta/index.html','永不妥协测试版')}</h2><p>从测试版源码核对角色、季节、洞穴和宝石学。中文术语参照社区测试版汉化补丁。</p><nav class="section-nav" aria-label="永不妥协测试版快捷入口">${link('um-beta/index.html','进入百科 →')}${link('um-beta/configs.html','配置')}${link('um-beta/items.html','物品图鉴')}${link('um-beta/recipes.html','制作与兑换')}</nav></article></div>`;
+ const portalCards=`<div class="cols"><article class="card"><img class="cover" src="assets/workshop-cover.png" width="112" height="112" alt=""><span class="badge">v${esc(tempered.version)}</span><h2>${link('tempered.html','淬炼之季')}</h2><p>查阅角色、战斗、世界协同和道具改动，也可按房间配置查默认值与生效条件。</p><nav class="section-nav" aria-label="淬炼之季快捷入口">${link('tempered.html','进入百科 →')}${link('directory.html','分类索引')}${link('settings.html','配置大全')}</nav></article><article class="card"><img class="cover" src="${artwork.cover.path}" width="112" height="112" alt="永不妥协测试版工坊封面"><span class="badge">Public Beta v${esc(betaVersion)}</span><h2>${link('um-beta/index.html','永不妥协测试版')}</h2><p>从测试版源码核对角色、季节、洞穴和宝石学。中文术语参照社区测试版汉化补丁。</p><nav class="section-nav" aria-label="永不妥协测试版快捷入口">${link('um-beta/index.html','进入百科 →')}${link('um-beta/configs.html','配置')}${link('um-beta/'+newItemsHref,'新增物品')}${link('um-beta/recipes.html','制作与兑换')}</nav></article></div>`;
  const portal=hero('中文模组资料','饥荒联机版模组 Wiki','<p>选择你房间启用的模组，查看对应版本的玩法、配方和配置。</p>')+portalCards+
  `<script src="legacy-home.js"></script>`;
  await fs.writeFile(path.join(out,'index.html'),portalShell(portal,icon));
@@ -152,13 +159,14 @@ export async function buildHub(out,tempered,icon,temperedIndex){
 
  const meta={version:betaVersion,workshop};
  const ui=createUI({articles:entryArticles,configs:configs.map(c=>({...c,mode:groupByKey.get(c.key).mode})),groups:configGroups,
-  categories,meta,esc,icon,sectionHTML,configStrip,counts:count,site,
-  articleIcon:a=>{const art=artFor(articleIcons[a.id]);return art?'../'+art.path:null;}});
+  categories,meta,esc,icon,sectionHTML,configStrip,counts:count,site,extraEntries,
+  articleIcon:a=>{const art=artFor(a.prefab??articleIcons[a.id]);return art?'../'+art.path:null;}});
  const render=(file,current,title,desc,body,toc)=>fs.writeFile(path.join(dir,file),ui.shell(current,title,desc,body,toc));
  const titleBlock=(eyebrow,title,text)=>`<div class="wiki-heading"><div><span class="eyebrow">${eyebrow}</span><h1>${esc(title)}</h1><p>${text}</p></div></div>`;
  const startLink=(href,img,title,desc)=>`<a class="start-link" href="${href}">${artImage(img,38)}<span><strong>${title}</strong><small>${desc}</small></span>${icon('arrow',16)}</a>`;
- const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅鼠潮、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink('items.html','um_gemologyforge','物品图鉴','看专属贴图，查配方与用途')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('index.html?category=characters#encyclopedia','角色')} · ${link('rat-raids.html','鼠潮')} · ${link('gemology.html','宝石学')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
- await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ui.ordered.map(a=>ui.articleHTML(a,true)).join(''));
+ const itemCards=[...primaryItemCards,...extraEntries].map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}"><a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
+ const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅鼠潮、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('index.html?category=characters#encyclopedia','角色')} · ${link('rat-raids.html','鼠潮')} · ${link('gemology.html','宝石学')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
+ await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ui.ordered.filter(a=>!primaryItemIds.has(a.id)).map(a=>ui.articleHTML(a,true)).join('')+`<div class="beta-topic-items">${itemCards}</div>`);
  for(const a of entryArticles){
   const category=categories.find(c=>c.id===a.category);
   const peers=ui.ordered.filter(p=>p.category===a.category);
@@ -191,19 +199,18 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  await render('recipes.html','recipes','制作与兑换','公开测试版源码中的制作、兑换与兼容注册。',recipeIntro+recipeTools+'<div class="empty-state" id="recipe-empty" hidden>没有匹配的配方，请调整材料搜索或制作条件。</div>'+recipeRows+`<section class="wiki-entry"><h2>单独核对的动态配方</h2><p>温奇的定居鼠穴消耗饥饿，见 ${link('winky.html','温奇')}。其余动态注册和后续覆盖需结合实现核对。</p><ul>${snapshot.skipped.map(r=>`<li>${code(r.id??'动态 ID')} · ${code(r.file+':'+r.line)}</li>`).join('')}</ul></section>`);
  await render('sources.html','sources','版本与来源','永不妥协测试版和社区汉化补丁的版本及维护范围。',titleBlock('SOURCE NOTES','版本与来源',`源码快照 v${esc(betaVersion)} · 社区汉化 ${esc(cnVersion)} · 正文核对 v${esc(auditedVersion)}`)+reviewedNotice+
  `<section class="wiki-entry"><h2>资料来源</h2><ul><li>${link(workshop,'Steam 工坊 · Uncompromising Mode: Public Beta')} · The Uncomp Dev Team</li><li>${link(translation,'Steam 工坊 · 永不妥协全汉化 - 测试版专供')} · 郎溪小杰哥、不堪白昼、不笑猫、去码头整点薯条</li><li>${link('https://github.com/LeeMo123/Hanization_um_beta','社区汉化项目源码')}</li><li>${link('https://uncompromisingmode.wiki.gg/','Uncompromising Mode 英文 Wiki')}</li><li>${link('https://qineko.wiki/umpb/','QiNeko Wiki · 永不妥协 BETA')} · 参考导航与关联词条的组织方式</li></ul><h2>覆盖范围</h2><p>本分区包含 ${count.articles} 篇源码核对词条、${count.configs} 项实际菜单配置、${recipeEntries.length} 条可解析的制作与兑换注册。配方记录注册时的材料、科技和可解析条件。食谱、运行中变动及其余内容在后续复核中补充。</p><p>机制、数值和开关从测试版本体核对。汉化补丁用于术语对照，配置中的中文辅助标题用于与英文菜单互查。封面、角色头像和专属物品缩略图来自工坊测试版资源，原版物品图标来自《饥荒联机版》。</p></section>`);
- const itemTabs=`<nav class="category-tabs beta-item-tabs" aria-label="图鉴分类">${itemGroups.map(g=>link('#items-'+g.id,g.title)).join('')}</nav>`;
- const itemSections=itemGroups.map(group=>`<section class="wiki-entry beta-item-group" id="items-${group.id}"><h2>${esc(group.title)}</h2><p class="entry-lead">${esc(group.description)}</p><div class="beta-item-grid">${gallery.filter(item=>item.group===group).map(item=>`<article class="beta-item-card" id="${galleryAnchor(item.id)}">${artImage(item.id,56,'beta-item-image')}<div><h3>${esc(item.title)}</h3><small>${code(item.id)}</small><nav aria-label="${esc(item.title)}相关资料">${item.recipe?link('recipes.html#'+item.recipe.anchor,'查看配方'):''}${item.href?link(item.href,'相关词条'):''}</nav></div></article>`).join('')}</div></section>`).join('');
- const itemIntro=titleBlock('BETA ITEM ATLAS','物品图鉴',`查阅 ${gallery.length} 张从测试版本体提取的物品缩略图。可按用途浏览，或用全站搜索按中文名、英文名或 prefab ID 定位。`);
- await render('items.html','items','物品图鉴','永不妥协测试版的专属物品贴图、配方与关联词条。',itemIntro+itemTabs+itemSections);
+ const legacyLinks=newItems.map(item=>`<li><a id="${item.id}" href="${item.href}">${esc(item.title)}</a></li>`).join('');
+ await render('items.html','legacy-items','新增物品','旧图鉴链接会前往对应的配方或玩法。',
+  `<section class="wiki-entry"><h1>新增物品</h1><p><a id="legacy-items-home" href="${newItemsHref}">浏览全部新增物品</a></p><ul>${legacyLinks}</ul></section><script src="legacy-items.js" defer></script>`);
  const index=[
-  ...entryArticles.map(a=>({id:a.id,kind:'article',href:articleHref(a),title:a.title,summary:a.summary,category:categories.find(c=>c.id===a.category).name,aliases:a.aliases,text:a.sections.map(s=>s.title+' '+s.text).join(' '),featured:true})),
+  ...entryArticles.map(a=>({id:a.id,kind:'article',href:articleHref(a),title:a.title,summary:a.summary,category:categories.find(c=>c.id===a.category).name,topic:a.category,aliases:a.aliases,text:a.sections.map(s=>s.title+' '+s.text).join(' '),featured:true})),
   ...configs.map(c=>{const group=groupByKey.get(c.key),related=entryArticles.filter(a=>a.configs.includes(c.key));return {
    id:configId(c.key),kind:'config',href:'configs.html#'+configId(c.key),title:configName(c),category:group.mode+' / '+group.name,summary:c.title+' · 默认 '+modeLabel(standard(c)),keywords:c.key,
    text:[...c.options.map(modeLabel),...related.flatMap(a=>[a.title,...a.aliases])].join(' '),status:related.length?'linked':'',
   };}),
-  ...recipeEntries.map(r=>({id:r.anchor,kind:'recipe',href:'recipes.html#'+r.anchor,title:r.title,category:techName(r.tech),summary:r.materialText||'无常规物品材料',keywords:r.id,text:recipeSearch(r),image:artFor(r.product)?'../'+artFor(r.product).path:undefined})),
-  ...gallery.map(item=>({id:galleryAnchor(item.id),kind:'item',href:galleryLink(item.id),title:item.title,category:item.group.title,
-   summary:item.group.description,keywords:item.id,text:names[item.id]?.en??'',image:'../'+artwork[item.id].path})),
+  ...recipeEntries.map(r=>({id:r.anchor,kind:'recipe',href:'recipes.html#'+r.anchor,title:r.title,category:techName(r.tech),summary:r.materialText||'无常规物品材料',topic:changedRecipeIds.has(r.id)?'items':undefined,keywords:r.id,text:recipeSearch(r),image:artFor(r.product)?'../'+artFor(r.product).path:undefined})),
+  ...newItems.map(item=>({id:item.id,kind:'item',href:item.href,title:item.title,topic:item.category,category:item.group,
+   summary:item.summary,keywords:item.prefab,text:names[item.prefab]?.en??'',image:'../'+artwork[item.prefab].path})),
  ];
  const jumps=entryArticles.flatMap(a=>(a.searchJumps??[]).map(jump=>{
   const i=jump.section?a.sections.findIndex(s=>s.title===jump.section):-1;
@@ -218,6 +225,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  ];
  await fs.writeFile(path.join(out,'global-search-index.js'),`window.WIKI_GLOBAL_INDEX=${JSON.stringify(globalIndex).replaceAll('<','\\u003c')};\n`);
  await fs.writeFile(path.join(dir,'search-index.js'),`window.WIKI_INDEX=${JSON.stringify(index).replaceAll('<','\\u003c')};\n`);
+ await fs.copyFile(new URL('./legacy-items.js',import.meta.url),path.join(dir,'legacy-items.js'));
  await fs.copyFile(new URL('./filter.js',import.meta.url),path.join(dir,'filter.js'));
  await fs.copyFile(new URL('./beta.css',import.meta.url),path.join(dir,'beta.css'));
  console.log(`Built Wiki hub and ${count.articles} Beta articles, ${count.configs} Beta configs, ${recipeEntries.length} recipe rows.`);
