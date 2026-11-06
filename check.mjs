@@ -78,7 +78,7 @@ for(const [term,href] of [['附魔','um-beta/gemology.html#gemology-s2'],['宝�
  if(!globalResults.some(a=>a.jump&&a.href===href&&a.aliases.includes(term)))errors.push('Missing direct search result for '+term);
 }
 const gemology=pages.get('um-beta/gemology.html');
-if((gemology?.match(/<tr id="gem-/g)||[]).length!==14||(gemology?.match(/class="table-wrap guide-table"/g)||[]).length!==2)errors.push('Incomplete Beta gem guide tables');
+if((gemology?.match(/<tr id="gem-/g)||[]).length!==14||(gemology?.match(/class="table-wrap guide-table\b/g)||[]).length!==2)errors.push('Incomplete Beta gem guide tables');
 const context={window:{}};vm.runInNewContext(await fs.readFile(path.join(root,'search-index.js'),'utf8'),context);
 for(const a of context.window.WIKI_INDEX){checkLink('index.html',a.href);if(!a.text||!a.title)errors.push('Invalid search entry '+a.id);}
 for(const [id,aliases] of Object.entries({

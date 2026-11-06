@@ -126,7 +126,7 @@ function guideTable(s){
  return '<p class="guide-table-hint">在窄屏可横滑查看其余列。</p>'+table(headers,rows.map(([name,...cells],i)=>{
   const prefab=prefabs[i];
   return `<tr${prefab?` id="${guideRowId(prefab)}"`:''}><th scope="row">${prefab?artImage(prefab,28):''}${esc(name)}</th>${cells.map(cell=>`<td>${esc(cell)}</td>`).join('')}</tr>`;
- }),s.title,'guide-table');
+ }),s.title,prefabs.length?'guide-table':'guide-table guide-trades');
 }
 function sectionHTML(s,i,a,continuous){
  const id=sectionId(a,i),heading=continuous?3:2;
