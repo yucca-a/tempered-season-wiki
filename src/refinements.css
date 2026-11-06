@@ -188,3 +188,11 @@
  .table-wrap th,.table-wrap td{padding:8px 6px;vertical-align:top}
  .table-wrap .inline-icon{width:1.1em;height:1.1em}
 }
+.search-wiki{display:flex;padding:0 16px 6px;justify-content:flex-end}
+.search-wiki select{max-width:100%;font:inherit;font-size:12px;padding:4px 7px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text)}
+@media(max-width:1099px){
+ .nav-open .layout{backdrop-filter:none}
+ .sidebar-head .mobile-close{position:static;flex-shrink:0}
+}
+.site-global-search{flex:0 0 auto;width:auto;height:26px;padding:3px 5px;gap:4px;font-size:11px;margin-right:2px;color:var(--muted)}
+@media(max-width:700px){.site-global-search span{display:none}}

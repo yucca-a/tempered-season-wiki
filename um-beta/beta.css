@@ -1,0 +1,31 @@
+[data-wiki="um-beta"]{--beta-ink:#773955;--beta-tint:rgba(135,65,96,.09);--beta-line:rgba(135,65,96,.19)}
+:root[data-theme="dark"] [data-wiki="um-beta"]{--beta-ink:#e9a8c7;--beta-tint:rgba(197,109,153,.13);--beta-line:rgba(197,109,153,.27)}
+[data-wiki="um-beta"] .brand-mark{background:var(--beta-tint);border:1px solid var(--beta-line)}
+[data-wiki="um-beta"] .brand-mark img{object-fit:contain;padding:7px}
+[data-wiki="um-beta"] .brand-text small{letter-spacing:.01em}
+[data-wiki="um-beta"] .site-global-search{color:var(--beta-ink)}
+.beta-welcome{background:radial-gradient(ellipse at 92% 5%,var(--beta-tint),transparent 63%),var(--card);border:1px solid var(--beta-line)}
+.beta-welcome .welcome-topline a,.beta-welcome .eyebrow{color:var(--beta-ink)}
+.beta-welcome-copy{display:grid;grid-template-columns:minmax(0,1fr) minmax(88px,27%);align-items:center;gap:16px;margin:22px 0 12px}
+.beta-welcome-copy .eyebrow{margin:0}
+.beta-welcome-copy h1{font-size:clamp(27px,3.2vw,42px);margin:6px 0 12px}
+.beta-welcome-copy .welcome-copy{margin-bottom:4px}
+.beta-emblem{position:relative;display:grid;place-items:center;aspect-ratio:1;justify-self:center;width:min(100%,142px);border-radius:50%;border:1px solid var(--beta-line);background:radial-gradient(circle,var(--beta-tint) 38%,transparent 70%)}
+.beta-emblem::before,.beta-emblem::after{content:"";position:absolute;inset:9%;border:1px solid var(--beta-line);border-radius:inherit}
+.beta-emblem::after{inset:17%;border-style:dashed}
+.beta-emblem img{z-index:1;width:58%;height:auto;filter:drop-shadow(0 5px 7px rgba(30,13,30,.28))}
+[data-wiki="um-beta"] .config-group>h2 .config-mode-label{color:var(--beta-ink);background:var(--beta-tint)}
+[data-wiki="um-beta"] .beta-recipe-tags:empty{display:none}
+[data-wiki="um-beta"] .beta-recipe-tags{display:flex;gap:6px;flex-wrap:wrap}
+[data-wiki="um-beta"] .recipe-card .config-default strong{overflow-wrap:anywhere;white-space:normal}
+[data-wiki="um-beta"] .source-note code,[data-wiki="um-beta"] .recipe-card code{overflow-wrap:anywhere}
+[data-wiki="um-beta"].config-filtering .beta-presets{display:none}
+[data-wiki="um-beta"] .entry-nav [data-recipe-nav] small{margin-left:auto}
+@media(max-width:700px){
+ .beta-welcome-copy{grid-template-columns:minmax(0,1fr) 68px;gap:10px;margin-top:17px}
+ .beta-welcome-copy h1{font-size:25px}
+ [data-wiki="um-beta"] .settings-tools{flex-wrap:wrap;row-gap:8px}
+ [data-wiki="um-beta"] .settings-tools>div{flex-wrap:wrap}
+ [data-wiki="um-beta"] .config-card .config-summary-copy{min-width:0;overflow-wrap:anywhere}
+}
+[data-wiki="um-beta"] .recipe-card:target>summary{color:var(--beta-ink);background:var(--beta-tint)}

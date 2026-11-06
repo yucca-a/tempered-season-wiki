@@ -53,6 +53,7 @@ export const articles=[
  },
  {
   id:'gemology',category:'装备与制作',title:'宝石学与装备附魔',aliases:['Gemology','晶洞','宝石学锻造台','鉴定'],
+  searchJumps:[{terms:['宝石','宝石学','晶洞']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石','鉴定']}],
   summary:'从不同晶洞取得宝石，再到锻造台把相容的宝石附加到装备上。',
   configs:['gemology','magma_caves'],
   sections:[

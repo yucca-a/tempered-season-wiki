@@ -31,13 +31,26 @@ for(const [file,term,asset] of [
   errors.push(`${file}: incorrect or missing icon for ${term}`);
  }
 }
-for(const file of ['app.js','theme.js','search-index.js','legacy-home.js','um-beta/filter.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
+for(const file of ['app.js','theme.js','search.js','search-index.js','legacy-home.js','um-beta/filter.js'])new vm.Script(await fs.readFile(path.join(root,file),'utf8'),{filename:file});
 const beta=JSON.parse(await fs.readFile(new URL('./um-beta/snapshot.json',import.meta.url),'utf8'));
 for(const [file,marker] of [['index.html','href="tempered.html"'],['index.html','href="um-beta/index.html"'],['tempered.html','data-page="index"'],['um-beta/index.html',beta.betaVersion],['um-beta/sources.html',beta.cnVersion]]){
  if(!pages.get(file)?.includes(marker))errors.push('Missing Wiki route or version marker in '+file);
 }
-for(const [file,count] of [['um-beta/configs.html',beta.configs.length],['um-beta/recipes.html',beta.recipes.length]]){
- if((pages.get(file)?.match(/data-find="/g)||[]).length!==count)errors.push('Beta index coverage mismatch: '+file);
+for(const [file,pattern,count] of [['um-beta/configs.html',/data-config="/g,beta.configs.length],['um-beta/recipes.html',/data-recipe data-find="/g,beta.recipes.length]]){
+ if((pages.get(file)?.match(pattern)||[]).length!==count)errors.push('Beta index coverage mismatch: '+file);
+}
+const betaIndex={window:{}};
+vm.runInNewContext(await fs.readFile(path.join(root,'um-beta/search-index.js'),'utf8'),betaIndex);
+const betaResults=betaIndex.window.WIKI_INDEX;
+if(new Set(betaResults.map(a=>a.id)).size!==betaResults.length)errors.push('Duplicate Beta search index IDs');
+for(const a of betaResults)checkLink('um-beta/index.html',a.href);
+if(betaResults.filter(a=>a.kind==='recipe').length!==beta.recipes.length||betaResults.filter(a=>a.kind==='config').length!==beta.configs.length)errors.push('Beta search coverage mismatch');
+const globalIndex={window:{}};
+vm.runInNewContext(await fs.readFile(path.join(root,'global-search-index.js'),'utf8'),globalIndex);
+const globalResults=globalIndex.window.WIKI_GLOBAL_INDEX;
+for(const a of globalResults)checkLink('index.html',a.href);
+for(const [term,href] of [['附魔','um-beta/gemology.html#gemology-s2'],['宝石','um-beta/gemology.html']]){
+ if(!globalResults.some(a=>a.jump&&a.href===href&&a.aliases.includes(term)))errors.push('Missing direct search result for '+term);
 }
 const context={window:{}};vm.runInNewContext(await fs.readFile(path.join(root,'search-index.js'),'utf8'),context);
 for(const a of context.window.WIKI_INDEX){checkLink('index.html',a.href);if(!a.text||!a.title)errors.push('Invalid search entry '+a.id);}
