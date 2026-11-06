@@ -36,7 +36,7 @@ export const configName=c=>labels[c.key]??c.title;
 const techNames={
  NONE:'无需科技',SCIENCE_ONE:'科学机器',SCIENCE_TWO:'炼金引擎',MAGIC_TWO:'灵子分解器',MAGIC_THREE:'暗影操纵器',
  ANCIENT_TWO:'损坏的远古伪科学站',ANCIENT_THREE:'远古伪科学站',SHADOWFORGING_TWO:'暗影术基座',
- LUNARFORGING_TWO:'辉煌铁匠铺',TURFCRAFTING_TWO:'土地夯实器',LOST:'蓝图解锁',
+ LUNARFORGING_TWO:'辉煌铁匠铺',TURFCRAFTING_TWO:'土地夯实器',LOST:'特殊解锁',
  CELESTIAL_ONE:'天体宝球',CELESTIAL_THREE:'天体祭坛',
  ANCIENT_FOUR:'远古科技 IV',SEAFARING_ONE:'航海科技 I',OBSIDIAN_TWO:'黑曜石科技 II',
  SPIDERCRAFT_ONE:'蜘蛛制作',ORPHANAGE_ONE:'宠物巢穴',HALLOWED_NIGHTS:'万圣节活动',

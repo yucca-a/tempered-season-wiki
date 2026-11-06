@@ -8667,6 +8667,14 @@
       "en": "Figgy",
       "zh": "小蚜虫"
     },
+    "crystal_cursed_antler": {
+      "en": "Crystal Cursed Antler",
+      "zh": "Crystal Cursed Antler"
+    },
+    "cursed_antler": {
+      "en": "Cursed Antler",
+      "zh": "诅咒鹿角"
+    },
     "cutgrass": {
       "en": "Cut Grass",
       "zh": "采下的草"
@@ -8798,6 +8806,10 @@
     "goose_feather": {
       "en": "Down Feather",
       "zh": "麋鹿鹅羽毛"
+    },
+    "gore_horn_hat": {
+      "en": "Gore Horn",
+      "zh": "犀牛帽"
     },
     "greenamulet": {
       "en": "Construction Amulet",
@@ -9255,6 +9267,10 @@
       "en": "Silk",
       "zh": "蜘蛛丝"
     },
+    "silksack": {
+      "en": "Silken Sack",
+      "zh": "蛛丝背包"
+    },
     "skullchest_child": {
       "en": "Skull Chest",
       "zh": "骷髅箱"
@@ -9370,6 +9386,10 @@
     "snaildrake_magma": {
       "en": "Snaildrake",
       "zh": "蜗龙"
+    },
+    "snaildrakehat": {
+      "en": "Snaily Horned Helm",
+      "zh": "蜗龙角盔"
     },
     "snappy_jaw": {
       "en": "Snappy Jaw",
@@ -10186,42 +10206,55 @@
   "articleArtIds": [
     "alterguardian_phase1",
     "antlion",
+    "armor_glassmail",
     "bearger",
     "beequeen",
     "blueberrypancakes",
     "cave_vent_mite",
     "cookpot",
     "crabking",
+    "crystal_cursed_antler",
+    "cursed_antler",
     "daywalker",
     "deerclops",
     "dragonfly",
+    "driftwoodfishingrod",
     "fruitbat",
     "glacialhound",
+    "gore_horn_hat",
     "hooded_fern",
     "hoodedwidow",
     "klaus",
     "minotaur",
     "moose",
     "powercell",
+    "ratpoisonbottle",
     "riceplant",
     "rimeweed_main",
     "rocky",
+    "saltpack",
     "seafoodpaella",
     "shadow_knight",
     "shockworm",
+    "silksack",
     "slingshot_claire",
     "slingshot_gnasher",
     "slingshot_jessie",
     "slingshot_matilda",
+    "sludge_sack",
     "slurtle",
     "snaildrake_magma",
+    "snaildrakehat",
     "snowcone",
+    "snowgoggles",
     "snowmong",
     "spear_wathgrithr_lightning",
     "spider_trapdoor",
     "spider_trapdoor_hooded",
+    "sporepack",
     "stalker_atrium",
     "stuffed_peeper_poppers",
+    "the_real_charles_t_horse",
     "toadstool",
     "um_armor_bramble_rimeweed",
     "um_backpack_amuletuse",
@@ -10229,6 +10262,7 @@
     "um_boom_tart",
     "um_boomberrypie",
     "um_durian_cream_marshcake",
+    "um_eyebalm",
     "um_gem_repair_kit",
     "um_gemology_geode_blue",
     "um_gemology_geode_glass",
@@ -10257,11 +10291,17 @@
     "um_gemologyyellowgem1",
     "um_gemologyyellowgem2",
     "um_ghost_fajita",
+    "um_hat_nettlemask",
+    "um_hat_pepperdragon",
+    "um_hat_rime",
     "um_hotspring",
+    "um_magnifier_purplegem",
     "um_rice_pudding",
+    "um_rimeweed_icepack",
     "um_rimeweed_spagett",
     "um_rimeweed_tequila",
     "um_sponge_cake",
+    "uncompromising_fishingnet",
     "viperworm",
     "walter",
     "wanda",
@@ -10377,7 +10417,16 @@
       "citations": [
         140,
         499,
+        636,
+        688,
         699
+      ]
+    },
+    "beta/init/init_batterypower.lua": {
+      "sha256": "b0d2ed08b01c52cddbf6084c0f8e5308f4e3b4229b13cdfc6136cd3cdb607ab6",
+      "lines": 136,
+      "citations": [
+        66
       ]
     },
     "beta/init/init_bosshealth.lua": {
@@ -10539,6 +10588,8 @@
         127,
         172,
         196,
+        209,
+        220,
         237
       ]
     },
@@ -10595,10 +10646,13 @@
       "citations": [
         101,
         141,
+        250,
+        294,
         326,
         628,
         665,
         668,
+        688,
         833,
         1000
       ]
@@ -10697,6 +10751,7 @@
       "sha256": "f3fc4ef9eea53ee7d8c77e019e4499b9e9f82bf8aca9f8f79fd03dbaee1875ee",
       "lines": 623,
       "citations": [
+        72,
         135,
         182,
         188,
@@ -10708,7 +10763,8 @@
         422,
         428,
         526,
-        540
+        540,
+        618
       ]
     },
     "beta/init/init_ratraid.lua": {
@@ -10738,14 +10794,38 @@
       "sha256": "0ee534aa41ba151ee86e7da8c0b9fb5416cbe39b0279d7173f46349fae9a25b3",
       "lines": 744,
       "citations": [
+        64,
+        78,
         83,
         88,
+        92,
+        95,
         99,
+        103,
+        118,
+        119,
+        123,
         127,
+        131,
+        140,
+        141,
+        177,
+        178,
+        224,
+        238,
+        242,
+        252,
+        260,
+        261,
+        266,
         289,
         290,
         293,
         295,
+        320,
+        339,
+        340,
+        469,
         655,
         669,
         737
@@ -10763,6 +10843,7 @@
       "sha256": "ee2dc281148ca1195951a8754115ccf43f6507f635b3b1b99fb0d5d8d1079713",
       "lines": 224,
       "citations": [
+        7,
         11,
         15,
         19,
@@ -10792,7 +10873,22 @@
         158,
         195,
         198,
+        211,
+        218,
+        300,
         339,
+        362,
+        366,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        392,
+        395,
         400,
         514,
         596,
@@ -10845,6 +10941,7 @@
       "citations": [
         146,
         167,
+        175,
         184,
         204,
         226,
@@ -10945,6 +11042,16 @@
         31
       ]
     },
+    "beta/postinit/armor_rework.lua": {
+      "sha256": "09c984234a6fe4fcff96ea5a79171e5e5083e796f047cb2b352ff8a4d15b57fc",
+      "lines": 104,
+      "citations": [
+        61,
+        62,
+        70,
+        98
+      ]
+    },
     "beta/postinit/components/beargerspawner.lua": {
       "sha256": "a3c4e3b73d2d63e31a5685b8f705089f54c67c5f819dda67dbe7145b53af32af",
       "lines": 71,
@@ -10956,9 +11063,22 @@
       "sha256": "30e656b31979ce8323a66a8e67f72f8a198a1f26b985bd9e62a0bd7c55127aa2",
       "lines": 216,
       "citations": [
+        43,
         79,
         92,
         121
+      ]
+    },
+    "beta/postinit/components/fishingnet.lua": {
+      "sha256": "bb87ddf4fa6d1040df8357301bb24a91aea0f18d41fd1491379b4770f14f01d7",
+      "lines": 171,
+      "citations": [
+        28,
+        36,
+        48,
+        53,
+        64,
+        162
       ]
     },
     "beta/postinit/components/freezable.lua": {
@@ -10966,6 +11086,14 @@
       "lines": 31,
       "citations": [
         21
+      ]
+    },
+    "beta/postinit/components/healer.lua": {
+      "sha256": "8b6cfd834a71513f1fb395cb895df470e8ce563fec0f541e2d9aa6bc1d6df18a",
+      "lines": 41,
+      "citations": [
+        15,
+        26
       ]
     },
     "beta/postinit/components/health.lua": {
@@ -10991,6 +11119,21 @@
         203
       ]
     },
+    "beta/postinit/components/inventory.lua": {
+      "sha256": "945e7dcf777c79d84c3894fa7055a20a44fa07e595863ec2a7a0f6eba51d7d01",
+      "lines": 73,
+      "citations": [
+        24
+      ]
+    },
+    "beta/postinit/components/locomotor.lua": {
+      "sha256": "9562f550c25d01dd3126c64ea4cd869575d5ae93784fb229c334a8b0854e8321",
+      "lines": 63,
+      "citations": [
+        12,
+        42
+      ]
+    },
     "beta/postinit/components/moonstorms.lua": {
       "sha256": "6df3404df382f5ccf07c3bc88760799fac49ea404f4394c23c9cfe12027fbe6e",
       "lines": 49,
@@ -11003,6 +11146,37 @@
       "lines": 13,
       "citations": [
         5
+      ]
+    },
+    "beta/postinit/components/planardamage.lua": {
+      "sha256": "a21ba12ed2dbe16a77e1366e179cca40b0127a9fc2629d064da5e93e6934adeb",
+      "lines": 17,
+      "citations": [
+        11
+      ]
+    },
+    "beta/postinit/components/temperature.lua": {
+      "sha256": "d41a792b9675bfb43d892c3faea3212987255b5de2d0763ed43e3675697cbe7e",
+      "lines": 44,
+      "citations": [
+        11,
+        13,
+        33,
+        36
+      ]
+    },
+    "beta/postinit/components/unwrappable.lua": {
+      "sha256": "415a96175a9f40ee8f90f6de2a0a21b2fdd96f20f5138f075f84c48f74c5352a",
+      "lines": 22,
+      "citations": [
+        5
+      ]
+    },
+    "beta/postinit/player.lua": {
+      "sha256": "a63ad2f8cca080fa90443d5961141e7e16c30410ad7d0522bdd5baf17648ff7f",
+      "lines": 418,
+      "citations": [
+        276
       ]
     },
     "beta/postinit/prefabs/alterguardian.lua": {
@@ -11186,6 +11360,13 @@
         4
       ]
     },
+    "beta/postinit/prefabs/rock_ice.lua": {
+      "sha256": "e8db6775e763947b8176a1015ad8b4b3a33b8907bc11ef47e76c7b1edb37e9f3",
+      "lines": 12,
+      "citations": [
+        6
+      ]
+    },
     "beta/postinit/prefabs/rocky.lua": {
       "sha256": "8df41e7b2efcc20b86bf52965dd44de2d12f19aa37375695f6c78a147a3a0b48",
       "lines": 67,
@@ -11201,12 +11382,26 @@
         15
       ]
     },
+    "beta/postinit/prefabs/shark.lua": {
+      "sha256": "066a197cba7ffccaf715df3dabfa9622f1875813dc2a16cd218966fe3333f999",
+      "lines": 10,
+      "citations": [
+        9
+      ]
+    },
     "beta/postinit/prefabs/spear_wathgrithr.lua": {
       "sha256": "c55d7a9e7696a68ebe87c931050b9adb031ad5f3de05cc0a612fdd5a1632e383",
       "lines": 178,
       "citations": [
         107,
         163
+      ]
+    },
+    "beta/postinit/prefabs/sporecloud.lua": {
+      "sha256": "0c9fe89e0d015f8a61cc9feefe17b5481a44c5d0b3d4529db69740d7ec6dd562",
+      "lines": 16,
+      "citations": [
+        12
       ]
     },
     "beta/postinit/prefabs/stalker.lua": {
@@ -11231,7 +11426,9 @@
         28,
         30,
         31,
-        34
+        34,
+        40,
+        47
       ]
     },
     "beta/postinit/prefabs/walrus_camp.lua": {
@@ -11246,6 +11443,13 @@
       "lines": 51,
       "citations": [
         6
+      ]
+    },
+    "beta/postinit/sim.lua": {
+      "sha256": "04e174a2e57160c3546a6aa3023b69fa9566365f757b6fe282b9b7436c62853e",
+      "lines": 183,
+      "citations": [
+        168
       ]
     },
     "beta/postinit/stategraphs/SGbearger.lua": {
@@ -11315,6 +11519,16 @@
         76
       ]
     },
+    "beta/postinit/stategraphs/SGwilson.lua": {
+      "sha256": "c1e7a2c842831f18dc320f9d0eb89327a616c489474cfc4c9c8de9dc60f6c541",
+      "lines": 5083,
+      "citations": [
+        166,
+        190,
+        245,
+        1801
+      ]
+    },
     "beta/postinit/stategraphs/SGworm.lua": {
       "sha256": "2d0b330d5a8556b8b95f48e39ee0059fdb00a20b242b3dbf9f845eddbdbae6d6",
       "lines": 150,
@@ -11336,6 +11550,22 @@
       "lines": 167,
       "citations": [
         1
+      ]
+    },
+    "beta/scripts/brains/um_pepperdragonbrain.lua": {
+      "sha256": "3598c2db47206b5c6b74b95a22bae7af80f9bd63dd4976a4083597d310001cac",
+      "lines": 161,
+      "citations": [
+        43,
+        60
+      ]
+    },
+    "beta/scripts/brains/uncompromising_ratbrain.lua": {
+      "sha256": "6dca1903107f698be862b8a83615c0c085c3ff05cc6cc4b6ed571805954f0443",
+      "lines": 428,
+      "citations": [
+        273,
+        283
       ]
     },
     "beta/scripts/components/deerclopsspawner.lua": {
@@ -11366,7 +11596,9 @@
       "sha256": "c12ab98b282a2c3e2f53f2b029c0145b5632e92042f8c6fc90cb7451f8cb84d6",
       "lines": 63,
       "citations": [
-        13
+        13,
+        18,
+        44
       ]
     },
     "beta/scripts/components/gemrepairer.lua": {
@@ -11405,8 +11637,19 @@
       "citations": [
         45,
         49,
+        58,
+        75,
         97,
+        107,
         133
+      ]
+    },
+    "beta/scripts/components/terrorized.lua": {
+      "sha256": "952d03d329e50c32c0ee5ba877f84dab3e02ac3ff6f21585b8620a6c8ebaec67",
+      "lines": 110,
+      "citations": [
+        34,
+        83
       ]
     },
     "beta/scripts/components/um_snow_stormspawner.lua": {
@@ -11421,6 +11664,14 @@
         123,
         141,
         176
+      ]
+    },
+    "beta/scripts/components/uncompromising_lungs.lua": {
+      "sha256": "adcdfacab09cd338f9cdc49f9363d08744466f6b74ad10553c638680b2d1f6e2",
+      "lines": 45,
+      "citations": [
+        6,
+        39
       ]
     },
     "beta/scripts/components/uncompromising_shadowcreaturespawner.lua": {
@@ -11468,6 +11719,7 @@
       "sha256": "0332727c0db6c9b1ff70e3624651d344857600db02b3b8e4dd870a803ce0d224",
       "lines": 388,
       "citations": [
+        119,
         311
       ]
     },
@@ -11568,7 +11820,9 @@
       "sha256": "d87d39a40e4a2ba47c5f72bb3061fcacf8c245c36851c470760dbf0a162a0f83",
       "lines": 46,
       "citations": [
-        6
+        6,
+        13,
+        20
       ]
     },
     "beta/scripts/map/tasks/forest/merged_desert.lua": {
@@ -11605,11 +11859,78 @@
         4
       ]
     },
+    "beta/scripts/prefabs/armor_glassmail.lua": {
+      "sha256": "c178d2b29cf008aa737bfb9df4f120ccfa33dfcfea5c22684e07972002e48198",
+      "lines": 202,
+      "citations": [
+        5,
+        39,
+        76,
+        82,
+        96,
+        99,
+        162
+      ]
+    },
+    "beta/scripts/prefabs/armor_glassmail_shards.lua": {
+      "sha256": "d79ae88bffeff63c1f4ec5f1167af30256605693da8f3a91f0d14af214abced8",
+      "lines": 146,
+      "citations": [
+        1,
+        8,
+        13,
+        60,
+        129
+      ]
+    },
     "beta/scripts/prefabs/beakbasher.lua": {
       "sha256": "21679bda3e20a2c647afc57f8950aa9b8dc235cc207679c3c63b1bb1d4c98e9b",
       "lines": 78,
       "citations": [
         51
+      ]
+    },
+    "beta/scripts/prefabs/charles_t_horse.lua": {
+      "sha256": "e966094d974835754e1c57edb9714a05e2645a15e247d20fc7dae9090526dce2",
+      "lines": 483,
+      "citations": [
+        165,
+        207,
+        257,
+        347,
+        434,
+        449
+      ]
+    },
+    "beta/scripts/prefabs/crystal_cursed_antler.lua": {
+      "sha256": "c00fc3b2e66318d13502ff0f726e135c2685e1efead89432e627a3839eafc972",
+      "lines": 250,
+      "citations": [
+        13,
+        26,
+        30,
+        33,
+        51,
+        55,
+        179,
+        185,
+        201,
+        232,
+        236
+      ]
+    },
+    "beta/scripts/prefabs/cursed_antler.lua": {
+      "sha256": "72586a89e255a06c5c603c728c020fcc730c839a26eee203c66094c4d0d3df5e",
+      "lines": 153,
+      "citations": [
+        8,
+        13,
+        22,
+        26,
+        29,
+        32,
+        41,
+        143
       ]
     },
     "beta/scripts/prefabs/dreadeye.lua": {
@@ -11618,6 +11939,19 @@
       "citations": [
         280,
         509
+      ]
+    },
+    "beta/scripts/prefabs/driftwoodfishingrod.lua": {
+      "sha256": "815c5ce5aaa9994a452dc6bd724df34122ee35503816d3a75feb2b723b952237",
+      "lines": 88,
+      "citations": [
+        25,
+        60,
+        61,
+        65,
+        66,
+        69,
+        72
       ]
     },
     "beta/scripts/prefabs/eyeofterror_mini_projectile_ally.lua": {
@@ -11659,6 +11993,29 @@
         176
       ]
     },
+    "beta/scripts/prefabs/glass_scales.lua": {
+      "sha256": "9e0c6d2e98fa33db26c5f290f9aa4fcf80ac7c9cbf8d4607cb5be71a11b7b356",
+      "lines": 96,
+      "citations": [
+        2,
+        3,
+        43
+      ]
+    },
+    "beta/scripts/prefabs/gore_horn_hat.lua": {
+      "sha256": "b77655b0c04e565388f5e8f1caf98318a7aaf83eaaa3b1ae9c124a0024e65dbc",
+      "lines": 364,
+      "citations": [
+        19,
+        38,
+        83,
+        97,
+        124,
+        270,
+        290,
+        301
+      ]
+    },
     "beta/scripts/prefabs/healthregenbuff_vetcurse.lua": {
       "sha256": "9331d2fe261021009ea61fbcae147fea9127d193f3f1918d73fb2747fceade94",
       "lines": 324,
@@ -11686,12 +12043,26 @@
         70
       ]
     },
+    "beta/scripts/prefabs/lava_pond_cave.lua": {
+      "sha256": "0991f2932be79227ac621c630d9a5cc22a413df42081a6c5911f7cf9637ebbd2",
+      "lines": 273,
+      "citations": [
+        67
+      ]
+    },
     "beta/scripts/prefabs/lavaeslime.lua": {
       "sha256": "f7b662fc902a6300fb44874047dda263465ec3f5eb037e5dfd28d27c1c09ee2d",
       "lines": 98,
       "citations": [
         22,
         83
+      ]
+    },
+    "beta/scripts/prefabs/magmarocks.lua": {
+      "sha256": "f9612d3f05243f91f3c1141598d27bdd969d1913cbc3f28d363959eea62be991",
+      "lines": 226,
+      "citations": [
+        32
       ]
     },
     "beta/scripts/prefabs/mock_dragonfly.lua": {
@@ -11705,6 +12076,7 @@
       "sha256": "68a8318a5976d803741f994cbd20431df1c1c3bce5025f556f7aa83445d7aa58",
       "lines": 748,
       "citations": [
+        356,
         633
       ]
     },
@@ -11722,6 +12094,33 @@
         11,
         101,
         104
+      ]
+    },
+    "beta/scripts/prefabs/ratgashole.lua": {
+      "sha256": "775374161036a4e516884bf4fff19ee64faddf6e46d3548ec40576cfd3e9aaaf",
+      "lines": 122,
+      "citations": [
+        27,
+        28
+      ]
+    },
+    "beta/scripts/prefabs/ratpoison.lua": {
+      "sha256": "57f4a42b875e7906596e8b764f772940cdb14b6c2121e7ff3fe8b0d7e24c7738",
+      "lines": 159,
+      "citations": [
+        20,
+        23,
+        27,
+        86,
+        119
+      ]
+    },
+    "beta/scripts/prefabs/ratpoison_debuff.lua": {
+      "sha256": "b5e51cc26630e4564002edd65c0703130040c153c4dffb5913d42f4e385f1822",
+      "lines": 70,
+      "citations": [
+        4,
+        23
       ]
     },
     "beta/scripts/prefabs/rice.lua": {
@@ -11751,12 +12150,46 @@
         116
       ]
     },
+    "beta/scripts/prefabs/saltpack.lua": {
+      "sha256": "4e3a884983bfa41f821501867abacc9e4f86394a55a30c7c546e348ea8bc794e",
+      "lines": 227,
+      "citations": [
+        44,
+        49,
+        59,
+        64,
+        68,
+        101,
+        102,
+        121,
+        192,
+        195,
+        212
+      ]
+    },
+    "beta/scripts/prefabs/saltpile.lua": {
+      "sha256": "0df45b8170a4664e761e44ab8a4e8f8527738bfa1548e487b1cdc5785b9de9b6",
+      "lines": 108,
+      "citations": [
+        27,
+        43,
+        48,
+        75
+      ]
+    },
     "beta/scripts/prefabs/shadow_goo.lua": {
       "sha256": "b80d1b398c591821e97ab08d3a14aa30e7e4a1e4895e247203586fe339559523",
       "lines": 391,
       "citations": [
         73,
         274
+      ]
+    },
+    "beta/scripts/prefabs/shadow_wixie.lua": {
+      "sha256": "140ca95cfdeaffaa44bb8a7d3c55cbb9e94f379a673a18b9e419e44388c41810",
+      "lines": 820,
+      "citations": [
+        212
       ]
     },
     "beta/scripts/prefabs/shockworm.lua": {
@@ -11769,6 +12202,17 @@
         248,
         387,
         433
+      ]
+    },
+    "beta/scripts/prefabs/silksack.lua": {
+      "sha256": "fca0a9404b2e061d5c490ecfca1186dc7810d4ca245858321399d8ccba0681c8",
+      "lines": 172,
+      "citations": [
+        1,
+        8,
+        36,
+        55,
+        93
       ]
     },
     "beta/scripts/prefabs/slingshot_claire.lua": {
@@ -11805,12 +12249,40 @@
         247
       ]
     },
+    "beta/scripts/prefabs/sludge_sack.lua": {
+      "sha256": "0c853f3b3b95d334060c33b1364173587c5fe69149b7830a8f511a5c849ba2e7",
+      "lines": 115,
+      "citations": [
+        21,
+        32,
+        69,
+        83,
+        98,
+        103
+      ]
+    },
+    "beta/scripts/prefabs/sludgestack.lua": {
+      "sha256": "5b93f5905bbb2fbc1dad5467d2abf5ad7f3cbc657d51850ef1d3ea4a4c005bb2",
+      "lines": 307,
+      "citations": [
+        10,
+        275
+      ]
+    },
+    "beta/scripts/prefabs/smog.lua": {
+      "sha256": "5ead5b73b0659d346aa7fefbe44db2fcdd15feb1b46eadbb76fe20219a370f63",
+      "lines": 330,
+      "citations": [
+        306
+      ]
+    },
     "beta/scripts/prefabs/snaildrake.lua": {
       "sha256": "d2914198103b5d82c816d94823cd279b0da6e089b03dfd3efd08631fbe7f3d42",
       "lines": 357,
       "citations": [
         19,
         31,
+        41,
         71,
         89,
         149,
@@ -11824,6 +12296,28 @@
       "citations": [
         16,
         64
+      ]
+    },
+    "beta/scripts/prefabs/snaildrakehat.lua": {
+      "sha256": "180290ce2ba8f5c766fb442c41c835d2b2869191bb79cb4c02ee57d395207b1f",
+      "lines": 98,
+      "citations": [
+        24,
+        45,
+        79,
+        87
+      ]
+    },
+    "beta/scripts/prefabs/snowgoggles.lua": {
+      "sha256": "6ba6e5a592d6ea80a603891fef3c46e011a81088522c64f997ed9312f0ac0f52",
+      "lines": 107,
+      "citations": [
+        27,
+        48,
+        66,
+        90,
+        96,
+        100
       ]
     },
     "beta/scripts/prefabs/snowmong.lua": {
@@ -11844,7 +12338,8 @@
       "citations": [
         5,
         195,
-        316
+        316,
+        494
       ]
     },
     "beta/scripts/prefabs/spider_trapdoor.lua": {
@@ -11857,6 +12352,18 @@
         430,
         548,
         576
+      ]
+    },
+    "beta/scripts/prefabs/sporepack.lua": {
+      "sha256": "bf0455c29d9fbd97d2ffdb2fb108324321be3bbf1377b10f243462c5bc4b470e",
+      "lines": 129,
+      "citations": [
+        56,
+        60,
+        66,
+        108,
+        116,
+        123
       ]
     },
     "beta/scripts/prefabs/trapdoor.lua": {
@@ -11913,6 +12420,16 @@
         233
       ]
     },
+    "beta/scripts/prefabs/um_eyebalm.lua": {
+      "sha256": "8609875f6d60d860d82a6d4765ac36a802f1b21f9100f25d603eb21d1ad4d84f",
+      "lines": 133,
+      "citations": [
+        38,
+        55,
+        60,
+        76
+      ]
+    },
     "beta/scripts/prefabs/um_gem_repair_kit.lua": {
       "sha256": "25626989b16e08ea5d4397350fac70d55af7f9d672daf315b2ee2c95078fbc3f",
       "lines": 56,
@@ -11943,11 +12460,59 @@
         25
       ]
     },
+    "beta/scripts/prefabs/um_gemologygems.lua": {
+      "sha256": "fe8041275053c329a2c425dd22f53a2bb58d05f03f5a45e7d7e0090de09bae33",
+      "lines": 231,
+      "citations": [
+        174
+      ]
+    },
     "beta/scripts/prefabs/um_guano_rock.lua": {
       "sha256": "7226f98993986a8f2618b548d93a6adfa267cf37463c8233633bab0f21924e44",
       "lines": 180,
       "citations": [
         17
+      ]
+    },
+    "beta/scripts/prefabs/um_hat_nettlemask.lua": {
+      "sha256": "1443f3174fb868d06832a91ff4204ae6bb6ec3ccc7f97a85e466369610f37f45",
+      "lines": 113,
+      "citations": [
+        8,
+        20,
+        26,
+        35,
+        38,
+        76,
+        94,
+        100,
+        102,
+        107
+      ]
+    },
+    "beta/scripts/prefabs/um_hat_pepperdragon.lua": {
+      "sha256": "2d76de581db5a774512a1e760ad38ba758ca0be9b3a1947413da794c9f7be275",
+      "lines": 85,
+      "citations": [
+        50,
+        73,
+        74,
+        77
+      ]
+    },
+    "beta/scripts/prefabs/um_hat_rime.lua": {
+      "sha256": "40d44f670525f098c44abb164ef76611281b8e7a56324a5312ae2d5665603ce1",
+      "lines": 123,
+      "citations": [
+        10,
+        16,
+        28,
+        34,
+        53,
+        87,
+        107,
+        112,
+        115
       ]
     },
     "beta/scripts/prefabs/um_hotspring.lua": {
@@ -11985,7 +12550,9 @@
       "sha256": "3371351e164e858d9e8c01d4643d772dc0e02f168b21881f17d85b98903f9595",
       "lines": 58,
       "citations": [
-        55
+        45,
+        55,
+        57
       ]
     },
     "beta/scripts/prefabs/um_moonglass_ceiling.lua": {
@@ -12003,12 +12570,27 @@
         179
       ]
     },
+    "beta/scripts/prefabs/um_pepperdragon.lua": {
+      "sha256": "65f960adb2f01bae396f67076550e367f426742044231361e88bd1623f2197d4",
+      "lines": 258,
+      "citations": [
+        25
+      ]
+    },
     "beta/scripts/prefabs/um_preparedfoods.lua": {
       "sha256": "cae5a7e36182ab89cc630debf955ec0db24ec01abc89483e2a3f04ad3d5be32f",
       "lines": 184,
       "citations": [
         125,
         175
+      ]
+    },
+    "beta/scripts/prefabs/um_pyre_nettles.lua": {
+      "sha256": "1ba0e737d7804dad5bac76946df9ae1506339b140c5a76b47cc13298578d8760",
+      "lines": 363,
+      "citations": [
+        30,
+        315
       ]
     },
     "beta/scripts/prefabs/um_rimeweed.lua": {
@@ -12028,7 +12610,14 @@
         603,
         634,
         726,
-        977
+        854,
+        866,
+        977,
+        1038,
+        1056,
+        1077,
+        1083,
+        1085
       ]
     },
     "beta/scripts/prefabs/um_rocklobster_rock.lua": {
@@ -12053,6 +12642,13 @@
         18
       ]
     },
+    "beta/scripts/prefabs/um_smolder_spore.lua": {
+      "sha256": "3e5181a03a2c55231c6586f478f31136721ff079d7d204cce349f389f9d98fe0",
+      "lines": 621,
+      "citations": [
+        59
+      ]
+    },
     "beta/scripts/prefabs/um_vampirebat.lua": {
       "sha256": "83fd06cacd2837cda4477d9889dfe45fcae520d36226a63f63b5621d6e9cddbd",
       "lines": 465,
@@ -12066,6 +12662,14 @@
         345
       ]
     },
+    "beta/scripts/prefabs/umdebuff_pyre_toxin.lua": {
+      "sha256": "5bb7815d7c0e48c7d98d48aacec48ba68beaad75f76bd5b34b9248acf5e3d1b8",
+      "lines": 202,
+      "citations": [
+        60,
+        64
+      ]
+    },
     "beta/scripts/prefabs/uncompromising_buffs.lua": {
       "sha256": "a935c2a0ac63cc6cd61e08e623b7682125adcdf8007bae877f9d39c9ed548ac3",
       "lines": 453,
@@ -12074,6 +12678,14 @@
         127,
         442,
         451
+      ]
+    },
+    "beta/scripts/prefabs/uncompromising_fishingnet.lua": {
+      "sha256": "552b63635e4b412df6697462d54b4f16acdea8380f7980a20afe366da56277be",
+      "lines": 84,
+      "citations": [
+        60,
+        67
       ]
     },
     "beta/scripts/prefabs/uncompromising_hounds.lua": {
@@ -12109,6 +12721,7 @@
       "sha256": "228b812624eee82432691a1d27e74ab979d4e36263f901baac9aee4e354f09bb",
       "lines": 2245,
       "citations": [
+        148,
         1463,
         1742
       ]
@@ -12227,6 +12840,27 @@
         176
       ]
     },
+    "beta/scripts/prefabs/wixie_clock.lua": {
+      "sha256": "65aa033454cfc0b9e0e7c131f2e091cb888d1e56bce742b70ebf3d0be8376562",
+      "lines": 402,
+      "citations": [
+        55
+      ]
+    },
+    "beta/scripts/prefabs/wixie_piano.lua": {
+      "sha256": "2a43bc0bf704a30954055e06b2c1eac0be13ce97228d11fa20547da63475ccca",
+      "lines": 138,
+      "citations": [
+        35
+      ]
+    },
+    "beta/scripts/prefabs/wixie_wardrobe.lua": {
+      "sha256": "12a817f54a92af0548992b8cf88c9d36481dd7ced46fc5b32440c9ee7bb45266",
+      "lines": 148,
+      "citations": [
+        35
+      ]
+    },
     "beta/scripts/prefabs/zaspberry.lua": {
       "sha256": "1706268a63d758491593902015bd43c169bfb9aee3c43e02427dce96ea56c884",
       "lines": 170,
@@ -12240,6 +12874,15 @@
       "lines": 66,
       "citations": [
         53
+      ]
+    },
+    "beta/scripts/screens/WixiePiano.lua": {
+      "sha256": "3a94c417a92dbc243fddcf9a14fbb08891eed6bba50b886ace39867872d8ea31",
+      "lines": 223,
+      "citations": [
+        78,
+        104,
+        117
       ]
     },
     "beta/scripts/stategraphs/SGfruitbat.lua": {
@@ -12260,6 +12903,14 @@
         1297
       ]
     },
+    "beta/scripts/stategraphs/SGshadow_wixie.lua": {
+      "sha256": "481317b91a642edf476b0459f08ff64afc8045fc24178ce7deba84669a2154f8",
+      "lines": 871,
+      "citations": [
+        650,
+        659
+      ]
+    },
     "beta/scripts/stategraphs/SGsnowmong.lua": {
       "sha256": "c358cde3ae7307065bea0af5abb7c76ef75fb824890dc7e8d6abdbbf54de0552",
       "lines": 387,
@@ -12268,12 +12919,36 @@
         329
       ]
     },
+    "beta/scripts/stategraphs/SGum_pepperdragon.lua": {
+      "sha256": "013ea61c3214d05467b580794f61ded5d97bde03e2f9088c25911c858ee61b6c",
+      "lines": 503,
+      "citations": [
+        419
+      ]
+    },
+    "beta/scripts/stategraphs/SGuncompromising_fishingnetvisualizer.lua": {
+      "sha256": "e06a9a9ba7761b16a1db13e6f20a71a62d84f400ff480237255f82e8cee8bbe3",
+      "lines": 99,
+      "citations": [
+        92
+      ]
+    },
     "beta/scripts/stategraphs/SGviperworm.lua": {
       "sha256": "fab4d794482451606114be319c6d2d6008602b3cfebe8cbe1a07a160811da5ec",
       "lines": 565,
       "citations": [
         265,
         303
+      ]
+    },
+    "beta/scripts/tools/um_commonfns.lua": {
+      "sha256": "da6df40d7ae9b3d9170f75de501123b7af023428a97299773251b8c0fc147767",
+      "lines": 275,
+      "citations": [
+        22,
+        25,
+        204,
+        207
       ]
     },
     "beta/scripts/um_gemology_geode_defs.lua": {
@@ -12331,6 +13006,13 @@
         713
       ]
     },
+    "beta/scripts/widgets/snowover.lua": {
+      "sha256": "13577a365e32425b666434a3da29812b570a2c1cdf13ae852f83eafeabc99f72",
+      "lines": 245,
+      "citations": [
+        70
+      ]
+    },
     "beta/wixie_postinit/prefabs/wobybig.lua": {
       "sha256": "cdaf2e1c582d69683b17d84dc71a3590c82822e0749a793fcbf68c34e5149dde",
       "lines": 217,
@@ -12379,6 +13061,7 @@
       "sha256": "32afeae6f69f02990fb5edc5d4a38967c0779cc2ed0a3a59c35fdd85b4817658",
       "lines": 461,
       "citations": [
+        63,
         158,
         200,
         219
@@ -12392,10 +13075,16 @@
         16,
         18,
         35,
+        36,
+        38,
+        39,
         42,
         45,
         49,
         53,
+        59,
+        60,
+        61,
         78,
         81,
         82,
@@ -12411,6 +13100,8 @@
         147,
         148,
         149,
+        153,
+        154,
         168,
         176,
         177,
@@ -12422,11 +13113,13 @@
         212,
         215,
         221,
+        225,
         232,
         233,
         234,
         235,
         236,
+        237,
         248,
         251,
         254,
@@ -12449,20 +13142,31 @@
         326,
         336,
         340,
+        346,
         375,
+        425,
         426,
         433,
+        446,
+        449,
+        450,
+        455,
         457,
         461,
         467,
         474,
         550,
+        563,
+        564,
         571,
         572,
         573,
         574,
         577,
+        636,
+        637,
         664,
+        670,
         680,
         683,
         686,
@@ -12471,7 +13175,9 @@
         696,
         697,
         698,
+        699,
         701,
+        702,
         703,
         705,
         707,
@@ -12481,7 +13187,9 @@
         729,
         731,
         732,
+        735,
         739,
+        740,
         747,
         748,
         752,
@@ -12492,12 +13200,17 @@
         784,
         807,
         811,
+        815,
+        816,
+        819,
         821,
         829,
         833,
         842,
         852,
         853,
+        854,
+        859,
         864,
         866
       ]
@@ -12518,6 +13231,13 @@
       "lines": 477,
       "citations": [
         35
+      ]
+    },
+    "cn/init/init_strings_other.lua": {
+      "sha256": "82486d601b4426f6062ea6046eb39531693cc0248c3f4066591356ce9e2ea67c",
+      "lines": 135,
+      "citations": [
+        125
       ]
     },
     "cn/modinfo.lua": {

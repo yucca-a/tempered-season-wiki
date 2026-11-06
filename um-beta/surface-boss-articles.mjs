@@ -15,7 +15,7 @@ export const surfaceBossArticles=[
    ['三个变体怎么打','发蓝光的变体会先朝目标蓄力再发射激光，见到预备动作就侧移。重击变体在低于 50% 生命时能把上勾拳换成连击，且重击有击退，看到第一下后应等后续动作结束。冰圈变体会在身前放出延迟 6 秒触发的冰圈，先离开标记地面再回身。开启强化后，三种变体都会移除巨鹿的冻结组件，别依赖冰魔杖控场。'],
    ['掉落','默认档击杀掉落大肉 ×8、独眼巨鹿眼球 ×1 和独眼巨鹿雕塑草图。老兵诅咒房间设置为默认或始终开启时，掉落表另加诅咒鹿角。'],
   ],
-  related:[related('veterans-curse','老兵诅咒与额外掉落')],
+  related:[related('veterans-curse','老兵诅咒与额外掉落'),related('cursed-antler','诅咒鹿角'),related('crystal-cursed-antler','晶体诅咒鹿角')],
   sources:[cfg(944),cfg(1111),beta('init/init_tuning.lua',672),hp(62),beta('init/init_postinit.lua',400),beta('scripts/components/deerclopsspawner.lua',170),beta('postinit/prefabs/deerclops.lua',91),beta('postinit/prefabs/deerclops.lua',141),beta('postinit/prefabs/deerclops.lua',203),beta('postinit/stategraphs/SGdeerclops.lua',231),beta('postinit/stategraphs/SGdeerclops.lua',316),beta('postinit/stategraphs/SGdeerclops.lua',351),beta('postinit/stategraphs/SGdeerclops.lua',412),drops(17),names(221)],
  },
  {

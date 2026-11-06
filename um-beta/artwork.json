@@ -127,6 +127,22 @@
     "height": 57,
     "workshop": true
   },
+  "crystal_cursed_antler": {
+    "path": "assets/um-beta/crystal_cursed_antler.png",
+    "source": "images/inventoryimages/crystal_cursed_antler.tex",
+    "atlas": "images/inventoryimages/crystal_cursed_antler.xml",
+    "width": 63,
+    "height": 64,
+    "workshop": true
+  },
+  "cursed_antler": {
+    "path": "assets/um-beta/cursed_antler.png",
+    "source": "images/inventoryimages/cursed_antler.tex",
+    "atlas": "images/inventoryimages/cursed_antler.xml",
+    "width": 62,
+    "height": 64,
+    "workshop": true
+  },
   "dormant_rain_horn": {
     "path": "assets/um-beta/dormant_rain_horn.png",
     "source": "images/inventoryimages/dormant_rain_horn.tex",
@@ -189,6 +205,14 @@
     "atlas": "images/inventoryimages/glass_scales.xml",
     "width": 63,
     "height": 63,
+    "workshop": true
+  },
+  "gore_horn_hat": {
+    "path": "assets/um-beta/gore_horn_hat.png",
+    "source": "images/inventoryimages/gore_horn_hat.tex",
+    "atlas": "images/inventoryimages/gore_horn_hat.xml",
+    "width": 64,
+    "height": 60,
     "workshop": true
   },
   "hat_ratmask": {
@@ -431,6 +455,14 @@
     "height": 35,
     "workshop": true
   },
+  "silksack": {
+    "path": "assets/um-beta/silksack.png",
+    "source": "images/inventoryimages/silksack.tex",
+    "atlas": "images/inventoryimages/silksack.xml",
+    "width": 63,
+    "height": 63,
+    "workshop": true
+  },
   "skullchest_child": {
     "path": "assets/um-beta/skullchest_child.png",
     "source": "images/inventoryimages/skullchest_child.tex",
@@ -621,6 +653,14 @@
     "atlas": "images/scrapbook/snaildrake_magma.xml",
     "width": 96,
     "height": 57,
+    "workshop": true
+  },
+  "snaildrakehat": {
+    "path": "assets/um-beta/snaildrakehat.png",
+    "source": "images/inventoryimages/snaildrakehat.tex",
+    "atlas": "images/inventoryimages/snaildrakehat.xml",
+    "width": 61,
+    "height": 63,
     "workshop": true
   },
   "snappy_jaw": {

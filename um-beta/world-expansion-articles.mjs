@@ -71,7 +71,7 @@ export const worldExpansionArticles=[
   sections:[
    ['去哪里找','启用暴风雪后，冬季全域暴雪会尝试在可采植物旁生成尖刺霜草。生成检查要求世界周期严格超过冬季天气门槛，默认是 5。候选有时限定为茂密草丛、芦苇或仙人掌。已成熟的植株有自己维持的局部暴雪，全域天气结束后仍可能继续。',null,[link('snowstorms.html','全域暴风雪与防护')]],
    ['何时清理','主株有 600 生命，荆棘有 200 生命。生成半天后进入第二阶段，再过一天进入第三阶段。扩散可在周边可采植物附近连成荆棘，成熟主株受攻击还会反击并施加寒冷。打掉主株可一起清掉相连的荆棘。离开冬季后霜草会清理。'],
-   ['掉落与用途','第一阶段固定掉 1 根霜冻藤蔓。第二阶段掉 2 根，并有 25% 概率掉霜鞭。第三阶段也掉 2 根，另以各一半概率掉霜花或霜鞭。藤蔓可做霜冻外壳或下锅，霜花可用于冰镇龙舌兰。',null,[link('rimeweed-bramble-armor.html','霜冻外壳'),link('um-rimeweed-spagett.html','霜冻意面'),link('um-rimeweed-tequila.html','冰镇龙舌兰')]],
+   ['掉落与用途','第一阶段固定掉 1 根霜冻藤蔓。第二阶段掉 2 根，并有 25% 概率掉霜鞭。第三阶段也掉 2 根，另以各一半概率掉霜花或霜鞭。藤蔓可做霜冻外壳或下锅，霜花可用于冰镇龙舌兰。',null,[link('rimeweed-bramble-armor.html','霜冻外壳'),link('rimeweed-icepack.html','冰袋'),link('rime-helmet.html','霜兽头盔'),link('um-rimeweed-spagett.html','霜冻意面'),link('um-rimeweed-tequila.html','冰镇龙舌兰')]],
   ],
   sources:[cfg(451),cfg(463),beta('init/init_weather/init_harder_weather.lua',130),beta('scripts/components/um_snow_stormspawner.lua',21),beta('scripts/components/um_snow_stormspawner.lua',30),beta('scripts/components/um_snow_stormspawner.lua',121),beta('scripts/components/snowstormwatcher.lua',49),prefab('um_rimeweed',43),prefab('um_rimeweed',273),prefab('um_rimeweed',383),prefab('um_rimeweed',450),prefab('um_rimeweed',463),prefab('um_rimeweed',496),prefab('um_rimeweed',519),prefab('um_rimeweed',603),prefab('um_rimeweed',634),prefab('um_rimeweed',726),beta('init/init_recipes/recipes.lua',127),beta('scripts/um_preparedfoods.lua',660),beta('scripts/um_preparedfoods.lua',696),cn(692),cn(695),cn(696),cn(697)],
  },

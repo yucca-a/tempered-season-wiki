@@ -3967,6 +3967,26 @@
       ]
     },
     {
+      "id": "um-compat-equipment",
+      "source": [
+        "content/modmain.lua",
+        "content/modinfo.lua",
+        "content/easy_other/um_patch.lua",
+        "content/easy_other/easy_items.lua",
+        "content/easy_other/lunar_shadow_items.lua",
+        "content/role/wendy.lua",
+        "content/role/pvp.lua",
+        "content/common/patch.lua"
+      ],
+      "configKeys": [
+        "um_patch",
+        "Minotaurhorn Enchant",
+        "lunar shadow items",
+        "wendy"
+      ],
+      "auditedVersion": "2.8.14.98.6"
+    },
+    {
       "id": "update-2-8-14-98-6",
       "source": [
         "workshop/update-notes-2.8.14.98.6.txt"

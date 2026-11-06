@@ -39,6 +39,7 @@ const entryArticles=articles.map(a=>({...a,tag:'公开测试版',
   guide:guide?.makeRows?{...guide,rows:guide.makeRows(snapshot.geodePools)}:guide}))}));
 const articleById=new Map(entryArticles.map(a=>[a.id,a]));
 const articleByPrefab=new Map(entryArticles.filter(a=>a.category==='new-items'&&a.prefab).map(a=>[a.prefab,a]));
+const articleByVariantPrefab=new Map(entryArticles.flatMap(a=>(a.variantPrefabs??[]).map(id=>[id,a])));
 const artFor=id=>artwork[id]??(icons[id]?.source.startsWith('DST images.zip/')?icons[id]:null);
 function artImage(id,size,css=''){
  const art=artFor(id);
@@ -91,9 +92,10 @@ const newItems=itemGroups.flatMap(group=>group.ids.map(id=>{
  const article=group.links?.[id]??group.article;
  const recipe=recipeEntries.find(r=>r.product===id);
  const primaryArticle=id==='wathgrithr_shield_dreadstone'||id==='beakbasher';
- const href=primaryArticle?article:recipe?'recipes.html#'+recipe.anchor:article;
+ const variant=articleByVariantPrefab.get(id);
+ const href=variant?variant.id+'.html':primaryArticle?article:recipe?'recipes.html#'+recipe.anchor:article;
  return {id:'item-'+id,prefab:id,category:'new-items',title:itemName(id),href,primaryArticle,recipe,
-  summary:recipe&&!primaryArticle?'查看配方 · '+techName(recipe.tech):'查看相关玩法',group:group.title};
+  summary:recipe&&!primaryArticle&&!variant?'查看配方 · '+techName(recipe.tech):'查看相关玩法',group:group.title};
 }));
 const newItemByPrefab=new Map(newItems.map(item=>[item.prefab,item]));
 const primaryItemCards=[
@@ -225,7 +227,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   const material=r.ingredients.length?table(['材料','数量'],r.ingredients.map(i=>`<tr><td>${itemLabel(i.id)} <small>${code(i.id)}</small></td><td>${esc(i.amount)}</td></tr>`),'制作材料'):'<p>无常规物品材料。</p>';
   const gates=r.gates.map(g=>`<li>${code(g)}</li>`).join('');
   const props=Object.entries(r.requirements).filter(([,value])=>value!==false).map(([key,value])=>`<li>${requirements[key]}${value===true?'':' · '+code(value)}</li>`).join('');
-  const article=articleByPrefab.get(r.product);
+  const article=articleByPrefab.get(r.product)??articleByVariantPrefab.get(r.product);
   return `<details class="config-card recipe-card" id="${r.anchor}" data-recipe data-find="${esc(recipeSearch(r))}" data-scopes="${r.scopes.join(' ')}"><summary><span class="beta-recipe-product">${artImage(r.product,34,'recipe-product-icon')}<span class="config-summary-copy"><span class="config-title">${esc(r.title)}</span><span class="config-summary-note">${esc(r.id)}</span></span></span><span class="config-default"><span>科技</span><strong>${esc(techName(r.tech))}</strong></span></summary><div class="config-content"><div class="beta-recipe-tags">${r.scopes.filter(s=>s!=='general').map(s=>badge(recipeScope.find(([value])=>value===s)[1],g.color)).join('')}</div><h3>制作材料</h3>${material}<p>产量 ${typeof r.count==='number'?esc(r.count):'取决于 '+code(r.count)} · 科技 ${code(r.tech)}</p>${gates||props?`<h3>注册与制作条件</h3><ul>${gates}${props}</ul>`:''}${article?`<p>${link(articleHref(article),'查看物品用法 →')}</p>`:''}<details class="source-note"><summary>配方 ID 与核对来源</summary><p>${code(r.id)}${r.product!==r.id?' · 产物 '+code(r.product):''} · ${code(r.file+':'+r.line)}${r.overrides?' · 属性覆盖行 '+esc(r.overrides.join('、')):''}</p></details></div></details>`;
  }).join('')}</section>`).join('');
  const recipeIntro=titleBlock('BETA CRAFTING','制作与兑换',`收录 v${esc(betaVersion)} 的 ${recipeEntries.length} 条制作与兑换注册。按科技分组，也可按角色、配置或兼容条件筛选。`);

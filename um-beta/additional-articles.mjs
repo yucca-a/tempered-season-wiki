@@ -26,7 +26,7 @@ export const additionalArticles=[
    ['荆棘陷阱与护甲','默认一次制作 2 个荆棘陷阱，普通陷阱和荆棘护甲的刺击特效不会击中玩家。霜冻外壳有独立的冰刺特效。'],
    ['改进光合作用','点出技能后，季节切换到春季或夏季时会获得一次促进绽放的施肥效果。这两个季节也会加快有肥料时的绽放进度，阻止绽放结束阶段的自然衰减。'],
   ],
-  related:[link('rimeweed-bramble-armor','霜冻外壳')],
+  related:[link('rimeweed-bramble-armor','霜冻外壳'),link('rimeweed-icepack','冰袋'),link('moon-eye-balm','眼霜')],
   sources:[cfg(418),cfg(420),cfg(422),cfg(425),beta('init/init_tuning.lua',195),beta('init/init_tuning.lua',596),role('wormwood',24),role('wormwood',127),role('wormwood',172),role('wormwood',196),role('wormwood',237),role('skilltree_wormwood',22),beta('init/init_recipes/recipe_changes.lua',354),cn('init/init_strings/init_descriptions/skilltreestrings.lua',158)],
  },
  {

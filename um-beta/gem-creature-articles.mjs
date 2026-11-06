@@ -17,7 +17,7 @@ export const gemCreatureArticles=[
    ['生成地形与开战','在地表连帽森林找黑寡妇巢和散落的茧。默认的连帽森林配置会改造原本有月台和一处海象营地的森林区。用普通武器攻击巢附近的茧，就能引黑寡妇从树冠落下。茧附近 50 距离内有其他符合条件的大型首领时，这个触发会被拦下。击杀后默认等 20 个游戏日才能再引出一只。',null,[link('hooded-forest.html','连帽森林的地标')]],
    ['基础数值与战场','默认 12,000 生命，基础普通攻击 150，对玩家按 0.5 倍结算，基础攻击间隔 3 秒。普通挥击覆盖前方扇面，看到抬手可往侧后方绕，挥完再回头输出。战斗尽量留在巢周围，目标离巢约 24 距离时，它可能转向附近的茧进食，每口恢复 200 生命并持续到满血。'],
    ['打法与转阶段','扑击和抛网各有冷却，同时就绪时优先扑击。看到落点提示就侧移，抛网会散射 5 团蛛网，留出通道绕开蛛网区。生命降至 75%、50%、25% 时，它会尝试跳上附近巨树摇出蜘蛛。先处理落地的杂兵再继续输出，黑寡妇击中可吞食的小怪时能回 250 生命。低于 40% 后，原本的扑击分支改为连续冲锋，横移让开冲锋方向，等结束再靠近。',null,[link('hooded-widower.html','连帽伏击蜘蛛')]],
-   ['战利品与虫茧','基础掉落为怪物肉 ×4、蜘蛛丝 ×4、寡妇之爪 ×1、寡妇之颅 ×1。老兵诅咒房间设置为默认或始终开启时，另掉蛛丝背包，击杀者无需带有诅咒。选 ×1.5 或 ×2 生命档时，每份掉落分别有 25% 或 50% 概率多给一份。×3 时全部翻倍，×4 时全部翻倍且每份原始掉落再有 50% 概率给第三份。用寡妇之爪破茧后，蛞蝓龟／蜗牛龟、雪怪、蜗龙、石虾型茧可掉对应颜色的二级或三级附魔宝石。',null,[link('widows-grasp.html','寡妇之爪与开茧'),link('widows-head.html','寡妇之颅'),gemCocoons]],
+   ['战利品与虫茧','基础掉落为怪物肉 ×4、蜘蛛丝 ×4、寡妇之爪 ×1、寡妇之颅 ×1。老兵诅咒房间设置为默认或始终开启时，另掉蛛丝背包，击杀者无需带有诅咒。选 ×1.5 或 ×2 生命档时，每份掉落分别有 25% 或 50% 概率多给一份。×3 时全部翻倍，×4 时全部翻倍且每份原始掉落再有 50% 概率给第三份。用寡妇之爪破茧后，蛞蝓龟／蜗牛龟、雪怪、蜗龙、石虾型茧可掉对应颜色的二级或三级附魔宝石。',null,[link('widows-grasp.html','寡妇之爪与开茧'),link('widows-head.html','寡妇之颅'),link('silk-sack.html','蛛丝背包的产丝与打包'),gemCocoons]],
   ],
   sources:[config(539),config(1181),beta('scripts/map/tasks/forest/giant_trees.lua',1),prefab('widowwebspawner',10),prefab('widowweb',42),prefab('widowweb',75),prefab('webbedcreature',184),beta('init/init_tuning.lua',339),prefab('hoodedwidow',3),prefab('hoodedwidow',128),prefab('hoodedwidow',194),prefab('hoodedwidow',302),prefab('hoodedwidow',364),beta('scripts/brains/hoodedwidowbrain.lua',45),beta('scripts/brains/hoodedwidowbrain.lua',105),beta('scripts/brains/hoodedwidowbrain.lua',154),state('SGhoodedwidow',390),state('SGhoodedwidow',517),state('SGhoodedwidow',629),state('SGhoodedwidow',1297),beta('init/init_bosshealth.lua',120),beta('init/init_bosshealth.lua',648),beta('postinit/prefabs/vetcurse_drops.lua',9),beta('postinit/prefabs/vetcurse_drops.lua',31),beta('scripts/webbedcreatureloot.lua',404),names(235),names(236),names(303)],
  },
@@ -50,7 +50,7 @@ export const gemCreatureArticles=[
   sections:[
    ['生成地形','在地表沸腾地带找裂缝，每个裂缝能同时有一只刺壳、一只管壳蜗龙。两只活着时会结伴，死亡后各自约两个游戏日重生。'],
    ['打法','两种均为 450 生命，普通伤害 25，基础攻击间隔 4 秒。靠近会引发仇恨，攻击其中一只也可能引来另一只。它们会朝目标位置吐出投射物，避开落点并绕开残留物，趁其中一只缩壳时调整站位。两种都免疫火焰伤害。'],
-   ['掉落与红色宝石','两种都固定掉 2 个爆燃黏液。刺壳有 50% 概率掉蜗龙角盔，管壳有 50% 概率掉蜗龙盆，没出装备时改掉壳碎片。交红色附魔宝石可换同级、升级宝石或补偿，交易后会对玩家中立。蓝色附魔宝石会激怒它。',null,[gemTrade,gemCocoons]],
+   ['掉落与红色宝石','两种都固定掉 2 个爆燃黏液。刺壳有 50% 概率掉蜗龙角盔，管壳有 50% 概率掉蜗龙盆，没出装备时改掉壳碎片。交红色附魔宝石可换同级、升级宝石或补偿，交易后会对玩家中立。蓝色附魔宝石会激怒它。',null,[gemTrade,gemCocoons,link('snaildrake-helmet.html','蜗龙头盔的用法')]],
   ],
   sources:[beta('scripts/map/rooms/forest/UM_BoilingFields.lua',47),prefab('snaildrake_hole',16),prefab('snaildrake_hole',64),prefab('snaildrake',19),prefab('snaildrake',31),prefab('snaildrake',71),prefab('snaildrake',89),prefab('snaildrake',149),prefab('snaildrake',252),prefab('snaildrake',321),beta('init/init_gemology/trades.lua',87),beta('init/init_gemology/trades.lua',183),names(664)],
  },

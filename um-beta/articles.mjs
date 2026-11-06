@@ -7,6 +7,9 @@ import { caveBossArticles } from './cave-boss-articles.mjs';
 import { creatureArticles } from './creature-articles.mjs';
 import { surfaceBossArticles } from './surface-boss-articles.mjs';
 import { worldExpansionArticles } from './world-expansion-articles.mjs';
+import { bossRewardArticles } from './boss-reward-articles.mjs';
+import { equipmentExpansionArticles } from './equipment-expansion-articles.mjs';
+import { toolExpansionArticles } from './tool-expansion-articles.mjs';
 import { effectTable, gemEffects, tradeTable } from './gemology-tables.mjs';
 import { gemSources, gemSourceTitle, geodeSources, geodeSourceTitle, sourceJumps } from './gemology-sources.mjs';
 
@@ -60,7 +63,7 @@ export const articles=[
   sections:[
    ['计时与嗅探','默认开启。周期计时默认 9,600 秒，嗅探间隔默认 120 秒。周期嗅探要等世界周期计数严格大于宽限值，默认宽限值为 30。默认森林地表挂载鼠潮组件，普通洞穴没有这一路径。'],
    ['食物和容器','鼠群会检查附近鼠穴与食物。地面上不新鲜或腐坏的食物比存进容器的同类食物贡献更多嗅探分，料理按双倍计算，食物堆叠数量也计入。关闭木箱、冰箱、盐盒等容器以及收获锅中料理，可发出独立的鼠潮事件。'],
-   ['宽限的适用范围','容器事件分支独立于周期宽限。在满足玩家附近的实体数量、可用位置与袭击状态条件时，可提前进入预警。'],
+   ['宽限的适用范围','容器事件分支独立于周期宽限。在满足玩家附近的实体数量、可用位置与袭击状态条件时，可提前进入预警。',null,[{href:'rat-poison.html',label:'用毒果酱陷阱处理鼠群'}]],
   ],
   sources:[cfg(229),cfg(578),beta('init/init_ratraid.lua',4),beta('init/init_ratraid.lua',35),beta('scripts/components/ratcheck.lua',213),beta('scripts/components/ratcheck.lua',301),beta('scripts/prefabs/uncompromising_rat.lua',1742),names(18)],
  },
@@ -80,8 +83,8 @@ export const articles=[
   configs:['snowstorms','weatherhazard_winter'],
   sections:[
    ['触发','暴风雪默认开启。进入冬季或载入世界时，世界周期达到默认门槛 5 后可以启动或恢复计时。新计时为 3 个游戏日再加 0–120 秒。计时到期后，通常先预警约 60 秒，再进入持续 320–360 秒的暴雪。冬季结束会停止暴雪与计时。'],
-   ['移动和防护','全域暴雪或局部暴雪中，无防护玩家移速乘 0.75。护目镜视野、骑乘、熊皮背心、雨罩，或角色 6 单位内有适用的墙、火或掩体，均可免去该移动惩罚。'],
-   ['雪堆','玩家监测器可以在暴雪中生成雪堆。建筑脚本中隐藏容器的积雪逻辑当前处于注释状态，岩浆池和龙鳞火炉等仍有防雪堆标签。',null,[{href:'rimeweed.html',label:'尖刺霜草与局部暴雪'},{href:'snowmong.html',label:'雪怪与雪堆'}]],
+   ['移动和防护','全域暴雪或局部暴雪中，无防护玩家移速乘 0.75。护目镜视野、骑乘、熊皮背心、雨罩，或角色 6 单位内有适用的墙、火或掩体，均可免去该移动惩罚。',null,[{href:'snow-goggles.html',label:'猫眼护目镜的用法'},{href:'rime-helmet.html',label:'查霜兽头盔'}]],
+   ['雪堆','玩家监测器可以在暴雪中生成雪堆。建筑脚本中隐藏容器的积雪逻辑当前处于注释状态，岩浆池和龙鳞火炉等仍有防雪堆标签。',null,[{href:'rimeweed.html',label:'尖刺霜草与局部暴雪'},{href:'snowmong.html',label:'雪怪与雪堆'},{href:'saltpack.html',label:'用盐瓶3000除雪'}]],
   ],
   sources:[cfg(451),cfg(463),beta('init/init_weather/init_harder_weather.lua',130),...[11,100,123,141,176].map(line=>beta('scripts/components/um_snow_stormspawner.lua',line)),beta('scripts/components/snowstormwatcher.lua',45),beta('init/init_weather/init_snowstorm_structures.lua',126),names(35),names(692)],
  },
@@ -107,7 +110,7 @@ export const articles=[
    ['晶洞掉落','把晶洞放在地上，用镐敲开。每个晶洞抽三次普通材料、一次宝石池，并有 5% 概率额外抽一次宝石池。抽到附魔宝石后再判定品质，一级 95%、二级 4%、三级 1%。',null,[{href:'#gemology-s7',label:'按宝石查来源'},{href:'#gemology-s8',label:'按地形查晶洞'}]],
    ['锻造台操作','第一槽放装备，第二槽放宝石。装备与宝石相容时才能附魔。成功会消耗宝石，新附魔耐久设满。重复同种附魔会替换同种，槽满时新增不同种会移除旧附魔。普通附魔组件默认一个槽，具体装备可以有特例。',null,[{href:'mending-kit.html',label:'修补装备与附魔耐久'}]],
    ['配置的作用','宝石学和世界生成总开关默认开启，共同控制新洞穴的宝石学地形与资源。既有地图不会因打开这两个开关而补生成相应房间。已有装备与附魔还涉及单独载入的运行代码。'],
-   ['鉴定工具','宝石放大镜有 100 点鉴定耐久，远古宝石放大镜和宝石熔岩镜各有 400 点。可以鉴定整叠宝石，每枚消耗 1 点耐久。耐久不足时，只会鉴定能够负担的数量。'],
+   ['鉴定工具','宝石放大镜有 100 点鉴定耐久，远古宝石放大镜和宝石熔岩镜各有 400 点。可以鉴定整叠宝石，每枚消耗 1 点耐久。耐久不足时，只会鉴定能够负担的数量。',null,[{href:'gem-magnifiers.html',label:'放大镜的制作、鉴定与耐久'}]],
    ['宝石升级与交易速查','以下概率按单颗宝石结算，适用于各颜色的两种附魔宝石。三级已经封顶，交出去有风险。红色交蜗龙只有 25% 留在三级，绿色交龟类只有 40% 留在三级。蚁狮和石虾都不会返还三级，雪怪吃下三级蓝色只掉普通蓝宝石。',tradeTable],
    ['三级附魔效果','汉化中的「碎裂的」「微瑕的」「无暇的」分别对应一级、二级、三级。表中同时列出装备附魔和角色组件触发的效果，涉及移速、工作、战斗、理智和拾取。装备自身还须支持附魔。',effectTable],
    [gemSourceTitle,'同色的两种宝石，能掉落它们的晶洞也可能不同。表中百分比是每次从该晶洞的宝石池抽取时，命中指定宝石的概率，已计入普通宝石等候选掉落。点击晶洞名可查看对应的地形和采集方法。',gemSources],
@@ -145,6 +148,7 @@ export const articles=[
    ['角色与译名','相关配置默认开启。薇希的生命为 130、饥饿 150、理智 200。汉化的角色初始化写作「薇希」，角色专用文本又使用「薇茜」。两种写法都可搜索。'],
    ['幽闭恐惧','附近战斗生物、躲藏、骑乘、邻近墙壁或树木以及部分护具都会影响幽闭恐惧。部分头部和身体护甲各增加 0.2 的基础影响。累积到 100% 触发恐慌，降到 0 后解除并进入 10 秒冷却。'],
    ['弹弓','专属弹弓包括浮木弹弓-玛蒂尔达、活木弹弓-切齿、绝望弹弓-杰西和光芒弹弓-克莱尔。杰西和克莱尔分别在暗影与月亮制作站制作，最终生效的配方仅检查薇希制作标签和制作站。'],
+   ['衣橱谜题','解开地表的钢琴、破旧玩具与摆钟谜题可召出暗影薇希，击败后获得滑行手杖。薇希使用手杖冲刺时会把敌人推得更远。',null,[{href:'charlies-slider.html#charlies-slider-s2',label:'滑行手杖与衣橱谜题解法'}]],
   ],
   sources:[beta('modmain.lua',355),beta('modmain.lua',382),beta('scripts/prefabs/wixie.lua',77),beta('scripts/prefabs/wixie.lua',176),beta('init/init_recipes/init_recipes.lua',84),beta('init/init_recipes/recipes_wixie.lua',11),beta('init/init_recipes/recipes_wixie.lua',141),character(18),cn('wixie_postinit/wixie_strings.lua',9),names(571)],
  },
@@ -166,9 +170,9 @@ export const articles=[
   sections:[
    ['何时出现','额外夏季龙蝇默认开启。常规生成要求地表有活跃玩家、当前为夏季，世界周期高于房间档位，默认档位为 26。世界周期高于 50 后，在满月或天体祭坛激活的条件下，生成器可改用月光龙蝇。'],
    ['时令龙蝇','默认 4,000 生命。基础单次攻击为 125，面对玩家另有 0.5 倍伤害系数。基础掉落是 8 大肉和 1 鳞片。'],
-   ['月光龙蝇','默认 8,000 生命，基础单次攻击为 100，面对玩家有 0.5 倍伤害系数。免疫火焰，半血会刷新玻璃熔岩虫。基础掉落为 8 大肉、1 启迪鳞片、3 注能的玻璃碎片。'],
+   ['月光龙蝇','默认 8,000 生命，基础单次攻击为 100，面对玩家有 0.5 倍伤害系数。免疫火焰，半血会刷新玻璃熔岩虫。基础掉落为 8 大肉、1 启迪鳞片和 3 个可开采的注能玻璃晶体（汉化名称为「注能的玻璃碎片」）。每个晶体放在地上开采一次，产出 6–10 个注能月亮碎片。',null,[{href:'moon-scale-armor.html#moon-scale-armor-s1',label:'月鳞甲的制作材料'}]],
   ],
-  sources:[cfg(927),cfg(1237),cfg(1349),beta('scripts/components/mock_dragonflyspawner.lua',56),beta('scripts/components/mock_dragonflyspawner.lua',186),beta('scripts/prefabs/mock_dragonfly.lua',467),beta('scripts/prefabs/moonmaw_dragonfly.lua',633),names(53)],
+  sources:[cfg(927),cfg(1237),cfg(1349),beta('scripts/components/mock_dragonflyspawner.lua',56),beta('scripts/components/mock_dragonflyspawner.lua',186),beta('scripts/prefabs/mock_dragonfly.lua',467),beta('scripts/prefabs/moonmaw_dragonfly.lua',356),beta('scripts/prefabs/moonmaw_dragonfly.lua',633),beta('scripts/prefabs/glass_scales.lua',2),beta('scripts/prefabs/glass_scales.lua',43),names(53),names(60)],
  },
  {
   id:'dreadstone-shield',category:'new-items',title:'绝望石圆盾',aliases:['Dreadstone Shield','女武神','维格弗德'],
@@ -197,8 +201,9 @@ export const articles=[
   sections:[
    ['房间档位','默认档允许通过头骨洞窟开启，已激活的状态可随存档恢复。始终开启档会在玩家初始化时施加诅咒。房间另有关闭档。'],
    ['角色差异','诅咒有角色专属效果。例如温奇会失去 5 个普通物品栏槽位。客户端可单独切换诅咒图标显示。'],
+   ['首领装备','默认与始终开启档会让部分首领追加装备掉落，击杀者无需受诅咒。穿戴带有诅咒要求的装备时，通常要先让角色进入老兵诅咒状态。',null,[{href:'gore-horn-hat.html',label:'犀牛帽'},{href:'silk-sack.html',label:'蛛丝背包'},{href:'cursed-antler.html',label:'诅咒鹿角'}]],
   ],
-  sources:[cfg(146),cfg(231),beta('init/init_vetcurse.lua',173),beta('scripts/prefabs/veteranshrine.lua',72),beta('scripts/map/tasks/forest/make_a_pick.lua',6),beta('scripts/prefabs/winky.lua',170),names(78),cn('init/init_strings/init_strings.lua',267)],
+  sources:[cfg(146),cfg(231),beta('init/init_vetcurse.lua',173),beta('scripts/prefabs/veteranshrine.lua',72),beta('scripts/map/tasks/forest/make_a_pick.lua',6),beta('scripts/prefabs/winky.lua',170),beta('postinit/prefabs/vetcurse_drops.lua',9),beta('scripts/tools/um_commonfns.lua',204),names(78),cn('init/init_strings/init_strings.lua',267)],
  },
  {
   id:'dread-eye',category:'creatures',title:'恐惧之眼',aliases:['Dread Eye','暗影生物','影怪'],
@@ -243,4 +248,7 @@ export const articles=[
  ...creatureArticles,
  ...surfaceBossArticles,
  ...worldExpansionArticles,
+ ...bossRewardArticles,
+ ...equipmentExpansionArticles,
+ ...toolExpansionArticles,
 ];

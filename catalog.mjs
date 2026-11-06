@@ -15,7 +15,7 @@ export const protectedIconNames=JSON.parse(await fs.readFile(new URL('./data/ico
 export const notes={};
 export const articles=structuredClone(initial);
 const sourceAuditVersion='2.8.14.97.4';
-for(const part of ['general','items','characters','world']){
+for(const part of ['general','items','characters','world','um-compat-equipment']){
   try {
     const content=await import(`./research/${part}.mjs`);
     articles.push(...(content.articles??[]));
@@ -92,7 +92,7 @@ const itemReadingLinks={
  'shadow-boat':['crabking-bumper','fast-malbatross-sail'],
  'rift-equipment-changes':['wagpunk-rift-upgrade','rift-bearger-bin','shadow-battleaxe-rift','shadow-beef-bell','infused-lunar-sword'],
  'rift-bearger-bin':['eternal-bearger-bin'], 'shadow-beef-bell':['upgraded-beefalo-bell'],
- 'horn-enchant':['multitool','thulecite-club'],
+ 'horn-enchant':['multitool','thulecite-club','um-compat-equipment'],
  'multitool':['equipment-repair','horn-enchant'], 'thulecite-club':['equipment-repair','horn-enchant'],
  'infused-glass-cutter':['equipment-repair','infused-nightsword'],
  'bone-helm':['shadow-thurible'], 'shadow-thurible':['bone-helm']
