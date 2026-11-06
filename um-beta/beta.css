@@ -59,6 +59,7 @@
 .guide-trades thead th:nth-child(3),.guide-trades thead th:nth-child(4){width:12%}
 .guide-trades thead th:last-child{width:48%}
 .guide-gem-sources thead th:first-child{width:32%}
+.guide-gem-sources thead th:last-child{width:68%}
 .guide-geode-sources thead th:first-child{width:24%}
 .guide-geode-sources thead th:nth-child(2){width:25%}
 .guide-geode-sources thead th:last-child{width:51%}
