@@ -359,6 +359,14 @@
     "height": 64,
     "workshop": true
   },
+  "seafoodpaella": {
+    "path": "assets/um-beta/seafoodpaella.png",
+    "source": "images/inventoryimages/seafoodpaella.tex",
+    "atlas": "images/inventoryimages/seafoodpaella.xml",
+    "width": 64,
+    "height": 40,
+    "workshop": true
+  },
   "shroom_skin_fragment": {
     "path": "assets/um-beta/shroom_skin_fragment.png",
     "source": "images/inventoryimages/shroom_skin_fragment.tex",
@@ -559,6 +567,14 @@
     "height": 59,
     "workshop": true
   },
+  "snowcone": {
+    "path": "assets/um-beta/snowcone.png",
+    "source": "images/inventoryimages/snowcone.tex",
+    "atlas": "images/inventoryimages/snowcone.xml",
+    "width": 64,
+    "height": 60,
+    "workshop": true
+  },
   "snowgoggles": {
     "path": "assets/um-beta/snowgoggles.png",
     "source": "images/inventoryimages/snowgoggles.tex",
@@ -573,6 +589,14 @@
     "atlas": "images/inventoryimages/sporepack.xml",
     "width": 60,
     "height": 63,
+    "workshop": true
+  },
+  "stuffed_peeper_poppers": {
+    "path": "assets/um-beta/stuffed_peeper_poppers.png",
+    "source": "images/inventoryimages/stuffed_peeper_poppers.tex",
+    "atlas": "images/inventoryimages/stuffed_peeper_poppers.xml",
+    "width": 61,
+    "height": 36,
     "workshop": true
   },
   "the_real_charles_t_horse": {
@@ -767,6 +791,14 @@
     "height": 58,
     "workshop": true
   },
+  "um_boom_tart": {
+    "path": "assets/um-beta/um_boom_tart.png",
+    "source": "images/inventoryimages/um_boom_tart.tex",
+    "atlas": "images/inventoryimages/um_boom_tart.xml",
+    "width": 62,
+    "height": 63,
+    "workshop": true
+  },
   "um_boomberry_bomb": {
     "path": "assets/um-beta/um_boomberry_bomb.png",
     "source": "images/inventoryimages/um_boomberry_bomb.tex",
@@ -775,12 +807,28 @@
     "height": 55,
     "workshop": true
   },
+  "um_boomberrypie": {
+    "path": "assets/um-beta/um_boomberrypie.png",
+    "source": "images/inventoryimages/um_boomberrypie.tex",
+    "atlas": "images/inventoryimages/um_boomberrypie.xml",
+    "width": 52,
+    "height": 54,
+    "workshop": true
+  },
   "um_detonator": {
     "path": "assets/um-beta/um_detonator.png",
     "source": "images/inventoryimages/um_detonator.tex",
     "atlas": "images/inventoryimages/um_detonator.xml",
     "width": 58,
     "height": 58,
+    "workshop": true
+  },
+  "um_durian_cream_marshcake": {
+    "path": "assets/um-beta/um_durian_cream_marshcake.png",
+    "source": "images/inventoryimages/um_durian_cream_marshcake.tex",
+    "atlas": "images/inventoryimages/um_durian_cream_marshcake.xml",
+    "width": 64,
+    "height": 41,
     "workshop": true
   },
   "um_eyebalm": {
@@ -989,6 +1037,14 @@
     "atlas": "images/inventoryimages/um_gemologyyellowgem2.xml",
     "width": 54,
     "height": 55,
+    "workshop": true
+  },
+  "um_ghost_fajita": {
+    "path": "assets/um-beta/um_ghost_fajita.png",
+    "source": "images/inventoryimages/um_ghost_fajita.tex",
+    "atlas": "images/inventoryimages/um_ghost_fajita.xml",
+    "width": 60,
+    "height": 49,
     "workshop": true
   },
   "um_ghost_pepper_item": {
@@ -1215,6 +1271,14 @@
     "height": 64,
     "workshop": true
   },
+  "um_rice_pudding": {
+    "path": "assets/um-beta/um_rice_pudding.png",
+    "source": "images/inventoryimages/um_rice_pudding.tex",
+    "atlas": "images/inventoryimages/um_rice_pudding.xml",
+    "width": 64,
+    "height": 63,
+    "workshop": true
+  },
   "um_rimeweed_icepack": {
     "path": "assets/um-beta/um_rimeweed_icepack.png",
     "source": "images/inventoryimages/um_rimeweed_icepack.tex",
@@ -1239,6 +1303,22 @@
     "height": 42,
     "workshop": true
   },
+  "um_rimeweed_spagett": {
+    "path": "assets/um-beta/um_rimeweed_spagett.png",
+    "source": "images/inventoryimages/um_rimeweed_spagett.tex",
+    "atlas": "images/inventoryimages/um_rimeweed_spagett.xml",
+    "width": 64,
+    "height": 50,
+    "workshop": true
+  },
+  "um_rimeweed_tequila": {
+    "path": "assets/um-beta/um_rimeweed_tequila.png",
+    "source": "images/inventoryimages/um_rimeweed_tequila.tex",
+    "atlas": "images/inventoryimages/um_rimeweed_tequila.xml",
+    "width": 40,
+    "height": 64,
+    "workshop": true
+  },
   "um_scrapper": {
     "path": "assets/um-beta/um_scrapper.png",
     "source": "images/inventoryimages/um_scrapper.tex",
@@ -1253,6 +1333,14 @@
     "atlas": "images/inventoryimages/um_smolder_spore.xml",
     "width": 52,
     "height": 48,
+    "workshop": true
+  },
+  "um_sponge_cake": {
+    "path": "assets/um-beta/um_sponge_cake.png",
+    "source": "images/inventoryimages/um_sponge_cake.tex",
+    "atlas": "images/inventoryimages/um_sponge_cake.xml",
+    "width": 59,
+    "height": 41,
     "workshop": true
   },
   "um_spongeplant_item": {

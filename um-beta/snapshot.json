@@ -8030,12 +8030,15 @@
         "UM_CONFIG.WIXIE_WALTER"
       ],
       "requirements": {
-        "builder_tag": "skill_wixie_allegiance_shadow",
+        "builder_tag": "pebblemaker",
         "station_tag": "shadow_forge",
         "nounlock": true
       },
       "file": "init/init_recipes/recipes_wixie.lua",
-      "line": 19
+      "line": 19,
+      "overrides": [
+        141
+      ]
     },
     {
       "id": "slingshot_claire",
@@ -8056,12 +8059,15 @@
         "UM_CONFIG.WIXIE_WALTER"
       ],
       "requirements": {
-        "builder_tag": "skill_wixie_allegiance_lunar",
+        "builder_tag": "pebblemaker",
         "station_tag": "lunar_forge",
         "nounlock": true
       },
       "file": "init/init_recipes/recipes_wixie.lua",
-      "line": 24
+      "line": 24,
+      "overrides": [
+        142
+      ]
     },
     {
       "id": "bagofmarbles",
@@ -8625,6 +8631,10 @@
       "en": "Elastispacer",
       "zh": "弹性空间制造器"
     },
+    "cookpot": {
+      "en": "Crock Pot",
+      "zh": "烹饪锅"
+    },
     "coontail": {
       "en": "Cat Tail",
       "zh": "猫尾"
@@ -9129,6 +9139,10 @@
       "en": "Horizon Expandinator",
       "zh": "视界扩展器"
     },
+    "seafoodpaella": {
+      "en": "Seafood Paella",
+      "zh": "海鲜饭"
+    },
     "seeds": {
       "en": "Seeds",
       "zh": "种子"
@@ -9273,6 +9287,10 @@
       "en": "Snowball",
       "zh": "雪球"
     },
+    "snowcone": {
+      "en": "Snowcone",
+      "zh": "冰沙"
+    },
     "snowgoggles": {
       "en": "Cats-Eye Goggles",
       "zh": "猫眼护目镜"
@@ -9300,6 +9318,10 @@
     "steeringwheel_item": {
       "en": "Steering Wheel Kit",
       "zh": "方向舵套装"
+    },
+    "stuffed_peeper_poppers": {
+      "en": "Stuffed Peeper Poppers",
+      "zh": "榴莲酿眼球"
     },
     "the_real_charles_t_horse": {
       "en": "Charles T. Horse",
@@ -9425,13 +9447,25 @@
       "en": "Transgros Bomb",
       "zh": "跨巨型气体炸弹"
     },
+    "um_boom_tart": {
+      "en": "Boomberry Tart",
+      "zh": "爆汁蓝莓挞"
+    },
     "um_boomberry_bomb": {
       "en": "Boomberry Bomb",
       "zh": "爆汁蓝莓炸弹"
     },
+    "um_boomberrypie": {
+      "en": "Boomberry Pie",
+      "zh": "爆汁蓝莓派"
+    },
     "um_detonator": {
       "en": "Universal Detonator",
       "zh": "万能引爆器"
+    },
+    "um_durian_cream_marshcake": {
+      "en": "Durian Cream Marshcake",
+      "zh": "榴莲奶油软糖蛋糕"
     },
     "um_eyebalm": {
       "en": "Eye Balm",
@@ -9536,6 +9570,10 @@
     "um_gemologyyellowgem2": {
       "en": "Static Amber",
       "zh": "静电琥珀"
+    },
+    "um_ghost_fajita": {
+      "en": "Ghastly Fajita",
+      "zh": "恐怖卷饼"
     },
     "um_ghost_pepper_item": {
       "en": "Ghost Pepper",
@@ -9657,6 +9695,10 @@
       "en": "Bone Mound",
       "zh": "骸骨堆"
     },
+    "um_rice_pudding": {
+      "en": "Rice Pudding",
+      "zh": "米布丁"
+    },
     "um_rimeweed_icepack": {
       "en": "Ice Pack",
       "zh": "冰袋"
@@ -9669,6 +9711,14 @@
       "en": "Frosty Vine",
       "zh": "霜冻藤蔓"
     },
+    "um_rimeweed_spagett": {
+      "en": "Spaghetti Cryonara",
+      "zh": "霜冻意面"
+    },
+    "um_rimeweed_tequila": {
+      "en": "Chillquilla",
+      "zh": "冰镇龙舌兰"
+    },
     "um_scrapper": {
       "en": "Ancient Scrapper",
       "zh": "远古拆解机"
@@ -9676,6 +9726,10 @@
     "um_smolder_spore": {
       "en": "Smolder Spore",
       "zh": "荨麻孢子"
+    },
+    "um_sponge_cake": {
+      "en": "Swiss Sponge Cake",
+      "zh": "多孔海绵蛋糕"
     },
     "um_spongeplant_item": {
       "en": "Swiss Sponge Chunks",
@@ -9712,6 +9766,18 @@
     "walrus_tusk": {
       "en": "Walrus Tusk",
       "zh": "海象牙"
+    },
+    "walter": {
+      "en": "Walter",
+      "zh": "沃尔特"
+    },
+    "wanda": {
+      "en": "Wanda",
+      "zh": "旺达"
+    },
+    "warly": {
+      "en": "Warly",
+      "zh": "沃利"
     },
     "watermelon": {
       "en": "Watermelon",
@@ -9817,6 +9883,22 @@
       "en": "Codex Umbra",
       "zh": "暗影秘典"
     },
+    "wendy": {
+      "en": "Wendy",
+      "zh": "温蒂"
+    },
+    "wes": {
+      "en": "Wes",
+      "zh": "韦斯"
+    },
+    "willow": {
+      "en": "Willow",
+      "zh": "薇洛"
+    },
+    "winona": {
+      "en": "Winona",
+      "zh": "薇诺娜"
+    },
     "winona_toolbox": {
       "en": "Contraption Container",
       "zh": "器械箱"
@@ -9833,9 +9915,17 @@
       "en": "woby_treat_small",
       "zh": null
     },
+    "woodie": {
+      "en": "Woodie",
+      "zh": "伍迪"
+    },
     "woodpecker": {
       "en": "Woodpecker",
       "zh": "啄木鸟"
+    },
+    "wurt": {
+      "en": "Wurt",
+      "zh": "沃特"
     },
     "yellowamulet": {
       "en": "Magiluminescence",
@@ -9901,14 +9991,101 @@
     "ratpoisonbottle",
     "rat_tail"
   ],
+  "articleArtIds": [
+    "blueberrypancakes",
+    "cookpot",
+    "powercell",
+    "seafoodpaella",
+    "slingshot_claire",
+    "slingshot_gnasher",
+    "slingshot_jessie",
+    "slingshot_matilda",
+    "snowcone",
+    "stuffed_peeper_poppers",
+    "um_backpack_amuletuse",
+    "um_boom_tart",
+    "um_boomberrypie",
+    "um_durian_cream_marshcake",
+    "um_gemology_pouch",
+    "um_gemologybluegem1",
+    "um_gemologybluegem2",
+    "um_gemologygreengem1",
+    "um_gemologygreengem2",
+    "um_gemologyorangegem1",
+    "um_gemologyorangegem2",
+    "um_gemologypalegem1",
+    "um_gemologypalegem2",
+    "um_gemologypurplegem1",
+    "um_gemologypurplegem2",
+    "um_gemologyredgem1",
+    "um_gemologyredgem2",
+    "um_gemologyyellowgem1",
+    "um_gemologyyellowgem2",
+    "um_ghost_fajita",
+    "um_rice_pudding",
+    "um_rimeweed_spagett",
+    "um_rimeweed_tequila",
+    "um_sponge_cake",
+    "walter",
+    "wanda",
+    "warly",
+    "wendy",
+    "wes",
+    "willow",
+    "winona",
+    "winona_toolbox",
+    "winona_upgradekit_electrical",
+    "woodie",
+    "wurt"
+  ],
   "sourceFiles": {
     "beta/init/init_actions.lua": {
       "sha256": "46a894b619a08c2319ae4b0fecacd338531184f501e9674d9b8cc9fa8da5941d",
       "lines": 949
     },
+    "beta/init/init_character_changes/walter.lua": {
+      "sha256": "2a6cff7dafac65a32ebf15fcf4dc2f56370113dce3c5035f51159de62b22b239",
+      "lines": 74
+    },
+    "beta/init/init_character_changes/wanda.lua": {
+      "sha256": "a9aae288576401a65027a881a1e4b14704842cd6c8cf6c539ac5027467189632",
+      "lines": 229
+    },
+    "beta/init/init_character_changes/warly.lua": {
+      "sha256": "3e60a68ab96f60e582a3dc20656cc7d7dd2974a506b89a2968b4e862f9f36f9d",
+      "lines": 144
+    },
+    "beta/init/init_character_changes/wes.lua": {
+      "sha256": "496d88259824dcfbd01aba6fc1c0108aeeaedefb6dd0c1feaf01b899f46109df",
+      "lines": 150
+    },
+    "beta/init/init_character_changes/willow.lua": {
+      "sha256": "a993a5ed44ba1a1e57690f18b0d4f34342e6bf2c5642c10ca62ac79abd10233c",
+      "lines": 54
+    },
+    "beta/init/init_character_changes/willow_bernie.lua": {
+      "sha256": "ddf87dccf2cc51ef937af7e0aa2583fab2fcf8fdcf22c3d07f5783c835dab76d",
+      "lines": 27
+    },
+    "beta/init/init_character_changes/winona.lua": {
+      "sha256": "4f971e474cc6762efe0f51bdba8094d4bc1aa98fe04625ccc191153007a0c51f",
+      "lines": 503
+    },
+    "beta/init/init_character_changes/woodie.lua": {
+      "sha256": "dc455744d1e9e2692ebb98b7d9a591a3cec60f084049c797ae6e4c7da422f814",
+      "lines": 115
+    },
+    "beta/init/init_character_changes/wurt.lua": {
+      "sha256": "f1426b9b1eac8f4f38ec599f3adcedae7a21e1656639ed3144f070bc653932d1",
+      "lines": 47
+    },
     "beta/init/init_configs.lua": {
       "sha256": "a12c559e95503da88cf02c2ad12983da8558ad52d6a1b62940ba7b84819f39e7",
       "lines": 60
+    },
+    "beta/init/init_containers.lua": {
+      "sha256": "825105cf0020fcf64e7254a4e97249c3e196264b7037da8c1139db1d00415a42",
+      "lines": 1050
     },
     "beta/init/init_creatures/init_harder_shadows.lua": {
       "sha256": "2cdd9ab155beeb56357d34b59fcc0d28c8f1f3d03ae0207a139907fa6728a8c9",
@@ -9918,6 +10095,10 @@
       "sha256": "b84117209559f621dc4a4c0187757a48b5223c510b7b637013ca8b0d3aa86222",
       "lines": 187
     },
+    "beta/init/init_food/init_crockpot.lua": {
+      "sha256": "89c3796f2ba0723bddaae152ed347d2e6a790ea658098d65f98b16bf7a3cfef4",
+      "lines": 697
+    },
     "beta/init/init_food/init_foodregen.lua": {
       "sha256": "6a4b3f7bf308101cc52172ec0205b820fabcb898f2bf7193cc8a1d113e8f27fe",
       "lines": 88
@@ -9925,6 +10106,14 @@
     "beta/init/init_gamemodes/init_uncompromising_mode.lua": {
       "sha256": "6f46bd19c8a8358be88accfce92ac93dca8762369350d3c74afd0885c0e2c90e",
       "lines": 265
+    },
+    "beta/init/init_gemology/special.lua": {
+      "sha256": "7e5a68b2edb88f8776324c9cee405cd1c52973965c3a5f299e78942927000744",
+      "lines": 179
+    },
+    "beta/init/init_gemology/trades.lua": {
+      "sha256": "1214f203e13bdcaa5d44674e2c4e4d85ef60264dff467d3b90a1793777b84072",
+      "lines": 554
     },
     "beta/init/init_postinit.lua": {
       "sha256": "f3fc4ef9eea53ee7d8c77e019e4499b9e9f82bf8aca9f8f79fd03dbaee1875ee",
@@ -9982,9 +10171,33 @@
       "sha256": "32c535951a31ddecaefbb7eb04c8a8c35846635c2bca9f7e29205872cdb0e392",
       "lines": 469
     },
+    "beta/postinit/components/freezable.lua": {
+      "sha256": "c1acedb1091ed40bc9f2f94a8f78e649485a21424d02c5b893ff82e5442b62b3",
+      "lines": 31
+    },
+    "beta/postinit/components/health.lua": {
+      "sha256": "90f8f584bb867640ede6eed098cbffbf19d31eccca3c6a22b2a708b410dd1b9d",
+      "lines": 271
+    },
+    "beta/postinit/components/oldager.lua": {
+      "sha256": "aa13884d1188cc15b57fba5d0db01da31fc50583a679afa77c9531a843f71b57",
+      "lines": 13
+    },
     "beta/postinit/prefabs/heatrock.lua": {
       "sha256": "393cd53a4483aad05475c76affbd3f04088ae714069b8e23049d4bd3ba13838c",
       "lines": 37
+    },
+    "beta/postinit/prefabs/lantern.lua": {
+      "sha256": "0a896267dcdaf6494f9c0e7918f519c22620400ab9c96a8524706b59822ceb65",
+      "lines": 87
+    },
+    "beta/postinit/prefabs/minerhat.lua": {
+      "sha256": "a91abc6ba0c828ef3ab87e667b97a156e25a93ae294764c551e523e519b13405",
+      "lines": 78
+    },
+    "beta/postinit/prefabs/petals.lua": {
+      "sha256": "bc93f76f16934c6871a94f770d51a41ee5d132c791f7067755ff4905b6037653",
+      "lines": 24
     },
     "beta/scripts/components/gem_enchantable.lua": {
       "sha256": "cec58c057952b6597c13bebb070fa3fa949ac83ea877126d83920e32e80d4746",
@@ -9993,6 +10206,10 @@
     "beta/scripts/components/gemologyscanner.lua": {
       "sha256": "c12ab98b282a2c3e2f53f2b029c0145b5632e92042f8c6fc90cb7451f8cb84d6",
       "lines": 63
+    },
+    "beta/scripts/components/hayfever.lua": {
+      "sha256": "d254756db78cf0c74b81f421dcde9714bc0be95a8d44ffeeba102dbec8b4731c",
+      "lines": 181
     },
     "beta/scripts/components/mock_dragonflyspawner.lua": {
       "sha256": "11678f0887c17e51196f598390e15bd3d894cdcdf2a9c980286558045c556c3b",
@@ -10013,6 +10230,10 @@
     "beta/scripts/components/uncompromising_shadowcreaturespawner.lua": {
       "sha256": "ece0f59714a06933f2710f70f413dd49ea3b71760076886895cdac35239f726c",
       "lines": 437
+    },
+    "beta/scripts/gemology_defs.lua": {
+      "sha256": "8cbeacfd713271396ebd04c01b14e7a3eafab97f8756e19f6ab105e5e222ebf3",
+      "lines": 943
     },
     "beta/scripts/map/tasks/caves/magma_cave.lua": {
       "sha256": "c92dcc3715feab67d0da2554e1b0172bc7a242e0db5fcd2c68138b0a82af72fd",
@@ -10038,6 +10259,10 @@
       "sha256": "ce604e6179436886a719657d5c805c711da294007124fb654b275db96bc19718",
       "lines": 1092
     },
+    "beta/scripts/prefabs/eyeofterror_mini_projectile_ally.lua": {
+      "sha256": "dcb0193575a3360d30180b9dcad4f64aafd4efd55f4c693c49329a0b8c38fcb1",
+      "lines": 182
+    },
     "beta/scripts/prefabs/healthregenbuff_vetcurse.lua": {
       "sha256": "9331d2fe261021009ea61fbcae147fea9127d193f3f1918d73fb2747fceade94",
       "lines": 324
@@ -10050,17 +10275,69 @@
       "sha256": "68a8318a5976d803741f994cbd20431df1c1c3bce5025f556f7aa83445d7aa58",
       "lines": 748
     },
+    "beta/scripts/prefabs/powercell.lua": {
+      "sha256": "a0ef6ac7e744d6490e815db21a05f72915ede4ea6709fd5659a9110234c7a311",
+      "lines": 112
+    },
+    "beta/scripts/prefabs/rice.lua": {
+      "sha256": "c4df5466aca4728fe180e2eea8a845efa959e62f6d5968fb2a99c2196def2907",
+      "lines": 156
+    },
+    "beta/scripts/prefabs/slingshot_claire.lua": {
+      "sha256": "950ee21ebda128bda19672ece80ecdb332605f5e527c6132a69fac7209b0296b",
+      "lines": 388
+    },
+    "beta/scripts/prefabs/slingshot_gnasher.lua": {
+      "sha256": "16733f71e74ecebb11974e42e00633cec898eb5dc7179934a42a0095aabe04ba",
+      "lines": 343
+    },
+    "beta/scripts/prefabs/slingshot_jessie.lua": {
+      "sha256": "962b9e6be01c66dbb46a304ab4b9959f46595d421b0336f1d257cddd38e7c512",
+      "lines": 558
+    },
+    "beta/scripts/prefabs/slingshot_matilda.lua": {
+      "sha256": "cb85df3f4434a4ee3781bdc91a463fbaa1d743656ad5837d585db77c300406da",
+      "lines": 392
+    },
+    "beta/scripts/prefabs/snowmong.lua": {
+      "sha256": "6d171174a1b98612e9eedf50468db1a4adecb96107526ba6e7ed6ac376daae47",
+      "lines": 344
+    },
+    "beta/scripts/prefabs/um_backpack_amuletuse.lua": {
+      "sha256": "db3eab7c48ba3131165386e7e35142deb8dad37a9f4af341291d9277d895a8eb",
+      "lines": 260
+    },
     "beta/scripts/prefabs/um_gemology_geodes.lua": {
       "sha256": "739345c68a3b8a88a0f8331b1b003ebb37f331026e70d16d0ac0ba998a163462",
       "lines": 175
+    },
+    "beta/scripts/prefabs/um_gemology_pouch.lua": {
+      "sha256": "4b79e06237588b8653db47049b3fc9c3cbe50390172221ab57820e8bc7690f61",
+      "lines": 103
     },
     "beta/scripts/prefabs/um_gemologyforge.lua": {
       "sha256": "a1b9c1cb6cdc9045335915151755e4501c7dad225c30a615e7d91a50078eb3c9",
       "lines": 167
     },
+    "beta/scripts/prefabs/um_ice_shield.lua": {
+      "sha256": "a036ff45b581ff408247435628c586256031be7038ae411356c7ff73e30e18b0",
+      "lines": 235
+    },
     "beta/scripts/prefabs/um_magnifier.lua": {
       "sha256": "3371351e164e858d9e8c01d4643d772dc0e02f168b21881f17d85b98903f9595",
       "lines": 58
+    },
+    "beta/scripts/prefabs/um_preparedfoods.lua": {
+      "sha256": "cae5a7e36182ab89cc630debf955ec0db24ec01abc89483e2a3f04ad3d5be32f",
+      "lines": 184
+    },
+    "beta/scripts/prefabs/um_rimeweed.lua": {
+      "sha256": "18c958ea5412a94d214a7ec2bed0b7168c82e854368a26f79134c8d5c409445a",
+      "lines": 1099
+    },
+    "beta/scripts/prefabs/uncompromising_buffs.lua": {
+      "sha256": "a935c2a0ac63cc6cd61e08e623b7682125adcdf8007bae877f9d39c9ed548ac3",
+      "lines": 453
     },
     "beta/scripts/prefabs/uncompromising_rat.lua": {
       "sha256": "228b812624eee82432691a1d27e74ab979d4e36263f901baac9aee4e354f09bb",
@@ -10082,9 +10359,41 @@
       "sha256": "e40b45a2f5091aa716e01516cf371d16f3f9058ef39889d95cbbb63db72e959f",
       "lines": 244
     },
+    "beta/scripts/prefabs/winona_toolbox.lua": {
+      "sha256": "850326df4d90ca31afcb14d22db49e1d27d3e71301f7c06bb238b404a20c6b16",
+      "lines": 83
+    },
+    "beta/scripts/prefabs/winona_upgradekit.lua": {
+      "sha256": "0bcbeb291daf1b06c8a4c11a19d5dfdbc1a924d5cb62a9203cefee16df14fd5a",
+      "lines": 55
+    },
     "beta/scripts/prefabs/wixie.lua": {
       "sha256": "a9800e99f0632fb619e5e4869095a787ec6feab3f48db44f02132dd31b171068",
       "lines": 367
+    },
+    "beta/scripts/stategraphs/SGsnowmong.lua": {
+      "sha256": "c358cde3ae7307065bea0af5abb7c76ef75fb824890dc7e8d6abdbbf54de0552",
+      "lines": 387
+    },
+    "beta/scripts/um_preparedfoods.lua": {
+      "sha256": "741546cbaf8c01b1d2dcc610820c487168da7651e8a5a86b2493d71eab6a974a",
+      "lines": 837
+    },
+    "beta/wixie_postinit/prefabs/wobybig.lua": {
+      "sha256": "cdaf2e1c582d69683b17d84dc71a3590c82822e0749a793fcbf68c34e5149dde",
+      "lines": 217
+    },
+    "beta/wixie_postinit/prefabs/wobysmall.lua": {
+      "sha256": "41e252caf39a7a4923d8b8181374e66b069678ea8c5ada57da8c2f70741b56a9",
+      "lines": 219
+    },
+    "beta/wixie_postinit/stategraphs/SGwixie.lua": {
+      "sha256": "bf59adf38ce75369ee7b0fa2b5751432272247e089d6bf52f399eef75cd2d065",
+      "lines": 1059
+    },
+    "beta/wixie_postinit/widgets/controls.lua": {
+      "sha256": "777973d7d370909465cb65575b7f92b2caae70dcf7996d893008ee497d96844e",
+      "lines": 78
     },
     "cn/init/init_character_um.lua": {
       "sha256": "7632856f02e38edb4bdbb9bae7eaa407b67e0741a99598fbcbbf6bf13a76ee89",
@@ -10097,6 +10406,10 @@
     "cn/init/init_strings/init_strings.lua": {
       "sha256": "249aff6451e3b206bb7ec576449e1eda70355df507617bb11097fd4666b4b288",
       "lines": 1510
+    },
+    "cn/init/init_strings/init_tooltips.lua": {
+      "sha256": "bb3615757d2d902b94107c3d1c73901640205d6cfa007c0b0d062cf781e53cce",
+      "lines": 477
     },
     "cn/modinfo.lua": {
       "sha256": "8fce769829e143057fb5ae52f0b3c22cf91b04da4a9f874cdf9bbf6587ad181f",

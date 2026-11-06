@@ -35,7 +35,9 @@ const articleIcons={
  'veterans-curse':'veteranshrine','thermal-stone':'heatrock','sewing-kit':'sewing_kit',
 };
 const entryArticles=articles.map(a=>({...a,tag:'公开测试版',
- configKeys:a.configs,sections:a.sections.map(([title,text])=>({title,text}))}));
+ configKeys:a.configs,sections:a.sections.map(([title,text,guide])=>({title,text,guide}))}));
+const articleById=new Map(entryArticles.map(a=>[a.id,a]));
+const articleByPrefab=new Map(entryArticles.filter(a=>a.category==='new-items'&&a.prefab).map(a=>[a.prefab,a]));
 const artFor=id=>artwork[id]??(icons[id]?.source.startsWith('DST images.zip/')?icons[id]:null);
 function artImage(id,size,css=''){
  const art=artFor(id);
@@ -93,33 +95,53 @@ const newItems=itemGroups.flatMap(group=>group.ids.map(id=>{
   summary:recipe&&!primaryArticle?'查看配方 · '+techName(recipe.tech):'查看相关玩法',group:group.title};
 }));
 const newItemByPrefab=new Map(newItems.map(item=>[item.prefab,item]));
-const primaryItemCards=newItems.filter(item=>item.primaryArticle).map(item=>({...item,id:item.href.replace('.html','')}));
+const primaryItemCards=[
+ ...newItems.filter(item=>item.primaryArticle).map(item=>({...item,id:item.href.replace('.html','')})),
+ ...[...articleByPrefab].map(([prefab,a])=>({id:a.id,prefab,category:a.category,title:a.title,href:a.id+'.html',summary:a.summary,legacyId:newItemByPrefab.get(prefab)?.id})),
+];
 const primaryItemIds=new Set(primaryItemCards.map(item=>item.id));
 const changedRecipeIds=new Set(['ice','shroom_skin','transmute_monstermeat','hermitshop_bootleg']);
 const changedItems=recipeEntries.filter(r=>changedRecipeIds.has(r.id)).map(r=>({
  id:r.anchor,prefab:r.product,category:'items',title:r.title,href:'recipes.html#'+r.anchor,
  summary:'原有物品 · 新配方或兑换',
 }));
-const extraEntries=[...changedItems,...newItems.filter(item=>!item.primaryArticle)];
+const extraEntries=[...changedItems,...newItems.filter(item=>!item.primaryArticle&&!articleByPrefab.has(item.prefab))];
 const newItemsHref='index.html?category=new-items#encyclopedia';
 const articleItems={
- gemology:['um_gemologyforge','um_magnifier_purplegem','um_gemologypurplegem2','um_gemology_geode_blue'],
+ gemology:['um_gemologyforge','um_magnifier_purplegem','um_gemologypurplegem2','um_gemology_geode_blue','um_gemology_pouch'],
  wixie:['slingshot_gnasher','slingshot_matilda','slingshot_jessie','slingshot_claire'],
+ winona:['winona_toolbox','winona_upgradekit_electrical','powercell'],
  winky:['uncompromising_winkyhomeburrow'], 'rat-raids':['ratpoisonbottle','rat_tail'],
  snowstorms:['snowgoggles','um_hat_rime'],'summer-dragonflies':['glass_scales','armor_glassmail'],
  'dreadstone-shield':['wathgrithr_shield_dreadstone'],'beak-basher':['beakbasher'],
 };
 const recipeSearch=r=>[r.title,r.id,r.product,names[r.product]?.en,r.materialText,techName(r.tech),r.tech,...r.gates].filter(Boolean).join(' ');
 const requirements={builder_tag:'制作者标签',builder_skill:'必需技能',no_builder_skill:'排斥技能',station_tag:'制作站标签',nounlock:'在对应科技站使用',testfn:'有额外位置或制作者检查'};
-const table=(headers,rows,label)=>`<div class="table-wrap" tabindex="0" role="region" aria-label="${esc(label)}"><table><thead><tr>${headers.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`;
+const table=(headers,rows,label,css='')=>`<div class="table-wrap${css?' '+css:''}" tabindex="0" role="region" aria-label="${esc(label)}"><table><thead><tr>${headers.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`;
 const sourceList=a=>a.sources.map(s=>`<li>${s.kind==='cn'?'汉化补丁':'测试版'} · ${code(s.file+':'+s.line)}</li>`).join('');
 const sectionId=(a,i)=>a.id+'-s'+(i+1);
-const sectionHTML=(s,i,a,continuous)=>`<section class="article-section" id="${sectionId(a,i)}"><h${continuous?3:2}><a href="#${sectionId(a,i)}">${esc(s.title)}<span class="anchor-hash">#</span></a></h${continuous?3:2}><p>${esc(s.text)}</p></section>`;
+const guideRowId=prefab=>'gem-'+prefab.replace(/^um_gemology/,'');
+function guideTable(s){
+ const {headers,rows,prefabs=[]}=s.guide;
+ return '<p class="guide-table-hint">在窄屏可横滑查看其余列。</p>'+table(headers,rows.map(([name,...cells],i)=>{
+  const prefab=prefabs[i];
+  return `<tr${prefab?` id="${guideRowId(prefab)}"`:''}><th scope="row">${prefab?artImage(prefab,28):''}${esc(name)}</th>${cells.map(cell=>`<td>${esc(cell)}</td>`).join('')}</tr>`;
+ }),s.title,'guide-table');
+}
+function sectionHTML(s,i,a,continuous){
+ const id=sectionId(a,i),heading=continuous?3:2;
+ const guide=s.guide?(continuous?`<p>${link(articleHref(a)+'#'+id,'查看完整表格 →')}</p>`:guideTable(s)):'';
+ return `<section class="article-section" id="${id}"><h${heading}><a href="#${id}">${esc(s.title)}<span class="anchor-hash">#</span></a></h${heading}><p>${esc(s.text)}</p>${guide}</section>`;
+}
 function configStrip(a){
  const rows=a.configs.map(key=>configByKey.get(key));
- const items=articleItems[a.id];
+ const items=(articleItems[a.id]??[]).map(id=>({prefab:id,label:itemName(id),href:articleByPrefab.has(id)?articleHref(articleByPrefab.get(id)):newItemByPrefab.get(id).href}));
+ const related=(a.related??[]).map(({id,label})=>({prefab:articleById.get(id).prefab,label,href:articleHref(articleById.get(id))}));
+ const recipes=recipeEntries.filter(r=>r.product===a.prefab);
+ const relatedLinks=(label,links)=>links.length?`<div class="beta-related-art"><strong>${label}</strong><div>${links.map(({href,prefab,label})=>`<a href="${esc(href)}">${artImage(prefab,28)}<span>${esc(label)}</span></a>`).join('')}</div></div>`:'';
  return (rows.length?`<details class="article-config"><summary>相关配置 <span>${rows.length}</span></summary>${table(['配置','默认档位'],rows.map(c=>`<tr><td>${configLink(c)}</td><td>${defaultText(c)}</td></tr>`),'相关配置')}</details>`:'')+
- (items?`<div class="beta-related-art"><strong>相关物品</strong><div>${items.map(id=>`<a href="${newItemByPrefab.get(id).href}">${artImage(id,28)}<span>${esc(itemName(id))}</span></a>`).join('')}</div></div>`:'')+
+ relatedLinks('相关物品',items)+relatedLinks(a.id==='cooking-guide'?'锅料理食谱':'相关词条',related)+
+ relatedLinks('制作材料',recipes.map(r=>({href:'recipes.html#'+r.anchor,label:r.file.endsWith('recipes_ia.lua')?'岛屿冒险配方':techName(r.tech)})))+
  `<details class="source-note"><summary>版本与核对来源</summary><p>测试版 v${esc(auditedVersion)} · 汉化 ${esc(auditedCnVersion)}</p><ul>${sourceList(a)}</ul></details>`;
 }
 const site={
@@ -139,7 +161,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  const seen=new Set();
  if(newItems.length!==newItemByPrefab.size||newItems.some(item=>!artwork[item.prefab]?.workshop||!item.href))throw Error('Missing or duplicate Public Beta item link or artwork');
  for(const a of entryArticles){
-  if(seen.has(a.id)||!/^[-a-z]+$/.test(a.id)||!categories.some(c=>c.id===a.category)||!a.sources.length||a.configs.some(key=>!configByKey.has(key)))throw Error('Invalid Beta article '+a.id);
+  if(seen.has(a.id)||!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(a.id)||!categories.some(c=>c.id===a.category)||!a.sources.length||a.configs.some(key=>!configByKey.has(key))||a.related?.some(({id})=>!articleById.has(id)))throw Error('Invalid Beta article '+a.id);
   for(const s of a.sources){
    const src=snapshot.sourceFiles[(s.kind??'beta')+'/'+s.file];
    if(!src||s.line<1||s.line>src.lines)throw Error('Invalid citation in '+a.id);
@@ -161,12 +183,12 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  const meta={version:betaVersion,workshop};
  const ui=createUI({articles:entryArticles,configs:configs.map(c=>({...c,mode:groupByKey.get(c.key).mode})),groups:configGroups,
   categories,meta,esc,icon,sectionHTML,configStrip,counts:count,site,extraEntries,
-  articleIcon:a=>{const art=artFor(a.prefab??articleIcons[a.id]);return art?'../'+art.path:null;}});
+  articleIcon:a=>{const art=artFor(a.icon??a.prefab??articleIcons[a.id]);return art?'../'+art.path:null;}});
  const render=(file,current,title,desc,body,toc)=>fs.writeFile(path.join(dir,file),ui.shell(current,title,desc,body,toc));
  const titleBlock=(eyebrow,title,text)=>`<div class="wiki-heading"><div><span class="eyebrow">${eyebrow}</span><h1>${esc(title)}</h1><p>${text}</p></div></div>`;
  const startLink=(href,img,title,desc)=>`<a class="start-link" href="${href}">${artImage(img,38)}<span><strong>${title}</strong><small>${desc}</small></span>${icon('arrow',16)}</a>`;
- const itemCards=[...primaryItemCards,...extraEntries].map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}"><a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
- const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅鼠潮、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('index.html?category=characters#encyclopedia','角色')} · ${link('rat-raids.html','鼠潮')} · ${link('gemology.html','宝石学')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
+ const itemCards=[...primaryItemCards,...extraEntries].map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}">${item.legacyId?`<span class="beta-legacy-anchor" id="entry-${item.legacyId}"></span>`:''}<a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
+ const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅鼠潮、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('index.html?category=characters#encyclopedia','角色')} · ${link('rat-raids.html','鼠潮')} · ${link('gemology.html','宝石学')} · ${link('cooking-guide.html','料理速查')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
  await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ui.ordered.filter(a=>!primaryItemIds.has(a.id)).map(a=>ui.articleHTML(a,true)).join('')+`<div class="beta-topic-items">${itemCards}</div>`);
  for(const a of entryArticles){
   const category=categories.find(c=>c.id===a.category);
@@ -194,7 +216,8 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   const material=r.ingredients.length?table(['材料','数量'],r.ingredients.map(i=>`<tr><td>${itemLabel(i.id)} <small>${code(i.id)}</small></td><td>${esc(i.amount)}</td></tr>`),'制作材料'):'<p>无常规物品材料。</p>';
   const gates=r.gates.map(g=>`<li>${code(g)}</li>`).join('');
   const props=Object.entries(r.requirements).filter(([,value])=>value!==false).map(([key,value])=>`<li>${requirements[key]}${value===true?'':' · '+code(value)}</li>`).join('');
-  return `<details class="config-card recipe-card" id="${r.anchor}" data-recipe data-find="${esc(recipeSearch(r))}" data-scopes="${r.scopes.join(' ')}"><summary><span class="beta-recipe-product">${artImage(r.product,34,'recipe-product-icon')}<span class="config-summary-copy"><span class="config-title">${esc(r.title)}</span><span class="config-summary-note">${esc(r.id)}</span></span></span><span class="config-default"><span>科技</span><strong>${esc(techName(r.tech))}</strong></span></summary><div class="config-content"><div class="beta-recipe-tags">${r.scopes.filter(s=>s!=='general').map(s=>badge(recipeScope.find(([value])=>value===s)[1],g.color)).join('')}</div><h3>制作材料</h3>${material}<p>产量 ${typeof r.count==='number'?esc(r.count):'取决于 '+code(r.count)} · 科技 ${code(r.tech)}</p>${gates||props?`<h3>注册与制作条件</h3><ul>${gates}${props}</ul>`:''}<details class="source-note"><summary>配方 ID 与核对来源</summary><p>${code(r.id)}${r.product!==r.id?' · 产物 '+code(r.product):''} · ${code(r.file+':'+r.line)}</p></details></div></details>`;
+  const article=articleByPrefab.get(r.product);
+  return `<details class="config-card recipe-card" id="${r.anchor}" data-recipe data-find="${esc(recipeSearch(r))}" data-scopes="${r.scopes.join(' ')}"><summary><span class="beta-recipe-product">${artImage(r.product,34,'recipe-product-icon')}<span class="config-summary-copy"><span class="config-title">${esc(r.title)}</span><span class="config-summary-note">${esc(r.id)}</span></span></span><span class="config-default"><span>科技</span><strong>${esc(techName(r.tech))}</strong></span></summary><div class="config-content"><div class="beta-recipe-tags">${r.scopes.filter(s=>s!=='general').map(s=>badge(recipeScope.find(([value])=>value===s)[1],g.color)).join('')}</div><h3>制作材料</h3>${material}<p>产量 ${typeof r.count==='number'?esc(r.count):'取决于 '+code(r.count)} · 科技 ${code(r.tech)}</p>${gates||props?`<h3>注册与制作条件</h3><ul>${gates}${props}</ul>`:''}${article?`<p>${link(articleHref(article),'查看物品用法 →')}</p>`:''}<details class="source-note"><summary>配方 ID 与核对来源</summary><p>${code(r.id)}${r.product!==r.id?' · 产物 '+code(r.product):''} · ${code(r.file+':'+r.line)}${r.overrides?' · 属性覆盖行 '+esc(r.overrides.join('、')):''}</p></details></div></details>`;
  }).join('')}</section>`).join('');
  const recipeIntro=titleBlock('BETA CRAFTING','制作与兑换',`收录 v${esc(betaVersion)} 的 ${recipeEntries.length} 条制作与兑换注册。按科技分组，也可按角色、配置或兼容条件筛选。`);
  await render('recipes.html','recipes','制作与兑换','公开测试版源码中的制作、兑换与兼容注册。',recipeIntro+recipeTools+'<div class="empty-state" id="recipe-empty" hidden>没有匹配的配方，请调整材料搜索或制作条件。</div>'+recipeRows+`<section class="wiki-entry"><h2>单独核对的动态配方</h2><p>温奇的定居鼠穴消耗饥饿，见 ${link('winky.html','温奇')}。其余动态注册和后续覆盖需结合实现核对。</p><ul>${snapshot.skipped.map(r=>`<li>${code(r.id??'动态 ID')} · ${code(r.file+':'+r.line)}</li>`).join('')}</ul></section>`);
@@ -204,7 +227,11 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  await render('items.html','legacy-items','新增物品','旧图鉴链接会前往对应的配方或玩法。',
   `<section class="wiki-entry"><h1>新增物品</h1><p><a id="legacy-items-home" href="${newItemsHref}">浏览全部新增物品</a></p><ul>${legacyLinks}</ul></section><script src="legacy-items.js" defer></script>`);
  const index=[
-  ...entryArticles.map(a=>({id:a.id,kind:'article',href:articleHref(a),title:a.title,summary:a.summary,category:categories.find(c=>c.id===a.category).name,topic:a.category,aliases:a.aliases,text:a.sections.map(s=>s.title+' '+s.text).join(' '),featured:true})),
+  ...entryArticles.map(a=>{
+   const art=artFor(a.icon??a.prefab??articleIcons[a.id]);
+   return {id:a.id,kind:'article',href:articleHref(a),title:a.title,summary:a.summary,category:categories.find(c=>c.id===a.category).name,topic:a.category,aliases:a.aliases,
+    text:a.sections.flatMap(s=>[s.title,s.text,...(s.guide?.rows.flat()??[])]).join(' '),image:art?'../'+art.path:undefined,featured:true};
+  }),
   ...configs.map(c=>{const group=groupByKey.get(c.key),related=entryArticles.filter(a=>a.configs.includes(c.key));return {
    id:configId(c.key),kind:'config',href:'configs.html#'+configId(c.key),title:configName(c),category:group.mode+' / '+group.name,summary:c.title+' · 默认 '+modeLabel(standard(c)),keywords:c.key,
    text:[...c.options.map(modeLabel),...related.flatMap(a=>[a.title,...a.aliases])].join(' '),status:related.length?'linked':'',
@@ -215,10 +242,12 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  ];
  const jumps=entryArticles.flatMap(a=>(a.searchJumps??[]).map(jump=>{
   const i=jump.section?a.sections.findIndex(s=>s.title===jump.section):-1;
-  if(jump.section&&i<0)throw Error('Unknown Beta search section '+jump.section);
-  return {id:a.id+'-jump-'+(i+1),kind:'article',href:articleHref(a)+(i<0?'':'#'+sectionId(a,i)),
-   title:jump.section?a.title+' · '+jump.section:a.title,category:categories.find(c=>c.id===a.category).name,
-   aliases:jump.terms,summary:i<0?a.summary:a.sections[i].text,text:'',jump:true};
+  if(jump.section&&i<0||jump.prefab&&!a.sections[i]?.guide?.prefabs?.includes(jump.prefab))throw Error('Unknown Beta search target '+jump.section);
+  const row=jump.prefab&&guideRowId(jump.prefab);
+  const art=artFor(jump.prefab);
+  return {id:a.id+'-jump-'+(row||i+1),kind:'article',href:articleHref(a)+(i<0?'':'#'+(row||sectionId(a,i))),
+   title:jump.title??(jump.section?a.title+' · '+jump.section:a.title),category:categories.find(c=>c.id===a.category).name,
+   aliases:jump.terms,summary:jump.summary??(i<0?a.summary:a.sections[i].text),image:art?'../'+art.path:undefined,text:'',jump:true};
  }));
  const globalIndex=[
   ...temperedIndex.map(a=>({...a,wiki:'tempered'})),

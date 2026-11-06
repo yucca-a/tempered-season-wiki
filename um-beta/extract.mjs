@@ -150,12 +150,26 @@ function scanRecipes(body,source,file,guards=[]){
 for(const [module,guard] of [['recipes',[]],['recipes_wixie',['UM_CONFIG.WIXIE_WALTER']],['recipes_ia',[]]]){
  if(!recipeImports.includes('modimport("init/init_recipes/'+module+'")'))throw Error('Recipe import changed for '+module);
  const file='init/init_recipes/'+module+'.lua',source=await read(betaDir,file);
- scanRecipes(ast(source).body,source,file,guard);
+ const {body}=ast(source);
+ scanRecipes(body,source,file,guard);
+ if(module==='recipes_wixie'){
+  const ownRecipes=new Map(recipes.filter(r=>r.file===file).map(r=>[r.id,r]));
+  for(const statement of body.filter(node=>node.type==='AssignmentStatement')){
+   const [target]=statement.variables;
+   if(target.type!=='MemberExpression'||target.base.type!=='IndexExpression'||target.base.base.name!=='AllRecipes')continue;
+   const r=ownRecipes.get(scalar(target.base.index)), key=target.identifier.name, value=scalar(statement.init[0]);
+   if(!r||!['builder_tag','builder_skill','numtogive'].includes(key)||value===undefined)continue;
+   if(key==='numtogive')r.count=value;
+   else r.requirements[key]=value;
+   (r.overrides??=[]).push(statement.loc.start.line);
+  }
+ }
 }
 await read(betaDir,'init/init_recipes/recipe_changes.lua');
 await read(betaDir,'init/init_configs.lua');
 const artworkIds=itemGroups.flatMap(g=>g.ids);
-const usedNames=new Set([...artworkIds,...recipes.flatMap(r=>[r.id,r.product,...r.ingredients.map(i=>i.id)])]);
+const articleArtIds=[...new Set(articles.flatMap(a=>[a.icon??a.prefab,...a.sections.flatMap(([, ,guide])=>guide?.prefabs??[])].filter(Boolean)))].sort();
+const usedNames=new Set([...artworkIds,...articleArtIds,...recipes.flatMap(r=>[r.id,r.product,...r.ingredients.map(i=>i.id)])]);
 const names=Object.fromEntries([...usedNames].sort().map(id=>{
  const game=gameNames[id]??{};
  return [id,{en:baseNames[id]??game.en??id,zh:cnNames[id]??game.zh??null}];
@@ -166,7 +180,7 @@ for(const source of articles.flatMap(a=>a.sources)){
  if(!sourceFiles[key])await read(dir,source.file);
  if(source.line<1||sourceFiles[key].lines<source.line)throw Error('Invalid source line '+key+':'+source.line);
 }
-const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
+const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,articleArtIds,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
 const json=JSON.stringify(result,null,2)+'\n';
 if(check){
  const current=await fs.readFile(resultFile,'utf8');

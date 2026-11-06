@@ -1,3 +1,8 @@
+import { characterArticles } from './character-articles.mjs';
+import { exclusiveArticles } from './exclusive-articles.mjs';
+import { foodArticles } from './food-articles.mjs';
+import { effectTable, gemEffects, tradeTable } from './gemology-tables.mjs';
+
 export const auditedVersion='6.0.3.8';
 export const auditedCnVersion='20260926.1';
 
@@ -71,16 +76,23 @@ export const articles=[
  },
  {
   id:'gemology',category:'mechanics',title:'宝石学与装备附魔',aliases:['Gemology','晶洞','宝石学锻造台','鉴定'],
-  searchJumps:[{terms:['宝石','宝石学','晶洞']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石']},{section:'鉴定工具',terms:['鉴定','宝石鉴定']}],
-  summary:'从不同晶洞取得宝石，再到锻造台把相容的宝石附加到装备上。',
+  searchJumps:[{terms:['宝石','宝石学','晶洞']},{section:'锻造台操作',terms:['附魔','装备附魔','锻造台','宝石学锻造台','宝石附魔','附魔石']},{section:'鉴定工具',terms:['鉴定','宝石鉴定']},
+   {section:'宝石升级与交易速查',terms:['附魔升级','宝石升级','交易升级','宝石交易','宝石升级路径','附魔宝石升级路径']},
+   {section:'三级附魔效果',terms:['附魔效果','宝石品质','三级附魔','附魔宝石效果']},
+   ...gemEffects.map(gem=>({section:'三级附魔效果',prefab:gem.prefab,title:gem.name,terms:[gem.name,gem.english,gem.prefab],summary:gem.levels[2]}))],
+  summary:'查晶洞、鉴定与锻造，再按颜色查交易升级，或对照 14 种宝石的三档附魔效果。',
   configs:['gemology','magma_caves'],
   sections:[
    ['晶洞掉落','按晶洞种类选择掉落池。每个晶洞基础抽取三次非宝石池、一次宝石池，并有 5% 概率再抽一次宝石池。如果该次抽到宝石学宝石，则三级概率 1%，二级概率 4%，其余为一级。'],
    ['锻造台操作','第一槽放装备，第二槽放宝石。装备与宝石相容时才能附魔。成功会消耗宝石，新附魔耐久设满。重复同种附魔会替换同种，槽满时新增不同种会移除旧附魔。普通附魔组件默认一个槽，具体装备可以有特例。'],
    ['配置的作用','宝石学开关与资源生成及若干配方有关。已有装备与附魔还涉及单独载入的运行代码。'],
    ['鉴定工具','宝石放大镜有 100 点鉴定耐久，远古宝石放大镜和宝石熔岩镜各有 400 点。可以鉴定整叠宝石，每枚消耗 1 点耐久。耐久不足时，只会鉴定能够负担的数量。'],
+   ['宝石升级与交易速查','以下概率按单颗宝石结算，适用于各颜色的两种附魔宝石。三级已经封顶，交出去有风险。红色交蜗龙只有 25% 留在三级，绿色交龟类只有 40% 留在三级。蚁狮和石虾都不会返还三级，雪怪吃下三级蓝色只掉普通蓝宝石。',tradeTable],
+   ['三级附魔效果','汉化中的「碎裂的」「微瑕的」「无暇的」分别对应一级、二级、三级。表中的伤害、回复与触发率按当前测试版代码计算。装备自身还须支持附魔。',effectTable],
   ],
-  sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),names(752),names(821),names(853)],
+  sources:[cfg(184),beta('scripts/prefabs/um_gemology_geodes.lua',17),beta('scripts/prefabs/um_gemologyforge.lua',25),beta('scripts/components/gem_enchantable.lua',25),beta('init/init_gamemodes/init_uncompromising_mode.lua',92),beta('scripts/prefabs/um_magnifier.lua',55),beta('scripts/components/gemologyscanner.lua',13),
+   ...[87,247,261,411,493].map(line=>beta('init/init_gemology/trades.lua',line)),beta('scripts/prefabs/snowmong.lua',122),beta('scripts/stategraphs/SGsnowmong.lua',329),
+   ...[90,228,301,353,421,450,472,581,648,689,742,789,842].map(line=>beta('scripts/gemology_defs.lua',line)),beta('init/init_tuning.lua',399),beta('init/init_gemology/special.lua',5),beta('postinit/components/freezable.lua',21),beta('scripts/prefabs/um_ice_shield.lua',37),names(752),names(764),names(770),names(821),names(853)],
  },
  {
   id:'winky',category:'characters',title:'温奇',aliases:['Winky','鼠人','定居鼠穴'],
@@ -100,9 +112,9 @@ export const articles=[
   sections:[
    ['角色与译名','相关配置默认开启。薇希的生命为 130、饥饿 150、理智 200。汉化的角色初始化写作「薇希」，角色专用文本又使用「薇茜」。两种写法都可搜索。'],
    ['幽闭恐惧','附近战斗生物、躲藏、骑乘、邻近墙壁或树木以及部分护具都会影响幽闭恐惧。部分头部和身体护甲各增加 0.2 的基础影响。累积到 100% 触发恐慌，降到 0 后解除并进入 10 秒冷却。'],
-   ['弹弓','专属弹弓包括浮木弹弓-玛蒂尔达、活木弹弓-切齿、绝望弹弓-杰西和光芒弹弓-克莱尔。杰西和克莱尔分别要求暗影、月亮阵营技能及对应制作站。具体材料见配方页。'],
+   ['弹弓','专属弹弓包括浮木弹弓-玛蒂尔达、活木弹弓-切齿、绝望弹弓-杰西和光芒弹弓-克莱尔。杰西和克莱尔分别在暗影与月亮制作站制作，最终生效的配方仅检查薇希制作标签和制作站。'],
   ],
-  sources:[beta('modmain.lua',355),beta('modmain.lua',382),beta('scripts/prefabs/wixie.lua',77),beta('scripts/prefabs/wixie.lua',176),beta('init/init_recipes/init_recipes.lua',81),beta('init/init_recipes/recipes_wixie.lua',11),character(16),cn('wixie_postinit/wixie_strings.lua',9),names(571)],
+  sources:[beta('modmain.lua',355),beta('modmain.lua',382),beta('scripts/prefabs/wixie.lua',77),beta('scripts/prefabs/wixie.lua',176),beta('init/init_recipes/init_recipes.lua',81),beta('init/init_recipes/recipes_wixie.lua',11),beta('init/init_recipes/recipes_wixie.lua',141),character(16),cn('wixie_postinit/wixie_strings.lua',9),names(571)],
  },
  {
   id:'wathom',category:'characters',title:'沃托姆',aliases:['Wathom','跳劈哥','肾上腺素'],
@@ -166,4 +178,20 @@ export const articles=[
   ],
   sources:[cfg(244),beta('init/init_creatures/init_harder_shadows.lua',71),beta('scripts/components/uncompromising_shadowcreaturespawner.lua',84),beta('scripts/prefabs/dreadeye.lua',280),beta('scripts/prefabs/dreadeye.lua',509),names(16)],
  },
+ {
+  id:'cooking-guide',category:'mechanics',icon:'cookpot',title:'测试版料理速查',aliases:['烹饪','锅料理','新料理','Crock Pot'],
+  searchJumps:[{terms:['料理','食谱','测试版料理','妥协料理']}],
+  summary:'按菜名查配料、基础三维、保鲜时间与特殊效果，涵盖 12 道测试版锅料理。',
+  configs:['newrecipes','foodregen','food_stats'],
+  sections:[
+   ['从哪里下锅','新增食谱默认开启。普通锅、便携烹饪锅和远古锅均可煮常规新增食谱。标为沃利专用的配方只注册在便携烹饪锅。'],
+   ['看懂配方','写明材料数量的要求要放指定食材；写成蛋值、肉值等的是食材标签的合计。部分食谱还限制填充料，点进菜品查看可用搭配。'],
+   ['看懂数值','料理词条列的是基础数值。房间的食物持续恢复设置会影响回复如何结算，食物属性调整也可能改变部分食物的实际数值。'],
+  ],
+  related:foodArticles.map(food=>({id:food.id,label:food.title})),
+  sources:[cfg(700),beta('init/init_food/init_crockpot.lua',605),beta('scripts/um_preparedfoods.lua',4),beta('init/init_gamemodes/init_uncompromising_mode.lua',217),beta('init/init_gamemodes/init_uncompromising_mode.lua',247)],
+ },
+ ...characterArticles,
+ ...exclusiveArticles,
+ ...foodArticles,
 ];

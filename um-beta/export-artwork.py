@@ -72,6 +72,7 @@ def export(root, game_images):
     snapshot = json.loads((HERE / 'snapshot.json').read_text(encoding='utf-8'))
     keys = {i for recipe in snapshot['recipes'] for i in
             (recipe['product'], *(ingredient['id'] for ingredient in recipe['ingredients']))}
+    keys.update(snapshot['articleArtIds'])
     candidates = {}
     for key in sorted(keys | set(snapshot['artworkIds'])):
         for folder in ('images/inventoryimages', 'images', 'images/scrapbook'):
