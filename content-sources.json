@@ -941,7 +941,8 @@
       "source": [
         "content/easy_other/easy_equipments.lua",
         "content/scripts/components/repairable2hm.lua",
-        "原版 scripts.zip：scripts/recipes.lua、scripts/tuning.lua"
+        "原版 scripts.zip：scripts/recipes.lua、scripts/tuning.lua",
+        "原版 scripts.zip：scripts/prefabs/ruins_bat.lua、scripts/prefabs/amulet.lua"
       ],
       "configKeys": [
         "enable easy mode",
@@ -1272,7 +1273,8 @@
         "content/easy_other/easy_items.lua",
         "content/modmain.lua",
         "DST scripts.zip/scripts/recipes.lua",
-        "DST scripts.zip/scripts/tuning.lua"
+        "content/easy_other/um_patch.lua",
+        "DST scripts.zip/scripts/tuning.lua、scripts/prefabs/cane.lua、scripts/prefabs/staff.lua"
       ],
       "configKeys": [
         "enable easy mode",
