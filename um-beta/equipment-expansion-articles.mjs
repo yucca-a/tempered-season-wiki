@@ -80,8 +80,8 @@ export const equipmentExpansionArticles=[
   sources:[names(222),drops(9),drops(17),prefab('cursed_antler',8),prefab('cursed_antler',13),prefab('cursed_antler',22),prefab('cursed_antler',26),prefab('cursed_antler',29),prefab('cursed_antler',32),prefab('cursed_antler',41),prefab('cursed_antler',143),tuning(211),tuning(362),tuning(370),tuning(371),tuning(372),common(22),common(25),common(204),common(207)],
  },
  {
-  id:'crystal-cursed-antler',category:'new-items',prefab:'crystal_cursed_antler',title:'晶体诅咒鹿角',aliases:['Crystal Cursed Antler','晶体巨鹿武器','晶体鹿角'],
-  summary:'晶体独眼巨鹿掉落的诅咒武器，充能攻击带额外位面伤害、冰刺和减速冰圈。',
+  id:'crystal-cursed-antler',category:'new-items',prefab:'crystal_cursed_antler',title:'Crystal Cursed Antler',aliases:['晶体诅咒鹿角','晶体巨鹿武器','晶体鹿角'],
+  summary:'晶体独眼巨鹿掉落的诅咒武器，充能攻击带额外位面伤害、冰刺和减速冰圈；当前汉化仍使用英文原名。',
   configs:['vetcurse'],
   sections:[
    ['获取与装备','击杀晶体独眼巨鹿后固定额外掉落一把。掉落规则独立于房间的老兵诅咒档位，穿戴检查仍要求玩家自身激活老兵诅咒。',null,[link('veterans-curse.html','怎样激活老兵诅咒'),link('cursed-antler.html','独眼巨鹿掉落的诅咒鹿角')]],

@@ -1,3 +1,4 @@
+import { applyArticleTerminology } from '../terminology.mjs';
 import { characterArticles } from './character-articles.mjs';
 import { exclusiveArticles } from './exclusive-articles.mjs';
 import { foodArticles } from './food-articles.mjs';
@@ -253,3 +254,4 @@ export const articles=[
  ...equipmentExpansionArticles,
  ...toolExpansionArticles,
 ];
+applyArticleTerminology(articles, 'um-beta');

@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {createUI} from '../ui.mjs';
+import {canonicalText,localizedName} from '../terminology.mjs';
 import {buildPortal} from '../portal.mjs';
 import {betaTopics} from '../topics.mjs';
 import {articles,auditedVersion,auditedCnVersion} from './articles.mjs';
@@ -22,7 +23,7 @@ const configId=key=>'config-'+key.replace(/[^a-z0-9_-]/giu,c=>'_'+c.codePointAt(
 const configLink=c=>link('configs.html#'+configId(c.key),configName(c));
 const standard=c=>c.options.find(o=>o.value===c.default);
 const modeLabel=o=>({Enabled:'开启',Disabled:'关闭',Default:'默认',Off:'关闭','Always On':'始终开启'}[o.title]??o.title);
-const itemName=id=>names[id]?.zh??extraNames[id]??names[id]?.en??id;
+const itemName=id=>localizedName(id,names[id]?.zh??extraNames[id]??names[id]?.en??id,'um-beta');
 const defaultText=c=>esc(modeLabel(standard(c)))+' · '+val(c.default);
 const stale=betaVersion!==auditedVersion||cnVersion!==auditedCnVersion;
 const reviewedNotice=stale?`<p class="callout">正文核对于测试版 v${esc(auditedVersion)}、汉化 ${esc(auditedCnVersion)}，与索引快照的版本有差异。</p>`:'';

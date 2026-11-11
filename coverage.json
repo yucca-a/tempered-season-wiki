@@ -1,5 +1,5 @@
 {
-  "articles": 281,
+  "articles": 285,
   "configs": 439,
   "choices": 3351,
   "targetedRefresh": {
@@ -48,22 +48,32 @@
       "world-random-size",
       "trap",
       "world-autumn",
-      "deeply-buried-compatibility"
+      "deeply-buried-compatibility",
+      "knobbly-tree",
+      "environment-temperature-sources",
+      "thermal-stone-wateringcan",
+      "cursed-item-retention",
+      "world-player-temperature",
+      "about",
+      "creature-walls",
+      "role-wonkey",
+      "revival-curse",
+      "world-ancient-altar"
     ],
-    "count": 44
+    "count": 54
   },
   "sourceAuditVersions": {
-    "2.8.15.0.25": 12,
-    "2.8.15.0.23": 32,
-    "2.8.14.97.4": 150,
+    "2.8.15.0.25": 24,
+    "2.8.15.0.23": 30,
+    "2.8.14.97.4": 148,
     "2.8.14.98.6": 1
   },
   "groups": 19,
-  "images": 482,
+  "images": 687,
   "itemAudit": {
     "version": "2.8.15.0.25",
-    "articles": 62,
-    "items": 60,
+    "articles": 63,
+    "items": 61,
     "missing": []
   },
   "entityAudit": {

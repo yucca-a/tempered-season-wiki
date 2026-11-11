@@ -1,5 +1,6 @@
 import {buildHub} from './um-beta/build.mjs';
 import {createUI} from './ui.mjs';
+import {applyArticleTerminology,canonicalText} from './terminology.mjs';
 import {temperedTopics,temperedTopic} from './topics.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -61,13 +62,14 @@ for(const [v,releaseTitle] of releaseIndex){
  if(section.paragraphs.length||section.list.length)sections.push(section);
  articles.push({id:`update-${v.replaceAll('.','-')}`,title:`v${v}`,category:'updates',tag:v===meta.version?'当前版本':'历史版本',summary:releaseTitle,keywords:`版本 更新 日志 ${v}`,sections,release:true,configKeys:[],source:[`workshop/${file}`]});
 }
+applyArticleTerminology(articles);
 const articleMap=new Map(articles.map(a=>[a.id,a])),configMap=new Map(configs.map(c=>[c.key,c]));
 if(articleMap.size!==articles.length)throw Error('Duplicate article IDs');
 const counts={articles:articles.length,configs:configs.length,choices:configs.reduce((n,c)=>n+c.options.length,0)};
 const categories=temperedTopics;
 for(const article of articles)article.topic=temperedTopic(article);
 const catName=id=>categories.find(c=>c.id===id)?.name??id;
-const symbols={search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',globe:'<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',close:'<path d="m6 6 12 12M6 18 12-12"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 1.5 1.5M5 19l1.5-1.5M17.5 6.5 1.5-1.5"/>',arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',link:'<path d="m9 15 6-6M8 16l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M16 8l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(0 -1) scale(.92)"/>',star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',book:'<path d="M12 6v15M12 6C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Z"/>',external:'<path d="M14 4h6v6M20 4 10 14M10 4H4v16h16v-6"/>'};
+const symbols={search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',globe:'<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',close:'<path d="M6 6L18 18M18 6L6 18"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 1.5 1.5M5 19l1.5-1.5M17.5 6.5 1.5-1.5"/>',arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',link:'<path d="m9 15 6-6M8 16l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M16 8l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(0 -1) scale(.92)"/>',star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',book:'<path d="M12 6v15M12 6C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Z"/>',external:'<path d="M14 4h6v6M20 4 10 14M10 4H4v16h16v-6"/>'};
 const icon=(name,size=18)=>`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[name]??symbols.book}</svg>`;
 for(const [term,key] of Object.entries(iconLabels)){
  if(!iconManifest[key])throw Error('Missing icon '+key+' for '+term);

@@ -527,14 +527,6 @@
     "height": 53,
     "workshop": true
   },
-  "slingshotammo_honey": {
-    "path": "assets/um-beta/slingshotammo_honey.png",
-    "source": "images/inventoryimages/slingshotammo_honey.tex",
-    "atlas": "images/inventoryimages/slingshotammo_honey.xml",
-    "width": 63,
-    "height": 44,
-    "workshop": true
-  },
   "slingshotammo_lazy": {
     "path": "assets/um-beta/slingshotammo_lazy.png",
     "source": "images/inventoryimages/slingshotammo_lazy.tex",
@@ -949,6 +941,14 @@
     "atlas": "images/inventoryimages/um_boomberrypie.xml",
     "width": 52,
     "height": 54,
+    "workshop": true
+  },
+  "um_buttery_fly": {
+    "path": "assets/um-beta/um_buttery_fly.png",
+    "source": "images/inventoryimages/um_buttery_fly.tex",
+    "atlas": "images/inventoryimages/um_buttery_fly.xml",
+    "width": 50,
+    "height": 58,
     "workshop": true
   },
   "um_detonator": {
@@ -1533,6 +1533,14 @@
     "atlas": "images/inventoryimages/um_scrapper.xml",
     "width": 64,
     "height": 64,
+    "workshop": true
+  },
+  "um_slingshotammo_honey": {
+    "path": "assets/um-beta/um_slingshotammo_honey.png",
+    "source": "images/inventoryimages/um_slingshotammo_honey.tex",
+    "atlas": "images/inventoryimages/um_slingshotammo_honey.xml",
+    "width": 63,
+    "height": 44,
     "workshop": true
   },
   "um_smolder_spore": {

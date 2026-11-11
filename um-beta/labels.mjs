@@ -1,3 +1,4 @@
+import {canonicalText} from '../terminology.mjs';
 const groups={
  'Client-Side':'客户端','Mod Compatibility':'模组兼容','In Development':'开发中','Core Gameplay':'核心玩法',
  'Shadow Creatures':'暗影生物','Characters':'角色','Weather & Seasons':'天气与季节','World Gen':'世界生成',
@@ -32,7 +33,7 @@ const labels={
  generalcrockblocker:'限制料理填充物',crockpotmonstmeat:'料理怪物肉调整',
 };
 export const groupName=name=>groups[name]??name;
-export const configName=c=>labels[c.key]??c.title;
+export const configName=c=>canonicalText(labels[c.key]??c.title);
 const techNames={
  NONE:'无需科技',SCIENCE_ONE:'科学机器',SCIENCE_TWO:'炼金引擎',MAGIC_TWO:'灵子分解器',MAGIC_THREE:'暗影操纵器',
  ANCIENT_TWO:'损坏的远古伪科学站',ANCIENT_THREE:'远古伪科学站',SHADOWFORGING_TWO:'暗影术基座',
@@ -43,5 +44,5 @@ const techNames={
  HERMITCRABSHOP_ONE:'隐士商店 I',HERMITCRABSHOP_THREE:'隐士商店 III',
  HERMITCRABSHOP_FIVE:'隐士商店 V',HERMITCRABSHOP_SEVEN:'隐士商店 VII',
 };
-export const techName=key=>techNames[key]??key;
+export const techName=key=>canonicalText(techNames[key]??key);
 export const extraNames={obsidian:'黑曜石',iron:'铁',um_gem_repair_kit:'修复套件',um_gemology_geode_magma:'熔火晶洞'};

@@ -17,6 +17,7 @@ OUTPUT = WIKI / 'assets/um-beta'
 ARTWORK = HERE / 'artwork.json'
 EXPLICIT = {
     'cover': 'modicon.xml',
+    'um_buttery_fly': 'images/inventoryimages/um_buttery_fly.xml',
     **{role: f'images/avatars/avatar_{role}.xml' for role in ('winky', 'wixie', 'wathom')},
     **{item: f'images/scrapbook/{item}.xml' for item in (
         'cave_entrance_magmabiome', 'um_gemologyforge', 'moonmaw_dragonfly', 'veteranshrine',

@@ -3,6 +3,8 @@ import { createHash } from 'node:crypto';
 import { articles as initial, meta } from './content.mjs';
 import { refreshWorldArticles } from './research/release-20261111-world.mjs';
 import { refreshRelease25 } from './research/release-2-8-15-0-25.mjs';
+import { refreshDocumentationGaps } from './research/release-20261111-gaps.mjs';
+import { applyArticleTerminology, canonicalDocument } from './terminology.mjs';
 export { meta };
 export const categories = [
   {id:'start',name:'入门与说明'}, {id:'mechanics',name:'战斗与生存'}, {id:'world',name:'暗影世界与季节'},
@@ -131,12 +133,15 @@ for(const part of ['roles','mechanics']){
 }
 for(const id of refreshWorldArticles(articles,notes))currentAuditIds.add(id);
 for(const id of refreshRelease25(articles,notes))currentAuditIds.add(id);
+for(const id of refreshDocumentationGaps(articles,notes))currentAuditIds.add(id);
 for(const article of articles.filter(a=>currentAuditIds.has(a.id))){
  if(article.category==='items')itemAuditIds.add(article.id);
  if(article.category==='characters'||article.category==='buildings'||article.id.startsWith('boss-'))entityAuditIds.add(article.id);
  if(article.category==='food'||article.category==='creatures'&&!article.id.startsWith('boss-'))lifeAuditIds.add(article.id);
 }
 about.sections[0].paragraphs.push('当前资料基线为 2.8.15.0.25，补充角色技能兼容、体型与捕获掉落、战歌回复、穿越切换恢复及深埋之下兼容。未涉及变更的条目沿用原有核对记录；永不妥协测试版有独立的版本和词条。');
+applyArticleTerminology(articles);
+for(const key of Object.keys(notes))notes[key]=canonicalDocument(notes[key]);
 const configByKey=new Map(configData.configs.map(c=>[c.key,c]));
 export const configId=key=>'cfg-'+createHash('sha1').update(key).digest('hex').slice(0,12);
 export const groupId=(mode,group)=>'group-'+createHash('sha1').update(mode+'/'+group).digest('hex').slice(0,10);
@@ -159,7 +164,7 @@ export function requirements(c){
   }
   return [];
 }
-export const configs=configData.configs.map(c=>({...c,id:configId(c.key),groupId:groupId(c.mode,c.group),note:notes[c.key]??{},requires:requirements(c),related:articles.filter(a=>a.configKeys.includes(c.key)).map(a=>a.id)}));
+export const configs=configData.configs.map(c=>({...canonicalDocument(c),id:configId(c.key),groupId:groupId(c.mode,c.group),note:notes[c.key]??{},requires:requirements(c),related:articles.filter(a=>a.configKeys.includes(c.key)).map(a=>a.id)}));
 for(const config of configs){
   for(const key of config.requires)if(!configByKey.has(key))throw new Error(`Unknown parent config ${key} for ${config.key}`);
 }

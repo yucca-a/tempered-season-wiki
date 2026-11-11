@@ -1,7 +1,7 @@
 {
   "version": "2.8.15.0.25",
   "checkedAt": "2026-11-11",
-  "method": "Retain specialist audits and the .23 refresh; targeted .24/.25 review of right-click skills, size/capture loot, songs, storage recovery and Deeply Buried compatibility against the frozen release package.",
+  "method": "Retain specialist audits and the .23 refresh; targeted .24/.25 review of right-click skills, size/capture loot, songs, storage recovery and Deeply Buried compatibility against the frozen release package. Documentation gap review: explicit Knobbly Tree entry; environmental sources, thermal stone/pail interaction, map icons and curse retention; trace previously unreferenced runtime entry points. Source is frozen tag v2.8.15.0.25.",
   "articles": [
     {
       "id": "getting-started",
@@ -56,14 +56,15 @@
         "content/modinfo.lua",
         "content/role/combat.lua",
         "content/scripts/progressivecombat2hm.lua",
-        "content/scripts/combatconfig2hm.lua"
+        "content/scripts/combatconfig2hm.lua",
+        "content/role/combat_progressive.lua"
       ],
       "configKeys": [
         "enable hard mode",
         "role_nerf",
         "combat"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "armor",
@@ -165,7 +166,9 @@
         "content/easy_other/exchangemodes2hm.lua",
         "content/scripts/exchangemode2hm.lua",
         "content/scripts/exchangexianyurecovery2hm.lua",
-        "content/scripts/shadowvaultproxy2hm.lua"
+        "content/scripts/shadowvaultproxy2hm.lua",
+        "content/weather/temperature.lua",
+        "content/scripts/prefabs/backpackicon2hm.lua"
       ],
       "configKeys": [
         "Container Sort",
@@ -173,6 +176,15 @@
         "Items collect danger",
         "World Exchange"
       ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "about",
+      "source": [
+        "README.md",
+        "content/ARCHIVE_SOURCE.txt"
+      ],
+      "configKeys": [],
       "auditedVersion": "2.8.15.0.25"
     },
     {
@@ -561,6 +573,30 @@
       "auditedVersion": "2.8.15.0.23"
     },
     {
+      "id": "role-wonkey",
+      "source": [
+        "content/modinfo.lua",
+        "content/modmain.lua",
+        "content/easy_role/wonkey_easy.lua",
+        "content/common/monster_nightvision.lua",
+        "content/common/curse.lua"
+      ],
+      "configKeys": [
+        "enable easy mode",
+        "role_easy",
+        "wonkey_easy",
+        "Start With Wonkey Disable Transform",
+        "Wonkey Run Wait Time",
+        "Wonkey Right Self summon the powder_monkey",
+        "Wonkey Attack Steal item",
+        "Wonkey Toss Poop",
+        "Wonkey Remove Curse",
+        "right self need ctrl",
+        "Monster Night Vision"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
       "id": "clock-danger",
       "source": [
         "content/modinfo.lua",
@@ -572,6 +608,21 @@
         "clock_peril"
       ],
       "auditedVersion": "2.8.15.0.23"
+    },
+    {
+      "id": "revival-curse",
+      "source": [
+        "content/modinfo.lua",
+        "content/modmain.lua",
+        "content/role/death.lua",
+        "content/role/haitang_curse_2.lua",
+        "content/common/curse.lua"
+      ],
+      "configKeys": [
+        "death_curse",
+        "haitang_curse_2"
+      ],
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "right-click-actions",
@@ -632,17 +683,56 @@
       "auditedVersion": "2.8.15.0.25"
     },
     {
+      "id": "creature-walls",
+      "source": [
+        "content/modmain.lua",
+        "content/monster/wall.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "monster_change",
+        "wall_destroy"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "world-player-temperature",
+      "source": [
+        "content/modinfo.lua",
+        "content/modmain.lua",
+        "content/weather/temperature.lua"
+      ],
+      "configKeys": [
+        "temperature_change"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
       "id": "world-ancient-statues",
       "source": [
         "content/modinfo.lua",
         "content/modmain.lua",
         "content/tech/ancient_statue.lua",
-        "content/easy_other/easy_equipments.lua"
+        "content/easy_other/easy_equipments.lua",
+        "content/tech/common.lua"
       ],
       "configKeys": [
         "ancient_statue"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "world-ancient-altar",
+      "source": [
+        "content/modinfo.lua",
+        "content/modmain.lua",
+        "content/tech/ancient_altar.lua",
+        "content/tech/common.lua"
+      ],
+      "configKeys": [
+        "ancient_altar"
+      ],
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "creature-beefalo-bonding",
@@ -804,12 +894,70 @@
         "autumn_change"
       ],
       "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "knobbly-tree",
+      "source": [
+        "content/modmain.lua",
+        "content/modinfo.lua",
+        "content/weather/temperature.lua",
+        "content/monster/wall.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "weather_change",
+        "temperature_change",
+        "monster_change",
+        "wall_destroy"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "environment-temperature-sources",
+      "source": [
+        "content/modmain.lua",
+        "content/modinfo.lua",
+        "content/weather/temperature.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "weather_change",
+        "temperature_change"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "thermal-stone-wateringcan",
+      "source": [
+        "content/modmain.lua",
+        "content/modinfo.lua",
+        "content/weather/temperature.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "weather_change",
+        "temperature_change"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "cursed-item-retention",
+      "source": [
+        "content/modmain.lua",
+        "content/common/curse.lua"
+      ],
+      "configKeys": [],
+      "auditedVersion": "2.8.15.0.25"
     }
   ],
   "files": {
     "content/common/beef_bell_pack.lua": {
       "sha256": "fa3140ffe8ef9523069229baf00e57ba541813d2cfcb037a89ca563990fb2df3",
       "bytes": 5010
+    },
+    "content/common/curse.lua": {
+      "sha256": "ae21938ad0f54c7260b5cf8def2de1e081ea705a758e7c8b3bbdb3fc13b9719a",
+      "bytes": 8591
     },
     "content/common/difficulty.lua": {
       "sha256": "574bc7f454f2ad6291b1e66ac1810c3a54589f72cbf60b5b48386cffddbd0291",
@@ -822,6 +970,10 @@
     "content/common/food_util.lua": {
       "sha256": "6cdae5097679db475c8e738d36de35a1e652c90d1c8d85902e3bcd094598c2fc",
       "bytes": 13876
+    },
+    "content/common/monster_nightvision.lua": {
+      "sha256": "b42e20a7187e3fd89888d462f6bdb3ccb9adae134ea438981f2f926ec0a42a68",
+      "bytes": 8337
     },
     "content/common/patch.lua": {
       "sha256": "389fc3ea0eec78e6852d1aca8fb41a57a2dc66ba0bd3fde6d39f3c9b19e0562c",
@@ -939,6 +1091,10 @@
       "sha256": "fbd1e6c5d340f38fe05f867aa02caadbabfd186fa38978553c11407d120cd549",
       "bytes": 2592
     },
+    "content/easy_role/wonkey_easy.lua": {
+      "sha256": "fde2609697b1084b2d878dbc10ce12c089151d46e34d81e51f3b5a16e8716f1d",
+      "bytes": 21211
+    },
     "content/epic/antlion.lua": {
       "sha256": "aec66c7e11692422043ac441aa9232d40af4a898d0813ddade062d7aed43a99f",
       "bytes": 57625
@@ -983,9 +1139,9 @@
       "sha256": "99db4e3bbd200b199c5e08c44ff1e9a12ba0594f5a0bfb66eb759604e514d5aa",
       "bytes": 8143
     },
-    "content/ray/beye.lua": {
-      "sha256": "dff8c80aaa1eb3b464225eb86239c9eedbb22b25a9f1c4542822856173b30d6c",
-      "bytes": 11088
+    "content/monster/wall.lua": {
+      "sha256": "d6070e15ea90f548e49ad6e781f1571d15b24dd7a26c7f0da5e6e133a58a358f",
+      "bytes": 16176
     },
     "content/ray/beye_actions.lua": {
       "sha256": "c3a4230deb8905f16462343db189b4dc49838224c46dce92748d2cdbffbbd044",
@@ -994,6 +1150,10 @@
     "content/ray/beye_crafting.lua": {
       "sha256": "897a4332c0a211f54661650a0a8aa95b5ae38a20ff19f2d0d1926081c2ec91eb",
       "bytes": 7516
+    },
+    "content/ray/beye.lua": {
+      "sha256": "dff8c80aaa1eb3b464225eb86239c9eedbb22b25a9f1c4542822856173b30d6c",
+      "bytes": 11088
     },
     "content/ray/deyeshengcun.lua": {
       "sha256": "b33c925563bcbc5b5faad1c0c9feb810f9e2861ae700ab7f8d6b4b28e3e7e250",
@@ -1007,9 +1167,21 @@
       "sha256": "b1a5b9d2ec8a8787ca8b1ee91e4c3cceb37be04d6298df55aff771d895b1d203",
       "bytes": 3380
     },
+    "content/role/combat_progressive.lua": {
+      "sha256": "661cd8e3d1843cf8260c528368f73a1d622de1440c9387ab3f36ecd7beac29ff",
+      "bytes": 1860
+    },
     "content/role/combat.lua": {
       "sha256": "76d865fad63a6f70b2f6a17aa74277be6b5a4a799f3d718565c48bfc158942b8",
       "bytes": 27112
+    },
+    "content/role/death.lua": {
+      "sha256": "dbb6aa085a9a8b09aa746a214aa3ad4c4026cb66a2cf5d7b9847ceae18676d56",
+      "bytes": 9235
+    },
+    "content/role/haitang_curse_2.lua": {
+      "sha256": "7b99bff70de134a86bc6a3efa106ac9b937e210b51aeee8b20cbd0b638101534",
+      "bytes": 3542
     },
     "content/role/hunger.lua": {
       "sha256": "e5cc8ca005dbdf373e18ee0802cd1beb28bac6d16b1bd54f919db3687f97953a",
@@ -1087,17 +1259,21 @@
       "sha256": "8d3959c9377b178760c2be4c5e279bb8aeb78a6e4d7ba598120ad5f76faa401f",
       "bytes": 859
     },
+    "content/scripts/prefabs/backpackicon2hm.lua": {
+      "sha256": "c8806a7e1d94a336a140a56cd7bb8f07c273d5720f88e678dc0a3150eca631d4",
+      "bytes": 817
+    },
     "content/scripts/prefabs/battlesongbuffs.lua": {
       "sha256": "512fc77e4af9eef466b019ea882c8ed6b7589e94fdc75dca8b7ee9f7b36ea645",
       "bytes": 6323
     },
-    "content/scripts/prefabs/bootleg2hm.lua": {
-      "sha256": "2bc84c0943917c0182273de19907aa927cb4a9355bdaf4988e3a5f007e1f17b2",
-      "bytes": 10123
-    },
     "content/scripts/prefabs/bootleg_2hm.lua": {
       "sha256": "fa82a9863f0209e8fe2c986b475a021c0d2e797aca2f6dec7417ac020f320b3e",
       "bytes": 6245
+    },
+    "content/scripts/prefabs/bootleg2hm.lua": {
+      "sha256": "2bc84c0943917c0182273de19907aa927cb4a9355bdaf4988e3a5f007e1f17b2",
+      "bytes": 10123
     },
     "content/scripts/prefabs/dynamicarmor_indicator2hm.lua": {
       "sha256": "b03738d3e0d32f6f3c88d9f700a44b53056bb5974283bf429b86bf632fb8f1b5",
@@ -1203,9 +1379,17 @@
       "sha256": "8047eaf981079495338c0262ffa24fd719a8105beed9bb7e2a1cb46eb14cb47f",
       "bytes": 87351
     },
+    "content/tech/ancient_altar.lua": {
+      "sha256": "b5b603c5d82947ca1380ee329c8139c1fc71fb4fb7669e276c6b3c43d35832ae",
+      "bytes": 7728
+    },
     "content/tech/ancient_statue.lua": {
       "sha256": "2788606ba011e5f4b724918bd268018c162a1d6f48a6765d8f7458294a888e80",
       "bytes": 4916
+    },
+    "content/tech/common.lua": {
+      "sha256": "d6f3846dc1ba5e19678a7b78f6598e795760cb5fb9ec4373871540711074fe2e",
+      "bytes": 6470
     },
     "content/tech/prototyper.lua": {
       "sha256": "8fbf72ae37bf2dbf2d1c6f1dd31b7e8e9fb3ba471bad82a4fef81b6ec5ee72f9",
@@ -1222,6 +1406,10 @@
     "content/weather/autumn.lua": {
       "sha256": "cfd03b976dfa306ee8edc29d77ddaa2562907aaddef5fd20f1e92aabda197f0d",
       "bytes": 5132
+    },
+    "content/weather/temperature.lua": {
+      "sha256": "6dcdebb24c08b55c7b548b8a8e543badd381bcf60c7bd6b0daa396b4a84f7f7a",
+      "bytes": 20371
     }
   }
 }

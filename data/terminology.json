@@ -1,0 +1,6807 @@
+{
+  "checkedAt": "2026-11-11",
+  "sources": {
+    "vanilla": "Local DST scripts.zip/scripts/languages/chinese_s.po",
+    "vanillaPoSha256": "69b470eaf30f2c0eb15afe2b488bda5eb6896546fd6aaf673a7121264d22b8f2",
+    "mod": "UM beta 6.0.3.9; Chinese patch 20261106 / Workshop 3597225156",
+    "policy": "Use official Simplified Chinese for vanilla entities. Use the actual mod name for added or explicitly renamed entities. Nicknames and English names are aliases, not replacement translations. Never conflate oceantree_pillar with watertree_pillar.",
+    "fallbacks": [
+      "https://dontstarve.huijiwiki.com/wiki/疙瘩树",
+      "https://dontstarve.huijiwiki.com/wiki/大树干",
+      "https://dontstarve.huijiwiki.com/wiki/Data:ItemTableOverrides.tabx",
+      "https://dontstarve.huijiwiki.com/wiki/雷羽毛",
+      "https://dontstarve.huijiwiki.com/wiki/铁矿石",
+      "https://dontstarve.huijiwiki.com/wiki/黑曜石"
+    ]
+  },
+  "terms": [
+    {
+      "prefab": "abigail_flower",
+      "zh": "阿比盖尔之花",
+      "en": "Abigail's Flower",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "air_conditioner",
+      "zh": "空调",
+      "en": "Air Conditioner",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "alterguardian_phase1",
+      "zh": "天体英雄",
+      "en": "Celestial Champion",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "alterguardianhat",
+      "zh": "启迪之冠",
+      "en": "Enlightened Crown",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "alterguardianhatshard",
+      "zh": "启迪碎片",
+      "en": "Enlightened Shard",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "anchor_item",
+      "zh": "锚套装",
+      "en": "Anchor Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ancient_altar",
+      "zh": "远古伪科学站",
+      "en": "Ancient Pseudoscience Station",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ancient_altar_broken",
+      "zh": "损坏的远古伪科学站",
+      "en": "Broken Ancient Pseudoscience Station",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ancient_amulet_red",
+      "zh": "唤灵护符",
+      "en": "Ancient Soul Amulet",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ancientfruit_nightvision",
+      "zh": "夜莓",
+      "en": "Nightberry",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "antlion",
+      "zh": "蚁狮",
+      "en": "Antlion",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "antlionhat",
+      "zh": "刮地皮头盔",
+      "en": "Turf-Raiser Helm",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "antliontrinket",
+      "zh": "沙滩玩具",
+      "en": "Beach Toy",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "archive_centipede",
+      "zh": "远古哨兵蜈蚣",
+      "en": "Ancient Sentrypede",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "远古蜈蚣"
+      ]
+    },
+    {
+      "prefab": "archive_resonator_item",
+      "zh": "星象探测仪",
+      "en": "Astral Detector",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armor_bramble",
+      "zh": "荆棘外壳",
+      "en": "Bramble Husk",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "荆棘甲",
+        "荆棘壳"
+      ]
+    },
+    {
+      "prefab": "armor_carrotlure",
+      "zh": "胡萝卜外套",
+      "en": "Coat of Carrots",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armor_glassmail",
+      "zh": "月鳞甲",
+      "en": "Shard-Scale Armor",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armor_lunarplant",
+      "zh": "亮茄盔甲",
+      "en": "Brightshade Armor",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armor_reed_um",
+      "zh": "芦苇甲",
+      "en": "Reed Suit",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armor_sanity",
+      "zh": "暗夜甲",
+      "en": "Night Armor",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "暗影盔甲"
+      ],
+      "searchTerms": [
+        "暗影盔甲",
+        "暗影铠甲"
+      ]
+    },
+    {
+      "prefab": "armor_sharksuit_um",
+      "zh": "鲨甲",
+      "en": "Rock Hide Armor",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armor_voidcloth",
+      "zh": "虚空长袍",
+      "en": "Void Robe",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armordragonfly",
+      "zh": "鳞甲",
+      "en": "Scalemail",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armordreadstone",
+      "zh": "绝望石盔甲",
+      "en": "Dreadstone Armor",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armorgrass",
+      "zh": "草甲",
+      "en": "Grass Suit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "armormarble",
+      "zh": "大理石甲",
+      "en": "Marble Suit",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "大理石护甲",
+        "大理石盔甲"
+      ]
+    },
+    {
+      "prefab": "armorruins",
+      "zh": "铥矿甲",
+      "en": "Thulecite Suit",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "远古铥矿盔甲",
+        "远古铥矿护甲",
+        "铥矿盔甲"
+      ]
+    },
+    {
+      "prefab": "armorskeleton",
+      "zh": "骨头盔甲",
+      "en": "Bone Armor",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "骨甲"
+      ]
+    },
+    {
+      "prefab": "armorsnurtleshell",
+      "zh": "蜗壳护甲",
+      "en": "Snurtle Shell Armor",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "蜗牛壳护甲",
+        "蜗牛壳甲"
+      ]
+    },
+    {
+      "prefab": "armorwood",
+      "zh": "木甲",
+      "en": "Log Suit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "asparagus",
+      "zh": "芦笋",
+      "en": "Asparagus",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "axe",
+      "zh": "斧头",
+      "en": "Axe",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "backpack",
+      "zh": "背包",
+      "en": "Backpack",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bagofmarbles",
+      "zh": "弹珠袋",
+      "en": "Bag O' Marbles",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "balloonhat",
+      "zh": "气球帽",
+      "en": "Balloon Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bandage",
+      "zh": "蜂蜜药膏",
+      "en": "Honey Poultice",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "barnacle",
+      "zh": "藤壶",
+      "en": "Barnacles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "batbat",
+      "zh": "蝙蝠棒",
+      "en": "Bat Bat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "batnose",
+      "zh": "裸露鼻孔",
+      "en": "Naked Nostrils",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "batnosehat",
+      "zh": "牛奶帽",
+      "en": "Milkmade Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "battlesong_instant_panic",
+      "zh": "惊心独白",
+      "en": "Startling Soliloquy",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "battlesong_instant_revive",
+      "zh": "战士重奏",
+      "en": "Warrior's Reprise",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "battlesong_instant_taunt",
+      "zh": "粗鲁插曲",
+      "en": "Rude Interlude",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "batwing",
+      "zh": "洞穴蝙蝠翅膀",
+      "en": "Batilisk Wing",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "batwing_cooked",
+      "zh": "熟蝙蝠翅膀",
+      "en": "Cooked Batilisk Wing",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤蝙蝠翅膀"
+      ]
+    },
+    {
+      "prefab": "beakbasher",
+      "zh": "喙击者",
+      "en": "Beak Basher",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beardhair",
+      "zh": "胡须",
+      "en": "Beard Hair",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bearger",
+      "zh": "熊獾",
+      "en": "Bearger",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bearger_fur",
+      "zh": "熊皮",
+      "en": "Thick Fur",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beargerfur_sack",
+      "zh": "极地熊獾桶",
+      "en": "Polar Bearger Bin",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "熊桶"
+      ],
+      "searchTerms": [
+        "熊桶"
+      ]
+    },
+    {
+      "prefab": "beargervest",
+      "zh": "熊皮背心",
+      "en": "Hibearnation Vest",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bedroll_furry",
+      "zh": "毛皮铺盖",
+      "en": "Fur Roll",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bedroll_straw",
+      "zh": "草席卷",
+      "en": "Straw Roll",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bee",
+      "zh": "蜜蜂",
+      "en": "Bee",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beebox",
+      "zh": "蜂箱",
+      "en": "Bee Box",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beef_bell",
+      "zh": "皮弗娄牛铃",
+      "en": "Beefalo Bell",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beefalo",
+      "zh": "皮弗娄牛",
+      "en": "Beefalo",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beefalofeed",
+      "zh": "蒸树枝",
+      "en": "Steamed Twigs",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beefalohat",
+      "zh": "牛角帽",
+      "en": "Beefalo Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beefalowool",
+      "zh": "牛毛",
+      "en": "Beefalo Wool",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beehat",
+      "zh": "养蜂帽",
+      "en": "Beekeeper Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beequeen",
+      "zh": "蜂王",
+      "en": "Bee Queen",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "beeswax",
+      "zh": "蜂蜡",
+      "en": "Beeswax",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bernie_inactive",
+      "zh": "伯尼",
+      "en": "Bernie",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "berries",
+      "zh": "浆果",
+      "en": "Berries",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "berries_cooked",
+      "zh": "烤浆果",
+      "en": "Roasted Berries",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "berries_juicy",
+      "zh": "多汁浆果",
+      "en": "Juicy Berries",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "berries_juicy_cooked",
+      "zh": "烤多汁浆果",
+      "en": "Roasted Juicy Berries",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bird_egg",
+      "zh": "鸟蛋",
+      "en": "Egg",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "birdtrap",
+      "zh": "捕鸟陷阱",
+      "en": "Bird Trap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bishop",
+      "zh": "发条主教",
+      "en": "Clockwork Bishop",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blowdart_pipe",
+      "zh": "吹箭",
+      "en": "Blow Dart",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blue_cap",
+      "zh": "采摘的蓝蘑菇",
+      "en": "Blue Cap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blue_cap_cooked",
+      "zh": "熟蓝蘑菇",
+      "en": "Cooked Blue Cap",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤蓝蘑菇"
+      ]
+    },
+    {
+      "prefab": "blue_mushroomhat",
+      "zh": "蓝蘑菇帽",
+      "en": "Blue Funcap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blueamulet",
+      "zh": "寒冰护符",
+      "en": "Chilled Amulet",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blueberrypancakes",
+      "zh": "爆汁蓝莓薄饼",
+      "en": "Boomberry Pancakes",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bluegem",
+      "zh": "蓝宝石",
+      "en": "Blue Gem",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blueprint",
+      "zh": "蓝图",
+      "en": "Blueprint",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blueprint_craftingset_ruins_builder",
+      "zh": "废墟地皮蓝图",
+      "en": "Ruins Turf Blueprints",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "blueprint_craftingset_ruinsglow_builder",
+      "zh": "仿废墟地皮蓝图",
+      "en": "Imitation Ruins Turf Blueprints",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boards",
+      "zh": "木板",
+      "en": "Boards",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boat_ancient_item",
+      "zh": "古董船套装",
+      "en": "Archaic Boat Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boat_ancient_item_blueprint",
+      "zh": "远古船套件蓝图",
+      "en": "Archaic Boat Kit Blueprint",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boat_bumper_crabking_kit",
+      "zh": "帝王蟹保险杠套装",
+      "en": "Crab King Bumper Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boat_bumper_sludge_kit",
+      "zh": "海泥保险杠套装",
+      "en": "Sludge Bumper Kit",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boat_item",
+      "zh": "船套装",
+      "en": "Boat Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boat_rotator_kit",
+      "zh": "转向舵套装",
+      "en": "Rudder Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boatpatch",
+      "zh": "船补丁",
+      "en": "Boat Patch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boatpatch_sludge",
+      "zh": "海泥补丁套件",
+      "en": "Driftwood Boat Corks",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boneshard",
+      "zh": "骨头碎片",
+      "en": "Bone Shards",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bonesoup",
+      "zh": "骨头汤",
+      "en": "Bone Bouillon",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_brimstone",
+      "zh": "末日将至！",
+      "en": "The End is Nigh!",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_fish",
+      "zh": "垂钓者生存指南",
+      "en": "The Angler's Survival Guide",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_light",
+      "zh": "永恒之光",
+      "en": "Lux Aeterna",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_moon",
+      "zh": "月之魔典",
+      "en": "Lunar Grimoire",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_research_station",
+      "zh": "万物百科",
+      "en": "The Everything Encyclopedia",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_silviculture",
+      "zh": "应用造林学",
+      "en": "Applied Silviculture",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_sleep",
+      "zh": "睡前故事",
+      "en": "Sleepytime Stories",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_temperature",
+      "zh": "控温学",
+      "en": "Tempering Temperatures",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "book_tentacles",
+      "zh": "触手的召唤",
+      "en": "On Tentacles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "boomerang",
+      "zh": "回旋镖",
+      "en": "Boomerang",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bootleg",
+      "zh": "出逃腿靴",
+      "en": "Bootleg Getaway",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "brine_balm",
+      "zh": "盐晶药膏",
+      "en": "Brine Balm",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bugnet",
+      "zh": "捕虫网",
+      "en": "Bug Net",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bugzapper",
+      "zh": "电蚊拍",
+      "en": "Bug Zapper",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bullkelp_root",
+      "zh": "公牛海带茎",
+      "en": "Bull Kelp Stalk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bundlewrap",
+      "zh": "捆绑包装",
+      "en": "Bundling Wrap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bunnyman",
+      "zh": "兔人",
+      "en": "Bunnyman",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bunnystew",
+      "zh": "炖兔子",
+      "en": "Bunny Stew",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "bushhat",
+      "zh": "灌木丛帽",
+      "en": "Bush Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "浆果丛帽"
+      ]
+    },
+    {
+      "prefab": "butter",
+      "zh": "黄油",
+      "en": "Butter",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "butterfly",
+      "zh": "蝴蝶",
+      "en": "Butterfly",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "butterflywings",
+      "zh": "蝴蝶翅膀",
+      "en": "Butterfly Wings",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cactus_flower",
+      "zh": "仙人掌花",
+      "en": "Cactus Flower",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cactus_meat",
+      "zh": "仙人掌肉",
+      "en": "Cactus Flesh",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cactus_meat_cooked",
+      "zh": "熟仙人掌肉",
+      "en": "Cooked Cactus Flesh",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤仙人掌肉"
+      ]
+    },
+    {
+      "prefab": "canary",
+      "zh": "金丝雀",
+      "en": "Canary",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "canary_poisoned",
+      "zh": "金丝雀（中毒）",
+      "en": "Canary (Volatile)",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cane",
+      "zh": "步行手杖",
+      "en": "Walking Cane",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cannonball_rock_item",
+      "zh": "炮弹",
+      "en": "Cannonball",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cannonball_sludge_item",
+      "zh": "海泥炮弹",
+      "en": "Crude Cannonball",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "carpentry_station",
+      "zh": "锯马",
+      "en": "Sawhorse",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "carrat",
+      "zh": "胡萝卜鼠",
+      "en": "Carrat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "carrot",
+      "zh": "胡萝卜",
+      "en": "Carrot",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cartographydesk",
+      "zh": "制图桌",
+      "en": "Cartographer's Desk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "catcoonhat",
+      "zh": "猫帽",
+      "en": "Cat Cap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cave_banana",
+      "zh": "香蕉",
+      "en": "Banana",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cave_entrance",
+      "zh": "被堵住的洞穴",
+      "en": "Plugged Sinkhole",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cave_vent_mite",
+      "zh": "地热螨",
+      "en": "Geothermite",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "charcoal",
+      "zh": "木炭",
+      "en": "Charcoal",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "chesspiece_crabking_sketch",
+      "zh": "帝王蟹雕塑草图",
+      "en": "Crab King Figure Sketch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "chesspiece_malbatross_sketch",
+      "zh": "邪天翁雕塑草图",
+      "en": "Malbatross Figure Sketch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "chesspiece_wagboss_lunar_sketch",
+      "zh": "天体后裔雕塑草图",
+      "en": "Celestial Scion Figure Sketch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "chester_eyebone",
+      "zh": "眼骨",
+      "en": "Eye Bone",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "chestupgrade_stacksize",
+      "zh": "弹性空间制造器",
+      "en": "Elastispacer",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "compass",
+      "zh": "指南针",
+      "en": "Compass",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "compost",
+      "zh": "堆肥",
+      "en": "Compost",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cookedmeat",
+      "zh": "熟肉",
+      "en": "Cooked Meat",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤肉"
+      ]
+    },
+    {
+      "prefab": "cookedmonstermeat",
+      "zh": "熟怪物肉",
+      "en": "Cooked Monster Meat",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤怪物肉"
+      ]
+    },
+    {
+      "prefab": "cookpot",
+      "zh": "烹饪锅",
+      "en": "Crock Pot",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "coontail",
+      "zh": "猫尾",
+      "en": "Cat Tail",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "corn",
+      "zh": "玉米",
+      "en": "Corn",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "crabking",
+      "zh": "帝王蟹",
+      "en": "Crab King",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "critter_figgy_builder",
+      "zh": "小蚜虫",
+      "en": "Figgy",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "crow",
+      "zh": "乌鸦",
+      "en": "Crow",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "crystal_cursed_antler",
+      "zh": "Crystal Cursed Antler",
+      "en": "Crystal Cursed Antler",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cursed_antler",
+      "zh": "诅咒鹿角",
+      "en": "Cursed Antler",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cursed_monkey_token",
+      "zh": "诅咒饰品",
+      "en": "Accursed Trinket",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cutgrass",
+      "zh": "采下的草",
+      "en": "Cut Grass",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cutlichen",
+      "zh": "苔藓",
+      "en": "Lichen",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cutreeds",
+      "zh": "采下的芦苇",
+      "en": "Cut Reeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "cutstone",
+      "zh": "石砖",
+      "en": "Cut Stone",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "daywalker",
+      "zh": "梦魇疯猪",
+      "en": "Nightmare Werepig",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "daywalker2",
+      "zh": "拾荒疯猪",
+      "en": "Scrappy Werepig",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "deciduoustree",
+      "zh": "桦栗树",
+      "en": "Birchnut Tree",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "deerclops",
+      "zh": "独眼巨鹿",
+      "en": "Deerclops",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "巨鹿"
+      ],
+      "searchTerms": []
+    },
+    {
+      "prefab": "deerclops_eyeball",
+      "zh": "独眼巨鹿眼球",
+      "en": "Deerclops Eyeball",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "deerclopseyeball_sentryward",
+      "zh": "冰眼结晶器",
+      "en": "Ice Crystaleyezer",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "deerclopseyeball_sentryward_kit",
+      "zh": "冰眼结晶器套装",
+      "en": "Ice Crystaleyezer Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "deserthat",
+      "zh": "沙漠护目镜",
+      "en": "Desert Goggles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dormant_rain_horn",
+      "zh": "休眠海螺",
+      "en": "Dormant Conch",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dragon_scales",
+      "zh": "鳞片",
+      "en": "Scales",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "龙鳞皮",
+        "龙鳞"
+      ],
+      "searchTerms": []
+    },
+    {
+      "prefab": "dragonfly",
+      "zh": "龙蝇",
+      "en": "Dragonfly",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dragonflychest",
+      "zh": "龙鳞宝箱",
+      "en": "Scaled Chest",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dragonflyfurnace",
+      "zh": "龙鳞火炉",
+      "en": "Scaled Furnace",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dragonfruit",
+      "zh": "火龙果",
+      "en": "Dragon Fruit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dragonfruit_cooked",
+      "zh": "熟火龙果",
+      "en": "Prepared Dragon Fruit",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤火龙果"
+      ]
+    },
+    {
+      "prefab": "dragonfruit_seeds",
+      "zh": "球茎状种子",
+      "en": "Bulbous Seeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dragonpie",
+      "zh": "火龙果派",
+      "en": "Dragonpie",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dreadstone",
+      "zh": "绝望石",
+      "en": "Dreadstone",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dreadstonehat",
+      "zh": "绝望石头盔",
+      "en": "Dreadstone Helm",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "driftwood_log",
+      "zh": "浮木桩",
+      "en": "Driftwood Piece",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "浮木"
+      ],
+      "searchTerms": [
+        "浮木"
+      ]
+    },
+    {
+      "prefab": "driftwoodfishingrod",
+      "zh": "浮木钓杆",
+      "en": "Driftwood Fishing Rod",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "drumstick",
+      "zh": "鸟腿",
+      "en": "Drumstick",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dug_bananabush",
+      "zh": "香蕉丛",
+      "en": "Banana Bush",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dug_rock_avocado_bush",
+      "zh": "石果灌木丛",
+      "en": "Stone Fruit Bush",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "dumbbell_heat",
+      "zh": "热铃",
+      "en": "Thermbell",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "热能哑铃"
+      ]
+    },
+    {
+      "prefab": "durian",
+      "zh": "榴莲",
+      "en": "Durian",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "eggplant",
+      "zh": "茄子",
+      "en": "Eggplant",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "elixir_container",
+      "zh": "野餐盒",
+      "en": "Picnic Casket",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "eyebrellahat",
+      "zh": "眼球伞",
+      "en": "Eyebrella",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "eyemaskhat",
+      "zh": "眼面具",
+      "en": "Eye Mask",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "eyeofterror",
+      "zh": "恐怖之眼",
+      "en": "Eye Of Terror",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "eyeturret",
+      "zh": "眼睛炮塔",
+      "en": "Houndius Shootius",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "眼球炮塔"
+      ],
+      "searchTerms": [
+        "眼球炮塔"
+      ]
+    },
+    {
+      "prefab": "eyeturret_item",
+      "zh": "眼睛炮塔",
+      "en": "Houndius Shootius",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "feather_canary",
+      "zh": "黄色羽毛",
+      "en": "Saffron Feather",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "feather_robin_winter",
+      "zh": "蓝色羽毛",
+      "en": "Azure Feather",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "featherhat",
+      "zh": "羽毛帽",
+      "en": "Feather Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fertilizer",
+      "zh": "便便桶",
+      "en": "Bucket-o-poop",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fig",
+      "zh": "无花果",
+      "en": "Fig",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fireflies",
+      "zh": "萤火虫",
+      "en": "Fireflies",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "firenettles",
+      "zh": "火荨麻叶",
+      "en": "Fire Nettle Fronds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "firenettles_dried",
+      "zh": "干火荨麻叶",
+      "en": "Dried Fire Nettle Frond",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "firestaff",
+      "zh": "火魔杖",
+      "en": "Fire Staff",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fish",
+      "zh": "鱼",
+      "en": "Fish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fishingrod",
+      "zh": "淡水钓竿",
+      "en": "Freshwater Fishing Rod",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fishmeat_small",
+      "zh": "小鱼块",
+      "en": "Fish Morsel",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fishmeat_small_cooked",
+      "zh": "熟小鱼块",
+      "en": "Cooked Fish Morsel",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "flint",
+      "zh": "燧石",
+      "en": "Flint",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "floral_bandage",
+      "zh": "夏花绷带",
+      "en": "Sweetflower Wrap",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "flowerhat",
+      "zh": "花环",
+      "en": "Garland",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "footballhat",
+      "zh": "橄榄球头盔",
+      "en": "Football Helmet",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "forgetmelots",
+      "zh": "必忘我",
+      "en": "Forget-Me-Lots",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "fossil_piece",
+      "zh": "化石碎片",
+      "en": "Fossil Fragments",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "frogfishbowl",
+      "zh": "蓝带鱼排",
+      "en": "Fish Cordon Bleu",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "froglegs",
+      "zh": "蛙腿",
+      "en": "Frog Legs",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "froglegs_cooked",
+      "zh": "熟蛙腿",
+      "en": "Cooked Frog Legs",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤蛙腿"
+      ]
+    },
+    {
+      "prefab": "fruitbat",
+      "zh": "果蝠",
+      "en": "Fruit Bat",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "garlic",
+      "zh": "大蒜",
+      "en": "Garlic",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "garlic_seeds",
+      "zh": "种子荚",
+      "en": "Seed Pods",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "gasmask",
+      "zh": "鹅毛面具",
+      "en": "Goose Mask",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "gazpacho",
+      "zh": "芦笋冷汤",
+      "en": "Asparagazpacho",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "gears",
+      "zh": "齿轮",
+      "en": "Gears",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "gelblob_bottle",
+      "zh": "恶液罐",
+      "en": "Icker Jar",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "gelblob_storage",
+      "zh": "恶液储存箱",
+      "en": "Icker Preserve",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "恶液存储箱"
+      ]
+    },
+    {
+      "prefab": "gelblob_storage_kit",
+      "zh": "恶液储存箱套件",
+      "en": "Icker Preserve Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "恶液存储套件"
+      ]
+    },
+    {
+      "prefab": "ghostflower",
+      "zh": "哀悼荣耀",
+      "en": "Mourning Glory",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_attack",
+      "zh": "夜影万金油",
+      "en": "Nightshade Nostrum",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_fastregen",
+      "zh": "灵魂万灵药",
+      "en": "Spectral Cure-All",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_lunar",
+      "zh": "光之怒",
+      "en": "Luminous Wrath",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_retaliation",
+      "zh": "蒸馏复仇",
+      "en": "Distilled Vengeance",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_revive",
+      "zh": "恐怖经历",
+      "en": "Ghastly Experience",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_shadow",
+      "zh": "诅咒之苦",
+      "en": "Cursed Vexation",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_shield",
+      "zh": "不屈药剂",
+      "en": "Unyielding Draught",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_slowregen",
+      "zh": "亡者补药",
+      "en": "Revenant Restorative",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ghostlyelixir_speed",
+      "zh": "强健精油",
+      "en": "Vigor Mortis",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "giant_blueberry",
+      "zh": "爆汁蓝莓",
+      "en": "Boomberry",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "giftwrap",
+      "zh": "礼物包装",
+      "en": "Gift Wrap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "glacialhound",
+      "zh": "冰川青年座狼",
+      "en": "Glacial Varglet",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "glass_scales",
+      "zh": "启迪鳞片",
+      "en": "Enlightened Scales",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "glasscutter",
+      "zh": "玻璃刀",
+      "en": "Glass Cutter",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "glommer",
+      "zh": "格罗姆",
+      "en": "Glommer",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "glommerfuel",
+      "zh": "格罗姆的黏液",
+      "en": "Glommer's Goop",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "goatmilk",
+      "zh": "带电的羊奶",
+      "en": "Electric Milk",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "电羊奶",
+        "伏特羊奶"
+      ]
+    },
+    {
+      "prefab": "goggleshat",
+      "zh": "时髦的护目镜",
+      "en": "Fashion Goggles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "goldenaxe",
+      "zh": "黄金斧头",
+      "en": "Luxury Axe",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "goldenpickaxe",
+      "zh": "黄金鹤嘴锄",
+      "en": "Opulent Pickaxe",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "goldenpitchfork",
+      "zh": "黄金干草叉",
+      "en": "Snazzy Pitchfork",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "goldnugget",
+      "zh": "金块",
+      "en": "Gold Nugget",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "goose_feather",
+      "zh": "麋鹿鹅羽毛",
+      "en": "Down Feather",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "gore_horn_hat",
+      "zh": "犀牛帽",
+      "en": "Gore Horn",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "grassgekko",
+      "zh": "草壁虎",
+      "en": "Grass Gekko",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "green_cap",
+      "zh": "采摘的绿蘑菇",
+      "en": "Green Cap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "green_cap_cooked",
+      "zh": "熟绿蘑菇",
+      "en": "Cooked Green Cap",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤绿蘑菇"
+      ]
+    },
+    {
+      "prefab": "green_mushroomhat",
+      "zh": "绿蘑菇帽",
+      "en": "Green Funcap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "greenamulet",
+      "zh": "建造护符",
+      "en": "Construction Amulet",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "greengem",
+      "zh": "绿宝石",
+      "en": "Green Gem",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "greenmooneye",
+      "zh": "绿色月眼",
+      "en": "Green Moonlens",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "greenstaff",
+      "zh": "拆解魔杖",
+      "en": "Deconstruction Staff",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "解构法杖",
+        "拆解法杖"
+      ],
+      "searchTerms": [
+        "解构魔杖",
+        "解构法杖",
+        "拆解法杖"
+      ]
+    },
+    {
+      "prefab": "guacamole",
+      "zh": "鳄梨酱",
+      "en": "Guacamole",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "gunpowder",
+      "zh": "火药",
+      "en": "Gunpowder",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hambat",
+      "zh": "火腿棒",
+      "en": "Ham Bat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hammer",
+      "zh": "锤子",
+      "en": "Hammer",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hat_ratmask",
+      "zh": "老鼠面具",
+      "en": "Rat Mask",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hawaiianshirt",
+      "zh": "花衬衫",
+      "en": "Floral Shirt",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "healingsalve",
+      "zh": "治疗药膏",
+      "en": "Healing Salve",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "heatrock",
+      "zh": "暖石",
+      "en": "Thermal Stone",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hermit_bundle_lures",
+      "zh": "诱饵包",
+      "en": "Lure Bundle",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hivehat",
+      "zh": "蜂王冠",
+      "en": "Bee Queen Crown",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "honey",
+      "zh": "蜂蜜",
+      "en": "Honey",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "honey_log",
+      "zh": "蜂蜜原木卷",
+      "en": "Honey Log Roll",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hooded_fern",
+      "zh": "高齿蕨",
+      "en": "Thicket",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hoodedwidow",
+      "zh": "黑寡妇",
+      "en": "Hooded Widow",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "horn",
+      "zh": "牛角",
+      "en": "Beefalo Horn",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "horrorfuel",
+      "zh": "纯粹恐惧",
+      "en": "Pure Horror",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hound",
+      "zh": "猎犬",
+      "en": "Hound",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "houndstooth",
+      "zh": "犬牙",
+      "en": "Hound's Tooth",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "houndstooth_blowpipe",
+      "zh": "嚎弹炮",
+      "en": "Howlitzer",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "hutch_fishbowl",
+      "zh": "星空",
+      "en": "Star-sky",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ice",
+      "zh": "冰",
+      "en": "Ice",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "icebox",
+      "zh": "冰箱",
+      "en": "Ice Box",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "icehat",
+      "zh": "冰帽",
+      "en": "Ice Cube",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "icepack",
+      "zh": "保鲜背包",
+      "en": "Insulated Pack",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "icestaff",
+      "zh": "冰魔杖",
+      "en": "Ice Staff",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "冰杖"
+      ],
+      "searchTerms": [
+        "冰杖"
+      ]
+    },
+    {
+      "prefab": "icestaff2",
+      "zh": "闪冻魔杖",
+      "en": "Flash Freeze Staff",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "闪冻冰杖"
+      ]
+    },
+    {
+      "prefab": "icestaff3",
+      "zh": "深冻魔杖",
+      "en": "Deep Freeze Staff",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "深冻冰杖"
+      ]
+    },
+    {
+      "prefab": "jammypreserves",
+      "zh": "果酱",
+      "en": "Fist Full of Jam",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "jawed_scythe",
+      "zh": "颚镰",
+      "en": "Jawed Scythe",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "kelp",
+      "zh": "海带叶",
+      "en": "Kelp Fronds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "kelp_dried",
+      "zh": "干海带叶",
+      "en": "Dried Kelp Fronds",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "海带干"
+      ]
+    },
+    {
+      "prefab": "kelphat",
+      "zh": "海花环",
+      "en": "Seawreath",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "海花冠"
+      ]
+    },
+    {
+      "prefab": "killerbee",
+      "zh": "杀人蜂",
+      "en": "Killer Bee",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "klaus",
+      "zh": "克劳斯",
+      "en": "Klaus",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "klaussackkey",
+      "zh": "麋鹿茸",
+      "en": "Stag Antler",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "knight",
+      "zh": "发条骑士",
+      "en": "Clockwork Knight",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "koalefant_summer",
+      "zh": "考拉象",
+      "en": "Koalefant",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "大象"
+      ],
+      "searchTerms": [
+        "大象"
+      ]
+    },
+    {
+      "prefab": "krampus",
+      "zh": "坎普斯",
+      "en": "Krampus",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "krampus_sack",
+      "zh": "坎普斯背包",
+      "en": "Krampus Sack",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lantern",
+      "zh": "提灯",
+      "en": "Lantern",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "leif",
+      "zh": "树精守卫",
+      "en": "Treeguard",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "树人守卫",
+        "树人"
+      ],
+      "searchTerms": [
+        "树精"
+      ]
+    },
+    {
+      "prefab": "lifeinjector",
+      "zh": "强心针",
+      "en": "Booster Shot",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lightbulb",
+      "zh": "荧光果",
+      "en": "Light Bulb",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "灯泡"
+      ]
+    },
+    {
+      "prefab": "lightninggoat",
+      "zh": "伏特羊",
+      "en": "Volt Goat",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "电羊",
+        "闪电羊"
+      ]
+    },
+    {
+      "prefab": "lightninggoathorn",
+      "zh": "伏特羊角",
+      "en": "Volt Goat Horn",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "little_walrus",
+      "zh": "小海象",
+      "en": "Wee MacTusk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "livinglog",
+      "zh": "活木头",
+      "en": "Living Log",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "活木"
+      ],
+      "searchTerms": [
+        "活木"
+      ]
+    },
+    {
+      "prefab": "log",
+      "zh": "木头",
+      "en": "Log",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lunar_seed",
+      "zh": "天体珠宝",
+      "en": "Celestial Jewel",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lunarplant_husk",
+      "zh": "亮茄外壳",
+      "en": "Brightshade Husk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lunarplanthat",
+      "zh": "亮茄头盔",
+      "en": "Brightshade Helm",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lunarthrall_plant",
+      "zh": "致命亮茄",
+      "en": "Deadly Brightshade",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lureplant",
+      "zh": "食人花",
+      "en": "Lureplant",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "lureplantbulb",
+      "zh": "食人花种子",
+      "en": "Fleshy Bulb",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "malbatross",
+      "zh": "邪天翁",
+      "en": "Malbatross",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "邪天翁"
+      ],
+      "searchTerms": []
+    },
+    {
+      "prefab": "malbatross_beak",
+      "zh": "邪天翁喙",
+      "en": "Malbatross Bill",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "malbatross_feather",
+      "zh": "邪天翁羽毛",
+      "en": "Malbatross Feather",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "malbatross_feathered_weave",
+      "zh": "羽毛帆布",
+      "en": "Feathery Canvas",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mandrake",
+      "zh": "曼德拉草",
+      "en": "Mandrake",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "manrabbit_tail",
+      "zh": "兔绒",
+      "en": "Bunny Puff",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "marble",
+      "zh": "大理石",
+      "en": "Marble",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mast_item",
+      "zh": "桅杆套装",
+      "en": "Mast Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mast_malbatross_item",
+      "zh": "飞翼风帆套装",
+      "en": "Winged Sail Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mastupgrade_lamp_item",
+      "zh": "甲板照明灯",
+      "en": "Deck Illuminator",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mastupgrade_windturbine_item",
+      "zh": "风力涡轮灯台",
+      "en": "Wind Turbine",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "meat",
+      "zh": "肉",
+      "en": "Meat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "meat_dried",
+      "zh": "肉干",
+      "en": "Jerky",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "meatrack",
+      "zh": "晾肉架",
+      "en": "Drying Rack",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "meatrack_hat",
+      "zh": "风干帽",
+      "en": "Jerky Hat",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mermhat",
+      "zh": "聪明的伪装",
+      "en": "Clever Disguise",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "鱼人帽"
+      ]
+    },
+    {
+      "prefab": "mermwatchtower",
+      "zh": "鱼人堡垒",
+      "en": "Merm Flort-ifications",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "messagebottle",
+      "zh": "瓶中信",
+      "en": "Message in a Bottle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "messagebottleempty",
+      "zh": "空瓶子",
+      "en": "Empty Bottle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "milkywhites",
+      "zh": "乳白物",
+      "en": "Milky Whites",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "minerhat",
+      "zh": "矿工帽",
+      "en": "Miner Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "minotaur",
+      "zh": "远古守护者",
+      "en": "Ancient Guardian",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "犀牛"
+      ],
+      "searchTerms": []
+    },
+    {
+      "prefab": "minotaurhorn",
+      "zh": "守护者之角",
+      "en": "Guardian's Horn",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "犀牛角"
+      ]
+    },
+    {
+      "prefab": "molehat",
+      "zh": "鼹鼠帽",
+      "en": "Moggles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "monkey",
+      "zh": "穴居猴",
+      "en": "Splumonkey",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "monstermeat",
+      "zh": "怪物肉",
+      "en": "Monster Meat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "monstermeat_dried",
+      "zh": "怪物肉干",
+      "en": "Monster Jerky",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "monstersmallmeat",
+      "zh": "小怪物肉",
+      "en": "Monster Morsel",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "monstersmallmeat_dried",
+      "zh": "小怪物肉干",
+      "en": "Small Monster Jerky",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moon_cap",
+      "zh": "月亮蘑菇",
+      "en": "Moon Shroom",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moon_cap_cooked",
+      "zh": "熟月亮蘑菇",
+      "en": "Cooked Moon Shroom",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤月亮蘑菇"
+      ]
+    },
+    {
+      "prefab": "moon_mushroomhat",
+      "zh": "月亮蘑菇帽",
+      "en": "Lunar Funcap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moon_tree_blossom",
+      "zh": "月树花",
+      "en": "Lune Tree Blossom",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonbutterflywings",
+      "zh": "月蛾翅膀",
+      "en": "Moon Moth Wings",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonglass",
+      "zh": "月亮碎片",
+      "en": "Moon Shard",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonglass_charged",
+      "zh": "注能月亮碎片",
+      "en": "Infused Moon Shard",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonglassaxe",
+      "zh": "月光玻璃斧",
+      "en": "Moon Glass Axe",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonrockidol",
+      "zh": "月岩雕像",
+      "en": "Moon Rock Idol",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonrocknugget",
+      "zh": "月岩",
+      "en": "Moon Rock",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonstorm_goggleshat",
+      "zh": "星象护目镜",
+      "en": "Astroggles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonstorm_spark",
+      "zh": "月熠",
+      "en": "Moongleam",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "moonstorm_static_item",
+      "zh": "约束静电",
+      "en": "Restrained Static",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mosquitosack",
+      "zh": "蚊子血囊",
+      "en": "Mosquito Sack",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "multitool_axe_pickaxe",
+      "zh": "多用斧镐",
+      "en": "Pick/Axe",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mushgnome",
+      "zh": "蘑菇地精",
+      "en": "Mush Gnome",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mushroom_light",
+      "zh": "蘑菇灯",
+      "en": "Mushlight",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mushroom_light2",
+      "zh": "菌伞灯",
+      "en": "Glowcap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mushtree_medium",
+      "zh": "红蘑菇树",
+      "en": "Red Mushtree",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mushtree_tall",
+      "zh": "蓝蘑菇树",
+      "en": "Blue Mushtree",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mutator_trapdoor",
+      "zh": "地穴变身涂鸦",
+      "en": "Trapdoor Switcherdoodle",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "mutator_trapdoor_hooded",
+      "zh": "罩面寡蛛诱变糕",
+      "en": "Hooded Widower Switcherdoodle",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "nightmare_timepiece",
+      "zh": "铥矿徽章",
+      "en": "Thulecite Medallion",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "nightmarefuel",
+      "zh": "噩梦燃料",
+      "en": "Nightmare Fuel",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "nightmarepie",
+      "zh": "恐怖国王饼",
+      "en": "Grim Galette",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "nightstick",
+      "zh": "晨星锤",
+      "en": "Morning Star",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "nightsword",
+      "zh": "暗夜剑",
+      "en": "Dark Sword",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "nitre",
+      "zh": "硝石",
+      "en": "Nitre",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "nutrientsgoggleshat",
+      "zh": "高级耕作先驱帽",
+      "en": "Premier Gardeneer Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oar_monkey",
+      "zh": "战桨",
+      "en": "Battle Paddle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_1_inv",
+      "zh": "泥鱼",
+      "en": "Mudfish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_2_inv",
+      "zh": "斑鱼",
+      "en": "Deep Bass",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_3_inv",
+      "zh": "浮夸狮子鱼",
+      "en": "Dandy Lionfish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_4_inv",
+      "zh": "黑鲶鱼",
+      "en": "Black Catfish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_5_inv",
+      "zh": "玉米鳕鱼",
+      "en": "Corn Cod",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_6_inv",
+      "zh": "花锦鲤",
+      "en": "Dappled Koi",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_7_inv",
+      "zh": "金锦鲤",
+      "en": "Golden Koi",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_8_inv",
+      "zh": "冰鲷鱼",
+      "en": "Ice Bream",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_medium_9_inv",
+      "zh": "甜味鱼",
+      "en": "Sweetish Fish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_1_inv",
+      "zh": "小孔雀鱼",
+      "en": "Runty Guppy",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_2_inv",
+      "zh": "针鼻喷墨鱼",
+      "en": "Needlenosed Squirt",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_3_inv",
+      "zh": "小饵鱼",
+      "en": "Bitty Baitfish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_4_inv",
+      "zh": "三文鱼苗",
+      "en": "Smolt Fry",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_5_inv",
+      "zh": "爆米花鱼",
+      "en": "Popperfish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_6_inv",
+      "zh": "落叶比目鱼",
+      "en": "Fallounder",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_7_inv",
+      "zh": "花朵金枪鱼",
+      "en": "Bloomfin Tuna",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_8_inv",
+      "zh": "炽热太阳鱼",
+      "en": "Scorching Sunfish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfish_small_9_inv",
+      "zh": "口水鱼",
+      "en": "Spittlefish",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceanfishingrod",
+      "zh": "海钓竿",
+      "en": "Sea Fishing Rod",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceantree",
+      "zh": "疙瘩树",
+      "en": "Knobbly Tree",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "水中树"
+      ],
+      "searchTerms": [
+        "海中树",
+        "海树催长"
+      ]
+    },
+    {
+      "prefab": "oceantree_pillar",
+      "zh": "高出平均值的树干",
+      "en": "Above-Average Tree Trunk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "oceantreenut",
+      "zh": "疙瘩树果",
+      "en": "Knobbly Tree Nut",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ocupus_beak",
+      "zh": "多目章鱼喙",
+      "en": "Ocupus Beak",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ocupus_tentacle_eye",
+      "zh": "多目章鱼眼球",
+      "en": "Ocupus Eye",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "onion_seeds",
+      "zh": "尖形种子",
+      "en": "Pointy Seeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "opalpreciousgem",
+      "zh": "彩虹宝石",
+      "en": "Iridescent Gem",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "orangeamulet",
+      "zh": "懒人护符",
+      "en": "The Lazy Forager",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "orangegem",
+      "zh": "橙宝石",
+      "en": "Orange Gem",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "orangemooneye",
+      "zh": "橙色月眼",
+      "en": "Orange Moonlens",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "orangestaff",
+      "zh": "懒人魔杖",
+      "en": "The Lazy Explorer",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "懒人法杖"
+      ],
+      "searchTerms": [
+        "懒人法杖",
+        "懒人手杖"
+      ]
+    },
+    {
+      "prefab": "otter",
+      "zh": "水獭掠夺者",
+      "en": "Marotter",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "palmcone_scale",
+      "zh": "棕榈松果树鳞片",
+      "en": "Palmcone Scale",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "panflute",
+      "zh": "排箫",
+      "en": "Pan Flute",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "papyrus",
+      "zh": "莎草纸",
+      "en": "Papyrus",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pepper",
+      "zh": "辣椒",
+      "en": "Pepper",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pepper_seeds",
+      "zh": "块状种子",
+      "en": "Lumpy Seeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "petals",
+      "zh": "花瓣",
+      "en": "Petals",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "phlegm",
+      "zh": "脓鼻涕",
+      "en": "Phlegm",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pickaxe",
+      "zh": "鹤嘴锄",
+      "en": "Pickaxe",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pickaxe_lunarplant",
+      "zh": "亮茄粉碎者",
+      "en": "Brightshade Smasher",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pigman",
+      "zh": "猪人",
+      "en": "Pig Man",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pigskin",
+      "zh": "猪皮",
+      "en": "Pig Skin",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pinecone",
+      "zh": "松果",
+      "en": "Pine Cone",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "placeholder_ingredient_ia",
+      "zh": "需要岛屿冒险！",
+      "en": "Requires Island Adventures!",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "plaguemask",
+      "zh": "瘟疫面具",
+      "en": "Plague Mask",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "plantmeat",
+      "zh": "叶肉",
+      "en": "Leafy Meat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "plantregistryhat",
+      "zh": "耕作先驱帽",
+      "en": "Gardeneer Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "plaunt_manny",
+      "zh": "汪汪警戒娃娃",
+      "en": "Houndious Observious",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pocketwatch_heal",
+      "zh": "不老表",
+      "en": "Ageless Watch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pocketwatch_parts",
+      "zh": "时间碎片",
+      "en": "Time Pieces",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pocketwatch_portal",
+      "zh": "裂缝表",
+      "en": "Rift Watch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pocketwatch_recall",
+      "zh": "溯源表",
+      "en": "Backtrek Watch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pocketwatch_revive",
+      "zh": "第二次机会表",
+      "en": "Second Chance Watch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pocketwatch_warp",
+      "zh": "倒走表",
+      "en": "Backstep Watch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pocketwatch_weapon",
+      "zh": "警钟",
+      "en": "Alarming Clock",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pomegranate",
+      "zh": "石榴",
+      "en": "Pomegranate",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "portableblender_item",
+      "zh": "便携研磨器",
+      "en": "Portable Grinding Mill",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "portableboat_item",
+      "zh": "气垫船套装",
+      "en": "Portable Raft",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "portablecookpot_item",
+      "zh": "便携烹饪锅",
+      "en": "Portable Crock Pot",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "portablespicer",
+      "zh": "便携香料站",
+      "en": "Portable Seasoning Station",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "便携调味站",
+        "携带式调味站"
+      ]
+    },
+    {
+      "prefab": "portablespicer_item",
+      "zh": "便携香料站",
+      "en": "Portable Seasoning Station",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "potato",
+      "zh": "土豆",
+      "en": "Potato",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "potato_cooked",
+      "zh": "烤土豆",
+      "en": "Roasted Potato",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "powercell",
+      "zh": "蓄电池",
+      "en": "Energy Cell",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "premiumwateringcan_not_empty",
+      "zh": "鸟嘴壶",
+      "en": "Waterfowl Can",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "邪天翁水壶",
+        "豪华浇水壶"
+      ],
+      "searchTerms": [
+        "谢天翁水壶",
+        "邪天翁水壶"
+      ]
+    },
+    {
+      "prefab": "pumpkin",
+      "zh": "南瓜",
+      "en": "Pumpkin",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "pumpkincookie",
+      "zh": "南瓜饼干",
+      "en": "Pumpkin Cookies",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "purebrilliance",
+      "zh": "纯粹辉煌",
+      "en": "Pure Brilliance",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "purplegem",
+      "zh": "紫宝石",
+      "en": "Purple Gem",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "purplemooneye",
+      "zh": "紫色月眼",
+      "en": "Purple Moonlens",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "quagmire_onion",
+      "zh": "洋葱",
+      "en": "Onion",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "quagmire_tomato",
+      "zh": "番茄",
+      "en": "Toma Root",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rabbit",
+      "zh": "兔子",
+      "en": "Rabbit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rain_horn",
+      "zh": "唤雨海螺",
+      "en": "Drowning Conch",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "raincoat",
+      "zh": "雨衣",
+      "en": "Rain Coat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rainhat",
+      "zh": "雨帽",
+      "en": "Rain Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rat_tail",
+      "zh": "鼠尾",
+      "en": "Rat Tail",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rat_whip",
+      "zh": "绞尾鼠鞭",
+      "en": "Tail o' Twined Rats",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ratpoisonbottle",
+      "zh": "毒果酱",
+      "en": "Poison Jam",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "razor",
+      "zh": "剃刀",
+      "en": "Razor",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "red_cap",
+      "zh": "采摘的红蘑菇",
+      "en": "Red Cap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "red_cap_cooked",
+      "zh": "熟红蘑菇",
+      "en": "Cooked Red Cap",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "烤红蘑菇"
+      ]
+    },
+    {
+      "prefab": "red_mushroomhat",
+      "zh": "红蘑菇帽",
+      "en": "Red Funcap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "redgem",
+      "zh": "红宝石",
+      "en": "Red Gem",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "refined_dust",
+      "zh": "尘土块",
+      "en": "Collected Dust",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "researchlab",
+      "zh": "科学机器",
+      "en": "Science Machine",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "researchlab2",
+      "zh": "炼金引擎",
+      "en": "Alchemy Engine",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "researchlab3",
+      "zh": "暗影操控器",
+      "en": "Shadow Manipulator",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "暗影操纵器"
+      ]
+    },
+    {
+      "prefab": "researchlab4",
+      "zh": "灵子分解器",
+      "en": "Prestihatitator",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "reskin_tool",
+      "zh": "清洁扫把",
+      "en": "Clean Sweeper",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "reviver",
+      "zh": "告密的心",
+      "en": "Telltale Heart",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rimeweed_main",
+      "zh": "尖刺霜草",
+      "en": "Spiny Rimeweed",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "robin",
+      "zh": "红雀",
+      "en": "Redbird",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "robin_winter",
+      "zh": "雪雀",
+      "en": "Snowbird",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rock_avocado_fruit_ripe",
+      "zh": "成熟石果",
+      "en": "Ripe Stone Fruit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rock_avocado_fruit_ripe_cooked",
+      "zh": "熟石果",
+      "en": "Cooked Stone Fruit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rock_avocado_fruit_sprout",
+      "zh": "发芽的石果",
+      "en": "Sprouting Stone Fruit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rockjawleather",
+      "zh": "鲨鱼皮",
+      "en": "Rocky Hide",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rocks",
+      "zh": "石头",
+      "en": "Rocks",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rocky",
+      "zh": "石虾",
+      "en": "Rock Lobster",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rook",
+      "zh": "发条战车",
+      "en": "Clockwork Rook",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "rope",
+      "zh": "绳子",
+      "en": "Rope",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "royal_jelly",
+      "zh": "蜂王浆",
+      "en": "Royal Jelly",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ruins_bat",
+      "zh": "铥矿棒",
+      "en": "Thulecite Club",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "ruinshat",
+      "zh": "铥矿皇冠",
+      "en": "Thulecite Crown",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "铥矿冠",
+        "铥矿头盔"
+      ]
+    },
+    {
+      "prefab": "saddle_basic",
+      "zh": "鞍具",
+      "en": "Saddle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "saddle_shadow",
+      "zh": "梦魇鞍具",
+      "en": "Nightmare Saddle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "saltpack",
+      "zh": "盐瓶3000",
+      "en": "Salt Shaker 3000",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "saltrock",
+      "zh": "盐晶",
+      "en": "Salt Crystals",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "scandata",
+      "zh": "生物数据",
+      "en": "Bio Data",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "scrap_monoclehat",
+      "zh": "视界扩展器",
+      "en": "Horizon Expandinator",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "scraphat",
+      "zh": "拾荒尖帽",
+      "en": "Scrappy Chapauldron",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sculptingtable",
+      "zh": "陶轮",
+      "en": "Potter's Wheel",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "seafaring_prototyper",
+      "zh": "智囊团",
+      "en": "Think Tank",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "seafoodpaella",
+      "zh": "海鲜饭",
+      "en": "Seafood Paella",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "security_pulse_cage_full",
+      "zh": "火花柜",
+      "en": "Spark Ark",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "seeds",
+      "zh": "种子",
+      "en": "Seeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "seeds_cooked",
+      "zh": "烤种子",
+      "en": "Toasted Seeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sewing_kit",
+      "zh": "针线包",
+      "en": "Sewing Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sewing_mannequin",
+      "zh": "假人",
+      "en": "Mannequin",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sewing_tape",
+      "zh": "可靠的胶布",
+      "en": "Trusty Tape",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shadow_battleaxe",
+      "zh": "暗影槌",
+      "en": "Shadow Maul",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "暗影锤"
+      ],
+      "searchTerms": [
+        "暗影锤"
+      ]
+    },
+    {
+      "prefab": "shadow_bishop",
+      "zh": "暗影主教",
+      "en": "Shadow Bishop",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shadow_forge_kit",
+      "zh": "暗影术基座套装",
+      "en": "Shadowcraft Plinth Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shadow_knight",
+      "zh": "暗影骑士",
+      "en": "Shadow Knight",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shadow_rook",
+      "zh": "暗影战车",
+      "en": "Shadow Rook",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shadowheart",
+      "zh": "暗影心房",
+      "en": "Shadow Atrium",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shadowheart_infused",
+      "zh": "附身暗影心房",
+      "en": "Possessed Shadow Atrium",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shadowthrall_centipede",
+      "zh": "巨荒蜈",
+      "en": "Mega Blight",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "巨荒蜈蚣"
+      ],
+      "searchTerms": [
+        "巨荒蜈蚣"
+      ]
+    },
+    {
+      "prefab": "shadowthrall_hands",
+      "zh": "墨荒",
+      "en": "Ink Blight",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shark",
+      "zh": "岩石大白鲨",
+      "en": "Rockjaw",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sharkboi",
+      "zh": "大霜鲨",
+      "en": "Frostjaw",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shieldofterror",
+      "zh": "恐怖盾牌",
+      "en": "Shield of Terror",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shockworm",
+      "zh": "洞穴电鳗",
+      "en": "Depths Eel",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shroom_skin",
+      "zh": "蘑菇皮",
+      "en": "Shroom Skin",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "shroom_skin_fragment",
+      "zh": "蘑菇皮碎片",
+      "en": "Shroom Skin Scrap",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "siestahut",
+      "zh": "遮阳篷",
+      "en": "Siesta Lean-to",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "silk",
+      "zh": "蜘蛛丝",
+      "en": "Silk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "silksack",
+      "zh": "蛛丝背包",
+      "en": "Silken Sack",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "skeletonhat",
+      "zh": "骨头头盔",
+      "en": "Bone Helm",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "skullchest_child",
+      "zh": "骷髅箱",
+      "en": "Skull Chest",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sleepbomb",
+      "zh": "睡袋",
+      "en": "Napsack",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshot_claire",
+      "zh": "光芒弹弓-克莱尔",
+      "en": "Claire",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshot_gnasher",
+      "zh": "活木弹弓-切齿",
+      "en": "Gnasher",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshot_jessie",
+      "zh": "绝望弹弓-杰西",
+      "en": "Jessie",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshot_matilda",
+      "zh": "浮木弹弓-玛蒂尔达",
+      "en": "Matilda",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_firecrackers",
+      "zh": "鞭炮弹药",
+      "en": "Firecracker Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_flare",
+      "zh": "爆燃弹药",
+      "en": "Flare Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_goop",
+      "zh": "粘液弹药",
+      "en": "Gloop Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_lazy",
+      "zh": "替身弹药",
+      "en": "Lazy Prankster Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_marble",
+      "zh": "大理石弹",
+      "en": "Marbles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_moonglass",
+      "zh": "月亮弹",
+      "en": "Moonshots",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_moonrock",
+      "zh": "月岩弹药",
+      "en": "Moonphase Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_obsidian",
+      "zh": "黑曜石弹药",
+      "en": "Obsidian Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_rubber",
+      "zh": "橡皮弹药",
+      "en": "Rubberband Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_salt",
+      "zh": "盐晶弹药",
+      "en": "Salty Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_scrapfeather",
+      "zh": "电击废料弹",
+      "en": "Shockscrap Shots",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_shadow",
+      "zh": "梦魇弹药",
+      "en": "Nightmare Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_slime",
+      "zh": "黏糊弹药",
+      "en": "Slimey Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_tar",
+      "zh": "海泥弹药",
+      "en": "Stick-a-Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slingshotammo_tremor",
+      "zh": "沙石弹药",
+      "en": "Tremor Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sludge",
+      "zh": "海泥",
+      "en": "Sea Sludge",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sludge_cork",
+      "zh": "海泥塞",
+      "en": "Sludge Plug",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sludge_oil",
+      "zh": "海泥提取物",
+      "en": "Sulfur Extract",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sludge_sack",
+      "zh": "海泥包",
+      "en": "Sludge Sack",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slurper_pelt",
+      "zh": "啜食者皮",
+      "en": "Slurper Pelt",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slurtle",
+      "zh": "蛞蝓龟",
+      "en": "Slurtle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slurtle_shellpieces",
+      "zh": "外壳碎片",
+      "en": "Broken Shell",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slurtlehat",
+      "zh": "背壳头盔",
+      "en": "Shelmet",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "slurtleslime",
+      "zh": "蛞蝓龟黏液",
+      "en": "Slurtle Slime",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "蜗牛黏液"
+      ]
+    },
+    {
+      "prefab": "smallmeat",
+      "zh": "小肉",
+      "en": "Morsel",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snaildrake_magma",
+      "zh": "蜗龙",
+      "en": "Snaildrake",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snaildrakehat",
+      "zh": "蜗龙角盔",
+      "en": "Snaily Horned Helm",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snappy_jaw",
+      "zh": "利颚",
+      "en": "Snappy Jaw",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snowball_item",
+      "zh": "雪球",
+      "en": "Snowball",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snowcone",
+      "zh": "冰沙",
+      "en": "Snowcone",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snowgoggles",
+      "zh": "猫眼护目镜",
+      "en": "Cats-Eye Goggles",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snowmong",
+      "zh": "雪怪",
+      "en": "Abominamole",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "snurtle",
+      "zh": "蜗牛龟",
+      "en": "Snurtle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spat",
+      "zh": "钢羊",
+      "en": "Ewecus",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spear",
+      "zh": "长矛",
+      "en": "Spear",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spear_wathgrithr_lightning",
+      "zh": "奔雷矛",
+      "en": "Elding Spear",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spear_wathgrithr_lightning_charged",
+      "zh": "充能奔雷矛",
+      "en": "Charged Elding Spear",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spice_garlic",
+      "zh": "蒜粉",
+      "en": "Garlic Powder",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spicepack",
+      "zh": "厨师袋",
+      "en": "Chef Pouch",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spider",
+      "zh": "蜘蛛",
+      "en": "Spider",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spider_healer",
+      "zh": "护士蜘蛛",
+      "en": "Nurse Spider",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spider_hider",
+      "zh": "洞穴蜘蛛",
+      "en": "Cave Spider",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spider_trapdoor",
+      "zh": "地穴蜘蛛",
+      "en": "Trapdoor Spider",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spider_trapdoor_hooded",
+      "zh": "黑寡妇",
+      "en": "Hooded Widower",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spider_warrior",
+      "zh": "蜘蛛战士",
+      "en": "Spider Warrior",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spidereggsack",
+      "zh": "蜘蛛卵",
+      "en": "Spider Eggs",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spidergland",
+      "zh": "蜘蛛腺",
+      "en": "Spider Gland",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spiderhat",
+      "zh": "蜘蛛帽",
+      "en": "Spiderhat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spiderqueen",
+      "zh": "蜘蛛女王",
+      "en": "Spider Queen",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spoiled_food",
+      "zh": "腐烂物",
+      "en": "Rot",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spore_medium",
+      "zh": "红色孢子",
+      "en": "Red Spore",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spore_small",
+      "zh": "绿色孢子",
+      "en": "Green Spore",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "spore_tall",
+      "zh": "蓝色孢子",
+      "en": "Blue Spore",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sporepack",
+      "zh": "蟾蜍背包",
+      "en": "Spore Pack",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "staff_lunarplant",
+      "zh": "亮茄魔杖",
+      "en": "Brightshade Staff",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "stalker_atrium",
+      "zh": "远古织影者",
+      "en": "Ancient Fuelweaver",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "织影者",
+        "远古骨头架子"
+      ],
+      "searchTerms": []
+    },
+    {
+      "prefab": "stash_map",
+      "zh": "海盗地图",
+      "en": "Pirate Map",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "steelwool",
+      "zh": "钢丝绵",
+      "en": "Steel Wool",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "steeringwheel_item",
+      "zh": "方向舵套装",
+      "en": "Steering Wheel Kit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "stuffed_peeper_poppers",
+      "zh": "榴莲酿眼球",
+      "en": "Stuffed Peeper Poppers",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "supertacklecontainer",
+      "zh": "超级钓具箱",
+      "en": "Spectackler Box",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "sword_lunarplant",
+      "zh": "亮茄剑",
+      "en": "Brightshade Sword",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tacklecontainer",
+      "zh": "钓具箱",
+      "en": "Tackle Box",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tacklestation",
+      "zh": "钓具容器",
+      "en": "Tackle Receptacle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tent",
+      "zh": "帐篷",
+      "en": "Tent",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tentacle",
+      "zh": "触手",
+      "en": "Tentacle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tentacle_pillar",
+      "zh": "大触手",
+      "en": "Big Tentacle",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tentaclespike",
+      "zh": "触手尖刺",
+      "en": "Tentacle Spike",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tentaclespots",
+      "zh": "触手皮",
+      "en": "Tentacle Spots",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "the_real_charles_t_horse",
+      "zh": "滑行手杖",
+      "en": "Charles T. Horse",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "thulecite",
+      "zh": "铥矿",
+      "en": "Thulecite",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "thulecite_pieces",
+      "zh": "铥矿碎片",
+      "en": "Thulecite Fragments",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "thurible",
+      "zh": "暗影香炉",
+      "en": "Shadow Thurible",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tillweed",
+      "zh": "犁地草",
+      "en": "Tillweeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "toadstool",
+      "zh": "毒菌蟾蜍",
+      "en": "Toadstool",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "toadstool_dark",
+      "zh": "悲惨的毒菌蟾蜍",
+      "en": "Misery Toadstool",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tophat",
+      "zh": "高礼帽",
+      "en": "Top Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "torch",
+      "zh": "火炬",
+      "en": "Torch",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "火把"
+      ]
+    },
+    {
+      "prefab": "townportal",
+      "zh": "懒人传送塔",
+      "en": "The Lazy Deserter",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "townportaltalisman",
+      "zh": "沙之石",
+      "en": "Desert Stone",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "transistor",
+      "zh": "电子元件",
+      "en": "Electrical Doodad",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trap",
+      "zh": "陷阱",
+      "en": "Trap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trap_bramble",
+      "zh": "荆棘陷阱",
+      "en": "Bramble Trap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trap_teeth",
+      "zh": "犬牙陷阱",
+      "en": "Tooth Trap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "treasurechest",
+      "zh": "箱子",
+      "en": "Chest",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "tree_rock",
+      "zh": "巨石枝",
+      "en": "Boulderbough",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "treegrowthsolution",
+      "zh": "树果酱",
+      "en": "Tree Jam",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trident",
+      "zh": "刺耳三叉戟",
+      "en": "Strident Trident",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trinket_1",
+      "zh": "熔化的弹珠",
+      "en": "Melty Marbles",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trinket_25",
+      "zh": "臭气制造器",
+      "en": "Air Unfreshener",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trinket_6",
+      "zh": "烂电线",
+      "en": "Frazzled Wires",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trunk_summer",
+      "zh": "象鼻",
+      "en": "Koalefant Trunk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trunk_winter",
+      "zh": "冬象鼻",
+      "en": "Winter Koalefant Trunk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "trunkvest_summer",
+      "zh": "透气背心",
+      "en": "Breezy Vest",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "夏季背心"
+      ]
+    },
+    {
+      "prefab": "trunkvest_winter",
+      "zh": "松软背心",
+      "en": "Puffy Vest",
+      "source": "DST chinese_s.po",
+      "searchTerms": [
+        "寒冬背心"
+      ]
+    },
+    {
+      "prefab": "turf_ancienthoodedturf",
+      "zh": "远古连帽地皮",
+      "en": "Ancient Hooded Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_hoodedfoliage",
+      "zh": "林下地皮",
+      "en": "Undergrowth Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_hoodedfoliage_dark",
+      "zh": "阴暗林下地皮",
+      "en": "Dark Undergrowth Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_hoodedmoss",
+      "zh": "连帽森林地皮",
+      "en": "Mossy Forest Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_magma_grass",
+      "zh": "火堆草地皮",
+      "en": "Pyre Grass Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_marsh",
+      "zh": "沼泽地皮",
+      "en": "Marsh Turf",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_um_hotspring_grass",
+      "zh": "泥泞森林地皮",
+      "en": "Mucky Forest Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_um_hotspring_whiterock",
+      "zh": "白色岩石地皮",
+      "en": "White Rock Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_um_hotspring_yellowrock",
+      "zh": "黄色岩石地皮",
+      "en": "Yellow Rock Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turf_um_magma",
+      "zh": "熔岩岩石地皮",
+      "en": "Magmatic Rock Turf",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "turfcraftingstation",
+      "zh": "土地夯实器",
+      "en": "Terra Firma Tamper",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "twiggytree",
+      "zh": "多枝树",
+      "en": "Twiggy Tree",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "twigs",
+      "zh": "树枝",
+      "en": "Twigs",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "twinofterror1",
+      "zh": "激光眼",
+      "en": "Retinazor",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_armor_bramble_rimeweed",
+      "zh": "霜冻外壳",
+      "en": "Rime Husk",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_armor_pyre_nettles",
+      "zh": "荨麻斗篷",
+      "en": "Pyre Mantle",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_astral_projector",
+      "zh": "星界投射器",
+      "en": "Astral Projectinator",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_astral_projector_target",
+      "zh": "星界接收器",
+      "en": "Astral Receptionator",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_backpack_amuletuse",
+      "zh": "护符镶嵌背包",
+      "en": "Amusement Pack",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_bear_trap_equippable_gold",
+      "zh": "黄金捕兽夹",
+      "en": "Shiny Snap-Teeth",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_bear_trap_equippable_tooth",
+      "zh": "捕兽夹",
+      "en": "Snap-Teeth",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_bee_moon",
+      "zh": "腐臭蜂",
+      "en": "Carrion Bee",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_beehive_moon",
+      "zh": "腐臭蜂巢",
+      "en": "Carrion Bee Hive",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_beemine_moon_item",
+      "zh": "腐臭蜂地雷",
+      "en": "Carrion Bee Mine",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_blowdart_pyre",
+      "zh": "荨麻飞镖",
+      "en": "Pyre Dart",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_blowdart_rime",
+      "zh": "霜镖",
+      "en": "Rime Dart",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_blueprinting_kit",
+      "zh": "蓝图套件",
+      "en": "Blueprinting Kit",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_boatbottle",
+      "zh": "船瓶",
+      "en": "Boat Bottle",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_bomb_moon",
+      "zh": "跨巨型气体炸弹",
+      "en": "Transgros Bomb",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_boom_tart",
+      "zh": "爆汁蓝莓挞",
+      "en": "Boomberry Tart",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_boomberry_bomb",
+      "zh": "爆汁蓝莓炸弹",
+      "en": "Boomberry Bomb",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_boomberrypie",
+      "zh": "爆汁蓝莓派",
+      "en": "Boomberry Pie",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_detonator",
+      "zh": "万能引爆器",
+      "en": "Universal Detonator",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_durian_cream_marshcake",
+      "zh": "榴莲奶油软糖蛋糕",
+      "en": "Durian Cream Marshcake",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_eyebalm",
+      "zh": "眼霜",
+      "en": "Eye Balm",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_feather_totem",
+      "zh": "羽毛神像",
+      "en": "Feather Idol",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_firecream",
+      "zh": "防火霜",
+      "en": "Flame Repellent",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_flamethrower",
+      "zh": "爆焰喷射器",
+      "en": "Flame Burster",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_fyre_bomb",
+      "zh": "高爆弹",
+      "en": "Pyre Bomb",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_fyrite",
+      "zh": "黄铁矿",
+      "en": "Pyrite",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gem_repair_kit",
+      "zh": "修复套件",
+      "en": "Mending Kit",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_blue",
+      "zh": "蓝色菌类晶洞",
+      "en": "Blue Fungal Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_glass",
+      "zh": "玻璃晶洞",
+      "en": "Glass Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_green",
+      "zh": "绿色菌类晶洞",
+      "en": "Green Fungal Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_guano",
+      "zh": "粪便晶洞",
+      "en": "Fecal Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_lobster",
+      "zh": "胚胎晶洞",
+      "en": "Fetal Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_magma",
+      "zh": "熔火晶洞",
+      "en": "Molten Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_red",
+      "zh": "红色菌类晶洞",
+      "en": "Red Fungal Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_ruins",
+      "zh": "垃圾晶洞",
+      "en": "Junk Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_sink",
+      "zh": "苔藓晶洞",
+      "en": "Mossy Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_slime",
+      "zh": "黏液晶洞",
+      "en": "Slimy Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_geode_vent",
+      "zh": "浮石晶洞",
+      "en": "Pumice Geode",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemology_pouch",
+      "zh": "宝石袋",
+      "en": "Gemology Pouch",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologybluegem1",
+      "zh": "极地海蓝宝石",
+      "en": "Arctic Aquamarine",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologybluegem2",
+      "zh": "冰鲜蓝宝石",
+      "en": "Chilled Sapphire",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologyforge",
+      "zh": "宝石学锻造台",
+      "en": "Ancient Gemstone Forge",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologygreengem1",
+      "zh": "躁动橄榄石",
+      "en": "Neurotic Peridot",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologygreengem2",
+      "zh": "混沌祖母绿",
+      "en": "Chaotic Emerald",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologyorangegem1",
+      "zh": "惬意锆石",
+      "en": "Comfy Zircon",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologyorangegem2",
+      "zh": "珍藏黄水晶",
+      "en": "Hoarding Citrine",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologypalegem1",
+      "zh": "绝世翡翠",
+      "en": "Peerless Jade",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologypalegem2",
+      "zh": "坚钢钻石",
+      "en": "Adamant Diamond",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologypurplegem1",
+      "zh": "狂怒萤石",
+      "en": "Furious Fluorite",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologypurplegem2",
+      "zh": "奥术紫水晶",
+      "en": "Arcane Amethyst",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologyredgem1",
+      "zh": "贪噬红宝石",
+      "en": "Voracious Ruby",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologyredgem2",
+      "zh": "炽烈石榴石",
+      "en": "Passionate Garnet",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologyyellowgem1",
+      "zh": "迅疾黄玉",
+      "en": "Hasty Topaz",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_gemologyyellowgem2",
+      "zh": "静电琥珀",
+      "en": "Static Amber",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_ghost_fajita",
+      "zh": "恐怖卷饼",
+      "en": "Ghastly Fajita",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_ghost_pepper_item",
+      "zh": "幽灵辣椒",
+      "en": "Ghost Pepper",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_hat_bee_moon",
+      "zh": "蜂帽",
+      "en": "Beeret",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_hat_leafwing",
+      "zh": "转瞬即逝的叶冠",
+      "en": "Elated Leafy Helm",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_hat_nettlemask",
+      "zh": "荨麻面具",
+      "en": "Nettle Mask",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_hat_pepperdragon",
+      "zh": "冷热逆转帽",
+      "en": "Capsi Cap",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_hat_rime",
+      "zh": "霜兽头盔",
+      "en": "Normong Helmet",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_hotspring",
+      "zh": "沸腾温泉",
+      "en": "Boiling Spring",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_ice_sicle",
+      "zh": "冰镰",
+      "en": "Ice Sickle",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_ice_tail",
+      "zh": "冰冻鼹鼠尾",
+      "en": "Frozen Mole Tail",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_leafwing",
+      "zh": "叶翼",
+      "en": "Leafy Wing",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_magnerang",
+      "zh": "磁力回旋镖",
+      "en": "Magnerang",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_magnifier",
+      "zh": "远古宝石放大镜",
+      "en": "Gem Scryer",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_magnifier_obsidian",
+      "zh": "宝石熔岩镜",
+      "en": "Gem Magmafier",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_magnifier_purplegem",
+      "zh": "宝石放大镜",
+      "en": "Gem Magnifier",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_maxwell_armor_sanity",
+      "zh": "魔术师的暗夜甲",
+      "en": "Magician's Night Armor",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_maxwell_nightsword",
+      "zh": "魔术师的暗夜剑",
+      "en": "Magician's Dark Sword",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_meatcomb",
+      "zh": "腐臭蜂巢",
+      "en": "Carrion Honeycomb",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_meathoney",
+      "zh": "腐臭蜂蜜",
+      "en": "Carrion Honey",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_moss",
+      "zh": "连帽苔藓",
+      "en": "Hooded Moss",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_pepperdragon_bladder",
+      "zh": "储火袋",
+      "en": "Fire Bladder",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_hooded_widow",
+      "zh": "恐蛛之音",
+      "en": "Arachnophobia",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_menu",
+      "zh": "永不妥协乐章",
+      "en": "Uncompromising Music",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_moonmaw",
+      "zh": "飞蛾扑火",
+      "en": "Like A Moth to a Flame",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_stranger",
+      "zh": "神秘过客",
+      "en": "A Mysterious Stranger",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_tot",
+      "zh": "双生狂乱",
+      "en": "Twinsanity",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_walter",
+      "zh": "跟我来，沃比！",
+      "en": "Follow Me, Woby!",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_wathom",
+      "zh": "心脏骤停！",
+      "en": "Heart Attacked!",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_winky",
+      "zh": "趣致小鼠",
+      "en": "Funny Little Rat",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_record_wixie",
+      "zh": "叛逆顽童",
+      "en": "The Delinquent",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_ribopod",
+      "zh": "肋荚虫",
+      "en": "Ribopod",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_ribopodden",
+      "zh": "骸骨堆",
+      "en": "Bone Mound",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_rice_pudding",
+      "zh": "米布丁",
+      "en": "Rice Pudding",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_rimeweed_icepack",
+      "zh": "冰袋",
+      "en": "Ice Pack",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_rimeweed_itemflower",
+      "zh": "霜花",
+      "en": "Rime Flower",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_rimeweed_itemvine",
+      "zh": "霜冻藤蔓",
+      "en": "Frosty Vine",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_rimeweed_spagett",
+      "zh": "霜冻意面",
+      "en": "Spaghetti Cryonara",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_rimeweed_tequila",
+      "zh": "冰镇龙舌兰",
+      "en": "Chillquilla",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_scrapper",
+      "zh": "远古拆解机",
+      "en": "Ancient Scrapper",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_slingshotammo_honey",
+      "zh": "蜂蜜弹药",
+      "en": "Honey Rounds",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_smolder_spore",
+      "zh": "荨麻孢子",
+      "en": "Smolder Spore",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_sponge_cake",
+      "zh": "多孔海绵蛋糕",
+      "en": "Swiss Sponge Cake",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_spongeplant_item",
+      "zh": "多孔海绵块",
+      "en": "Swiss Sponge Chunks",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_tentaclespot_moon",
+      "zh": "巨型触手皮",
+      "en": "Gros Peel",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "um_thulecite_razor",
+      "zh": "铥矿剃刀",
+      "en": "Thulecite Razor",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "umbrella",
+      "zh": "雨伞",
+      "en": "Umbrella",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "uncompromising_fishingnet",
+      "zh": "渔网",
+      "en": "Fishing Net",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "uncompromising_winkyhomeburrow",
+      "zh": "温奇的定居鼠穴",
+      "en": "Winky's Home Burrow",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "viperworm",
+      "zh": "洞穴恶蛇",
+      "en": "Depths Viper",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "voidcloth",
+      "zh": "暗影碎布",
+      "en": "Dark Tatters",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "voidcloth_scythe",
+      "zh": "暗影收割者",
+      "en": "Shadow Reaper",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "voidclothhat",
+      "zh": "虚空风帽",
+      "en": "Void Cowl",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wagpunk_bits",
+      "zh": "废料",
+      "en": "Scrap",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wall_ruins_item",
+      "zh": "铥墙",
+      "en": "Thulecite Wall",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wall_stone_item",
+      "zh": "石墙",
+      "en": "Stone Wall",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "walrus",
+      "zh": "海象",
+      "en": "MacTusk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "walrus_tusk",
+      "zh": "海象牙",
+      "en": "Walrus Tusk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "walrushat",
+      "zh": "贝雷帽",
+      "en": "Tam o' Shanter",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "walter",
+      "zh": "沃尔特",
+      "en": "Walter",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wanda",
+      "zh": "旺达",
+      "en": "Wanda",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "warg",
+      "zh": "座狼",
+      "en": "Varg",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "warly",
+      "zh": "沃利",
+      "en": "Warly",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "watermelon",
+      "zh": "西瓜",
+      "en": "Watermelon",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "watermelon_lantern",
+      "zh": "西瓜灯",
+      "en": "Watermelon Lantern",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "watermelonhat",
+      "zh": "西瓜帽",
+      "en": "Fashion Melon",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "waterplant_planter",
+      "zh": "海芽插穗",
+      "en": "Sea Sprout Starter",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "watertree_pillar",
+      "zh": "大树干",
+      "en": "Great Tree Trunk",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wathgrithr",
+      "zh": "薇格弗德",
+      "en": "Wigfrid",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wathgrithr_shield_dreadstone",
+      "zh": "绝望石圆盾",
+      "en": "Dread Rönd",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "waxpaper",
+      "zh": "蜡纸",
+      "en": "Wax Paper",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "waxwell",
+      "zh": "麦斯威尔",
+      "en": "Maxwell",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "waxwelljournal",
+      "zh": "暗影秘典",
+      "en": "Codex Umbra",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "webber",
+      "zh": "韦伯",
+      "en": "Webber",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wendy",
+      "zh": "温蒂",
+      "en": "Wendy",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wes",
+      "zh": "韦斯",
+      "en": "Wes",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wetgoop",
+      "zh": "潮湿黏糊",
+      "en": "Wet Goop",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wickerbottom",
+      "zh": "薇克巴顿",
+      "en": "Wickerbottom",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "widowsgrasp",
+      "zh": "寡妇之爪",
+      "en": "Widow's Claw",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "widowshead",
+      "zh": "寡妇之颅",
+      "en": "Widow's Head",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "willow",
+      "zh": "薇洛",
+      "en": "Willow",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wilson",
+      "zh": "威尔逊",
+      "en": "Wilson",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "winona",
+      "zh": "薇诺娜",
+      "en": "Winona",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "winona_toolbox",
+      "zh": "器械箱",
+      "en": "Contraption Container",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "winona_upgradekit_electrical",
+      "zh": "电能转换套件",
+      "en": "Electrical Conversion Kit",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "woby_treat",
+      "zh": "沃比零食",
+      "en": "Woby Snacks",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wolfgang",
+      "zh": "沃尔夫冈",
+      "en": "Wolfgang",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wonkey",
+      "zh": "芜猴",
+      "en": "Wonkey",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "woodcarvedhat",
+      "zh": "硬木帽",
+      "en": "Hardwood Hat",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "woodie",
+      "zh": "伍迪",
+      "en": "Woodie",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "woodpecker",
+      "zh": "啄木鸟",
+      "en": "Woodpecker",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "worm_boss",
+      "zh": "巨大洞穴蠕虫",
+      "en": "Great Depths Worm",
+      "source": "DST chinese_s.po",
+      "aliases": [
+        "巨大蠕虫",
+        "巨型蠕虫"
+      ],
+      "searchTerms": [
+        "巨型蠕虫",
+        "巨大蠕虫"
+      ]
+    },
+    {
+      "prefab": "wormlight",
+      "zh": "发光浆果",
+      "en": "Glow Berry",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wormlight_lesser",
+      "zh": "小发光浆果",
+      "en": "Lesser Glow Berry",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wormwood",
+      "zh": "沃姆伍德",
+      "en": "Wormwood",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wortox",
+      "zh": "沃拓克斯",
+      "en": "Wortox",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wurt",
+      "zh": "沃特",
+      "en": "Wurt",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78",
+      "zh": "WX-78",
+      "en": "WX-78",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78_moduleremover",
+      "zh": "电路提取器",
+      "en": "Circuit Extractor",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78_shadowdrone_debuffer",
+      "zh": "破绽放大机",
+      "en": "Exploiterator",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_bee",
+      "zh": "豆增压电路",
+      "en": "Beanbooster Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_cold",
+      "zh": "制冷电路",
+      "en": "Refrigerant Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_heat",
+      "zh": "热能电路",
+      "en": "Thermal Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_light2",
+      "zh": "超级照明电路",
+      "en": "Super-Illumination Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_maxhealth",
+      "zh": "强化电路",
+      "en": "Hardy Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_maxhealth2",
+      "zh": "超级强化电路",
+      "en": "Super-Hardy Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_maxhunger",
+      "zh": "超级胃增益电路",
+      "en": "Super-Gastrogain Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_maxhunger1",
+      "zh": "胃增益电路",
+      "en": "Gastrogain Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_maxsanity1",
+      "zh": "处理器电路",
+      "en": "Processing Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_movespeed",
+      "zh": "加速电路",
+      "en": "Acceleration Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_movespeed2",
+      "zh": "超级加速电路",
+      "en": "Super-Acceleration Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_nightvision",
+      "zh": "光电电路",
+      "en": "Optoelectronic Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wx78module_taser",
+      "zh": "电气化电路",
+      "en": "Electrification Circuit",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "yellowamulet",
+      "zh": "魔光护符",
+      "en": "Magiluminescence",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "yellowgem",
+      "zh": "黄宝石",
+      "en": "Yellow Gem",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "yellowstaff",
+      "zh": "唤星者魔杖",
+      "en": "Star Caller's Staff",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "yotc_seedpacket",
+      "zh": "种子包",
+      "en": "Packet of Seeds",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "yotc_seedpacket_rare",
+      "zh": "高级种子包",
+      "en": "Premium Seed Packet",
+      "source": "DST chinese_s.po",
+      "searchTerms": []
+    },
+    {
+      "prefab": "zaspberry",
+      "zh": "电光浆果",
+      "en": "Zaspberry",
+      "source": "UM beta Chinese patch 20261106",
+      "searchTerms": []
+    },
+    {
+      "prefab": "wixie",
+      "zh": "薇希",
+      "en": "Wixie",
+      "aliases": [
+        "维希"
+      ],
+      "source": "UM Chinese patch 3597225156/init/init_character_um.lua:18"
+    },
+    {
+      "prefab": "feather_thunder",
+      "zh": "雷羽毛",
+      "en": "Thunderbird Feather",
+      "source": "Huiji Wiki 雷羽毛 / Hamlet entity feather_thunder",
+      "url": "https://dontstarve.huijiwiki.com/wiki/雷羽毛"
+    },
+    {
+      "prefab": "iron",
+      "zh": "铁矿石",
+      "en": "Iron Ore",
+      "source": "Huiji Wiki 铁矿石 / Hamlet entity iron",
+      "url": "https://dontstarve.huijiwiki.com/wiki/铁矿石"
+    },
+    {
+      "prefab": "obsidian",
+      "zh": "黑曜石",
+      "en": "Obsidian",
+      "source": "Huiji Wiki 黑曜石",
+      "url": "https://dontstarve.huijiwiki.com/wiki/黑曜石"
+    },
+    {
+      "prefab": "um_buttery_fly",
+      "zh": "黄油蝴蝶",
+      "en": "Buttery Fly",
+      "source": "UM beta 6.0.3.9 / Chinese patch init/init_strings/init_names.lua:726"
+    }
+  ],
+  "corrections": [
+    {
+      "from": "海中树",
+      "to": "疙瘩树",
+      "prefab": "oceantree"
+    },
+    {
+      "from": "谢天翁水壶",
+      "to": "鸟嘴壶",
+      "prefab": "premiumwateringcan_not_empty"
+    },
+    {
+      "from": "邪天翁水壶",
+      "to": "鸟嘴壶",
+      "prefab": "premiumwateringcan_not_empty"
+    },
+    {
+      "from": "巨荒蜈蚣",
+      "to": "巨荒蜈",
+      "prefab": "shadowthrall_centipede"
+    },
+    {
+      "from": "远古蜈蚣",
+      "to": "远古哨兵蜈蚣",
+      "prefab": "archive_centipede"
+    },
+    {
+      "from": "巨型蠕虫",
+      "to": "巨大洞穴蠕虫",
+      "prefab": "worm_boss"
+    },
+    {
+      "from": "巨大蠕虫",
+      "to": "巨大洞穴蠕虫",
+      "prefab": "worm_boss"
+    },
+    {
+      "from": "暗影锤",
+      "to": "暗影槌",
+      "prefab": "shadow_battleaxe"
+    },
+    {
+      "from": "恶液存储套件",
+      "to": "恶液储存箱套件",
+      "prefab": "gelblob_storage_kit"
+    },
+    {
+      "from": "恶液存储箱",
+      "to": "恶液储存箱",
+      "prefab": "gelblob_storage"
+    },
+    {
+      "from": "眼球炮塔",
+      "to": "眼睛炮塔",
+      "prefab": "eyeturret"
+    },
+    {
+      "from": "夏季背心",
+      "to": "透气背心",
+      "prefab": "trunkvest_summer"
+    },
+    {
+      "from": "寒冬背心",
+      "to": "松软背心",
+      "prefab": "trunkvest_winter"
+    },
+    {
+      "from": "浆果丛帽",
+      "to": "灌木丛帽",
+      "prefab": "bushhat"
+    },
+    {
+      "from": "鱼人帽",
+      "to": "聪明的伪装",
+      "prefab": "mermhat"
+    },
+    {
+      "from": "海花冠",
+      "to": "海花环",
+      "prefab": "kelphat"
+    },
+    {
+      "from": "荆棘甲",
+      "to": "荆棘外壳",
+      "prefab": "armor_bramble"
+    },
+    {
+      "from": "荆棘壳",
+      "to": "荆棘外壳",
+      "prefab": "armor_bramble"
+    },
+    {
+      "from": "海带干",
+      "to": "干海带叶",
+      "prefab": "kelp_dried"
+    },
+    {
+      "from": "烤怪物肉",
+      "to": "熟怪物肉",
+      "prefab": "cookedmonstermeat"
+    },
+    {
+      "from": "烤肉",
+      "to": "熟肉",
+      "prefab": "cookedmeat"
+    },
+    {
+      "from": "烤蝙蝠翅膀",
+      "to": "熟蝙蝠翅膀",
+      "prefab": "batwing_cooked"
+    },
+    {
+      "from": "电羊奶",
+      "to": "带电的羊奶",
+      "prefab": "goatmilk"
+    },
+    {
+      "from": "伏特羊奶",
+      "to": "带电的羊奶",
+      "prefab": "goatmilk"
+    },
+    {
+      "from": "电羊",
+      "to": "伏特羊",
+      "prefab": "lightninggoat"
+    },
+    {
+      "from": "闪电羊",
+      "to": "伏特羊",
+      "prefab": "lightninggoat"
+    },
+    {
+      "from": "烤火龙果",
+      "to": "熟火龙果",
+      "prefab": "dragonfruit_cooked"
+    },
+    {
+      "from": "烤仙人掌肉",
+      "to": "熟仙人掌肉",
+      "prefab": "cactus_meat_cooked"
+    },
+    {
+      "from": "烤蛙腿",
+      "to": "熟蛙腿",
+      "prefab": "froglegs_cooked"
+    },
+    {
+      "from": "烤红蘑菇",
+      "to": "熟红蘑菇",
+      "prefab": "red_cap_cooked"
+    },
+    {
+      "from": "烤绿蘑菇",
+      "to": "熟绿蘑菇",
+      "prefab": "green_cap_cooked"
+    },
+    {
+      "from": "烤蓝蘑菇",
+      "to": "熟蓝蘑菇",
+      "prefab": "blue_cap_cooked"
+    },
+    {
+      "from": "烤月亮蘑菇",
+      "to": "熟月亮蘑菇",
+      "prefab": "moon_cap_cooked"
+    },
+    {
+      "from": "远古铥矿盔甲",
+      "to": "铥矿甲",
+      "prefab": "armorruins"
+    },
+    {
+      "from": "远古铥矿护甲",
+      "to": "铥矿甲",
+      "prefab": "armorruins"
+    },
+    {
+      "from": "铥矿盔甲",
+      "to": "铥矿甲",
+      "prefab": "armorruins"
+    },
+    {
+      "from": "铥矿冠",
+      "to": "铥矿皇冠",
+      "prefab": "ruinshat"
+    },
+    {
+      "from": "铥矿头盔",
+      "to": "铥矿皇冠",
+      "prefab": "ruinshat"
+    },
+    {
+      "from": "懒人法杖",
+      "to": "懒人魔杖",
+      "prefab": "orangestaff"
+    },
+    {
+      "from": "懒人手杖",
+      "to": "懒人魔杖",
+      "prefab": "orangestaff"
+    },
+    {
+      "from": "解构魔杖",
+      "to": "拆解魔杖",
+      "prefab": "greenstaff"
+    },
+    {
+      "from": "解构法杖",
+      "to": "拆解魔杖",
+      "prefab": "greenstaff"
+    },
+    {
+      "from": "拆解法杖",
+      "to": "拆解魔杖",
+      "prefab": "greenstaff"
+    },
+    {
+      "from": "暗影盔甲",
+      "to": "暗夜甲",
+      "prefab": "armor_sanity"
+    },
+    {
+      "from": "暗影铠甲",
+      "to": "暗夜甲",
+      "prefab": "armor_sanity"
+    },
+    {
+      "from": "闪冻冰杖",
+      "to": "闪冻魔杖",
+      "prefab": "icestaff2"
+    },
+    {
+      "from": "深冻冰杖",
+      "to": "深冻魔杖",
+      "prefab": "icestaff3"
+    },
+    {
+      "from": "蜗牛壳护甲",
+      "to": "蜗壳护甲",
+      "prefab": "armorsnurtleshell"
+    },
+    {
+      "from": "蜗牛壳甲",
+      "to": "蜗壳护甲",
+      "prefab": "armorsnurtleshell"
+    },
+    {
+      "from": "蜗牛黏液",
+      "to": "蛞蝓龟黏液",
+      "prefab": "slurtleslime"
+    },
+    {
+      "from": "便携调味站",
+      "to": "便携香料站",
+      "prefab": "portablespicer"
+    },
+    {
+      "from": "携带式调味站",
+      "to": "便携香料站",
+      "prefab": "portablespicer"
+    },
+    {
+      "from": "热能哑铃",
+      "to": "热铃",
+      "prefab": "dumbbell_heat"
+    },
+    {
+      "from": "犀牛角",
+      "to": "守护者之角",
+      "prefab": "minotaurhorn"
+    },
+    {
+      "from": "灯泡",
+      "to": "荧光果",
+      "prefab": "lightbulb"
+    },
+    {
+      "from": "大象",
+      "to": "考拉象",
+      "prefab": "koalefant_summer"
+    },
+    {
+      "from": "活木",
+      "to": "活木头",
+      "prefab": "livinglog"
+    },
+    {
+      "from": "浮木",
+      "to": "浮木桩",
+      "prefab": "driftwood_log"
+    },
+    {
+      "from": "冰杖",
+      "to": "冰魔杖",
+      "prefab": "icestaff"
+    },
+    {
+      "from": "火把",
+      "to": "火炬",
+      "prefab": "torch"
+    },
+    {
+      "from": "熊桶",
+      "to": "极地熊獾桶",
+      "prefab": "beargerfur_sack"
+    },
+    {
+      "from": "骨甲",
+      "to": "骨头盔甲",
+      "prefab": "armorskeleton"
+    },
+    {
+      "from": "大理石护甲",
+      "to": "大理石甲",
+      "prefab": "armormarble"
+    },
+    {
+      "from": "大理石盔甲",
+      "to": "大理石甲",
+      "prefab": "armormarble"
+    },
+    {
+      "from": "树精",
+      "to": "树精守卫",
+      "prefab": "leif"
+    },
+    {
+      "from": "暗影操纵器",
+      "to": "暗影操控器",
+      "prefab": "researchlab3"
+    },
+    {
+      "from": "海树催长",
+      "to": "疙瘩树催长",
+      "prefab": "oceantree"
+    },
+    {
+      "from": "维希",
+      "to": "薇希",
+      "prefab": "wixie",
+      "source": "UM Chinese patch 3597225156/init/init_character_um.lua:18"
+    },
+    {
+      "from": "龙鳞皮",
+      "to": "鳞片",
+      "prefab": "dragon_scales"
+    },
+    {
+      "from": "龙鳞",
+      "to": "鳞片",
+      "prefab": "dragon_scales"
+    },
+    {
+      "from": "胡萝卜鼠诱饵甲",
+      "to": "胡萝卜外套",
+      "prefab": "armor_carrotlure"
+    },
+    {
+      "from": "晶体诅咒鹿角",
+      "to": "Crystal Cursed Antler",
+      "prefab": "crystal_cursed_antler",
+      "source": "UM Chinese patch init/init_strings/init_names.lua:226 still has the English name; Chinese wording is only a search alias."
+    },
+    {
+      "from": "辉煌火把",
+      "to": "纯粹辉煌火炬",
+      "prefab": "torch",
+      "source": "content/easy_other/easy_equipments.lua DisplayNameFn; prefix + STRINGS.NAMES.TORCH"
+    },
+    {
+      "from": "辉煌火炬",
+      "to": "纯粹辉煌火炬",
+      "prefab": "torch",
+      "source": "content/easy_other/easy_equipments.lua DisplayNameFn; prefix + STRINGS.NAMES.TORCH"
+    },
+    {
+      "from": "绝望火把",
+      "to": "绝望石火炬",
+      "prefab": "torch",
+      "source": "content/easy_other/easy_equipments.lua DisplayNameFn; prefix + STRINGS.NAMES.TORCH"
+    },
+    {
+      "from": "绝望火炬",
+      "to": "绝望石火炬",
+      "prefab": "torch",
+      "source": "content/easy_other/easy_equipments.lua DisplayNameFn; prefix + STRINGS.NAMES.TORCH"
+    }
+  ],
+  "protectedNames": [
+    "浮木弹弓-玛蒂尔达",
+    "活木弹弓-切齿",
+    "冰霜核心冰杖",
+    "浮木钓杆",
+    "活木弹弓",
+    "浮木弹弓",
+    "浮木桩",
+    "活木头",
+    "纯粹辉煌火炬",
+    "绝望石火炬"
+  ],
+  "articleEntities": {
+    "tempered": {
+      "knobbly-tree": [
+        "oceantree",
+        "oceantree_pillar",
+        "treegrowthsolution"
+      ],
+      "environment-temperature-sources": [
+        "mushtree_tall",
+        "mushtree_medium",
+        "icefishing_hole"
+      ],
+      "thermal-stone-wateringcan": [
+        "heatrock",
+        "dumbbell_heat",
+        "premiumwateringcan_not_empty"
+      ],
+      "cursed-item-retention": [
+        "cursed_monkey_token"
+      ],
+      "creature-treeguards": [
+        "leif",
+        "deciduoustree",
+        "mushgnome"
+      ],
+      "creature-centipede": [
+        "shadowthrall_centipede"
+      ],
+      "creature-moving-attack": [
+        "worm_boss",
+        "lightninggoat",
+        "slurtle",
+        "snurtle"
+      ],
+      "creature-koalefant-herds": [
+        "koalefant_summer",
+        "spat"
+      ],
+      "creature-beefalo-bonding": [
+        "beefalo"
+      ],
+      "creature-hounds": [
+        "hound",
+        "warg",
+        "warg_mutated"
+      ],
+      "creature-brightshade": [
+        "lunarthrall_plant",
+        "lureplant"
+      ],
+      "creature-krampus": [
+        "krampus"
+      ],
+      "creature-otter": [
+        "otter"
+      ],
+      "creature-shark": [
+        "shark"
+      ],
+      "creature-monkeys": [
+        "monkey",
+        "shadow_monkey"
+      ],
+      "creature-spiders": [
+        "spider",
+        "spiderqueen"
+      ],
+      "creature-walrus": [
+        "walrus",
+        "little_walrus"
+      ],
+      "creature-tentacle": [
+        "tentacle",
+        "tentacle_pillar"
+      ],
+      "creature-clockworks": [
+        "knight",
+        "bishop",
+        "rook"
+      ],
+      "creature-pigman": [
+        "pigman",
+        "bunnyman",
+        "daywalker"
+      ],
+      "creature-glommer-insects": [
+        "glommer"
+      ],
+      "creature-shadowthrall": [
+        "shadowthrall_hands"
+      ],
+      "creature-mimicreep": [
+        "mimicry"
+      ],
+      "boss-deerclops": [
+        "deerclops"
+      ],
+      "boss-bearger": [
+        "bearger"
+      ],
+      "boss-antlion": [
+        "antlion"
+      ],
+      "boss-beequeen": [
+        "beequeen"
+      ],
+      "boss-dragonfly": [
+        "dragonfly"
+      ],
+      "boss-malbatross": [
+        "malbatross"
+      ],
+      "boss-klaus": [
+        "klaus"
+      ],
+      "boss-crabking": [
+        "crabking"
+      ],
+      "boss-frostjaw-combat": [
+        "sharkboi"
+      ],
+      "frostjaw": [
+        "sharkboi"
+      ],
+      "boss-toadstool": [
+        "toadstool",
+        "toadstool_dark"
+      ],
+      "boss-scrappy-werepig": [
+        "daywalker2"
+      ],
+      "boss-ancient-guardian": [
+        "minotaur"
+      ],
+      "boss-fuelweaver": [
+        "stalker_atrium"
+      ],
+      "boss-eyes": [
+        "eyeofterror",
+        "twinofterror1"
+      ],
+      "boss-celestial-champion": [
+        "alterguardian_phase1"
+      ],
+      "boss-shadow-chess": [
+        "shadow_knight",
+        "shadow_bishop",
+        "shadow_rook"
+      ],
+      "multitool": [
+        "multitool_axe_pickaxe"
+      ],
+      "horn-enchant": [
+        "cane",
+        "minotaurhorn"
+      ],
+      "thermal-stone": [
+        "heatrock"
+      ],
+      "scalemail": [
+        "armordragonfly",
+        "dragon_scales"
+      ],
+      "equipment-repair": [
+        "greenamulet",
+        "dragon_scales",
+        "livinglog"
+      ],
+      "portable-spicer-batches": [
+        "portablespicer"
+      ],
+      "heat-dumbbell": [
+        "dumbbell_heat"
+      ],
+      "mushroom-lights": [
+        "mushroom_light",
+        "mushroom_light2"
+      ],
+      "advanced-torches": [
+        "torch"
+      ],
+      "shadow-battleaxe-rift": [
+        "shadow_battleaxe"
+      ],
+      "ooze-container-upgrade": [
+        "gelblob_storage_kit"
+      ],
+      "eyeturret": [
+        "eyeturret"
+      ],
+      "upgraded-tents": [
+        "tent",
+        "siestahut",
+        "bedroll_furry"
+      ],
+      "world-ancient-altar": [
+        "ancient_altar",
+        "ancient_altar_broken"
+      ],
+      "world-ancient-statues": [
+        "ruins_statue_mage",
+        "ruins_statue_head"
+      ],
+      "world-boulderbough": [
+        "tree_rock"
+      ],
+      "portable-tackle-box": [
+        "tacklecontainer",
+        "supertacklecontainer"
+      ],
+      "world-moon-island": [
+        "moonstorm_goggleshat"
+      ],
+      "world-sandstorm": [
+        "deserthat"
+      ],
+      "world-cave-access": [
+        "cave_entrance"
+      ],
+      "role-wixie": [
+        "wixie"
+      ],
+      "wixie": [
+        "wixie"
+      ],
+      "world-renewable-plants": [
+        "twiggytree",
+        "grassgekko"
+      ],
+      "twiggy-tree-harvest": [
+        "twiggytree"
+      ],
+      "anti-slip-boots": [
+        "bootleg"
+      ],
+      "celestial-onion": [
+        "quagmire_onion"
+      ],
+      "science-machine": [
+        "researchlab"
+      ],
+      "alchemy-engine": [
+        "researchlab2"
+      ],
+      "prestihatitator": [
+        "researchlab4"
+      ],
+      "shadow-manipulator": [
+        "researchlab3"
+      ],
+      "terra-tamper": [
+        "turfcraftingstation"
+      ],
+      "tackle-station": [
+        "tacklestation"
+      ],
+      "cartography-desk": [
+        "cartographydesk"
+      ],
+      "lazy-deserter": [
+        "townportal"
+      ],
+      "dragonfly-furnace": [
+        "dragonflyfurnace"
+      ],
+      "drying-rack": [
+        "meatrack"
+      ],
+      "turf-raiser-helm": [
+        "antlionhat"
+      ],
+      "shadow-thurible": [
+        "thurible"
+      ],
+      "bone-helm": [
+        "skeletonhat"
+      ],
+      "bee-queen-crown": [
+        "hivehat"
+      ],
+      "horizon-expandinator": [
+        "scrap_monoclehat"
+      ],
+      "scrap-hat": [
+        "scraphat"
+      ],
+      "eyebrella": [
+        "eyebrellahat"
+      ],
+      "elastispacer": [
+        "chestupgrade_stacksize"
+      ],
+      "role-wilson": [
+        "wilson"
+      ],
+      "role-willow": [
+        "willow"
+      ],
+      "role-wolfgang": [
+        "wolfgang"
+      ],
+      "role-wendy": [
+        "wendy"
+      ],
+      "role-wx78": [
+        "wx78"
+      ],
+      "role-wickerbottom": [
+        "wickerbottom"
+      ],
+      "role-woodie": [
+        "woodie"
+      ],
+      "role-wes": [
+        "wes"
+      ],
+      "role-waxwell": [
+        "waxwell"
+      ],
+      "role-wigfrid": [
+        "wathgrithr"
+      ],
+      "role-webber": [
+        "webber"
+      ],
+      "role-winona": [
+        "winona"
+      ],
+      "role-warly": [
+        "warly"
+      ],
+      "role-walter": [
+        "walter"
+      ],
+      "role-wortox": [
+        "wortox"
+      ],
+      "role-wormwood": [
+        "wormwood"
+      ],
+      "role-wurt": [
+        "wurt"
+      ],
+      "role-wanda": [
+        "wanda"
+      ],
+      "role-wonkey": [
+        "wonkey"
+      ],
+      "role-wathom": [
+        "wathom"
+      ]
+    },
+    "beta": {
+      "mending-kit": [
+        "um_gem_repair_kit"
+      ],
+      "warly": [
+        "warly"
+      ],
+      "winona": [
+        "winona"
+      ],
+      "wanda": [
+        "wanda"
+      ],
+      "wes": [
+        "wes"
+      ],
+      "wendy": [
+        "wendy"
+      ],
+      "willow": [
+        "willow"
+      ],
+      "walter": [
+        "walter"
+      ],
+      "wurt": [
+        "wurt"
+      ],
+      "woodie": [
+        "woodie"
+      ],
+      "slingshot-gnasher": [
+        "slingshot_gnasher"
+      ],
+      "slingshot-matilda": [
+        "slingshot_matilda"
+      ],
+      "slingshot-jessie": [
+        "slingshot_jessie"
+      ],
+      "slingshot-claire": [
+        "slingshot_claire"
+      ],
+      "winona-toolbox": [
+        "winona_toolbox"
+      ],
+      "electrical-upgrade-kit": [
+        "winona_upgradekit_electrical"
+      ],
+      "powercell": [
+        "powercell"
+      ],
+      "gemology-pouch": [
+        "um_gemology_pouch"
+      ],
+      "amulet-backpack": [
+        "um_backpack_amuletuse"
+      ],
+      "blueberrypancakes": [
+        "blueberrypancakes"
+      ],
+      "um-boom-tart": [
+        "um_boom_tart"
+      ],
+      "um-boomberrypie": [
+        "um_boomberrypie"
+      ],
+      "um-sponge-cake": [
+        "um_sponge_cake"
+      ],
+      "snowcone": [
+        "snowcone"
+      ],
+      "seafoodpaella": [
+        "seafoodpaella"
+      ],
+      "um-ghost-fajita": [
+        "um_ghost_fajita"
+      ],
+      "um-rimeweed-spagett": [
+        "um_rimeweed_spagett"
+      ],
+      "um-rimeweed-tequila": [
+        "um_rimeweed_tequila"
+      ],
+      "stuffed-peeper-poppers": [
+        "stuffed_peeper_poppers"
+      ],
+      "um-durian-cream-marshcake": [
+        "um_durian_cream_marshcake"
+      ],
+      "um-rice-pudding": [
+        "um_rice_pudding"
+      ],
+      "wortox": [
+        "wortox"
+      ],
+      "wormwood": [
+        "wormwood"
+      ],
+      "wx78": [
+        "wx78"
+      ],
+      "wickerbottom": [
+        "wickerbottom"
+      ],
+      "wolfgang": [
+        "wolfgang"
+      ],
+      "rimeweed-bramble-armor": [
+        "um_armor_bramble_rimeweed"
+      ],
+      "hooded-widow": [
+        "hoodedwidow"
+      ],
+      "snowmong": [
+        "snowmong"
+      ],
+      "snaildrakes": [
+        "snaildrake_magma"
+      ],
+      "slurtles": [
+        "slurtle",
+        "snurtle"
+      ],
+      "rock-lobster": [
+        "rocky"
+      ],
+      "widows-grasp": [
+        "widowsgrasp"
+      ],
+      "widows-head": [
+        "widowshead"
+      ],
+      "ancient-guardian": [
+        "minotaur"
+      ],
+      "ancient-fuelweaver": [
+        "stalker_atrium"
+      ],
+      "toadstool": [
+        "toadstool",
+        "toadstool_dark"
+      ],
+      "nightmare-werepig": [
+        "daywalker",
+        "daywalker2"
+      ],
+      "celestial-champion": [
+        "alterguardian_phase1"
+      ],
+      "great-depths-worm": [
+        "worm_boss"
+      ],
+      "glacial-hound": [
+        "glacialhound"
+      ],
+      "shockworm": [
+        "shockworm"
+      ],
+      "viperworm": [
+        "viperworm"
+      ],
+      "fruitbat": [
+        "fruitbat"
+      ],
+      "trapdoor-spider": [
+        "spider_trapdoor"
+      ],
+      "geothermite": [
+        "cave_vent_mite"
+      ],
+      "deerclops": [
+        "deerclops"
+      ],
+      "bearger": [
+        "bearger"
+      ],
+      "moose-goose": [
+        "moose"
+      ],
+      "dragonfly": [
+        "dragonfly"
+      ],
+      "bee-queen": [
+        "beequeen"
+      ],
+      "klaus": [
+        "klaus"
+      ],
+      "antlion": [
+        "antlion"
+      ],
+      "crab-king": [
+        "crabking"
+      ],
+      "boiling-springs": [
+        "um_hotspring"
+      ],
+      "marsh-rice": [
+        "riceplant"
+      ],
+      "lunar-island": [
+        "um_beehive_moon"
+      ],
+      "rimeweed": [
+        "rimeweed_main"
+      ],
+      "charlies-slider": [
+        "the_real_charles_t_horse"
+      ],
+      "silk-sack": [
+        "silksack"
+      ],
+      "gore-horn-hat": [
+        "gore_horn_hat"
+      ],
+      "moon-scale-armor": [
+        "armor_glassmail"
+      ],
+      "snow-goggles": [
+        "snowgoggles"
+      ],
+      "rime-helmet": [
+        "um_hat_rime"
+      ],
+      "pepperdragon-hat": [
+        "um_hat_pepperdragon"
+      ],
+      "snaildrake-helmet": [
+        "snaildrakehat"
+      ],
+      "cursed-antler": [
+        "cursed_antler"
+      ],
+      "crystal-cursed-antler": [
+        "crystal_cursed_antler"
+      ],
+      "nettle-mask": [
+        "um_hat_nettlemask"
+      ],
+      "gem-magnifiers": [
+        "um_magnifier_purplegem"
+      ],
+      "sporepack": [
+        "sporepack"
+      ],
+      "rimeweed-icepack": [
+        "um_rimeweed_icepack"
+      ],
+      "saltpack": [
+        "saltpack"
+      ],
+      "driftwood-fishing-rod": [
+        "driftwoodfishingrod"
+      ],
+      "fishing-net": [
+        "uncompromising_fishingnet"
+      ],
+      "rat-poison": [
+        "ratpoisonbottle"
+      ],
+      "moon-eye-balm": [
+        "um_eyebalm"
+      ],
+      "sludge-sack": [
+        "sludge_sack"
+      ],
+      "thermal-stone": [
+        "heatrock"
+      ]
+    }
+  },
+  "branchNames": {
+    "um-beta": {
+      "slingshotammo_moonglass": "月亮碎片弹药"
+    }
+  }
+}

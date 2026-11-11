@@ -3,14 +3,30 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
+import {canonicalText,terminology} from './terminology.mjs';
 const root=fileURLToPath(new URL('./dist/',import.meta.url));
 const all=await fs.readdir(root,{recursive:true});
 const html=all.filter(f=>f.endsWith('.html'));
 const pages=new Map(await Promise.all(html.map(async f=>[f.replaceAll('\\','/'),await fs.readFile(path.join(root,f),'utf8')])));
 const paths=new Set(all.map(f=>f.replaceAll('\\','/'))),errors=[];let links=0;
+for(const term of terminology.terms)if(canonicalText(term.zh)!==term.zh)errors.push('Canonical name is changed by another rule: '+term.prefab);
+for(const [file,text] of pages){
+ const prose=text.replace(/<p class="role-aliases">[\s\S]*?<\/p>/g,'').replace(/<(script|style|code)\b[^>]*>[\s\S]*?<\/\1>/g,'').replace(/<[^>]+>/g,'');
+ if(canonicalText(prose)!==prose)errors.push(file+': noncanonical terminology outside aliases or source code');
+ if(text.includes('m6 6 12 12M6 18 12-12'))errors.push(file+': malformed close icon');
+ for(const [,button] of text.matchAll(/(<button\b[^>]*(?:id="(?:search-close|clear-filter|bookmarks-close)"|class="[^\"]*mobile-close[^\"]*")[^>]*>[\s\S]*?<\/button>)/g)){
+  if(!button.includes('M6 6L18 18M18 6L6 18'))errors.push(file+': close/clear button lacks the standard SVG cross');
+ }
+}
+const compatibilityPage=pages.get('um-item-compatibility.html')??'';
+const butterflyPhrase=compatibilityPage.match(/<span class="item-term">黄油蝴[\s\S]*?<\/span><\/span>/)?.[0]??'';
+if(!butterflyPhrase.includes('assets/um-beta/um_buttery_fly.png')||(butterflyPhrase.match(/<img\b/g)??[]).length!==1)errors.push('Buttery Fly must use one actual UM beta texture');
+for(const [file,term] of [['knobbly-tree.html','高出平均值的树干'],['thermal-stone-wateringcan.html','鸟嘴壶'],['creature-centipede.html','巨荒蜈'],['eyeturret.html','眼睛炮塔']]){
+ if(!pages.get(file)?.replace(/<[^>]+>/g,'').includes(term))errors.push(file+': missing verified official name '+term);
+}
 function checkLink(file,value){if(/^(https?:|mailto:|data:)/.test(value))return;links++;const url=new URL(value,`https://wiki.example/${file}`),target=decodeURIComponent(url.pathname.slice(1));if(!paths.has(target))errors.push(`${file}: missing ${value}`);if(url.hash&&pages.has(target)&&!pages.get(target).includes(`id="${decodeURIComponent(url.hash.slice(1))}"`))errors.push(`${file}: missing anchor ${value}`);}
 for(const [file,text] of pages){const ids=[...text.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);if(new Set(ids).size!==ids.length)errors.push(`${file}: duplicate ID`);if((text.match(/<h1(?:\s[^>]*)?>/g)||[]).length!==1)errors.push(`${file}: expected one h1`);for(const [,value] of text.matchAll(/(?:href|src)="([^"]+)"/g))checkLink(file,value);}
-for(const [file,term,asset] of [
+for(const [file,rawTerm,asset] of [
  ['thulecite-club.html','远古铥矿盔甲','armorruins'],
  ['thulecite-club.html','铥矿','thulecite'],
  ['equipment-repair.html','铥矿甲','armorruins'],
@@ -26,6 +42,7 @@ for(const [file,term,asset] of [
  ['frost-core.html','寒霜之祠蓝图','blueprint'],
  ['frost-core.html','普通出逃腿靴','bootleg'],
 ]){
+ const term=canonicalText(rawTerm);
  const label=`>${term.slice(0,-1)}<span class="icon-tail">${term.slice(-1)}`;
  if(!pages.get(file)?.includes(`${label}<img class="inline-icon" src="assets/icons/${asset}.png"`)){
   errors.push(`${file}: incorrect or missing icon for ${term}`);

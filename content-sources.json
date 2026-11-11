@@ -45,7 +45,17 @@
     "world-random-size",
     "trap",
     "world-autumn",
-    "deeply-buried-compatibility"
+    "deeply-buried-compatibility",
+    "knobbly-tree",
+    "environment-temperature-sources",
+    "thermal-stone-wateringcan",
+    "cursed-item-retention",
+    "world-player-temperature",
+    "about",
+    "creature-walls",
+    "role-wonkey",
+    "revival-curse",
+    "world-ancient-altar"
   ],
   "articles": [
     {
@@ -101,14 +111,15 @@
         "content/modinfo.lua",
         "content/role/combat.lua",
         "content/scripts/progressivecombat2hm.lua",
-        "content/scripts/combatconfig2hm.lua"
+        "content/scripts/combatconfig2hm.lua",
+        "content/role/combat_progressive.lua"
       ],
       "configKeys": [
         "enable hard mode",
         "role_nerf",
         "combat"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "armor",
@@ -271,7 +282,9 @@
         "content/easy_other/exchangemodes2hm.lua",
         "content/scripts/exchangemode2hm.lua",
         "content/scripts/exchangexianyurecovery2hm.lua",
-        "content/scripts/shadowvaultproxy2hm.lua"
+        "content/scripts/shadowvaultproxy2hm.lua",
+        "content/weather/temperature.lua",
+        "content/scripts/prefabs/backpackicon2hm.lua"
       ],
       "configKeys": [
         "Container Sort",
@@ -305,7 +318,8 @@
         "README.md",
         "content/ARCHIVE_SOURCE.txt"
       ],
-      "configKeys": []
+      "configKeys": [],
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "settings-guide",
@@ -2351,7 +2365,8 @@
         "content/modinfo.lua",
         "content/modmain.lua",
         "content/easy_role/wonkey_easy.lua",
-        "content/common/monster_nightvision.lua"
+        "content/common/monster_nightvision.lua",
+        "content/common/curse.lua"
       ],
       "configKeys": [
         "enable easy mode",
@@ -2366,7 +2381,7 @@
         "right self need ctrl",
         "Monster Night Vision"
       ],
-      "auditedVersion": "2.8.14.97.4"
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "role-wathom",
@@ -2569,12 +2584,14 @@
         "content/modinfo.lua",
         "content/modmain.lua",
         "content/role/death.lua",
-        "content/role/haitang_curse_2.lua"
+        "content/role/haitang_curse_2.lua",
+        "content/common/curse.lua"
       ],
       "configKeys": [
         "death_curse",
         "haitang_curse_2"
-      ]
+      ],
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "soul-wilderness",
@@ -2907,7 +2924,7 @@
         "monster_change",
         "wall_destroy"
       ],
-      "auditedVersion": "2.8.14.97.4"
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "creature-boss-truce",
@@ -3915,7 +3932,8 @@
       ],
       "configKeys": [
         "temperature_change"
-      ]
+      ],
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "world-ocean-adventure",
@@ -3969,23 +3987,26 @@
         "content/modinfo.lua",
         "content/modmain.lua",
         "content/tech/ancient_statue.lua",
-        "content/easy_other/easy_equipments.lua"
+        "content/easy_other/easy_equipments.lua",
+        "content/tech/common.lua"
       ],
       "configKeys": [
         "ancient_statue"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "world-ancient-altar",
       "source": [
         "content/modinfo.lua",
         "content/modmain.lua",
-        "content/tech/ancient_altar.lua"
+        "content/tech/ancient_altar.lua",
+        "content/tech/common.lua"
       ],
       "configKeys": [
         "ancient_altar"
-      ]
+      ],
+      "auditedVersion": "2.8.15.0.25"
     },
     {
       "id": "world-mining-work",
@@ -4263,6 +4284,60 @@
       "configKeys": [
         "autumn_change"
       ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "knobbly-tree",
+      "source": [
+        "content/modmain.lua",
+        "content/modinfo.lua",
+        "content/weather/temperature.lua",
+        "content/monster/wall.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "weather_change",
+        "temperature_change",
+        "monster_change",
+        "wall_destroy"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "environment-temperature-sources",
+      "source": [
+        "content/modmain.lua",
+        "content/modinfo.lua",
+        "content/weather/temperature.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "weather_change",
+        "temperature_change"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "thermal-stone-wateringcan",
+      "source": [
+        "content/modmain.lua",
+        "content/modinfo.lua",
+        "content/weather/temperature.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "weather_change",
+        "temperature_change"
+      ],
+      "auditedVersion": "2.8.15.0.25"
+    },
+    {
+      "id": "cursed-item-retention",
+      "source": [
+        "content/modmain.lua",
+        "content/common/curse.lua"
+      ],
+      "configKeys": [],
       "auditedVersion": "2.8.15.0.25"
     },
     {
