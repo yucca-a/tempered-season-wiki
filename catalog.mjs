@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { articles as initial, meta } from './content.mjs';
 import { refreshWorldArticles } from './research/release-20261111-world.mjs';
+import { refreshRelease34 } from './research/release-2-8-15-0-34.mjs';
 import { refreshRelease25 } from './research/release-2-8-15-0-25.mjs';
 import { refreshDocumentationGaps } from './research/release-20261111-gaps.mjs';
 import { applyArticleTerminology, canonicalDocument } from './terminology.mjs';
@@ -134,12 +135,13 @@ for(const part of ['roles','mechanics']){
 for(const id of refreshWorldArticles(articles,notes))currentAuditIds.add(id);
 for(const id of refreshRelease25(articles,notes))currentAuditIds.add(id);
 for(const id of refreshDocumentationGaps(articles,notes))currentAuditIds.add(id);
+for(const id of refreshRelease34(articles,notes))currentAuditIds.add(id);
 for(const article of articles.filter(a=>currentAuditIds.has(a.id))){
  if(article.category==='items')itemAuditIds.add(article.id);
  if(article.category==='characters'||article.category==='buildings'||article.id.startsWith('boss-'))entityAuditIds.add(article.id);
  if(article.category==='food'||article.category==='creatures'&&!article.id.startsWith('boss-'))lifeAuditIds.add(article.id);
 }
-about.sections[0].paragraphs.push('当前资料基线为 2.8.15.0.25，补充角色技能兼容、体型与捕获掉落、战歌回复、穿越切换恢复及深埋之下兼容。未涉及变更的条目沿用原有核对记录；永不妥协测试版有独立的版本和词条。');
+about.sections[0].paragraphs.push('当前资料基线为 2.8.15.0.34，收录恐惧-警告表、织影夜莓、WX-78 草案与暗影魔法续费。未涉及变更的条目沿用原有核对记录；永不妥协测试版有独立的版本和词条。');
 applyArticleTerminology(articles);
 for(const key of Object.keys(notes))notes[key]=canonicalDocument(notes[key]);
 const configByKey=new Map(configData.configs.map(c=>[c.key,c]));

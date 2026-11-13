@@ -3562,5 +3562,21 @@
   "portablespicer_item": {
     "path": "assets/icons/portablespicer_item.png",
     "source": "DST images.zip/images/inventoryimages3.tex"
+  },
+  "devil_heart2hm": {
+    "path": "assets/icons/devil_heart2hm.png",
+    "source": "content/images/inventoryimages/devil_heart2hm.tex"
+  },
+  "onion_celestial2hm": {
+    "path": "assets/icons/onion_celestial2hm.png",
+    "source": "content/images/inventoryimages/onion_celestial2hm.tex"
+  },
+  "winona_toolbox2hm": {
+    "path": "assets/icons/winona_toolbox2hm.png",
+    "source": "content/images/inventoryimages/winona_toolbox2hm.tex"
+  },
+  "bootleg_2hm": {
+    "path": "assets/icons/bootleg_2hm.png",
+    "source": "content/images/inventoryimages/bootleg_2hm.tex"
   }
 }

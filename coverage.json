@@ -1,9 +1,9 @@
 {
-  "articles": 285,
-  "configs": 439,
-  "choices": 3351,
+  "articles": 298,
+  "configs": 440,
+  "choices": 3356,
   "targetedRefresh": {
-    "version": "2.8.15.0.25",
+    "version": "2.8.15.0.34",
     "articles": [
       "role-winona",
       "winona-toolbox",
@@ -58,26 +58,42 @@
       "creature-walls",
       "role-wonkey",
       "revival-curse",
-      "world-ancient-altar"
+      "world-ancient-altar",
+      "dread-alarming-clock",
+      "role-wanda",
+      "shadowweaver-nightberry",
+      "boss-fuelweaver",
+      "devil-fruit",
+      "boss-ancient-guardian",
+      "skill-keybindings",
+      "frost-shrine",
+      "celestial-onion",
+      "role-wx78",
+      "shadow-manipulator",
+      "role-wortox",
+      "role-webber",
+      "world-moon-island",
+      "new-hambat"
     ],
-    "count": 54
+    "count": 69
   },
   "sourceAuditVersions": {
-    "2.8.15.0.25": 24,
-    "2.8.15.0.23": 30,
-    "2.8.14.97.4": 148,
+    "2.8.15.0.34": 21,
+    "2.8.15.0.25": 22,
+    "2.8.15.0.23": 26,
+    "2.8.14.97.4": 138,
     "2.8.14.98.6": 1
   },
   "groups": 19,
-  "images": 687,
+  "images": 691,
   "itemAudit": {
-    "version": "2.8.15.0.25",
-    "articles": 63,
-    "items": 61,
+    "version": "2.8.15.0.34",
+    "articles": 64,
+    "items": 62,
     "missing": []
   },
   "entityAudit": {
-    "version": "2.8.15.0.25",
+    "version": "2.8.15.0.34",
     "articles": 67,
     "characters": 25,
     "buildings": 22,
@@ -85,13 +101,13 @@
     "missing": []
   },
   "lifeAudit": {
-    "version": "2.8.15.0.25",
-    "articles": 48,
-    "food": 15,
+    "version": "2.8.15.0.34",
+    "articles": 50,
+    "food": 17,
     "creatures": 33,
     "missing": []
   },
-  "notedSettings": 439,
+  "notedSettings": 440,
   "implementationDifferences": [
     {
       "key": "Shadow Prefab Setting",
@@ -166,6 +182,11 @@
     {
       "key": "wurt_merm_stronger",
       "label": "鱼人堡垒材料增加",
+      "status": "mismatch"
+    },
+    {
+      "key": "Wanda Dread Watch",
+      "label": "恐惧-警告表(暗影心房升级)",
       "status": "mismatch"
     },
     {

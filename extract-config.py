@@ -72,7 +72,7 @@ for i in range(1, len(lua.globals().configuration_options) + 1):
         line = raw[:match.start()].count('\n') + 1 if match else None
     if label and '总开关' in label and name.endswith('_easy') and name != 'role_easy':
         role = name
-    if name in ['other_role_easy', 'Monster Night Vision', 'wathom nightvision', 'All Right Dodge', 'Role Gym']:
+    if name in ['WX-78 Mode', 'other_role_easy', 'Monster Night Vision', 'wathom nightvision', 'All Right Dodge', 'Role Gym']:
         role = name if name == 'other_role_easy' else None
     opts = []
     for j in range(1, len(entry['options']) + 1):

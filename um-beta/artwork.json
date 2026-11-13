@@ -15,6 +15,14 @@
     "height": 60,
     "workshop": true
   },
+  "aphid": {
+    "path": "assets/um-beta/aphid.png",
+    "source": "images/inventoryimages/aphid.tex",
+    "atlas": "images/inventoryimages/aphid.xml",
+    "width": 61,
+    "height": 63,
+    "workshop": true
+  },
   "armor_glassmail": {
     "path": "assets/um-beta/armor_glassmail.png",
     "source": "images/inventoryimages/armor_glassmail.tex",
@@ -61,6 +69,14 @@
     "atlas": "images/inventoryimages/blueberrypancakes.xml",
     "width": 64,
     "height": 59,
+    "workshop": true
+  },
+  "blueberryplant": {
+    "path": "assets/um-beta/blueberryplant.png",
+    "source": "images/scrapbook/blueberryplant.tex",
+    "atlas": "images/scrapbook/blueberryplant.xml",
+    "width": 96,
+    "height": 69,
     "workshop": true
   },
   "boat_bumper_sludge_kit": {
@@ -983,6 +999,14 @@
     "height": 63,
     "workshop": true
   },
+  "um_fern_fox": {
+    "path": "assets/um-beta/um_fern_fox.png",
+    "source": "images/scrapbook/um_fern_fox.tex",
+    "atlas": "images/scrapbook/um_fern_fox.xml",
+    "width": 87,
+    "height": 96,
+    "workshop": true
+  },
   "um_firecream": {
     "path": "assets/um-beta/um_firecream.png",
     "source": "images/inventoryimages/um_firecream.tex",
@@ -1381,6 +1405,14 @@
     "atlas": "images/inventoryimages/um_moss.xml",
     "width": 62,
     "height": 43,
+    "workshop": true
+  },
+  "um_pepperdragon": {
+    "path": "assets/um-beta/um_pepperdragon.png",
+    "source": "images/scrapbook/um_pepperdragon.tex",
+    "atlas": "images/scrapbook/um_pepperdragon.xml",
+    "width": 96,
+    "height": 94,
     "workshop": true
   },
   "um_pepperdragon_bladder": {

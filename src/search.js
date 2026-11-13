@@ -8,7 +8,7 @@
  const kinds=[...dialog.querySelectorAll('[data-kind]')];
  const indexUrl=new URL(dialog.dataset.index,location.href);
  const wikiNames={tempered:'淬炼之季','um-beta':'永不妥协测试版'};
- const kindNames={article:'词条',config:'配置',recipe:'配方',item:'新增物品'};
+ const kindNames={article:'词条',config:'配置',recipe:'配方',item:'新增物品',entity:'实体图鉴'};
  const normalize=text=>String(text??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
  const escape=text=>String(text??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function mark(text,needle){

@@ -218,6 +218,7 @@ for plant in dry_plants:
         labels[localized_by_prefab[plant]+'干']=art
 labels.update({'霜冻核心':'frostcore2hm','寒霜之祠':'frostshrine2hm','灵魂瓶':'bottle_soul','涡流':'sword_vortex2hm','裂开的不老表':'pocketwatch_heal2hm','永恒-出逃腿靴':'bootleg2hm','小糖豆':'smallcandy2hm','猪鼻胡萝卜蛋糕':'carrotcake2hm','四季鱼汤':'tropicalbouillabaisse2hm','哀悼之穴':'tomb_repair','眼球炮塔':'eyeturret_item','沃特':'wurt'})
 labels.update(aliases)
+labels.update({'恐惧-警告表':'pocketwatch_weapon','织影夜莓':'devil_heart2hm','天体洋葱':'onion_celestial2hm','防滑·出逃腿靴':'bootleg_2hm','永恒·出逃腿靴':'bootleg2hm','薇诺娜的器械箱':'winona_toolbox2hm'})
 for label, name in {'闪电蓝莓': 'zaspberry', '暗影蓝莓': 'viperfruit'}.items():
     if name in manifest:
         labels[label] = name

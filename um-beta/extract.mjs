@@ -111,6 +111,52 @@ for(const [,id,en,zh] of po.toString('utf8').matchAll(/^msgctxt "STRINGS\.NAMES\
  gameNames[id.toLowerCase()]={en,zh};
 }
 if(Object.keys(gameNames).length<500)throw Error('Game localization is missing or changed');
+
+// The game's field guide lists related entities, which may be ingredients,
+// habitats or products. Keep that relationship separate from actual drops.
+const scrapbookPath='scripts/um_scrapbookdata.lua';
+const scrapbookTree=ast(await read(betaDir,scrapbookPath));
+const fieldGuide=[];
+for(const [id,node] of fields(assignment(scrapbookTree,'data'))){
+ let data=node, type, dependencies=[];
+ if(node.type==='CallExpression'){
+  const fn=node.base.name;
+  if(!['CreateBasicEntry','CreateCursedItemData'].includes(fn))throw Error('Unknown scrapbook constructor '+fn);
+  const cursed=fn==='CreateCursedItemData';
+  type=cursed?'item':scalar(node.arguments[1])??'thing';
+  data=node.arguments[cursed?4:3];
+  if(cursed)dependencies.push('veteranshrine');
+ }
+ const properties=fields(data);
+ type??=scalar(properties.get('type'));
+ if(!type)throw Error('Missing scrapbook type for '+id);
+ dependencies.push(...values(properties.get('deps')).map(scalar).filter(Boolean));
+ const nameKey=scalar(properties.get('name'))??id;
+ fieldGuide.push({id,type,nameKey,related:[...new Set(dependencies)],line:node.loc.start.line});
+}
+// Also index named entities returned literally by the beta's registered
+// prefab files. Visual effects, placers and internal helpers usually lack names.
+const knownEntities=new Set(fieldGuide.map(row=>row.id));
+const registered=ast(await read(betaDir,'scripts/uncompromising_prefabs.lua'));
+for(const file of values(assignment(registered,'prefabs')).map(scalar)){
+ const relative='scripts/prefabs/'+file+'.lua';
+ let source;
+ try{source=await fs.readFile(path.join(betaDir,relative),'utf8');}
+ catch(error){if(error.code==='ENOENT')continue;throw error;}
+ if(!/\breturn\s+(Prefab|MakeCritter)\s*\(/.test(source))continue;
+ const returned=ast(source).body.at(-1);
+ if(returned?.type!=='ReturnStatement')continue;
+ for(const call of returned.arguments){
+  if(call.type!=='CallExpression')continue;
+  const critter=file==='figgypet'&&call.base.name==='MakeCritter';
+  if(call.base.name!=='Prefab'&&!critter)continue;
+  const id=scalar(call.arguments[0]);
+  if(!id||knownEntities.has(id)||!(baseNames[id]||cnNames[id]))continue;
+  await read(betaDir,relative);
+  knownEntities.add(id);
+  fieldGuide.push({id,type:critter?'creature':'entity',nameKey:id,related:[],file:relative,line:call.loc.start.line});
+ }
+}
 function sourceExpr(node,source){return node?tidy(source.slice(...node.range)):null;}
 function member(node,base){
  return node?.type==='MemberExpression'&&node.base.name===base?node.identifier.name:null;
@@ -204,7 +250,7 @@ const geodePools=Object.fromEntries([...fields(assignment(geodeDefinitions,'GEOD
 }));
 const artworkIds=itemGroups.flatMap(g=>g.ids);
 const articleArtIds=[...new Set(articles.flatMap(a=>[a.icon??a.prefab,...a.sections.flatMap(([, ,guide])=>guide?.prefabs??[])].filter(Boolean)))].sort();
-const usedNames=new Set([...artworkIds,...articleArtIds,...recipes.flatMap(r=>[r.id,r.product,...r.ingredients.map(i=>i.id)])]);
+const usedNames=new Set([...artworkIds,...articleArtIds,...recipes.flatMap(r=>[r.id,r.product,...r.ingredients.map(i=>i.id)]),...fieldGuide.flatMap(row=>[row.id,row.nameKey,...row.related])]);
 // The 6.0.3.9 ammo rename retains the Chinese patch's existing player-facing term.
 const cnNameAliases={um_slingshotammo_honey:'slingshotammo_honey'};
 const names=Object.fromEntries([...usedNames].sort().map(id=>{
@@ -237,7 +283,7 @@ for(const [article,source] of articles.flatMap(a=>a.sources.map(s=>[a.id,s]))){
 }
 if(inactiveCitations.length)throw Error('Citations must point to code, not comments or blank lines:\n'+inactiveCitations.join('\n'));
 for(const [key,lines] of validatedCitations)sourceFiles[key].citations=[...lines].sort((a,b)=>a-b);
-const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,articleArtIds,geodePools,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
+const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,articleArtIds,geodePools,fieldGuide,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
 const json=JSON.stringify(result,null,2)+'\n';
 if(check){
  const current=await fs.readFile(resultFile,'utf8');

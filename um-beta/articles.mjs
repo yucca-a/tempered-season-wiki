@@ -6,6 +6,7 @@ import { additionalArticles } from './additional-articles.mjs';
 import { gemCreatureArticles } from './gem-creature-articles.mjs';
 import { caveBossArticles } from './cave-boss-articles.mjs';
 import { creatureArticles } from './creature-articles.mjs';
+import { forestArticles } from './forest-articles.mjs';
 import { surfaceBossArticles } from './surface-boss-articles.mjs';
 import { worldExpansionArticles } from './world-expansion-articles.mjs';
 import { bossRewardArticles } from './boss-reward-articles.mjs';
@@ -35,7 +36,7 @@ export const articles=[
    ['连帽森林与宝石相关生物','从黑寡妇的开战方式查到虫茧和寡妇装备，也可以直接查参与宝石交易或掉落的生物。',null,articleLinks(gemCreatureArticles)],
    ['地表与海上首领','按首领查看出现时机、妥协测试版的战斗改动和奖励。',null,articleLinks([...surfaceBossArticles,{id:'summer-dragonflies',title:'时令龙蝇与月光龙蝇'}])],
    ['洞穴与终局首领','从遗迹守护者查到终局战斗，也可以查季节性的洞穴威胁。',null,articleLinks(caveBossArticles)],
-   ['其他生物与变种','查座狼、深渊蠕虫、蝙蝠、蜘蛛和地热螨等生物的应对方式。',null,articleLinks([...creatureArticles,{id:'rat-raids',title:'鼠潮与鼠穴'},{id:'dread-eye',title:'恐惧之眼'}])],
+   ['其他生物与变种','查座狼、深渊蠕虫、蝙蝠、蜘蛛和地热螨等生物的应对方式。',null,articleLinks([...creatureArticles,...forestArticles.filter(a=>a.category==='creatures'),{id:'rat-raids',title:'鼠潮与鼠穴'},{id:'dread-eye',title:'恐惧之眼'}])],
   ],
   sources:[gemCreatureArticles[0].sources[0],surfaceBossArticles[0].sources[0],caveBossArticles[0].sources[0],creatureArticles[0].sources[0]],
  },
@@ -90,7 +91,7 @@ export const articles=[
   sources:[cfg(451),cfg(463),beta('init/init_weather/init_harder_weather.lua',130),...[11,100,123,141,176].map(line=>beta('scripts/components/um_snow_stormspawner.lua',line)),beta('scripts/components/snowstormwatcher.lua',45),beta('init/init_weather/init_snowstorm_structures.lua',126),names(35),names(694)],
  },
  {
-  id:'cave-worldgen',category:'world',title:'熔岩洞穴与潮湿陷坑',aliases:['Magma Caves','Flooded Caves','月岛','蓝蘑菇林'],
+  id:'cave-worldgen',related:[{id:'ribopod',label:'肋荚虫与骸骨堆'},{id:'pepperdragon',label:'椒龙与椒龙巢'}],category:'world',title:'熔岩洞穴与潮湿陷坑',aliases:['Magma Caves','Flooded Caves','月岛','蓝蘑菇林'],
   summary:'洞穴配置会改变新世界的地形、入口和宝石学锻造台的位置。',
   configs:['worldgenmastertoggle','magma_caves','flooded_caves','gemology'],
   sections:[
@@ -248,6 +249,7 @@ export const articles=[
  ...gemCreatureArticles,
  ...caveBossArticles,
  ...creatureArticles,
+ ...forestArticles,
  ...surfaceBossArticles,
  ...worldExpansionArticles,
  ...bossRewardArticles,

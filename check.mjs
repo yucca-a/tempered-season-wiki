@@ -79,6 +79,13 @@ if(betaResults.filter(a=>a.kind==='recipe').length!==beta.recipes.length||betaRe
 const betaArt=JSON.parse(await fs.readFile(new URL('./um-beta/artwork.json',import.meta.url),'utf8'));
 for(const art of Object.values(betaArt))if(!paths.has(art.path))errors.push('Missing Beta artwork '+art.path);
 if(betaResults.filter(a=>a.kind==='item').length!==beta.artworkIds.length)errors.push('Beta item gallery search coverage mismatch');
+const entityResults=new Map(betaResults.filter(e=>e.kind==='entity').map(e=>[e.keywords,e]));
+const guidePage=pages.get('um-beta/field-guide.html')??'';
+for(const row of beta.fieldGuide){
+ const source=beta.sourceFiles['beta/'+(row.file??'scripts/um_scrapbookdata.lua')];
+ if(!entityResults.has(row.id)||!guidePage.includes('id="prefab-'+row.id+'"')||!source||row.line<1||row.line>source.lines)errors.push('Missing entity or source: '+row.id);
+}
+if(entityResults.size!==beta.fieldGuide.length)errors.push('Entity index count differs from snapshot');
 for(const [file,asset] of [['index.html','assets/um-beta/cover.png'],['um-beta/index.html','../assets/um-beta/cover.png'],['um-beta/wixie.html','../assets/um-beta/wixie.png'],['um-beta/recipes.html','../assets/um-beta/slingshot_gnasher.png'],['um-beta/index.html','../assets/um-beta/um_gemologypurplegem2.png']]){
  if(!pages.get(file)?.includes('src="'+asset+'"'))errors.push('Missing Beta artwork reference in '+file);
 }
@@ -155,7 +162,7 @@ for(const c of configData.configs){if(!c.options.some(o=>o.value===c.default))er
 const modRoot=process.env.WIKI_TEMPERED_SOURCE;
 try{const source=await fs.readFile(modRoot?path.join(modRoot,'modinfo.lua'):new URL('../content/modinfo.lua',import.meta.url));if(createHash('sha256').update(source).digest('hex')!==configData.sourceHash)errors.push('Configuration source differs from the published snapshot; check WIKI_TEMPERED_SOURCE or rerun extract-config.py');}catch(e){if(e.code!=='ENOENT'||modRoot)throw e;}
 const provenance=JSON.parse(await fs.readFile(new URL('./content-sources.json',import.meta.url),'utf8'));
-const releaseAudit=JSON.parse(await fs.readFile(new URL('./data/release-20261111-sources.json',import.meta.url),'utf8'));
+const releaseAudit=JSON.parse(await fs.readFile(new URL('./data/release-20261113-sources.json',import.meta.url),'utf8'));
 if(releaseAudit.version!==configData.version)errors.push('Release source audit and configuration snapshot versions differ');
 if(JSON.stringify(releaseAudit.articles.map(a=>a.id).sort())!==JSON.stringify([...provenance.targetedRefresh].sort()))errors.push('Targeted release articles differ from the source audit');
 for(const article of provenance.articles)if(!article.source?.length)errors.push('Missing source reference for '+article.id);

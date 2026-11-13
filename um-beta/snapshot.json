@@ -8475,6 +8475,10 @@
       "en": "Air Conditioner",
       "zh": "空调"
     },
+    "alpha_lightninggoat": {
+      "en": "Alpha Volt Goat",
+      "zh": "伏特头羊"
+    },
     "alterguardian_phase1": {
       "en": "Celestial Champion",
       "zh": "天体英雄"
@@ -8491,17 +8495,49 @@
       "en": "Ancient Soul Amulet",
       "zh": "唤灵护符"
     },
+    "ancient_statue": {
+      "en": "Ancient Statue",
+      "zh": "远古雕像"
+    },
+    "ancient_trepidation": {
+      "en": "Trepidation",
+      "zh": "恐怖巨蛛"
+    },
+    "ancient_trepidation_arm": {
+      "en": "Trepidation's Reach",
+      "zh": "巨蛛之爪"
+    },
     "antlion": {
       "en": "Antlion",
       "zh": "蚁狮"
+    },
+    "aphid": {
+      "en": "Aphid",
+      "zh": "蚜虫"
     },
     "armor_bramble": {
       "en": "Bramble Husk",
       "zh": "荆棘外壳"
     },
+    "armor_crab_maxhp": {
+      "en": "Gem Encrusted Shell Armor",
+      "zh": "镶玉盔甲"
+    },
+    "armor_crab_regen": {
+      "en": "Healing Rock Armor",
+      "zh": "治愈岩甲"
+    },
     "armor_glassmail": {
       "en": "Shard-Scale Armor",
       "zh": "月鳞甲"
+    },
+    "armor_glassmail_shards": {
+      "en": "Moon Shard",
+      "zh": "玻璃碎片"
+    },
+    "armor_lunarplant_husk": {
+      "en": "Brambleshade Armor",
+      "zh": "荆棘茄甲"
     },
     "armor_reed_um": {
       "en": "Reed Suit",
@@ -8515,6 +8551,10 @@
       "en": "Rock Hide Armor",
       "zh": "鲨甲"
     },
+    "armorlavae": {
+      "en": "Dimvae",
+      "zh": "友好的岩浆虫"
+    },
     "armorruins": {
       "en": "Thulecite Suit",
       "zh": "铥矿甲"
@@ -8523,6 +8563,14 @@
       "en": "Log Suit",
       "zh": "木甲"
     },
+    "ash": {
+      "en": "Ashes",
+      "zh": "灰烬"
+    },
+    "asparagus_seeds": {
+      "en": "Tubular Seeds",
+      "zh": "筒状种子"
+    },
     "bagofmarbles": {
       "en": "Bag O' Marbles",
       "zh": "弹珠袋"
@@ -8530,6 +8578,14 @@
     "bandage": {
       "en": "Honey Poultice",
       "zh": "蜂蜜药膏"
+    },
+    "bat": {
+      "en": "Batilisk",
+      "zh": "洞穴蝙蝠"
+    },
+    "bathbomb": {
+      "en": "Bath Bomb",
+      "zh": "沐浴球"
     },
     "batwing": {
       "en": "Batilisk Wing",
@@ -8547,17 +8603,61 @@
       "en": "Bearger",
       "zh": "熊獾"
     },
+    "beargerclaw": {
+      "en": "Bearger Claw",
+      "zh": "诅咒熊爪"
+    },
     "beefalowool": {
       "en": "Beefalo Wool",
       "zh": "牛毛"
+    },
+    "beemine": {
+      "en": "Bee Mine",
+      "zh": "蜜蜂地雷"
     },
     "beequeen": {
       "en": "Bee Queen",
       "zh": "蜂王"
     },
+    "bight": {
+      "en": "Comingled Clockwork",
+      "zh": "超载奇械"
+    },
+    "birchling": {
+      "en": "Birchling",
+      "zh": "桦树树桩怪"
+    },
+    "bird_egg": {
+      "en": "Egg",
+      "zh": "鸟蛋"
+    },
+    "bird_egg_cooked": {
+      "en": "Cooked Egg",
+      "zh": "熟鸟蛋"
+    },
+    "birdcage": {
+      "en": "Birdcage",
+      "zh": "鸟笼"
+    },
+    "blowdart_fire": {
+      "en": "Fire Dart",
+      "zh": "火焰吹箭"
+    },
+    "blueberryflower": {
+      "en": "Boomberry Flower",
+      "zh": "爆汁蓝莓花"
+    },
     "blueberrypancakes": {
       "en": "Boomberry Pancakes",
       "zh": "爆汁蓝莓薄饼"
+    },
+    "blueberryplant": {
+      "en": "Boomberry Plant",
+      "zh": "爆汁蓝莓植株"
+    },
+    "bluegem": {
+      "en": "Blue Gem",
+      "zh": "蓝宝石"
     },
     "blueprint": {
       "en": "Blueprint",
@@ -8615,6 +8715,14 @@
       "en": "Bootleg Getaway",
       "zh": "出逃腿靴"
     },
+    "boulder_crab": {
+      "en": "Boulder Crab",
+      "zh": "岩石蟹"
+    },
+    "boulder_crab_hole": {
+      "en": "Crab Hole",
+      "zh": "岩石蟹洞穴"
+    },
     "brine_balm": {
       "en": "Brine Balm",
       "zh": "盐晶药膏"
@@ -8622,6 +8730,14 @@
     "bugzapper": {
       "en": "Bug Zapper",
       "zh": "电蚊拍"
+    },
+    "bulletbee": {
+      "en": "Bullet Bee",
+      "zh": "子弹蜂"
+    },
+    "bushcrab": {
+      "en": "Bush Crab",
+      "zh": "灌木丛蟹"
     },
     "cactus_flower": {
       "en": "Cactus Flower",
@@ -8631,13 +8747,45 @@
       "en": "Walking Cane",
       "zh": "步行手杖"
     },
+    "cannonball_sludge": {
+      "en": "Crude Cannonball",
+      "zh": "海泥炮弹"
+    },
     "cannonball_sludge_item": {
       "en": "Crude Cannonball",
       "zh": "海泥炮弹"
     },
+    "carapacecooler": {
+      "en": "Carapace Cooler",
+      "zh": "甲壳冷却器"
+    },
+    "carrot_seeds": {
+      "en": "Oblong Seeds",
+      "zh": "椭圆形种子"
+    },
     "catcoonhat": {
       "en": "Cat Cap",
       "zh": "猫帽"
+    },
+    "cave_banana": {
+      "en": "Banana",
+      "zh": "香蕉"
+    },
+    "cave_entrance_magmabiome": {
+      "en": "cave_entrance_magmabiome",
+      "zh": "岩石"
+    },
+    "cave_entrance_moon": {
+      "en": "cave_entrance_moon",
+      "zh": null
+    },
+    "cave_entrance_open_magmabiome": {
+      "en": "Warm Sinkhole",
+      "zh": "温暖洞穴"
+    },
+    "cave_exit_magmabiome": {
+      "en": "Humid Stairs",
+      "zh": "湿热楼梯"
     },
     "cave_vent_mite": {
       "en": "Geothermite",
@@ -8647,9 +8795,37 @@
       "en": "Charcoal",
       "zh": "木炭"
     },
+    "charles_t_horse": {
+      "en": "Broken Toy",
+      "zh": "破旧玩具"
+    },
+    "charliephonograph_100": {
+      "en": "Gramaphone",
+      "zh": "留声机"
+    },
+    "cherrybulletbee": {
+      "en": "Bullet Hibeescus",
+      "zh": "子弹蜂"
+    },
     "chestupgrade_stacksize": {
       "en": "Elastispacer",
       "zh": "弹性空间制造器"
+    },
+    "chimp": {
+      "en": "Random Chimp",
+      "zh": "猴子"
+    },
+    "codex_mantra": {
+      "en": "Codex Mantra",
+      "zh": "旧·暗影秘典"
+    },
+    "cookedmonstersmallmeat": {
+      "en": "Cooked Monster Morsel",
+      "zh": "烤小怪物肉"
+    },
+    "cookedsmallmeat": {
+      "en": "Cooked Morsel",
+      "zh": "熟小肉"
     },
     "cookpot": {
       "en": "Crock Pot",
@@ -8659,13 +8835,41 @@
       "en": "Cat Tail",
       "zh": "猫尾"
     },
+    "corn_seeds": {
+      "en": "Clustered Seeds",
+      "zh": "簇状种子"
+    },
+    "corncan": {
+      "en": "Canned Corn",
+      "zh": "玉米罐头"
+    },
+    "crabclaw": {
+      "en": "Crab Claw",
+      "zh": "诅咒蟹钳"
+    },
     "crabking": {
       "en": "Crab King",
       "zh": "帝王蟹"
     },
+    "creepingfear": {
+      "en": "Creeping Fear",
+      "zh": "潜伏恐惧"
+    },
+    "critter_figgy": {
+      "en": "Figgy",
+      "zh": "小蚜虫"
+    },
     "critter_figgy_builder": {
       "en": "Figgy",
       "zh": "小蚜虫"
+    },
+    "critterlab_real": {
+      "en": "Rock Den",
+      "zh": "岩石巢穴"
+    },
+    "critterlab_real_broken": {
+      "en": "Broken Rock Den",
+      "zh": "破碎的岩石巢穴"
     },
     "crystal_cursed_antler": {
       "en": "Crystal Cursed Antler",
@@ -8695,17 +8899,37 @@
       "en": "Deerclops",
       "zh": "独眼巨鹿"
     },
+    "deerclops_barrier": {
+      "en": "Glacial Wall",
+      "zh": "冰墙"
+    },
     "deerclops_eyeball": {
       "en": "Deerclops Eyeball",
       "zh": "独眼巨鹿眼球"
+    },
+    "diseasecurebomb": {
+      "en": "Moon Oil",
+      "zh": "月油"
     },
     "dormant_rain_horn": {
       "en": "Dormant Conch",
       "zh": "休眠海螺"
     },
+    "dragon_scales": {
+      "en": "Scales",
+      "zh": "鳞片"
+    },
     "dragonfly": {
       "en": "Dragonfly",
       "zh": "龙蝇"
+    },
+    "dragonfruit_seeds": {
+      "en": "Bulbous Seeds",
+      "zh": "球茎状种子"
+    },
+    "dreadeye": {
+      "en": "Dread Eye",
+      "zh": "恐惧之眼"
     },
     "dreadstone": {
       "en": "Dreadstone",
@@ -8719,6 +8943,26 @@
       "en": "Driftwood Fishing Rod",
       "zh": "浮木钓杆"
     },
+    "dug_grass": {
+      "en": "Grass Tuft",
+      "zh": "草丛"
+    },
+    "durian_seeds": {
+      "en": "Brittle Seed Pods",
+      "zh": "脆籽荚"
+    },
+    "eggplant_seeds": {
+      "en": "Swirly Seeds",
+      "zh": "漩涡种子"
+    },
+    "eyeofterror_mini_ally": {
+      "en": "Hardy Peeper",
+      "zh": "无畏窥视者"
+    },
+    "eyeofterror_mini_grounded_ally": {
+      "en": "Hardy \"Egg\"",
+      "zh": "恐怖的蛋"
+    },
     "eyeturret_item": {
       "en": "Houndius Shootius",
       "zh": "眼睛炮塔"
@@ -8726,6 +8970,18 @@
     "feather_canary": {
       "en": "Saffron Feather",
       "zh": "黄色羽毛"
+    },
+    "feather_crow": {
+      "en": "Jet Feather",
+      "zh": "黑色羽毛"
+    },
+    "feather_frock": {
+      "en": "Feather Frock",
+      "zh": "羽毛长袍"
+    },
+    "feather_robin": {
+      "en": "Crimson Feather",
+      "zh": "红色羽毛"
     },
     "feather_robin_winter": {
       "en": "Azure Feather",
@@ -8747,6 +9003,18 @@
       "en": "Dried Fire Nettle Frond",
       "zh": "干火荨麻叶"
     },
+    "firestaff": {
+      "en": "Fire Staff",
+      "zh": "火魔杖"
+    },
+    "fishmeat_small": {
+      "en": "Fish Morsel",
+      "zh": "小鱼块"
+    },
+    "flint": {
+      "en": "Flint",
+      "zh": "燧石"
+    },
     "floral_bandage": {
       "en": "Sweetflower Wrap",
       "zh": "夏花绷带"
@@ -8755,6 +9023,10 @@
       "en": "Fossil Fragments",
       "zh": "化石碎片"
     },
+    "frog": {
+      "en": "Frog",
+      "zh": "青蛙"
+    },
     "froglegs": {
       "en": "Frog Legs",
       "zh": "蛙腿"
@@ -8762,6 +9034,26 @@
     "fruitbat": {
       "en": "Fruit Bat",
       "zh": "果蝠"
+    },
+    "fuelseeker": {
+      "en": "Fuel Seeker",
+      "zh": "燃料搜寻器"
+    },
+    "furtuft": {
+      "en": "Fur Tuft",
+      "zh": "毛丛"
+    },
+    "fyriterock": {
+      "en": "Pyrite Outcropping",
+      "zh": "黄铁矿矿簇"
+    },
+    "garbagepatchflotsam": {
+      "en": "Storm Debris",
+      "zh": "风暴碎片"
+    },
+    "garlic_seeds": {
+      "en": "Seed Pods",
+      "zh": "种子荚"
     },
     "gasmask": {
       "en": "Goose Mask",
@@ -8775,9 +9067,21 @@
       "en": "Boomberry",
       "zh": "爆汁蓝莓"
     },
+    "giant_tree": {
+      "en": "Giant Redwood",
+      "zh": "巨型红杉"
+    },
+    "giant_tree_birdnest": {
+      "en": "Nest",
+      "zh": "鸟巢"
+    },
     "glacialhound": {
       "en": "Glacial Varglet",
       "zh": "冰川青年座狼"
+    },
+    "glacialhound_icespike": {
+      "en": "Ice Spike",
+      "zh": "冰刺"
     },
     "glass_scales": {
       "en": "Enlightened Scales",
@@ -8786,6 +9090,14 @@
     "glommerfuel": {
       "en": "Glommer's Goop",
       "zh": "格罗姆的黏液"
+    },
+    "gloomcap": {
+      "en": "Dusk Cap",
+      "zh": "幽暗蘑菇"
+    },
+    "gloomcap_cooked": {
+      "en": "Cooked Dusk Cap",
+      "zh": "熟幽暗蘑菇"
     },
     "goggleshat": {
       "en": "Fashion Goggles",
@@ -8815,6 +9127,10 @@
       "en": "Construction Amulet",
       "zh": "建造护符"
     },
+    "greenfoliage": {
+      "en": "Hooded Foliage",
+      "zh": "森林蕨叶"
+    },
     "greengem": {
       "en": "Green Gem",
       "zh": "绿宝石"
@@ -8827,9 +9143,109 @@
       "en": "Deconstruction Staff",
       "zh": "拆解魔杖"
     },
+    "hat_bagmask": {
+      "en": "Paper Bag",
+      "zh": "纸袋"
+    },
+    "hat_blackcatmask": {
+      "en": "Black Cat Mask",
+      "zh": "黑猫面具"
+    },
+    "hat_clownmask": {
+      "en": "Clown Mask",
+      "zh": "小丑面具"
+    },
+    "hat_crab": {
+      "en": "Crab Crown",
+      "zh": "蟹王冠"
+    },
+    "hat_crab_ice": {
+      "en": "Frigid Crown",
+      "zh": "严寒皇冠"
+    },
+    "hat_devilmask": {
+      "en": "Devil Mask",
+      "zh": "红面恶魔面具"
+    },
+    "hat_fiendmask": {
+      "en": "Fiend Mask",
+      "zh": "紫面恶魔面具"
+    },
+    "hat_ghostmask": {
+      "en": "Ghost Mask",
+      "zh": "橙眼鬼魂面具"
+    },
+    "hat_globmask": {
+      "en": "Glob Mask",
+      "zh": "绿水鬼面具"
+    },
+    "hat_hockeymask": {
+      "en": "Hockey Mask",
+      "zh": "撕裂面具"
+    },
+    "hat_joyousmask": {
+      "en": "Joyous Mask",
+      "zh": "大笑面具"
+    },
+    "hat_mandrakemask": {
+      "en": "Mandrake Mask",
+      "zh": "蔓草面具"
+    },
+    "hat_mermmask": {
+      "en": "Merm Mask",
+      "zh": "鱼人面具"
+    },
+    "hat_oozemask": {
+      "en": "Ooze Mask",
+      "zh": "紫水鬼面具"
+    },
+    "hat_opossummask": {
+      "en": "Opossum Mask",
+      "zh": "负鼠面具"
+    },
+    "hat_orangecatmask": {
+      "en": "Orange Cat Mask",
+      "zh": "黄猫面具"
+    },
+    "hat_phantommask": {
+      "en": "Phantom Mask",
+      "zh": "紫眼鬼魂面具"
+    },
+    "hat_pigmask": {
+      "en": "Pig Mask",
+      "zh": "猪人面具"
+    },
+    "hat_pumpgoremask": {
+      "en": "Pumpgore Mask",
+      "zh": "南瓜面具"
+    },
     "hat_ratmask": {
       "en": "Rat Mask",
       "zh": "老鼠面具"
+    },
+    "hat_redskullmask": {
+      "en": "Red Skull Mask",
+      "zh": "红骷髅面具"
+    },
+    "hat_skullmask": {
+      "en": "Skull Mask",
+      "zh": "白骷髅面具"
+    },
+    "hat_spectremask": {
+      "en": "Spectre Mask",
+      "zh": "青眼鬼魂面具"
+    },
+    "hat_technomask": {
+      "en": "Techno-Tronic Mask",
+      "zh": "机械面具"
+    },
+    "hat_wathommask": {
+      "en": "Creature Mask",
+      "zh": "怪物面具"
+    },
+    "hat_whitecatmask": {
+      "en": "White Cat Mask",
+      "zh": "白猫面具"
     },
     "hermit_bundle_lures": {
       "en": "Lure Bundle",
@@ -8903,9 +9319,17 @@
       "en": "Honey Log Roll",
       "zh": "蜂蜜原木卷"
     },
+    "honeycomb": {
+      "en": "Honeycomb",
+      "zh": "蜜脾"
+    },
     "hooded_fern": {
       "en": "Thicket",
       "zh": "高齿蕨"
+    },
+    "hoodedtrapdoor": {
+      "en": "Flat Stone",
+      "zh": "活动石板"
     },
     "hoodedwidow": {
       "en": "Hooded Widow",
@@ -8915,6 +9339,10 @@
       "en": "Pure Horror",
       "zh": "纯粹恐惧"
     },
+    "hound_lightning": {
+      "en": "Supercharged Lightning",
+      "zh": "超级闪电"
+    },
     "houndstooth": {
       "en": "Hound's Tooth",
       "zh": "犬牙"
@@ -8922,6 +9350,10 @@
     "ice": {
       "en": "Ice",
       "zh": "冰"
+    },
+    "iceboomerang": {
+      "en": "Frozen Pincer",
+      "zh": "冰冻回旋镖"
     },
     "icestaff": {
       "en": "Ice Staff",
@@ -8939,17 +9371,53 @@
       "en": "Jawed Scythe",
       "zh": "颚镰"
     },
+    "kaleidoscope": {
+      "en": "Kaleidoscope",
+      "zh": "万花筒"
+    },
     "kelp": {
       "en": "Kelp Fronds",
       "zh": "海带叶"
+    },
+    "kelpstack": {
+      "en": "Kelpy Seastack",
+      "zh": "海带海蚀柱"
     },
     "klaus": {
       "en": "Klaus",
       "zh": "克劳斯"
     },
+    "klaus_amulet": {
+      "en": "Naught Lock",
+      "zh": "无锁"
+    },
+    "knook": {
+      "en": "Automaton Abomination",
+      "zh": "自走噩兆"
+    },
+    "lava_pond": {
+      "en": "Magma",
+      "zh": "岩浆池"
+    },
+    "lavaeslime": {
+      "en": "Lavae Slime",
+      "zh": "岩浆虫黏液"
+    },
+    "leechswarm": {
+      "en": "Leech Swarm",
+      "zh": "花粉螨"
+    },
+    "lighter": {
+      "en": "Willow's Lighter",
+      "zh": "薇洛的打火机"
+    },
     "lightninggoathorn": {
       "en": "Volt Goat Horn",
       "zh": "伏特羊角"
+    },
+    "lightninghound": {
+      "en": "Lightning Hound",
+      "zh": "闪电猎犬"
     },
     "livinglog": {
       "en": "Living Log",
@@ -8963,6 +9431,22 @@
       "en": "Brightshade Husk",
       "zh": "亮茄外壳"
     },
+    "lureplague_rat": {
+      "en": "Lureplague Rat",
+      "zh": "腐败鼠"
+    },
+    "magmabone": {
+      "en": "Bones",
+      "zh": "骸骨"
+    },
+    "magmahound": {
+      "en": "Magma Varglet",
+      "zh": "熔岩青年座狼"
+    },
+    "magmarock1": {
+      "en": "Rock",
+      "zh": "岩石"
+    },
     "malbatross_feather": {
       "en": "Malbatross Feather",
       "zh": "邪天翁羽毛"
@@ -8971,33 +9455,97 @@
       "en": "Mandrake",
       "zh": "曼德拉草"
     },
+    "mara_boss1": {
+      "en": "Sans Undertale From The Hit Series Super Smash Brothers (Featuring Minecraft Steve) [& Knuckles]",
+      "zh": "《传说之下》中的Sans，来自热门系列《任天堂明星大乱斗》（以《我的世界》Steve为特色）[& Knuckles]"
+    },
+    "mara_boss1_bullets": {
+      "en": "a bad time",
+      "zh": "糟糕的时间"
+    },
     "marble": {
       "en": "Marble",
       "zh": "大理石"
+    },
+    "marsh_grass": {
+      "en": "Marsh Bush",
+      "zh": "沼泽灌木"
     },
     "mast_item": {
       "en": "Mast Kit",
       "zh": "桅杆套装"
     },
+    "mastupgrade_windturbine": {
+      "en": "Wind Turbine",
+      "zh": "风力照明灯"
+    },
     "mastupgrade_windturbine_item": {
       "en": "Wind Turbine",
       "zh": "风力涡轮灯台"
+    },
+    "meat": {
+      "en": "Meat",
+      "zh": "肉"
+    },
+    "meatrack": {
+      "en": "Drying Rack",
+      "zh": "晾肉架"
     },
     "meatrack_hat": {
       "en": "Jerky Hat",
       "zh": "风干帽"
     },
+    "meatrack_hermit": {
+      "en": "Drying Rack",
+      "zh": "晾肉架"
+    },
+    "meatrack_hermit_multi": {
+      "en": "Large Drying Rack",
+      "zh": "晾肉巨架"
+    },
     "messagebottleempty": {
       "en": "Empty Bottle",
       "zh": "空瓶子"
+    },
+    "mindweaver": {
+      "en": "Mind Weaver",
+      "zh": "心灵编织者"
+    },
+    "mini_dreadeye": {
+      "en": "Shadow Eye",
+      "zh": "暗影之眼"
     },
     "minotaur": {
       "en": "Ancient Guardian",
       "zh": "远古守护者"
     },
+    "minotaur_boulder": {
+      "en": "Ancient Stone Slab",
+      "zh": "远古石板"
+    },
+    "minotaur_boulder_big": {
+      "en": "Giant Stone Slab",
+      "zh": "巨型远古石板"
+    },
+    "minotaur_organ": {
+      "en": "Organ",
+      "zh": "暗影心脏"
+    },
     "minotaurhorn": {
       "en": "Guardian's Horn",
       "zh": "守护者之角"
+    },
+    "mitegland": {
+      "en": "Heat Gland",
+      "zh": "火腺"
+    },
+    "mock_dragonfly": {
+      "en": "Wilting Dragonfly",
+      "zh": "时令龙蝇"
+    },
+    "molebat": {
+      "en": "Naked Mole Bat",
+      "zh": "裸鼹蝠"
     },
     "monstermeat": {
       "en": "Monster Meat",
@@ -9011,6 +9559,30 @@
       "en": "Small Monster Jerky",
       "zh": "小怪物肉干"
     },
+    "moon_altar_cosmic": {
+      "en": "Celestial Tribute",
+      "zh": "天体贡品"
+    },
+    "moon_beacon": {
+      "en": "Moon Beacon",
+      "zh": "月亮信标"
+    },
+    "moon_cap": {
+      "en": "Moon Shroom",
+      "zh": "月亮蘑菇"
+    },
+    "moon_cap_cooked": {
+      "en": "Cooked Moon Shroom",
+      "zh": "熟月亮蘑菇"
+    },
+    "moon_tear": {
+      "en": "Moon Tear",
+      "zh": "月泪"
+    },
+    "moonfall_proj": {
+      "en": "Shooting Star",
+      "zh": "流星"
+    },
     "moonglass": {
       "en": "Moon Shard",
       "zh": "月亮碎片"
@@ -9018,6 +9590,26 @@
     "moonglass_charged": {
       "en": "Infused Moon Shard",
       "zh": "注能月亮碎片"
+    },
+    "moonglass_geode": {
+      "en": "Inert Infused Moon Chunk",
+      "zh": "注能的玻璃碎片"
+    },
+    "moonglow": {
+      "en": "Moonglow",
+      "zh": "月光"
+    },
+    "moonmaw_dragonfly": {
+      "en": "Moonmaw Dragonfly",
+      "zh": "月光龙蝇"
+    },
+    "moonmaw_glass": {
+      "en": "Unstable Moon Glass",
+      "zh": "不稳定的玻璃块"
+    },
+    "moonmaw_lavae": {
+      "en": "Glass Lavae",
+      "zh": "玻璃岩浆虫"
     },
     "moonrocknugget": {
       "en": "Moon Rock",
@@ -9039,9 +9631,25 @@
       "en": "Mosquito Sack",
       "zh": "蚊子血囊"
     },
+    "mossstack": {
+      "en": "Mossy Seastack",
+      "zh": "苔藓海蚀柱"
+    },
+    "mound": {
+      "en": "Grave",
+      "zh": "坟墓"
+    },
     "multitool_axe_pickaxe": {
       "en": "Pick/Axe",
       "zh": "多用斧镐"
+    },
+    "mushtree_shadow": {
+      "en": "Gloom Shroom",
+      "zh": "幽暗蘑菇"
+    },
+    "mutateddeerclops": {
+      "en": "Crystal Deerclops",
+      "zh": "晶体独眼巨鹿"
     },
     "mutator_trapdoor": {
       "en": "Trapdoor Switcherdoodle",
@@ -9050,6 +9658,14 @@
     "mutator_trapdoor_hooded": {
       "en": "Hooded Widower Switcherdoodle",
       "zh": "罩面寡蛛诱变糕"
+    },
+    "nervoustick": {
+      "en": "Nervous Tick",
+      "zh": "神经蜱"
+    },
+    "nervoustickden": {
+      "en": "Heart of the Swarm",
+      "zh": "虫群心脏"
     },
     "nightmare_timepiece": {
       "en": "Thulecite Medallion",
@@ -9075,21 +9691,57 @@
       "en": "Battle Paddle",
       "zh": "战桨"
     },
+    "oasislake": {
+      "en": "Lake",
+      "zh": "湖泊"
+    },
     "obsidian": {
       "en": "obsidian",
       "zh": null
+    },
+    "ocean_speaker": {
+      "en": "Dilapidated Speaker",
+      "zh": "破旧的扬声器"
     },
     "oceanfish_small_9_inv": {
       "en": "Spittlefish",
       "zh": "口水鱼"
     },
+    "oculet": {
+      "en": "Oculet",
+      "zh": "双子护符"
+    },
+    "oculet_rez": {
+      "en": "Rez",
+      "zh": "激光眼宠物"
+    },
+    "oculet_spaz": {
+      "en": "Spaz",
+      "zh": "魔焰眼宠物"
+    },
     "ocupus_beak": {
       "en": "Ocupus Beak",
       "zh": "多目章鱼喙"
     },
+    "ocupus_tentacle": {
+      "en": "Ocupus Tentacle",
+      "zh": "多目章鱼触手"
+    },
+    "ocupus_tentacle_cooked": {
+      "en": "Cooked Tentacle",
+      "zh": "熟触手"
+    },
     "ocupus_tentacle_eye": {
       "en": "Ocupus Eye",
       "zh": "多目章鱼眼球"
+    },
+    "onion_seeds": {
+      "en": "Pointy Seeds",
+      "zh": "尖形种子"
+    },
+    "opalpreciousgem": {
+      "en": "Iridescent Gem",
+      "zh": "彩虹宝石"
     },
     "orangeamulet": {
       "en": "The Lazy Forager",
@@ -9103,6 +9755,14 @@
       "en": "The Lazy Explorer",
       "zh": "懒人魔杖"
     },
+    "pact_armor_sanity": {
+      "en": "pact_armor_sanity",
+      "zh": "暗夜契约甲"
+    },
+    "pact_sword_sanity": {
+      "en": "pact_sword_sanity",
+      "zh": "暗夜契约剑"
+    },
     "palmcone_scale": {
       "en": "Palmcone Scale",
       "zh": "棕榈松果树鳞片"
@@ -9111,9 +9771,37 @@
       "en": "Papyrus",
       "zh": "莎草纸"
     },
+    "pepper": {
+      "en": "Pepper",
+      "zh": "辣椒"
+    },
+    "pepper_seeds": {
+      "en": "Lumpy Seeds",
+      "zh": "块状种子"
+    },
+    "phantom": {
+      "en": "Phantom",
+      "zh": "鬼魂"
+    },
+    "pied_piper_flute": {
+      "en": "Pied Piper's Pipe",
+      "zh": "鼠笛"
+    },
+    "pied_rat": {
+      "en": "Pied Piper",
+      "zh": "花衣吹笛者"
+    },
     "pigskin": {
       "en": "Pig Skin",
       "zh": "猪皮"
+    },
+    "pinepile": {
+      "en": "Needle Pile",
+      "zh": "树枝堆"
+    },
+    "pitcherplant": {
+      "en": "Pitcherplant",
+      "zh": "猪笼草"
     },
     "placeholder_ingredient_ia": {
       "en": "Requires Island Adventures!",
@@ -9123,6 +9811,10 @@
       "en": "Plague Mask",
       "zh": "瘟疫面具"
     },
+    "plantmeat": {
+      "en": "Leafy Meat",
+      "zh": "叶肉"
+    },
     "plantregistryhat": {
       "en": "Gardeneer Hat",
       "zh": "耕作先驱帽"
@@ -9131,13 +9823,49 @@
       "en": "Houndious Observious",
       "zh": "汪汪警戒娃娃"
     },
+    "pollenmiteden": {
+      "en": "Pollen Mite Den",
+      "zh": "花粉螨巢穴"
+    },
+    "pollenmites": {
+      "en": "Pollen Mites",
+      "zh": "花粉螨"
+    },
+    "pomegranate_seeds": {
+      "en": "Windblown Seeds",
+      "zh": "风刮来的种子"
+    },
+    "pond": {
+      "en": "Pond",
+      "zh": "池塘"
+    },
+    "pond_cave": {
+      "en": "Pond",
+      "zh": "池塘"
+    },
+    "portableboat": {
+      "en": "Portable Raft",
+      "zh": "气垫船套装"
+    },
     "portableboat_item": {
       "en": "Portable Raft",
       "zh": "气垫船套装"
     },
+    "portableboat_ripcord": {
+      "en": "Portable Raft Plug",
+      "zh": "气垫船插头"
+    },
+    "potato_seeds": {
+      "en": "Fluffy Seeds",
+      "zh": "毛茸茸的种子"
+    },
     "powercell": {
       "en": "Energy Cell",
       "zh": "蓄电池"
+    },
+    "pumpkin_seeds": {
+      "en": "Sharp Seeds",
+      "zh": "尖种子"
     },
     "pumpkincookie": {
       "en": "Pumpkin Cookies",
@@ -9167,6 +9895,10 @@
       "en": "Tail o' Twined Rats",
       "zh": "绞尾鼠鞭"
     },
+    "ratpoison": {
+      "en": "Poison Jam",
+      "zh": "毒果酱陷阱"
+    },
     "ratpoisonbottle": {
       "en": "Poison Jam",
       "zh": "毒果酱"
@@ -9183,13 +9915,97 @@
       "en": "Red Gem",
       "zh": "红宝石"
     },
+    "researchlab": {
+      "en": "Science Machine",
+      "zh": "科学机器"
+    },
+    "researchlab2": {
+      "en": "Alchemy Engine",
+      "zh": "炼金引擎"
+    },
+    "researchlab3": {
+      "en": "Shadow Manipulator",
+      "zh": "暗影操控器"
+    },
+    "rice": {
+      "en": "rice",
+      "zh": null
+    },
+    "rice1": {
+      "en": "Rice Grains",
+      "zh": "稻米"
+    },
+    "rice_cooked": {
+      "en": "rice_cooked",
+      "zh": null
+    },
+    "rice_cooked1": {
+      "en": "Burnt Rice",
+      "zh": "烤稻米"
+    },
     "riceplant": {
       "en": "riceplant",
       "zh": null
     },
+    "riceplant1": {
+      "en": "Rice",
+      "zh": "水稻"
+    },
+    "rimeweed_barrier": {
+      "en": "Rimeweed Bramble",
+      "zh": "霜草荆棘"
+    },
     "rimeweed_main": {
       "en": "Spiny Rimeweed",
       "zh": "尖刺霜草"
+    },
+    "rimeweed_whip": {
+      "en": "Rime Lash",
+      "zh": "霜鞭"
+    },
+    "rne_goodiebag": {
+      "en": "Goodie Bag",
+      "zh": "零食袋"
+    },
+    "rne_grabbyshadows": {
+      "en": "Grasping Fear",
+      "zh": "暗影吊手"
+    },
+    "rneghost": {
+      "en": "Fire Stealer",
+      "zh": "游魂"
+    },
+    "rnehound": {
+      "en": "Umbral Hound",
+      "zh": "暗影猎犬"
+    },
+    "rnemushroombomb": {
+      "en": "Boomshroom",
+      "zh": "爆菇"
+    },
+    "rneskeleton": {
+      "en": "Skeleton",
+      "zh": "骷髅士兵"
+    },
+    "rock1": {
+      "en": "Boulder",
+      "zh": "岩石"
+    },
+    "rock2": {
+      "en": "Boulder",
+      "zh": "岩石"
+    },
+    "rock_flintless": {
+      "en": "Boulder",
+      "zh": "岩石"
+    },
+    "rock_lichen": {
+      "en": "Marble Melon",
+      "zh": "大理石地衣"
+    },
+    "rock_moon": {
+      "en": "Boulder",
+      "zh": "岩石"
     },
     "rockjawleather": {
       "en": "Rocky Hide",
@@ -9207,9 +10023,29 @@
       "en": "Rope",
       "zh": "绳子"
     },
+    "roship": {
+      "en": "Mechanical Monstrosity",
+      "zh": "啮合巨炮"
+    },
+    "rottenegg": {
+      "en": "Rotten Egg",
+      "zh": "腐烂鸟蛋"
+    },
+    "royal_jelly": {
+      "en": "Royal Jelly",
+      "zh": "蜂王浆"
+    },
+    "rr_powerline": {
+      "en": "Powerline",
+      "zh": "电力线"
+    },
     "ruins_bat": {
       "en": "Thulecite Club",
       "zh": "铥矿棒"
+    },
+    "ruins_statue_miner": {
+      "en": "ruins_statue_miner",
+      "zh": null
     },
     "ruinshat": {
       "en": "Thulecite Crown",
@@ -9227,9 +10063,17 @@
       "en": "Horizon Expandinator",
       "zh": "视界扩展器"
     },
+    "screecher_trinket": {
+      "en": "Lost Doll",
+      "zh": "蝙蝠玩偶"
+    },
     "seafoodpaella": {
       "en": "Seafood Paella",
       "zh": "海鲜饭"
+    },
+    "searock_ring": {
+      "en": "Sea Stack",
+      "zh": "海蚀柱"
     },
     "seeds": {
       "en": "Seeds",
@@ -9243,13 +10087,37 @@
       "en": "Trusty Tape",
       "zh": "可靠的胶布"
     },
+    "shadow_crown": {
+      "en": "Shadow Crown",
+      "zh": "暗影王冠"
+    },
     "shadow_forge_kit": {
       "en": "Shadowcraft Plinth Kit",
       "zh": "暗影术基座套装"
     },
+    "shadow_goo": {
+      "en": "Shadow Ink",
+      "zh": "暗影墨水"
+    },
     "shadow_knight": {
       "en": "Shadow Knight",
       "zh": "暗影骑士"
+    },
+    "shadow_teleporter": {
+      "en": "Grasping Shadow",
+      "zh": "暗影爪"
+    },
+    "shadow_wixie": {
+      "en": "Wixie?",
+      "zh": "薇希"
+    },
+    "shadow_wixie_helper": {
+      "en": "Wixie?",
+      "zh": "暗影薇希"
+    },
+    "shadowvortex": {
+      "en": "Shadow Vortex",
+      "zh": "暗影漩涡"
     },
     "shockworm": {
       "en": "Depths Eel",
@@ -9267,13 +10135,37 @@
       "en": "Silk",
       "zh": "蜘蛛丝"
     },
+    "silken_bundle": {
+      "en": "Webbed Supplies",
+      "zh": "蛛丝捆绑物资"
+    },
     "silksack": {
       "en": "Silken Sack",
       "zh": "蛛丝背包"
     },
+    "siren_bird_nest": {
+      "en": "Nested Sea Stack",
+      "zh": "筑巢的海蚀柱"
+    },
+    "siren_throne": {
+      "en": "Sirens Throne",
+      "zh": "海妖王座"
+    },
+    "skeletonmeat": {
+      "en": "Long Pig",
+      "zh": "长猪肉干"
+    },
     "skullchest_child": {
       "en": "Skull Chest",
       "zh": "骷髅箱"
+    },
+    "skullflask": {
+      "en": "Skull Flask",
+      "zh": "头骨酒瓶"
+    },
+    "skullflask_empty": {
+      "en": "Empty Skull Flask",
+      "zh": "空头骨酒瓶"
     },
     "slingshot_claire": {
       "en": "Claire",
@@ -9303,9 +10195,21 @@
       "en": "Gloop Rounds",
       "zh": "粘液弹药"
     },
+    "slingshotammo_insanity": {
+      "en": "Insanity Rounds",
+      "zh": "疯狂弹药"
+    },
     "slingshotammo_lazy": {
       "en": "Lazy Prankster Rounds",
       "zh": "替身弹药"
+    },
+    "slingshotammo_limestone": {
+      "en": "Crust Cookie Rounds",
+      "zh": "海泥弹药"
+    },
+    "slingshotammo_lunarvine": {
+      "en": "Lunarvine Rounds",
+      "zh": "新月弹药"
     },
     "slingshotammo_marble": {
       "en": "Marbles",
@@ -9351,6 +10255,10 @@
       "en": "Tremor Rounds",
       "zh": "沙石弹药"
     },
+    "slobberlobber": {
+      "en": "Slobber Lobber",
+      "zh": "熔岩口器"
+    },
     "sludge": {
       "en": "Sea Sludge",
       "zh": "海泥"
@@ -9367,6 +10275,10 @@
       "en": "Sludge Sack",
       "zh": "海泥包"
     },
+    "sludgestack": {
+      "en": "Thermal Vent",
+      "zh": "海泥喷孔"
+    },
     "slurper_pelt": {
       "en": "Slurper Pelt",
       "zh": "啜食者皮"
@@ -9375,17 +10287,57 @@
       "en": "Slurtle",
       "zh": "蛞蝓龟"
     },
+    "slurtle_shellpieces": {
+      "en": "Broken Shell",
+      "zh": "外壳碎片"
+    },
     "slurtleslime": {
       "en": "Slurtle Slime",
       "zh": "蛞蝓龟黏液"
+    },
+    "smallmeat": {
+      "en": "Morsel",
+      "zh": "小肉"
+    },
+    "smog": {
+      "en": "suffocation",
+      "zh": "窒息"
+    },
+    "snaildrake_hole": {
+      "en": "Crevasse",
+      "zh": "裂缝"
     },
     "snaildrake_magma": {
       "en": "Snaildrake",
       "zh": "蜗龙"
     },
+    "snaildrake_slime": {
+      "en": "Snaildrake",
+      "zh": "蜗龙"
+    },
+    "snaildrakebucket": {
+      "en": "Snaildrake Basin",
+      "zh": "蜗龙盆"
+    },
     "snaildrakehat": {
       "en": "Snaily Horned Helm",
       "zh": "蜗龙角盔"
+    },
+    "snapalm": {
+      "en": "Snapalm",
+      "zh": "爆燃黏液"
+    },
+    "snapperturtle": {
+      "en": "Snapper Turtle",
+      "zh": "乌龟"
+    },
+    "snapperturtlebaby": {
+      "en": "Whippersnapper Turtle",
+      "zh": "乌龟宝宝"
+    },
+    "snapperturtlenest": {
+      "en": "Nest",
+      "zh": "乌龟巢穴"
     },
     "snappy_jaw": {
       "en": "Snappy Jaw",
@@ -9407,6 +10359,10 @@
       "en": "Abominamole",
       "zh": "雪怪"
     },
+    "snowpile": {
+      "en": "Snow Pile",
+      "zh": "雪堆"
+    },
     "spear": {
       "en": "Spear",
       "zh": "长矛"
@@ -9414,6 +10370,18 @@
     "spear_wathgrithr_lightning": {
       "en": "Elding Spear",
       "zh": "奔雷矛"
+    },
+    "specter_shipwreck": {
+      "en": "Abandoned Shipwreck",
+      "zh": "废弃的沉船"
+    },
+    "spice_chili": {
+      "en": "Chili Flakes",
+      "zh": "辣椒碎"
+    },
+    "spider": {
+      "en": "Spider",
+      "zh": "蜘蛛"
     },
     "spider_trapdoor": {
       "en": "Trapdoor Spider",
@@ -9431,25 +10399,85 @@
       "en": "Rot",
       "zh": "腐烂物"
     },
+    "sporecloud_toad": {
+      "en": "Spore Cloud",
+      "zh": "孢子云"
+    },
+    "sporehound": {
+      "en": "Spore Hound",
+      "zh": "孢子猎犬"
+    },
     "sporepack": {
       "en": "Spore Pack",
       "zh": "蟾蜍背包"
+    },
+    "springrock1": {
+      "en": "Boulder",
+      "zh": "岩石"
+    },
+    "springrock2": {
+      "en": "Boulder",
+      "zh": "岩石"
+    },
+    "springrock3": {
+      "en": "Boulder",
+      "zh": "岩石"
+    },
+    "staff_moonfall": {
+      "en": "Moonfall Staff",
+      "zh": "月陨法杖"
+    },
+    "staff_starfall": {
+      "en": "Starfall Staff",
+      "zh": "星陨法杖"
     },
     "stalker_atrium": {
       "en": "Ancient Fuelweaver",
       "zh": "远古织影者"
     },
+    "stanton": {
+      "en": "Skelton Cree",
+      "zh": "骷髅克里"
+    },
+    "stanton_shadow_tonic": {
+      "en": "Shadow Tonic",
+      "zh": "暗影气泡酒"
+    },
     "steelwool": {
       "en": "Steel Wool",
       "zh": "钢丝绵"
+    },
+    "steeringwheel_copper": {
+      "en": "Copper Steering Wheel",
+      "zh": "铜方向盘"
     },
     "steeringwheel_item": {
       "en": "Steering Wheel Kit",
       "zh": "方向舵套装"
     },
+    "stinger": {
+      "en": "Stinger",
+      "zh": "针刺"
+    },
     "stuffed_peeper_poppers": {
       "en": "Stuffed Peeper Poppers",
       "zh": "榴莲酿眼球"
+    },
+    "stumpling": {
+      "en": "Pineling",
+      "zh": "松树树桩怪"
+    },
+    "sunglasses": {
+      "en": "Sunglasses",
+      "zh": "太阳镜"
+    },
+    "swathgrithr": {
+      "en": "Wigfrid?",
+      "zh": "薇格弗德？"
+    },
+    "swilson": {
+      "en": "Wilson?",
+      "zh": "威尔逊？"
     },
     "the_real_charles_t_horse": {
       "en": "Charles T. Horse",
@@ -9467,6 +10495,14 @@
       "en": "Toadstool",
       "zh": "毒菌蟾蜍"
     },
+    "tomato_seeds": {
+      "en": "Spiky Seeds",
+      "zh": "带刺的种子"
+    },
+    "torch": {
+      "en": "Torch",
+      "zh": "火炬"
+    },
     "townportaltalisman": {
       "en": "Desert Stone",
       "zh": "沙之石"
@@ -9482,6 +10518,18 @@
     "transmute_monstersmallmeat": {
       "en": "transmute_monstersmallmeat",
       "zh": null
+    },
+    "trapdoor": {
+      "en": "Inconspicuous Mound",
+      "zh": "不起眼的土丘"
+    },
+    "trapdoorgrass": {
+      "en": "Wide Grass",
+      "zh": "茂密草丛"
+    },
+    "trinket_wathom1": {
+      "en": "Busted Inhaler",
+      "zh": "破损的吸入器"
     },
     "turf_ancienthoodedturf": {
       "en": "Ancient Hooded Turf",
@@ -9523,6 +10571,10 @@
       "en": "Twigs",
       "zh": "树枝"
     },
+    "um_antlionstaff": {
+      "en": "Antlion Mandible",
+      "zh": "蚁狮颚刃"
+    },
     "um_armor_bramble_rimeweed": {
       "en": "Rime Husk",
       "zh": "霜冻外壳"
@@ -9543,6 +10595,10 @@
       "en": "Amusement Pack",
       "zh": "护符镶嵌背包"
     },
+    "um_bear_trap": {
+      "en": "Snap-Trap",
+      "zh": "利颚陷阱"
+    },
     "um_bear_trap_equippable_gold": {
       "en": "Shiny Snap-Teeth",
       "zh": "黄金捕兽夹"
@@ -9551,9 +10607,33 @@
       "en": "Snap-Teeth",
       "zh": "捕兽夹"
     },
+    "um_bear_trap_old": {
+      "en": "Snap-Trap",
+      "zh": "利颚陷阱"
+    },
     "um_bee_moon": {
       "en": "Carrion Bee",
       "zh": "腐臭蜂"
+    },
+    "um_beeguard_blocker": {
+      "en": "Blocker Bee",
+      "zh": "拦截蜂"
+    },
+    "um_beeguard_seeker": {
+      "en": "Bomber Bee",
+      "zh": "轰炸蜂"
+    },
+    "um_beeguard_shooter": {
+      "en": "Bullet Bee",
+      "zh": "子弹蜂"
+    },
+    "um_beegun": {
+      "en": "Hand Held Hive",
+      "zh": "手持蜂巢"
+    },
+    "um_beegun_cherry": {
+      "en": "Hand Held Hibeescus Hive",
+      "zh": "手持蜂巢"
     },
     "um_beehive_moon": {
       "en": "Carrion Bee Hive",
@@ -9563,6 +10643,10 @@
       "en": "Carrion Bee Mine",
       "zh": "腐臭蜂地雷"
     },
+    "um_bland_cube": {
+      "en": "Bland Cube",
+      "zh": "无味立方块"
+    },
     "um_blowdart_pyre": {
       "en": "Pyre Dart",
       "zh": "荨麻飞镖"
@@ -9570,6 +10654,14 @@
     "um_blowdart_rime": {
       "en": "Rime Dart",
       "zh": "霜镖"
+    },
+    "um_bluemushtree_gem": {
+      "en": "Petrified Blue Mushtree",
+      "zh": "石化蘑菇树"
+    },
+    "um_bluemushtree_gemless": {
+      "en": "Petrified Blue Mushtree",
+      "zh": "石化蘑菇树"
     },
     "um_blueprinting_kit": {
       "en": "Blueprinting Kit",
@@ -9595,13 +10687,65 @@
       "en": "Boomberry Pie",
       "zh": "爆汁蓝莓派"
     },
+    "um_brineishmoss": {
+      "en": "Brineish Moss",
+      "zh": "盐水苔藓"
+    },
+    "um_bulletbee_proj": {
+      "en": "Bullet Bee",
+      "zh": "子弹蜂"
+    },
+    "um_buttercup": {
+      "en": "Buttercup",
+      "zh": "毛茛"
+    },
+    "um_buttery_fly": {
+      "en": "Buttery Fly",
+      "zh": "黄油蝴蝶"
+    },
+    "um_cherrybulletbee_proj": {
+      "en": "Bullet Hibeescus",
+      "zh": "子弹蜂"
+    },
+    "um_coalesced_nightmare": {
+      "en": "Coalesced Nightmare",
+      "zh": "合并梦魇"
+    },
+    "um_cookpot_wagstaff_display": {
+      "en": "Intriguing Display",
+      "zh": "引人注目的显示器"
+    },
+    "um_cookpot_wagstaff_lever": {
+      "en": "Scrappy Lever",
+      "zh": "简陋的杠杆"
+    },
+    "um_cookpot_wagstaff_lever2": {
+      "en": "Junky Lever",
+      "zh": "破旧的杠杆"
+    },
+    "um_copper_pipe": {
+      "en": "Copper Pipes",
+      "zh": "铜管"
+    },
     "um_detonator": {
       "en": "Universal Detonator",
       "zh": "万能引爆器"
     },
+    "um_devcapture": {
+      "en": "Devcapture Device",
+      "zh": "开发捕获设备"
+    },
+    "um_dreamcatcher": {
+      "en": "Dream Catcher",
+      "zh": "追梦人"
+    },
     "um_durian_cream_marshcake": {
       "en": "Durian Cream Marshcake",
       "zh": "榴莲奶油软糖蛋糕"
+    },
+    "um_exhumer": {
+      "en": "Exhumer",
+      "zh": "掘墓铲"
     },
     "um_eyebalm": {
       "en": "Eye Balm",
@@ -9610,6 +10754,14 @@
     "um_feather_totem": {
       "en": "Feather Idol",
       "zh": "羽毛神像"
+    },
+    "um_fern_fox": {
+      "en": "Ferned Fox",
+      "zh": "蕨狐"
+    },
+    "um_fern_fox_den": {
+      "en": "Fox Hole",
+      "zh": "狐穴"
     },
     "um_firecream": {
       "en": "Flame Repellent",
@@ -9743,9 +10895,33 @@
       "en": "Ghastly Fajita",
       "zh": "恐怖卷饼"
     },
+    "um_ghost_pepper": {
+      "en": "Faded Vine",
+      "zh": "褪色藤蔓"
+    },
     "um_ghost_pepper_item": {
       "en": "Ghost Pepper",
       "zh": "幽灵辣椒"
+    },
+    "um_greenmushtree_gem": {
+      "en": "Petrified Green Mushtree",
+      "zh": "石化蘑菇树"
+    },
+    "um_greenmushtree_gemless": {
+      "en": "Petrified Green Mushtree",
+      "zh": "石化蘑菇树"
+    },
+    "um_guano_rain_particle": {
+      "en": "Extra Fresh Guano",
+      "zh": "新鲜粪堆"
+    },
+    "um_guano_rock": {
+      "en": "Coprolite Outcrop",
+      "zh": "粪化石矿簇"
+    },
+    "um_guano_rock_gemless": {
+      "en": "Coprolite Outcrop",
+      "zh": "粪化石矿簇"
     },
     "um_hat_bee_moon": {
       "en": "Beeret",
@@ -9767,6 +10943,10 @@
       "en": "Normong Helmet",
       "zh": "霜兽头盔"
     },
+    "um_heckler": {
+      "en": "Ms. Spitts",
+      "zh": "斯皮茨女士"
+    },
     "um_hotspring": {
       "en": "Boiling Spring",
       "zh": "沸腾温泉"
@@ -9779,12 +10959,32 @@
       "en": "Frozen Mole Tail",
       "zh": "冰冻鼹鼠尾"
     },
+    "um_inkubator": {
+      "en": "Ancient Inkubator",
+      "zh": "远古孵化器"
+    },
+    "um_lavaspit_sludge": {
+      "en": "Burning Pool of Sludge",
+      "zh": "燃烧的海泥池"
+    },
     "um_leafwing": {
       "en": "Leafy Wing",
       "zh": "叶翼"
     },
+    "um_magmastone": {
+      "en": "Magmatic Boulder",
+      "zh": "熔火巨岩"
+    },
+    "um_magmastone_outcrop": {
+      "en": "Magmatic Outcrop",
+      "zh": "熔火岩脉"
+    },
     "um_magnerang": {
       "en": "Magnerang",
+      "zh": "磁力回旋镖"
+    },
+    "um_magnerangreel": {
+      "en": "Magnerang Magnet",
       "zh": "磁力回旋镖"
     },
     "um_magnifier": {
@@ -9807,6 +11007,10 @@
       "en": "Magician's Dark Sword",
       "zh": "魔术师的暗夜剑"
     },
+    "um_meat_cube": {
+      "en": "Meat Cube",
+      "zh": "肉类立方块"
+    },
     "um_meatcomb": {
       "en": "Carrion Honeycomb",
       "zh": "腐臭蜂巢"
@@ -9815,13 +11019,93 @@
       "en": "Carrion Honey",
       "zh": "腐臭蜂蜜"
     },
+    "um_monster_cube": {
+      "en": "Monster Cube",
+      "zh": "怪物立方块"
+    },
+    "um_monsteregg": {
+      "en": "Monster Egg",
+      "zh": "怪物蛋"
+    },
+    "um_monsteregg_cooked": {
+      "en": "Cooked Monster Egg",
+      "zh": "熟怪物蛋"
+    },
+    "um_moonfly_lantern": {
+      "en": "Moonfly Lantern",
+      "zh": "月蝇提灯"
+    },
+    "um_moonglass_ceiling": {
+      "en": "Moonglass Stalactite",
+      "zh": "月玻璃钟乳石"
+    },
     "um_moss": {
       "en": "Hooded Moss",
       "zh": "连帽苔藓"
     },
+    "um_mushroom_moon": {
+      "en": "Moon Mushroom",
+      "zh": "月亮蘑菇"
+    },
+    "um_nightcrawler": {
+      "en": "Night Crawler",
+      "zh": "暗影爬虫"
+    },
+    "um_ocupus_beak": {
+      "en": "Beak",
+      "zh": "喙"
+    },
+    "um_ocupus_eye": {
+      "en": "Eye Stalk",
+      "zh": "眼柄"
+    },
+    "um_ocupus_eyetacle": {
+      "en": "Eye Stalk",
+      "zh": "眼柄"
+    },
+    "um_ocupus_tentacle": {
+      "en": "Tentacle",
+      "zh": "触手"
+    },
+    "um_ornament_opossum": {
+      "en": "Opossum Decoration",
+      "zh": "负鼠装饰物"
+    },
+    "um_ornament_rat": {
+      "en": "Rat Decoration",
+      "zh": "老鼠装饰"
+    },
+    "um_pawn": {
+      "en": "Clockwork Pawn",
+      "zh": "发条蟹兵"
+    },
+    "um_pawn_nightmare": {
+      "en": "Damaged Clockwork Pawn",
+      "zh": "损坏的发条蟹兵"
+    },
+    "um_pepperdragon": {
+      "en": "Capsidragon",
+      "zh": "椒龙"
+    },
     "um_pepperdragon_bladder": {
       "en": "Fire Bladder",
       "zh": "储火袋"
+    },
+    "um_pepperdragon_nest": {
+      "en": "Capsidragon Nest",
+      "zh": "椒龙巢"
+    },
+    "um_plant_hotsprings": {
+      "en": "Plant",
+      "zh": "植物"
+    },
+    "um_pyre_nettles": {
+      "en": "Pyre Nettles",
+      "zh": "荨麻丛"
+    },
+    "um_pyrite_ceiling": {
+      "en": "Pyrite Stalactite",
+      "zh": "黄铁矿钟乳石"
     },
     "um_record_hooded_widow": {
       "en": "Arachnophobia",
@@ -9859,6 +11143,18 @@
       "en": "The Delinquent",
       "zh": "叛逆顽童"
     },
+    "um_redmushtree_gem": {
+      "en": "Petrified Red Mushtree",
+      "zh": "石化蘑菇树"
+    },
+    "um_redmushtree_gemless": {
+      "en": "Petrified Red Mushtree",
+      "zh": "石化蘑菇树"
+    },
+    "um_reeds_lunar": {
+      "en": "Maned Reeds",
+      "zh": "鬃毛芦苇"
+    },
     "um_ribopod": {
       "en": "Ribopod",
       "zh": "肋荚虫"
@@ -9891,9 +11187,81 @@
       "en": "Chillquilla",
       "zh": "冰镇龙舌兰"
     },
+    "um_rocklobster_rock": {
+      "en": "Gestating Rock",
+      "zh": "孕育中的岩石"
+    },
+    "um_roughage_cube": {
+      "en": "Wooden Cube",
+      "zh": "木质立方块"
+    },
     "um_scrapper": {
       "en": "Ancient Scrapper",
       "zh": "远古拆解机"
+    },
+    "um_shadow_walter": {
+      "en": "Walter?",
+      "zh": "沃尔特？"
+    },
+    "um_shadow_wanda": {
+      "en": "Wanda?",
+      "zh": "旺达？"
+    },
+    "um_shadow_warly": {
+      "en": "Warly?",
+      "zh": "沃利？"
+    },
+    "um_shadow_wathgrithr": {
+      "en": "Wigfrid?",
+      "zh": "薇格弗德？"
+    },
+    "um_shadow_wendy": {
+      "en": "Wendy?",
+      "zh": "温蒂？"
+    },
+    "um_shadow_wes": {
+      "en": "Wes?",
+      "zh": "韦斯？"
+    },
+    "um_shadow_wickerbottom": {
+      "en": "Wickerbottom?",
+      "zh": "薇克巴顿？"
+    },
+    "um_shadow_willow": {
+      "en": "Willow?",
+      "zh": "薇洛？"
+    },
+    "um_shadow_winky": {
+      "en": "Winky?",
+      "zh": "温奇？"
+    },
+    "um_shadow_wolfgang": {
+      "en": "Wolfgang?",
+      "zh": "沃尔夫冈？"
+    },
+    "um_shadow_woodie": {
+      "en": "Woodie?",
+      "zh": "伍迪？"
+    },
+    "um_shadow_wortox": {
+      "en": "Wortox?",
+      "zh": "沃拓克斯？"
+    },
+    "um_sinkmound_rock": {
+      "en": "Unassuming Den",
+      "zh": "不起眼的洞穴"
+    },
+    "um_sinkmound_rock_gemless": {
+      "en": "Unassuming Den",
+      "zh": "不起眼的洞穴"
+    },
+    "um_slimestone_rock": {
+      "en": "Slimestone",
+      "zh": "滑石灰岩"
+    },
+    "um_slimestone_rock_gemless": {
+      "en": "Slimestone",
+      "zh": "滑石灰岩"
     },
     "um_slingshotammo_honey": {
       "en": "Honey Rounds",
@@ -9903,13 +11271,57 @@
       "en": "Smolder Spore",
       "zh": "荨麻孢子"
     },
+    "um_snaildrake_explosion": {
+      "en": "Snaildrake Explosion",
+      "zh": "蜗龙爆炸"
+    },
+    "um_snaildrake_magma_sludge": {
+      "en": "Magma Sludge",
+      "zh": "岩浆黏液"
+    },
+    "um_sorrel": {
+      "en": "Sorrel",
+      "zh": "酢浆草"
+    },
+    "um_specter_amulet": {
+      "en": "Specter Amulet",
+      "zh": "幽灵护身符"
+    },
+    "um_spectoplasm": {
+      "en": "Spectoplasm",
+      "zh": "光谱"
+    },
+    "um_spiderqueencorpse": {
+      "en": "Spider Queen Corpse",
+      "zh": "蜘蛛女王尸体"
+    },
     "um_sponge_cake": {
       "en": "Swiss Sponge Cake",
       "zh": "多孔海绵蛋糕"
     },
+    "um_spongeplant": {
+      "en": "Swiss Sponge",
+      "zh": "多孔海绵"
+    },
     "um_spongeplant_item": {
       "en": "Swiss Sponge Chunks",
       "zh": "多孔海绵块"
+    },
+    "um_strange_rabbit_rock": {
+      "en": "Strange Rock",
+      "zh": "奇异岩石"
+    },
+    "um_sugar_cube": {
+      "en": "Sugar Cube",
+      "zh": "糖质立方块"
+    },
+    "um_tentacle_moon": {
+      "en": "Gros Tentacle",
+      "zh": "巨型触手"
+    },
+    "um_tentaclespike_moon": {
+      "en": "Tentacle Dart",
+      "zh": "触手尖刺"
     },
     "um_tentaclespot_moon": {
       "en": "Gros Peel",
@@ -9919,13 +11331,117 @@
       "en": "Thulecite Razor",
       "zh": "铥矿剃刀"
     },
+    "um_tornado": {
+      "en": "Giant Tornado",
+      "zh": "巨型龙卷风"
+    },
+    "um_vampirebat": {
+      "en": "Adult Batilisk",
+      "zh": null
+    },
+    "um_veggie_cube": {
+      "en": "Veggie Cube",
+      "zh": "蔬菜立方块"
+    },
+    "um_waterfall": {
+      "en": "Waterfall",
+      "zh": "瀑布"
+    },
+    "um_windturbine": {
+      "en": "Wind Turbine",
+      "zh": "风力照明灯"
+    },
+    "um_wingsuit": {
+      "en": "Wingsuit",
+      "zh": "翼装服"
+    },
+    "um_witch": {
+      "en": "Supreme Calamitas",
+      "zh": "至尊女巫 · 灾厄"
+    },
+    "umdebuff_moonburn": {
+      "en": "a moonburn",
+      "zh": "月光灼伤"
+    },
+    "umdebuff_moonburn_testingstick": {
+      "en": "Magic Pain Stick",
+      "zh": "魔法止痛棒"
+    },
+    "umss_general": {
+      "en": "UMSS",
+      "zh": "永不妥协开发工具"
+    },
     "uncompromising_fishingnet": {
       "en": "Fishing Net",
       "zh": "渔网"
     },
+    "uncompromising_harpoon": {
+      "en": "Harpoon",
+      "zh": "鱼叉"
+    },
+    "uncompromising_harpoon_heavy": {
+      "en": "Heavy Harpoon",
+      "zh": "重型鱼叉"
+    },
+    "uncompromising_harpoonreel": {
+      "en": "Reel",
+      "zh": "卷轴"
+    },
+    "uncompromising_packrat": {
+      "en": "Pack Rat",
+      "zh": "背包鼠"
+    },
+    "uncompromising_rat": {
+      "en": "Rat",
+      "zh": "老鼠"
+    },
+    "uncompromising_ratburrow": {
+      "en": "Rat Burrow",
+      "zh": "鼠穴"
+    },
+    "uncompromising_ratherd": {
+      "en": "Rat Burrow",
+      "zh": "鼠群"
+    },
+    "uncompromising_toad": {
+      "en": "Sickly Frog",
+      "zh": "多病青蛙"
+    },
+    "uncompromising_winkyburrow": {
+      "en": "Winky's Burrow",
+      "zh": "温奇的鼠穴"
+    },
     "uncompromising_winkyhomeburrow": {
       "en": "Winky's Home Burrow",
       "zh": "温奇的定居鼠穴"
+    },
+    "veteranshrine": {
+      "en": "Melancholic Skull",
+      "zh": "头骨洞窟"
+    },
+    "viperfruit": {
+      "en": "Gloom Berry",
+      "zh": "幽暗浆果"
+    },
+    "viperfruit_lesser": {
+      "en": "Lesser Gloom Berry",
+      "zh": "小幽暗浆果"
+    },
+    "viperfruit_plant": {
+      "en": "Ominous Plant",
+      "zh": "不祥植物"
+    },
+    "viperjam": {
+      "en": "Gloom Berry Jam",
+      "zh": "幽暗果酱"
+    },
+    "viperling": {
+      "en": "Writhing Apparition",
+      "zh": "蠕动暗影"
+    },
+    "viperlingfriend": {
+      "en": "Writhing Apparition",
+      "zh": "蠕动暗影"
     },
     "viperworm": {
       "en": "Depths Viper",
@@ -9942,6 +11458,14 @@
     "wall_ruins_item": {
       "en": "Thulecite Wall",
       "zh": "铥墙"
+    },
+    "walrus": {
+      "en": "MacTusk",
+      "zh": "海象"
+    },
+    "walrus_camp": {
+      "en": "Walrus Camp",
+      "zh": "海象营地"
     },
     "walrus_tusk": {
       "en": "Walrus Tusk",
@@ -9967,6 +11491,10 @@
       "en": "Watermelon Lantern",
       "zh": "西瓜灯"
     },
+    "watermelon_seeds": {
+      "en": "Square Seeds",
+      "zh": "方形种子"
+    },
     "waterplant_planter": {
       "en": "Sea Sprout Starter",
       "zh": "海芽插穗"
@@ -9990,6 +11518,10 @@
     "wathom_blueprint_craftingset_ruinsglow_builder": {
       "en": "wathom_blueprint_craftingset_ruinsglow_builder",
       "zh": null
+    },
+    "wathom_corpse": {
+      "en": "Wathom's Carapace",
+      "zh": "沃托姆的甲壳"
     },
     "wathom_eyeturret_item": {
       "en": "wathom_eyeturret_item",
@@ -10059,9 +11591,17 @@
       "en": "wathom_yellowstaff",
       "zh": null
     },
+    "waxwell_pact_trader": {
+      "en": "Pact Maker",
+      "zh": "契约之手"
+    },
     "waxwelljournal": {
       "en": "Codex Umbra",
       "zh": "暗影秘典"
+    },
+    "webbedcreature": {
+      "en": "Silky Cocoon",
+      "zh": "茧"
     },
     "wendy": {
       "en": "Wendy",
@@ -10071,9 +11611,17 @@
       "en": "Wes",
       "zh": "韦斯"
     },
+    "wicker_tentacle": {
+      "en": "Sickly Tentacle",
+      "zh": "多病触手"
+    },
     "wickerbottom": {
       "en": "Wickerbottom",
       "zh": "薇克巴顿"
+    },
+    "widow_web_combat": {
+      "en": "Sticky Webbing",
+      "zh": "蛛网粘液"
     },
     "widowsgrasp": {
       "en": "Widow's Claw",
@@ -10099,6 +11647,46 @@
       "en": "Electrical Conversion Kit",
       "zh": "电能转换套件"
     },
+    "wixie_clock": {
+      "en": "Grandfather Clock",
+      "zh": "落地摆钟"
+    },
+    "wixie_clockdangley1": {
+      "en": "Seconds Weight",
+      "zh": "秒权重"
+    },
+    "wixie_clockdangley2": {
+      "en": "Minutes Weight",
+      "zh": "分钟权重"
+    },
+    "wixie_clockdangley3": {
+      "en": "Hours Weight",
+      "zh": "小时权重"
+    },
+    "wixie_piano": {
+      "en": "Grand Piano",
+      "zh": "三角钢琴"
+    },
+    "wixie_piano_card": {
+      "en": "Mysterious Paper",
+      "zh": "神秘纸张"
+    },
+    "wixie_shadow_clone": {
+      "en": "Wixie?",
+      "zh": "暗影薇希"
+    },
+    "wixie_shadowclone": {
+      "en": "Wixie?",
+      "zh": "暗影薇希"
+    },
+    "wixie_wardrobe": {
+      "en": "Fancy Wardrobe",
+      "zh": "华丽的衣橱"
+    },
+    "wixiegun": {
+      "en": "The Glock 17 (Beretta 92FS in the HD Edition), also known as the 9mm Pistol, is a weapon featured in Half-Life and its expansions.",
+      "zh": "格洛克17（HD版中的贝雷塔92FS），也称为9mm手枪，是《半条命》及其扩展包中的一种武器。"
+    },
     "woby_treat": {
       "en": "Woby Snacks",
       "zh": "沃比零食"
@@ -10110,6 +11698,10 @@
     "wolfgang": {
       "en": "Wolfgang",
       "zh": "沃尔夫冈"
+    },
+    "wooden_queen_piece": {
+      "en": "Wooden Queen",
+      "zh": "木制女王"
     },
     "woodie": {
       "en": "Woodie",
@@ -10162,6 +11754,18 @@
     "zaspberry": {
       "en": "Zaspberry",
       "zh": "电光浆果"
+    },
+    "zaspberry_lesser": {
+      "en": "Lesser Zaspberry",
+      "zh": "小电光浆果"
+    },
+    "zaspberry_plant": {
+      "en": "Sketchy Plant",
+      "zh": "可疑植物"
+    },
+    "zaspberryparfait": {
+      "en": "Zaspberry Parfait",
+      "zh": "电光浆果芭菲"
     }
   },
   "artworkIds": [
@@ -10206,13 +11810,16 @@
   "articleArtIds": [
     "alterguardian_phase1",
     "antlion",
+    "aphid",
     "armor_glassmail",
     "bearger",
     "beequeen",
     "blueberrypancakes",
+    "blueberryplant",
     "cave_vent_mite",
     "cookpot",
     "crabking",
+    "critter_figgy_builder",
     "crystal_cursed_antler",
     "cursed_antler",
     "daywalker",
@@ -10263,6 +11870,8 @@
     "um_boomberrypie",
     "um_durian_cream_marshcake",
     "um_eyebalm",
+    "um_feather_totem",
+    "um_fern_fox",
     "um_gem_repair_kit",
     "um_gemology_geode_blue",
     "um_gemology_geode_glass",
@@ -10296,6 +11905,8 @@
     "um_hat_rime",
     "um_hotspring",
     "um_magnifier_purplegem",
+    "um_pepperdragon",
+    "um_ribopod",
     "um_rice_pudding",
     "um_rimeweed_icepack",
     "um_rimeweed_spagett",
@@ -10317,6 +11928,7 @@
     "winona_upgradekit_electrical",
     "wolfgang",
     "woodie",
+    "woodpecker",
     "worm_boss",
     "wormwood",
     "wortox",
@@ -10410,6 +12022,4216 @@
       "um_fyrite": 0.5
     }
   },
+  "fieldGuide": [
+    {
+      "id": "veteranshrine",
+      "type": "POI",
+      "nameKey": "veteranshrine",
+      "related": [],
+      "line": 66
+    },
+    {
+      "id": "cursed_antler",
+      "type": "item",
+      "nameKey": "cursed_antler",
+      "related": [
+        "veteranshrine",
+        "boneshard",
+        "deerclops"
+      ],
+      "line": 68
+    },
+    {
+      "id": "crystal_cursed_antler",
+      "type": "item",
+      "nameKey": "crystal_cursed_antler",
+      "related": [
+        "veteranshrine",
+        "boneshard",
+        "purebrilliance",
+        "mutateddeerclops"
+      ],
+      "line": 69
+    },
+    {
+      "id": "beargerclaw",
+      "type": "item",
+      "nameKey": "beargerclaw",
+      "related": [
+        "veteranshrine",
+        "boneshard",
+        "bearger",
+        "furtuft"
+      ],
+      "line": 70
+    },
+    {
+      "id": "slobberlobber",
+      "type": "item",
+      "nameKey": "slobberlobber",
+      "related": [
+        "veteranshrine",
+        "meat",
+        "dragon_scales",
+        "dragonfly",
+        "mock_dragonfly"
+      ],
+      "line": 71
+    },
+    {
+      "id": "feather_frock",
+      "type": "item",
+      "nameKey": "feather_frock",
+      "related": [
+        "veteranshrine",
+        "goose_feather",
+        "moose",
+        "feather_robin",
+        "feather_robin_winter",
+        "feather_crow",
+        "feather_canary",
+        "malbatross_feather"
+      ],
+      "line": 72
+    },
+    {
+      "id": "gore_horn_hat",
+      "type": "item",
+      "nameKey": "gore_horn_hat",
+      "related": [
+        "veteranshrine",
+        "minotaur",
+        "nightmarefuel"
+      ],
+      "line": 73
+    },
+    {
+      "id": "klaus_amulet",
+      "type": "item",
+      "nameKey": "klaus_amulet",
+      "related": [
+        "veteranshrine",
+        "klaus",
+        "goldnugget",
+        "nightmarefuel"
+      ],
+      "line": 74
+    },
+    {
+      "id": "crabclaw",
+      "type": "item",
+      "nameKey": "crabclaw",
+      "related": [
+        "veteranshrine",
+        "meat",
+        "rocks",
+        "crabking",
+        "redgem",
+        "bluegem",
+        "purplegem",
+        "yellowgem",
+        "greengem",
+        "orangegem",
+        "opalpreciousgem"
+      ],
+      "line": 75
+    },
+    {
+      "id": "um_beegun",
+      "type": "item",
+      "nameKey": "um_beegun",
+      "related": [
+        "veteranshrine",
+        "beequeen",
+        "honeycomb",
+        "royal_jelly"
+      ],
+      "line": 76
+    },
+    {
+      "id": "silksack",
+      "type": "item",
+      "nameKey": "silksack",
+      "related": [
+        "veteranshrine",
+        "silken_bundle",
+        "silk",
+        "hoodedwidow"
+      ],
+      "line": 77
+    },
+    {
+      "id": "um_moonfly_lantern",
+      "type": "item",
+      "nameKey": "um_moonfly_lantern",
+      "related": [
+        "veteranshrine",
+        "moonmaw_dragonfly",
+        "moonglass",
+        "moonglass_charged",
+        "moonrocknugget"
+      ],
+      "line": 78
+    },
+    {
+      "id": "bulletbee",
+      "type": "creature",
+      "nameKey": "bulletbee",
+      "related": [
+        "beemine",
+        "um_beegun"
+      ],
+      "line": 82
+    },
+    {
+      "id": "silken_bundle",
+      "type": "item",
+      "nameKey": "silken_bundle",
+      "related": [
+        "ash",
+        "silk",
+        "silksack"
+      ],
+      "line": 83
+    },
+    {
+      "id": "hoodedwidow",
+      "type": "giant",
+      "nameKey": "hoodedwidow",
+      "related": [
+        "widowsgrasp",
+        "monstermeat",
+        "widowshead",
+        "spider"
+      ],
+      "line": 86
+    },
+    {
+      "id": "moonmaw_dragonfly",
+      "type": "giant",
+      "nameKey": "moonmaw_dragonfly",
+      "related": [
+        "meat",
+        "glass_scales",
+        "moonglass_geode",
+        "moonmaw_lavae"
+      ],
+      "line": 87
+    },
+    {
+      "id": "mock_dragonfly",
+      "type": "giant",
+      "nameKey": "mock_dragonfly",
+      "related": [
+        "dragon_scales",
+        "meat"
+      ],
+      "line": 88
+    },
+    {
+      "id": "widowsgrasp",
+      "type": "item",
+      "nameKey": "widowsgrasp",
+      "related": [
+        "hoodedwidow",
+        "webbedcreature"
+      ],
+      "line": 92
+    },
+    {
+      "id": "widowshead",
+      "type": "item",
+      "nameKey": "widowshead",
+      "related": [
+        "hoodedwidow"
+      ],
+      "line": 93
+    },
+    {
+      "id": "webbedcreature",
+      "type": "creature",
+      "nameKey": "webbedcreature",
+      "related": [
+        "hoodedwidow",
+        "widowsgrasp"
+      ],
+      "line": 94
+    },
+    {
+      "id": "spider_trapdoor_hooded",
+      "type": "creature",
+      "nameKey": "spider_trapdoor_hooded",
+      "related": [
+        "monstermeat",
+        "silk",
+        "spidergland",
+        "hoodedwidow"
+      ],
+      "line": 95
+    },
+    {
+      "id": "armor_glassmail",
+      "type": "item",
+      "nameKey": "armor_glassmail",
+      "related": [
+        "glass_scales",
+        "moonglass_charged",
+        "moon_altar_cosmic"
+      ],
+      "line": 98
+    },
+    {
+      "id": "glass_scales",
+      "type": "item",
+      "nameKey": "glass_scales",
+      "related": [],
+      "line": 99
+    },
+    {
+      "id": "moonglass_geode",
+      "type": "item",
+      "nameKey": "moonglass_geode",
+      "related": [
+        "moonglass_charged"
+      ],
+      "line": 100
+    },
+    {
+      "id": "moonmaw_lavae",
+      "type": "creature",
+      "nameKey": "moonmaw_lavae",
+      "related": [],
+      "line": 101
+    },
+    {
+      "id": "um_beeguard_seeker",
+      "type": "creature",
+      "nameKey": "um_beeguard_seeker",
+      "related": [
+        "beequeen",
+        "stinger"
+      ],
+      "line": 104
+    },
+    {
+      "id": "um_beeguard_shooter",
+      "type": "creature",
+      "nameKey": "um_beeguard_shooter",
+      "related": [
+        "beequeen",
+        "stinger"
+      ],
+      "line": 105
+    },
+    {
+      "id": "um_beeguard_blocker",
+      "type": "creature",
+      "nameKey": "um_beeguard_blocker",
+      "related": [
+        "beequeen",
+        "stinger"
+      ],
+      "line": 106
+    },
+    {
+      "id": "um_bee_moon",
+      "type": "creature",
+      "nameKey": "um_bee_moon",
+      "related": [
+        "um_meathoney",
+        "houndstooth"
+      ],
+      "line": 114
+    },
+    {
+      "id": "um_beehive_moon",
+      "type": "thing",
+      "nameKey": "um_beehive_moon",
+      "related": [
+        "um_bee_moon",
+        "um_meathoney",
+        "um_meatcomb"
+      ],
+      "line": 115
+    },
+    {
+      "id": "um_astral_projector",
+      "type": "thing",
+      "nameKey": "um_astral_projector",
+      "related": [
+        "um_astral_projector_target",
+        "purplemooneye",
+        "thulecite",
+        "moonrocknugget"
+      ],
+      "line": 121
+    },
+    {
+      "id": "um_astral_projector_target",
+      "type": "thing",
+      "nameKey": "um_astral_projector_target",
+      "related": [
+        "moonglass",
+        "thulecite",
+        "moonrocknugget"
+      ],
+      "line": 122
+    },
+    {
+      "id": "um_meathoney",
+      "type": "food",
+      "nameKey": "um_meathoney",
+      "related": [
+        "spoiled_food"
+      ],
+      "line": 124
+    },
+    {
+      "id": "um_meatcomb",
+      "type": "item",
+      "nameKey": "um_meatcomb",
+      "related": [],
+      "line": 125
+    },
+    {
+      "id": "um_hat_bee_moon",
+      "type": "item",
+      "nameKey": "um_hat_bee_moon",
+      "related": [
+        "um_bee_moon",
+        "spoiled_food",
+        "silk",
+        "um_meathoney",
+        "researchlab2"
+      ],
+      "line": 126
+    },
+    {
+      "id": "um_eyebalm",
+      "type": "item",
+      "nameKey": "um_eyebalm",
+      "related": [
+        "um_meatcomb",
+        "um_meathoney",
+        "mosquitosack",
+        "researchlab2"
+      ],
+      "line": 127
+    },
+    {
+      "id": "um_backpack_amuletuse",
+      "type": "item",
+      "nameKey": "um_backpack_amuletuse",
+      "related": [
+        "um_tentaclespot_moon",
+        "um_gemologypurplegem2",
+        "goldnugget",
+        "moon_altar_cosmic"
+      ],
+      "line": 128
+    },
+    {
+      "id": "um_beemine_moon_item",
+      "type": "item",
+      "nameKey": "um_beemine_moon_item",
+      "related": [],
+      "line": 129
+    },
+    {
+      "id": "um_bomb_moon",
+      "type": "item",
+      "nameKey": "um_bomb_moon",
+      "related": [
+        "um_tentaclespot_moon",
+        "wagpunk_bits",
+        "moonglass",
+        "researchlab2"
+      ],
+      "line": 130
+    },
+    {
+      "id": "shockworm",
+      "type": "creature",
+      "nameKey": "shockworm",
+      "related": [
+        "monstermeat",
+        "moonglass",
+        "zaspberry"
+      ],
+      "line": 132
+    },
+    {
+      "id": "zaspberry_plant",
+      "type": "thing",
+      "nameKey": "zaspberry_plant",
+      "related": [
+        "zaspberry_lesser"
+      ],
+      "line": 133
+    },
+    {
+      "id": "zaspberry_lesser",
+      "type": "food",
+      "nameKey": "zaspberry_lesser",
+      "related": [
+        "zaspberry_plant",
+        "spoiled_food"
+      ],
+      "line": 134
+    },
+    {
+      "id": "zaspberry",
+      "type": "food",
+      "nameKey": "zaspberry",
+      "related": [
+        "shockworm",
+        "spoiled_food"
+      ],
+      "line": 135
+    },
+    {
+      "id": "um_tentaclespot_moon",
+      "type": "item",
+      "nameKey": "um_tentaclespot_moon",
+      "related": [],
+      "line": 137
+    },
+    {
+      "id": "um_tentaclespike_moon",
+      "type": "item",
+      "nameKey": "um_tentaclespike_moon",
+      "related": [],
+      "line": 138
+    },
+    {
+      "id": "um_detonator",
+      "type": "item",
+      "nameKey": "um_detonator",
+      "related": [],
+      "line": 145
+    },
+    {
+      "id": "um_mushroom_moon",
+      "type": "thing",
+      "nameKey": "um_mushroom_moon",
+      "related": [
+        "moon_cap",
+        "moon_cap_cooked"
+      ],
+      "line": 150
+    },
+    {
+      "id": "um_tentacle_moon",
+      "type": "creature",
+      "nameKey": "um_tentacle_moon",
+      "related": [
+        "monstermeat",
+        "um_tentaclespike_moon",
+        "cave_banana",
+        "um_tentaclespot_moon"
+      ],
+      "line": 158
+    },
+    {
+      "id": "um_reeds_lunar",
+      "type": "thing",
+      "nameKey": "um_reeds_lunar",
+      "related": [
+        "cutreeds",
+        "cutgrass"
+      ],
+      "line": 167
+    },
+    {
+      "id": "cave_entrance_moon",
+      "type": "POI",
+      "nameKey": "cave_entrance_moon",
+      "related": [
+        "molebat",
+        "flint",
+        "moonrocknugget",
+        "rocks"
+      ],
+      "line": 173
+    },
+    {
+      "id": "hoodedtrapdoor",
+      "type": "thing",
+      "nameKey": "hoodedtrapdoor",
+      "related": [
+        "rocks",
+        "spider_trapdoor_hooded"
+      ],
+      "line": 177
+    },
+    {
+      "id": "giant_blueberry",
+      "type": "food",
+      "nameKey": "giant_blueberry",
+      "related": [
+        "spoiled_food",
+        "blueberryplant"
+      ],
+      "line": 178
+    },
+    {
+      "id": "blueberryplant",
+      "type": "thing",
+      "nameKey": "blueberryplant",
+      "related": [
+        "ice"
+      ],
+      "line": 179
+    },
+    {
+      "id": "giant_tree",
+      "type": "thing",
+      "nameKey": "giant_tree",
+      "related": [
+        "frog",
+        "twigs",
+        "log",
+        "feather_robin",
+        "feather_robin_winter",
+        "feather_canary",
+        "feather_crow",
+        "spider",
+        "aphid",
+        "um_moss"
+      ],
+      "line": 180
+    },
+    {
+      "id": "um_moss",
+      "type": "food",
+      "nameKey": "um_moss",
+      "related": [],
+      "line": 181
+    },
+    {
+      "id": "um_bear_trap_equippable_gold",
+      "type": "item",
+      "nameKey": "um_bear_trap_equippable_gold",
+      "related": [
+        "goldnugget",
+        "houndstooth",
+        "snappy_jaw",
+        "researchlab2"
+      ],
+      "line": 183
+    },
+    {
+      "id": "um_bear_trap_equippable_tooth",
+      "type": "item",
+      "nameKey": "um_bear_trap_equippable_tooth",
+      "related": [
+        "rocks",
+        "snappy_jaw",
+        "researchlab"
+      ],
+      "line": 184
+    },
+    {
+      "id": "um_bear_trap_old",
+      "type": "thing",
+      "nameKey": "um_bear_trap_old",
+      "related": [
+        "walrus_camp",
+        "hooded_fern",
+        "snappy_jaw"
+      ],
+      "line": 185
+    },
+    {
+      "id": "um_bear_trap",
+      "type": "thing",
+      "nameKey": "um_bear_trap",
+      "related": [
+        "walrus",
+        "snappy_jaw"
+      ],
+      "line": 186
+    },
+    {
+      "id": "snappy_jaw",
+      "type": "item",
+      "nameKey": "snappy_jaw",
+      "related": [
+        "flint",
+        "rope",
+        "houndstooth"
+      ],
+      "line": 187
+    },
+    {
+      "id": "jawed_scythe",
+      "type": "item",
+      "nameKey": "jawed_scythe",
+      "related": [
+        "twigs",
+        "steelwool",
+        "snappy_jaw",
+        "researchlab2"
+      ],
+      "line": 188
+    },
+    {
+      "id": "um_boomberry_bomb",
+      "type": "item",
+      "nameKey": "um_boomberry_bomb",
+      "related": [
+        "giant_blueberry",
+        "cutgrass",
+        "twigs",
+        "researchlab"
+      ],
+      "line": 189
+    },
+    {
+      "id": "aphid",
+      "type": "creature",
+      "nameKey": "aphid",
+      "related": [
+        "monstermeat",
+        "steelwool",
+        "hooded_fern"
+      ],
+      "line": 190
+    },
+    {
+      "id": "woodpecker",
+      "type": "creature",
+      "nameKey": "woodpecker",
+      "related": [
+        "cookedsmallmeat",
+        "cutgrass",
+        "feather_crow",
+        "feather_robin",
+        "flint",
+        "seeds",
+        "smallmeat",
+        "twigs"
+      ],
+      "line": 191
+    },
+    {
+      "id": "um_hat_leafwing",
+      "type": "item",
+      "nameKey": "um_hat_leafwing",
+      "related": [
+        "um_moss",
+        "log",
+        "um_leafwing",
+        "spoiled_food",
+        "researchlab2"
+      ],
+      "line": 192
+    },
+    {
+      "id": "um_leafwing",
+      "type": "item",
+      "nameKey": "um_leafwing",
+      "related": [],
+      "line": 193
+    },
+    {
+      "id": "hooded_fern",
+      "type": "thing",
+      "nameKey": "hooded_fern",
+      "related": [
+        "um_hat_leafwing",
+        "armor_bramble",
+        "armor_lunarplant_husk",
+        "ash",
+        "mound",
+        "spider",
+        "aphid",
+        "seeds",
+        "cutgrass",
+        "twigs",
+        "carrot_seeds",
+        "corn_seeds",
+        "dragonfruit_seeds",
+        "durian_seeds",
+        "eggplant_seeds",
+        "pomegranate_seeds",
+        "pumpkin_seeds",
+        "asparagus_seeds",
+        "tomato_seeds",
+        "potato_seeds",
+        "onion_seeds",
+        "pepper_seeds",
+        "garlic_seeds",
+        "watermelon_seeds"
+      ],
+      "line": 195
+    },
+    {
+      "id": "um_fern_fox",
+      "type": "creature",
+      "nameKey": "um_fern_fox",
+      "related": [
+        "plantmeat",
+        "um_moss",
+        "um_fern_fox_den"
+      ],
+      "line": 197
+    },
+    {
+      "id": "um_fern_fox_den",
+      "type": "thing",
+      "nameKey": "um_fern_fox_den",
+      "related": [
+        "rocks",
+        "um_moss",
+        "twigs"
+      ],
+      "line": 198
+    },
+    {
+      "id": "giant_tree_birdnest",
+      "type": "thing",
+      "nameKey": "giant_tree_birdnest",
+      "related": [
+        "bird_egg",
+        "twigs",
+        "ash",
+        "bird_egg_cooked",
+        "giant_tree"
+      ],
+      "line": 199
+    },
+    {
+      "id": "fruitbat",
+      "type": "creature",
+      "nameKey": "fruitbat",
+      "related": [
+        "um_leafwing",
+        "giant_blueberry",
+        "blueberryplant"
+      ],
+      "line": 200
+    },
+    {
+      "id": "pitcherplant",
+      "type": "thing",
+      "nameKey": "pitcherplant",
+      "related": [
+        "honey",
+        "fruitbat"
+      ],
+      "line": 202
+    },
+    {
+      "id": "springrock1",
+      "type": "thing",
+      "nameKey": "springrock1",
+      "related": [
+        "nitre",
+        "rocks"
+      ],
+      "line": 205
+    },
+    {
+      "id": "springrock2",
+      "type": "thing",
+      "nameKey": "springrock2",
+      "related": [
+        "flint",
+        "nitre",
+        "rocks"
+      ],
+      "line": 206
+    },
+    {
+      "id": "springrock3",
+      "type": "thing",
+      "nameKey": "springrock3",
+      "related": [
+        "flint",
+        "goldnugget",
+        "nitre",
+        "rocks"
+      ],
+      "line": 207
+    },
+    {
+      "id": "cave_entrance_magmabiome",
+      "type": "POI",
+      "nameKey": "cave_entrance_magmabiome",
+      "related": [
+        "bat",
+        "flint",
+        "nitre",
+        "rocks"
+      ],
+      "line": 208
+    },
+    {
+      "id": "um_hotspring",
+      "type": "thing",
+      "nameKey": "um_hotspring",
+      "related": [
+        "bathbomb"
+      ],
+      "line": 209
+    },
+    {
+      "id": "um_spongeplant_item",
+      "type": "food",
+      "nameKey": "um_spongeplant_item",
+      "related": [
+        "spoiled_food",
+        "um_spongeplant"
+      ],
+      "line": 211
+    },
+    {
+      "id": "um_spongeplant",
+      "type": "thing",
+      "nameKey": "um_spongeplant",
+      "related": [
+        "um_spongeplant_item",
+        "marble"
+      ],
+      "line": 212
+    },
+    {
+      "id": "snapalm",
+      "type": "item",
+      "nameKey": "snapalm",
+      "related": [],
+      "line": 214
+    },
+    {
+      "id": "snaildrakehat",
+      "type": "item",
+      "nameKey": "snaildrakehat",
+      "related": [
+        "snaildrake_magma",
+        "slurtle_shellpieces"
+      ],
+      "line": 215
+    },
+    {
+      "id": "snaildrakebucket",
+      "type": "item",
+      "nameKey": "snaildrakebucket",
+      "related": [
+        "snaildrake_slime",
+        "slurtle_shellpieces",
+        "pond",
+        "pond_cave",
+        "oasislake",
+        "lava_pond"
+      ],
+      "line": 216
+    },
+    {
+      "id": "snaildrake_hole",
+      "type": "thing",
+      "nameKey": "snaildrake_hole",
+      "related": [
+        "snaildrake_slime",
+        "snaildrake_magma"
+      ],
+      "line": 217
+    },
+    {
+      "id": "snaildrake_slime",
+      "type": "creature",
+      "nameKey": "snaildrake_slime",
+      "related": [
+        "slurtle_shellpieces",
+        "snaildrakebucket",
+        "snapalm"
+      ],
+      "line": 218
+    },
+    {
+      "id": "snaildrake_magma",
+      "type": "creature",
+      "nameKey": "snaildrake_magma",
+      "related": [
+        "slurtle_shellpieces",
+        "snaildrakebucket",
+        "snapalm"
+      ],
+      "line": 219
+    },
+    {
+      "id": "boulder_crab",
+      "type": "creature",
+      "nameKey": "boulder_crab",
+      "related": [
+        "rock1",
+        "rock2",
+        "rock_moon",
+        "rock_flintless",
+        "springrock1",
+        "springrock2",
+        "springrock3",
+        "meat",
+        "rocks"
+      ],
+      "line": 221
+    },
+    {
+      "id": "trapdoor",
+      "type": "thing",
+      "nameKey": "trapdoor",
+      "related": [
+        "rocks",
+        "spider_trapdoor"
+      ],
+      "line": 224
+    },
+    {
+      "id": "spider_trapdoor",
+      "type": "creature",
+      "nameKey": "spider_trapdoor",
+      "related": [
+        "monstermeat",
+        "spidergland",
+        "trapdoor",
+        "trapdoorgrass"
+      ],
+      "line": 225
+    },
+    {
+      "id": "mutator_trapdoor",
+      "type": "food",
+      "nameKey": "mutator_trapdoor",
+      "related": [
+        "cutgrass",
+        "monstermeat",
+        "spidergland",
+        "spider_trapdoor"
+      ],
+      "line": 226
+    },
+    {
+      "id": "trapdoorgrass",
+      "type": "thing",
+      "nameKey": "trapdoorgrass",
+      "related": [
+        "cutgrass",
+        "dug_grass",
+        "trapdoor"
+      ],
+      "line": 227
+    },
+    {
+      "id": "monstersmallmeat",
+      "type": "food",
+      "nameKey": "monstersmallmeat",
+      "related": [
+        "spoiled_food",
+        "meatrack",
+        "meatrack_hermit",
+        "meatrack_hermit_multi"
+      ],
+      "line": 229
+    },
+    {
+      "id": "cookedmonstersmallmeat",
+      "type": "food",
+      "nameKey": "cookedmonstersmallmeat",
+      "related": [
+        "spoiled_food",
+        "monstersmallmeat"
+      ],
+      "line": 230
+    },
+    {
+      "id": "monstersmallmeat_dried",
+      "type": "food",
+      "nameKey": "monstersmallmeat_dried",
+      "related": [
+        "spoiled_food",
+        "meatrack",
+        "meatrack_hermit",
+        "meatrack_hermit_multi",
+        "monstersmallmeat"
+      ],
+      "line": 231
+    },
+    {
+      "id": "um_monsteregg",
+      "type": "food",
+      "nameKey": "um_monsteregg",
+      "related": [
+        "um_monsteregg_cooked",
+        "rottenegg",
+        "birdcage"
+      ],
+      "line": 233
+    },
+    {
+      "id": "um_monsteregg_cooked",
+      "type": "food",
+      "nameKey": "um_monsteregg_cooked",
+      "related": [
+        "spoiled_food"
+      ],
+      "line": 234
+    },
+    {
+      "id": "um_blowdart_rime",
+      "type": "item",
+      "nameKey": "um_blowdart_rime",
+      "related": [
+        "um_rimeweed_itemvine",
+        "cutreeds",
+        "feather_robin_winter",
+        "researchlab2"
+      ],
+      "line": 237
+    },
+    {
+      "id": "rimeweed_barrier",
+      "type": "creature",
+      "nameKey": "rimeweed_barrier",
+      "related": [
+        "rimeweed_main"
+      ],
+      "line": 239
+    },
+    {
+      "id": "rimeweed_main",
+      "type": "creature",
+      "nameKey": "rimeweed_main",
+      "related": [
+        "rimeweed_barrier",
+        "um_rimeweed_itemvine"
+      ],
+      "line": 240
+    },
+    {
+      "id": "snowmong",
+      "type": "creature",
+      "nameKey": "snowmong",
+      "related": [
+        "snowball_item",
+        "um_ice_tail",
+        "charcoal",
+        "ice"
+      ],
+      "line": 241
+    },
+    {
+      "id": "snowpile",
+      "type": "thing",
+      "nameKey": "snowpile",
+      "related": [
+        "snowmong",
+        "snowball_item"
+      ],
+      "line": 242
+    },
+    {
+      "id": "glacialhound",
+      "type": "creature",
+      "nameKey": "glacialhound",
+      "related": [
+        "houndstooth",
+        "monstermeat",
+        "ice",
+        "bluegem",
+        "torch",
+        "blowdart_fire",
+        "firestaff",
+        "lighter",
+        "um_gemologyredgem2"
+      ],
+      "line": 243
+    },
+    {
+      "id": "um_hat_rime",
+      "type": "item",
+      "nameKey": "um_hat_rime",
+      "related": [
+        "um_ice_tail",
+        "um_rimeweed_itemvine",
+        "rocks",
+        "researchlab2"
+      ],
+      "line": 245
+    },
+    {
+      "id": "um_ice_tail",
+      "type": "item",
+      "nameKey": "um_ice_tail",
+      "related": [],
+      "line": 246
+    },
+    {
+      "id": "um_ice_sicle",
+      "type": "item",
+      "nameKey": "um_ice_sicle",
+      "related": [
+        "icestaff",
+        "livinglog",
+        "um_rimeweed_itemflower"
+      ],
+      "line": 247
+    },
+    {
+      "id": "saltpack",
+      "type": "item",
+      "nameKey": "saltpack",
+      "related": [
+        "saltrock",
+        "gears",
+        "boards",
+        "snowpile"
+      ],
+      "line": 248
+    },
+    {
+      "id": "snowgoggles",
+      "type": "item",
+      "nameKey": "snowgoggles",
+      "related": [
+        "goggleshat",
+        "beefalowool",
+        "catcoonhat",
+        "researchlab3"
+      ],
+      "line": 249
+    },
+    {
+      "id": "um_armor_bramble_rimeweed",
+      "type": "item",
+      "nameKey": "um_armor_bramble_rimeweed",
+      "related": [
+        "um_rimeweed_itemflower",
+        "um_rimeweed_itemvine",
+        "armor_bramble"
+      ],
+      "line": 250
+    },
+    {
+      "id": "um_rimeweed_itemvine",
+      "type": "item",
+      "nameKey": "um_rimeweed_itemvine",
+      "related": [
+        "twigs",
+        "rimeweed_barrier"
+      ],
+      "line": 251
+    },
+    {
+      "id": "um_rimeweed_itemflower",
+      "type": "item",
+      "nameKey": "um_rimeweed_itemflower",
+      "related": [
+        "spoiled_food",
+        "rimeweed_main"
+      ],
+      "line": 252
+    },
+    {
+      "id": "um_rimeweed_icepack",
+      "type": "item",
+      "nameKey": "um_rimeweed_icepack",
+      "related": [
+        "papyrus",
+        "ice",
+        "researchlab2",
+        "um_rimeweed_itemvine"
+      ],
+      "line": 253
+    },
+    {
+      "id": "rimeweed_whip",
+      "type": "item",
+      "nameKey": "rimeweed_whip",
+      "related": [
+        "rimeweed_main",
+        "um_rimeweed_itemvine"
+      ],
+      "line": 254
+    },
+    {
+      "id": "gloomcap",
+      "type": "food",
+      "nameKey": "gloomcap",
+      "related": [
+        "mushtree_shadow",
+        "spoiled_food",
+        "gloomcap_cooked"
+      ],
+      "line": 257
+    },
+    {
+      "id": "gloomcap_cooked",
+      "type": "food",
+      "nameKey": "gloomcap_cooked",
+      "related": [
+        "mushtree_shadow",
+        "spoiled_food"
+      ],
+      "line": 258
+    },
+    {
+      "id": "mushtree_shadow",
+      "type": "thing",
+      "nameKey": "mushtree_shadow",
+      "related": [
+        "log",
+        "gloomcap"
+      ],
+      "line": 260
+    },
+    {
+      "id": "um_fyrite",
+      "type": "item",
+      "nameKey": "um_fyrite",
+      "related": [
+        "fyriterock",
+        "um_pyrite_ceiling"
+      ],
+      "line": 261
+    },
+    {
+      "id": "um_ghost_pepper_item",
+      "type": "item",
+      "nameKey": "um_ghost_pepper_item",
+      "related": [
+        "pepper",
+        "um_ghost_pepper"
+      ],
+      "line": 262
+    },
+    {
+      "id": "viperfruit_lesser",
+      "type": "item",
+      "nameKey": "viperfruit_lesser",
+      "related": [],
+      "line": 263
+    },
+    {
+      "id": "viperfruit",
+      "type": "item",
+      "nameKey": "viperfruit",
+      "related": [],
+      "line": 264
+    },
+    {
+      "id": "um_flamethrower",
+      "type": "item",
+      "nameKey": "um_flamethrower",
+      "related": [
+        "pepper",
+        "um_ghost_fajita",
+        "spice_chili",
+        "firenettles",
+        "firenettles_dried",
+        "um_rimeweed_itemflower",
+        "um_ghost_pepper_item",
+        "um_fyrite",
+        "rocks",
+        "um_pepperdragon_bladder"
+      ],
+      "line": 265
+    },
+    {
+      "id": "um_hat_pepperdragon",
+      "type": "item",
+      "nameKey": "um_hat_pepperdragon",
+      "related": [
+        "um_pepperdragon_bladder",
+        "um_fyrite",
+        "redgem",
+        "researchlab3"
+      ],
+      "line": 266
+    },
+    {
+      "id": "um_fyre_bomb",
+      "type": "item",
+      "nameKey": "um_fyre_bomb",
+      "related": [
+        "twigs",
+        "rocks",
+        "um_fyrite",
+        "researchlab2"
+      ],
+      "line": 267
+    },
+    {
+      "id": "um_armor_pyre_nettles",
+      "type": "item",
+      "nameKey": "um_armor_pyre_nettles",
+      "related": [
+        "um_smolder_spore",
+        "firenettles",
+        "silk"
+      ],
+      "line": 268
+    },
+    {
+      "id": "um_pepperdragon_bladder",
+      "type": "item",
+      "nameKey": "um_pepperdragon_bladder",
+      "related": [
+        "um_pepperdragon"
+      ],
+      "line": 269
+    },
+    {
+      "id": "um_firecream",
+      "type": "item",
+      "nameKey": "um_firecream",
+      "related": [
+        "um_pepperdragon_bladder",
+        "um_ghost_pepper_item",
+        "firenettles_dried",
+        "researchlab2"
+      ],
+      "line": 270
+    },
+    {
+      "id": "um_blowdart_pyre",
+      "type": "item",
+      "nameKey": "um_blowdart_pyre",
+      "related": [
+        "um_smolder_spore",
+        "firenettles",
+        "cutreeds",
+        "researchlab2"
+      ],
+      "line": 271
+    },
+    {
+      "id": "um_smolder_spore",
+      "type": "item",
+      "nameKey": "um_smolder_spore",
+      "related": [
+        "um_pyre_nettles"
+      ],
+      "line": 272
+    },
+    {
+      "id": "um_pyre_nettles",
+      "type": "thing",
+      "nameKey": "um_pyre_nettles",
+      "related": [
+        "firenettles"
+      ],
+      "line": 273
+    },
+    {
+      "id": "magmarock1",
+      "type": "thing",
+      "nameKey": "magmarock1",
+      "related": [
+        "goldnugget",
+        "flint",
+        "fossil_piece",
+        "redgem",
+        "rocks"
+      ],
+      "line": 274
+    },
+    {
+      "id": "magmabone",
+      "type": "thing",
+      "nameKey": "magmabone",
+      "related": [
+        "houndstooth",
+        "boneshard",
+        "fossil_piece"
+      ],
+      "line": 275
+    },
+    {
+      "id": "um_pyrite_ceiling",
+      "type": "thing",
+      "nameKey": "um_pyrite_ceiling",
+      "related": [
+        "um_fyrite"
+      ],
+      "line": 276
+    },
+    {
+      "id": "um_ribopod",
+      "type": "creature",
+      "nameKey": "um_ribopod",
+      "related": [
+        "fishmeat_small",
+        "boneshard",
+        "um_ribopodden"
+      ],
+      "line": 277
+    },
+    {
+      "id": "um_ribopodden",
+      "type": "thing",
+      "nameKey": "um_ribopodden",
+      "related": [
+        "boneshard",
+        "rocks",
+        "researchlab3"
+      ],
+      "line": 278
+    },
+    {
+      "id": "um_ghost_pepper",
+      "type": "thing",
+      "nameKey": "um_ghost_pepper",
+      "related": [],
+      "line": 279
+    },
+    {
+      "id": "fyriterock",
+      "type": "thing",
+      "nameKey": "fyriterock",
+      "related": [
+        "rocks",
+        "flint",
+        "redgem",
+        "fossil_piece",
+        "um_fyrite"
+      ],
+      "line": 280
+    },
+    {
+      "id": "viperfruit_plant",
+      "type": "thing",
+      "nameKey": "viperfruit_plant",
+      "related": [
+        "viperling",
+        "viperfruit_lesser"
+      ],
+      "line": 281
+    },
+    {
+      "id": "viperworm",
+      "type": "creature",
+      "nameKey": "viperworm",
+      "related": [
+        "monstermeat",
+        "viperfruit",
+        "viperling"
+      ],
+      "line": 282
+    },
+    {
+      "id": "viperling",
+      "type": "creature",
+      "nameKey": "viperling",
+      "related": [],
+      "line": 283
+    },
+    {
+      "id": "ruins_statue_miner",
+      "type": "thing",
+      "nameKey": "ancient_statue",
+      "related": [
+        "nightmarefuel",
+        "thulecite"
+      ],
+      "line": 284
+    },
+    {
+      "id": "um_pepperdragon_nest",
+      "type": "thing",
+      "nameKey": "um_pepperdragon_nest",
+      "related": [
+        "um_pepperdragon",
+        "firenettles",
+        "boneshard"
+      ],
+      "line": 285
+    },
+    {
+      "id": "um_pepperdragon",
+      "type": "giant",
+      "nameKey": "um_pepperdragon",
+      "related": [
+        "meat",
+        "um_pepperdragon_bladder",
+        "mitegland"
+      ],
+      "line": 286
+    },
+    {
+      "id": "marsh_grass",
+      "type": "thing",
+      "nameKey": "marsh_grass",
+      "related": [],
+      "line": 289
+    },
+    {
+      "id": "riceplant",
+      "type": "thing",
+      "nameKey": "riceplant1",
+      "related": [
+        "rice"
+      ],
+      "line": 290
+    },
+    {
+      "id": "rice",
+      "type": "food",
+      "nameKey": "rice1",
+      "related": [
+        "rice_cooked"
+      ],
+      "line": 291
+    },
+    {
+      "id": "rice_cooked",
+      "type": "food",
+      "nameKey": "rice_cooked1",
+      "related": [
+        "spoiled_food"
+      ],
+      "line": 292
+    },
+    {
+      "id": "uncompromising_toad",
+      "type": "entity",
+      "nameKey": "uncompromising_toad",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_toad.lua",
+      "line": 142
+    },
+    {
+      "id": "sporecloud_toad",
+      "type": "entity",
+      "nameKey": "sporecloud_toad",
+      "related": [],
+      "file": "scripts/prefabs/sporecloud_toad.lua",
+      "line": 433
+    },
+    {
+      "id": "uncompromising_rat",
+      "type": "entity",
+      "nameKey": "uncompromising_rat",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_rat.lua",
+      "line": 2229
+    },
+    {
+      "id": "uncompromising_packrat",
+      "type": "entity",
+      "nameKey": "uncompromising_packrat",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_rat.lua",
+      "line": 2231
+    },
+    {
+      "id": "uncompromising_ratherd",
+      "type": "entity",
+      "nameKey": "uncompromising_ratherd",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_rat.lua",
+      "line": 2232
+    },
+    {
+      "id": "uncompromising_ratburrow",
+      "type": "entity",
+      "nameKey": "uncompromising_ratburrow",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_rat.lua",
+      "line": 2233
+    },
+    {
+      "id": "uncompromising_winkyburrow",
+      "type": "entity",
+      "nameKey": "uncompromising_winkyburrow",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_rat.lua",
+      "line": 2234
+    },
+    {
+      "id": "uncompromising_winkyhomeburrow",
+      "type": "entity",
+      "nameKey": "uncompromising_winkyhomeburrow",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_rat.lua",
+      "line": 2236
+    },
+    {
+      "id": "hat_ratmask",
+      "type": "entity",
+      "nameKey": "hat_ratmask",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_rat.lua",
+      "line": 2244
+    },
+    {
+      "id": "ratpoisonbottle",
+      "type": "entity",
+      "nameKey": "ratpoisonbottle",
+      "related": [],
+      "file": "scripts/prefabs/ratpoison.lua",
+      "line": 157
+    },
+    {
+      "id": "ratpoison",
+      "type": "entity",
+      "nameKey": "ratpoison",
+      "related": [],
+      "file": "scripts/prefabs/ratpoison.lua",
+      "line": 158
+    },
+    {
+      "id": "gasmask",
+      "type": "entity",
+      "nameKey": "gasmask",
+      "related": [],
+      "file": "scripts/prefabs/gasmask.lua",
+      "line": 108
+    },
+    {
+      "id": "um_spiderqueencorpse",
+      "type": "entity",
+      "nameKey": "um_spiderqueencorpse",
+      "related": [],
+      "file": "scripts/prefabs/um_spiderqueencorpse.lua",
+      "line": 135
+    },
+    {
+      "id": "moonmaw_glass",
+      "type": "entity",
+      "nameKey": "moonmaw_glass",
+      "related": [],
+      "file": "scripts/prefabs/moonmaw_glass.lua",
+      "line": 157
+    },
+    {
+      "id": "armor_glassmail_shards",
+      "type": "entity",
+      "nameKey": "armor_glassmail_shards",
+      "related": [],
+      "file": "scripts/prefabs/armor_glassmail_shards.lua",
+      "line": 146
+    },
+    {
+      "id": "um_lavaspit_sludge",
+      "type": "entity",
+      "nameKey": "um_lavaspit_sludge",
+      "related": [],
+      "file": "scripts/prefabs/um_lavaspit_projectiles.lua",
+      "line": 722
+    },
+    {
+      "id": "um_snaildrake_magma_sludge",
+      "type": "entity",
+      "nameKey": "um_snaildrake_magma_sludge",
+      "related": [],
+      "file": "scripts/prefabs/um_lavaspit_projectiles.lua",
+      "line": 726
+    },
+    {
+      "id": "leechswarm",
+      "type": "entity",
+      "nameKey": "leechswarm",
+      "related": [],
+      "file": "scripts/prefabs/leechswarm.lua",
+      "line": 166
+    },
+    {
+      "id": "minotaur_boulder",
+      "type": "entity",
+      "nameKey": "minotaur_boulder",
+      "related": [],
+      "file": "scripts/prefabs/minotaur_boulder.lua",
+      "line": 647
+    },
+    {
+      "id": "minotaur_boulder_big",
+      "type": "entity",
+      "nameKey": "minotaur_boulder_big",
+      "related": [],
+      "file": "scripts/prefabs/minotaur_boulder_big.lua",
+      "line": 649
+    },
+    {
+      "id": "bushcrab",
+      "type": "entity",
+      "nameKey": "bushcrab",
+      "related": [],
+      "file": "scripts/prefabs/bushcrab.lua",
+      "line": 206
+    },
+    {
+      "id": "dreadeye",
+      "type": "entity",
+      "nameKey": "dreadeye",
+      "related": [],
+      "file": "scripts/prefabs/dreadeye.lua",
+      "line": 1088
+    },
+    {
+      "id": "creepingfear",
+      "type": "entity",
+      "nameKey": "creepingfear",
+      "related": [],
+      "file": "scripts/prefabs/creepingfear.lua",
+      "line": 397
+    },
+    {
+      "id": "iceboomerang",
+      "type": "entity",
+      "nameKey": "iceboomerang",
+      "related": [],
+      "file": "scripts/prefabs/iceboomerang.lua",
+      "line": 210
+    },
+    {
+      "id": "diseasecurebomb",
+      "type": "entity",
+      "nameKey": "diseasecurebomb",
+      "related": [],
+      "file": "scripts/prefabs/diseasecure.lua",
+      "line": 488
+    },
+    {
+      "id": "sporepack",
+      "type": "entity",
+      "nameKey": "sporepack",
+      "related": [],
+      "file": "scripts/prefabs/sporepack.lua",
+      "line": 128
+    },
+    {
+      "id": "rat_tail",
+      "type": "entity",
+      "nameKey": "rat_tail",
+      "related": [],
+      "file": "scripts/prefabs/rat_tail.lua",
+      "line": 51
+    },
+    {
+      "id": "shroom_skin_fragment",
+      "type": "entity",
+      "nameKey": "shroom_skin_fragment",
+      "related": [],
+      "file": "scripts/prefabs/shroom_skin_fragment.lua",
+      "line": 45
+    },
+    {
+      "id": "plaguemask",
+      "type": "entity",
+      "nameKey": "plaguemask",
+      "related": [],
+      "file": "scripts/prefabs/plaguemask.lua",
+      "line": 105
+    },
+    {
+      "id": "lavaeslime",
+      "type": "entity",
+      "nameKey": "lavaeslime",
+      "related": [],
+      "file": "scripts/prefabs/lavaeslime.lua",
+      "line": 97
+    },
+    {
+      "id": "air_conditioner",
+      "type": "entity",
+      "nameKey": "air_conditioner",
+      "related": [],
+      "file": "scripts/prefabs/air_conditioner.lua",
+      "line": 422
+    },
+    {
+      "id": "shadow_goo",
+      "type": "entity",
+      "nameKey": "shadow_goo",
+      "related": [],
+      "file": "scripts/prefabs/shadow_goo.lua",
+      "line": 387
+    },
+    {
+      "id": "mini_dreadeye",
+      "type": "entity",
+      "nameKey": "mini_dreadeye",
+      "related": [],
+      "file": "scripts/prefabs/mini_dreadeye.lua",
+      "line": 273
+    },
+    {
+      "id": "rock_lichen",
+      "type": "entity",
+      "nameKey": "rock_lichen",
+      "related": [],
+      "file": "scripts/prefabs/rock_lichen.lua",
+      "line": 42
+    },
+    {
+      "id": "boulder_crab_hole",
+      "type": "entity",
+      "nameKey": "boulder_crab_hole",
+      "related": [],
+      "file": "scripts/prefabs/boulder_crab.lua",
+      "line": 387
+    },
+    {
+      "id": "um_vampirebat",
+      "type": "entity",
+      "nameKey": "um_vampirebat",
+      "related": [],
+      "file": "scripts/prefabs/um_vampirebat.lua",
+      "line": 464
+    },
+    {
+      "id": "zaspberryparfait",
+      "type": "entity",
+      "nameKey": "zaspberryparfait",
+      "related": [],
+      "file": "scripts/prefabs/zaspberryparfait.lua",
+      "line": 66
+    },
+    {
+      "id": "carapacecooler",
+      "type": "entity",
+      "nameKey": "carapacecooler",
+      "related": [],
+      "file": "scripts/prefabs/carapacecooler.lua",
+      "line": 60
+    },
+    {
+      "id": "honey_log",
+      "type": "entity",
+      "nameKey": "honey_log",
+      "related": [],
+      "file": "scripts/prefabs/honey_log.lua",
+      "line": 80
+    },
+    {
+      "id": "pollenmites",
+      "type": "entity",
+      "nameKey": "pollenmites",
+      "related": [],
+      "file": "scripts/prefabs/pollenmites.lua",
+      "line": 256
+    },
+    {
+      "id": "bugzapper",
+      "type": "entity",
+      "nameKey": "bugzapper",
+      "related": [],
+      "file": "scripts/prefabs/bugzapper.lua",
+      "line": 247
+    },
+    {
+      "id": "moon_tear",
+      "type": "entity",
+      "nameKey": "moon_tear",
+      "related": [],
+      "file": "scripts/prefabs/moon_tear.lua",
+      "line": 67
+    },
+    {
+      "id": "rneghost",
+      "type": "entity",
+      "nameKey": "rneghost",
+      "related": [],
+      "file": "scripts/prefabs/rneghost.lua",
+      "line": 223
+    },
+    {
+      "id": "chimp",
+      "type": "entity",
+      "nameKey": "chimp",
+      "related": [],
+      "file": "scripts/prefabs/chimp.lua",
+      "line": 444
+    },
+    {
+      "id": "pollenmiteden",
+      "type": "entity",
+      "nameKey": "pollenmiteden",
+      "related": [],
+      "file": "scripts/prefabs/pollenmiteden.lua",
+      "line": 496
+    },
+    {
+      "id": "sunglasses",
+      "type": "entity",
+      "nameKey": "sunglasses",
+      "related": [],
+      "file": "scripts/prefabs/sunglasses.lua",
+      "line": 78
+    },
+    {
+      "id": "skeletonmeat",
+      "type": "entity",
+      "nameKey": "skeletonmeat",
+      "related": [],
+      "file": "scripts/prefabs/skeletonmeat.lua",
+      "line": 46
+    },
+    {
+      "id": "um_shadow_wendy",
+      "type": "entity",
+      "nameKey": "um_shadow_wendy",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1245
+    },
+    {
+      "id": "um_shadow_wickerbottom",
+      "type": "entity",
+      "nameKey": "um_shadow_wickerbottom",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1246
+    },
+    {
+      "id": "um_shadow_wolfgang",
+      "type": "entity",
+      "nameKey": "um_shadow_wolfgang",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1247
+    },
+    {
+      "id": "um_shadow_walter",
+      "type": "entity",
+      "nameKey": "um_shadow_walter",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1248
+    },
+    {
+      "id": "um_shadow_wes",
+      "type": "entity",
+      "nameKey": "um_shadow_wes",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1249
+    },
+    {
+      "id": "um_shadow_wortox",
+      "type": "entity",
+      "nameKey": "um_shadow_wortox",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1250
+    },
+    {
+      "id": "um_shadow_willow",
+      "type": "entity",
+      "nameKey": "um_shadow_willow",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1251
+    },
+    {
+      "id": "um_shadow_warly",
+      "type": "entity",
+      "nameKey": "um_shadow_warly",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1252
+    },
+    {
+      "id": "um_shadow_winky",
+      "type": "entity",
+      "nameKey": "um_shadow_winky",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1253
+    },
+    {
+      "id": "um_shadow_woodie",
+      "type": "entity",
+      "nameKey": "um_shadow_woodie",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1254
+    },
+    {
+      "id": "um_shadow_wanda",
+      "type": "entity",
+      "nameKey": "um_shadow_wanda",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1255
+    },
+    {
+      "id": "um_shadow_wathgrithr",
+      "type": "entity",
+      "nameKey": "um_shadow_wathgrithr",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters.lua",
+      "line": 1256
+    },
+    {
+      "id": "swilson",
+      "type": "entity",
+      "nameKey": "swilson",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters_temp.lua",
+      "line": 474
+    },
+    {
+      "id": "swathgrithr",
+      "type": "entity",
+      "nameKey": "swathgrithr",
+      "related": [],
+      "file": "scripts/prefabs/um_shadow_characters_temp.lua",
+      "line": 475
+    },
+    {
+      "id": "critterlab_real",
+      "type": "entity",
+      "nameKey": "critterlab_real",
+      "related": [],
+      "file": "scripts/prefabs/critterlab_real.lua",
+      "line": 151
+    },
+    {
+      "id": "critterlab_real_broken",
+      "type": "entity",
+      "nameKey": "critterlab_real_broken",
+      "related": [],
+      "file": "scripts/prefabs/critterlab_real.lua",
+      "line": 152
+    },
+    {
+      "id": "charliephonograph_100",
+      "type": "entity",
+      "nameKey": "charliephonograph_100",
+      "related": [],
+      "file": "scripts/prefabs/charliephonograph.lua",
+      "line": 188
+    },
+    {
+      "id": "stumpling",
+      "type": "entity",
+      "nameKey": "stumpling",
+      "related": [],
+      "file": "scripts/prefabs/stumpling.lua",
+      "line": 217
+    },
+    {
+      "id": "birchling",
+      "type": "entity",
+      "nameKey": "birchling",
+      "related": [],
+      "file": "scripts/prefabs/stumpling.lua",
+      "line": 218
+    },
+    {
+      "id": "shadow_teleporter",
+      "type": "entity",
+      "nameKey": "shadow_teleporter",
+      "related": [],
+      "file": "scripts/prefabs/shadow_teleporter.lua",
+      "line": 458
+    },
+    {
+      "id": "waxwell_pact_trader",
+      "type": "entity",
+      "nameKey": "waxwell_pact_trader",
+      "related": [],
+      "file": "scripts/prefabs/shadow_teleporter.lua",
+      "line": 459
+    },
+    {
+      "id": "shadow_crown",
+      "type": "entity",
+      "nameKey": "shadow_crown",
+      "related": [],
+      "file": "scripts/prefabs/shadow_crown.lua",
+      "line": 108
+    },
+    {
+      "id": "lureplague_rat",
+      "type": "entity",
+      "nameKey": "lureplague_rat",
+      "related": [],
+      "file": "scripts/prefabs/lureplague_rat.lua",
+      "line": 177
+    },
+    {
+      "id": "wicker_tentacle",
+      "type": "entity",
+      "nameKey": "wicker_tentacle",
+      "related": [],
+      "file": "scripts/prefabs/wicker_tentacle.lua",
+      "line": 146
+    },
+    {
+      "id": "snapperturtle",
+      "type": "entity",
+      "nameKey": "snapperturtle",
+      "related": [],
+      "file": "scripts/prefabs/snapperturtle.lua",
+      "line": 240
+    },
+    {
+      "id": "snapperturtlebaby",
+      "type": "entity",
+      "nameKey": "snapperturtlebaby",
+      "related": [],
+      "file": "scripts/prefabs/snapperturtle.lua",
+      "line": 241
+    },
+    {
+      "id": "snapperturtlenest",
+      "type": "entity",
+      "nameKey": "snapperturtlenest",
+      "related": [],
+      "file": "scripts/prefabs/snapperturtlenest.lua",
+      "line": 198
+    },
+    {
+      "id": "widow_web_combat",
+      "type": "entity",
+      "nameKey": "widow_web_combat",
+      "related": [],
+      "file": "scripts/prefabs/web_bomb.lua",
+      "line": 412
+    },
+    {
+      "id": "blueberryflower",
+      "type": "entity",
+      "nameKey": "blueberryflower",
+      "related": [],
+      "file": "scripts/prefabs/blueberryplant.lua",
+      "line": 587
+    },
+    {
+      "id": "lightninghound",
+      "type": "entity",
+      "nameKey": "lightninghound",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_hounds.lua",
+      "line": 1304
+    },
+    {
+      "id": "magmahound",
+      "type": "entity",
+      "nameKey": "magmahound",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_hounds.lua",
+      "line": 1307
+    },
+    {
+      "id": "sporehound",
+      "type": "entity",
+      "nameKey": "sporehound",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_hounds.lua",
+      "line": 1308
+    },
+    {
+      "id": "rnehound",
+      "type": "entity",
+      "nameKey": "rnehound",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_hounds.lua",
+      "line": 1309
+    },
+    {
+      "id": "hound_lightning",
+      "type": "entity",
+      "nameKey": "hound_lightning",
+      "related": [],
+      "file": "scripts/prefabs/hound_lightning.lua",
+      "line": 139
+    },
+    {
+      "id": "pinepile",
+      "type": "entity",
+      "nameKey": "pinepile",
+      "related": [],
+      "file": "scripts/prefabs/pinepile.lua",
+      "line": 113
+    },
+    {
+      "id": "screecher_trinket",
+      "type": "entity",
+      "nameKey": "screecher_trinket",
+      "related": [],
+      "file": "scripts/prefabs/screecher_trinket.lua",
+      "line": 94
+    },
+    {
+      "id": "watermelon_lantern",
+      "type": "entity",
+      "nameKey": "watermelon_lantern",
+      "related": [],
+      "file": "scripts/prefabs/watermelon_lantern.lua",
+      "line": 263
+    },
+    {
+      "id": "ancient_trepidation",
+      "type": "entity",
+      "nameKey": "ancient_trepidation",
+      "related": [],
+      "file": "scripts/prefabs/ancient_trepidation.lua",
+      "line": 411
+    },
+    {
+      "id": "ancient_amulet_red",
+      "type": "entity",
+      "nameKey": "ancient_amulet_red",
+      "related": [],
+      "file": "scripts/prefabs/ancient_amulet_red.lua",
+      "line": 228
+    },
+    {
+      "id": "ancient_trepidation_arm",
+      "type": "entity",
+      "nameKey": "ancient_trepidation_arm",
+      "related": [],
+      "file": "scripts/prefabs/ancient_trepidation_arm.lua",
+      "line": 114
+    },
+    {
+      "id": "rat_whip",
+      "type": "entity",
+      "nameKey": "rat_whip",
+      "related": [],
+      "file": "scripts/prefabs/rat_whip.lua",
+      "line": 133
+    },
+    {
+      "id": "rneskeleton",
+      "type": "entity",
+      "nameKey": "rneskeleton",
+      "related": [],
+      "file": "scripts/prefabs/rneskeleton.lua",
+      "line": 190
+    },
+    {
+      "id": "viperlingfriend",
+      "type": "entity",
+      "nameKey": "viperlingfriend",
+      "related": [],
+      "file": "scripts/prefabs/viperworm.lua",
+      "line": 606
+    },
+    {
+      "id": "viperjam",
+      "type": "entity",
+      "nameKey": "viperjam",
+      "related": [],
+      "file": "scripts/prefabs/viperjam.lua",
+      "line": 61
+    },
+    {
+      "id": "bight",
+      "type": "entity",
+      "nameKey": "bight",
+      "related": [],
+      "file": "scripts/prefabs/bight.lua",
+      "line": 245
+    },
+    {
+      "id": "knook",
+      "type": "entity",
+      "nameKey": "knook",
+      "related": [],
+      "file": "scripts/prefabs/knook.lua",
+      "line": 146
+    },
+    {
+      "id": "roship",
+      "type": "entity",
+      "nameKey": "roship",
+      "related": [],
+      "file": "scripts/prefabs/roship.lua",
+      "line": 163
+    },
+    {
+      "id": "deerclops_barrier",
+      "type": "entity",
+      "nameKey": "deerclops_barrier",
+      "related": [],
+      "file": "scripts/prefabs/deerclops_barrier.lua",
+      "line": 113
+    },
+    {
+      "id": "um_pawn",
+      "type": "entity",
+      "nameKey": "um_pawn",
+      "related": [],
+      "file": "scripts/prefabs/um_pawn.lua",
+      "line": 563
+    },
+    {
+      "id": "um_pawn_nightmare",
+      "type": "entity",
+      "nameKey": "um_pawn_nightmare",
+      "related": [],
+      "file": "scripts/prefabs/um_pawn.lua",
+      "line": 564
+    },
+    {
+      "id": "corncan",
+      "type": "entity",
+      "nameKey": "corncan",
+      "related": [],
+      "file": "scripts/prefabs/corncan.lua",
+      "line": 42
+    },
+    {
+      "id": "skullchest_child",
+      "type": "entity",
+      "nameKey": "skullchest_child",
+      "related": [],
+      "file": "scripts/prefabs/skullchest.lua",
+      "line": 152
+    },
+    {
+      "id": "skullflask",
+      "type": "entity",
+      "nameKey": "skullflask",
+      "related": [],
+      "file": "scripts/prefabs/drink_with_the_living_dead.lua",
+      "line": 512
+    },
+    {
+      "id": "skullflask_empty",
+      "type": "entity",
+      "nameKey": "skullflask_empty",
+      "related": [],
+      "file": "scripts/prefabs/drink_with_the_living_dead.lua",
+      "line": 513
+    },
+    {
+      "id": "stanton_shadow_tonic",
+      "type": "entity",
+      "nameKey": "stanton_shadow_tonic",
+      "related": [],
+      "file": "scripts/prefabs/drink_with_the_living_dead.lua",
+      "line": 514
+    },
+    {
+      "id": "stanton",
+      "type": "entity",
+      "nameKey": "stanton",
+      "related": [],
+      "file": "scripts/prefabs/drink_with_the_living_dead.lua",
+      "line": 516
+    },
+    {
+      "id": "armorlavae",
+      "type": "entity",
+      "nameKey": "armorlavae",
+      "related": [],
+      "file": "scripts/prefabs/armorlavae.lua",
+      "line": 84
+    },
+    {
+      "id": "driftwoodfishingrod",
+      "type": "entity",
+      "nameKey": "driftwoodfishingrod",
+      "related": [],
+      "file": "scripts/prefabs/driftwoodfishingrod.lua",
+      "line": 87
+    },
+    {
+      "id": "shadowvortex",
+      "type": "entity",
+      "nameKey": "shadowvortex",
+      "related": [],
+      "file": "scripts/prefabs/shadowvortex.lua",
+      "line": 157
+    },
+    {
+      "id": "nervoustick",
+      "type": "entity",
+      "nameKey": "nervoustick",
+      "related": [],
+      "file": "scripts/prefabs/nervoustick.lua",
+      "line": 315
+    },
+    {
+      "id": "nervoustickden",
+      "type": "entity",
+      "nameKey": "nervoustickden",
+      "related": [],
+      "file": "scripts/prefabs/nervoustick.lua",
+      "line": 316
+    },
+    {
+      "id": "mindweaver",
+      "type": "entity",
+      "nameKey": "mindweaver",
+      "related": [],
+      "file": "scripts/prefabs/mindweaver.lua",
+      "line": 218
+    },
+    {
+      "id": "rne_grabbyshadows",
+      "type": "entity",
+      "nameKey": "rne_grabbyshadows",
+      "related": [],
+      "file": "scripts/prefabs/rneshadows.lua",
+      "line": 271
+    },
+    {
+      "id": "fuelseeker",
+      "type": "entity",
+      "nameKey": "fuelseeker",
+      "related": [],
+      "file": "scripts/prefabs/fuelseeker.lua",
+      "line": 282
+    },
+    {
+      "id": "um_heckler",
+      "type": "entity",
+      "nameKey": "um_heckler",
+      "related": [],
+      "file": "scripts/prefabs/um_heckler.lua",
+      "line": 157
+    },
+    {
+      "id": "rnemushroombomb",
+      "type": "entity",
+      "nameKey": "rnemushroombomb",
+      "related": [],
+      "file": "scripts/prefabs/rnemushroombomb.lua",
+      "line": 247
+    },
+    {
+      "id": "um_inkubator",
+      "type": "entity",
+      "nameKey": "um_inkubator",
+      "related": [],
+      "file": "scripts/prefabs/um_inkubator.lua",
+      "line": 686
+    },
+    {
+      "id": "um_scrapper",
+      "type": "entity",
+      "nameKey": "um_scrapper",
+      "related": [],
+      "file": "scripts/prefabs/um_scrapper.lua",
+      "line": 383
+    },
+    {
+      "id": "um_meat_cube",
+      "type": "entity",
+      "nameKey": "um_meat_cube",
+      "related": [],
+      "file": "scripts/prefabs/um_food_cubes.lua",
+      "line": 143
+    },
+    {
+      "id": "um_monster_cube",
+      "type": "entity",
+      "nameKey": "um_monster_cube",
+      "related": [],
+      "file": "scripts/prefabs/um_food_cubes.lua",
+      "line": 144
+    },
+    {
+      "id": "um_veggie_cube",
+      "type": "entity",
+      "nameKey": "um_veggie_cube",
+      "related": [],
+      "file": "scripts/prefabs/um_food_cubes.lua",
+      "line": 145
+    },
+    {
+      "id": "um_sugar_cube",
+      "type": "entity",
+      "nameKey": "um_sugar_cube",
+      "related": [],
+      "file": "scripts/prefabs/um_food_cubes.lua",
+      "line": 146
+    },
+    {
+      "id": "um_roughage_cube",
+      "type": "entity",
+      "nameKey": "um_roughage_cube",
+      "related": [],
+      "file": "scripts/prefabs/um_food_cubes.lua",
+      "line": 147
+    },
+    {
+      "id": "um_bland_cube",
+      "type": "entity",
+      "nameKey": "um_bland_cube",
+      "related": [],
+      "file": "scripts/prefabs/um_food_cubes.lua",
+      "line": 148
+    },
+    {
+      "id": "um_nightcrawler",
+      "type": "entity",
+      "nameKey": "um_nightcrawler",
+      "related": [],
+      "file": "scripts/prefabs/um_nightcrawler.lua",
+      "line": 266
+    },
+    {
+      "id": "hat_bagmask",
+      "type": "entity",
+      "nameKey": "hat_bagmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 819
+    },
+    {
+      "id": "hat_blackcatmask",
+      "type": "entity",
+      "nameKey": "hat_blackcatmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 820
+    },
+    {
+      "id": "hat_clownmask",
+      "type": "entity",
+      "nameKey": "hat_clownmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 821
+    },
+    {
+      "id": "hat_wathommask",
+      "type": "entity",
+      "nameKey": "hat_wathommask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 822
+    },
+    {
+      "id": "hat_devilmask",
+      "type": "entity",
+      "nameKey": "hat_devilmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 823
+    },
+    {
+      "id": "hat_fiendmask",
+      "type": "entity",
+      "nameKey": "hat_fiendmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 824
+    },
+    {
+      "id": "hat_ghostmask",
+      "type": "entity",
+      "nameKey": "hat_ghostmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 825
+    },
+    {
+      "id": "hat_globmask",
+      "type": "entity",
+      "nameKey": "hat_globmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 826
+    },
+    {
+      "id": "hat_hockeymask",
+      "type": "entity",
+      "nameKey": "hat_hockeymask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 827
+    },
+    {
+      "id": "hat_joyousmask",
+      "type": "entity",
+      "nameKey": "hat_joyousmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 828
+    },
+    {
+      "id": "hat_mermmask",
+      "type": "entity",
+      "nameKey": "hat_mermmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 829
+    },
+    {
+      "id": "hat_oozemask",
+      "type": "entity",
+      "nameKey": "hat_oozemask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 830
+    },
+    {
+      "id": "hat_orangecatmask",
+      "type": "entity",
+      "nameKey": "hat_orangecatmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 831
+    },
+    {
+      "id": "hat_phantommask",
+      "type": "entity",
+      "nameKey": "hat_phantommask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 832
+    },
+    {
+      "id": "hat_pigmask",
+      "type": "entity",
+      "nameKey": "hat_pigmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 833
+    },
+    {
+      "id": "hat_pumpgoremask",
+      "type": "entity",
+      "nameKey": "hat_pumpgoremask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 834
+    },
+    {
+      "id": "hat_redskullmask",
+      "type": "entity",
+      "nameKey": "hat_redskullmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 835
+    },
+    {
+      "id": "hat_skullmask",
+      "type": "entity",
+      "nameKey": "hat_skullmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 836
+    },
+    {
+      "id": "hat_spectremask",
+      "type": "entity",
+      "nameKey": "hat_spectremask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 837
+    },
+    {
+      "id": "hat_whitecatmask",
+      "type": "entity",
+      "nameKey": "hat_whitecatmask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 838
+    },
+    {
+      "id": "hat_technomask",
+      "type": "entity",
+      "nameKey": "hat_technomask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 839
+    },
+    {
+      "id": "hat_mandrakemask",
+      "type": "entity",
+      "nameKey": "hat_mandrakemask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 840
+    },
+    {
+      "id": "hat_opossummask",
+      "type": "entity",
+      "nameKey": "hat_opossummask",
+      "related": [],
+      "file": "scripts/prefabs/wackymask.lua",
+      "line": 841
+    },
+    {
+      "id": "rne_goodiebag",
+      "type": "entity",
+      "nameKey": "rne_goodiebag",
+      "related": [],
+      "file": "scripts/prefabs/rne_goodiebag.lua",
+      "line": 175
+    },
+    {
+      "id": "rain_horn",
+      "type": "entity",
+      "nameKey": "rain_horn",
+      "related": [],
+      "file": "scripts/prefabs/rain_horn.lua",
+      "line": 163
+    },
+    {
+      "id": "dormant_rain_horn",
+      "type": "entity",
+      "nameKey": "dormant_rain_horn",
+      "related": [],
+      "file": "scripts/prefabs/rain_horn.lua",
+      "line": 164
+    },
+    {
+      "id": "floral_bandage",
+      "type": "entity",
+      "nameKey": "floral_bandage",
+      "related": [],
+      "file": "scripts/prefabs/floral_bandage.lua",
+      "line": 59
+    },
+    {
+      "id": "pied_rat",
+      "type": "entity",
+      "nameKey": "pied_rat",
+      "related": [],
+      "file": "scripts/prefabs/pied_rat.lua",
+      "line": 206
+    },
+    {
+      "id": "pied_piper_flute",
+      "type": "entity",
+      "nameKey": "pied_piper_flute",
+      "related": [],
+      "file": "scripts/prefabs/pied_piper_flute.lua",
+      "line": 93
+    },
+    {
+      "id": "oculet",
+      "type": "entity",
+      "nameKey": "oculet",
+      "related": [],
+      "file": "scripts/prefabs/oculet.lua",
+      "line": 137
+    },
+    {
+      "id": "oculet_rez",
+      "type": "entity",
+      "nameKey": "oculet_rez",
+      "related": [],
+      "file": "scripts/prefabs/oculet_pets.lua",
+      "line": 125
+    },
+    {
+      "id": "oculet_spaz",
+      "type": "entity",
+      "nameKey": "oculet_spaz",
+      "related": [],
+      "file": "scripts/prefabs/oculet_pets.lua",
+      "line": 126
+    },
+    {
+      "id": "specter_shipwreck",
+      "type": "entity",
+      "nameKey": "specter_shipwreck",
+      "related": [],
+      "file": "scripts/prefabs/specter_shipwreck.lua",
+      "line": 41
+    },
+    {
+      "id": "phantom",
+      "type": "entity",
+      "nameKey": "phantom",
+      "related": [],
+      "file": "scripts/prefabs/phantom.lua",
+      "line": 218
+    },
+    {
+      "id": "um_spectoplasm",
+      "type": "entity",
+      "nameKey": "um_spectoplasm",
+      "related": [],
+      "file": "scripts/prefabs/phantom.lua",
+      "line": 219
+    },
+    {
+      "id": "searock_ring",
+      "type": "entity",
+      "nameKey": "searock_ring",
+      "related": [],
+      "file": "scripts/prefabs/searock_ring.lua",
+      "line": 129
+    },
+    {
+      "id": "minotaur_organ",
+      "type": "entity",
+      "nameKey": "minotaur_organ",
+      "related": [],
+      "file": "scripts/prefabs/minotaur_organ.lua",
+      "line": 101
+    },
+    {
+      "id": "ocean_speaker",
+      "type": "entity",
+      "nameKey": "ocean_speaker",
+      "related": [],
+      "file": "scripts/prefabs/speaker.lua",
+      "line": 144
+    },
+    {
+      "id": "sludge",
+      "type": "entity",
+      "nameKey": "sludge",
+      "related": [],
+      "file": "scripts/prefabs/sludge.lua",
+      "line": 190
+    },
+    {
+      "id": "sludge_oil",
+      "type": "entity",
+      "nameKey": "sludge_oil",
+      "related": [],
+      "file": "scripts/prefabs/sludge.lua",
+      "line": 190
+    },
+    {
+      "id": "sludge_cork",
+      "type": "entity",
+      "nameKey": "sludge_cork",
+      "related": [],
+      "file": "scripts/prefabs/sludge.lua",
+      "line": 190
+    },
+    {
+      "id": "sludgestack",
+      "type": "entity",
+      "nameKey": "sludgestack",
+      "related": [],
+      "file": "scripts/prefabs/sludgestack.lua",
+      "line": 306
+    },
+    {
+      "id": "sludge_sack",
+      "type": "entity",
+      "nameKey": "sludge_sack",
+      "related": [],
+      "file": "scripts/prefabs/sludge_sack.lua",
+      "line": 115
+    },
+    {
+      "id": "boatpatch_sludge",
+      "type": "entity",
+      "nameKey": "boatpatch_sludge",
+      "related": [],
+      "file": "scripts/prefabs/boatpatch_sludge.lua",
+      "line": 72
+    },
+    {
+      "id": "um_devcapture",
+      "type": "entity",
+      "nameKey": "um_devcapture",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_devcapture.lua",
+      "line": 296
+    },
+    {
+      "id": "kelpstack",
+      "type": "entity",
+      "nameKey": "kelpstack",
+      "related": [],
+      "file": "scripts/prefabs/kelpstack.lua",
+      "line": 201
+    },
+    {
+      "id": "mossstack",
+      "type": "entity",
+      "nameKey": "mossstack",
+      "related": [],
+      "file": "scripts/prefabs/kelpstack.lua",
+      "line": 201
+    },
+    {
+      "id": "siren_throne",
+      "type": "entity",
+      "nameKey": "siren_throne",
+      "related": [],
+      "file": "scripts/prefabs/siren_throne.lua",
+      "line": 62
+    },
+    {
+      "id": "uncompromising_harpoon",
+      "type": "entity",
+      "nameKey": "uncompromising_harpoon",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_harpoon.lua",
+      "line": 611
+    },
+    {
+      "id": "uncompromising_harpoonreel",
+      "type": "entity",
+      "nameKey": "uncompromising_harpoonreel",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_harpoon.lua",
+      "line": 613
+    },
+    {
+      "id": "uncompromising_harpoon_heavy",
+      "type": "entity",
+      "nameKey": "uncompromising_harpoon_heavy",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_harpoon.lua",
+      "line": 615
+    },
+    {
+      "id": "um_magnerang",
+      "type": "entity",
+      "nameKey": "um_magnerang",
+      "related": [],
+      "file": "scripts/prefabs/um_magnerang.lua",
+      "line": 450
+    },
+    {
+      "id": "um_magnerangreel",
+      "type": "entity",
+      "nameKey": "um_magnerangreel",
+      "related": [],
+      "file": "scripts/prefabs/um_magnerang.lua",
+      "line": 451
+    },
+    {
+      "id": "uncompromising_fishingnet",
+      "type": "entity",
+      "nameKey": "uncompromising_fishingnet",
+      "related": [],
+      "file": "scripts/prefabs/uncompromising_fishingnet.lua",
+      "line": 84
+    },
+    {
+      "id": "um_windturbine",
+      "type": "entity",
+      "nameKey": "um_windturbine",
+      "related": [],
+      "file": "scripts/prefabs/um_windturbine.lua",
+      "line": 155
+    },
+    {
+      "id": "mastupgrade_windturbine_item",
+      "type": "entity",
+      "nameKey": "mastupgrade_windturbine_item",
+      "related": [],
+      "file": "scripts/prefabs/mastupgrade_windturbine.lua",
+      "line": 290
+    },
+    {
+      "id": "mastupgrade_windturbine",
+      "type": "entity",
+      "nameKey": "mastupgrade_windturbine",
+      "related": [],
+      "file": "scripts/prefabs/mastupgrade_windturbine.lua",
+      "line": 291
+    },
+    {
+      "id": "armor_reed_um",
+      "type": "entity",
+      "nameKey": "armor_reed_um",
+      "related": [],
+      "file": "scripts/prefabs/armor_reed_um.lua",
+      "line": 86
+    },
+    {
+      "id": "armor_sharksuit_um",
+      "type": "entity",
+      "nameKey": "armor_sharksuit_um",
+      "related": [],
+      "file": "scripts/prefabs/armor_sharksuit_um.lua",
+      "line": 81
+    },
+    {
+      "id": "rockjawleather",
+      "type": "entity",
+      "nameKey": "rockjawleather",
+      "related": [],
+      "file": "scripts/prefabs/rockjawleather.lua",
+      "line": 50
+    },
+    {
+      "id": "ocupus_beak",
+      "type": "entity",
+      "nameKey": "ocupus_beak",
+      "related": [],
+      "file": "scripts/prefabs/ocupus_beak.lua",
+      "line": 41
+    },
+    {
+      "id": "beakbasher",
+      "type": "entity",
+      "nameKey": "beakbasher",
+      "related": [],
+      "file": "scripts/prefabs/beakbasher.lua",
+      "line": 77
+    },
+    {
+      "id": "winona_upgradekit_electrical",
+      "type": "entity",
+      "nameKey": "winona_upgradekit_electrical",
+      "related": [],
+      "file": "scripts/prefabs/winona_upgradekit.lua",
+      "line": 55
+    },
+    {
+      "id": "powercell",
+      "type": "entity",
+      "nameKey": "powercell",
+      "related": [],
+      "file": "scripts/prefabs/powercell.lua",
+      "line": 111
+    },
+    {
+      "id": "rr_powerline",
+      "type": "entity",
+      "nameKey": "rr_powerline",
+      "related": [],
+      "file": "scripts/prefabs/rr_powerline.lua",
+      "line": 189
+    },
+    {
+      "id": "eyeofterror_mini_ally",
+      "type": "entity",
+      "nameKey": "eyeofterror_mini_ally",
+      "related": [],
+      "file": "scripts/prefabs/eyeofterror_mini_ally.lua",
+      "line": 186
+    },
+    {
+      "id": "eyeofterror_mini_grounded_ally",
+      "type": "entity",
+      "nameKey": "eyeofterror_mini_grounded_ally",
+      "related": [],
+      "file": "scripts/prefabs/eyeofterror_mini_projectile_ally.lua",
+      "line": 182
+    },
+    {
+      "id": "critter_figgy",
+      "type": "creature",
+      "nameKey": "critter_figgy",
+      "related": [],
+      "file": "scripts/prefabs/figgypet.lua",
+      "line": 310
+    },
+    {
+      "id": "portableboat",
+      "type": "entity",
+      "nameKey": "portableboat",
+      "related": [],
+      "file": "scripts/prefabs/portableboat.lua",
+      "line": 689
+    },
+    {
+      "id": "portableboat_item",
+      "type": "entity",
+      "nameKey": "portableboat_item",
+      "related": [],
+      "file": "scripts/prefabs/portableboat.lua",
+      "line": 692
+    },
+    {
+      "id": "portableboat_ripcord",
+      "type": "entity",
+      "nameKey": "portableboat_ripcord",
+      "related": [],
+      "file": "scripts/prefabs/portableboat.lua",
+      "line": 693
+    },
+    {
+      "id": "siren_bird_nest",
+      "type": "entity",
+      "nameKey": "siren_bird_nest",
+      "related": [],
+      "file": "scripts/prefabs/siren_bird_nest.lua",
+      "line": 79
+    },
+    {
+      "id": "um_sorrel",
+      "type": "entity",
+      "nameKey": "um_sorrel",
+      "related": [],
+      "file": "scripts/prefabs/um_sorrel.lua",
+      "line": 131
+    },
+    {
+      "id": "brine_balm",
+      "type": "entity",
+      "nameKey": "brine_balm",
+      "related": [],
+      "file": "scripts/prefabs/brine_balm.lua",
+      "line": 53
+    },
+    {
+      "id": "um_copper_pipe",
+      "type": "entity",
+      "nameKey": "um_copper_pipe",
+      "related": [],
+      "file": "scripts/prefabs/um_copper_pipe.lua",
+      "line": 49
+    },
+    {
+      "id": "steeringwheel_copper",
+      "type": "entity",
+      "nameKey": "steeringwheel_copper",
+      "related": [],
+      "file": "scripts/prefabs/steeringwheel_copper.lua",
+      "line": 163
+    },
+    {
+      "id": "cannonball_sludge",
+      "type": "entity",
+      "nameKey": "cannonball_sludge",
+      "related": [],
+      "file": "scripts/prefabs/um_cannonballs.lua",
+      "line": 410
+    },
+    {
+      "id": "cannonball_sludge_item",
+      "type": "entity",
+      "nameKey": "cannonball_sludge_item",
+      "related": [],
+      "file": "scripts/prefabs/um_cannonballs.lua",
+      "line": 412
+    },
+    {
+      "id": "um_dreamcatcher",
+      "type": "entity",
+      "nameKey": "um_dreamcatcher",
+      "related": [],
+      "file": "scripts/prefabs/um_dreamcatcher.lua",
+      "line": 425
+    },
+    {
+      "id": "um_brineishmoss",
+      "type": "entity",
+      "nameKey": "um_brineishmoss",
+      "related": [],
+      "file": "scripts/prefabs/um_dreamcatcher.lua",
+      "line": 426
+    },
+    {
+      "id": "um_coalesced_nightmare",
+      "type": "entity",
+      "nameKey": "um_coalesced_nightmare",
+      "related": [],
+      "file": "scripts/prefabs/um_dreamcatcher.lua",
+      "line": 427
+    },
+    {
+      "id": "um_specter_amulet",
+      "type": "entity",
+      "nameKey": "um_specter_amulet",
+      "related": [],
+      "file": "scripts/prefabs/um_specter_amulet.lua",
+      "line": 113
+    },
+    {
+      "id": "um_ocupus_eyetacle",
+      "type": "entity",
+      "nameKey": "um_ocupus_eyetacle",
+      "related": [],
+      "file": "scripts/prefabs/um_ocupus_eyetacle.lua",
+      "line": 557
+    },
+    {
+      "id": "um_ocupus_eye",
+      "type": "entity",
+      "nameKey": "um_ocupus_eye",
+      "related": [],
+      "file": "scripts/prefabs/um_ocupus_eyetacle.lua",
+      "line": 558
+    },
+    {
+      "id": "ocupus_tentacle",
+      "type": "entity",
+      "nameKey": "ocupus_tentacle",
+      "related": [],
+      "file": "scripts/prefabs/ocupus_items.lua",
+      "line": 157
+    },
+    {
+      "id": "ocupus_tentacle_eye",
+      "type": "entity",
+      "nameKey": "ocupus_tentacle_eye",
+      "related": [],
+      "file": "scripts/prefabs/ocupus_items.lua",
+      "line": 157
+    },
+    {
+      "id": "ocupus_tentacle_cooked",
+      "type": "entity",
+      "nameKey": "ocupus_tentacle_cooked",
+      "related": [],
+      "file": "scripts/prefabs/ocupus_items.lua",
+      "line": 158
+    },
+    {
+      "id": "plaunt_manny",
+      "type": "entity",
+      "nameKey": "plaunt_manny",
+      "related": [],
+      "file": "scripts/prefabs/manny.lua",
+      "line": 172
+    },
+    {
+      "id": "umss_general",
+      "type": "entity",
+      "nameKey": "umss_general",
+      "related": [],
+      "file": "scripts/prefabs/umss_general.lua",
+      "line": 320
+    },
+    {
+      "id": "um_tornado",
+      "type": "entity",
+      "nameKey": "um_tornado",
+      "related": [],
+      "file": "scripts/prefabs/um_tornado.lua",
+      "line": 847
+    },
+    {
+      "id": "um_waterfall",
+      "type": "entity",
+      "nameKey": "um_waterfall",
+      "related": [],
+      "file": "scripts/prefabs/um_waterfall.lua",
+      "line": 643
+    },
+    {
+      "id": "alpha_lightninggoat",
+      "type": "entity",
+      "nameKey": "alpha_lightninggoat",
+      "related": [],
+      "file": "scripts/prefabs/alpha_lightninggoat.lua",
+      "line": 332
+    },
+    {
+      "id": "wathom_corpse",
+      "type": "entity",
+      "nameKey": "wathom_corpse",
+      "related": [],
+      "file": "scripts/prefabs/wathom_corpse.lua",
+      "line": 59
+    },
+    {
+      "id": "um_ornament_opossum",
+      "type": "entity",
+      "nameKey": "um_ornament_opossum",
+      "related": [],
+      "file": "scripts/prefabs/um_halloween_ornaments.lua",
+      "line": 71
+    },
+    {
+      "id": "um_ornament_rat",
+      "type": "entity",
+      "nameKey": "um_ornament_rat",
+      "related": [],
+      "file": "scripts/prefabs/um_halloween_ornaments.lua",
+      "line": 72
+    },
+    {
+      "id": "trinket_wathom1",
+      "type": "entity",
+      "nameKey": "trinket_wathom1",
+      "related": [],
+      "file": "scripts/prefabs/trinket_wathom1.lua",
+      "line": 37
+    },
+    {
+      "id": "codex_mantra",
+      "type": "entity",
+      "nameKey": "codex_mantra",
+      "related": [],
+      "file": "scripts/prefabs/codex_mantra.lua",
+      "line": 262
+    },
+    {
+      "id": "pact_armor_sanity",
+      "type": "entity",
+      "nameKey": "pact_armor_sanity",
+      "related": [],
+      "file": "scripts/prefabs/pact_armor_sanity.lua",
+      "line": 167
+    },
+    {
+      "id": "pact_sword_sanity",
+      "type": "entity",
+      "nameKey": "pact_sword_sanity",
+      "related": [],
+      "file": "scripts/prefabs/pact_sword_sanity.lua",
+      "line": 106
+    },
+    {
+      "id": "charles_t_horse",
+      "type": "entity",
+      "nameKey": "charles_t_horse",
+      "related": [],
+      "file": "scripts/prefabs/charles_t_horse.lua",
+      "line": 482
+    },
+    {
+      "id": "the_real_charles_t_horse",
+      "type": "entity",
+      "nameKey": "the_real_charles_t_horse",
+      "related": [],
+      "file": "scripts/prefabs/charles_t_horse.lua",
+      "line": 483
+    },
+    {
+      "id": "wixie_piano",
+      "type": "entity",
+      "nameKey": "wixie_piano",
+      "related": [],
+      "file": "scripts/prefabs/wixie_piano.lua",
+      "line": 138
+    },
+    {
+      "id": "wixie_piano_card",
+      "type": "entity",
+      "nameKey": "wixie_piano_card",
+      "related": [],
+      "file": "scripts/prefabs/wixie_piano.lua",
+      "line": 138
+    },
+    {
+      "id": "wixie_clock",
+      "type": "entity",
+      "nameKey": "wixie_clock",
+      "related": [],
+      "file": "scripts/prefabs/wixie_clock.lua",
+      "line": 394
+    },
+    {
+      "id": "wixie_clockdangley1",
+      "type": "entity",
+      "nameKey": "wixie_clockdangley1",
+      "related": [],
+      "file": "scripts/prefabs/wixie_clock.lua",
+      "line": 398
+    },
+    {
+      "id": "wixie_clockdangley2",
+      "type": "entity",
+      "nameKey": "wixie_clockdangley2",
+      "related": [],
+      "file": "scripts/prefabs/wixie_clock.lua",
+      "line": 399
+    },
+    {
+      "id": "wixie_clockdangley3",
+      "type": "entity",
+      "nameKey": "wixie_clockdangley3",
+      "related": [],
+      "file": "scripts/prefabs/wixie_clock.lua",
+      "line": 400
+    },
+    {
+      "id": "wooden_queen_piece",
+      "type": "entity",
+      "nameKey": "wooden_queen_piece",
+      "related": [],
+      "file": "scripts/prefabs/wixie_clock.lua",
+      "line": 402
+    },
+    {
+      "id": "wixie_wardrobe",
+      "type": "entity",
+      "nameKey": "wixie_wardrobe",
+      "related": [],
+      "file": "scripts/prefabs/wixie_wardrobe.lua",
+      "line": 148
+    },
+    {
+      "id": "um_ocupus_tentacle",
+      "type": "entity",
+      "nameKey": "um_ocupus_tentacle",
+      "related": [],
+      "file": "scripts/prefabs/um_ocupus_tentacle.lua",
+      "line": 258
+    },
+    {
+      "id": "um_ocupus_beak",
+      "type": "entity",
+      "nameKey": "um_ocupus_beak",
+      "related": [],
+      "file": "scripts/prefabs/um_ocupus_beak.lua",
+      "line": 217
+    },
+    {
+      "id": "slingshotammo_firecrackers",
+      "type": "entity",
+      "nameKey": "slingshotammo_firecrackers",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2213
+    },
+    {
+      "id": "slingshotammo_rubber",
+      "type": "entity",
+      "nameKey": "slingshotammo_rubber",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2221
+    },
+    {
+      "id": "slingshotammo_tremor",
+      "type": "entity",
+      "nameKey": "slingshotammo_tremor",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2226
+    },
+    {
+      "id": "slingshotammo_moonrock",
+      "type": "entity",
+      "nameKey": "slingshotammo_moonrock",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2229
+    },
+    {
+      "id": "slingshotammo_salt",
+      "type": "entity",
+      "nameKey": "slingshotammo_salt",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2234
+    },
+    {
+      "id": "slingshotammo_goop",
+      "type": "entity",
+      "nameKey": "slingshotammo_goop",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2237
+    },
+    {
+      "id": "slingshotammo_slime",
+      "type": "entity",
+      "nameKey": "slingshotammo_slime",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2240
+    },
+    {
+      "id": "slingshotammo_lazy",
+      "type": "entity",
+      "nameKey": "slingshotammo_lazy",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2243
+    },
+    {
+      "id": "slingshotammo_shadow",
+      "type": "entity",
+      "nameKey": "slingshotammo_shadow",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2246
+    },
+    {
+      "id": "wixie_shadowclone",
+      "type": "entity",
+      "nameKey": "wixie_shadowclone",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_extras.lua",
+      "line": 2248
+    },
+    {
+      "id": "slingshotammo_limestone",
+      "type": "entity",
+      "nameKey": "slingshotammo_limestone",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_IA.lua",
+      "line": 1115
+    },
+    {
+      "id": "slingshotammo_tar",
+      "type": "entity",
+      "nameKey": "slingshotammo_tar",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_IA.lua",
+      "line": 1118
+    },
+    {
+      "id": "slingshotammo_obsidian",
+      "type": "entity",
+      "nameKey": "slingshotammo_obsidian",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_IA.lua",
+      "line": 1121
+    },
+    {
+      "id": "slingshotammo_insanity",
+      "type": "entity",
+      "nameKey": "slingshotammo_insanity",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_IA.lua",
+      "line": 1126
+    },
+    {
+      "id": "slingshotammo_lunarvine",
+      "type": "entity",
+      "nameKey": "slingshotammo_lunarvine",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_IA.lua",
+      "line": 1128
+    },
+    {
+      "id": "slingshotammo_flare",
+      "type": "entity",
+      "nameKey": "slingshotammo_flare",
+      "related": [],
+      "file": "scripts/prefabs/slingshotammo_IA.lua",
+      "line": 1130
+    },
+    {
+      "id": "meatrack_hat",
+      "type": "entity",
+      "nameKey": "meatrack_hat",
+      "related": [],
+      "file": "scripts/prefabs/meatrack_hat.lua",
+      "line": 224
+    },
+    {
+      "id": "bagofmarbles",
+      "type": "entity",
+      "nameKey": "bagofmarbles",
+      "related": [],
+      "file": "scripts/prefabs/bagofmarbles.lua",
+      "line": 443
+    },
+    {
+      "id": "slingshot_gnasher",
+      "type": "entity",
+      "nameKey": "slingshot_gnasher",
+      "related": [],
+      "file": "scripts/prefabs/slingshot_gnasher.lua",
+      "line": 343
+    },
+    {
+      "id": "slingshot_matilda",
+      "type": "entity",
+      "nameKey": "slingshot_matilda",
+      "related": [],
+      "file": "scripts/prefabs/slingshot_matilda.lua",
+      "line": 392
+    },
+    {
+      "id": "slingshot_jessie",
+      "type": "entity",
+      "nameKey": "slingshot_jessie",
+      "related": [],
+      "file": "scripts/prefabs/slingshot_jessie.lua",
+      "line": 558
+    },
+    {
+      "id": "slingshot_claire",
+      "type": "entity",
+      "nameKey": "slingshot_claire",
+      "related": [],
+      "file": "scripts/prefabs/slingshot_claire.lua",
+      "line": 388
+    },
+    {
+      "id": "shadow_wixie",
+      "type": "entity",
+      "nameKey": "shadow_wixie",
+      "related": [],
+      "file": "scripts/prefabs/shadow_wixie.lua",
+      "line": 813
+    },
+    {
+      "id": "shadow_wixie_helper",
+      "type": "entity",
+      "nameKey": "shadow_wixie_helper",
+      "related": [],
+      "file": "scripts/prefabs/shadow_wixie.lua",
+      "line": 814
+    },
+    {
+      "id": "wixie_shadow_clone",
+      "type": "entity",
+      "nameKey": "wixie_shadow_clone",
+      "related": [],
+      "file": "scripts/prefabs/shadow_wixie.lua",
+      "line": 816
+    },
+    {
+      "id": "wixiegun",
+      "type": "entity",
+      "nameKey": "wixiegun",
+      "related": [],
+      "file": "scripts/prefabs/wixiegun.lua",
+      "line": 183
+    },
+    {
+      "id": "staff_starfall",
+      "type": "entity",
+      "nameKey": "staff_starfall",
+      "related": [],
+      "file": "scripts/prefabs/staff_starfall.lua",
+      "line": 447
+    },
+    {
+      "id": "staff_moonfall",
+      "type": "entity",
+      "nameKey": "staff_moonfall",
+      "related": [],
+      "file": "scripts/prefabs/staff_moonfall.lua",
+      "line": 611
+    },
+    {
+      "id": "moonfall_proj",
+      "type": "entity",
+      "nameKey": "moonfall_proj",
+      "related": [],
+      "file": "scripts/prefabs/staff_moonfall.lua",
+      "line": 611
+    },
+    {
+      "id": "armor_crab_regen",
+      "type": "entity",
+      "nameKey": "armor_crab_regen",
+      "related": [],
+      "file": "scripts/prefabs/armor_crab.lua",
+      "line": 117
+    },
+    {
+      "id": "armor_crab_maxhp",
+      "type": "entity",
+      "nameKey": "armor_crab_maxhp",
+      "related": [],
+      "file": "scripts/prefabs/armor_crab.lua",
+      "line": 117
+    },
+    {
+      "id": "hat_crab",
+      "type": "entity",
+      "nameKey": "hat_crab",
+      "related": [],
+      "file": "scripts/prefabs/hat_crab.lua",
+      "line": 206
+    },
+    {
+      "id": "hat_crab_ice",
+      "type": "entity",
+      "nameKey": "hat_crab_ice",
+      "related": [],
+      "file": "scripts/prefabs/hat_crab.lua",
+      "line": 206
+    },
+    {
+      "id": "moon_beacon",
+      "type": "entity",
+      "nameKey": "moon_beacon",
+      "related": [],
+      "file": "scripts/prefabs/moon_beacon.lua",
+      "line": 157
+    },
+    {
+      "id": "mara_boss1",
+      "type": "entity",
+      "nameKey": "mara_boss1",
+      "related": [],
+      "file": "scripts/prefabs/mara_boss1.lua",
+      "line": 185
+    },
+    {
+      "id": "mara_boss1_bullets",
+      "type": "entity",
+      "nameKey": "mara_boss1_bullets",
+      "related": [],
+      "file": "scripts/prefabs/mara_boss1_bullets.lua",
+      "line": 145
+    },
+    {
+      "id": "um_witch",
+      "type": "entity",
+      "nameKey": "um_witch",
+      "related": [],
+      "file": "scripts/prefabs/um_WITCH.lua",
+      "line": 279
+    },
+    {
+      "id": "smog",
+      "type": "entity",
+      "nameKey": "smog",
+      "related": [],
+      "file": "scripts/prefabs/smog.lua",
+      "line": 330
+    },
+    {
+      "id": "umdebuff_moonburn",
+      "type": "entity",
+      "nameKey": "umdebuff_moonburn",
+      "related": [],
+      "file": "scripts/prefabs/umdebuff_moonburn.lua",
+      "line": 357
+    },
+    {
+      "id": "umdebuff_moonburn_testingstick",
+      "type": "entity",
+      "nameKey": "umdebuff_moonburn_testingstick",
+      "related": [],
+      "file": "scripts/prefabs/umdebuff_moonburn.lua",
+      "line": 360
+    },
+    {
+      "id": "greenfoliage",
+      "type": "entity",
+      "nameKey": "greenfoliage",
+      "related": [],
+      "file": "scripts/prefabs/um_foliage.lua",
+      "line": 54
+    },
+    {
+      "id": "um_antlionstaff",
+      "type": "entity",
+      "nameKey": "um_antlionstaff",
+      "related": [],
+      "file": "scripts/prefabs/um_antlionstaff.lua",
+      "line": 354
+    },
+    {
+      "id": "um_beegun_cherry",
+      "type": "entity",
+      "nameKey": "um_beegun_cherry",
+      "related": [],
+      "file": "scripts/prefabs/um_beegun.lua",
+      "line": 750
+    },
+    {
+      "id": "um_bulletbee_proj",
+      "type": "entity",
+      "nameKey": "um_bulletbee_proj",
+      "related": [],
+      "file": "scripts/prefabs/um_beegun.lua",
+      "line": 751
+    },
+    {
+      "id": "um_cherrybulletbee_proj",
+      "type": "entity",
+      "nameKey": "um_cherrybulletbee_proj",
+      "related": [],
+      "file": "scripts/prefabs/um_beegun.lua",
+      "line": 752
+    },
+    {
+      "id": "cherrybulletbee",
+      "type": "entity",
+      "nameKey": "cherrybulletbee",
+      "related": [],
+      "file": "scripts/prefabs/um_beegun.lua",
+      "line": 759
+    },
+    {
+      "id": "um_exhumer",
+      "type": "entity",
+      "nameKey": "um_exhumer",
+      "related": [],
+      "file": "scripts/prefabs/um_exhumer.lua",
+      "line": 268
+    },
+    {
+      "id": "um_wingsuit",
+      "type": "entity",
+      "nameKey": "um_wingsuit",
+      "related": [],
+      "file": "scripts/prefabs/um_wingsuit.lua",
+      "line": 87
+    },
+    {
+      "id": "kaleidoscope",
+      "type": "entity",
+      "nameKey": "kaleidoscope",
+      "related": [],
+      "file": "scripts/prefabs/kaleidoscope.lua",
+      "line": 121
+    },
+    {
+      "id": "moonglow",
+      "type": "entity",
+      "nameKey": "moonglow",
+      "related": [],
+      "file": "scripts/prefabs/moonglow.lua",
+      "line": 498
+    },
+    {
+      "id": "garbagepatchflotsam",
+      "type": "entity",
+      "nameKey": "garbagepatchflotsam",
+      "related": [],
+      "file": "scripts/prefabs/garbagepatchflotsam.lua",
+      "line": 386
+    },
+    {
+      "id": "um_snaildrake_explosion",
+      "type": "entity",
+      "nameKey": "um_snaildrake_explosion",
+      "related": [],
+      "file": "scripts/prefabs/um_snaildrake_explosion.lua",
+      "line": 65
+    },
+    {
+      "id": "cave_entrance_open_magmabiome",
+      "type": "entity",
+      "nameKey": "cave_entrance_open_magmabiome",
+      "related": [],
+      "file": "scripts/prefabs/cave_entrance_magmabiome.lua",
+      "line": 193
+    },
+    {
+      "id": "cave_exit_magmabiome",
+      "type": "entity",
+      "nameKey": "cave_exit_magmabiome",
+      "related": [],
+      "file": "scripts/prefabs/cave_exit_magmabiome.lua",
+      "line": 77
+    },
+    {
+      "id": "um_cookpot_wagstaff_display",
+      "type": "entity",
+      "nameKey": "um_cookpot_wagstaff_display",
+      "related": [],
+      "file": "scripts/prefabs/um_cookpot_wagstaff.lua",
+      "line": 672
+    },
+    {
+      "id": "um_cookpot_wagstaff_lever",
+      "type": "entity",
+      "nameKey": "um_cookpot_wagstaff_lever",
+      "related": [],
+      "file": "scripts/prefabs/um_cookpot_wagstaff.lua",
+      "line": 673
+    },
+    {
+      "id": "um_cookpot_wagstaff_lever2",
+      "type": "entity",
+      "nameKey": "um_cookpot_wagstaff_lever2",
+      "related": [],
+      "file": "scripts/prefabs/um_cookpot_wagstaff.lua",
+      "line": 674
+    },
+    {
+      "id": "um_boatbottle",
+      "type": "entity",
+      "nameKey": "um_boatbottle",
+      "related": [],
+      "file": "scripts/prefabs/um_boatbottle.lua",
+      "line": 178
+    },
+    {
+      "id": "um_buttery_fly",
+      "type": "entity",
+      "nameKey": "um_buttery_fly",
+      "related": [],
+      "file": "scripts/prefabs/um_buttery_fly.lua",
+      "line": 198
+    },
+    {
+      "id": "um_buttercup",
+      "type": "entity",
+      "nameKey": "um_buttercup",
+      "related": [],
+      "file": "scripts/prefabs/um_buttercup.lua",
+      "line": 180
+    },
+    {
+      "id": "um_gemology_geode_red",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_red",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 164
+    },
+    {
+      "id": "um_gemology_geode_green",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_green",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 165
+    },
+    {
+      "id": "um_gemology_geode_blue",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_blue",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 166
+    },
+    {
+      "id": "um_gemology_geode_guano",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_guano",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 167
+    },
+    {
+      "id": "um_gemology_geode_lobster",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_lobster",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 168
+    },
+    {
+      "id": "um_gemology_geode_glass",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_glass",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 169
+    },
+    {
+      "id": "um_gemology_geode_slime",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_slime",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 170
+    },
+    {
+      "id": "um_gemology_geode_ruins",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_ruins",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 171
+    },
+    {
+      "id": "um_gemology_geode_sink",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_sink",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 172
+    },
+    {
+      "id": "um_gemology_geode_vent",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_vent",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 173
+    },
+    {
+      "id": "um_gemology_geode_magma",
+      "type": "entity",
+      "nameKey": "um_gemology_geode_magma",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_geodes.lua",
+      "line": 174
+    },
+    {
+      "id": "um_redmushtree_gemless",
+      "type": "entity",
+      "nameKey": "um_redmushtree_gemless",
+      "related": [],
+      "file": "scripts/prefabs/um_mushtrees_petri.lua",
+      "line": 243
+    },
+    {
+      "id": "um_redmushtree_gem",
+      "type": "entity",
+      "nameKey": "um_redmushtree_gem",
+      "related": [],
+      "file": "scripts/prefabs/um_mushtrees_petri.lua",
+      "line": 244
+    },
+    {
+      "id": "um_greenmushtree_gemless",
+      "type": "entity",
+      "nameKey": "um_greenmushtree_gemless",
+      "related": [],
+      "file": "scripts/prefabs/um_mushtrees_petri.lua",
+      "line": 245
+    },
+    {
+      "id": "um_greenmushtree_gem",
+      "type": "entity",
+      "nameKey": "um_greenmushtree_gem",
+      "related": [],
+      "file": "scripts/prefabs/um_mushtrees_petri.lua",
+      "line": 246
+    },
+    {
+      "id": "um_bluemushtree_gemless",
+      "type": "entity",
+      "nameKey": "um_bluemushtree_gemless",
+      "related": [],
+      "file": "scripts/prefabs/um_mushtrees_petri.lua",
+      "line": 247
+    },
+    {
+      "id": "um_bluemushtree_gem",
+      "type": "entity",
+      "nameKey": "um_bluemushtree_gem",
+      "related": [],
+      "file": "scripts/prefabs/um_mushtrees_petri.lua",
+      "line": 248
+    },
+    {
+      "id": "um_moonglass_ceiling",
+      "type": "entity",
+      "nameKey": "um_moonglass_ceiling",
+      "related": [],
+      "file": "scripts/prefabs/um_moonglass_ceiling.lua",
+      "line": 149
+    },
+    {
+      "id": "um_guano_rock_gemless",
+      "type": "entity",
+      "nameKey": "um_guano_rock_gemless",
+      "related": [],
+      "file": "scripts/prefabs/um_guano_rock.lua",
+      "line": 179
+    },
+    {
+      "id": "um_guano_rock",
+      "type": "entity",
+      "nameKey": "um_guano_rock",
+      "related": [],
+      "file": "scripts/prefabs/um_guano_rock.lua",
+      "line": 180
+    },
+    {
+      "id": "um_slimestone_rock_gemless",
+      "type": "entity",
+      "nameKey": "um_slimestone_rock_gemless",
+      "related": [],
+      "file": "scripts/prefabs/um_slimestone_rock.lua",
+      "line": 252
+    },
+    {
+      "id": "um_slimestone_rock",
+      "type": "entity",
+      "nameKey": "um_slimestone_rock",
+      "related": [],
+      "file": "scripts/prefabs/um_slimestone_rock.lua",
+      "line": 253
+    },
+    {
+      "id": "um_guano_rain_particle",
+      "type": "entity",
+      "nameKey": "um_guano_rain_particle",
+      "related": [],
+      "file": "scripts/prefabs/um_guano_rain.lua",
+      "line": 305
+    },
+    {
+      "id": "um_rocklobster_rock",
+      "type": "entity",
+      "nameKey": "um_rocklobster_rock",
+      "related": [],
+      "file": "scripts/prefabs/um_rocklobster_rock.lua",
+      "line": 97
+    },
+    {
+      "id": "um_sinkmound_rock",
+      "type": "entity",
+      "nameKey": "um_sinkmound_rock",
+      "related": [],
+      "file": "scripts/prefabs/um_sinkmound_rock.lua",
+      "line": 185
+    },
+    {
+      "id": "um_sinkmound_rock_gemless",
+      "type": "entity",
+      "nameKey": "um_sinkmound_rock_gemless",
+      "related": [],
+      "file": "scripts/prefabs/um_sinkmound_rock.lua",
+      "line": 186
+    },
+    {
+      "id": "um_plant_hotsprings",
+      "type": "entity",
+      "nameKey": "um_plant_hotsprings",
+      "related": [],
+      "file": "scripts/prefabs/um_plants_decor.lua",
+      "line": 34
+    },
+    {
+      "id": "wathgrithr_shield_dreadstone",
+      "type": "entity",
+      "nameKey": "wathgrithr_shield_dreadstone",
+      "related": [],
+      "file": "scripts/prefabs/wathgrithr_shield_dreadstone.lua",
+      "line": 339
+    },
+    {
+      "id": "um_gemologyforge",
+      "type": "entity",
+      "nameKey": "um_gemologyforge",
+      "related": [],
+      "file": "scripts/prefabs/um_gemologyforge.lua",
+      "line": 166
+    },
+    {
+      "id": "glacialhound_icespike",
+      "type": "entity",
+      "nameKey": "glacialhound_icespike",
+      "related": [],
+      "file": "scripts/prefabs/glacialhound_icespike.lua",
+      "line": 434
+    },
+    {
+      "id": "um_feather_totem",
+      "type": "entity",
+      "nameKey": "um_feather_totem",
+      "related": [],
+      "file": "scripts/prefabs/um_feather_totem.lua",
+      "line": 246
+    },
+    {
+      "id": "um_gemology_pouch",
+      "type": "entity",
+      "nameKey": "um_gemology_pouch",
+      "related": [],
+      "file": "scripts/prefabs/um_gemology_pouch.lua",
+      "line": 102
+    },
+    {
+      "id": "um_strange_rabbit_rock",
+      "type": "entity",
+      "nameKey": "um_strange_rabbit_rock",
+      "related": [],
+      "file": "scripts/prefabs/um_strange_rabbit_rock.lua",
+      "line": 47
+    },
+    {
+      "id": "um_hat_nettlemask",
+      "type": "entity",
+      "nameKey": "um_hat_nettlemask",
+      "related": [],
+      "file": "scripts/prefabs/um_hat_nettlemask.lua",
+      "line": 113
+    },
+    {
+      "id": "um_thulecite_razor",
+      "type": "entity",
+      "nameKey": "um_thulecite_razor",
+      "related": [],
+      "file": "scripts/prefabs/um_thulecite_razor.lua",
+      "line": 49
+    },
+    {
+      "id": "um_magmastone",
+      "type": "entity",
+      "nameKey": "um_magmastone",
+      "related": [],
+      "file": "scripts/prefabs/um_magmastone.lua",
+      "line": 320
+    },
+    {
+      "id": "um_magmastone_outcrop",
+      "type": "entity",
+      "nameKey": "um_magmastone_outcrop",
+      "related": [],
+      "file": "scripts/prefabs/um_magmastone.lua",
+      "line": 321
+    }
+  ],
   "sourceFiles": {
     "beta/init/init_actions.lua": {
       "sha256": "46a894b619a08c2319ae4b0fecacd338531184f501e9674d9b8cc9fa8da5941d",
@@ -10623,6 +16445,7 @@
       "lines": 781,
       "citations": [
         29,
+        30,
         41,
         49,
         75,
@@ -10681,6 +16504,7 @@
       "lines": 697,
       "citations": [
         79,
+        118,
         549,
         553,
         555,
@@ -10828,10 +16652,13 @@
         293,
         295,
         320,
+        321,
         339,
         340,
         469,
+        552,
         655,
+        664,
         669,
         737
       ]
@@ -10893,6 +16720,8 @@
         375,
         376,
         377,
+        385,
+        386,
         392,
         395,
         400,
@@ -11223,6 +17052,13 @@
         408,
         478,
         547
+      ]
+    },
+    "beta/postinit/prefabs/birds.lua": {
+      "sha256": "9fc339388765528330c3b3eb7536545fedd025fe96f84527ca5e2cc1a1fc7eb9",
+      "lines": 118,
+      "citations": [
+        20
       ]
     },
     "beta/postinit/prefabs/cave_entrance_open.lua": {
@@ -11730,6 +17566,7 @@
       "lines": 388,
       "citations": [
         119,
+        198,
         311
       ]
     },
@@ -11773,6 +17610,7 @@
         41,
         146,
         173,
+        249,
         258
       ]
     },
@@ -11822,6 +17660,7 @@
         1,
         4,
         11,
+        24,
         55,
         84
       ]
@@ -11869,6 +17708,41 @@
         4
       ]
     },
+    "beta/scripts/prefabs/air_conditioner.lua": {
+      "sha256": "14f62995a6ab15975991fbb48ebfe5306a797ce94205ebc79e88a67e21da0a01",
+      "lines": 427
+    },
+    "beta/scripts/prefabs/alpha_lightninggoat.lua": {
+      "sha256": "dbe27b0bfa6dfffcaf066225e2bc61721aa1126f4d4b75d9905484aa0515fdb9",
+      "lines": 332
+    },
+    "beta/scripts/prefabs/ancient_amulet_red.lua": {
+      "sha256": "6ac0ff84052353f1019f0060ea69e6b194298f6455ef3aeb72ce817a0902b6a0",
+      "lines": 228
+    },
+    "beta/scripts/prefabs/ancient_trepidation.lua": {
+      "sha256": "c87af9d04b337f58e4ebc78c388a77a1b8ce3e34a4a640662d6be028bb1c536e",
+      "lines": 412
+    },
+    "beta/scripts/prefabs/ancient_trepidation_arm.lua": {
+      "sha256": "b91a19d8da3785f9e7c13e2e9ba538e41f5ab032108d4d23eb3fd797e838f60c",
+      "lines": 115
+    },
+    "beta/scripts/prefabs/aphid.lua": {
+      "sha256": "e09277261e7a891ced015dc2640b3f89444c1a2759b812d8e78fe10d6a17e582",
+      "lines": 207,
+      "citations": [
+        13,
+        56,
+        157,
+        162,
+        169
+      ]
+    },
+    "beta/scripts/prefabs/armor_crab.lua": {
+      "sha256": "c3c784854c6d98bc56d001533903fbe143ef326d904a5d4170d09bf67ad56eda",
+      "lines": 118
+    },
     "beta/scripts/prefabs/armor_glassmail.lua": {
       "sha256": "c178d2b29cf008aa737bfb9df4f120ccfa33dfcfea5c22684e07972002e48198",
       "lines": 202,
@@ -11893,12 +17767,76 @@
         129
       ]
     },
+    "beta/scripts/prefabs/armor_reed_um.lua": {
+      "sha256": "8c8083743985968a7f5c668760c1f1c0dd2e503b037b16dd0360b13359d84f00",
+      "lines": 86
+    },
+    "beta/scripts/prefabs/armor_sharksuit_um.lua": {
+      "sha256": "5db3efc66369b471c2cae3d34c6fc2c53492f53ee48b36487108d6ef0ef6b6ba",
+      "lines": 81
+    },
+    "beta/scripts/prefabs/armorlavae.lua": {
+      "sha256": "8653e950c1c00df364bc11b04bf356bfa2b28121c2737cb1af6c98275c868894",
+      "lines": 84
+    },
+    "beta/scripts/prefabs/bagofmarbles.lua": {
+      "sha256": "58df7d462c0b473ffd85d780db25e9946f55f735e1abf3e242a22eed05cdeb90",
+      "lines": 446
+    },
     "beta/scripts/prefabs/beakbasher.lua": {
       "sha256": "21679bda3e20a2c647afc57f8950aa9b8dc235cc207679c3c63b1bb1d4c98e9b",
       "lines": 78,
       "citations": [
         51
       ]
+    },
+    "beta/scripts/prefabs/bight.lua": {
+      "sha256": "540d683f9aa9c94ba3e85eabe627d5c83263365d9ce085bd90f4523e9004afe3",
+      "lines": 246
+    },
+    "beta/scripts/prefabs/blueberryplant.lua": {
+      "sha256": "8af2815aa4145717b3bd189c7414841b46557eec462f51cf2213abf26a29e2a7",
+      "lines": 590,
+      "citations": [
+        57,
+        71,
+        173,
+        212,
+        221,
+        383
+      ]
+    },
+    "beta/scripts/prefabs/boatpatch_sludge.lua": {
+      "sha256": "d358a8706b0f6ba2075b6a6eaca93caf85973d29b294ce27eafc152de2922ea6",
+      "lines": 72
+    },
+    "beta/scripts/prefabs/boulder_crab.lua": {
+      "sha256": "4361b9bc2b74fec914788f298d0bf34366650d9347376efe94d769442c04284d",
+      "lines": 387
+    },
+    "beta/scripts/prefabs/brine_balm.lua": {
+      "sha256": "02cace48d00e12c75ccc9bc529dc0d7c7545b60cdb1a32465b8aa635f1fa92bf",
+      "lines": 53
+    },
+    "beta/scripts/prefabs/bugzapper.lua": {
+      "sha256": "62e981f6b591b2b02bf4aaeeac72dfba9205d9ccd9384160038ccf8ce95bf81c",
+      "lines": 248
+    },
+    "beta/scripts/prefabs/bushcrab.lua": {
+      "sha256": "68bfa629bd1ec435edc971b7b081368f5fc411286df7c214d45eaf840c7f37d1",
+      "lines": 206
+    },
+    "beta/scripts/prefabs/carapacecooler.lua": {
+      "sha256": "e9e2e84f13ee5ba9340eb953dfc811a34912b445f64e0622c492e836adc84412",
+      "lines": 60
+    },
+    "beta/scripts/prefabs/cave_entrance_magmabiome.lua": {
+      "sha256": "d88ff5bdf6b65a8e8f749e65a0b4990a394fd1b86b859f8dd35dce59a9216336",
+      "lines": 194
+    },
+    "beta/scripts/prefabs/cave_exit_magmabiome.lua": {
+      "sha256": "d0ff71cb3c282304efa39f9c25b78668bbb5750721821091d4dffbdacb2f92b8",
+      "lines": 78
     },
     "beta/scripts/prefabs/charles_t_horse.lua": {
       "sha256": "e966094d974835754e1c57edb9714a05e2645a15e247d20fc7dae9090526dce2",
@@ -11911,6 +17849,30 @@
         434,
         449
       ]
+    },
+    "beta/scripts/prefabs/charliephonograph.lua": {
+      "sha256": "4fa0146b07f569247f795013d64538849f0c29f56edd5805b46ab9b168a5cbb8",
+      "lines": 189
+    },
+    "beta/scripts/prefabs/chimp.lua": {
+      "sha256": "2a2dd11cf74a095217536a39ff84da67cd8b497a7ee038d19dc20a4cc44a7df4",
+      "lines": 445
+    },
+    "beta/scripts/prefabs/codex_mantra.lua": {
+      "sha256": "ac27ce4bdf1f6cce801afaa4e257c6799fe820c74d84f60fea763f8e7de22bca",
+      "lines": 262
+    },
+    "beta/scripts/prefabs/corncan.lua": {
+      "sha256": "34b5b57ffb0d8be6a22be001372a7aef46f91989ab470933cfa55e74bd126924",
+      "lines": 43
+    },
+    "beta/scripts/prefabs/creepingfear.lua": {
+      "sha256": "24bb2e608685a82554a9930e7db05bfa047fd0f0e21bcad2dac4703b4fbcceed",
+      "lines": 397
+    },
+    "beta/scripts/prefabs/critterlab_real.lua": {
+      "sha256": "7a8ab0f42deee7cdbd8f2408b72e24938ffe7156d3d341b4915c736d4f151715",
+      "lines": 153
     },
     "beta/scripts/prefabs/crystal_cursed_antler.lua": {
       "sha256": "c00fc3b2e66318d13502ff0f726e135c2685e1efead89432e627a3839eafc972",
@@ -11943,6 +17905,14 @@
         143
       ]
     },
+    "beta/scripts/prefabs/deerclops_barrier.lua": {
+      "sha256": "3f9fd1048eefdc9518e5d5c87a534fa5379a6473ab6e7026823a1f2351a5cc29",
+      "lines": 114
+    },
+    "beta/scripts/prefabs/diseasecure.lua": {
+      "sha256": "8a61b376d7cf36c39c72a949cf4e44e5170f4d4f35f0986b68a9805b45daff9a",
+      "lines": 489
+    },
     "beta/scripts/prefabs/dreadeye.lua": {
       "sha256": "ce604e6179436886a719657d5c805c711da294007124fb654b275db96bc19718",
       "lines": 1092,
@@ -11964,12 +17934,32 @@
         72
       ]
     },
+    "beta/scripts/prefabs/drink_with_the_living_dead.lua": {
+      "sha256": "c7a5d9ccac0011a5152f5ee776d6ab3925665f52da14c0463e59d95c459e60f3",
+      "lines": 517
+    },
+    "beta/scripts/prefabs/eyeofterror_mini_ally.lua": {
+      "sha256": "ecedaaa6b8a639db5aa5151d62d24676b69c3682b8b17daea6fc82fba4bf3ebd",
+      "lines": 187
+    },
     "beta/scripts/prefabs/eyeofterror_mini_projectile_ally.lua": {
       "sha256": "dcb0193575a3360d30180b9dcad4f64aafd4efd55f4c693c49329a0b8c38fcb1",
       "lines": 182,
       "citations": [
         1
       ]
+    },
+    "beta/scripts/prefabs/figgypet.lua": {
+      "sha256": "123cb274badcaff40b46561759ddd416b348bbb8263c1b781a3851985439279a",
+      "lines": 311,
+      "citations": [
+        310,
+        311
+      ]
+    },
+    "beta/scripts/prefabs/floral_bandage.lua": {
+      "sha256": "e61f5c7db6969f69f129ea83ff10653b6c41d9a8448e533fdb72b7c7dffdfb9b",
+      "lines": 59
     },
     "beta/scripts/prefabs/fruitbat.lua": {
       "sha256": "d7df0a2fd110d1de1b2b081e2846e38cbad90e00d22d1739d1646d6ffb6c8dfb",
@@ -11985,15 +17975,36 @@
         237
       ]
     },
+    "beta/scripts/prefabs/fuelseeker.lua": {
+      "sha256": "d38ac84261d23b058e62f7429b7c7015527c641118ce3faa1303cb1161ed6712",
+      "lines": 286
+    },
+    "beta/scripts/prefabs/garbagepatchflotsam.lua": {
+      "sha256": "5aea3b45e3a0983dd216f35febbf002398c14ab9eb2eed07732c27826bc5cc54",
+      "lines": 387
+    },
+    "beta/scripts/prefabs/gasmask.lua": {
+      "sha256": "0a2d258e4aceeed13312f4854ea48a9ce287d7da3ef426f9cf30f9804e5d90ca",
+      "lines": 109
+    },
     "beta/scripts/prefabs/giant_tree.lua": {
       "sha256": "8bbb5d8fcd0049a5336b1fd55dd7cde538af076a7f93d75bd7fb06e1da25e13b",
       "lines": 727,
       "citations": [
         98,
+        115,
         361,
         430,
         441,
         452
+      ]
+    },
+    "beta/scripts/prefabs/giant_tree_birdnest.lua": {
+      "sha256": "cc068997beac700d85c709bbd73e527c1d1356bea604d392047562d3ee9cc72e",
+      "lines": 139,
+      "citations": [
+        21,
+        97
       ]
     },
     "beta/scripts/prefabs/glacialhound_icespike.lua": {
@@ -12026,6 +18037,10 @@
         301
       ]
     },
+    "beta/scripts/prefabs/hat_crab.lua": {
+      "sha256": "d169259b6a1298e61b357f0cf6bec788d6f9515b3770c271fa6bd598bb62ff93",
+      "lines": 207
+    },
     "beta/scripts/prefabs/healthregenbuff_vetcurse.lua": {
       "sha256": "9331d2fe261021009ea61fbcae147fea9127d193f3f1918d73fb2747fceade94",
       "lines": 324,
@@ -12033,6 +18048,25 @@
         8,
         24,
         101
+      ]
+    },
+    "beta/scripts/prefabs/honey_log.lua": {
+      "sha256": "d87f34b600b53553d3f2c89b2f16a884c0c86cf79ec749d9470b31d303c4b6ae",
+      "lines": 81
+    },
+    "beta/scripts/prefabs/hooded_fern.lua": {
+      "sha256": "e37511b87110a86ba01566abd9567e6f0f9e9559dcd774a5386b8bc2e48f152d",
+      "lines": 392,
+      "citations": [
+        88,
+        117,
+        160,
+        167,
+        184,
+        236,
+        261,
+        264,
+        278
       ]
     },
     "beta/scripts/prefabs/hoodedwidow.lua": {
@@ -12053,6 +18087,22 @@
         70
       ]
     },
+    "beta/scripts/prefabs/iceboomerang.lua": {
+      "sha256": "214f8b69ba05222304f8795a77daf05f5a9cfcaa0b36e57021128f8f106cacb4",
+      "lines": 210
+    },
+    "beta/scripts/prefabs/kaleidoscope.lua": {
+      "sha256": "c0a574915a89d1426e0e555781a2bcb6bf9ffabf4645d0727573a3c90b78a853",
+      "lines": 122
+    },
+    "beta/scripts/prefabs/kelpstack.lua": {
+      "sha256": "797e995dc6f483fb847c5e02b43ea1dc28e96c076ec88664e0db411ad9645123",
+      "lines": 202
+    },
+    "beta/scripts/prefabs/knook.lua": {
+      "sha256": "10112821b938e5591b5ff32cb9614e0acc8443fd52e0701bcedf2727c16edf1e",
+      "lines": 147
+    },
     "beta/scripts/prefabs/lava_pond_cave.lua": {
       "sha256": "0991f2932be79227ac621c630d9a5cc22a413df42081a6c5911f7cf9637ebbd2",
       "lines": 273,
@@ -12068,6 +18118,14 @@
         83
       ]
     },
+    "beta/scripts/prefabs/leechswarm.lua": {
+      "sha256": "beb84bfc8f67ab5b40440d7c89d8db6c8e3042d50b2b0fcfe2ee317b6bbd9047",
+      "lines": 167
+    },
+    "beta/scripts/prefabs/lureplague_rat.lua": {
+      "sha256": "2ea50fc9c3009a093315763f671fed2c80bae701968bcfcf86a47520e6115154",
+      "lines": 178
+    },
     "beta/scripts/prefabs/magmarocks.lua": {
       "sha256": "f9612d3f05243f91f3c1141598d27bdd969d1913cbc3f28d363959eea62be991",
       "lines": 226,
@@ -12075,12 +18133,64 @@
         32
       ]
     },
+    "beta/scripts/prefabs/manny.lua": {
+      "sha256": "3db5f911518273e6fa7f94692bc508b965829ba87aebd45c96802437c9567353",
+      "lines": 174
+    },
+    "beta/scripts/prefabs/mara_boss1.lua": {
+      "sha256": "bdc9a067fd0a18447cea3f01b5a2ed9d439bec86b75e9efc9d556be52467ba7a",
+      "lines": 186
+    },
+    "beta/scripts/prefabs/mara_boss1_bullets.lua": {
+      "sha256": "7e774b65007083cdbcfb489ac25ba33b3210eb2fed901a81a24ef06bcf67c6c3",
+      "lines": 146
+    },
+    "beta/scripts/prefabs/mastupgrade_windturbine.lua": {
+      "sha256": "5e1bbee875f255fd6857e6c95bdd2b5bc1f8a9a4bb2ab2aa24ef55d14daa3473",
+      "lines": 292
+    },
+    "beta/scripts/prefabs/meatrack_hat.lua": {
+      "sha256": "91c4f58ea28e9d7dafc0d665b8eeb6d37ad4aeea5fb3732f571e0be69abdb881",
+      "lines": 225
+    },
+    "beta/scripts/prefabs/mindweaver.lua": {
+      "sha256": "557fd1cc695da92f7ddb455ae99e94024643972fc4df86d0ba6f30d9501b667b",
+      "lines": 218
+    },
+    "beta/scripts/prefabs/mini_dreadeye.lua": {
+      "sha256": "bcec03535ca1d31a5444fa52f233f03efeba3d269cfd6893b3230213dc54832f",
+      "lines": 274
+    },
+    "beta/scripts/prefabs/minotaur_boulder.lua": {
+      "sha256": "f01207acb43dd9a945b1ac7dadf740c303b59c7203a33e3914747e873bf81fc9",
+      "lines": 650
+    },
+    "beta/scripts/prefabs/minotaur_boulder_big.lua": {
+      "sha256": "0aba998cd02d361a73bb070c7077fef91559098b22bbe89059d470b11dd46885",
+      "lines": 652
+    },
+    "beta/scripts/prefabs/minotaur_organ.lua": {
+      "sha256": "fd150265a64124d5c208da969802f83387f830f0b549604d0f40cb1bd4d7cf18",
+      "lines": 101
+    },
     "beta/scripts/prefabs/mock_dragonfly.lua": {
       "sha256": "dfe84347f9b90efe614ed63519bd241b6b04da2cf2c61df7863dea939284b935",
       "lines": 591,
       "citations": [
         467
       ]
+    },
+    "beta/scripts/prefabs/moon_beacon.lua": {
+      "sha256": "76680488fc8b7143db0a3eacd7ffcd7c8ee675ad1d784f63ee7fbc7dd51f85b5",
+      "lines": 161
+    },
+    "beta/scripts/prefabs/moon_tear.lua": {
+      "sha256": "2ea5c641da27081e1f7d59f120d5e549ff57849b75ae2dab070a18a10081957a",
+      "lines": 67
+    },
+    "beta/scripts/prefabs/moonglow.lua": {
+      "sha256": "3ca372f18365346c9d46ade5bdf2dc53697810a9b159890862bc146ca5e03601",
+      "lines": 499
     },
     "beta/scripts/prefabs/moonmaw_dragonfly.lua": {
       "sha256": "68a8318a5976d803741f994cbd20431df1c1c3bce5025f556f7aa83445d7aa58",
@@ -12090,12 +18200,78 @@
         633
       ]
     },
+    "beta/scripts/prefabs/moonmaw_glass.lua": {
+      "sha256": "0f4fc1e5af1973e8b7e0a38227489327b11f5662d38e2966ca45e94ae37a965d",
+      "lines": 157
+    },
+    "beta/scripts/prefabs/nervoustick.lua": {
+      "sha256": "969bec69cdcbaf86feed411169f5f2e76878570d0df4dbe6ce16b78a8d880e08",
+      "lines": 316
+    },
+    "beta/scripts/prefabs/oculet.lua": {
+      "sha256": "e3e713e10fd2576457c7836e92a2f3e9f76af342eefbce07b2a0251e1725414f",
+      "lines": 138
+    },
+    "beta/scripts/prefabs/oculet_pets.lua": {
+      "sha256": "14cf19b46cba5911777cf913d3245bc52fafc440f4ec8e24541b70277f3760c5",
+      "lines": 127
+    },
+    "beta/scripts/prefabs/ocupus_beak.lua": {
+      "sha256": "41beb5a7d279c3f0ef90c1bdcf7e932c3bf8678e05acc8d44590f82b59c30b95",
+      "lines": 41
+    },
+    "beta/scripts/prefabs/ocupus_items.lua": {
+      "sha256": "973ce6a68c8c605aefc30cd84f36dc047cccbfe516945e4abecd0d72f7bed4f8",
+      "lines": 158
+    },
+    "beta/scripts/prefabs/pact_armor_sanity.lua": {
+      "sha256": "2be70c14b25b04e324e80e8a0ab6de7039e647b13222eb5be299b419728d7a88",
+      "lines": 168
+    },
+    "beta/scripts/prefabs/pact_sword_sanity.lua": {
+      "sha256": "ef80a45323dd577d38436a81d81ebb8a0f375301a7b62df2f254afbdf34aeb30",
+      "lines": 107
+    },
+    "beta/scripts/prefabs/phantom.lua": {
+      "sha256": "eba75b7c79276810cea29ef6c188976f0748f9247689a0f6f28c336413b39d10",
+      "lines": 220
+    },
+    "beta/scripts/prefabs/pied_piper_flute.lua": {
+      "sha256": "6541dc21131c63ae9cc88fd852c05a415a6ea1ac9014e47e25630279d7c0b6e7",
+      "lines": 94
+    },
+    "beta/scripts/prefabs/pied_rat.lua": {
+      "sha256": "71931f587813b8d4f02b5e12fdac909e39e71f1faa0bc5019dbdfd0abdb674cb",
+      "lines": 208
+    },
+    "beta/scripts/prefabs/pinepile.lua": {
+      "sha256": "6b0cdf3e153b033bbcdd70c50c45d8dc8429e057ca4a17def525bf82c7c9703a",
+      "lines": 113
+    },
     "beta/scripts/prefabs/pitcherplant.lua": {
       "sha256": "56b8721e83bff4e62fda12a0b4f3def678313c93d40f1876c49d752b9ea4d653",
       "lines": 106,
       "citations": [
-        82
+        40,
+        82,
+        84
       ]
+    },
+    "beta/scripts/prefabs/plaguemask.lua": {
+      "sha256": "fec8dab5716c622cbf82519cb334fb0ccbb3942a30479820f5274413ddac8c40",
+      "lines": 106
+    },
+    "beta/scripts/prefabs/pollenmiteden.lua": {
+      "sha256": "c47f8b564935f0849d2614d83db8f1122cb4a6d5bb7942ef44b96745adb62ea0",
+      "lines": 499
+    },
+    "beta/scripts/prefabs/pollenmites.lua": {
+      "sha256": "dfaedc7dbd31f1545e495be694365002d4acd943929e61d821b27f6af495c953",
+      "lines": 257
+    },
+    "beta/scripts/prefabs/portableboat.lua": {
+      "sha256": "6b7aac745b1bb6b19b44a3ee0ac4678498ed7b83c9fa721ea704593e11b23b7b",
+      "lines": 696
     },
     "beta/scripts/prefabs/powercell.lua": {
       "sha256": "a0ef6ac7e744d6490e815db21a05f72915ede4ea6709fd5659a9110234c7a311",
@@ -12105,6 +18281,18 @@
         101,
         104
       ]
+    },
+    "beta/scripts/prefabs/rain_horn.lua": {
+      "sha256": "c7dd1b2d4005ea55e643348f65df6257f2d521dc4cd6db5a5472b8c207df56e9",
+      "lines": 165
+    },
+    "beta/scripts/prefabs/rat_tail.lua": {
+      "sha256": "ca3ff32f6568cefaed7008f8e7a38a0fd8bba37ddcb1e91452f115b85c514b96",
+      "lines": 52
+    },
+    "beta/scripts/prefabs/rat_whip.lua": {
+      "sha256": "f2ef0c3c21e267e2e17e8d02a84daa5e0faed850927b5a97c0bd4d0fcff59f16",
+      "lines": 133
     },
     "beta/scripts/prefabs/ratgashole.lua": {
       "sha256": "775374161036a4e516884bf4fff19ee64faddf6e46d3548ec40576cfd3e9aaaf",
@@ -12160,6 +18348,42 @@
         116
       ]
     },
+    "beta/scripts/prefabs/rne_goodiebag.lua": {
+      "sha256": "49e3447a5be28c39e250f8e32c939fe862bd2f18802225737a9374b4834e8d2d",
+      "lines": 175
+    },
+    "beta/scripts/prefabs/rneghost.lua": {
+      "sha256": "899ded2fe933ddbde9f7d4cfe60a2d9ac06619dbdf6bbbef75df8050bcfef5d0",
+      "lines": 224
+    },
+    "beta/scripts/prefabs/rnemushroombomb.lua": {
+      "sha256": "351f3beca0984f1570c0dfd96aebffaa38b41397cffab9d9aa92eec3676a464f",
+      "lines": 248
+    },
+    "beta/scripts/prefabs/rneshadows.lua": {
+      "sha256": "9e98a45bf39c1db1e5d58dc2fca1fed31f7fc60354d01b7e7a2a251d156b8576",
+      "lines": 273
+    },
+    "beta/scripts/prefabs/rneskeleton.lua": {
+      "sha256": "a314a709ffd3194fe232d3ad2d1bc3730f65db04cb5634c1054fa564fe62979f",
+      "lines": 190
+    },
+    "beta/scripts/prefabs/rock_lichen.lua": {
+      "sha256": "1eddbac0ab352597a816976a85fe1315b6ac5d004a20f2aad549e82c14405159",
+      "lines": 42
+    },
+    "beta/scripts/prefabs/rockjawleather.lua": {
+      "sha256": "faabe2f2208969ce045d074e23ea5082b688599da16032eb8e6ab2ef21b008a1",
+      "lines": 50
+    },
+    "beta/scripts/prefabs/roship.lua": {
+      "sha256": "f62f7496482a8ee354dda9aaf55216403cbb4deb56fa8fccadc8eb2aa17cda68",
+      "lines": 164
+    },
+    "beta/scripts/prefabs/rr_powerline.lua": {
+      "sha256": "ffecc1d7505aed30967d98b517f1d436b30219097e9d7b737d91b3391bd9e33c",
+      "lines": 190
+    },
     "beta/scripts/prefabs/saltpack.lua": {
       "sha256": "4e3a884983bfa41f821501867abacc9e4f86394a55a30c7c546e348ea8bc794e",
       "lines": 227,
@@ -12187,6 +18411,18 @@
         75
       ]
     },
+    "beta/scripts/prefabs/screecher_trinket.lua": {
+      "sha256": "ba64ef9ded8d7899a361d3ef51c5edd6f324c82d4c3cb4a5e1bdd3168480d152",
+      "lines": 95
+    },
+    "beta/scripts/prefabs/searock_ring.lua": {
+      "sha256": "0511d6eb025997e49ea5242c70bb9179f58c17763b155126c2eed27baf1130d7",
+      "lines": 130
+    },
+    "beta/scripts/prefabs/shadow_crown.lua": {
+      "sha256": "d64dec33992747d1fdd1f0d213eac6dedbd250f903598d3009c35bf4be2980ec",
+      "lines": 108
+    },
     "beta/scripts/prefabs/shadow_goo.lua": {
       "sha256": "b80d1b398c591821e97ab08d3a14aa30e7e4a1e4895e247203586fe339559523",
       "lines": 391,
@@ -12195,12 +18431,20 @@
         274
       ]
     },
+    "beta/scripts/prefabs/shadow_teleporter.lua": {
+      "sha256": "b900f52f8f4c94c0e75d72e2d56a746e07a6a507e8b3632802a8e0083a9b7e2c",
+      "lines": 459
+    },
     "beta/scripts/prefabs/shadow_wixie.lua": {
       "sha256": "140ca95cfdeaffaa44bb8a7d3c55cbb9e94f379a673a18b9e419e44388c41810",
       "lines": 820,
       "citations": [
         212
       ]
+    },
+    "beta/scripts/prefabs/shadowvortex.lua": {
+      "sha256": "6a60691bbf7a4e8a2896d18a92dbcb3b904df7971bcf9c5eae9bd863602c6959",
+      "lines": 157
     },
     "beta/scripts/prefabs/shockworm.lua": {
       "sha256": "8c8239aa0adcac03a27ba3854652b546c9b0ecbbb398c22dd18cdcc768997d81",
@@ -12214,6 +18458,10 @@
         433
       ]
     },
+    "beta/scripts/prefabs/shroom_skin_fragment.lua": {
+      "sha256": "c95987c2af6c6a8f58408cbfb055ea02a393326b554d0b898a6564357e1c2fb5",
+      "lines": 46
+    },
     "beta/scripts/prefabs/silksack.lua": {
       "sha256": "fca0a9404b2e061d5c490ecfca1186dc7810d4ca245858321399d8ccba0681c8",
       "lines": 172,
@@ -12224,6 +18472,22 @@
         55,
         93
       ]
+    },
+    "beta/scripts/prefabs/siren_bird_nest.lua": {
+      "sha256": "261ca912f716fb6ac3925d0584d0bfac64a8659d1c5238a317144ffa50e02692",
+      "lines": 80
+    },
+    "beta/scripts/prefabs/siren_throne.lua": {
+      "sha256": "59eb781de705928cfdeb748e56932855dbae684766146e3da4aef7adeed8cdaf",
+      "lines": 63
+    },
+    "beta/scripts/prefabs/skeletonmeat.lua": {
+      "sha256": "e5e5367760fbb7a48322b9b474c4666b5a635f104384aa14c4e0ffc907adb32e",
+      "lines": 47
+    },
+    "beta/scripts/prefabs/skullchest.lua": {
+      "sha256": "19df649dafc2edc3fae80ac86d83db1150e649839e20bb0339ce12fa6dd31643",
+      "lines": 153
     },
     "beta/scripts/prefabs/slingshot_claire.lua": {
       "sha256": "950ee21ebda128bda19672ece80ecdb332605f5e527c6132a69fac7209b0296b",
@@ -12259,6 +18523,10 @@
         247
       ]
     },
+    "beta/scripts/prefabs/slingshotammo_IA.lua": {
+      "sha256": "f03e5302bc498640541b86b2dd9626eefdd6cb3bfcfd391c0ffa540782e00f6e",
+      "lines": 1133
+    },
     "beta/scripts/prefabs/slingshotammo_extras.lua": {
       "sha256": "c73e0bfb0ad6cb3dd03943e05f5b6fbc88ebd47707a7fb2042440970249f0fcd",
       "lines": 2250,
@@ -12268,6 +18536,10 @@
         519,
         529
       ]
+    },
+    "beta/scripts/prefabs/sludge.lua": {
+      "sha256": "3ed04a4a75af11926428237e3d11bfdce753687d9a19e7ccd87695bf76e8b002",
+      "lines": 191
     },
     "beta/scripts/prefabs/sludge_sack.lua": {
       "sha256": "0c853f3b3b95d334060c33b1364173587c5fe69149b7830a8f511a5c849ba2e7",
@@ -12328,6 +18600,14 @@
         87
       ]
     },
+    "beta/scripts/prefabs/snapperturtle.lua": {
+      "sha256": "1827635a06b83a01199f1129f0c94bc0944ffb3cb351d652201838ce23db2a47",
+      "lines": 242
+    },
+    "beta/scripts/prefabs/snapperturtlenest.lua": {
+      "sha256": "098bbdbb96167de8f2544310548dccad96c5a82c5047253023da8a68591b1053",
+      "lines": 199
+    },
     "beta/scripts/prefabs/snowgoggles.lua": {
       "sha256": "6ba6e5a592d6ea80a603891fef3c46e011a81088522c64f997ed9312f0ac0f52",
       "lines": 107,
@@ -12362,6 +18642,14 @@
         494
       ]
     },
+    "beta/scripts/prefabs/speaker.lua": {
+      "sha256": "d6e8fc29707fb8f4e45fc01c1eafc1af044d7730f2b0d74ad9ee9fb9e0961808",
+      "lines": 147
+    },
+    "beta/scripts/prefabs/specter_shipwreck.lua": {
+      "sha256": "ca0a45ba5bd1bdcd269a7b14169bab7b757c20fcc5583d2636f0c7c149c56f9f",
+      "lines": 44
+    },
     "beta/scripts/prefabs/spider_trapdoor.lua": {
       "sha256": "05f98613fcfd0a72a9c6679815610a515e2f3b92f6aecb55c82f75b1b41ea110",
       "lines": 617,
@@ -12374,6 +18662,10 @@
         576
       ]
     },
+    "beta/scripts/prefabs/sporecloud_toad.lua": {
+      "sha256": "fc692e8fd786229ec740eb9d94951dafb909baf2094bd6fcccc14fc30924f3e0",
+      "lines": 434
+    },
     "beta/scripts/prefabs/sporepack.lua": {
       "sha256": "bf0455c29d9fbd97d2ffdb2fb108324321be3bbf1377b10f243462c5bc4b470e",
       "lines": 129,
@@ -12385,6 +18677,26 @@
         116,
         123
       ]
+    },
+    "beta/scripts/prefabs/staff_moonfall.lua": {
+      "sha256": "3bde3b8089385a51a900239eee77d333ed7d7ea3397fbb4c2fb74b173e7b7080",
+      "lines": 612
+    },
+    "beta/scripts/prefabs/staff_starfall.lua": {
+      "sha256": "b9df1e82a441cd515d337757ff901b89f100199c81084b08718ba1c52b7f9c29",
+      "lines": 450
+    },
+    "beta/scripts/prefabs/steeringwheel_copper.lua": {
+      "sha256": "9dd8bb6ecc747bf71cb9a1627280cf7b87193ce725289121fecfc6e5fbe2fc4c",
+      "lines": 166
+    },
+    "beta/scripts/prefabs/stumpling.lua": {
+      "sha256": "b50f6acf45b2ab9ff534c5034d69a34b63cb3e087f85126d6b43aaa133af7f2e",
+      "lines": 219
+    },
+    "beta/scripts/prefabs/sunglasses.lua": {
+      "sha256": "24d4c9b2b15b3e8da27cdc5498242667a8768fcee07d43d84db530fb66c1f6a5",
+      "lines": 79
     },
     "beta/scripts/prefabs/trapdoor.lua": {
       "sha256": "2cdbc805c04d8206ba0bdfd49dd533aa8df9e26d30e259ccf9148d26a0659af2",
@@ -12400,6 +18712,18 @@
       "citations": [
         1
       ]
+    },
+    "beta/scripts/prefabs/trinket_wathom1.lua": {
+      "sha256": "8099f2426f5d1bee6d3ea7cb8e75f94a19d43384b77841a97d791c34fe62774a",
+      "lines": 38
+    },
+    "beta/scripts/prefabs/um_WITCH.lua": {
+      "sha256": "e2935cc6a04381bdf20deadfbb7df98fbca3d3a30e719f88a326b48a3eddf197",
+      "lines": 280
+    },
+    "beta/scripts/prefabs/um_antlionstaff.lua": {
+      "sha256": "51b82400c115c424befc2b47dc165b700fb4b7cb51b961f0fe8bb211e2938870",
+      "lines": 354
     },
     "beta/scripts/prefabs/um_armor_bramble_rimeweed.lua": {
       "sha256": "1a9a73da9e6b4a27ef08176d148f27f471a4f2efb1b63ccd97dd66b71f120c5e",
@@ -12431,6 +18755,10 @@
         264
       ]
     },
+    "beta/scripts/prefabs/um_beegun.lua": {
+      "sha256": "4cdbe27af6378cb2a234cb611b2e68204a12403e748421bc3a8219697972be59",
+      "lines": 759
+    },
     "beta/scripts/prefabs/um_beehive_moon.lua": {
       "sha256": "fac17cd2e249cba312d6e0b59ecdd8a4b81e391d74f1ec8747db2784d7a52c88",
       "lines": 275,
@@ -12439,6 +18767,38 @@
         208,
         233
       ]
+    },
+    "beta/scripts/prefabs/um_boatbottle.lua": {
+      "sha256": "84633e818eaf44efba20985a9ccdefbe8f6fd9eb7bad6502c2afa4b4ab337576",
+      "lines": 181
+    },
+    "beta/scripts/prefabs/um_buttercup.lua": {
+      "sha256": "32d8ad2e1c9765a9d3c4913c742b309f69f5ead004a53f99cb38c5dea4fa17e0",
+      "lines": 180
+    },
+    "beta/scripts/prefabs/um_buttery_fly.lua": {
+      "sha256": "b32cc9fa36a000bf9364ce25df0c75e09fc5ac377cb7011edd07a0dccd03613e",
+      "lines": 199
+    },
+    "beta/scripts/prefabs/um_cannonballs.lua": {
+      "sha256": "bf15919fb4f7f5d78c27f84ec4ab401d19852c6780435ad99bb8986bd69e814b",
+      "lines": 414
+    },
+    "beta/scripts/prefabs/um_cookpot_wagstaff.lua": {
+      "sha256": "a683396073283a0516480cde726d825b189eaa8e7c4fec53a16cbb011aba6bb9",
+      "lines": 674
+    },
+    "beta/scripts/prefabs/um_copper_pipe.lua": {
+      "sha256": "5b5c3bb2eee4f19bc7cf0a9fd291a87e8f3e374f949cd4725a4ca74ed94cf7ab",
+      "lines": 50
+    },
+    "beta/scripts/prefabs/um_dreamcatcher.lua": {
+      "sha256": "6c2c2651d246f8ccaf965cefb1a89615f87561cb9ada1cee35606c5ba09096ea",
+      "lines": 429
+    },
+    "beta/scripts/prefabs/um_exhumer.lua": {
+      "sha256": "4bd4ee07186b68b7e35bd311b7180ad1ba1b0d01cd4cfdbf9bb16b092e11ebc8",
+      "lines": 269
     },
     "beta/scripts/prefabs/um_eyebalm.lua": {
       "sha256": "8609875f6d60d860d82a6d4765ac36a802f1b21f9100f25d603eb21d1ad4d84f",
@@ -12449,6 +18809,41 @@
         60,
         76
       ]
+    },
+    "beta/scripts/prefabs/um_feather_totem.lua": {
+      "sha256": "7dabb31eb9c49dc75519bb4a10d3b23f8ea3d9ffc877bc1d5e9fca5fa0e46999",
+      "lines": 246,
+      "citations": [
+        42,
+        53,
+        101,
+        119,
+        171,
+        224
+      ]
+    },
+    "beta/scripts/prefabs/um_fern_fox.lua": {
+      "sha256": "05f2760416b490c69bc1b7ed0ab28a73f2d8339f158b5692054fad78c33db332",
+      "lines": 214,
+      "citations": [
+        9,
+        17,
+        34,
+        49,
+        98,
+        134,
+        149,
+        185,
+        213
+      ]
+    },
+    "beta/scripts/prefabs/um_foliage.lua": {
+      "sha256": "eceac6fcacad54ca804872e1809ca0f93ae503cd71ac2b1c06600d8121287dc5",
+      "lines": 54
+    },
+    "beta/scripts/prefabs/um_food_cubes.lua": {
+      "sha256": "522eee2309564a3486201b4398dffb8619ec546a400e760435401f646d55c072",
+      "lines": 148
     },
     "beta/scripts/prefabs/um_gem_repair_kit.lua": {
       "sha256": "25626989b16e08ea5d4397350fac70d55af7f9d672daf315b2ee2c95078fbc3f",
@@ -12487,12 +18882,20 @@
         174
       ]
     },
+    "beta/scripts/prefabs/um_guano_rain.lua": {
+      "sha256": "29cb8982c9f08489c0db9f613abe369a321d97fd1062b590e1620b0ff1e1396b",
+      "lines": 307
+    },
     "beta/scripts/prefabs/um_guano_rock.lua": {
       "sha256": "2330b84df469e43fdbcfb6b88faa07a52d6135bc25f76d5e562ceccf92e92835",
       "lines": 180,
       "citations": [
         17
       ]
+    },
+    "beta/scripts/prefabs/um_halloween_ornaments.lua": {
+      "sha256": "b79305582aa0bfb1ae59e64f3e192bc627e53dd223c6b5f2db2c642ebb36c3fc",
+      "lines": 72
     },
     "beta/scripts/prefabs/um_hat_nettlemask.lua": {
       "sha256": "1443f3174fb868d06832a91ff4204ae6bb6ec3ccc7f97a85e466369610f37f45",
@@ -12535,6 +18938,10 @@
         115
       ]
     },
+    "beta/scripts/prefabs/um_heckler.lua": {
+      "sha256": "c7c5e6a345363946f068391b3494ee99c798716054a1176b150b1e9f07ace692",
+      "lines": 157
+    },
     "beta/scripts/prefabs/um_hotspring.lua": {
       "sha256": "e70477aeb7418435579d3bf64a7dff35532ad8bd12f736466ccdb6c4e072d814",
       "lines": 363,
@@ -12558,6 +18965,14 @@
         108
       ]
     },
+    "beta/scripts/prefabs/um_inkubator.lua": {
+      "sha256": "f40897f3ac81a54e43c8f6cdc55f1b6c77224e779f77c561e4c1705334080ee2",
+      "lines": 687
+    },
+    "beta/scripts/prefabs/um_lavaspit_projectiles.lua": {
+      "sha256": "d57abe5f348028a8ae056cf387104ae74382e7d1e32440e5e0ed7b580bb91cea",
+      "lines": 728
+    },
     "beta/scripts/prefabs/um_magmastone.lua": {
       "sha256": "a5f4285b8d5f91d2c6c1a0c2ee4216c569ec7bba1588906ac86baeaa957b4d50",
       "lines": 321,
@@ -12565,6 +18980,10 @@
         19,
         59
       ]
+    },
+    "beta/scripts/prefabs/um_magnerang.lua": {
+      "sha256": "31320f3bff482e9dd1db34095b7f4315c21b94fede0328f0e830f56e01fc4368",
+      "lines": 452
     },
     "beta/scripts/prefabs/um_magnifier.lua": {
       "sha256": "3371351e164e858d9e8c01d4643d772dc0e02f168b21881f17d85b98903f9595",
@@ -12590,12 +19009,46 @@
         179
       ]
     },
+    "beta/scripts/prefabs/um_nightcrawler.lua": {
+      "sha256": "8095e230e448bc1a1f11f3e2d85ab64fe987fa8eda486446a5018ee0672db180",
+      "lines": 266
+    },
+    "beta/scripts/prefabs/um_ocupus_beak.lua": {
+      "sha256": "ab59a037296c908b5ff96ac692f1ff0e9921a908d2efda3865a1e103ed06e0d3",
+      "lines": 217
+    },
+    "beta/scripts/prefabs/um_ocupus_eyetacle.lua": {
+      "sha256": "02e678265969a4fbb65ee9832d6a623ad4ce507f5da2c96897aaf8cf44ac8402",
+      "lines": 560
+    },
+    "beta/scripts/prefabs/um_ocupus_tentacle.lua": {
+      "sha256": "37ba565ca380acf5d44e258314e54c78932996ae75f073a7e6afe3785ca079cc",
+      "lines": 258
+    },
+    "beta/scripts/prefabs/um_pawn.lua": {
+      "sha256": "1dbcf8362cea54211b50dca1cc053690e185115d8e168ea523e327562fca1918",
+      "lines": 570
+    },
     "beta/scripts/prefabs/um_pepperdragon.lua": {
       "sha256": "65f960adb2f01bae396f67076550e367f426742044231361e88bd1623f2197d4",
       "lines": 258,
       "citations": [
-        25
+        25,
+        168,
+        176,
+        183
       ]
+    },
+    "beta/scripts/prefabs/um_pepperdragon_nest.lua": {
+      "sha256": "d6bb2692544f2203a83f0bbf3e0da800ced6549f4801076196ff2b959aba634c",
+      "lines": 137,
+      "citations": [
+        112
+      ]
+    },
+    "beta/scripts/prefabs/um_plants_decor.lua": {
+      "sha256": "5455fc07267fc43ea537a17f4fcd9d57b3d9f6efafb052117d39e6815d62e6f3",
+      "lines": 34
     },
     "beta/scripts/prefabs/um_preparedfoods.lua": {
       "sha256": "cae5a7e36182ab89cc630debf955ec0db24ec01abc89483e2a3f04ad3d5be32f",
@@ -12611,6 +19064,24 @@
       "citations": [
         30,
         315
+      ]
+    },
+    "beta/scripts/prefabs/um_ribopod.lua": {
+      "sha256": "5a173ec47fc036b08067061214a767ae1d21717bff7eb5109faeebc3f9ef49c7",
+      "lines": 187,
+      "citations": [
+        26,
+        120,
+        163,
+        166
+      ]
+    },
+    "beta/scripts/prefabs/um_ribopodden.lua": {
+      "sha256": "22b91828be1566d9e4f4411444097cdf3b1a97f3bce4a7bc8e8181398a5caeeb",
+      "lines": 147,
+      "citations": [
+        121,
+        135
       ]
     },
     "beta/scripts/prefabs/um_rimeweed.lua": {
@@ -12648,6 +19119,18 @@
         19
       ]
     },
+    "beta/scripts/prefabs/um_scrapper.lua": {
+      "sha256": "a14b3d521b2d523afea6bff200bbb3f3bc06f7bb28d740d28fa9864e4703af5c",
+      "lines": 385
+    },
+    "beta/scripts/prefabs/um_shadow_characters.lua": {
+      "sha256": "4005d7868bf599d65b4980d1fd60115f8a78a19dc559a86d32336f17e3fa5430",
+      "lines": 1263
+    },
+    "beta/scripts/prefabs/um_shadow_characters_temp.lua": {
+      "sha256": "2a7a2bf5d6c03c3876c72bf3c8241168b8aaae5450b832102245509eafbfeb69",
+      "lines": 479
+    },
     "beta/scripts/prefabs/um_sinkmound_rock.lua": {
       "sha256": "7fb3691b2587fa70dfd30b49003b4b688c776abef1e142dd42616a4a691c52ef",
       "lines": 187,
@@ -12669,6 +19152,34 @@
         59
       ]
     },
+    "beta/scripts/prefabs/um_snaildrake_explosion.lua": {
+      "sha256": "977d4b82e12e50e5a8074d3fc381ad95be33a7ac5514e01971328dc47a1f0fd6",
+      "lines": 66
+    },
+    "beta/scripts/prefabs/um_sorrel.lua": {
+      "sha256": "5860a54ba4878086a8443b4f0c2fafb73933eac6ec82037b6af0789bbb246919",
+      "lines": 132
+    },
+    "beta/scripts/prefabs/um_specter_amulet.lua": {
+      "sha256": "211ec068ce8c29dc966925326eaa7e0d3accf5076ad6b557a5bc9a357d5f01bc",
+      "lines": 114
+    },
+    "beta/scripts/prefabs/um_spiderqueencorpse.lua": {
+      "sha256": "4a4cedca11b4aa5b542b023f56abe0bf80fd2aae7d711a77782ce159e3a700b0",
+      "lines": 136
+    },
+    "beta/scripts/prefabs/um_strange_rabbit_rock.lua": {
+      "sha256": "5e1c0f0e9c9ce0d59bfe8c54e3c5e5144d236b7f59afb808f4969176e4d3d9d0",
+      "lines": 48
+    },
+    "beta/scripts/prefabs/um_thulecite_razor.lua": {
+      "sha256": "c7fba61e22096eb6b9fbec2106d84387254e58513756ec79874c9d09a14271cd",
+      "lines": 49
+    },
+    "beta/scripts/prefabs/um_tornado.lua": {
+      "sha256": "997397cfa49b46453c8354fbf40fe4dbf9e927cf310fb845742fbf17913d76bb",
+      "lines": 853
+    },
     "beta/scripts/prefabs/um_vampirebat.lua": {
       "sha256": "83fd06cacd2837cda4477d9889dfe45fcae520d36226a63f63b5621d6e9cddbd",
       "lines": 465,
@@ -12682,12 +19193,41 @@
         345
       ]
     },
+    "beta/scripts/prefabs/um_waterfall.lua": {
+      "sha256": "517c96ec18662bc56287c8155f656d698f9d713f501381a2314ae08f2347ba98",
+      "lines": 645
+    },
+    "beta/scripts/prefabs/um_windturbine.lua": {
+      "sha256": "a0ff79ec39efefa288555d690a8e8aa6fde6651c03bd5e9c98165972aae24a7b",
+      "lines": 155
+    },
+    "beta/scripts/prefabs/um_wingsuit.lua": {
+      "sha256": "b132cd4f490c65718a7a391fd744ff3774ab178e2e3965df801ba32a32bca253",
+      "lines": 87
+    },
+    "beta/scripts/prefabs/umdebuff_moonburn.lua": {
+      "sha256": "69ee1d77026ab6950a313a6b4628f31c7c81ee0f5df7d6a61d068b7715935457",
+      "lines": 370
+    },
     "beta/scripts/prefabs/umdebuff_pyre_toxin.lua": {
       "sha256": "5bb7815d7c0e48c7d98d48aacec48ba68beaad75f76bd5b34b9248acf5e3d1b8",
       "lines": 202,
       "citations": [
         60,
         64
+      ]
+    },
+    "beta/scripts/prefabs/umss_general.lua": {
+      "sha256": "eec26b5d4ce6925d802d484951195e1af97880280b363fe3de6067e0c7adeba4",
+      "lines": 321
+    },
+    "beta/scripts/prefabs/uncompromising_birds.lua": {
+      "sha256": "8a987a5fb4e32e4c445d7efb08858de97e5533711909439eb5abada8d57b6c48",
+      "lines": 395,
+      "citations": [
+        288,
+        295,
+        394
       ]
     },
     "beta/scripts/prefabs/uncompromising_buffs.lua": {
@@ -12700,6 +19240,10 @@
         451
       ]
     },
+    "beta/scripts/prefabs/uncompromising_devcapture.lua": {
+      "sha256": "c50cd91402b88ee41348448c47e2bbbb642f42b165e1a1e1f66f1087658806f2",
+      "lines": 297
+    },
     "beta/scripts/prefabs/uncompromising_fishingnet.lua": {
       "sha256": "552b63635e4b412df6697462d54b4f16acdea8380f7980a20afe366da56277be",
       "lines": 84,
@@ -12707,6 +19251,10 @@
         60,
         67
       ]
+    },
+    "beta/scripts/prefabs/uncompromising_harpoon.lua": {
+      "sha256": "327f1350834ba21d9627603afb711c32b2e7ca1a79397b6352ece063abc2248b",
+      "lines": 617
     },
     "beta/scripts/prefabs/uncompromising_hounds.lua": {
       "sha256": "9e1a7282a64754e6b5615da4abaa994fd622ff86880e149bb21a76c3481c4f59",
@@ -12746,12 +19294,20 @@
         1742
       ]
     },
+    "beta/scripts/prefabs/uncompromising_toad.lua": {
+      "sha256": "d3de202372ff59ac2d8ea5417563f914ca838a9916d4601bf2ee8a43a26dea8f",
+      "lines": 142
+    },
     "beta/scripts/prefabs/veteranshrine.lua": {
       "sha256": "bf0a0bb9b9b0cc05155cde3c7709961d2a0981719fac689aa8f6531f94859ee9",
       "lines": 206,
       "citations": [
         72
       ]
+    },
+    "beta/scripts/prefabs/viperjam.lua": {
+      "sha256": "77e9237f6f149a42669792a8d52fbb32e553548e0f7eb7a7b266fe91f0fe0bb4",
+      "lines": 62
     },
     "beta/scripts/prefabs/viperprojectile.lua": {
       "sha256": "12a998e7c9d053a1605919a0d12100346fe34311a36fc823cd707fda7ba49879",
@@ -12772,6 +19328,14 @@
         581
       ]
     },
+    "beta/scripts/prefabs/wackymask.lua": {
+      "sha256": "97b079b03fba62bcc60d81ba1ca6b932408e9161105ce4aa9e8c6d1ad53f6910",
+      "lines": 841
+    },
+    "beta/scripts/prefabs/watermelon_lantern.lua": {
+      "sha256": "b2a34221940fcee49adfc5b8764466b72ed3438ee5aaabd43ebab7ba4963141c",
+      "lines": 263
+    },
     "beta/scripts/prefabs/wathgrithr_shield_dreadstone.lua": {
       "sha256": "a41d6cf6d34bf99bd55889ad239087362d09c2cde7fa2f2c1cb1911d9aeb71a7",
       "lines": 339,
@@ -12789,6 +19353,14 @@
         535
       ]
     },
+    "beta/scripts/prefabs/wathom_corpse.lua": {
+      "sha256": "2cf3a41435e76dedc9004465d4960a1d5bde37cb6b239dcfd53fbcda23123f98",
+      "lines": 60
+    },
+    "beta/scripts/prefabs/web_bomb.lua": {
+      "sha256": "6e814ddcf6d252ed0a9a22daa66f91afc383450c5a13e1867091328fbd4670a1",
+      "lines": 415
+    },
     "beta/scripts/prefabs/webbedcreature.lua": {
       "sha256": "b8d5ec990d434bb956f7c20b5f262e3e7162ac18aec1cf9b7612562de0a3a984",
       "lines": 320,
@@ -12797,6 +19369,10 @@
         184,
         205
       ]
+    },
+    "beta/scripts/prefabs/wicker_tentacle.lua": {
+      "sha256": "a6d10fff774ef3930196cd835161facb08a56f8f12f6783fc866da7b3c8abbeb",
+      "lines": 146
     },
     "beta/scripts/prefabs/widowsgrasp.lua": {
       "sha256": "85d71ca4e5fb49cf57e59245dc36116b862b451d769533ea744f1f191c01d543",
@@ -12880,6 +19456,10 @@
       "citations": [
         35
       ]
+    },
+    "beta/scripts/prefabs/wixiegun.lua": {
+      "sha256": "9ec6da8ab36705421e8898a77de4da405be504d2b8af4306df9d831c6d089785",
+      "lines": 183
     },
     "beta/scripts/prefabs/wixiehoney_trail.lua": {
       "sha256": "6111a3ba445d6d4abf036bb990a13bf094ccd1f9527f3cd8c154488630e1fd88",
@@ -13025,6 +19605,14 @@
         786
       ]
     },
+    "beta/scripts/um_scrapbookdata.lua": {
+      "sha256": "f4e4a1ac591b22132d8c6a2d424c7c726c8d6c8fb150405f3bf98104f72c1c23",
+      "lines": 296
+    },
+    "beta/scripts/uncompromising_prefabs.lua": {
+      "sha256": "d449e87dedb71d0e05d6de3e244de3d0b73a7a52cf04bef765563513bae230b6",
+      "lines": 647
+    },
     "beta/scripts/webbedcreatureloot.lua": {
       "sha256": "4c779727ce650da5dfc12dda943860e8b141fec24595eadbfd2db60249b8ba43",
       "lines": 1394,
@@ -13151,7 +19739,9 @@
         237,
         238,
         249,
+        250,
         252,
+        253,
         255,
         256,
         259,
@@ -13170,6 +19760,7 @@
         325,
         326,
         327,
+        331,
         338,
         342,
         348,
@@ -13185,6 +19776,9 @@
         463,
         469,
         476,
+        479,
+        480,
+        488,
         552,
         565,
         566,
@@ -13221,8 +19815,11 @@
         740,
         744,
         745,
+        750,
         752,
         753,
+        754,
+        755,
         757,
         769,
         775,
@@ -13230,7 +19827,10 @@
         786,
         789,
         812,
+        814,
         816,
+        817,
+        818,
         820,
         821,
         824,
@@ -13238,6 +19838,7 @@
         834,
         839,
         848,
+        857,
         858,
         859,
         860,

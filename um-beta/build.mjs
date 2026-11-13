@@ -160,11 +160,20 @@ const site={
  id:'um-beta',name:'永不妥协测试版',subtitle:'Uncompromising Mode · Public Beta',home:'index.html',settings:'configs.html',
  sources:'sources.html',hub:'../index.html',assets:'../',mark:artwork['cover-icon'].path,extraStyles:'beta.css',
 featured:[],configFilterLabel:'筛选配置类别',configAllLabel:'全部类别',
- routes:[['../index.html','模组 Wiki 总览',''],['index.html','测试版百科','index'],['configs.html','配置大全','settings'],['recipes.html','制作与兑换','recipes'],[newItemsHref,'新增物品',''],['sources.html','版本与来源','sources']],
+ routes:[['../index.html','模组 Wiki 总览',''],['index.html','测试版百科','index'],['configs.html','配置大全','settings'],['recipes.html','制作与兑换','recipes'],['field-guide.html','实体图鉴','field-guide'],[newItemsHref,'新增物品',''],['sources.html','版本与来源','sources']],
  recipeNav:recipeGroups.map(g=>({...g,count:g.rows.length})),
 };
 const badge=(label,color='#7b526d')=>`<span class="tag" style="--tag-color:${color}"><i></i>${esc(label)}</span>`;
 const count={articles:entryArticles.length,configs:configs.length,choices:configs.reduce((n,c)=>n+c.options.length,0)};
+const guideTypes={creature:'生物',giant:'首领',POI:'地点',thing:'环境与设施',item:'物品',food:'食物',entity:'其他具名实体'};
+// Illustrations on overview pages also depict other entities. Only link
+// exact article prefabs or an explicitly identified subject.
+const guideSubjects={aphid:'aphid',critter_figgy:'figgy',um_fern_fox:'fern-fox',um_fern_fox_den:'fern-fox',hooded_fern:'hooded-fern',woodpecker:'woodpecker',giant_tree_birdnest:'woodpecker',fruitbat:'fruitbat',pitcherplant:'boomberry-plant',blueberryplant:'boomberry-plant',um_ribopod:'ribopod',um_ribopodden:'ribopod',um_pepperdragon:'pepperdragon',um_pepperdragon_nest:'pepperdragon',giant_tree:'hooded-forest',hoodedwidow:'hooded-widow'};
+const guideEntries=snapshot.fieldGuide.map(row=>{
+ const article=articleById.get(guideSubjects[row.id])??articleByPrefab.get(row.id)??articleByVariantPrefab.get(row.id);
+ const title=itemName(names[row.nameKey]?.zh?row.nameKey:row.id);
+ return {...row,title,article,href:'field-guide.html#prefab-'+row.id,category:guideTypes[row.type]};
+});
 const articleHref=a=>a.id+'.html';
 
 export async function buildHub(out,tempered,icon,temperedIndex){
@@ -199,8 +208,19 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  const render=(file,current,title,desc,body,toc)=>fs.writeFile(path.join(dir,file),ui.shell(current,title,desc,body,toc));
  const titleBlock=(eyebrow,title,text)=>`<div class="wiki-heading"><div><span class="eyebrow">${eyebrow}</span><h1>${esc(title)}</h1><p>${text}</p></div></div>`;
  const startLink=(href,img,title,desc)=>`<a class="start-link" href="${href}">${artImage(img,38)}<span><strong>${title}</strong><small>${desc}</small></span>${icon('arrow',16)}</a>`;
+ const guideBody=Object.entries(guideTypes).map(([type,label])=>{
+  const rows=guideEntries.filter(e=>e.type===type);
+  if(!rows.length)return '';
+  return '<h2 id="type-'+type+'">'+label+'</h2>'+table(['名称','游戏代码','相关内容'],rows.map(e=>{
+   const details=[e.article&&link(articleHref(e.article),'查看玩法'),...e.related.map(id=>esc(itemName(id)))].filter(Boolean);
+   return '<tr id="prefab-'+esc(e.id)+'"><th scope="row">'+artImage(e.id,28)+esc(e.title)+'</th><td>'+code(e.id)+'</td><td>'+details.join(' · ')+'</td></tr>';
+  }),label);
+ }).join('');
+ await render('field-guide.html','field-guide','游戏实体图鉴','按名称和游戏代码查询测试版实体。',
+  titleBlock('永不妥协测试版','游戏实体图鉴','共 '+guideEntries.length+' 项。按中文名、英文名或游戏代码搜索。条目取自测试版图鉴主表及已注册文件中的具名实体，相关内容包括栖息地、材料与产物。自然出现条件请查对应玩法。')+
+  '<nav class="section-related-links">'+Object.entries(guideTypes).map(([type,label])=>link('#type-'+type,label)).join(' · ')+'</nav>'+guideBody);
  const itemCards=[...primaryItemCards,...extraEntries].map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}">${item.legacyId?`<span class="beta-legacy-anchor" id="entry-${item.legacyId}"></span>`:''}<a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
- const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅首领打法、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('creature-guide.html','生物与首领')} · ${link('index.html?category=characters#encyclopedia','角色')} · ${link('gemology.html','宝石学')} · ${link('cooking-guide.html','料理速查')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
+ const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅首领打法、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('field-guide.html','实体图鉴与代码')} · ${link('creature-guide.html','生物与首领')} · ${link('index.html?category=characters#encyclopedia','角色')} · ${link('gemology.html','宝石学')} · ${link('cooking-guide.html','料理速查')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
  await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ui.ordered.filter(a=>!primaryItemIds.has(a.id)).map(a=>ui.articleHTML(a,true)).join('')+`<div class="beta-topic-items">${itemCards}</div>`);
  for(const a of entryArticles){
   const category=categories.find(c=>c.id===a.category);
@@ -239,6 +259,8 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  await render('items.html','legacy-items','新增物品','旧图鉴链接会前往对应的配方或玩法。',
   `<section class="wiki-entry"><h1>新增物品</h1><p><a id="legacy-items-home" href="${newItemsHref}">浏览全部新增物品</a></p><ul>${legacyLinks}</ul></section><script src="legacy-items.js" defer></script>`);
  const index=[
+  ...guideEntries.map(e=>({id:'prefab-'+e.id,kind:'entity',href:e.article?articleHref(e.article):e.href,title:e.title,category:e.category,
+   keywords:e.id,aliases:[e.id,names[e.id]?.en].filter(Boolean),summary:'游戏代码 '+e.id,text:e.related.map(itemName).join(' ')})),
   ...entryArticles.map(a=>{
    const art=artFor(a.icon??a.prefab??articleIcons[a.id]);
    return {id:a.id,kind:'article',href:articleHref(a),title:a.title,summary:a.summary,category:categories.find(c=>c.id===a.category).name,topic:a.category,aliases:a.aliases,

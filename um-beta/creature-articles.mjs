@@ -12,6 +12,28 @@ const link=(id,label)=>({id,label});
 
 export const creatureArticles=[
  {
+  id:'ribopod',category:'creatures',icon:'um_ribopod',title:'肋荚虫与骸骨堆',aliases:['Ribopod','Bone Mound','um_ribopod','um_ribopodden'],
+  summary:'在熔岩洞穴找骸骨堆。肋荚虫聚集时会主动攻击，也能用陷阱捕获来建造新巢。',
+  configs:['magma_caves'],
+  sections:[
+   ['寻找与捕捉','骸骨堆分布在熔岩洞穴，最多容纳 3 只肋荚虫。开启熔岩洞穴后，可在炼金引擎用活肋荚虫 ×3、骨头碎片 ×8 和石头 ×12 制作骸骨堆。用锤子拆除需要 4 次工作量。'],
+   ['战斗与掉落','肋荚虫有 500 生命，攻击间隔 2.5 秒。附近至少有 3 只同类时会主动寻找带物品栏的目标；一只受击还可招来周围最多 5 只同类。击杀从两种掉落中抽取一件，小鱼块占 80%，骨头碎片占 20%。'],
+  ],
+  related:[link('cave-worldgen','熔岩洞穴与潮湿陷坑')],
+  sources:[cfg(556),names(754),names(755),beta('scripts/map/rooms/caves/moltenregions.lua',198),beta('init/init_recipes/recipes.lua',321),beta('scripts/prefabs/um_ribopodden.lua',121),beta('scripts/prefabs/um_ribopodden.lua',135),beta('scripts/prefabs/um_ribopod.lua',26),beta('scripts/prefabs/um_ribopod.lua',120),beta('scripts/prefabs/um_ribopod.lua',163),beta('scripts/prefabs/um_ribopod.lua',166)],
+ },
+ {
+  id:'pepperdragon',category:'creatures',icon:'um_pepperdragon',title:'椒龙与椒龙巢',aliases:['Pepperdragon','um_pepperdragon','um_pepperdragon_nest','储火袋'],
+  summary:'椒龙栖息在熔岩洞穴，能喷火，击杀后必掉用于制作冷热逆转帽的储火袋。',
+  configs:['magma_caves'],
+  sections:[
+   ['在哪里找','熔岩洞穴的指定房间会放置椒龙巢。每个巢最多容纳 1 只椒龙，巢穴生成器的补充周期为 5 个游戏日。'],
+   ['战斗与掉落','椒龙有 2000 生命，基础攻击 75，免疫火焰伤害，可以被冻结。喂食的特殊互动见冷热逆转帽词条。固定掉落 4 块肉、2 个火腺和 1 个储火袋。'],
+  ],
+  related:[link('cave-worldgen','熔岩洞穴与潮湿陷坑'),link('pepperdragon-hat','冷热逆转帽的材料与获取')],
+  sources:[cfg(556),names(750),names(820),names(821),beta('scripts/map/rooms/caves/moltenregions.lua',119),beta('scripts/prefabs/um_pepperdragon_nest.lua',112),beta('scripts/prefabs/um_pepperdragon.lua',25),beta('scripts/prefabs/um_pepperdragon.lua',168),beta('scripts/prefabs/um_pepperdragon.lua',176),beta('scripts/prefabs/um_pepperdragon.lua',183)],
+ },
+ {
   id:'glacial-hound',category:'creatures',icon:'glacialhound',title:'冰川青年座狼',aliases:['Glacial Hound','冰川猎犬','冰座狼','冰盾'],
   summary:'冬季升级猎犬波会带来的重型猎犬，自带冰盾，能沿直线放出冰刺。',
   configs:['glacialhounds'],
@@ -92,7 +114,7 @@ export const creatureArticles=[
    ['行为与打法','生命 100，基础伤害 20。它会主动追蜘蛛和昆虫，并能抓住仍存活的蚜虫。主动索敌和受击时选取目标的分支都排除了玩家。击杀后约 1.5 秒会爆开，对附近合格目标造成 60 点基础伤害，打倒后先离开爆炸范围。'],
    ['掉落','死亡爆炸时掉 1 颗爆汁蓝莓和 1 个叶翼。WX-78 也可以扫描果蝠来获取加速电路的数据。'],
   ],
-  related:[link('wx78','WX-78 生物扫描'),link('blueberrypancakes','爆汁蓝莓薄饼')],
+  related:[link('aphid','蚜虫'),link('hooded-forest','连帽森林'),link('wx78','WX-78 生物扫描'),link('blueberrypancakes','爆汁蓝莓薄饼')],
   sources:[cfg(539),beta('scripts/map/rooms/forest/gianttreesrooms.lua',41),beta('scripts/prefabs/pitcherplant.lua',82),fruitbat(4),fruitbat(35),fruitbat(79),fruitbat(104),fruitbat(142),fruitbat(159),fruitbat(212),fruitbat(237),beta('scripts/stategraphs/SGfruitbat.lua',18),beta('scripts/stategraphs/SGfruitbat.lua',420),beta('init/init_character_changes/wx78.lua',41),names(249),names(255),names(256),names(729)],
  },
  {

@@ -10,12 +10,13 @@ const worldgen=beta('modworldgenmain.lua',7);
 
 export const worldExpansionArticles=[
  {
-  id:'hooded-forest',category:'world',icon:'hooded_fern',title:'连帽森林',aliases:['Hooded Forest','巨型红杉','巨树森林','月台森林','高齿蕨'],
+  id:'hooded-forest',category:'world',icon:'hooded_fern',title:'连帽森林',aliases:['Hooded Forest','兜帽森林','巨型红杉','巨树森林','月台森林','高齿蕨'],
   summary:'默认替代原来的地表月台森林。用巨型红杉、活动石板和蛛网认路，可在此找到黑寡妇和虫茧。',
   configs:['worldgenmastertoggle','hoodedforest'],
   sections:[
    ['地形位置','新地表同时开启世界生成总开关与连帽森林时，改造原来的 Forest hunters 区域。该区域保留月台和海象房间，另有连帽入口、蜘蛛林和红杉林等房间。岛屿冒险的海难任务表另加专用连帽森林，房间组合与地表不同。'],
    ['黑寡妇与活动石板','蛛网巢和虫茧指向黑寡妇战区。蜘蛛林和海象区域的一些活动石板下藏有连帽伏击蜘蛛。想找宝石可先查看黑寡妇的触发方式与能掉宝石的茧型。',null,[link('hooded-widow.html#hooded-widow-s1','黑寡妇的开战方式'),link('hooded-widower.html','连帽伏击蜘蛛'),link('gemology.html#gemology-s10','虫茧附魔宝石')]],
+   ['森林生物','沿狐穴找蕨狐，穿过高齿蕨时留意蚜虫。果蝠出没于猪笼草附近，啄木鸟则从树冠区飞入。',null,[link('fern-fox.html','蕨狐与狐穴'),link('aphid.html','蚜虫'),link('hooded-fern.html','高齿蕨'),link('fruitbat.html','果蝠'),link('boomberry-plant.html','爆汁蓝莓植株与猪笼草'),link('woodpecker.html','啄木鸟与鸟巢')]],
    ['巨型红杉的资源','完好的巨型红杉需要 25 点砍伐工作量。砍伐会从树冠抖落树枝、木头，也可能有青蛙或蜘蛛。砍到终点会再抖落一批资源，可能含鸟蛋、羽毛或鸟巢。树干留下并开始 3 天再生计时。'],
   ],
   sources:[worldgen,cfg(539),task('giant_trees',4),task('giant_trees',11),task('giant_trees',55),task('giant_trees',84),room('gianttreesrooms',146),room('gianttreesrooms',173),room('gianttreesrooms',258),prefab('widowwebspawner',10),prefab('giant_tree',98),prefab('giant_tree',361),prefab('giant_tree',430),prefab('giant_tree',441),prefab('giant_tree',452),cn(233),cn(252),cn(304)],
