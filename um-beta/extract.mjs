@@ -134,6 +134,34 @@ for(const [id,node] of fields(assignment(scrapbookTree,'data'))){
  const nameKey=scalar(properties.get('name'))??id;
  fieldGuide.push({id,type,nameKey,related:[...new Set(dependencies)],line:node.loc.start.line});
 }
+const additionsPath='init/init_scrapbook/additions.lua';
+const additions=ast(await read(betaDir,additionsPath));
+function addGuide(id,type,related,file,node,details={}){
+ if(fieldGuide.some(row=>row.id===id))throw Error('Duplicate scrapbook ID '+id);
+ fieldGuide.push({id,type,nameKey:id,related,file,line:node.loc.start.line,...details});
+}
+for(const [colour,node] of fields(assignment(additions,'crabclaw_gem_colours')))
+ addGuide(colour+'gem_cracked','item',[colour+'gem','crabclaw'],additionsPath,node);
+for(const [name,node] of fields(assignment(additions,'turfs')))
+ addGuide('turf_'+name,'item',['turfcraftingstation',...values(node).map(scalar)],additionsPath,node);
+const dishesFile='scripts/um_preparedfoods.lua';
+const dishesSource=await read(betaDir,dishesFile);
+const dishes=ast(dishesSource);
+function addDish(id,node,condition){
+ const f=fields(node),chef=scalar(f.get('warly_only'));
+ const nutrients=Object.fromEntries(['hunger','health','sanity'].map(k=>[k,scalar(f.get(k))]).filter(([,v])=>typeof v==='number'));
+ addGuide(id,'food',chef?['spoiled_food','portablecookpot']:['spoiled_food','cookpot','portablecookpot','archive_cookpot'],dishesFile,node,{nutrients,condition});
+}
+for(const [id,node] of fields(assignment(dishes,'um_preparedfoods')))addDish(id,node);
+for(const stmt of dishes.body.filter(s=>s.type==='IfStatement'))for(const clause of stmt.clauses){
+ for(const entry of clause.body){
+  const target=entry.variables?.[0];
+  if(target?.type==='IndexExpression'&&target.base.name==='um_preparedfoods'){
+   if(scalar(target.index)!=='um_kebab'||sourceExpr(clause.condition,dishesSource)!=='UM_CONFIG.BONESTEW_NERF == "bone_appetit"')throw Error('Unknown conditional dish');
+   addDish('um_kebab',entry.init[0],'肉汤改动选择 Bone Requirement 时启用');
+  }
+ }
+}
 // Also index named entities returned literally by the beta's registered
 // prefab files. Visual effects, placers and internal helpers usually lack names.
 const knownEntities=new Set(fieldGuide.map(row=>row.id));
@@ -157,10 +185,62 @@ for(const file of values(assignment(registered,'prefabs')).map(scalar)){
   fieldGuide.push({id,type:critter?'creature':'entity',nameKey:id,related:[],file:relative,line:call.loc.start.line});
  }
 }
+// Runtime registration also finds constructors using loops, aliases and unpack.
+const native=JSON.parse(await fs.readFile(new URL('./native-prefabs.json',import.meta.url)));
+if(native.version!==betaVersion)throw Error('Refresh the native prefab registry for '+betaVersion);
+// Registered effects and scenery can lack an individual STRINGS.NAMES entry.
+const indirectNames={corvushat:'乌鸦帽',goat_lightning:'山羊闪电',mothergoose_tornado:'麋鹿鹅龙卷风',mini_mothergoose_tornado:'小型麋鹿鹅龙卷风',
+ cave_entrance_lush:'繁茂洞穴入口',saltpile:'盐堆',um_agonycloud:'痛苦云雾',rootspike:'根刺',sea_shadow:'海上暗影',
+ rneshadowskittish:'胆小暗影',moonrock_pillarsmall:'月岩小柱',rnefissure:'梦魇裂隙',blueberrypuddle:'爆汁蓝莓水洼'};
+const runtimeNames={};
+for(const [file,record] of Object.entries(native.files)){
+ if(!record.sha256)continue; // The loader also re-registers a base-game file.
+ const source=await read(betaDir,file);
+ if(sourceFiles['beta/'+file].sha256!==record.sha256)throw Error('Native registry source changed: '+file);
+ const returned=ast(source).body.at(-1);
+ for(const [id,label] of Object.entries(record.prefabs)){
+  if(label)runtimeNames[id]=label;
+  if(knownEntities.has(id)||!(label||cnNames[id]||baseNames[id]||indirectNames[id]))continue;
+  if(returned?.type!=='ReturnStatement')throw Error('Missing prefab factory return: '+file);
+  addGuide(id,'entity',[],file,returned);
+  knownEntities.add(id);
+ }
+}
+// Vanilla targets with an actual mod callback are a separate directory. A callback
+// can apply conditionally, so its location alone does not describe the effect.
+const nativeIds=new Set(Object.values(native.files).flatMap(f=>Object.keys(f.prefabs)));
+for(const [id,refs] of Object.entries(native.callbacks)){
+ if(knownEntities.has(id)||nativeIds.has(id)||!gameNames[id])continue;
+ const locations=refs.map(ref=>{
+  const colon=ref.lastIndexOf(':');
+  return {file:ref.slice(0,colon),line:Number(ref.slice(colon+1))};
+ });
+ for(const loc of locations){
+  const value=await read(betaDir,loc.file);
+  if(!value.split('\n')[loc.line-1]?.trim())throw Error('Invalid callback source: '+loc.file+' '+loc.line);
+ }
+ fieldGuide.push({id,nameKey:id,type:'modified',related:[],...locations[0],locations});
+ knownEntities.add(id);
+}
 function sourceExpr(node,source){return node?tidy(source.slice(...node.range)):null;}
+// Objects used by a different entity or a world layout need no callback on themselves.
+for(const [id,file,line,context] of [
+ ['monkeybarrel','scripts/prefabs/um_slimestone_rock.lua',209,'生成带晶洞的黏液岩石时，会在 64 单位内寻找合适的穴居猴桶，并尝试在桶周围 4～5 单位放置岩石。'],
+ ['saddle_wathgrithr','init/init_containers.lua',59,'战斗鞍具列在衣柜可收纳物品清单中。'],
+ ['moonspiderden','scripts/map/rooms/caves/moonregions.lua',88,'月亮洞穴的对应房间使用 3～4 个破碎蜘蛛洞作为布置内容。'],
+ ['eyeplant','init/init_character_changes/wes.lua',30,'眼球草列在韦斯专属老兵诅咒的近距离索敌组中。诅咒开启且符合目标条件时，会在 4 单位内尝试转攻韦斯。'],
+]){
+ const source=await read(betaDir,file);
+ if(!source.split('\n')[line-1]?.includes(id))throw Error('Context source changed: '+id);
+ if(!knownEntities.has(id))fieldGuide.push({id,type:'context',nameKey:id,related:[],file,line,context});
+}
 function member(node,base){
  return node?.type==='MemberExpression'&&node.base.name===base?node.identifier.name:null;
 }
+const hungerSource=await read(betaDir,'postinit/components/builder.lua');
+const hungerKey=ast(hungerSource).body.find(s=>s.variables?.some(v=>sourceExpr(v,hungerSource)==='CHARACTER_INGREDIENT.HUNGER'));
+const hungerId=scalar(hungerKey?.init[0]);
+if(!hungerId)throw Error('Missing character hunger ingredient');
 const recipes=[];
 const skipped=[];
 const recipeInit='init/init_recipes/init_recipes.lua';
@@ -203,22 +283,38 @@ function importGuards(source,entry){
  throw Error('No active modimport for '+entry);
 }
 const loaderGuards=[...importGuards(betaMain,mode),...importGuards(modeInit,'init/init_recipes/init_recipes')];
-function scanRecipes(body,source,file,loaderGuards){
+function scanRecipes(body,source,file,loaderGuards,bindings={}){
+ function resolve(node){
+  if(node?.type==='Identifier')return bindings[node.name];
+  if(node?.type==='IndexExpression')return bindings[node.base.name]?.[resolve(node.index)-1];
+  if(node?.type==='BinaryExpression'&&node.operator==='..'){
+   const l=resolve(node.left),r=resolve(node.right);
+   if(l!==undefined&&r!==undefined)return String(l)+r;
+  }
+  return scalar(node);
+ }
  for(const [statement,guards] of reachableStatements(body,source,loaderGuards)){
   const call=statement.expression;
-  if(statement.type!=='CallStatement'||!['AddRecipe2','AddCharacterRecipe'].includes(call.base.name))continue;
+  if(statement.type!=='CallStatement'||!['AddRecipe2','AddCharacterRecipe'].includes(call.base.name??member(call.base,'env')))continue;
   const [idNode,items,tech,props]=call.arguments;
-  const id=scalar(idNode),options=fields(props),line=statement.loc.start.line;
-  const ingredients=values(items).map(item=>item.base?.name==='Ingredient'&&typeof scalar(item.arguments[0])==='string'?
-   {id:scalar(item.arguments[0]),amount:scalar(item.arguments[1])}:null);
+  const id=resolve(idNode),options=fields(props),line=statement.loc.start.line;
+  const ingredients=values(items).map(item=>{
+   if(item.base?.name!=='Ingredient')return null;
+   const resource=item.arguments[0];
+   const key=sourceExpr(resource,source);
+   const id=key==='GLOBAL.CHARACTER_INGREDIENT.HUNGER'?hungerId:key==='CHARACTER_INGREDIENT.HEALTH'?'decrease_health':resolve(resource);
+   return typeof id==='string'?{id,amount:scalar(item.arguments[1])}:null;
+  });
   const dynamic=items?.type!=='TableConstructorExpression'||ingredients.some(i=>!i||typeof i.amount!=='number');
   const techKey=member(tech,'TECH');
   if(!id||dynamic||!techKey){skipped.push({id:id??null,file,line});continue;}
   const count=options.get('numtogive');
-  recipes.push({id,product:scalar(options.get('product'))??id,ingredients,tech:techKey,
+  const product=resolve(options.get('product'));
+  if(options.has('product')&&!product)throw Error('Unresolved recipe product: '+id);
+  recipes.push({id,product:product??id,ingredients,tech:techKey,
    count:count?(scalar(count)??sourceExpr(count,source)):1,
    gates:guards,
-   requirements:Object.fromEntries(['builder_tag','builder_skill','no_builder_skill','station_tag','nounlock','testfn'].filter(k=>options.has(k)).map(k=>[k,k==='testfn'?true:(scalar(options.get(k))??sourceExpr(options.get(k),source))])),
+   requirements:Object.fromEntries(['builder_tag','builder_skill','no_builder_skill','station_tag','nounlock','testfn','canbuild'].filter(k=>options.has(k)).map(k=>[k,['testfn','canbuild'].includes(k)?true:(scalar(options.get(k))??sourceExpr(options.get(k),source))])),
    file,line});
  }
 }
@@ -240,7 +336,32 @@ for(const module of ['recipes','recipes_wixie','recipes_ia']){
   }
  }
 }
-await read(betaDir,'init/init_recipes/recipe_changes.lua');
+const wormwoodModule='init/init_character_changes/wormwood';
+const wormwoodFile=wormwoodModule+'.lua',wormwoodSource=await read(betaDir,wormwoodFile);
+const wormwoodTree=ast(wormwoodSource);
+const wormwoodGuards=[...importGuards(betaMain,mode),...importGuards(modeInit,wormwoodModule)];
+scanRecipes(wormwoodTree.body,wormwoodSource,wormwoodFile,wormwoodGuards);
+const plantTables=Object.fromEntries(['plants_1','plants_2'].map(k=>[k,values(assignment(wormwoodTree,k)).map(scalar)]));
+const seedLoop=wormwoodTree.body.find(n=>n.type==='ForGenericStatement'&&n.iterators[0]?.arguments?.[0]?.name==='plants_1');
+if(!seedLoop||!plantTables.plants_1.length||plantTables.plants_1.length!==plantTables.plants_2.length)throw Error('Invalid paired seed exchange tables');
+for(const [i,v] of plantTables.plants_1.entries()){
+ const [index,plant]=seedLoop.variables;
+ scanRecipes(seedLoop.body,wormwoodSource,wormwoodFile,wormwoodGuards,{...plantTables,[index.name]:i+1,[plant.name]:v});
+}
+const changesFile='init/init_recipes/recipe_changes.lua',changesSource=await read(betaDir,changesFile);
+const changesGuards=[...loaderGuards,...importGuards(recipeImports,changesFile.slice(0,-4))];
+const recipeChanges=[];
+for(const [stmt,gates] of reachableStatements(ast(changesSource).body,changesSource,changesGuards)){
+ const target=stmt.variables?.[0];
+ if(target?.identifier?.name!=='ingredients'||target.base?.base?.name!=='AllRecipes')continue;
+ const id=scalar(target.base.index),items=stmt.init[0];
+ if(!id||items.type!=='TableConstructorExpression')throw Error('Unknown ingredient override at '+stmt.loc.start.line);
+ const ingredients=values(items).map(item=>{
+  if(item.base?.name!=='Ingredient'||typeof scalar(item.arguments[0])!=='string')throw Error('Unknown ingredient at '+item.loc.start.line);
+  return {id:scalar(item.arguments[0]),amount:scalar(item.arguments[1])??sourceExpr(item.arguments[1],changesSource)};
+ });
+ recipeChanges.push({id,ingredients,gates,file:changesFile,line:stmt.loc.start.line});
+}
 await read(betaDir,'init/init_configs.lua');
 const geodeDefinitions=ast(await read(betaDir,'scripts/um_gemology_geode_defs.lua'));
 const geodePools=Object.fromEntries([...fields(assignment(geodeDefinitions,'GEODE_LOOT_TABLE'))].map(([prefab,node])=>{
@@ -250,12 +371,12 @@ const geodePools=Object.fromEntries([...fields(assignment(geodeDefinitions,'GEOD
 }));
 const artworkIds=itemGroups.flatMap(g=>g.ids);
 const articleArtIds=[...new Set(articles.flatMap(a=>[a.icon??a.prefab,...a.sections.flatMap(([, ,guide])=>guide?.prefabs??[])].filter(Boolean)))].sort();
-const usedNames=new Set([...artworkIds,...articleArtIds,...recipes.flatMap(r=>[r.id,r.product,...r.ingredients.map(i=>i.id)]),...fieldGuide.flatMap(row=>[row.id,row.nameKey,...row.related])]);
+const usedNames=new Set([...artworkIds,...articleArtIds,...recipeChanges.flatMap(r=>[r.id,...r.ingredients.map(i=>i.id)]),...recipes.flatMap(r=>[r.id,r.product,...r.ingredients.map(i=>i.id)]),...fieldGuide.flatMap(row=>[row.id,row.nameKey,...row.related])]);
 // The 6.0.3.9 ammo rename retains the Chinese patch's existing player-facing term.
 const cnNameAliases={um_slingshotammo_honey:'slingshotammo_honey'};
 const names=Object.fromEntries([...usedNames].sort().map(id=>{
  const game=gameNames[id]??{};
- return [id,{en:baseNames[id]??game.en??id,zh:cnNames[id]??cnNames[cnNameAliases[id]]??game.zh??null}];
+ return [id,{en:baseNames[id]??game.en??runtimeNames[id]??id,zh:cnNames[id]??cnNames[cnNameAliases[id]]??game.zh??indirectNames[id]??null}];
 }));
 const activeLines=new Map();
 const validatedCitations=new Map();
@@ -283,7 +404,7 @@ for(const [article,source] of articles.flatMap(a=>a.sources.map(s=>[a.id,s]))){
 }
 if(inactiveCitations.length)throw Error('Citations must point to code, not comments or blank lines:\n'+inactiveCitations.join('\n'));
 for(const [key,lines] of validatedCitations)sourceFiles[key].citations=[...lines].sort((a,b)=>a-b);
-const result={betaVersion,cnVersion,configs,preset,recipes,skipped,names,artworkIds,articleArtIds,geodePools,fieldGuide,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
+const result={betaVersion,cnVersion,configs,preset,recipes,recipeChanges,skipped,names,artworkIds,articleArtIds,geodePools,fieldGuide,sourceFiles:Object.fromEntries(Object.entries(sourceFiles).sort())};
 const json=JSON.stringify(result,null,2)+'\n';
 if(check){
  const current=await fs.readFile(resultFile,'utf8');

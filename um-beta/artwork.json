@@ -63,6 +63,14 @@
     "height": 47,
     "workshop": true
   },
+  "beefalowings": {
+    "path": "assets/um-beta/beefalowings.png",
+    "source": "images/inventoryimages/beefalowings.tex",
+    "atlas": "images/inventoryimages/beefalowings.xml",
+    "width": 64,
+    "height": 53,
+    "workshop": true
+  },
   "blueberrypancakes": {
     "path": "assets/um-beta/blueberrypancakes.png",
     "source": "images/inventoryimages/blueberrypancakes.tex",
@@ -111,6 +119,14 @@
     "height": 62,
     "workshop": true
   },
+  "californiaking": {
+    "path": "assets/um-beta/californiaking.png",
+    "source": "images/inventoryimages/californiaking.tex",
+    "atlas": "images/inventoryimages/californiaking.xml",
+    "width": 64,
+    "height": 59,
+    "workshop": true
+  },
   "cannonball_sludge_item": {
     "path": "assets/um-beta/cannonball_sludge_item.png",
     "source": "images/inventoryimages/cannonball_sludge_item.tex",
@@ -157,6 +173,14 @@
     "atlas": "images/inventoryimages/cursed_antler.xml",
     "width": 62,
     "height": 64,
+    "workshop": true
+  },
+  "devilsfruitcake": {
+    "path": "assets/um-beta/devilsfruitcake.png",
+    "source": "images/inventoryimages/devilsfruitcake.tex",
+    "atlas": "images/inventoryimages/devilsfruitcake.xml",
+    "width": 63,
+    "height": 50,
     "workshop": true
   },
   "dormant_rain_horn": {
@@ -269,6 +293,14 @@
     "atlas": "images/inventoryimages/jawed_scythe.xml",
     "width": 63,
     "height": 63,
+    "workshop": true
+  },
+  "liceloaf": {
+    "path": "assets/um-beta/liceloaf.png",
+    "source": "images/inventoryimages/liceloaf.tex",
+    "atlas": "images/inventoryimages/liceloaf.xml",
+    "width": 62,
+    "height": 38,
     "workshop": true
   },
   "mastupgrade_windturbine_item": {
@@ -479,6 +511,14 @@
     "height": 63,
     "workshop": true
   },
+  "simpsalad": {
+    "path": "assets/um-beta/simpsalad.png",
+    "source": "images/inventoryimages/simpsalad.tex",
+    "atlas": "images/inventoryimages/simpsalad.xml",
+    "width": 61,
+    "height": 63,
+    "workshop": true
+  },
   "skullchest_child": {
     "path": "assets/um-beta/skullchest_child.png",
     "source": "images/inventoryimages/skullchest_child.tex",
@@ -679,6 +719,14 @@
     "height": 59,
     "workshop": true
   },
+  "snotroast": {
+    "path": "assets/um-beta/snotroast.png",
+    "source": "images/inventoryimages/snotroast.tex",
+    "atlas": "images/inventoryimages/snotroast.xml",
+    "width": 63,
+    "height": 53,
+    "workshop": true
+  },
   "snowcone": {
     "path": "assets/um-beta/snowcone.png",
     "source": "images/inventoryimages/snowcone.tex",
@@ -741,6 +789,14 @@
     "atlas": "images/inventoryimages/the_real_charles_t_horse.xml",
     "width": 62,
     "height": 62,
+    "workshop": true
+  },
+  "theatercorn": {
+    "path": "assets/um-beta/theatercorn.png",
+    "source": "images/inventoryimages/theatercorn.tex",
+    "atlas": "images/inventoryimages/theatercorn.xml",
+    "width": 52,
+    "height": 60,
     "workshop": true
   },
   "turf_ancienthoodedturf": {
@@ -967,12 +1023,28 @@
     "height": 58,
     "workshop": true
   },
+  "um_chiles_en_nogada": {
+    "path": "assets/um-beta/um_chiles_en_nogada.png",
+    "source": "images/inventoryimages/um_chiles_en_nogada.tex",
+    "atlas": "images/inventoryimages/um_chiles_en_nogada.xml",
+    "width": 64,
+    "height": 49,
+    "workshop": true
+  },
   "um_detonator": {
     "path": "assets/um-beta/um_detonator.png",
     "source": "images/inventoryimages/um_detonator.tex",
     "atlas": "images/inventoryimages/um_detonator.xml",
     "width": 58,
     "height": 58,
+    "workshop": true
+  },
+  "um_deviled_eggs": {
+    "path": "assets/um-beta/um_deviled_eggs.png",
+    "source": "images/inventoryimages/um_deviled_eggs.tex",
+    "atlas": "images/inventoryimages/um_deviled_eggs.xml",
+    "width": 63,
+    "height": 50,
     "workshop": true
   },
   "um_durian_cream_marshcake": {
@@ -1343,6 +1415,14 @@
     "height": 58,
     "workshop": true
   },
+  "um_kebab": {
+    "path": "assets/um-beta/um_kebab.png",
+    "source": "images/inventoryimages/um_kebab.tex",
+    "atlas": "images/inventoryimages/um_kebab.xml",
+    "width": 64,
+    "height": 41,
+    "workshop": true
+  },
   "um_leafwing": {
     "path": "assets/um-beta/um_leafwing.png",
     "source": "images/inventoryimages/um_leafwing.tex",
@@ -1639,6 +1719,14 @@
     "height": 96,
     "workshop": true
   },
+  "viperjam": {
+    "path": "assets/um-beta/viperjam.png",
+    "source": "images/inventoryimages/viperjam.tex",
+    "atlas": "images/inventoryimages/viperjam.xml",
+    "width": 57,
+    "height": 59,
+    "workshop": true
+  },
   "viperworm": {
     "path": "assets/um-beta/viperworm.png",
     "source": "images/scrapbook/viperworm.tex",
@@ -1735,6 +1823,14 @@
     "height": 59,
     "workshop": true
   },
+  "zaspberryparfait": {
+    "path": "assets/um-beta/zaspberryparfait.png",
+    "source": "images/inventoryimages/zaspberryparfait.tex",
+    "atlas": "images/inventoryimages/zaspberryparfait.xml",
+    "width": 54,
+    "height": 62,
+    "workshop": true
+  },
   "cover-icon": {
     "path": "assets/um-beta/cover-icon.png",
     "source": "modicon.tex",
@@ -1742,6 +1838,14 @@
     "width": 96,
     "height": 96,
     "workshop": true
+  },
+  "decrease_hunger": {
+    "path": "assets/um-beta/decrease_hunger.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 54,
+    "height": 62,
+    "workshop": false
   },
   "blueprint_craftingset_ruins_builder": {
     "path": "assets/um-beta/blueprint_craftingset_ruins_builder.png",
@@ -1765,6 +1869,22 @@
     "atlas": "images/inventoryimages1.xml",
     "width": 61,
     "height": 60,
+    "workshop": false
+  },
+  "birdcage": {
+    "path": "assets/um-beta/birdcage.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 56,
+    "height": 64,
+    "workshop": false
+  },
+  "corn_seeds": {
+    "path": "assets/um-beta/corn_seeds.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 64,
+    "height": 53,
     "workshop": false
   },
   "anchor_item": {
@@ -1839,12 +1959,36 @@
     "height": 56,
     "workshop": false
   },
+  "asparagus_seeds": {
+    "path": "assets/um-beta/asparagus_seeds.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 62,
+    "height": 48,
+    "workshop": false
+  },
+  "decrease_health": {
+    "path": "assets/um-beta/decrease_health.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 61,
+    "height": 59,
+    "workshop": false
+  },
   "blueprint_craftingset_ruinsglow_builder": {
     "path": "assets/um-beta/blueprint_craftingset_ruinsglow_builder.png",
     "source": "images/inventoryimages1.tex",
     "atlas": "images/inventoryimages1.xml",
     "width": 64,
     "height": 64,
+    "workshop": false
+  },
+  "carrot_seeds": {
+    "path": "assets/um-beta/carrot_seeds.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 64,
+    "height": 59,
     "workshop": false
   },
   "greenmooneye": {
@@ -1861,6 +2005,14 @@
     "atlas": "images/inventoryimages2.xml",
     "width": 64,
     "height": 48,
+    "workshop": false
+  },
+  "dumbbell": {
+    "path": "assets/um-beta/dumbbell.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 64,
+    "height": 37,
     "workshop": false
   },
   "moonstorm_spark": {
@@ -1903,6 +2055,14 @@
     "height": 64,
     "workshop": false
   },
+  "eggplant_seeds": {
+    "path": "assets/um-beta/eggplant_seeds.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 64,
+    "height": 49,
+    "workshop": false
+  },
   "mosquitosack": {
     "path": "assets/um-beta/mosquitosack.png",
     "source": "images/inventoryimages2.tex",
@@ -1925,6 +2085,22 @@
     "atlas": "images/inventoryimages2.xml",
     "width": 63,
     "height": 60,
+    "workshop": false
+  },
+  "guano": {
+    "path": "assets/um-beta/guano.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 64,
+    "height": 50,
+    "workshop": false
+  },
+  "mermhouse_crafted": {
+    "path": "assets/um-beta/mermhouse_crafted.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 63,
+    "height": 58,
     "workshop": false
   },
   "fireflies": {
@@ -1975,6 +2151,14 @@
     "height": 42,
     "workshop": false
   },
+  "durian_seeds": {
+    "path": "assets/um-beta/durian_seeds.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 63,
+    "height": 54,
+    "workshop": false
+  },
   "driftwood_log": {
     "path": "assets/um-beta/driftwood_log.png",
     "source": "images/inventoryimages2.tex",
@@ -1999,12 +2183,28 @@
     "height": 52,
     "workshop": false
   },
+  "potato_seeds": {
+    "path": "assets/um-beta/potato_seeds.png",
+    "source": "images/inventoryimages3.tex",
+    "atlas": "images/inventoryimages3.xml",
+    "width": 64,
+    "height": 60,
+    "workshop": false
+  },
   "pumpkincookie": {
     "path": "assets/um-beta/pumpkincookie.png",
     "source": "images/inventoryimages3.tex",
     "atlas": "images/inventoryimages3.xml",
     "width": 64,
     "height": 44,
+    "workshop": false
+  },
+  "pumpkin_seeds": {
+    "path": "assets/um-beta/pumpkin_seeds.png",
+    "source": "images/inventoryimages3.tex",
+    "atlas": "images/inventoryimages3.xml",
+    "width": 62,
+    "height": 61,
     "workshop": false
   },
   "slingshotammo_scrapfeather": {
@@ -2045,6 +2245,30 @@
     "atlas": "images/inventoryimages3.xml",
     "width": 57,
     "height": 64,
+    "workshop": false
+  },
+  "pomegranate_seeds": {
+    "path": "assets/um-beta/pomegranate_seeds.png",
+    "source": "images/inventoryimages3.tex",
+    "atlas": "images/inventoryimages3.xml",
+    "width": 63,
+    "height": 56,
+    "workshop": false
+  },
+  "tomato_seeds": {
+    "path": "assets/um-beta/tomato_seeds.png",
+    "source": "images/inventoryimages3.tex",
+    "atlas": "images/inventoryimages3.xml",
+    "width": 59,
+    "height": 62,
+    "workshop": false
+  },
+  "watermelon_seeds": {
+    "path": "assets/um-beta/watermelon_seeds.png",
+    "source": "images/inventoryimages4.tex",
+    "atlas": "images/inventoryimages4.xml",
+    "width": 59,
+    "height": 52,
     "workshop": false
   },
   "yotc_seedpacket": {
@@ -2139,6 +2363,14 @@
     "path": "assets/um-beta/daywalker.png",
     "source": "images/scrapbook_icons1.tex",
     "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "otter": {
+    "path": "assets/um-beta/otter.png",
+    "source": "images/scrapbook_icons2.tex",
+    "atlas": "images/scrapbook_icons2.xml",
     "width": 96,
     "height": 96,
     "workshop": false

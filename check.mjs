@@ -86,6 +86,21 @@ for(const row of beta.fieldGuide){
  if(!entityResults.has(row.id)||!guidePage.includes('id="prefab-'+row.id+'"')||!source||row.line<1||row.line>source.lines)errors.push('Missing entity or source: '+row.id);
 }
 if(entityResults.size!==beta.fieldGuide.length)errors.push('Entity index count differs from snapshot');
+const reg=JSON.parse(await fs.readFile(new URL('./um-beta/native-prefabs.json',import.meta.url)));
+for(const [file,r] of Object.entries(reg.files)){
+ if(!r.sha256)continue;
+ for(const [id,label] of Object.entries(r.prefabs))if(label&&!entityResults.has(id))errors.push('Missing named native prefab '+id);
+}
+for(const row of beta.fieldGuide.filter(r=>r.nutrients)){
+ if(!betaResults.some(e=>e.kind==='article'&&e.aliases?.includes(row.id)))errors.push('Missing dish article '+row.id);
+}
+for(const r of beta.recipeChanges){
+ if(!betaResults.some(e=>e.id==='materials-'+r.id+'-'+r.line))errors.push('Missing ingredient change '+r.id);
+}
+const exchanges=beta.recipes.filter(r=>/^wormwood_.*_eqex$/.test(r.id));
+for(const r of exchanges){
+ if(!exchanges.some(other=>other.product===r.ingredients[0].id&&other.ingredients[0].id===r.product))errors.push('Missing reverse seed exchange '+r.id);
+}
 for(const [file,asset] of [['index.html','assets/um-beta/cover.png'],['um-beta/index.html','../assets/um-beta/cover.png'],['um-beta/wixie.html','../assets/um-beta/wixie.png'],['um-beta/recipes.html','../assets/um-beta/slingshot_gnasher.png'],['um-beta/index.html','../assets/um-beta/um_gemologypurplegem2.png']]){
  if(!pages.get(file)?.includes('src="'+asset+'"'))errors.push('Missing Beta artwork reference in '+file);
 }

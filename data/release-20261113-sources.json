@@ -205,6 +205,23 @@
       "auditedVersion": "2.8.15.0.23"
     },
     {
+      "id": "resource-regrowth",
+      "source": [
+        "content/food/plant.lua",
+        "content/food/animal.lua",
+        "content/modmain.lua",
+        "原版 scripts.zip：scripts/tuning.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "food_change",
+        "plant_change",
+        "animal_change",
+        "Boulderbough"
+      ],
+      "auditedVersion": "2.8.15.0.34"
+    },
+    {
       "id": "frost-shrine",
       "source": [
         "content/scripts/recipes2hm.lua",
@@ -430,6 +447,20 @@
         "Construction Amulet Repair Equip"
       ],
       "auditedVersion": "2.8.15.0.23"
+    },
+    {
+      "id": "eyebrella",
+      "source": [
+        "content/easy_other/easy_equipments.lua",
+        "原版 scripts.zip：scripts/recipes.lua、scripts/tuning.lua",
+        "content/scripts/eyebrellashade2hm.lua"
+      ],
+      "configKeys": [
+        "enable easy mode",
+        "Eyebrella Swell Shade",
+        "enable hard mode"
+      ],
+      "auditedVersion": "2.8.15.0.34"
     },
     {
       "id": "upgraded-beefalo-bell",
@@ -860,6 +891,20 @@
       "auditedVersion": "2.8.15.0.23"
     },
     {
+      "id": "world-shadow-companions",
+      "source": [
+        "content/modinfo.lua",
+        "content/modmain.lua",
+        "content/shadowworld.lua",
+        "content/scripts/prefabs/shadowhutch2hm.lua"
+      ],
+      "configKeys": [
+        "Shadow World",
+        "Shadow Animals"
+      ],
+      "auditedVersion": "2.8.15.0.34"
+    },
+    {
       "id": "world-random-size",
       "source": [
         "content/modinfo.lua",
@@ -986,14 +1031,16 @@
         "content/modmain.lua",
         "content/food/beefalo.lua",
         "DST scripts.zip/scripts/tuning.lua",
-        "DST scripts.zip/scripts/prefabs/beefalo.lua"
+        "DST scripts.zip/scripts/prefabs/beefalo.lua",
+        "content/common/combat_rewards.lua",
+        "content/scripts/combatbenefits2hm.lua"
       ],
       "configKeys": [
         "enable hard mode",
         "food_change",
         "beefalo"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.34"
     },
     {
       "id": "winona-toolbox",
@@ -1253,6 +1300,29 @@
       ],
       "configKeys": [],
       "auditedVersion": "2.8.15.0.34"
+    },
+    {
+      "id": "dried-berries",
+      "source": [
+        "content/food/plant.lua",
+        "content/scripts/prefabs/dryberries2hm.lua",
+        "content/modmain.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "food_change",
+        "plant_change"
+      ],
+      "auditedVersion": "2.8.15.0.34"
+    },
+    {
+      "id": "tempered-prefab-codes",
+      "source": [
+        "content/modmain.lua",
+        "content/scripts/prefabs2hm.lua"
+      ],
+      "configKeys": [],
+      "auditedVersion": "2.8.15.0.34"
     }
   ],
   "files": {
@@ -1267,6 +1337,10 @@
     "content/common/bugfix.lua": {
       "sha256": "819d4478995485ad8290244928216ad37a4790fdac740fb0a5196a2f067d2516",
       "bytes": 5676
+    },
+    "content/common/combat_rewards.lua": {
+      "sha256": "b398270408be8b4ed108e07f30c713ea6295b8ff1c7d84796f870f9872ba91fd",
+      "bytes": 2851
     },
     "content/common/curse.lua": {
       "sha256": "ae21938ad0f54c7260b5cf8def2de1e081ea705a758e7c8b3bbdb3fc13b9719a",
@@ -1480,6 +1554,10 @@
       "sha256": "511107f1988c9ee648b576164a4d0f3442a1c274249cbb334ca2075c8832b89d",
       "bytes": 3441
     },
+    "content/food/animal.lua": {
+      "sha256": "cb14af69912f9cf146a7de697153c2d30cfa9a800d13e7dbd373e3962548ddcc",
+      "bytes": 11994
+    },
     "content/food/beefalo.lua": {
       "sha256": "4199760c03606741ac5cb7a6fd0c6d96e9c6d13d9b906e17250f7de248cbe5f0",
       "bytes": 9128
@@ -1491,6 +1569,10 @@
     "content/food/fooddata.lua": {
       "sha256": "f94321d71f2e1eecec771d05819c4fe4aa3e062e6a9b2c005be7106719604b2c",
       "bytes": 1835
+    },
+    "content/food/plant.lua": {
+      "sha256": "63e16e284f209495f4a97bde86d4729699e26d2d117c7d2ea70cbfef8b677052",
+      "bytes": 16585
     },
     "content/modinfo.lua": {
       "sha256": "b2c76548b517d4b5e13efd67a78bdd2c48019443c6194c9e6592a723ab00f6b5",
@@ -1584,6 +1666,10 @@
       "sha256": "be354f731b231001d2912293e5b04bde32c11079a59215d4914809eb4b7a3970",
       "bytes": 3474
     },
+    "content/scripts/combatbenefits2hm.lua": {
+      "sha256": "c4f29a266fbdbdb6bda83015278aac9fa74017989af137d182fd482904de6954",
+      "bytes": 727
+    },
     "content/scripts/combatconfig2hm.lua": {
       "sha256": "08856151bf3b795e606436d602a8129669e00c550271d4ae293abcaa8a03388b",
       "bytes": 670
@@ -1660,6 +1746,10 @@
       "sha256": "acbea70f68e695768fb8868fc554767e015a0b36ac9af2f4658273ddd5b4bc84",
       "bytes": 3678
     },
+    "content/scripts/eyebrellashade2hm.lua": {
+      "sha256": "64daeb3ddec3f41b9459ae11433667da42d38771f45b9499ae475ace42287df5",
+      "bytes": 4428
+    },
     "content/scripts/fiveslotcookers2hm.lua": {
       "sha256": "bb7b32140b9c1ac751fc5f61cebf79ee68a7cf69d70908d9a9661f3ae0318b3a",
       "bytes": 18711
@@ -1716,6 +1806,10 @@
       "sha256": "e45180b1d1d509cbe1b1c8abdcd2b9f71f3a496b0be929320c02a4fc5e2d866c",
       "bytes": 13846
     },
+    "content/scripts/prefabs/dryberries2hm.lua": {
+      "sha256": "f8c10aa27876ff9ddd2ccab90c97002bbfbd6c638ad3c89299a0fca73ecbbfa7",
+      "bytes": 3142
+    },
     "content/scripts/prefabs/dynamicarmor_indicator2hm.lua": {
       "sha256": "b03738d3e0d32f6f3c88d9f700a44b53056bb5974283bf429b86bf632fb8f1b5",
       "bytes": 1756
@@ -1744,6 +1838,10 @@
       "sha256": "e945726209784b1aaa6bdea12c2df01850c2085ae8ffa85ee6cb5bea4c1ff933",
       "bytes": 8673
     },
+    "content/scripts/prefabs/shadowhutch2hm.lua": {
+      "sha256": "44c5840247080b5335016acdc7a695061c845cbb6da170d7e5920d185969a417",
+      "bytes": 21042
+    },
     "content/scripts/prefabs/slingshotammo_moonglass_walter2hm.lua": {
       "sha256": "08b177da0d63d72ab2123c6e78c2b8431adac6454de8d94480b28bb2e071f1f8",
       "bytes": 2513
@@ -1763,6 +1861,10 @@
     "content/scripts/prefabs/winona_toolbox2hm.lua": {
       "sha256": "02232a319939af628d8d0df54ff9f0c387f8c3b5d3671387381af2e88388c37e",
       "bytes": 2925
+    },
+    "content/scripts/prefabs2hm.lua": {
+      "sha256": "b41995fccfedac0cf9aa3b91a9093bdc5bea4a772a52f10581067067d010c3c5",
+      "bytes": 3858
     },
     "content/scripts/progressivecombat2hm.lua": {
       "sha256": "236d24d6395b3052a3b0546c50526ebde86bc767ddd289d37a1b5ede3a740f66",

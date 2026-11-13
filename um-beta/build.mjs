@@ -120,7 +120,7 @@ const articleItems={
  'dreadstone-shield':['wathgrithr_shield_dreadstone'],'beak-basher':['beakbasher'],
 };
 const recipeSearch=r=>[r.title,r.id,r.product,names[r.product]?.en,r.materialText,techName(r.tech),r.tech,...r.gates].filter(Boolean).join(' ');
-const requirements={builder_tag:'制作者标签',builder_skill:'必需技能',no_builder_skill:'排斥技能',station_tag:'制作站标签',nounlock:'在对应科技站使用',testfn:'有额外位置或制作者检查'};
+const requirements={builder_tag:'制作者标签',builder_skill:'必需技能',no_builder_skill:'排斥技能',station_tag:'制作站标签',nounlock:'在对应科技站使用',testfn:'有额外位置或制作者检查',canbuild:'另有建造条件'};
 const table=(headers,rows,label,css='')=>`<div class="table-wrap${css?' '+css:''}" tabindex="0" role="region" aria-label="${esc(label)}"><table><thead><tr>${headers.map(h=>`<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`;
 const sourceList=a=>a.sources.map(s=>`<li>${s.kind==='cn'?'汉化补丁':'测试版'} · ${code(s.file+':'+s.line)}</li>`).join('');
 const sectionId=(a,i)=>a.id+'-s'+(i+1);
@@ -165,10 +165,10 @@ featured:[],configFilterLabel:'筛选配置类别',configAllLabel:'全部类别'
 };
 const badge=(label,color='#7b526d')=>`<span class="tag" style="--tag-color:${color}"><i></i>${esc(label)}</span>`;
 const count={articles:entryArticles.length,configs:configs.length,choices:configs.reduce((n,c)=>n+c.options.length,0)};
-const guideTypes={creature:'生物',giant:'首领',POI:'地点',thing:'环境与设施',item:'物品',food:'食物',entity:'其他具名实体'};
+const guideTypes={creature:'生物',giant:'首领',POI:'地点',thing:'环境与设施',item:'物品',food:'食物',entity:'其他具名实体',modified:'原版实体改动索引',context:'与模组玩法相关的原版实体'};
 // Illustrations on overview pages also depict other entities. Only link
 // exact article prefabs or an explicitly identified subject.
-const guideSubjects={aphid:'aphid',critter_figgy:'figgy',um_fern_fox:'fern-fox',um_fern_fox_den:'fern-fox',hooded_fern:'hooded-fern',woodpecker:'woodpecker',giant_tree_birdnest:'woodpecker',fruitbat:'fruitbat',pitcherplant:'boomberry-plant',blueberryplant:'boomberry-plant',um_ribopod:'ribopod',um_ribopodden:'ribopod',um_pepperdragon:'pepperdragon',um_pepperdragon_nest:'pepperdragon',giant_tree:'hooded-forest',hoodedwidow:'hooded-widow'};
+const guideSubjects={mermhouse:'merm-houses',mermhouse_crafted:'merm-houses',mermwatchtower:'merm-houses',saltpile:'saltpack',aphid:'aphid',critter_figgy:'figgy',um_fern_fox:'fern-fox',um_fern_fox_den:'fern-fox',hooded_fern:'hooded-fern',woodpecker:'woodpecker',giant_tree_birdnest:'woodpecker',fruitbat:'fruitbat',pitcherplant:'boomberry-plant',blueberryplant:'boomberry-plant',um_ribopod:'ribopod',um_ribopodden:'ribopod',um_pepperdragon:'pepperdragon',um_pepperdragon_nest:'pepperdragon',giant_tree:'hooded-forest',hoodedwidow:'hooded-widow'};
 const guideEntries=snapshot.fieldGuide.map(row=>{
  const article=articleById.get(guideSubjects[row.id])??articleByPrefab.get(row.id)??articleByVariantPrefab.get(row.id);
  const title=itemName(names[row.nameKey]?.zh?row.nameKey:row.id);
@@ -212,12 +212,14 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   const rows=guideEntries.filter(e=>e.type===type);
   if(!rows.length)return '';
   return '<h2 id="type-'+type+'">'+label+'</h2>'+table(['名称','游戏代码','相关内容'],rows.map(e=>{
-   const details=[e.article&&link(articleHref(e.article),'查看玩法'),...e.related.map(id=>esc(itemName(id)))].filter(Boolean);
+   const stats=Object.entries(e.nutrients??{}).map(([key,v])=>({health:'生命',hunger:'饱食',sanity:'理智'}[key])+' '+(v>0?'+':'')+v).join('，');
+   const locations=e.locations?'<details><summary>查看改动源码</summary>'+e.locations.map(s=>code(s.file+':'+s.line)).join('<br>')+'</details>':'';
+   const details=[e.article&&link(articleHref(e.article),'查看玩法'),esc(e.context),esc(e.condition),esc(stats),...e.related.map(id=>esc(itemName(id))),locations].filter(Boolean);
    return '<tr id="prefab-'+esc(e.id)+'"><th scope="row">'+artImage(e.id,28)+esc(e.title)+'</th><td>'+code(e.id)+'</td><td>'+details.join(' · ')+'</td></tr>';
   }),label);
  }).join('');
  await render('field-guide.html','field-guide','游戏实体图鉴','按名称和游戏代码查询测试版实体。',
-  titleBlock('永不妥协测试版','游戏实体图鉴','共 '+guideEntries.length+' 项。按中文名、英文名或游戏代码搜索。条目取自测试版图鉴主表及已注册文件中的具名实体，相关内容包括栖息地、材料与产物。自然出现条件请查对应玩法。')+
+  titleBlock('永不妥协测试版','游戏实体图鉴','共 '+guideEntries.length+' 项，可按中英文名称或游戏代码搜索。收录游戏图鉴、动态生成的地皮与料理，以及独立测试世界实际注册的模组具名实体。原版改动索引列出测试世界中实际挂载的脚本和行号。部分回调还会检查条件，自然出现条件与具体玩法请查对应专题。')+
   '<nav class="section-related-links">'+Object.entries(guideTypes).map(([type,label])=>link('#type-'+type,label)).join(' · ')+'</nav>'+guideBody);
  const itemCards=[...primaryItemCards,...extraEntries].map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}">${item.legacyId?`<span class="beta-legacy-anchor" id="entry-${item.legacyId}"></span>`:''}<a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
  const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅首领打法、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('field-guide.html','实体图鉴与代码')} · ${link('creature-guide.html','生物与首领')} · ${link('index.html?category=characters#encyclopedia','角色')} · ${link('gemology.html','宝石学')} · ${link('cooking-guide.html','料理速查')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
@@ -252,13 +254,20 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   return `<details class="config-card recipe-card" id="${r.anchor}" data-recipe data-find="${esc(recipeSearch(r))}" data-scopes="${r.scopes.join(' ')}"><summary><span class="beta-recipe-product">${artImage(r.product,34,'recipe-product-icon')}<span class="config-summary-copy"><span class="config-title">${esc(r.title)}</span><span class="config-summary-note">${esc(r.id)}</span></span></span><span class="config-default"><span>科技</span><strong>${esc(techName(r.tech))}</strong></span></summary><div class="config-content"><div class="beta-recipe-tags">${r.scopes.filter(s=>s!=='general').map(s=>badge(recipeScope.find(([value])=>value===s)[1],g.color)).join('')}</div><h3>制作材料</h3>${material}<p>产量 ${typeof r.count==='number'?esc(r.count):'取决于 '+code(r.count)} · 科技 ${code(r.tech)}</p>${gates||props?`<h3>注册与制作条件</h3><ul>${gates}${props}</ul>`:''}${article?`<p>${link(articleHref(article),'查看物品用法 →')}</p>`:''}<details class="source-note"><summary>配方 ID 与核对来源</summary><p>${code(r.id)}${r.product!==r.id?' · 产物 '+code(r.product):''} · ${code(r.file+':'+r.line)}${r.overrides?' · 属性覆盖行 '+esc(r.overrides.join('、')):''}</p></details></div></details>`;
  }).join('')}</section>`).join('');
  const recipeIntro=titleBlock('BETA CRAFTING','制作与兑换',`收录 v${esc(betaVersion)} 的 ${recipeEntries.length} 条制作与兑换注册。按科技分组，也可按角色、配置或兼容条件筛选。`);
- await render('recipes.html','recipes','制作与兑换','公开测试版源码中的制作、兑换与兼容注册。',recipeIntro+recipeTools+'<div class="empty-state" id="recipe-empty" hidden>没有匹配的配方，请调整材料搜索或制作条件。</div>'+recipeRows+`<section class="wiki-entry"><h2>单独核对的动态配方</h2><p>温奇的定居鼠穴消耗饥饿，见 ${link('winky.html','温奇')}。其余动态注册和后续覆盖需结合实现核对。</p><ul>${snapshot.skipped.map(r=>`<li>${code(r.id??'动态 ID')} · ${code(r.file+':'+r.line)}</li>`).join('')}</ul></section>`);
+ const overrideAnchor=r=>'materials-'+r.id+'-'+r.line;
+ const changedMaterials=snapshot.recipeChanges.map(r=>{
+  const materials=r.ingredients.map(i=>itemLabel(i.id)+' × '+esc(i.amount)).join('、');
+  return '<tr id="'+overrideAnchor(r)+'"><th>'+esc(itemName(r.id))+' '+code(r.id)+'</th><td>'+materials+'</td><td>'+r.gates.map(code).join(' · ')+'</td><td>'+code(r.file+':'+r.line)+'</td></tr>';
+ });
+ await render('ingredient-changes.html','ingredient-changes','已有配方的材料改动','按源码条件核对材料替换。',titleBlock('永不妥协测试版','已有配方的材料改动','共 '+changedMaterials.length+' 次材料表替换，按源码执行顺序排列。空白条件表示随对应配方模块加载。')+table(['配方','替换后材料','生效条件','源码'],changedMaterials,'材料改动'));
+ await render('recipes.html','recipes','制作与兑换','公开测试版源码中的制作、兑换与兼容注册。',recipeIntro+'<p>'+link('ingredient-changes.html','查看已有配方的材料改动')+'</p>'+recipeTools+'<div class="empty-state" id="recipe-empty" hidden>没有匹配的配方，请调整材料搜索或制作条件。</div>'+recipeRows+`<section class="wiki-entry"><h2>角色资源配方</h2><p>温奇的定居鼠穴每次消耗 20 饥饿值，只能在世界中尚无温奇定居鼠穴时建造。详见 ${link('winky.html','温奇')}。</p><ul>${snapshot.skipped.map(r=>`<li>${code(r.id??'动态 ID')} · ${code(r.file+':'+r.line)}</li>`).join('')}</ul></section>`);
  await render('sources.html','sources','版本与来源','永不妥协测试版和社区汉化补丁的版本及维护范围。',titleBlock('SOURCE NOTES','版本与来源',`源码快照 v${esc(betaVersion)} · 社区汉化 ${esc(cnVersion)} · 正文核对 v${esc(auditedVersion)}`)+reviewedNotice+
- `<section class="wiki-entry"><h2>资料来源</h2><ul><li>${link(workshop,'Steam 工坊 · Uncompromising Mode: Public Beta')} · The Uncomp Dev Team</li><li>${link(translation,'Steam 工坊 · 永不妥协全汉化 - 测试版专供')} · 郎溪小杰哥、不堪白昼、不笑猫、去码头整点薯条</li><li>${link('https://github.com/LeeMo123/Hanization_um_beta','社区汉化项目源码')}</li><li>${link('https://uncompromisingmode.wiki.gg/','Uncompromising Mode 英文 Wiki')}</li><li>${link('https://qineko.wiki/umpb/','QiNeko Wiki · 永不妥协 BETA')} · 参考导航与关联词条的组织方式</li></ul><h2>覆盖范围</h2><p>本分区包含 ${count.articles} 篇源码核对词条、${count.configs} 项实际菜单配置、${recipeEntries.length} 条可解析的制作与兑换注册。配方记录注册时的材料、科技和可解析条件。食谱、运行中变动及其余内容在后续复核中补充。</p><p>机制、数值和开关从测试版本体核对。汉化补丁用于术语对照，配置中的中文辅助标题用于与英文菜单互查。封面、角色头像和专属物品缩略图来自工坊测试版资源，原版物品图标来自《饥荒联机版》。</p></section>`);
+ `<section class="wiki-entry"><h2>资料来源</h2><ul><li>${link(workshop,'Steam 工坊 · Uncompromising Mode: Public Beta')} · The Uncomp Dev Team</li><li>${link(translation,'Steam 工坊 · 永不妥协全汉化 - 测试版专供')} · 郎溪小杰哥、不堪白昼、不笑猫、去码头整点薯条</li><li>${link('https://github.com/LeeMo123/Hanization_um_beta','社区汉化项目源码')}</li><li>${link('https://uncompromisingmode.wiki.gg/','Uncompromising Mode 英文 Wiki')}</li><li>${link('https://qineko.wiki/umpb/','QiNeko Wiki · 永不妥协 BETA')} · 参考导航与关联词条的组织方式</li></ul><h2>覆盖范围</h2><p>本分区包含 ${count.articles} 篇源码核对词条、${count.configs} 项实际菜单配置、${recipeEntries.length} 条可解析的制作与兑换注册。配方记录注册时的材料、科技和可解析条件。新增锅料理、所需食材与效果见料理速查。已有配方的运行时改写及联动条件仍需逐项核对。</p><p>机制、数值和开关从测试版本体核对。汉化补丁用于术语对照，配置中的中文辅助标题用于与英文菜单互查。封面、角色头像和专属物品缩略图来自工坊测试版资源，原版物品图标来自《饥荒联机版》。</p></section>`);
  const legacyLinks=newItems.map(item=>`<li><a id="${item.id}" href="${item.href}">${esc(item.title)}</a></li>`).join('');
  await render('items.html','legacy-items','新增物品','旧图鉴链接会前往对应的配方或玩法。',
   `<section class="wiki-entry"><h1>新增物品</h1><p><a id="legacy-items-home" href="${newItemsHref}">浏览全部新增物品</a></p><ul>${legacyLinks}</ul></section><script src="legacy-items.js" defer></script>`);
  const index=[
+  ...snapshot.recipeChanges.map(r=>({id:overrideAnchor(r),kind:'materials',href:'ingredient-changes.html#'+overrideAnchor(r),title:itemName(r.id),category:'已有配方的材料改动',keywords:r.id,summary:r.ingredients.map(i=>itemName(i.id)+' × '+i.amount).join('、'),text:r.gates.join(' ')})),
   ...guideEntries.map(e=>({id:'prefab-'+e.id,kind:'entity',href:e.article?articleHref(e.article):e.href,title:e.title,category:e.category,
    keywords:e.id,aliases:[e.id,names[e.id]?.en].filter(Boolean),summary:'游戏代码 '+e.id,text:e.related.map(itemName).join(' ')})),
   ...entryArticles.map(a=>{

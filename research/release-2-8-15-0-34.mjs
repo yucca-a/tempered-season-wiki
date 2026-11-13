@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 const section=(title,...paragraphs)=>({title,paragraphs});
 const version='2.8.15.0.34';
 
@@ -115,5 +116,44 @@ export function refreshRelease34(articles,notes){
     a.sections[0].links=[...(a.sections[0].links??[]),'skill-keybindings'];
   });
   revise('getting-started',[],a=>a.sections.find(s=>s.title==='资料覆盖范围').paragraphs[0]='资料基线为淬炼之季 '+version+'。可在版本记录查阅本分支的发布改动，角色、装备和配置页提供对应的玩法与开关。');
+  revise('eyebrella',['scripts/eyebrellashade2hm.lua'],a=>{
+    a.sections.find(s=>s.title==='困难模式维护').table.rows[0]=['困难模式','容量调整到原版的 12/9（12 个游戏日），保留调整前的耐久百分比。使用眼球伞专用燃料，停止接受针线包。'];
+    a.sections.find(s=>s.title==='兼容永不妥协').paragraphs=['单独使用淬炼或与妥测同开时，淬炼都直接设置眼球伞的隔热、雨雪恢复与庇护。困难模式下也由淬炼设置燃料容量。乳白物、带电的羊奶和黄油已有燃料组件时会保留其原有燃料类型和数值。'];
+    a.sections.find(s=>s.title==='庇护').paragraphs=['眼球伞提供至少一个大隔热值。角色戴着有耐久的眼球伞时获得庇护；体温低于过热阈值减 4 时，庇护至少为 2 级。接近过热时保留环境原有等级。'];
+  });
+  revise('world-shadow-companions',['scripts/prefabs/shadowhutch2hm.lua'],a=>{
+    a.keywords+=' shadowhutch2hm 暗影哈奇';
+    a.sections.push(section('暗影哈奇的储物空间','哈奇分身的代码是 shadowhutch2hm。生成分身时会将它设为暗影形态，打开后连接世界的暗影储物空间。分身从旧存档载入时也会重新连接这个空间。'));
+  });
+  add({
+    id:'dried-berries',title:'干浆果与干多汁浆果',category:'food',tag:'食材',
+    summary:'随身或普通容器中的生浆果腐坏后可以变成干浆果，每颗提供 0.25 水果度。',
+    keywords:'浆果干 berries_dried2hm berries_juicy_dried2hm 干瘪浆果',aliases:['浆果干','多汁浆果干'],
+    configKeys:['enable hard mode','food_change','plant_change'],
+    source:['content/food/plant.lua','content/scripts/prefabs/dryberries2hm.lua','content/modmain.lua'],
+    sections:[
+      section('怎样获得','开启困难模式、食物改动与植物改动后，普通浆果和多汁浆果在角色身上或没有物品过滤规则的容器内腐坏时，会变成各自的干浆果。在未加载区域的地面上腐坏则会消失。'),
+      section('使用与保存','两种干浆果都能下锅，每颗提供 0.25 水果度，也可直接吃、当作诱饵或小燃料。掉在地上会开始消失计时，拾起可以中止计时。'),
+      {title:'游戏代码',table:{headers:['名称','实体代码'],rows:[['干浆果','berries_dried2hm'],['干多汁浆果','berries_juicy_dried2hm']]}},
+      {title:'相关词条',links:['resource-regrowth','dried-vegetables']},
+    ],
+  });
+  revise('resource-regrowth',[],a=>a.sections.find(s=>s.title==='浆果与石头树').links=['dried-berries']);
+  revise('creature-beefalo-bonding',['common/combat_rewards.lua','scripts/combatbenefits2hm.lua','food/beefalo.lua'],a=>{
+    a.sections.push(section('攻击绑铃牛时的收益','开启这项牛群改动后，玩家的武器攻击会被已绑铃的皮弗娄牛挡下。蝙蝠棒和暗影战斧不会借这次攻击吸血，沃托姆也不会从这次攻击获得肾上腺素。绑铃牛的暗影分身沿用本体的保护；蝙蝠棒的攻击事件与耐久仍照常结算。'));
+  });
+  const native=JSON.parse(fs.readFileSync(new URL('../data/native-prefabs.json',import.meta.url)));
+  if(native.version!==version)throw Error('Refresh the native prefab registry for '+version);
+  const registry=Object.entries(native.files);
+  const rows=registry.map(([file,record])=>[file.replace('scripts/prefabs/',''),Object.keys(record.prefabs).join('、')]);
+  add({
+    id:'tempered-prefab-codes',title:'淬炼实体代码表',category:'start',tag:'游戏代码',aliases:['实体图鉴','Prefab','控制台代码'],
+    summary:'按源码文件查本版游戏实际注册的 '+registry.reduce((n,[,r])=>n+Object.keys(r.prefabs).length,0)+' 个实体代码，包括批量生成的果实、植物、投射物与特效。',
+    keywords:'Prefab 实体代码 物品代码 建筑 分身',configKeys:[],source:['content/modmain.lua','content/scripts/prefabs2hm.lua'],
+    sections:[section('如何查找','表内是仅启用淬炼、开启简单和困难模式的地表测试世界中，游戏归到淬炼名下的注册结果。可用页面查找定位完整代码。同一源码文件有时会生成几十个不同实体。特效、指示器与跟随容器也会注册，具体获取条件见玩法词条。'),
+      {title:'模组文件',table:{headers:['注册文件','游戏代码'],rows:rows.filter((_,i)=>registry[i][1].sha256)}},
+      {title:'复用的原版文件',table:{headers:['注册文件','游戏代码'],rows:rows.filter((_,i)=>!registry[i][1].sha256)}},
+      {title:'相关词条',links:['dried-berries','devil-fruit','world-shadow-companions','dread-alarming-clock']}],
+  });
   return updated;
 }

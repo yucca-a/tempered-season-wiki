@@ -232,7 +232,7 @@ export const articles=[
  {
   id:'cooking-guide',category:'mechanics',icon:'cookpot',title:'测试版料理速查',aliases:['烹饪','锅料理','新料理','Crock Pot'],
   searchJumps:[{terms:['料理','食谱','测试版料理','妥协料理']}],
-  summary:'按菜名查配料、基础三维、保鲜时间与特殊效果，涵盖 12 道测试版锅料理。',
+  summary:'按菜名查配料、基础数值与食用效果，收录本版新增锅料理表的全部 '+foodArticles.length+' 道料理。',
   configs:['newrecipes','foodregen','food_stats'],
   sections:[
    ['从哪里下锅','新增食谱默认开启。普通锅、便携烹饪锅和远古锅均可煮常规新增食谱。标为沃利专用的配方只注册在便携烹饪锅。'],
@@ -241,6 +241,57 @@ export const articles=[
   ],
   related:foodArticles.map(food=>({id:food.id,label:food.title})),
   sources:[cfg(700),beta('init/init_food/init_crockpot.lua',605),beta('scripts/um_preparedfoods.lua',4),beta('init/init_gamemodes/init_uncompromising_mode.lua',217),beta('init/init_gamemodes/init_uncompromising_mode.lua',247)],
+ },
+ {
+  id:'freeze-immunity',category:'mechanics',icon:'icestaff',title:'解冻后的抗冻时间',aliases:['连续冰冻','冻结免疫','冰冻抗性'],
+  summary:'普通目标解冻后有 5 秒抗冻，史诗目标有 10 秒。连续冻结同一只生物会延长下次抗冻时间。',
+  configs:[],sections:[
+   ['何时生效','目标从冻结中真正解冻时开始计时。在抗冻时间内，常规冰冻攻击不能再给它增加寒冷值。玩家有基础抗冻时间，反复解冻不会叠层。'],
+   ['连续冻结','首次解冻按基础时间结算。之后普通生物每层多 1 秒，史诗生物每层多 2 秒；离上次解冻每满 120 秒消退一层。剩余时间与层数会随存档保留。'],
+   ['冰魔杖例外','冰魔杖和代码为 icestaff2、icestaff3 的变体，在武器命中回调期间可以绕过这段抗冻时间。'],
+  ],sources:[beta('init/init_gamemodes/init_uncompromising_mode.lua',118),...[2,10,61,78,88,104,136,177].map(line=>beta('init/init_freezeimmunity.lua',line))],
+ },
+ {
+  id:'birdcage-feeding',category:'items',icon:'birdcage',title:'鸟笼喂食与怪物蛋',aliases:['怪物鸟蛋','笼中鸟','birdcage','um_monsteregg'],
+  summary:'开启怪物蛋后，给普通笼中鸟喂带怪物属性的肉，可得到怪物蛋。给鸟喂稻米会触发延时爆炸。',
+  configs:['monster_eggs'],sections:[
+   ['喂怪物肉','怪物蛋设置大于 0 时，普通笼中鸟吃下主类型为肉、副类型为怪物的食物，会产下怪物蛋；变异笼中鸟产下腐烂鸟蛋。笼中鸟拒收生熟普通蛋、生熟怪物蛋和腐烂鸟蛋。'],
+   ['喂稻米','生稻米或熟稻米触发啄食动画，3 秒后鸟笼爆炸。源码设置的爆炸范围为 1，爆炸伤害为 0。'],
+  ],sources:[cfg(749),beta('init/init_gamemodes/init_uncompromising_mode.lua',114),...[60,98,110,139,171,178,187].map(line=>beta('init/init_food/init_bird_changes.lua',line))],
+ },
+ {
+  id:'merm-houses',category:'items',icon:'mermhouse_crafted',title:'鱼人房屋与冬季再生',aliases:['漏雨的小屋','鱼人工艺屋','鱼人堡垒','mermhouse','mermhouse_crafted','mermwatchtower'],
+  summary:'冬季鱼人也会离开房屋，鱼人与鱼人守卫的补充间隔随房屋类型和季节变化。',
+  configs:['mermtweaks'],sections:[
+   ['普通鱼人','开启鱼人改动后，野生鱼人房和沃特制作的鱼人房会在冬季进入非白天时放出屋内鱼人，并恢复生成。白天停止生成。'],
+   ['再生间隔','平时野生房采用原版鱼人房间隔，工艺屋取该值的一半；到了冬季，两者各自乘 2。堡垒的平时间隔为原版守卫再生间隔的 8 倍，冬季为 16 倍。'],
+  ],sources:[cfg(893),beta('init/init_postinit.lua',552),...[22,39,63,74,79].map(line=>beta('postinit/prefabs/mermhouse.lua',line))],
+ },
+ {
+  id:'marotter',category:'creatures',icon:'otter',title:'水獭掠夺者',aliases:['水獭','Marotter','otter'],configs:[],
+  summary:'测试版改写水獭掠夺者的共享掉落表，保证掉落 1 块肉，另有 5% 概率掉落瓶中信。',
+  sections:[['死亡掉落','肉和瓶中信分别判定。共享掉落表里肉的概率为 100%，瓶中信为 5%。']],
+  sources:[beta('init/init_postinit.lua',230),beta('init/init_postinit.lua',602),beta('postinit/prefabs/otter.lua',5),beta('postinit/prefabs/otter.lua',8)],
+ },
+ {
+  id:'message-bottle-treasure',category:'world',icon:'messagebottle',title:'瓶中信与沉底宝箱',aliases:['寄居蟹隐士','hermitcrab','沉底宝箱','sunkenchest','珍珠','寻宝'],
+  configs:[],summary:'瓶中信可以为尚未见过寄居蟹隐士的玩家指路。进入寻宝分支后，还有机会找到宝石宝箱。',
+  sections:[['寻找隐士','玩家尚未找到隐士、隐士实体存在，且这封信允许指向隐士时，读信会返回隐士的位置。'],['寻宝概率','未达同时寻宝数量上限且成功选到位置后，50% 走原版藏宝生成。另 50% 走妥测藏宝生成，其中 75% 选普通沉底宝箱，25% 选随机皇家宝箱。换算成这次成功寻宝，随机皇家宝箱分支占 12.5%。']],
+  sources:[beta('init/init_postinit.lua',28),...[121,125,131,135,140].map(line=>beta('postinit/components/messagebottlemanager.lua',line))],
+ },
+ {
+  id:'ingredient-uses',category:'items',icon:'cookpot',title:'月蛾翅膀与干火荨麻叶',aliases:['月蛾翅膀','moonbutterflywings','干火荨麻叶','firenettles_dried'],
+  configs:['newrecipes'],summary:'月蛾翅膀可以代替蝴蝶翅膀做蝴蝶松饼。干火荨麻叶可作叶片食材，也是岩浆地皮和防火霜的材料。',
+  sections:[['月蛾翅膀','蝴蝶松饼需要蝴蝶翅膀或月蛾翅膀、有蔬菜值且没有肉值；同时检查测试版的填充物限制。'],['干火荨麻叶','开启新增食谱时，干火荨麻叶提供 1 叶片值。岩浆地皮每次用 1 块石头和 1 片干火荨麻叶制作 4 块；一份防火霜用 3 片干叶、1 个储火袋及 2 个幽灵辣椒。制作还需满足各自的注册与科技条件。']],
+  sources:[beta('init/init_food/init_crockpot.lua',362),beta('init/init_food/init_crockpot.lua',589),beta('init/init_recipes/recipes.lua',30),beta('init/init_recipes/recipes.lua',324)],
+ },
+ {
+  id:'wolfgang-training-equipment',category:'items',icon:'dumbbell',title:'沃尔夫冈的哑铃与健身房',aliases:['大理石哑铃','热铃','火铃','冰铃','dumbbell_marble','dumbbell_heat','dumbbell_redgem','dumbbell_bluegem','强大健身房'],
+  configs:['wolfgang'],summary:'沃尔夫冈改动会替换健身房及三种哑铃的材料；其余四种可按原版角色与技能配方制作。',
+  sections:[
+   ['测试版改价','启用沃尔夫冈改动时，强大健身房用木板 ×4、石砖 ×2、绳子 ×3。普通哑铃用石头 ×4、树枝 ×1。黄金哑铃用金块 ×2、石砖 ×2、树枝 ×2。宝石哑铃用紫宝石 ×1、石砖 ×2、树枝 ×2。'],
+   ['其余四种','当前原版配方中，大理石哑铃由沃尔夫冈用大理石 ×4、树枝 ×1 制作。学习哑铃制作技能后，热铃需要石头 ×12、鹤嘴锄 ×1、燧石 ×4；火铃与冰铃各需铥矿 ×2、树枝 ×1，另加对应的红宝石或蓝宝石 ×1。四种都无需科技站。'],
+  ],sources:[beta('init/init_recipes/recipe_changes.lua',262),beta('init/init_recipes/recipe_changes.lua',264),beta('init/init_recipes/recipe_changes.lua',270)],
  },
  ...characterArticles,
  ...exclusiveArticles,

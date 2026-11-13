@@ -70,7 +70,12 @@
     "role-wortox",
     "role-webber",
     "world-moon-island",
-    "new-hambat"
+    "new-hambat",
+    "eyebrella",
+    "world-shadow-companions",
+    "dried-berries",
+    "resource-regrowth",
+    "tempered-prefab-codes"
   ],
   "articles": [
     {
@@ -396,7 +401,7 @@
         "animal_change",
         "Boulderbough"
       ],
-      "auditedVersion": "2.8.14.97.4"
+      "auditedVersion": "2.8.15.0.34"
     },
     {
       "id": "random-seeds",
@@ -1237,14 +1242,15 @@
       "id": "eyebrella",
       "source": [
         "content/easy_other/easy_equipments.lua",
-        "原版 scripts.zip：scripts/recipes.lua、scripts/tuning.lua"
+        "原版 scripts.zip：scripts/recipes.lua、scripts/tuning.lua",
+        "content/scripts/eyebrellashade2hm.lua"
       ],
       "configKeys": [
         "enable easy mode",
         "Eyebrella Swell Shade",
         "enable hard mode"
       ],
-      "auditedVersion": "2.8.14.97.4"
+      "auditedVersion": "2.8.15.0.34"
     },
     {
       "id": "terror-shield",
@@ -2741,12 +2747,14 @@
       "source": [
         "content/modinfo.lua",
         "content/modmain.lua",
-        "content/shadowworld.lua"
+        "content/shadowworld.lua",
+        "content/scripts/prefabs/shadowhutch2hm.lua"
       ],
       "configKeys": [
         "Shadow World",
         "Shadow Animals"
-      ]
+      ],
+      "auditedVersion": "2.8.15.0.34"
     },
     {
       "id": "world-shadow-target",
@@ -4085,14 +4093,16 @@
         "content/modmain.lua",
         "content/food/beefalo.lua",
         "DST scripts.zip/scripts/tuning.lua",
-        "DST scripts.zip/scripts/prefabs/beefalo.lua"
+        "DST scripts.zip/scripts/prefabs/beefalo.lua",
+        "content/common/combat_rewards.lua",
+        "content/scripts/combatbenefits2hm.lua"
       ],
       "configKeys": [
         "enable hard mode",
         "food_change",
         "beefalo"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.34"
     },
     {
       "id": "creature-koalefant-herds",
@@ -4424,6 +4434,29 @@
         "content/scripts/keybindings2hm.lua",
         "content/scripts/keybindingmodel2hm.lua",
         "content/scripts/keybindingscreen2hm.lua"
+      ],
+      "configKeys": [],
+      "auditedVersion": "2.8.15.0.34"
+    },
+    {
+      "id": "dried-berries",
+      "source": [
+        "content/food/plant.lua",
+        "content/scripts/prefabs/dryberries2hm.lua",
+        "content/modmain.lua"
+      ],
+      "configKeys": [
+        "enable hard mode",
+        "food_change",
+        "plant_change"
+      ],
+      "auditedVersion": "2.8.15.0.34"
+    },
+    {
+      "id": "tempered-prefab-codes",
+      "source": [
+        "content/modmain.lua",
+        "content/scripts/prefabs2hm.lua"
       ],
       "configKeys": [],
       "auditedVersion": "2.8.15.0.34"

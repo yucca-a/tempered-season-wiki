@@ -1,0 +1,3368 @@
+{
+  "version": "2.8.15.0.34",
+  "files": {
+    "scripts/prefabs/backpackicon2hm.lua": {
+      "sha256": "c8806a7e1d94a336a140a56cd7bb8f07c273d5720f88e678dc0a3150eca631d4",
+      "prefabs": {
+        "backpackicon2hm": ""
+      }
+    },
+    "scripts/prefabs/battlesongbuffs.lua": {
+      "sha256": "512fc77e4af9eef466b019ea882c8ed6b7589e94fdc75dca8b7ee9f7b36ea645",
+      "prefabs": {
+        "buff_attackbuff": "",
+        "buff_kitespeed": ""
+      }
+    },
+    "scripts/prefabs/beargerrangeattackfx2hm.lua": {
+      "sha256": "54528d59333d9f98f092879e1397f89ca042722b348d4e03b4dddb0f079b525c",
+      "prefabs": {
+        "beargerswipefx2hm": "",
+        "mutatedbeargerswipefx2hm": ""
+      }
+    },
+    "scripts/prefabs/blank2hm.lua": {
+      "sha256": "ad924ae2176aaff9828a7c838762a7883fa624cf4079cbd156d019d67601812d",
+      "prefabs": {
+        "blank2hm": ""
+      }
+    },
+    "scripts/prefabs/boatwaterfx2hm.lua": {
+      "sha256": "9868a3e11e5b309bd12de71715e1d89e9e2e70c796cb4e2ea010dbc08f0f2a58",
+      "prefabs": {
+        "boatwaterfx2hm": ""
+      }
+    },
+    "scripts/prefabs/book_temperature_buff2hm.lua": {
+      "sha256": "7e9a7ae121969dd59c5258a26ca06d904a3582aa6fa2a7da69c87808f89aa831",
+      "prefabs": {
+        "book_temperature_buff2hm": "控温学"
+      }
+    },
+    "scripts/prefabs/bookstation2hm.lua": {
+      "sha256": "102376ca88450812ab18d69c0cbb20ab24de470b10bb273b73bb8b7bb38b6d39",
+      "prefabs": {
+        "bookstation2hm": ""
+      }
+    },
+    "scripts/prefabs/bootleg2hm.lua": {
+      "sha256": "4fb6d55d2cda5ae9595006607199333468dd9310e1fca4bb5af6f281b83b2cae",
+      "prefabs": {
+        "bootleg2hm": ""
+      }
+    },
+    "scripts/prefabs/bootleg_2hm.lua": {
+      "sha256": "eba9a8bb10e28c8b3c3196aadf603bf663c7b6784ab223801e8e46ab59b88242",
+      "prefabs": {
+        "bootleg_2hm": ""
+      }
+    },
+    "scripts/prefabs/classified2hm.lua": {
+      "sha256": "44d7d28d5c21e4141b86cf795e35eec67883299944609079c09e089ee7c361e2",
+      "prefabs": {
+        "classified2hm": ""
+      }
+    },
+    "scripts/prefabs/crabking2hm.lua": {
+      "sha256": "dcda50615e7e01b4fb350cffe2f338f186780fef33b610d987e750eac5521610",
+      "prefabs": {
+        "crabking2hm": "",
+        "dwx_chip_high": "",
+        "dwx_chip_low": "",
+        "dwx_chip_med": "",
+        "dwx_feeze": "",
+        "dwx_geyserspawner": ""
+      }
+    },
+    "scripts/prefabs/crabking2hm_claw.lua": {
+      "sha256": "43f523ec3224528e1aadc51dda484d0be1081c4f9220f35e8650239405e4f434",
+      "prefabs": {
+        "crabking2hm_claw": "",
+        "dwx_claw_shadow": ""
+      }
+    },
+    "scripts/prefabs/crabking_feeze2hm.lua": {
+      "sha256": "86b0a9e23bd7880246fbcdf0f748de36b1de23bc7a404779f3bb0fa8cdb9b1c6",
+      "prefabs": {
+        "crabking_feeze2hm": "",
+        "crabking_ring_fx2hm": ""
+      }
+    },
+    "scripts/prefabs/crabking_kit2hm.lua": {
+      "sha256": "557447a696121b9d37fba364d3a8edc50ae33419c86b1b88c0cd7966f201c4b7",
+      "prefabs": {
+        "crabking_kit2hm": ""
+      }
+    },
+    "scripts/prefabs/deer2hm.lua": {
+      "sha256": "7808f845ea3cd09dc60890aef5e2d6069715bf7c42a4908388adafc07abd75a9",
+      "prefabs": {
+        "deer_blue2hm": "",
+        "deer_red2hm": ""
+      }
+    },
+    "scripts/prefabs/devil_heart2hm.lua": {
+      "sha256": "755993d3e8112c0558f21faad657bb2f35898e034a8acd7715cd1b2c5e785bb2",
+      "prefabs": {
+        "devil_heart2hm": "Shadowweaver Nightberry"
+      }
+    },
+    "scripts/prefabs/devilfruits2hm.lua": {
+      "sha256": "4284a222a30a2d5768eb10ad4546e872f0ff0441f511b92ce354bd28aa91b528",
+      "prefabs": {
+        "devil_fruit2hm_asparagus": "",
+        "devil_fruit2hm_berries": "",
+        "devil_fruit2hm_berries_juicy": "",
+        "devil_fruit2hm_blue_cap": "",
+        "devil_fruit2hm_cactus_meat": "",
+        "devil_fruit2hm_carrot": "",
+        "devil_fruit2hm_cave_banana": "",
+        "devil_fruit2hm_corn": "",
+        "devil_fruit2hm_cutlichen": "",
+        "devil_fruit2hm_dragonfruit": "",
+        "devil_fruit2hm_durian": "",
+        "devil_fruit2hm_eggplant": "",
+        "devil_fruit2hm_fig": "",
+        "devil_fruit2hm_garlic": "",
+        "devil_fruit2hm_green_cap": "",
+        "devil_fruit2hm_kelp": "",
+        "devil_fruit2hm_lightbulb": "",
+        "devil_fruit2hm_onion": "",
+        "devil_fruit2hm_pepper": "",
+        "devil_fruit2hm_pomegranate": "",
+        "devil_fruit2hm_potato": "",
+        "devil_fruit2hm_pumpkin": "",
+        "devil_fruit2hm_red_cap": "",
+        "devil_fruit2hm_rock_avocado_fruit_ripe": "",
+        "devil_fruit2hm_tomato": "",
+        "devil_fruit2hm_watermelon": "",
+        "devil_fruit2hm_wormlight_lesser": ""
+      }
+    },
+    "scripts/prefabs/devilplants2hm.lua": {
+      "sha256": "e45180b1d1d509cbe1b1c8abdcd2b9f71f3a496b0be929320c02a4fc5e2d866c",
+      "prefabs": {
+        "devil_plant2hm_bananabush": "",
+        "devil_plant2hm_berrybush": "",
+        "devil_plant2hm_berrybush2": "",
+        "devil_plant2hm_berrybush_juicy": "",
+        "devil_plant2hm_blue_mushroom": "",
+        "devil_plant2hm_bullkelp_plant": "",
+        "devil_plant2hm_cactus": "",
+        "devil_plant2hm_farm_plant_asparagus": "",
+        "devil_plant2hm_farm_plant_carrot": "",
+        "devil_plant2hm_farm_plant_corn": "",
+        "devil_plant2hm_farm_plant_dragonfruit": "",
+        "devil_plant2hm_farm_plant_durian": "",
+        "devil_plant2hm_farm_plant_eggplant": "",
+        "devil_plant2hm_farm_plant_garlic": "",
+        "devil_plant2hm_farm_plant_onion": "",
+        "devil_plant2hm_farm_plant_pepper": "",
+        "devil_plant2hm_farm_plant_pomegranate": "",
+        "devil_plant2hm_farm_plant_potato": "",
+        "devil_plant2hm_farm_plant_pumpkin": "",
+        "devil_plant2hm_farm_plant_tomato": "",
+        "devil_plant2hm_farm_plant_watermelon": "",
+        "devil_plant2hm_green_mushroom": "",
+        "devil_plant2hm_oasis_cactus": "",
+        "devil_plant2hm_oceanvine": "",
+        "devil_plant2hm_red_mushroom": "",
+        "devil_plant2hm_rock_avocado_bush": "",
+        "devil_plant2hm_wormlight_plant": ""
+      }
+    },
+    "scripts/prefabs/dirt2hm.lua": {
+      "sha256": "bd488e893205482d8645d66c52da1f7ee6a64ef8e147164b14a865a9983a5db0",
+      "prefabs": {
+        "dirt2hm": ""
+      }
+    },
+    "scripts/prefabs/dryberries2hm.lua": {
+      "sha256": "f8c10aa27876ff9ddd2ccab90c97002bbfbd6c638ad3c89299a0fca73ecbbfa7",
+      "prefabs": {
+        "berries_dried2hm": "",
+        "berries_juicy_dried2hm": ""
+      }
+    },
+    "scripts/prefabs/dryplants2hm.lua": {
+      "sha256": "78196238cf1f49b05f3759b2713bf1634d3df2be760944b772d92ee4c26ab911",
+      "prefabs": {
+        "asparagus_dryplants2hm": "dried asparagus",
+        "cactus_meat_dryplants2hm": "dried cactus_meat",
+        "carrot_dryplants2hm": "dried carrot",
+        "cave_banana_dryplants2hm": "dried cave_banana",
+        "corn_dryplants2hm": "dried corn",
+        "dragonfruit_dryplants2hm": "dried dragonfruit",
+        "durian_dryplants2hm": "dried durian",
+        "eggplant_dryplants2hm": "dried eggplant",
+        "fig_dryplants2hm": "dried fig",
+        "garlic_dryplants2hm": "dried garlic",
+        "onion_dryplants2hm": "dried onion",
+        "pepper_dryplants2hm": "dried pepper",
+        "pomegranate_dryplants2hm": "dried pomegranate",
+        "potato_dryplants2hm": "dried potato",
+        "pumpkin_dryplants2hm": "dried pumpkin",
+        "tomato_dryplants2hm": "dried tomato",
+        "watermelon_dryplants2hm": "dried watermelon"
+      }
+    },
+    "scripts/prefabs/dryseeds2hm.lua": {
+      "sha256": "cbbcb43f8d0b4f0f86f9827858a06843cb6fadba948a88672ebe7ec23095411f",
+      "prefabs": {
+        "asparagus_dryseeds2hm": "",
+        "carrot_dryseeds2hm": "",
+        "corn_dryseeds2hm": "",
+        "dragonfruit_dryseeds2hm": "",
+        "dryseeds2hm": "",
+        "durian_dryseeds2hm": "",
+        "eggplant_dryseeds2hm": "",
+        "garlic_dryseeds2hm": "",
+        "onion_dryseeds2hm": "",
+        "pepper_dryseeds2hm": "",
+        "pomegranate_dryseeds2hm": "",
+        "potato_dryseeds2hm": "",
+        "pumpkin_dryseeds2hm": "",
+        "tomato_dryseeds2hm": "",
+        "watermelon_dryseeds2hm": ""
+      }
+    },
+    "scripts/prefabs/dynamicarmor_indicator2hm.lua": {
+      "sha256": "b03738d3e0d32f6f3c88d9f700a44b53056bb5974283bf429b86bf632fb8f1b5",
+      "prefabs": {
+        "dynamicarmor_indicator2hm": ""
+      }
+    },
+    "scripts/prefabs/electrical_shock2hm.lua": {
+      "sha256": "eb2cbb3fbae748d376cf5437d0968dc596bd4f43db9f7f5010b65762bce0c780",
+      "prefabs": {
+        "shockstundebuff": "",
+        "shockstundebuffimmunity": ""
+      }
+    },
+    "scripts/prefabs/eyeturret_safefire2hm.lua": {
+      "sha256": "256cef7aec75f461e1f07305fdfb1448dadb7667d54a37132ca2ffe01d8f0e8d",
+      "prefabs": {
+        "eyeturret_safefire2hm": ""
+      }
+    },
+    "scripts/prefabs/food2hm.lua": {
+      "sha256": "0c167d3ebad7b58b0fd82994dd344a4fe9ab8edc6e0f6507cdc6a86659e5bede",
+      "prefabs": {
+        "carrotcake2hm": "Pignose carrot cake",
+        "carrotcake2hm_spice_chili": "",
+        "carrotcake2hm_spice_garlic": "",
+        "carrotcake2hm_spice_salt": "",
+        "carrotcake2hm_spice_sugar": "",
+        "smallcandy2hm": "small candy",
+        "smallcandy2hm_spice_chili": "",
+        "smallcandy2hm_spice_garlic": "",
+        "smallcandy2hm_spice_salt": "",
+        "smallcandy2hm_spice_sugar": "",
+        "tropicalbouillabaisse2hm": "Tropical Bouillabaisse",
+        "tropicalbouillabaisse2hm_spice_chili": "",
+        "tropicalbouillabaisse2hm_spice_garlic": "",
+        "tropicalbouillabaisse2hm_spice_salt": "",
+        "tropicalbouillabaisse2hm_spice_sugar": ""
+      }
+    },
+    "scripts/prefabs/frostcore2hm.lua": {
+      "sha256": "527f863cd14b69c4bd84141cd7247f33bd3cdba9bcd69104c4fd034155564040",
+      "prefabs": {
+        "frostcore2hm": "Frost Core"
+      }
+    },
+    "scripts/prefabs/frostshrine2hm.lua": {
+      "sha256": "c8766132a1bbf58e4332194b0f110bcaec2eabe15a08497cf1e2a1986c2bf38f",
+      "prefabs": {
+        "frostshrine2hm": "Frost Shrine",
+        "frostshrine2hm_placer": "",
+        "frostshrine_icebreaker2hm": ""
+      }
+    },
+    "scripts/prefabs/fx2hm.lua": {
+      "sha256": "40422d553a8ad07518cccab639bf60935913e34b779acfd49671e002c21c0cdf",
+      "prefabs": {
+        "defendfx2hm": "",
+        "grounddefendfx2hm": ""
+      }
+    },
+    "scripts/prefabs/groundpoundringfx2hm.lua": {
+      "sha256": "2c12870eff583a1f1a6bef83fb6d1988a6f95eef281a704e129bcc32de125f4b",
+      "prefabs": {
+        "groundpoundring_fx2hm": ""
+      }
+    },
+    "scripts/prefabs/gulumi_bless2hm.lua": {
+      "sha256": "cd3214a873894c10928e5b8f24cabe5750fbb1e6b7cf80df658492fa5df0ae71",
+      "prefabs": {
+        "gulumi_bless2hm": "咕噜米的祝福"
+      }
+    },
+    "scripts/prefabs/healthregenbuff2hm.lua": {
+      "sha256": "8a4744d8276216b01fd8634f6940c24adbbe4b206ce63d56d725e069d064c357",
+      "prefabs": {
+        "healthregenbuff2hm": "糖豆之力"
+      }
+    },
+    "scripts/prefabs/klaus2hm.lua": {
+      "sha256": "556e705ed6a8625bc10eeb5f6afe2e69d34ddf77e722c21d207b7e4e60bc8fb9",
+      "prefabs": {
+        "klaus2hm": ""
+      }
+    },
+    "scripts/prefabs/linefx2hm.lua": {
+      "sha256": "4fb5e28fcfb2fd6e578b17c074a22c90de742332c0388f016a3a391b2993ba13",
+      "prefabs": {
+        "reticulelineshadow2hm": ""
+      }
+    },
+    "scripts/prefabs/magician_private_container2hm.lua": {
+      "sha256": "17d79da29f43777de6ca63dec0615531a057cd3fa542e00eeeb459f348a627f2",
+      "prefabs": {
+        "magician_private_container2hm": ""
+      }
+    },
+    "scripts/prefabs/malbatross_feather2hm.lua": {
+      "sha256": "e7e344b814f47af9f5888d2d60612b56e7d8e9ca02b583a2efc95805d4abb16d",
+      "prefabs": {
+        "goose_feather2hm": "",
+        "malbatross_feather2hm": ""
+      }
+    },
+    "scripts/prefabs/mod_hardmode_deathcursedequip.lua": {
+      "sha256": "244d9c85a2d53f919c63cacdbdeb142f5b13292a9fcea909a2db0318d870e8d0",
+      "prefabs": {
+        "deathcurselight2hm": "",
+        "mod_hardmode_deathcursedequip": "",
+        "mod_hardmode_deathcursedequip_body": "Disabled Body",
+        "mod_hardmode_deathcursedequip_hands": "Disabled Hands",
+        "mod_hardmode_deathcursedequip_head": "Disabled Head"
+      }
+    },
+    "scripts/prefabs/mod_hardmode_lavae.lua": {
+      "sha256": "b17f2fa0d9dd84d93c2d934313342056ce1f71862443f68b903de9b24e51f36f",
+      "prefabs": {
+        "mod_hardmode_lavae": "Lavae"
+      }
+    },
+    "scripts/prefabs/mod_hardmode_shadow_pillar.lua": {
+      "sha256": "6e49b43df47c0a34f333c75e8189f99b24428243c43060f9749a79ed8b6476fc",
+      "prefabs": {
+        "mod_hardmode_shadow_pillar_spell": ""
+      }
+    },
+    "scripts/prefabs/mod_hardmode_shadow_trap.lua": {
+      "sha256": "a272caf9bd041ace4026be3f442e6eded75395c8ff33aabe4b40d2590812715e",
+      "prefabs": {
+        "mod_hardmode_shadow_trap": ""
+      }
+    },
+    "scripts/prefabs/mod_hardmode_stafflight.lua": {
+      "sha256": "f8dd471fd27a99531ea57bcce2f2a31ab78593cb55d4914535289d7f5a095286",
+      "prefabs": {
+        "mod_hardmode_staffcoldlight": "",
+        "mod_hardmode_stafflight": "",
+        "staffcoldlight2hm": "",
+        "staffhotlight2hm": ""
+      }
+    },
+    "scripts/prefabs/mod_hardmode_tumbleweed.lua": {
+      "sha256": "bc92661cb89205f7a4ca9efbf81c45f95f07960773274db5c5c912c5f2eda684",
+      "prefabs": {
+        "mod_hardmode_tumbleweed": ""
+      }
+    },
+    "scripts/prefabs/moonstorm_ground_lightning_fx2hm.lua": {
+      "sha256": "a64cf0960ca54c33e772f0bafc3e70bb819779ff3dd5e47ef2c0ae454c3bbaa0",
+      "prefabs": {
+        "moonstorm_ground_lightning_fx2hm": ""
+      }
+    },
+    "scripts/prefabs/moonstormmarker2hm.lua": {
+      "sha256": "41bb0ee3cb62f5f1e13f5456b43a4d66836e83e2d70e038e7d940152f7a197c9",
+      "prefabs": {
+        "moonstormmarker2hm": ""
+      }
+    },
+    "scripts/prefabs/oceanshadowcreature2hm.lua": {
+      "sha256": "1873a948a971040128a8f0f387435599fa91a9254cdf07bc2407ed2ffa6746d9",
+      "prefabs": {
+        "oceanhorror2hm": ""
+      }
+    },
+    "scripts/prefabs/onion_celestial2hm.lua": {
+      "sha256": "82b77a114c72fe15357a6f17e4ea00a0b5ed9e9a415181a4d837fc46b4bcb907",
+      "prefabs": {
+        "onion_celestial2hm": "Celestial Onion"
+      }
+    },
+    "scripts/prefabs/passive_shadow_fx2hm.lua": {
+      "sha256": "e945726209784b1aaa6bdea12c2df01850c2085ae8ffa85ee6cb5bea4c1ff933",
+      "prefabs": {
+        "passive_shadow_fx2hm": ""
+      }
+    },
+    "scripts/prefabs/pirate_stash2hm.lua": {
+      "sha256": "dce5ba315d5a1b24e6eb31d1b728e956ff409b14f9857e10bb55c873d6f2a5b4",
+      "prefabs": {
+        "pirate_stash2hm": ""
+      }
+    },
+    "scripts/prefabs/player_soul2hm.lua": {
+      "sha256": "778a05647facd5ef03a857e07d22d01c2ca4184eef7b37e070aefb0f8e9fa9bf",
+      "prefabs": {
+        "player_soul2hm": ""
+      }
+    },
+    "scripts/prefabs/player_soul_bottle2hm.lua": {
+      "sha256": "c141f1de80a3203e4f445fd782b2d452869aa2ebbeb5bf966c7b4230038c1b20",
+      "prefabs": {
+        "player_soul_bottle2hm": ""
+      }
+    },
+    "scripts/prefabs/player_tomb2hm.lua": {
+      "sha256": "3a14e0479565356797edd779d8f76c103a8708cbffd4193677bb47b80d77051b",
+      "prefabs": {
+        "player_tomb2hm": "player tomb",
+        "player_tomb2hm_placer": ""
+      }
+    },
+    "scripts/prefabs/playertagentity2hm.lua": {
+      "sha256": "2d2307977a5e4d7dc6a11fef50e5fcdbfb647f00470234f1a9ecb411032d5061",
+      "prefabs": {
+        "playertagentity2hm": ""
+      }
+    },
+    "scripts/prefabs/pocketwatch_heal2hm.lua": {
+      "sha256": "a468e4783d5e597f9775b501ece04d1133abf3a2b1df65e0a399a87095f87ed0",
+      "prefabs": {
+        "pocketwatch_heal2hm": "cracked ageless watch"
+      }
+    },
+    "scripts/prefabs/powdermonkeyP.lua": {
+      "sha256": "882419b74ed7ce5aef166ba940bce9d9f609001effaafbd86a491b8c482c69ee",
+      "prefabs": {
+        "powder_monkey_p": ""
+      }
+    },
+    "scripts/prefabs/primemateP.lua": {
+      "sha256": "b7e9b5ba6d119b552d509a4aa6e5bb302b3cdb265e93a7aa3594334b45104789",
+      "prefabs": {
+        "prime_mate_p": ""
+      }
+    },
+    "scripts/prefabs/reticuleaoe.lua": {
+      "sha256": null,
+      "prefabs": {
+        "reticuleaoe": "",
+        "reticuleaoe5line": "",
+        "reticuleaoe_1_6": "",
+        "reticuleaoe_1d2_12": "",
+        "reticuleaoecatapultelementalvolley": "",
+        "reticuleaoecatapultvolley": "",
+        "reticuleaoecatapultvolleyping": "",
+        "reticuleaoecatapultwakeup": "",
+        "reticuleaoecatapultwakeupping": "",
+        "reticuleaoecctarget": "",
+        "reticuleaoefiretarget_1": "",
+        "reticuleaoefiretarget_1ping": "",
+        "reticuleaoefriendlytarget": "",
+        "reticuleaoeghosttarget": "",
+        "reticuleaoeghosttarget_ping": "",
+        "reticuleaoehostiletarget": "",
+        "reticuleaoehostiletarget_1d25": "",
+        "reticuleaoeping": "",
+        "reticuleaoeping5line": "",
+        "reticuleaoeping_1_6": "",
+        "reticuleaoeping_1d2_12": "",
+        "reticuleaoeshadowtarget_6": "",
+        "reticuleaoesmall": "",
+        "reticuleaoesmallhostiletarget": "",
+        "reticuleaoesmallping": "",
+        "reticuleaoesummon": "",
+        "reticuleaoesummonping": "",
+        "reticuleaoesummontarget": "",
+        "reticuleaoesummontarget_1": "",
+        "reticuleaoesummontarget_1d2": "",
+        "reticuleaoewinonaengineeringping": ""
+      }
+    },
+    "scripts/prefabs/reticulearc.lua": {
+      "sha256": null,
+      "prefabs": {
+        "reticulearc": "",
+        "reticulearcping": ""
+      }
+    },
+    "scripts/prefabs/ruinsnightmare_horn_attack2hm.lua": {
+      "sha256": "af3154d1e26e7da669c17e09726f20edba010cf9267bea81d9b5a10beae0a648",
+      "prefabs": {
+        "ruinsnightmare_horn_attack2hm": ""
+      }
+    },
+    "scripts/prefabs/ruinsnightmare_horn_circular_attack_2hm.lua": {
+      "sha256": "f84d5121eeddff45761ff2af56f262c674235cd75efbfcf6b19e0348ef66d3e0",
+      "prefabs": {
+        "ruinsnightmare_horn_circular_attack_2hm": ""
+      }
+    },
+    "scripts/prefabs/shadow_teleport2hm.lua": {
+      "sha256": "f2789e48647a8ed019985e37e3c54ef9b9336a53e3141a72770cb2b1aa3ef1df",
+      "prefabs": {
+        "shadow_teleport_in2hm": "",
+        "shadow_teleport_out2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowbank_container2hm.lua": {
+      "sha256": "a3e96aa239c1054d8672983f3a3bb71d6d2271f612c1bf221c46d754661f0a8c",
+      "prefabs": {
+        "shadowbank_container2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowbank_remote2hm.lua": {
+      "sha256": "0206691299a5b71ba083250b539aecf6d0edd97aa5125f1593f42faf68c7991a",
+      "prefabs": {
+        "shadowbank_remote2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowbank_tackle2hm.lua": {
+      "sha256": "7ac163ced60236d9f3d857ae27234c2e00acb128f873fc8fb62a8224a3fc3ee3",
+      "prefabs": {
+        "shadowbank_tackle2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowbank_tackleremote2hm.lua": {
+      "sha256": "7da4cd48f2c2743130433a01e1b0948bd0428a8e064c27c1eb5f7acbf17af840",
+      "prefabs": {
+        "shadowbank_tackleremote2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowchessicon2hm.lua": {
+      "sha256": "2d83df9f62a8a1013c8ac102dc2511573292d8f3368efc05f9d41af183b54ae9",
+      "prefabs": {
+        "shadowchessicon2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowhutch2hm.lua": {
+      "sha256": "44c5840247080b5335016acdc7a695061c845cbb6da170d7e5920d185969a417",
+      "prefabs": {
+        "shadowhutch2hm": "Hutch"
+      }
+    },
+    "scripts/prefabs/shadowmeteor2hm.lua": {
+      "sha256": "1336d72548242d87fd393253af20b0b33f117ff0d1733ab2be0962ef582d503f",
+      "prefabs": {
+        "shadowmeteor2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowskittish2hm.lua": {
+      "sha256": "d7af6d9a91a1870d3535619bea5f296c306bab4828489ec068bdce2569f5415f",
+      "prefabs": {
+        "shadowskittish2hm": ""
+      }
+    },
+    "scripts/prefabs/shadowvault2hm.lua": {
+      "sha256": "6ffe198297d28651c24d5ee1be01b2ffffb1da2be55dd2a7b89671b83695b5f6",
+      "prefabs": {
+        "shadowvaultaccess2hm": "",
+        "shadowvaultpage2hm": "",
+        "shadowvaultpair2hm": "",
+        "shadowvaulttacklepage2hm": "",
+        "shadowvaulttransfer2hm": ""
+      }
+    },
+    "scripts/prefabs/sharkboi_attackfx2hm.lua": {
+      "sha256": "f18f312bfdf4637b6897421a39672f8f1ad1af2add12cf09814ddb843f69d02e",
+      "prefabs": {
+        "sharkboi_attackfx2hm": ""
+      }
+    },
+    "scripts/prefabs/sharkboi_icefx2hm.lua": {
+      "sha256": "759f26a6ad4f65005e6a319d212b3262d11c61c11e5df1f5c32a3a6f2435d2b0",
+      "prefabs": {
+        "sharkboi_icefx2hm": ""
+      }
+    },
+    "scripts/prefabs/slingshotammo_moonglass_walter2hm.lua": {
+      "sha256": "08b177da0d63d72ab2123c6e78c2b8431adac6454de8d94480b28bb2e071f1f8",
+      "prefabs": {
+        "slingshotammo_moonglass_walter2hm": "Moonshots",
+        "slingshotammo_moonglass_walter2hm_proj": "",
+        "slingshotammo_moonglass_walter2hm_proj_secondary": ""
+      }
+    },
+    "scripts/prefabs/spiderbag2hm.lua": {
+      "sha256": "bd585e42b033d30d576e436f4eda3b8e5a079f766e918d0d440379e4edad3dfd",
+      "prefabs": {
+        "spiderbag2hm": ""
+      }
+    },
+    "scripts/prefabs/stalker_shield2hm.lua": {
+      "sha256": "440e89a4f7f4412b100cefe102cb5be41976ac963062a695057fe6ec037b06ea",
+      "prefabs": {
+        "stalker_shield2hm": "",
+        "stalker_shield2hm1": "",
+        "stalker_shield2hm2": "",
+        "stalker_shield2hm3": "",
+        "stalker_shield2hm4": ""
+      }
+    },
+    "scripts/prefabs/sword_vortex2hm.lua": {
+      "sha256": "6d6f6ad83384da2a022118d974f37c3317f841e377f61c857cf58a5aa1e74141",
+      "prefabs": {
+        "sword_vortex2hm": "Vortex Sword"
+      }
+    },
+    "scripts/prefabs/tomb_plant2hm.lua": {
+      "sha256": "7c0d9e060d9d168a0387d080b4866bf0a99e8776e20685f4d064da2f704c4d80",
+      "prefabs": {
+        "tomb_plant2hm_asparagus": "",
+        "tomb_plant2hm_carrot": "",
+        "tomb_plant2hm_corn": "",
+        "tomb_plant2hm_dragonfruit": "",
+        "tomb_plant2hm_durian": "",
+        "tomb_plant2hm_eggplant": "",
+        "tomb_plant2hm_garlic": "",
+        "tomb_plant2hm_onion": "",
+        "tomb_plant2hm_pepper": "",
+        "tomb_plant2hm_pomegranate": "",
+        "tomb_plant2hm_potato": "",
+        "tomb_plant2hm_pumpkin": "",
+        "tomb_plant2hm_randomseed": "",
+        "tomb_plant2hm_tomato": "",
+        "tomb_plant2hm_watermelon": ""
+      }
+    },
+    "scripts/prefabs/tomb_weed2hm.lua": {
+      "sha256": "d1b48a77707129271a61b87a154e5f039e4528be83f6e5d22ba8649c93d9f003",
+      "prefabs": {
+        "tomb_weed2hm_weed_firenettle": "",
+        "tomb_weed2hm_weed_forgetmelots": "",
+        "tomb_weed2hm_weed_ivy": "",
+        "tomb_weed2hm_weed_tillweed": ""
+      }
+    },
+    "scripts/prefabs/torchfireprojectile2hm.lua": {
+      "sha256": "17ef6ddeaa72d1d7374a8a89bf3e3ca53dc9b4bd1e218b1bec53eb50dd7091d5",
+      "prefabs": {
+        "torchfireprojectile2hm": ""
+      }
+    },
+    "scripts/prefabs/townportaltalisman2hm.lua": {
+      "sha256": "9e25e3a955a19456514280ed8b4a75ff49704612a2c6082444bf646b1eb621c3",
+      "prefabs": {
+        "townportaltalisman2hm": ""
+      }
+    },
+    "scripts/prefabs/tropicalfishbuff2hm.lua": {
+      "sha256": "9ff1180ca4ae02d3374b80776e0604c5942b389fce6230d0eb865421b19e3723",
+      "prefabs": {
+        "tropicalfishbuff2hm": ""
+      }
+    },
+    "scripts/prefabs/walrus_camp2hm.lua": {
+      "sha256": "4e671b855057c1211370aadfc02f0f30fc64bd5b91d27ba140953f5bdfa28c28",
+      "prefabs": {
+        "walrus_camp2hm": ""
+      }
+    },
+    "scripts/prefabs/watch_weapon_horn2hm.lua": {
+      "sha256": "d7ce7af5bfffc0d680b48a47795a32f2d01f994592c1f0d97fe4861da4a8e4dd",
+      "prefabs": {
+        "watch_weapon_horn2hm": "watch_weapon_horn2hm"
+      }
+    },
+    "scripts/prefabs/winona_electrical2hm.lua": {
+      "sha256": "1be4c41d428eb7bb1e3d8c7e7bd605d862c4a392badadf5fee8d1f02ce3adf18",
+      "prefabs": {
+        "winona_upgradekit_electrical": "Electrical Upgrade Kit"
+      }
+    },
+    "scripts/prefabs/winona_toolbox2hm.lua": {
+      "sha256": "02232a319939af628d8d0df54ff9f0c387f8c3b5d3671387381af2e88388c37e",
+      "prefabs": {
+        "winona_toolbox": "Toolbox"
+      }
+    },
+    "scripts/prefabs/wx78_toolbox.lua": {
+      "sha256": "07eeef132179097ace451e690ee8ef5c86f1811985e4d8e297496b32cc8c7e08",
+      "prefabs": {
+        "wx78_toolbox": ""
+      }
+    }
+  },
+  "callbacks": {
+    "abigail": [
+      "easy_role/wendy_easy.lua:717",
+      "easy_role/wendy_easy.lua:909",
+      "role/wendy.lua:105",
+      "role/wendy.lua:321",
+      "shadowworld.lua:107",
+      "shadowworld.lua:90"
+    ],
+    "abigail_flower": [
+      "role/wendy.lua:176"
+    ],
+    "abigailforcefield": [
+      "role/wendy.lua:291"
+    ],
+    "abigailforcefieldbuffed": [
+      "epic/alterguardian.lua:775",
+      "role/wendy.lua:279"
+    ],
+    "abigailforcefieldretaliation": [
+      "role/wendy.lua:267"
+    ],
+    "alterguardian_laser": [
+      "epic/alterguardian.lua:1466"
+    ],
+    "alterguardian_lunar_fissures": [
+      "epic/alterguardian_phase4_lunarrift.lua:1048"
+    ],
+    "alterguardian_phase1": [
+      "epic/alterguardian.lua:147",
+      "epic/alterguardian.lua:50",
+      "monster/wall.lua:188",
+      "shadow_nerf.lua:134",
+      "shadow_nerf.lua:142",
+      "shadowworld.lua:1675"
+    ],
+    "alterguardian_phase1_lunarrift": [
+      "epic/alterguardian.lua:161"
+    ],
+    "alterguardian_phase2": [
+      "epic/alterguardian.lua:395",
+      "epic/alterguardian.lua:50",
+      "shadow_nerf.lua:134",
+      "shadow_nerf.lua:142",
+      "shadowworld.lua:1675"
+    ],
+    "alterguardian_phase2spiketrail": [
+      "epic/alterguardian.lua:566"
+    ],
+    "alterguardian_phase3": [
+      "epic/alterguardian.lua:1165",
+      "epic/alterguardian.lua:50",
+      "shadow_nerf.lua:134",
+      "shadow_nerf.lua:142",
+      "shadowworld.lua:1675"
+    ],
+    "alterguardian_phase3dead": [
+      "epic/alterguardian.lua:2476"
+    ],
+    "alterguardian_phase3deadorb": [
+      "epic/alterguardian.lua:2469"
+    ],
+    "alterguardian_phase3trap": [
+      "epic/alterguardian.lua:1988"
+    ],
+    "alterguardian_phase4_lunarrift": [
+      "epic/alterguardian_phase4_lunarrift.lua:662"
+    ],
+    "alterguardian_summon_fx": [
+      "shadowworld.lua:377"
+    ],
+    "alterguardianhat": [
+      "easy_other/easy_equipments.lua:146",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "ancient_altar": [
+      "tech/ancient_altar.lua:35"
+    ],
+    "ancient_altar_broken": [
+      "tech/ancient_altar.lua:75"
+    ],
+    "antlion": [
+      "epic/antlion.lua:1012"
+    ],
+    "antlion_spawner": [
+      "epic/antlion.lua:1132"
+    ],
+    "antlionhat": [
+      "easy_other/easy_equipments.lua:1143"
+    ],
+    "archive_moon_statue": [
+      "tech/ancient_statue.lua:89"
+    ],
+    "archive_orchestrina_main": [
+      "tech/distilledknowledge.lua:116",
+      "tech/distilledknowledge.lua:60"
+    ],
+    "archive_orchestrina_small": [
+      "tech/distilledknowledge.lua:94"
+    ],
+    "archive_resonator": [
+      "weather/moonisland.lua:101"
+    ],
+    "archive_switch": [
+      "weather/autumn.lua:93"
+    ],
+    "armor_bramble": [
+      "easy_role/wormwood_easy.lua:742",
+      "role/wormwood.lua:32"
+    ],
+    "armor_carrotlure": [
+      "easy_role/wormwood_easy.lua:520"
+    ],
+    "armor_lunarplant": [
+      "easy_other/lunar_shadow_items.lua:199"
+    ],
+    "armor_lunarplant_husk": [
+      "easy_other/lunar_shadow_items.lua:199"
+    ],
+    "armor_sanity": [
+      "easy_other/easy_equipments.lua:2030"
+    ],
+    "armor_voidcloth": [
+      "easy_other/lunar_shadow_items.lua:199",
+      "easy_other/lunar_shadow_items.lua:48"
+    ],
+    "armordragonfly": [
+      "easy_other/easy_equipments.lua:1934",
+      "easy_other/easy_equipments.lua:2051",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "armordreadstone": [
+      "easy_other/lunar_shadow_items.lua:199",
+      "easy_other/lunar_shadow_items.lua:57"
+    ],
+    "armorgrass": [
+      "easy_other/easy_equipments.lua:2020"
+    ],
+    "armormarble": [
+      "easy_other/easy_equipments.lua:2046",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "armorruins": [
+      "easy_other/easy_equipments.lua:1406",
+      "easy_other/easy_equipments.lua:2069",
+      "easy_other/easy_equipments.lua:5400"
+    ],
+    "armorskeleton": [
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "armorwagpunk": [
+      "easy_other/lunar_shadow_items.lua:144",
+      "easy_other/lunar_shadow_items.lua:199"
+    ],
+    "armorwood": [
+      "easy_other/easy_equipments.lua:2041"
+    ],
+    "asparagus": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "asparagus_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "asparagus_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "atrium_gate": [
+      "epic/atriumstalker.lua:354"
+    ],
+    "atrium_key": [
+      "tech/cave_entrance.lua:435"
+    ],
+    "babybeefalo": [
+      "food/beefalo.lua:87"
+    ],
+    "balatro_machine": [
+      "common/hardmode.lua:120"
+    ],
+    "balloon": [
+      "easy_role/wes_easy.lua:172",
+      "easy_role/wes_easy.lua:260",
+      "easy_role/wes_easy.lua:34"
+    ],
+    "balloonhat": [
+      "easy_role/wes_easy.lua:38"
+    ],
+    "balloonparty": [
+      "easy_role/wes_easy.lua:260"
+    ],
+    "balloonspeed": [
+      "easy_role/wes_easy.lua:260"
+    ],
+    "balloonvest": [
+      "easy_role/wes_easy.lua:42"
+    ],
+    "bananabush": [
+      "food/action.lua:158",
+      "monster/lunarthrall_plant.lua:228"
+    ],
+    "bat": [
+      "monster/moveattack.lua:115"
+    ],
+    "batbat": [
+      "common/combat_rewards.lua:6",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "batnosehat": [
+      "easy_other/easy_equipments.lua:2095"
+    ],
+    "battlesong_durability": [
+      "easy_role/wigfrid_easy.lua:328",
+      "easy_role/wigfrid_easy.lua:599"
+    ],
+    "battlesong_fireresistance": [
+      "easy_role/wigfrid_easy.lua:328"
+    ],
+    "battlesong_healthgain": [
+      "common/combat_rewards.lua:27",
+      "easy_role/wigfrid_easy.lua:328",
+      "role/wigfrid.lua:72"
+    ],
+    "battlesong_instant_panic": [
+      "easy_role/wigfrid_easy.lua:328"
+    ],
+    "battlesong_instant_revive": [
+      "easy_role/wigfrid_easy.lua:328"
+    ],
+    "battlesong_instant_taunt": [
+      "easy_role/wigfrid_easy.lua:328"
+    ],
+    "battlesong_lunaraligned": [
+      "easy_role/wigfrid_easy.lua:328"
+    ],
+    "battlesong_sanityaura": [
+      "easy_role/wigfrid_easy.lua:328",
+      "easy_role/wigfrid_easy.lua:613"
+    ],
+    "battlesong_sanitygain": [
+      "common/combat_rewards.lua:27",
+      "easy_role/wigfrid_easy.lua:328",
+      "role/wigfrid.lua:72"
+    ],
+    "battlesong_shadowaligned": [
+      "easy_role/wigfrid_easy.lua:328"
+    ],
+    "bearger_swipe_fx": [
+      "epic/bearger.lua:156"
+    ],
+    "beargerfur_sack": [
+      "easy_other/lunar_shadow_items.lua:239",
+      "epic/beargerfur_sack_lunar_seed2hm.lua:258"
+    ],
+    "beargervest": [
+      "easy_other/easy_equipments.lua:231"
+    ],
+    "bedroll_furry": [
+      "easy_other/easy_mechanics.lua:137"
+    ],
+    "beebox": [
+      "easy_other/easy_equipments.lua:3772",
+      "monster/lunarthrall_plant.lua:228"
+    ],
+    "beef_bell": [
+      "easy_other/easy_items.lua:614",
+      "easy_other/easy_items.lua:667",
+      "food/beefalo.lua:132"
+    ],
+    "beefalo": [
+      "common/common.lua:1135",
+      "easy_other/lunar_shadow_items.lua:1253",
+      "food/beefalo.lua:147",
+      "food/beefalo.lua:174",
+      "ray/suijishengwuapi.lua:677",
+      "ray/suijishengwuapi.lua:73",
+      "shadowworld.lua:1711"
+    ],
+    "beeguard": [
+      "easy_role/wickerbottom_easy.lua:522"
+    ],
+    "bernie_active": [
+      "role/willow.lua:14"
+    ],
+    "bernie_big": [
+      "easy_role/willow_easy.lua:60",
+      "role/willow.lua:14",
+      "role/willow.lua:40"
+    ],
+    "berries": [
+      "food/plant.lua:206"
+    ],
+    "berries_juicy": [
+      "food/plant.lua:206"
+    ],
+    "berries_juicy_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "berries_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "berrybush": [
+      "food/action.lua:158"
+    ],
+    "berrybush2": [
+      "food/action.lua:158"
+    ],
+    "berrybush_juicy": [
+      "food/action.lua:158"
+    ],
+    "bigshadowtentacle": [
+      "epic/minotaur.lua:850",
+      "monster/tentacle.lua:70"
+    ],
+    "birdcage": [
+      "food/birds.lua:64"
+    ],
+    "bishop": [
+      "easy_role/winona_easy.lua:84",
+      "monster/chess.lua:273",
+      "monster/chess.lua:336"
+    ],
+    "bishop_charge": [
+      "monster/supermonster.lua:665"
+    ],
+    "bishop_nightmare": [
+      "easy_role/winona_easy.lua:84",
+      "monster/chess.lua:273",
+      "monster/chess.lua:363"
+    ],
+    "bishop_nightmare_ruinsrespawner_inst": [
+      "monster/chess.lua:484"
+    ],
+    "blackflag": [
+      "tech/oceanlife.lua:635"
+    ],
+    "blue_cap": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "blue_mushroom": [
+      "food/plant.lua:224"
+    ],
+    "blue_mushroomhat": [
+      "easy_other/easy_equipments.lua:216",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "blueprint": [
+      "tech/prototyper.lua:17"
+    ],
+    "boat": [
+      "easy_other/easy_items.lua:293"
+    ],
+    "boat_ancient": [
+      "easy_other/easy_items.lua:293"
+    ],
+    "boat_bumper_crabking": [
+      "easy_other/easy_items.lua:884"
+    ],
+    "boat_grass": [
+      "easy_other/easy_items.lua:293"
+    ],
+    "boat_leak": [
+      "easy_other/easy_items.lua:188"
+    ],
+    "boat_otterden": [
+      "easy_other/easy_items.lua:293"
+    ],
+    "boat_pirate": [
+      "easy_other/easy_items.lua:293"
+    ],
+    "book_bees": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_birds": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_brimstone": [
+      "easy_role/wickerbottom_easy.lua:540",
+      "role/wickerbottom.lua:26"
+    ],
+    "book_fire": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_fish": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_gardening": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_horticulture": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_horticulture_upgraded": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_light": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_light_upgraded": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_moon": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_rain": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_research_station": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_silviculture": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_sleep": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_temperature": [
+      "easy_role/wickerbottom_easy.lua:105",
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_tentacles": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "book_web": [
+      "easy_role/wickerbottom_easy.lua:540"
+    ],
+    "bookstation": [
+      "easy_role/wickerbottom_easy.lua:507"
+    ],
+    "bookstation2hm": [
+      "easy_role/wickerbottom_easy.lua:345",
+      "easy_role/wickerbottom_easy.lua:507"
+    ],
+    "bramblefx_armor": [
+      "easy_role/wormwood_easy.lua:1082"
+    ],
+    "buff_firefrenzy": [
+      "role/willow.lua:171"
+    ],
+    "bugzapper": [
+      "easy_role/winona_electrical.lua:101"
+    ],
+    "bullkelp_beachedroot": [
+      "food/action.lua:158"
+    ],
+    "bullkelp_plant": [
+      "food/action.lua:158"
+    ],
+    "bunnyman": [
+      "monster/pigman.lua:10"
+    ],
+    "butter": [
+      "scripts/eyebrellashade2hm.lua:50"
+    ],
+    "butterfly": [
+      "food/animal.lua:108"
+    ],
+    "cactus_meat": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "cactus_meat_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "campfirefire": [
+      "tech/oceanlife.lua:45"
+    ],
+    "canary": [
+      "food/birds.lua:174"
+    ],
+    "cane": [
+      "easy_other/easy_items.lua:1341",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "carrot": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "carrot_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "carrot_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "catcoon": [
+      "easy_role/wanda_easy.lua:202"
+    ],
+    "cave": [
+      "ray/suijishengwuapi.lua:722"
+    ],
+    "cave_banana": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "cave_banana_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "cave_entrance": [
+      "tech/cave_entrance.lua:231"
+    ],
+    "cave_entrance_open": [
+      "tech/cave_entrance.lua:271"
+    ],
+    "cave_hole": [
+      "epic/minotaur.lua:1095"
+    ],
+    "cave_vent_rock": [
+      "weather/winter.lua:89"
+    ],
+    "chessjunk": [
+      "monster/chess.lua:402"
+    ],
+    "chessjunk1": [
+      "monster/chess.lua:402"
+    ],
+    "chessjunk2": [
+      "monster/chess.lua:402"
+    ],
+    "chessjunk3": [
+      "monster/chess.lua:402"
+    ],
+    "chessjunk_ruinsrespawner_inst": [
+      "monster/chess.lua:484"
+    ],
+    "chesspiece_bishop": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_bishop_marble": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_bishop_stone": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_knight": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_knight_marble": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_knight_stone": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_rook": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_rook_marble": [
+      "common/hardmode.lua:269"
+    ],
+    "chesspiece_rook_stone": [
+      "common/hardmode.lua:269"
+    ],
+    "chester": [
+      "shadowworld.lua:1527"
+    ],
+    "chiminea": [
+      "weather/seasons.lua:549"
+    ],
+    "clayhound": [
+      "monster/hound.lua:216"
+    ],
+    "container_classified": [
+      "easy_other/containersort.lua:1352",
+      "scripts/fiveslotcookers2hm.lua:60"
+    ],
+    "cookingrecipecard": [
+      "easy_other/easy_items.lua:917"
+    ],
+    "cookpot": [
+      "food/cooking.lua:66"
+    ],
+    "corn": [
+      "easy_other/easy_structures.lua:3017",
+      "food/oceanfish.lua:146"
+    ],
+    "corn_cooked": [
+      "food/oceanfish.lua:146"
+    ],
+    "corn_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "corn_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "cotl_tabernacle_level1": [
+      "food/cooking.lua:183",
+      "weather/seasons.lua:549"
+    ],
+    "cotl_tabernacle_level2": [
+      "food/cooking.lua:178",
+      "weather/seasons.lua:549"
+    ],
+    "cotl_tabernacle_level3": [
+      "food/cooking.lua:174",
+      "weather/seasons.lua:549"
+    ],
+    "crabking": [
+      "epic/crabking.lua:1001",
+      "epic/crabking.lua:210",
+      "epic/crabking.lua:229",
+      "epic/crabking.lua:81",
+      "epic/crabking.lua:828"
+    ],
+    "crabking_cannontower": [
+      "epic/crabking.lua:398",
+      "epic/crabking.lua:571"
+    ],
+    "crabking_claw": [
+      "epic/crabking.lua:216",
+      "epic/crabking.lua:657"
+    ],
+    "crawlinghorror": [
+      "easy_other/easy_equipments.lua:2488",
+      "monster/crawlingshadow.lua:278",
+      "monster/crawlingshadow.lua:35",
+      "monster/shadowbeak.lua:490"
+    ],
+    "crawlingnightmare": [
+      "monster/crawlingshadow.lua:278",
+      "monster/crawlingshadow.lua:35",
+      "monster/shadowbeak.lua:490"
+    ],
+    "crow": [
+      "food/birds.lua:84"
+    ],
+    "cursed_monkey_token": [
+      "common/curse.lua:62"
+    ],
+    "cutless": [
+      "tech/oceanlife.lua:660"
+    ],
+    "daywalker": [
+      "monster/pigman.lua:164",
+      "shadow_nerf.lua:134",
+      "shadowworld.lua:1452"
+    ],
+    "daywalker2": [
+      "epic/daywalker2.lua:1156",
+      "epic/daywalker2.lua:274",
+      "epic/daywalker2.lua:550",
+      "monster/pigman.lua:170",
+      "shadowworld.lua:1452"
+    ],
+    "daywalker2_spike_loot_fx": [
+      "epic/daywalker2.lua:1102"
+    ],
+    "daywalker_pillar": [
+      "monster/pigman.lua:136",
+      "shadowworld.lua:1460"
+    ],
+    "dead_sea_bones": [
+      "food/action.lua:158"
+    ],
+    "deciduoustree": [
+      "food/action.lua:158"
+    ],
+    "deer_blue": [
+      "epic/klaus.lua:1309",
+      "monster/wall.lua:196",
+      "shadow_nerf.lua:134",
+      "shadow_nerf.lua:160"
+    ],
+    "deer_ice_circle": [
+      "epic/sharkboi.lua:669"
+    ],
+    "deer_red": [
+      "epic/klaus.lua:1309",
+      "monster/wall.lua:196",
+      "shadow_nerf.lua:134",
+      "shadow_nerf.lua:160"
+    ],
+    "deerclops": [
+      "epic/deerclops.lua:253",
+      "shadow_nerf.lua:151"
+    ],
+    "deerclops_barrier": [
+      "epic/deerclops.lua:278"
+    ],
+    "deerclopseyeball_sentryward": [
+      "easy_other/lunar_shadow_items.lua:538",
+      "food/farm.lua:189"
+    ],
+    "deserthat": [
+      "easy_other/easy_equipments.lua:4327"
+    ],
+    "devil_heart2hm": [
+      "epic/atriumstalker.lua:501"
+    ],
+    "dock_damage": [
+      "food/farm.lua:95"
+    ],
+    "dock_kit": [
+      "easy_other/easy_mechanics.lua:298"
+    ],
+    "dragonboat_body": [
+      "easy_other/easy_items.lua:293"
+    ],
+    "dragonfly": [
+      "epic/dragonfly.lua:227",
+      "epic/dragonfly.lua:262"
+    ],
+    "dragonflychest": [
+      "easy_other/easy_items.lua:754",
+      "easy_other/easy_structures.lua:72"
+    ],
+    "dragonflyfurnace": [
+      "easy_other/easy_structures.lua:2308",
+      "easy_other/easy_structures.lua:2476",
+      "food/cooking.lua:168"
+    ],
+    "dragonfruit": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "dragonfruit_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "dragonfruit_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "dreadeye": [
+      "easy_other/easy_equipments.lua:2488"
+    ],
+    "dreadstonehat": [
+      "easy_other/lunar_shadow_items.lua:199"
+    ],
+    "driftwood_small1": [
+      "food/action.lua:158"
+    ],
+    "driftwood_small2": [
+      "food/action.lua:158"
+    ],
+    "dumbbell_heat": [
+      "weather/temperature.lua:266"
+    ],
+    "durian": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "durian_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "durian_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "dyc_healthbar": [
+      "common/common.lua:502"
+    ],
+    "eggplant": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "eggplant_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "eggplant_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "elixir_container": [
+      "easy_role/wendy_easy.lua:820"
+    ],
+    "evergreen": [
+      "food/action.lua:158"
+    ],
+    "evergreen_sparse": [
+      "food/action.lua:158"
+    ],
+    "eye_charge": [
+      "easy_other/eyeturret2hm.lua:136",
+      "monster/supermonster.lua:665"
+    ],
+    "eyebrellahat": [
+      "scripts/eyebrellashade2hm.lua:40"
+    ],
+    "eyemaskhat": [
+      "easy_other/easy_equipments.lua:2783"
+    ],
+    "eyeplant": [
+      "monster/lunarthrall_plant.lua:393"
+    ],
+    "eyeturret": [
+      "easy_other/eyeturret2hm.lua:480"
+    ],
+    "eyeturret_base": [
+      "easy_other/eyeturret2hm.lua:449"
+    ],
+    "eyeturret_item": [
+      "easy_other/eyeturret2hm.lua:266"
+    ],
+    "farm_plant_dragonfruit": [
+      "monster/lunarthrall_plant.lua:238"
+    ],
+    "fig": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "fig_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "firehound": [
+      "monster/hound.lua:208"
+    ],
+    "firenettles": [
+      "easy_other/easy_living_things.lua:97"
+    ],
+    "fishmeat": [
+      "food/oceanfish.lua:146"
+    ],
+    "fishmeat_cooked": [
+      "food/oceanfish.lua:146"
+    ],
+    "fishmeat_small": [
+      "food/oceanfish.lua:146"
+    ],
+    "fishmeat_small_cooked": [
+      "food/oceanfish.lua:146"
+    ],
+    "flamethrower_fx": [
+      "role/willow.lua:187"
+    ],
+    "footballhat": [
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "forest_network": [
+      "weather/moonisland.lua:200"
+    ],
+    "forgetmelots": [
+      "easy_other/easy_living_things.lua:97"
+    ],
+    "fossilspike": [
+      "epic/atriumstalker.lua:287"
+    ],
+    "fossilspike2": [
+      "epic/atriumstalker.lua:274"
+    ],
+    "friendlyfruitfly": [
+      "common/common.lua:576"
+    ],
+    "fruitfly": [
+      "monster/fruitfly.lua:18"
+    ],
+    "fused_shadeling": [
+      "monster/shadowthrall.lua:256"
+    ],
+    "fused_shadeling_bomb": [
+      "monster/shadowthrall.lua:226"
+    ],
+    "fused_shadeling_quickfuse_bomb": [
+      "monster/shadowthrall.lua:233"
+    ],
+    "gargoyle_hound": [
+      "monster/hound.lua:208"
+    ],
+    "gargoyle_houndatk": [
+      "monster/hound.lua:208"
+    ],
+    "gargoyle_hounddeath": [
+      "monster/hound.lua:208"
+    ],
+    "garlic": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "garlic_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "garlic_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "gears": [
+      "monster/chess.lua:506"
+    ],
+    "gelblob_storage": [
+      "easy_other/lunar_shadow_items.lua:853"
+    ],
+    "gelblob_storage_kit": [
+      "epic/gelblob_storage_kit2hm.lua:58"
+    ],
+    "gestalt_alterguardian_projectile": [
+      "epic/alterguardian.lua:1939"
+    ],
+    "gestalt_guard": [
+      "epic/alterguardian.lua:835"
+    ],
+    "ghost": [
+      "role/wendy.lua:216"
+    ],
+    "ghostflowerhat": [
+      "easy_role/wendy_easy.lua:444"
+    ],
+    "ghostlyelixir_attack": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_attack_buff": [
+      "easy_role/wendy_easy.lua:497",
+      "role/wendy.lua:185"
+    ],
+    "ghostlyelixir_fastregen": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_fastregen_buff": [
+      "easy_role/wendy_easy.lua:396",
+      "easy_role/wendy_easy.lua:497"
+    ],
+    "ghostlyelixir_lunar": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_lunar_buff": [
+      "easy_role/wendy_easy.lua:946"
+    ],
+    "ghostlyelixir_retaliation": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_retaliation_buff": [
+      "easy_role/wendy_easy.lua:338",
+      "easy_role/wendy_easy.lua:497"
+    ],
+    "ghostlyelixir_revive": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_revive_buff": [
+      "easy_role/wendy_easy.lua:497"
+    ],
+    "ghostlyelixir_shadow": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_shadow_buff": [
+      "easy_role/wendy_easy.lua:993"
+    ],
+    "ghostlyelixir_shield": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_shield_buff": [
+      "easy_role/wendy_easy.lua:338",
+      "easy_role/wendy_easy.lua:497"
+    ],
+    "ghostlyelixir_slowregen": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_slowregen_buff": [
+      "easy_role/wendy_easy.lua:374",
+      "easy_role/wendy_easy.lua:497"
+    ],
+    "ghostlyelixir_speed": [
+      "easy_role/wendy_easy.lua:536"
+    ],
+    "ghostlyelixir_speed_buff": [
+      "easy_role/wendy_easy.lua:497",
+      "easy_role/wendy_easy.lua:924"
+    ],
+    "glacialhound": [
+      "monster/hound.lua:216"
+    ],
+    "glasscutter": [
+      "easy_other/easy_equipments.lua:1641"
+    ],
+    "glommer": [
+      "food/glommer.lua:2"
+    ],
+    "gnarwail": [
+      "food/oceanfish.lua:156"
+    ],
+    "goatmilk": [
+      "scripts/eyebrellashade2hm.lua:50"
+    ],
+    "grasspartfx": [
+      "easy_other/easy_living_things.lua:71"
+    ],
+    "green_cap": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "green_mushroom": [
+      "food/plant.lua:224",
+      "weather/dusk.lua:106"
+    ],
+    "green_mushroomhat": [
+      "easy_other/easy_equipments.lua:209",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "greenstaff": [
+      "common/common.lua:1067",
+      "easy_other/eyeturret2hm.lua:459"
+    ],
+    "hambat": [
+      "easy_other/easy_equipments.lua:4419"
+    ],
+    "haul_hound": [
+      "monster/hound.lua:208"
+    ],
+    "heatrock": [
+      "weather/temperature.lua:266"
+    ],
+    "hivehat": [
+      "easy_other/easy_equipments.lua:3748"
+    ],
+    "hound": [
+      "monster/hound.lua:208"
+    ],
+    "houndcorpse": [
+      "monster/hound.lua:208"
+    ],
+    "houndmound": [
+      "monster/hound.lua:168"
+    ],
+    "houndstooth_blowpipe": [
+      "easy_other/lunar_shadow_items.lua:178"
+    ],
+    "hutch": [
+      "shadowworld.lua:1527"
+    ],
+    "icefishing_hole": [
+      "epic/sharkboi.lua:1563",
+      "food/animal.lua:164",
+      "weather/temperature.lua:393"
+    ],
+    "icehat": [
+      "easy_other/easy_equipments.lua:236"
+    ],
+    "icehound": [
+      "monster/hound.lua:208"
+    ],
+    "icestaff": [
+      "epic/icestaff_frostcore2hm.lua:59"
+    ],
+    "icire_rock": [
+      "weather/temperature.lua:266"
+    ],
+    "inventory_classified": [
+      "easy_other/containersort.lua:1332"
+    ],
+    "inventoryitem_classified": [
+      "easy_role/winona_electrical.lua:176"
+    ],
+    "junk_pile": [
+      "monster/pigman.lua:261"
+    ],
+    "junk_pile_big": [
+      "monster/pigman.lua:261",
+      "tech/clockwork_guard.lua:99"
+    ],
+    "junkball_fall_fx": [
+      "epic/daywalker2.lua:1095"
+    ],
+    "kelp_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "killerbee": [
+      "monster/bee.lua:47"
+    ],
+    "klaus": [
+      "epic/klaus.lua:926",
+      "shadowworld.lua:1442"
+    ],
+    "klaus2hm": [
+      "shadowworld.lua:1444"
+    ],
+    "klaus_sack": [
+      "epic/klaus.lua:202"
+    ],
+    "knight": [
+      "easy_role/winona_easy.lua:84",
+      "monster/chess.lua:273",
+      "monster/chess.lua:336"
+    ],
+    "knight_nightmare": [
+      "easy_role/winona_easy.lua:84",
+      "monster/chess.lua:273",
+      "monster/chess.lua:363"
+    ],
+    "knight_nightmare_ruinsrespawner_inst": [
+      "monster/chess.lua:484"
+    ],
+    "knight_yoth": [
+      "common/hardmode.lua:104"
+    ],
+    "koalefant_summer": [
+      "food/koalefant.lua:251"
+    ],
+    "koalefant_winter": [
+      "food/koalefant.lua:251"
+    ],
+    "krampus": [
+      "monster/krampus.lua:60"
+    ],
+    "lantern": [
+      "easy_role/winona_electrical.lua:31"
+    ],
+    "lavae_tooth": [
+      "easy_other/easy_equipments.lua:1976"
+    ],
+    "leif": [
+      "epic/leif.lua:261"
+    ],
+    "leif_sparse": [
+      "epic/leif.lua:261"
+    ],
+    "lifeinjector": [
+      "role/hunger.lua:37"
+    ],
+    "lighter": [
+      "easy_role/willow_easy.lua:257",
+      "easy_role/willow_easy.lua:482"
+    ],
+    "lighterfire_haunteddoll": [
+      "monster/supermonster.lua:474"
+    ],
+    "lightning_rod": [
+      "easy_role/wx78_easy.lua:1145"
+    ],
+    "lightninghound": [
+      "monster/hound.lua:208"
+    ],
+    "lordfruitfly": [
+      "easy_other/easy_living_things.lua:136",
+      "monster/fruitfly.lua:13"
+    ],
+    "lucy": [
+      "easy_role/woodie_easy.lua:226"
+    ],
+    "lunar_forge": [
+      "easy_other/easy_structures.lua:1211"
+    ],
+    "lunar_seed": [
+      "epic/beargerfur_sack_lunar_seed2hm.lua:239"
+    ],
+    "lunarmerm_thorns_fx": [
+      "easy_other/easy_structures.lua:2173"
+    ],
+    "lunarplanthat": [
+      "easy_other/lunar_shadow_items.lua:199",
+      "easy_other/lunar_shadow_items.lua:77",
+      "weather/moonisland.lua:282"
+    ],
+    "lunarrift_crystal_big": [
+      "monster/lunarthrall_plant.lua:414"
+    ],
+    "lunarrift_portal": [
+      "monster/lunarthrall_plant.lua:407"
+    ],
+    "lunarthrall_plant": [
+      "easy_other/easy_living_things.lua:136",
+      "easy_other/lunar_shadow_items.lua:685",
+      "monster/lunarthrall_plant.lua:149"
+    ],
+    "lunarthrall_plant_vine": [
+      "easy_other/easy_living_things.lua:136"
+    ],
+    "lunarthrall_plant_vine_end": [
+      "easy_other/easy_living_things.lua:136"
+    ],
+    "lureplant": [
+      "monster/lunarthrall_plant.lua:228",
+      "monster/lunarthrall_plant.lua:373"
+    ],
+    "lureplantbulb": [
+      "food/animal.lua:122"
+    ],
+    "magmahound": [
+      "monster/hound.lua:216"
+    ],
+    "malbatross": [
+      "epic/malbatross.lua:88"
+    ],
+    "marble": [
+      "tech/cave_entrance.lua:472"
+    ],
+    "marbleshrub": [
+      "food/plant.lua:128"
+    ],
+    "meatrack": [
+      "easy_other/easy_structures.lua:2994"
+    ],
+    "merm": [
+      "easy_role/wurt_easy.lua:249",
+      "role/wurt.lua:48"
+    ],
+    "mermguard": [
+      "role/wurt.lua:48"
+    ],
+    "mermking": [
+      "easy_role/wurt_easy.lua:90"
+    ],
+    "mermking_buff_crown": [
+      "role/wurt.lua:55"
+    ],
+    "mermwatchtower": [
+      "role/wurt.lua:39"
+    ],
+    "milkywhites": [
+      "scripts/eyebrellashade2hm.lua:50"
+    ],
+    "minerhat": [
+      "easy_other/easy_equipments.lua:223",
+      "easy_role/winona_electrical.lua:31",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "minotaur": [
+      "epic/minotaur.lua:548",
+      "epic/minotaur.lua:678",
+      "shadow_nerf.lua:134",
+      "shadowworld.lua:1648"
+    ],
+    "minotaurchest": [
+      "epic/minotaur.lua:1054"
+    ],
+    "minotaurchestspawner": [
+      "epic/minotaur.lua:1060"
+    ],
+    "minotaurhorn": [
+      "easy_other/easy_equipments.lua:5028",
+      "easy_other/easy_items.lua:1386"
+    ],
+    "minotaurhorn_2": [
+      "easy_other/easy_equipments.lua:5040",
+      "easy_other/easy_items.lua:1386"
+    ],
+    "molehat": [
+      "easy_role/winona_electrical.lua:31",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "monkey": [
+      "monster/monkey.lua:49"
+    ],
+    "monkey_mediumhat": [
+      "tech/oceanlife.lua:642"
+    ],
+    "monkey_smallhat": [
+      "tech/oceanlife.lua:627"
+    ],
+    "monkeyhut": [
+      "tech/oceanlife.lua:318"
+    ],
+    "monkeyisland_portal": [
+      "tech/moonrockidol.lua:128"
+    ],
+    "monkeyprojectile": [
+      "easy_role/wonkey_easy.lua:414"
+    ],
+    "monkeyqueen": [
+      "tech/oceanlife.lua:566"
+    ],
+    "monkeytail": [
+      "food/action.lua:158",
+      "monster/lunarthrall_plant.lua:228"
+    ],
+    "moon_altar_cosmic": [
+      "epic/crabking.lua:1022"
+    ],
+    "moon_altar_rock_glass": [
+      "weather/moonisland.lua:270"
+    ],
+    "moon_altar_rock_idol": [
+      "weather/moonisland.lua:270"
+    ],
+    "moon_altar_rock_seed": [
+      "weather/moonisland.lua:270"
+    ],
+    "moon_mushroomhat": [
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "moon_tear": [
+      "weather/autumn.lua:118"
+    ],
+    "moonbutterfly": [
+      "food/animal.lua:113"
+    ],
+    "moondial": [
+      "easy_role/wendy_easy.lua:862"
+    ],
+    "moonglass_rock": [
+      "food/action.lua:158"
+    ],
+    "moonglassaxe": [
+      "easy_other/easy_equipments.lua:2056",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "moonhound": [
+      "monster/hound.lua:208"
+    ],
+    "moonpig": [
+      "monster/pigman.lua:114"
+    ],
+    "moonspider_spike": [
+      "epic/antlion.lua:1136"
+    ],
+    "moonstorm_glass": [
+      "epic/alterguardian.lua:558"
+    ],
+    "moonstorm_goggleshat": [
+      "easy_other/easy_equipments.lua:4333",
+      "weather/moonisland.lua:281"
+    ],
+    "moonstorm_lightning": [
+      "epic/alterguardian.lua:554"
+    ],
+    "moonstorm_spark": [
+      "weather/moonisland.lua:396"
+    ],
+    "moonstormmarker2hm": [
+      "weather/moonisland.lua:186"
+    ],
+    "moonstormmarker_big": [
+      "weather/moonisland.lua:186"
+    ],
+    "mortarball": [
+      "epic/crabking.lua:556"
+    ],
+    "mossling": [
+      "ray/suijishengwuapi.lua:4"
+    ],
+    "multiplayer_portal": [
+      "tech/moonrockidol.lua:76"
+    ],
+    "multitool_axe_pickaxe": [
+      "easy_other/easy_equipments.lua:2085",
+      "easy_other/easy_equipments.lua:381",
+      "easy_other/easy_equipments.lua:5400"
+    ],
+    "mushroom_farm": [
+      "monster/lunarthrall_plant.lua:228"
+    ],
+    "mushroom_light": [
+      "easy_other/easy_structures.lua:3072"
+    ],
+    "mushroom_light2": [
+      "easy_other/easy_structures.lua:3102"
+    ],
+    "mushroombomb": [
+      "epic/toadstool.lua:46"
+    ],
+    "mushroombomb_dark": [
+      "epic/toadstool.lua:46"
+    ],
+    "mushtree_medium": [
+      "weather/temperature.lua:383"
+    ],
+    "mushtree_tall": [
+      "weather/temperature.lua:375"
+    ],
+    "mutatedbearger": [
+      "epic/bearger.lua:8",
+      "shadow_nerf.lua:134"
+    ],
+    "mutatedbearger_swipe_fx": [
+      "epic/bearger.lua:156"
+    ],
+    "mutateddeerclops": [
+      "epic/deerclops.lua:409",
+      "shadow_nerf.lua:134",
+      "shadow_nerf.lua:151"
+    ],
+    "mutatedhound": [
+      "monster/hound.lua:208"
+    ],
+    "mutatedwarg": [
+      "monster/hound.lua:156",
+      "monster/hound.lua:267",
+      "shadow_nerf.lua:134"
+    ],
+    "nightlight": [
+      "weather/seasons.lua:551"
+    ],
+    "nightmarebeak": [
+      "monster/crawlingshadow.lua:278",
+      "monster/shadowbeak.lua:221",
+      "monster/shadowbeak.lua:490"
+    ],
+    "nightstick": [
+      "easy_other/easy_equipments.lua:3517",
+      "easy_role/winona_electrical.lua:101",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "nightsword": [
+      "easy_other/easy_equipments.lua:4805"
+    ],
+    "nutrientsgoggleshat": [
+      "easy_role/wormwood_easy.lua:742",
+      "food/nutrient.lua:89"
+    ],
+    "oceanfish_medium_1": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_1_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_2": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_2_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_3": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_3_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_4": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_4_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_5": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_5_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_6": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_6_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_7": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_7_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_8": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_8_inv": [
+      "food/oceanfish.lua:196",
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_medium_9": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_medium_9_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_1": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_1_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_2": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_2_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_3": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_3_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_4": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_4_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_5": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_5_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_6": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_6_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_7": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_7_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_8": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_8_inv": [
+      "food/oceanfish.lua:196",
+      "food/oceanfish.lua:345"
+    ],
+    "oceanfish_small_9": [
+      "food/oceanfish.lua:333"
+    ],
+    "oceanfish_small_9_inv": [
+      "food/oceanfish.lua:345"
+    ],
+    "oceanhorror": [
+      "easy_other/easy_equipments.lua:2488",
+      "monster/crawlingshadow.lua:278",
+      "monster/oceanshadow.lua:9",
+      "monster/shadowbeak.lua:490"
+    ],
+    "oceanhorror2hm": [
+      "monster/crawlingshadow.lua:278"
+    ],
+    "oceantree_pillar": [
+      "monster/wall.lua:260"
+    ],
+    "offering_pot": [
+      "easy_role/wurt_easy.lua:323"
+    ],
+    "offering_pot_upgraded": [
+      "easy_role/wurt_easy.lua:323"
+    ],
+    "onion": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "onion_celestial2hm": [
+      "epic/alterguardian.lua:2625"
+    ],
+    "onion_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "onion_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "orangestaff": [
+      "easy_other/easy_equipments.lua:2104",
+      "easy_other/easy_items.lua:1341"
+    ],
+    "otter": [
+      "monster/otter.lua:259"
+    ],
+    "pandoraschest": [
+      "epic/minotaur.lua:1112"
+    ],
+    "papyrus": [
+      "easy_other/easy_items.lua:977"
+    ],
+    "pepper": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "pepper_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "pepper_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "perd": [
+      "food/action.lua:3"
+    ],
+    "phonograph": [
+      "easy_other/easy_items.lua:1420",
+      "food/farm.lua:255"
+    ],
+    "pickaxe_lunarplant": [
+      "easy_other/lunar_shadow_items.lua:199",
+      "easy_other/lunar_shadow_items.lua:790"
+    ],
+    "pigguard": [
+      "monster/pigman.lua:114",
+      "monster/pigman.lua:297"
+    ],
+    "pigking": [
+      "monster/pigman.lua:310"
+    ],
+    "pigking_pigtorch": [
+      "easy_other/easy_mechanics.lua:226",
+      "food/animal.lua:118"
+    ],
+    "pigman": [
+      "monster/pigman.lua:114",
+      "monster/pigman.lua:285",
+      "monster/pigman.lua:53",
+      "ray/suijishengwuapi.lua:441"
+    ],
+    "pigtorch": [
+      "food/animal.lua:119"
+    ],
+    "plantmeat": [
+      "food/oceanfish.lua:146"
+    ],
+    "plantmeat_cooked": [
+      "food/oceanfish.lua:146"
+    ],
+    "player_classified": [
+      "role/hunger.lua:106",
+      "weather/temperature.lua:179"
+    ],
+    "player_soul2hm": [
+      "easy_role/wormwood_easy.lua:135"
+    ],
+    "player_tomb2hm": [
+      "easy_other/easy_structures.lua:3231"
+    ],
+    "pocketwatch_heal": [
+      "easy_role/wanda_easy.lua:8",
+      "role/hunger.lua:23"
+    ],
+    "pocketwatch_warp": [
+      "easy_role/wanda_easy.lua:210"
+    ],
+    "pocketwatch_weapon": [
+      "easy_role/wanda_dreadwatch2hm.lua:165",
+      "easy_role/wanda_easy.lua:143"
+    ],
+    "pomegranate": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "pomegranate_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "pomegranate_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "poop": [
+      "easy_role/wonkey_easy.lua:439"
+    ],
+    "portablecookpot": [
+      "food/cooking.lua:66"
+    ],
+    "portablespicer": [
+      "easy_other/easy_structures.lua:2837"
+    ],
+    "potato": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "potato_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "potato_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "potatosack": [
+      "easy_role/winona_easy.lua:45"
+    ],
+    "powder_monkey": [
+      "tech/oceanlife.lua:340"
+    ],
+    "prime_mate": [
+      "tech/oceanlife.lua:361"
+    ],
+    "puffin": [
+      "food/birds.lua:102"
+    ],
+    "pumpkin": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "pumpkin_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "pumpkin_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "punchingbag": [
+      "role/combat_progressive.lua:17"
+    ],
+    "punchingbag_chaos": [
+      "role/combat_progressive.lua:17"
+    ],
+    "punchingbag_lunar": [
+      "role/combat_progressive.lua:17"
+    ],
+    "punchingbag_shadow": [
+      "role/combat_progressive.lua:17"
+    ],
+    "rabbit": [
+      "food/action.lua:193"
+    ],
+    "raincoat": [
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "red_cap": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "red_mushroom": [
+      "food/plant.lua:224"
+    ],
+    "red_mushroomhat": [
+      "easy_other/easy_equipments.lua:202",
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "reeds": [
+      "food/action.lua:158"
+    ],
+    "researchlab": [
+      "easy_other/easy_structures.lua:315"
+    ],
+    "researchlab2": [
+      "easy_other/easy_structures.lua:573"
+    ],
+    "researchlab3": [
+      "easy_other/easy_structures.lua:1000"
+    ],
+    "researchlab4": [
+      "easy_other/easy_structures.lua:810"
+    ],
+    "reskin_tool": [
+      "easy_other/easy_equipments.lua:4007"
+    ],
+    "reviver": [
+      "easy_other/easy_items.lua:97"
+    ],
+    "rnehound": [
+      "monster/hound.lua:208"
+    ],
+    "robin": [
+      "food/birds.lua:119"
+    ],
+    "robin_winter": [
+      "food/birds.lua:139"
+    ],
+    "rock_avocado_bush": [
+      "food/action.lua:158",
+      "monster/lunarthrall_plant.lua:228"
+    ],
+    "rock_avocado_fruit_ripe": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "rock_moon_shell": [
+      "epic/alterguardian.lua:57"
+    ],
+    "rocky": [
+      "epic/minotaur.lua:760"
+    ],
+    "rook": [
+      "easy_role/winona_easy.lua:84",
+      "monster/chess.lua:273",
+      "monster/chess.lua:336"
+    ],
+    "rook_nightmare": [
+      "easy_role/winona_easy.lua:84",
+      "monster/chess.lua:273",
+      "monster/chess.lua:363"
+    ],
+    "rook_nightmare_ruinsrespawner_inst": [
+      "monster/chess.lua:484"
+    ],
+    "royal_jelly": [
+      "epic/beequeen.lua:46"
+    ],
+    "ruins_bat": [
+      "easy_other/easy_equipments.lua:1333",
+      "easy_other/easy_equipments.lua:2075",
+      "easy_other/easy_equipments.lua:5400"
+    ],
+    "ruins_statue_head": [
+      "tech/ancient_statue.lua:51"
+    ],
+    "ruins_statue_head_nogem": [
+      "tech/ancient_statue.lua:51"
+    ],
+    "ruins_statue_mage": [
+      "tech/ancient_statue.lua:51"
+    ],
+    "ruins_statue_mage_nogem": [
+      "tech/ancient_statue.lua:51"
+    ],
+    "ruinshat": [
+      "easy_other/easy_equipments.lua:1402",
+      "easy_other/easy_equipments.lua:2062",
+      "easy_other/easy_equipments.lua:5400"
+    ],
+    "ruinsnightmare": [
+      "monster/ruinsnightmare.lua:187",
+      "monster/ruinsnightmare.lua:291"
+    ],
+    "scandata": [
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "scrap_monoclehat": [
+      "easy_other/easy_equipments.lua:4191"
+    ],
+    "scraphat": [
+      "easy_other/easy_equipments.lua:4395"
+    ],
+    "sea_chiminea": [
+      "weather/seasons.lua:549"
+    ],
+    "seafaring_prototyper": [
+      "easy_other/easy_structures.lua:1340"
+    ],
+    "seeds": [
+      "food/seeds.lua:44"
+    ],
+    "sewing_mannequin": [
+      "easy_other/easy_structures.lua:2058"
+    ],
+    "shadow_battleaxe": [
+      "common/combat_rewards.lua:16",
+      "easy_other/easy_equipments.lua:1163",
+      "easy_other/lunar_shadow_items.lua:1041",
+      "easy_other/lunar_shadow_items.lua:199"
+    ],
+    "shadow_beef_bell": [
+      "easy_other/lunar_shadow_items.lua:1207"
+    ],
+    "shadow_bishop": [
+      "epic/shadowchesspieces.lua:497"
+    ],
+    "shadow_forge": [
+      "easy_other/easy_structures.lua:1286"
+    ],
+    "shadow_knight": [
+      "epic/shadowchesspieces.lua:497"
+    ],
+    "shadow_leech": [
+      "monster/shadowleech.lua:226"
+    ],
+    "shadow_rook": [
+      "epic/shadowchesspieces.lua:497"
+    ],
+    "shadowbank_tackle2hm": [
+      "easy_other/easy_structures.lua:1407",
+      "epic/sharkboi.lua:1409"
+    ],
+    "shadowchanneler": [
+      "epic/atriumstalker.lua:260"
+    ],
+    "shadowheart": [
+      "easy_other/easy_items.lua:320"
+    ],
+    "shadowprotector": [
+      "shadowworld.lua:77",
+      "shadowworld.lua:79"
+    ],
+    "shadowthrall_centipede_body": [
+      "monster/shadowthrall_centipede.lua:23"
+    ],
+    "shadowthrall_centipede_controller": [
+      "monster/shadowthrall_centipede.lua:16"
+    ],
+    "shadowthrall_centipede_head": [
+      "monster/shadowthrall_centipede.lua:22"
+    ],
+    "shadowthrall_hands": [
+      "monster/shadowthrall.lua:10"
+    ],
+    "shadowthrall_horns": [
+      "monster/shadowthrall.lua:10",
+      "monster/shadowthrall.lua:171"
+    ],
+    "shadowthrall_wings": [
+      "monster/shadowthrall.lua:10",
+      "monster/shadowthrall.lua:52"
+    ],
+    "shadowvaulttacklepage2hm": [
+      "easy_other/easy_structures.lua:1407",
+      "epic/sharkboi.lua:1401"
+    ],
+    "sharkboi": [
+      "epic/sharkboi.lua:1191",
+      "epic/sharkboi.lua:897",
+      "shadowworld.lua:1626"
+    ],
+    "sharkboi_icetunnel_fx": [
+      "epic/deerclops.lua:309"
+    ],
+    "shieldofterror": [
+      "easy_other/easy_equipments.lua:2765",
+      "easy_role/wormwood_easy.lua:888"
+    ],
+    "siestahut": [
+      "easy_other/easy_mechanics.lua:137"
+    ],
+    "sisturn": [
+      "easy_role/wendy_easy.lua:849"
+    ],
+    "skeleton": [
+      "easy_other/easy_items.lua:144",
+      "food/action.lua:158"
+    ],
+    "skeleton_player": [
+      "easy_other/easy_items.lua:144",
+      "easy_other/easy_structures.lua:3207",
+      "food/action.lua:158"
+    ],
+    "skeletonhat": [
+      "easy_other/easy_equipments.lua:2442"
+    ],
+    "slingshotammo_dreadstone_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_freeze_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_gelblob_proj": [
+      "monster/supermonster.lua:629",
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_gold_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_gunpowder_proj": [
+      "monster/supermonster.lua:638",
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_honey_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_horrorfuel_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_lunarplanthusk_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_marble_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_moonglass_proj": [
+      "monster/supermonster.lua:659",
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_moonglass_walter2hm_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_poop_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_purebrilliance_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_rock_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_scrapfeather_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_slow_proj": [
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_stinger_proj": [
+      "monster/supermonster.lua:654",
+      "role/walter.lua:230"
+    ],
+    "slingshotammo_thulecite_proj": [
+      "role/walter.lua:230"
+    ],
+    "slurtle": [
+      "monster/moveattack.lua:87"
+    ],
+    "slurtlehole": [
+      "monster/moveattack.lua:22"
+    ],
+    "smallghost": [
+      "easy_role/wendy_easy.lua:40",
+      "role/wendy.lua:228"
+    ],
+    "snowball": [
+      "weather/winter.lua:27",
+      "weather/winter.lua:68"
+    ],
+    "snurtle": [
+      "monster/moveattack.lua:94"
+    ],
+    "spat": [
+      "food/koalefant.lua:251"
+    ],
+    "spear_wathgrithr_lightning": [
+      "easy_other/easy_equipments.lua:3704",
+      "easy_role/wigfrid_easy.lua:740",
+      "easy_role/winona_electrical.lua:101"
+    ],
+    "spear_wathgrithr_lightning_charged": [
+      "easy_other/easy_equipments.lua:3695",
+      "easy_role/wigfrid_easy.lua:740",
+      "easy_role/winona_electrical.lua:101",
+      "role/wigfrid.lua:101"
+    ],
+    "spider_repellent": [
+      "shadowworld.lua:1504"
+    ],
+    "spider_whistle": [
+      "shadowworld.lua:1473"
+    ],
+    "spiderden": [
+      "easy_role/webber_easy.lua:293",
+      "monster/spider.lua:45",
+      "ray/suijishengwuapi.lua:606"
+    ],
+    "spiderden_2": [
+      "monster/spider.lua:45"
+    ],
+    "spiderden_3": [
+      "monster/spider.lua:45"
+    ],
+    "spiderqueen": [
+      "monster/spider.lua:97"
+    ],
+    "sporebomb": [
+      "epic/toadstool.lua:62"
+    ],
+    "sporecloud": [
+      "easy_other/eyeturret2hm.lua:513",
+      "easy_other/lunar_shadow_items.lua:283",
+      "epic/toadstool.lua:308",
+      "monster/lunarthrall_plant.lua:354"
+    ],
+    "sporecloud_toad": [
+      "easy_other/eyeturret2hm.lua:513",
+      "easy_other/lunar_shadow_items.lua:283"
+    ],
+    "sporehound": [
+      "monster/hound.lua:216"
+    ],
+    "staff_lunarplant": [
+      "easy_other/lunar_shadow_items.lua:199"
+    ],
+    "staffcoldlight": [
+      "food/farm.lua:179"
+    ],
+    "staffcoldlightfx": [
+      "food/farm.lua:184"
+    ],
+    "stagehand": [
+      "epic/klaus.lua:990"
+    ],
+    "stalker_atrium": [
+      "epic/atriumstalker.lua:210",
+      "epic/atriumstalker.lua:419",
+      "shadow_nerf.lua:134"
+    ],
+    "stalker_forest": [
+      "food/plant.lua:177"
+    ],
+    "stash_map": [
+      "tech/oceanlife.lua:591"
+    ],
+    "supertacklecontainer": [
+      "easy_other/easy_items.lua:20"
+    ],
+    "sword_lunarplant": [
+      "easy_other/lunar_shadow_items.lua:199",
+      "easy_other/lunar_shadow_items.lua:354",
+      "epic/sword_lunarplant_moonfire2hm.lua:465"
+    ],
+    "sword_vortex2hm": [
+      "easy_other/easy_equipments.lua:4581"
+    ],
+    "tacklecontainer": [
+      "easy_other/easy_items.lua:20"
+    ],
+    "tacklestation": [
+      "easy_other/easy_structures.lua:1437"
+    ],
+    "tacklestation2hm": [
+      "easy_other/easy_structures.lua:1407",
+      "epic/sharkboi.lua:1389"
+    ],
+    "telestaff": [
+      "epic/minotaur.lua:922"
+    ],
+    "tent": [
+      "easy_other/easy_mechanics.lua:137"
+    ],
+    "tentacle": [
+      "monster/tentacle.lua:61"
+    ],
+    "tentacle_pillar": [
+      "monster/tentacle.lua:84"
+    ],
+    "tentaclespike": [
+      "easy_role/wormwood_easy.lua:742"
+    ],
+    "terrorbeak": [
+      "easy_other/easy_equipments.lua:2488",
+      "monster/crawlingshadow.lua:278",
+      "monster/shadowbeak.lua:221",
+      "monster/shadowbeak.lua:490"
+    ],
+    "the_real_charles_t_horse": [
+      "easy_other/easy_items.lua:1341"
+    ],
+    "thulecite": [
+      "food/plant.lua:334"
+    ],
+    "thulecite_pieces": [
+      "food/plant.lua:326"
+    ],
+    "thurible": [
+      "easy_other/easy_equipments.lua:2288"
+    ],
+    "tillweed": [
+      "easy_other/easy_living_things.lua:97"
+    ],
+    "tillweedsalve": [
+      "role/health.lua:67"
+    ],
+    "toadstool": [
+      "epic/toadstool.lua:163",
+      "shadowworld.lua:1685"
+    ],
+    "toadstool_cap": [
+      "epic/toadstool.lua:409"
+    ],
+    "toadstool_dark": [
+      "epic/toadstool.lua:163",
+      "shadowworld.lua:1685"
+    ],
+    "tomato": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "tomato_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "tomato_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "tophat": [
+      "easy_other/magician_private2hm.lua:214",
+      "easy_role/waxwell_easy.lua:128"
+    ],
+    "torch": [
+      "easy_other/easy_equipments.lua:3260",
+      "easy_role/willow_easy.lua:257"
+    ],
+    "townportal": [
+      "easy_other/easy_structures.lua:1731",
+      "easy_other/easy_structures.lua:1873"
+    ],
+    "townportaltalisman": [
+      "easy_other/easy_structures.lua:1756"
+    ],
+    "trap": [
+      "easy_other/easy_items.lua:1486"
+    ],
+    "trap_bramble": [
+      "easy_other/easy_items.lua:1027",
+      "epic/minotaur.lua:810"
+    ],
+    "trap_fumarole": [
+      "epic/minotaur.lua:829"
+    ],
+    "trap_starfish": [
+      "epic/minotaur.lua:805"
+    ],
+    "trap_teeth": [
+      "easy_other/easy_items.lua:995",
+      "epic/minotaur.lua:820"
+    ],
+    "treasurechest": [
+      "easy_other/easy_items.lua:771",
+      "easy_other/easy_structures.lua:107"
+    ],
+    "tree_rock": [
+      "food/plant.lua:344"
+    ],
+    "tree_rock1": [
+      "food/plant.lua:344"
+    ],
+    "tree_rock1_normal": [
+      "food/plant.lua:344"
+    ],
+    "tree_rock1_short": [
+      "food/plant.lua:344"
+    ],
+    "tree_rock2": [
+      "food/plant.lua:344"
+    ],
+    "tree_rock2_normal": [
+      "food/plant.lua:344"
+    ],
+    "tree_rock2_short": [
+      "food/plant.lua:344"
+    ],
+    "tree_rock_sapling": [
+      "food/plant.lua:240"
+    ],
+    "trident": [
+      "common/hardmode.lua:2"
+    ],
+    "trinket_1_proj": [
+      "role/walter.lua:230"
+    ],
+    "tumbleweed": [
+      "weather/summer.lua:10"
+    ],
+    "turfcraftingstation": [
+      "easy_other/easy_structures.lua:1148"
+    ],
+    "twiggytree": [
+      "easy_other/easy_living_things.lua:46"
+    ],
+    "underwater_salvageable": [
+      "tech/oceanlife.lua:688"
+    ],
+    "voidcloth_boomerang": [
+      "easy_other/lunar_shadow_items.lua:1070"
+    ],
+    "voidcloth_scythe": [
+      "easy_other/lunar_shadow_items.lua:199",
+      "easy_other/lunar_shadow_items.lua:523"
+    ],
+    "voidcloth_umbrella": [
+      "easy_other/lunar_shadow_items.lua:898"
+    ],
+    "voidclothhat": [
+      "easy_other/lunar_shadow_items.lua:199",
+      "easy_other/lunar_shadow_items.lua:45"
+    ],
+    "wagboss_robot": [
+      "shadowworld.lua:1553"
+    ],
+    "wagdrone_flying": [
+      "shadowworld.lua:1601"
+    ],
+    "wagdrone_rolling": [
+      "shadowworld.lua:1561"
+    ],
+    "wagpunkhat": [
+      "easy_other/lunar_shadow_items.lua:102",
+      "easy_other/lunar_shadow_items.lua:199"
+    ],
+    "wagstaff_item_2": [
+      "tech/distilledknowledge.lua:135"
+    ],
+    "walrus": [
+      "monster/walrus.lua:11"
+    ],
+    "walrus_camp": [
+      "monster/walrus.lua:32"
+    ],
+    "walter": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/walter_easy.lua:13",
+      "easy_role/walter_easy.lua:154",
+      "easy_role/walter_easy.lua:711",
+      "easy_role/walter_easy.lua:812"
+    ],
+    "wanda": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/wanda_easy.lua:192",
+      "easy_role/wanda_easy.lua:234",
+      "easy_role/wanda_easy.lua:248",
+      "easy_role/wanda_easy.lua:298",
+      "easy_role/wanda_easy.lua:38",
+      "easy_role/wanda_easy.lua:391",
+      "easy_role/wanda_easy.lua:50"
+    ],
+    "warg": [
+      "ray/suijishengwuapi.lua:734"
+    ],
+    "warly": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:103",
+      "easy_role/warly_easy.lua:206",
+      "easy_role/warly_easy.lua:25",
+      "easy_role/warly_easy.lua:38",
+      "easy_role/warly_easy.lua:46"
+    ],
+    "wasphive": [
+      "easy_other/easy_equipments.lua:3762"
+    ],
+    "watermelon": [
+      "easy_other/easy_structures.lua:3017"
+    ],
+    "watermelon_oversized": [
+      "ray/suijishengwuapi.lua:683"
+    ],
+    "watermelon_seeds": [
+      "food/seeds.lua:44"
+    ],
+    "waterstreak_projectile": [
+      "weather/rain.lua:74"
+    ],
+    "wathgrithr": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/wigfrid_easy.lua:14",
+      "easy_role/wigfrid_easy.lua:383",
+      "easy_role/wigfrid_easy.lua:50",
+      "easy_role/wigfrid_easy.lua:854"
+    ],
+    "wathgrithr_shield": [
+      "easy_role/wigfrid_easy.lua:740"
+    ],
+    "wathom": [
+      "common/combat_rewards.lua:43",
+      "easy_role/gym.lua:342"
+    ],
+    "waxwell": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:103",
+      "easy_role/waxwell_easy.lua:107",
+      "easy_role/waxwell_easy.lua:18",
+      "easy_role/waxwell_easy.lua:47"
+    ],
+    "waxwelljournal": [
+      "easy_other/easy_structures.lua:963",
+      "tech/moonrockidol.lua:139"
+    ],
+    "webbedcreature": [
+      "common/common.lua:576"
+    ],
+    "webber": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:103",
+      "easy_role/webber_easy.lua:131",
+      "easy_role/webber_easy.lua:235",
+      "easy_role/webber_easy.lua:31",
+      "easy_role/webber_easy.lua:486",
+      "easy_role/webber_easy.lua:495"
+    ],
+    "weed_forgetmelots": [
+      "easy_other/easy_living_things.lua:120"
+    ],
+    "wendy": [
+      "easy_role/gym.lua:342",
+      "easy_role/wendy_easy.lua:189",
+      "easy_role/wendy_easy.lua:328",
+      "easy_role/wendy_easy.lua:4",
+      "easy_role/wendy_easy.lua:854",
+      "easy_role/wendy_easy.lua:93",
+      "role/wendy.lua:153",
+      "role/wendy.lua:327",
+      "role/wendy.lua:382"
+    ],
+    "wes": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/wes_easy.lua:50"
+    ],
+    "wetpouch": [
+      "epic/antlion.lua:1085"
+    ],
+    "whip": [
+      "easy_role/wanda_easy.lua:160"
+    ],
+    "wickerbottom": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/wickerbottom_easy.lua:12",
+      "easy_role/wickerbottom_easy.lua:312",
+      "easy_role/wickerbottom_easy.lua:4",
+      "easy_role/wickerbottom_easy.lua:405",
+      "easy_role/wickerbottom_easy.lua:585",
+      "easy_role/wickerbottom_easy.lua:96"
+    ],
+    "willow": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:103",
+      "easy_role/willow_easy.lua:176",
+      "easy_role/willow_easy.lua:249",
+      "easy_role/willow_easy.lua:44",
+      "easy_role/willow_easy.lua:490",
+      "role/willow.lua:137",
+      "role/willow.lua:241"
+    ],
+    "willow_ember": [
+      "easy_role/willow_easy.lua:180"
+    ],
+    "willow_frenzy": [
+      "easy_role/willow_easy.lua:64"
+    ],
+    "willow_shadow_flame": [
+      "easy_role/willow_easy.lua:408",
+      "role/willow.lua:217"
+    ],
+    "wilson": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:103",
+      "easy_role/wilson_easy.lua:218",
+      "easy_role/wilson_easy.lua:23",
+      "easy_role/wilson_easy.lua:5"
+    ],
+    "winky": [
+      "easy_role/gym.lua:342"
+    ],
+    "winona": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightaction.lua:351",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/winona_easy.lua:14",
+      "easy_role/winona_electrical.lua:29",
+      "scripts/winonabuilder2hm.lua:9"
+    ],
+    "winona_battery_high": [
+      "easy_role/wx78_easy.lua:1112"
+    ],
+    "winona_battery_low": [
+      "easy_role/wx78_easy.lua:1079"
+    ],
+    "winona_recipescanner": [
+      "common/hardmode.lua:56"
+    ],
+    "winterometer": [
+      "weather/seasons.lua:532"
+    ],
+    "wixie": [
+      "easy_role/gym.lua:342"
+    ],
+    "wobybig": [
+      "easy_role/walter_easy.lua:100"
+    ],
+    "wobysmall": [
+      "easy_role/walter_easy.lua:100",
+      "easy_role/walter_easy.lua:725"
+    ],
+    "wolfgang": [
+      "easy_role/wolfgang_easy.lua:27",
+      "easy_role/wolfgang_easy.lua:71",
+      "role/wolfgang.lua:10"
+    ],
+    "wonkey": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/wonkey_easy.lua:192",
+      "easy_role/wonkey_easy.lua:383",
+      "easy_role/wonkey_easy.lua:496"
+    ],
+    "woodcarvedhat": [
+      "easy_other/easy_equipments.lua:2035",
+      "easy_role/woodie_easy.lua:40"
+    ],
+    "woodie": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/woodie_easy.lua:146",
+      "easy_role/woodie_easy.lua:154",
+      "easy_role/woodie_easy.lua:35",
+      "easy_role/woodie_easy.lua:5",
+      "easy_role/woodie_easy.lua:70",
+      "ray/suijishengwuapi.lua:570"
+    ],
+    "world": [
+      "common/common.lua:525",
+      "common/common.lua:828",
+      "common/common.lua:92",
+      "common/hardmode.lua:278",
+      "common/patch.lua:200",
+      "common/patch.lua:63",
+      "easy_other/containersort.lua:3836",
+      "easy_other/easy_mechanics.lua:287",
+      "easy_other/exchangemodes2hm.lua:6",
+      "easy_other/magician_private2hm.lua:138",
+      "easy_other/shadowbank2hm.lua:76",
+      "easy_other/shadowvault.lua:15",
+      "epic/minotaur.lua:796",
+      "epic/sharkboi.lua:1530",
+      "epic/sharkboi.lua:9",
+      "food/farm.lua:175",
+      "food/seeds.lua:9",
+      "tech/cave_entrance.lua:340",
+      "weather/moonisland.lua:195",
+      "weather/rain.lua:50",
+      "weather/seasons.lua:328",
+      "weather/summer.lua:25",
+      "weather/weather.lua:13",
+      "weather/winter.lua:21"
+    ],
+    "worm": [
+      "ray/suijishengwuapi.lua:725"
+    ],
+    "worm_boss_dirt": [
+      "common/bugfix.lua:58"
+    ],
+    "worm_boss_shadow_dirt": [
+      "common/bugfix.lua:58"
+    ],
+    "wormwood": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/wormwood_easy.lua:1041",
+      "easy_role/wormwood_easy.lua:1106",
+      "easy_role/wormwood_easy.lua:165",
+      "easy_role/wormwood_easy.lua:307",
+      "easy_role/wormwood_easy.lua:510",
+      "easy_role/wormwood_easy.lua:6",
+      "easy_role/wormwood_easy.lua:877"
+    ],
+    "wortox": [
+      "easy_role/gym.lua:342",
+      "easy_role/wortox_easy.lua:102",
+      "easy_role/wortox_easy.lua:131",
+      "easy_role/wortox_easy.lua:177",
+      "easy_role/wortox_easy.lua:5"
+    ],
+    "wortox_reviver": [
+      "easy_other/easy_items.lua:105"
+    ],
+    "wortox_soul": [
+      "easy_role/wortox_easy.lua:21",
+      "easy_role/wortox_easy.lua:307",
+      "tech/cave_entrance.lua:442"
+    ],
+    "wortox_souljar": [
+      "easy_role/wortox_easy.lua:38"
+    ],
+    "wurt": [
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:103",
+      "easy_role/wurt_easy.lua:293",
+      "easy_role/wurt_easy.lua:337",
+      "easy_role/wurt_easy.lua:376",
+      "easy_role/wurt_easy.lua:44",
+      "easy_role/wurt_easy.lua:80"
+    ],
+    "wx78": [
+      "common/wx78_recovery.lua:125",
+      "easy_role/gym.lua:342",
+      "easy_role/rightselfaction.lua:135",
+      "easy_role/wx78_easy.lua:1022",
+      "easy_role/wx78_easy.lua:104",
+      "easy_role/wx78_easy.lua:1174",
+      "easy_role/wx78_easy.lua:1241",
+      "easy_role/wx78_easy.lua:14",
+      "easy_role/wx78_easy.lua:490",
+      "easy_role/wx78_easy.lua:585",
+      "easy_role/wx78_easy.lua:707",
+      "easy_role/wx78_easy.lua:875",
+      "role/wx78.lua:1109",
+      "role/wx78.lua:944"
+    ],
+    "wx78_backupbody": [
+      "common/wx78_recovery.lua:125",
+      "easy_role/wx78_easy.lua:14"
+    ],
+    "wx78_classified": [
+      "easy_role/wx78_easy.lua:411"
+    ],
+    "wx78_drone_zap_projectile_fx": [
+      "role/wx78.lua:1045"
+    ],
+    "wx78_moduleremover": [
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78_possessedbody": [
+      "common/wx78_recovery.lua:125",
+      "easy_role/wx78_easy.lua:14"
+    ],
+    "wx78_scanner": [
+      "easy_role/wx78_easy.lua:1264",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78_shadow_fuel_debuff": [
+      "role/wx78.lua:1163"
+    ],
+    "wx78module_bee": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:205"
+    ],
+    "wx78module_chess": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_cold": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_digestion": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_heat": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "easy_role/wx78_easy.lua:676"
+    ],
+    "wx78module_light": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_light2": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_maxhealth": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:93"
+    ],
+    "wx78module_maxhealth2": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:93"
+    ],
+    "wx78module_maxhunger": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:156"
+    ],
+    "wx78module_maxhunger1": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:156"
+    ],
+    "wx78module_maxsanity": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:205"
+    ],
+    "wx78module_maxsanity1": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:205"
+    ],
+    "wx78module_movespeed": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_movespeed2": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_music": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:1128"
+    ],
+    "wx78module_nightvision": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_nonedrunk": [
+      "common/patch.lua:630"
+    ],
+    "wx78module_radar": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_screech": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_shielding": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_spin": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_stacksize": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507"
+    ],
+    "wx78module_taser": [
+      "common/wx78_recovery.lua:35",
+      "easy_role/wx78_easy.lua:189",
+      "easy_role/wx78_easy.lua:507",
+      "role/wx78.lua:979"
+    ],
+    "yellowamulet": [
+      "easy_other/easy_equipments.lua:5400"
+    ],
+    "yotp_food1": [
+      "easy_other/easy_items.lua:1416"
+    ],
+    "yotp_food2": [
+      "easy_other/easy_items.lua:1416"
+    ],
+    "yotp_food3": [
+      "easy_other/easy_items.lua:1416"
+    ],
+    "yotr_food1": [
+      "easy_other/easy_items.lua:1416"
+    ],
+    "yotr_food2": [
+      "easy_other/easy_items.lua:1416"
+    ],
+    "yotr_food3": [
+      "easy_other/easy_items.lua:1416"
+    ],
+    "yotr_food4": [
+      "easy_other/easy_items.lua:1416"
+    ]
+  }
+}

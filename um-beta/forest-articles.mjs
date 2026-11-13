@@ -61,9 +61,10 @@ export const forestArticles = [
       ['在哪里遇到','非冬季靠近可采摘的高齿蕨时，符合条件的目标会触发一次基础 10% 的幸运判定。普通地表成功后，蚜虫从周围其他蕨丛接连出现并追击目标，缺少合适蕨丛时会提前停止。岛屿世界在这一分支生成蛇。'],
       ['如何应对','每只蚜虫有 100 生命，基础伤害 10，攻击间隔在生成时取 1～3 秒。攻击一只会惊动半径 30 内最多 10 只同类。捕虫网一次即可活捉，也可让附近的果蝠捕猎。'],
       ['掉落与利用','死亡时分别判定 33% 的钢丝绒和 25% 的肉。开启小怪物肉选项时掉小怪物肉，关闭后掉怪物肉。活蚜虫可下锅，提供 0.5 肉度和 0.5 昆虫度。WX-78 扫描蚜虫可获得 2 点生物数据，关联初级饥饿电路。'],
+      ['生吃活蚜虫','活蚜虫属于昆虫食物，基础理智 +10。符合杂食或食虫条件的麦斯威尔可以直接吃；其他角色还需穿戴具备食虫标签的装备，例如蜂帽（um_hat_bee_moon）。'],
     ],
     related:[habitat,{id:'hooded-fern',label:'高齿蕨的防护与采摘'},{id:'fruitbat',label:'果蝠'},{id:'figgy',label:'宠物小蚜虫'}],
-    sources:[name(259),src('modinfo.lua',759),src('init/init_tuning.lua',386),prefab('hooded_fern',236),prefab('hooded_fern',264),prefab('aphid',13),prefab('aphid',56),prefab('aphid',157),prefab('aphid',162),prefab('aphid',169),src('init/init_food/init_crockpot.lua',118),src('init/init_character_changes/wx78.lua',30)],
+    sources:[name(259),src('modinfo.lua',759),src('init/init_tuning.lua',386),prefab('hooded_fern',236),prefab('hooded_fern',264),prefab('aphid',13),prefab('aphid',56),prefab('aphid',157),prefab('aphid',162),prefab('aphid',169),src('init/init_food/init_crockpot.lua',118),src('init/init_character_changes/wx78.lua',30),src('init/init_creatures/init_ediblebugs.lua',17),src('init/init_creatures/init_ediblebugs.lua',27),prefab('um_hat_bee_moon',86)],
   },
   {
     id:'hooded-fern', title:'高齿蕨', category:'world', icon:'hooded_fern', aliases:['hooded_fern','连帽蕨丛'],
