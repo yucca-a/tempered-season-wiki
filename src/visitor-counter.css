@@ -1,0 +1,7 @@
+[data-wiki-visitor-count] {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0.35rem;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}

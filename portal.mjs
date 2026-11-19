@@ -26,6 +26,7 @@ export async function buildPortal(out,libraries,icon){
  <meta name="color-scheme" content="light dark">
  <meta name="description" content="淬炼之季与永不妥协测试版的中文 Wiki 入口。">
  <title>饥荒联机版模组 Wiki</title>
+ <link rel="icon" type="image/svg+xml" href="assets/wiki-favicon.svg">
  <link rel="stylesheet" href="styles.css">
  <link rel="stylesheet" href="hub.css">
  <script src="theme.js"></script>
