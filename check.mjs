@@ -59,12 +59,12 @@ for(const file of ['winona-electrical-upgrades.html','um-beta/winona.html']){
  if(!text?.includes('src="navigation-index.js"')||text.includes('src="search-index.js"'))errors.push(file+': detail page loads the full-text index');
 }
 const portal=pages.get('index.html');
-for(const href of ['tempered.html','um-beta/index.html']){
+for(const href of ['tempered-home.html','um-beta/index.html']){
  if(!portal?.includes(`class="hub-library-entry" href="${href}"`))errors.push('Missing clickable Wiki cover for '+href);
 }
 if(!portal?.includes('id="header-search"')||!portal.includes('data-hub-theme'))errors.push('Missing portal search or theme control');
 const beta=JSON.parse(await fs.readFile(new URL('./um-beta/snapshot.json',import.meta.url),'utf8'));
-for(const [file,marker] of [['index.html','href="tempered.html"'],['index.html','href="um-beta/index.html"'],['tempered.html','data-page="index"'],['um-beta/index.html',beta.betaVersion],['um-beta/sources.html',beta.cnVersion]]){
+for(const [file,marker] of [['index.html','href="tempered-home.html"'],['tempered-home.html','href="tempered.html#encyclopedia"'],['index.html','href="um-beta/index.html"'],['tempered.html','data-page="index"'],['um-beta/index.html',beta.betaVersion],['um-beta/sources.html',beta.cnVersion]]){
  if(!pages.get(file)?.includes(marker))errors.push('Missing Wiki route or version marker in '+file);
 }
 for(const [file,pattern,count] of [['um-beta/configs.html',/data-config="/g,beta.configs.length],['um-beta/recipes.html',/data-recipe data-find="/g,beta.recipes.length]]){
@@ -105,7 +105,7 @@ for(const [file,asset] of [['index.html','assets/um-beta/cover.png'],['um-beta/i
  if(!pages.get(file)?.includes('src="'+asset+'"'))errors.push('Missing Beta artwork reference in '+file);
 }
 for(const [file,id,category] of [
- ['tempered.html','world-shadow','world'],['tempered.html','world-seasons','mechanics'],['tempered.html','role-wortox','characters'],
+ ['tempered.html','world-shadow','mechanics'],['tempered.html','world-seasons','quality-of-life'],['tempered.html','role-wortox','characters'],
  ['tempered.html','frost-core','new-items'],['tempered.html','frost-core-staff','items'],['tempered.html','frostjaw','creatures'],
  ['um-beta/index.html','snowstorms','world'],['um-beta/index.html','gemology','mechanics'],['um-beta/index.html','thermal-stone','items'],
  ['um-beta/index.html','slingshot-gnasher','new-items'],['um-beta/index.html','um-rice-pudding','new-items'],['um-beta/index.html','winona','characters'],
@@ -114,6 +114,17 @@ for(const [file,id,category] of [
  if(!pages.get(file)?.includes(`data-entry="${id}" data-category="${category}"`))errors.push('Unexpected Wiki topic for '+id);
 }
 if(!pages.get('um-beta/index.html')?.includes('id="entry-item-slingshot_gnasher"></span><a href="slingshot-gnasher.html"'))errors.push('Missing direct Beta item card link');
+for(const [id,category,subcategory] of [
+ ['role-wortox','characters','default-characters'],
+ ['role-wathom','characters','mod-characters'],
+ ['skill-tree','characters','character-mechanics'],
+ ['right-click-actions','characters','character-mechanics'],
+ ['crop-growth','quality-of-life','qol-mechanics'],
+ ['world-seasons','quality-of-life','qol-survival'],
+ ['world-shadow','mechanics','world'],
+]){
+ if(!pages.get('tempered.html')?.includes(`data-entry="${id}" data-category="${category}" data-subcategory="${subcategory}"`))errors.push('Unexpected Tempered subcategory for '+id);
+}
 if(!pages.get('um-beta/items.html')?.includes('id="item-slingshot_gnasher" href="recipes.html#recipe-slingshot_gnasher-11"'))errors.push('Missing legacy Beta item recipe link');
 if(betaResults.find(a=>a.id==='item-slingshot_gnasher')?.href!=='recipes.html#recipe-slingshot_gnasher-11')errors.push('Missing direct Beta item search link');
 const globalIndex={window:{}};

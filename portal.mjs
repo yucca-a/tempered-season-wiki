@@ -48,9 +48,7 @@ export async function buildPortal(out,libraries,icon){
  </header>
  <main class="hub-main" id="main" tabindex="-1">
   <div class="hub-intro">
-   <span class="hub-eyebrow">DST MOD WIKI</span>
    <h1>饥荒联机版模组 Wiki</h1>
-   <p>选择一个模组，查阅玩法、物品配方与房间配置。</p>
   </div>
   <section class="hub-launchpad" aria-label="模组目录">
    ${libraries.map(library=>libraryTile(library,icon)).join('')}

@@ -1,7 +1,7 @@
 import {buildHub} from './um-beta/build.mjs';
 import {createUI} from './ui.mjs';
 import {applyArticleTerminology,canonicalText} from './terminology.mjs';
-import {temperedTopics,temperedTopic} from './topics.mjs';
+import {temperedTopics,temperedTopic,temperedSubtopic,temperedRelatedTopics} from './topics.mjs';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -76,7 +76,11 @@ const articleMap=new Map(articles.map(a=>[a.id,a])),configMap=new Map(configs.ma
 if(articleMap.size!==articles.length)throw Error('Duplicate article IDs');
 const counts={articles:articles.length,configs:configs.length,choices:configs.reduce((n,c)=>n+c.options.length,0)};
 const categories=temperedTopics;
-for(const article of articles)article.topic=temperedTopic(article);
+for(const article of articles){
+ article.topic=temperedTopic(article);
+ article.subtopic=temperedSubtopic(article);
+ article.relatedTopics=temperedRelatedTopics(article);
+}
 const catName=id=>categories.find(c=>c.id===id)?.name??id;
 const symbols={search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',globe:'<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',close:'<path d="M6 6L18 18M18 6L6 18"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 1.5 1.5M5 19l1.5-1.5M17.5 6.5 1.5-1.5"/>',arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',link:'<path d="m9 15 6-6M8 16l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M16 8l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(0 -1) scale(.92)"/>',star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/>',book:'<path d="M12 6v15M12 6C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Z"/>',external:'<path d="M14 4h6v6M20 4 10 14M10 4H4v16h16v-6"/>'};
 const icon=(name,size=18)=>`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${symbols[name]??symbols.book}</svg>`;
@@ -128,8 +132,33 @@ function configStrip(a){
  const rows=a.configKeys.map(k=>{const c=configMap.get(k);return `<tr><th scope="row">${configLink(k)}</th><td>${esc(optionSummary(c))}</td><td>${c.requires.length?c.requires.map(configLink).join('、'):'无模式前提'}${c.note.conditions?`<small>${rich(c.note.conditions,a.id)}</small>`:''}</td></tr>`;}).join('');
  return `<details class="article-config"><summary>相关配置 <span>${a.configKeys.length}</span></summary><p class="entry-config-note">以下为模组默认值，实际效果取决于房间设置。点击配置名称可查看全部档位。</p><div class="table-wrap entry-config-table" tabindex="0" role="region" aria-label="${esc(a.title)}相关配置"><table><thead><tr><th scope="col">配置</th><th scope="col">默认</th><th scope="col">还需开启</th></tr></thead><tbody>${rows}</tbody></table></div></details>`;
 }
-const {ordered,articleHTML,shell,visual,homeIntro,categoryNav,settingsIntro}=createUI({articles,configs,groups,categories,meta,esc,icon,articleIcon,sectionHTML,configStrip,counts});
-const home=homeIntro()+categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ordered.map(a=>articleHTML(a,true)).join('');
+const {ordered,articleHTML,shell,visual,categoryNav,settingsIntro}=createUI({articles,configs,groups,categories,meta,esc,icon,articleIcon,sectionHTML,configStrip,counts});
+const changes=articles.filter(article=>article.release).slice(0,3).map(article=>
+ `<li><a href="${href(article.id)}"><strong>${esc(article.title)}</strong><span>${esc(article.summary)}</span>${icon('arrow',15)}</a></li>`).join('');
+const overview=`<article class="tempered-overview">
+ <header class="tempered-intro">
+  <img src="assets/workshop-cover.png" alt="" width="144" height="144">
+  <div>
+   <p class="tempered-version">v${esc(meta.version)}${meta.date?` · ${esc(meta.date)}`:''}</p>
+   <h1>淬炼之季</h1>
+   <p>《<a href="${esc(meta.originalWorkshop)}" target="_blank" rel="noopener noreferrer">为爽而虐</a>》的二改模组。开启暗影世界、体验战斗险境，并按房间偏好调整角色、生物和生存机制。</p>
+   <a class="tempered-enter" href="tempered.html#encyclopedia">进入词条 ${icon('arrow',16)}</a>
+  </div>
+ </header>
+ <nav class="tempered-quick-links" aria-label="常用入口">
+  <a href="getting-started.html">新手入门</a>
+  <a href="world-shadow.html">暗影世界</a>
+  <a href="containers.html">快捷收集与存放</a>
+  <a href="world-random-size.html">随机生物大小</a>
+  <a href="settings.html">配置大全</a>
+ </nav>
+ <section class="tempered-changes" aria-labelledby="recent-changes">
+  <header><h2 id="recent-changes">近期更新</h2><a href="tempered.html?category=updates#encyclopedia">全部版本 ${icon('arrow',13)}</a></header>
+  <ul>${changes}</ul>
+ </section>
+</article>`;
+await fs.writeFile(path.join(out,'tempered-home.html'),shell('overview','模组主页','淬炼之季模组简介、近期更新和百科入口。',overview));
+const home='<header class="catalog-home-link" data-default-category="updates"><a href="tempered-home.html">← 淬炼之季主页</a><h1>淬炼百科</h1></header>'+categoryNav('<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ordered.map(a=>articleHTML(a,true)).join(''));
 await fs.writeFile(path.join(out,'tempered.html'),shell('index','百科全览',`${counts.articles}篇玩法解析与${counts.configs}项配置，淬炼之季中文Wiki。`,home));
 const configHTML=c=>{
  const opt=defaultChoice(c),warn=c.note.status==='inactive'?'当前未生效':c.note.status?'实现差异':'';

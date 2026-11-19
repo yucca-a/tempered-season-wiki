@@ -160,7 +160,6 @@ const site={
  id:'um-beta',name:'永不妥协测试版',subtitle:'Uncompromising Mode · Public Beta',home:'index.html',settings:'configs.html',
  sources:'sources.html',hub:'../index.html',assets:'../',mark:artwork['cover-icon'].path,extraStyles:'beta.css',
 featured:[],configFilterLabel:'筛选配置类别',configAllLabel:'全部类别',
- routes:[['../index.html','模组 Wiki 总览',''],['index.html','测试版百科','index'],['configs.html','配置大全','settings'],['recipes.html','制作与兑换','recipes'],['field-guide.html','实体图鉴','field-guide'],[newItemsHref,'新增物品',''],['sources.html','版本与来源','sources']],
  recipeNav:recipeGroups.map(g=>({...g,count:g.rows.length})),
 };
 const badge=(label,color='#7b526d')=>`<span class="tag" style="--tag-color:${color}"><i></i>${esc(label)}</span>`;
@@ -193,7 +192,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   if(file.isFile()&&file.name.endsWith('.html'))await fs.unlink(path.join(dir,file.name));
  }
  await buildPortal(out,[
-  {id:'tempered',name:'淬炼之季',href:'tempered.html',cover:'assets/workshop-cover.png',version:'v'+tempered.version,
+  {id:'tempered',name:'淬炼之季',href:'tempered-home.html',cover:'assets/workshop-cover.png',version:'v'+tempered.version,
    summary:'暗影世界、战斗险境与角色改动。',source:'about.html',
    links:[['directory.html','分类索引'],['settings.html','配置大全']]},
   {id:'beta',name:'永不妥协测试版',href:'um-beta/index.html',cover:artwork.cover.path,version:'Public Beta · v'+betaVersion,
@@ -223,7 +222,7 @@ export async function buildHub(out,tempered,icon,temperedIndex){
   '<nav class="section-related-links">'+Object.entries(guideTypes).map(([type,label])=>link('#type-'+type,label)).join(' · ')+'</nav>'+guideBody);
  const itemCards=[...primaryItemCards,...extraEntries].map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}">${item.legacyId?`<span class="beta-legacy-anchor" id="entry-${item.legacyId}"></span>`:''}<a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
  const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅首领打法、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('field-guide.html','实体图鉴与代码')} · ${link('creature-guide.html','生物与首领')} · ${link('index.html?category=characters#encyclopedia','角色')} · ${link('gemology.html','宝石学')} · ${link('cooking-guide.html','料理速查')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
- await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav()+'<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ui.ordered.filter(a=>!primaryItemIds.has(a.id)).map(a=>ui.articleHTML(a,true)).join('')+`<div class="beta-topic-items">${itemCards}</div>`);
+ await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav('<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ui.ordered.filter(a=>!primaryItemIds.has(a.id)).map(a=>ui.articleHTML(a,true)).join('')+`<div class="beta-topic-items">${itemCards}</div>`));
  for(const a of entryArticles){
   const category=categories.find(c=>c.id===a.category);
   const peers=ui.ordered.filter(p=>p.category===a.category);
