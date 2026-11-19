@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {searchDialog} from './ui.mjs';
+import {searchDialog,wikiStylesFilename} from './ui.mjs';
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const moon='<svg class="hub-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>';
@@ -27,7 +27,7 @@ export async function buildPortal(out,libraries,icon){
  <meta name="description" content="淬炼之季与永不妥协测试版的中文 Wiki 入口。">
  <title>饥荒联机版模组 Wiki</title>
  <link rel="icon" type="image/svg+xml" href="assets/wiki-favicon.svg">
- <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="${wikiStylesFilename}">
  <link rel="stylesheet" href="hub.css">
  <script src="theme.js"></script>
  <script src="search.js" defer></script>

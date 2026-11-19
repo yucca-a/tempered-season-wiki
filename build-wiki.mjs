@@ -1,5 +1,5 @@
 import {buildHub} from './um-beta/build.mjs';
-import {createUI} from './ui.mjs';
+import {createUI,wikiStyles,wikiStylesFilename} from './ui.mjs';
 import {applyArticleTerminology,canonicalText} from './terminology.mjs';
 import {temperedTopics,temperedTopic,temperedSubtopic,temperedRelatedTopics} from './topics.mjs';
 import fs from 'node:fs/promises';
@@ -8,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {articles,configs,groups,meta,iconManifest,iconLabels,protectedIconNames,defaultChoice,choiceText,itemAuditIds,entityAuditIds,lifeAuditIds,currentAuditIds} from './catalog.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url)),out=path.join(root,'dist');
 await fs.mkdir(out,{recursive:true});
-for(const entry of await fs.readdir(out,{withFileTypes:true}))if(entry.isFile()&&entry.name.endsWith('.html'))await fs.unlink(path.join(out,entry.name));
+for(const entry of await fs.readdir(out,{withFileTypes:true}))if(entry.isFile()&&(entry.name.endsWith('.html')||/^styles-[0-9a-f]{12}\.css$/.test(entry.name)))await fs.unlink(path.join(out,entry.name));
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const rawValue=v=>typeof v==='string'?`"${v}"`:String(v);
 const href=id=>`${id}.html`;
@@ -183,8 +183,8 @@ const configIndex=configs.map(c=>({id:c.id,href:'settings.html#'+c.id,kind:'conf
 await fs.writeFile(path.join(out,'search-index.js'),`window.WIKI_INDEX=${JSON.stringify([...articleIndex,...configIndex]).replaceAll('<','\\u003c')};\n`);
 await fs.writeFile(path.join(out,'navigation-index.js'),`window.WIKI_INDEX=${JSON.stringify(articleIndex.map(({id,title,summary,href,category,aliases,kind,image})=>({id,title,summary,href,category,aliases,kind,image}))).replaceAll('<','\\u003c')};\n`);
 await fs.cp(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});
-for(const [src,dest] of [['wiki.css','styles.css'],['wiki.js','app.js'],['theme.js','theme.js'],['search.js','search.js']])await fs.copyFile(path.join(root,'src',src),path.join(out,dest));
-await fs.appendFile(path.join(out,'styles.css'),'\n'+await fs.readFile(path.join(root,'src/refinements.css'),'utf8'));
+for(const [src,dest] of [['wiki.js','app.js'],['theme.js','theme.js'],['search.js','search.js']])await fs.copyFile(path.join(root,'src',src),path.join(out,dest));
+await fs.writeFile(path.join(out,wikiStylesFilename),wikiStyles);
 await fs.writeFile(path.join(root,'content-sources.json'),JSON.stringify({version:meta.version,checkedAt:meta.date,targetedRefresh:[...currentAuditIds],articles:articles.map(({id,source,configKeys,auditedVersion})=>({id,source,configKeys,auditedVersion})),configs:configs.map(c=>({key:c.key,id:c.id,sourceLine:c.line,status:c.note.status??'documented',requires:c.requires}))},null,2)+'\n');
 const lifeTargets=articles.filter(a=>a.category==='food'||(a.category==='creatures'&&!a.id.startsWith('boss-')));
 const entityTargets=articles.filter(a=>a.category==='characters'||a.category==='buildings'||a.id.startsWith('boss-'));
