@@ -525,3 +525,5 @@
   grid-template-columns: minmax(0, 1fr) 186px;
  }
 }
+
+.article-section .sub-heading{font-size:1.02em;margin:1.4em 0 .4em;font-weight:650}

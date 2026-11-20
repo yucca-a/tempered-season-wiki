@@ -84,12 +84,11 @@ export function refreshRelease34(articles,notes){
   for(const [id,icon] of [['anti-slip-boots','bootleg_2hm'],['eternal-boots','bootleg2hm'],['celestial-onion','onion_celestial2hm']]){
     revise(id,[],a=>{a.icon=icon;});
   }
-  revise('role-wx78',['common/wx78_mode.lua','common/wx78_recovery.lua','scripts/wx78config2hm.lua','scripts/wx78draft2hm.lua'],a=>{
-    a.configKeys.push('WX-78 Mode');
-    a.sections[0].paragraphs=['“WX-78方案”默认沿用旧档的简单、困难及角色开关。手动选择旧方案·简单、旧方案·困难、草案测试或关闭改动时，以所选方案为准。下文的融合、成长、超载和无人机强化属于旧方案。'];
-    a.sections.splice(1,0,section('草案测试','激活的生命电路在护甲前提供固定格挡，合计上限 20。小理智电路每块每分钟恢复 1 理智，大小理智电路均可削弱负面理智光环。饥饿电路保留基础效果。','普通食物累计实际补入 45 饥饿就回 1 格电，满饱溢出部分不计，自带回电的食物不重复兑换。满电清空余量。','切入草案时，融合电路按等级拆回同种普通电路并保留耐久。多余芯片和暂存物品优先归还背包，放不下时掉在地上。'));
+  revise('role-wx78',['common/wx78_mode.lua','common/wx78_recovery.lua','scripts/wx78config2hm.lua',
+    'scripts/wx78draft2hm.lua','scripts/wx78draftmotion2hm.lua','scripts/wx78draftpower2hm.lua'],a=>{
+    a.configKeys.push('WX-78 Circuit Power','WX-78 Circuit Durability','WX-78 Circuit Balance','WX-78 Thermal Circuits',
+      'WX-78 Circuit Ram','WX-78 Circuit Synergy','WX-78 Moongleam Chassis');
   });
-  notes['WX-78 Mode']={requires:[],paragraphs:['默认按旧档开关运行。手动选择的简单、困难、草案或关闭档独立生效。草案使用原版电路并加入护甲前格挡、理智光环抗性和进食回电。']};
   const renewal='右键给予暗影操控器或已绑定暗影操控器的清洁扫把噩梦燃料，可将权限补满至 20 个游戏日。每缺 5 天收 1 个，不足 5 天向上取整。例如还剩 14 天时收 2 个；已满或材料不足时不扣费。';
   revise('shadow-manipulator',['easy_other/easy_structures.lua','scripts/shadowmagic2hm.lua'],a=>{
     a.summary='用噩梦燃料换取 20 天暗影魔法权限，随后可向暗影操控器或绑定它的清洁扫把按需续费。';

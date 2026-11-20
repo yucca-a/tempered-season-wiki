@@ -35,11 +35,11 @@ LUA_TOKEN = re.compile(r'''(?P<comment>--(?:\[(?P<comment_level>=*)\[.*?\](?P=co
     |(?P<identifier>[a-zA-Z_]\w*)|\S''', re.VERBOSE | re.DOTALL)
 
 
-def config_calls(text):
+def config_calls(text, accessor):
     tokens = [token for token in LUA_TOKEN.finditer(text) if not token.group('comment')]
     newlines = [line.start() for line in re.finditer('\n', text)]
     for name, opening, argument, separator in zip(tokens, tokens[1:], tokens[2:], tokens[3:]):
-        if (name.group('identifier') == 'GetModConfigData' and opening[0] == '('
+        if (name.group('identifier') == accessor and opening[0] == '('
                 and argument.group('string') and separator[0] in {')', ','}):
             yield argument[0][1:-1], bisect_right(newlines, name.start()) + 1
 
@@ -49,7 +49,8 @@ for p in sorted(mod_root.rglob('*.lua')):
     if p.name == 'modinfo.lua':
         continue
     text = p.read_text(encoding='utf-8-sig')
-    for key, line in config_calls(text):
+    accessor = 'get' if p.name == 'wx78config2hm.lua' else 'GetModConfigData'
+    for key, line in config_calls(text, accessor):
         files.setdefault(key, []).append({'file': 'content/' + p.relative_to(mod_root).as_posix(), 'line': line})
 
 mode, group, role = '通用设置', '通用设置', None
@@ -60,19 +61,26 @@ for i in range(1, len(lua.globals().configuration_options) + 1):
     if not entry['name']:
         if label in ['简单模式', '困难模式', '暗影世界', 'Ray']:
             mode = label
+            group = label
             role = None
         elif label:
             group = label
             role = None
         continue
     name = entry['name']
+    if name in {'WX-78 Mode', 'wx78_easy', 'wx-78'}:
+        continue
     line = entry['__line']
     if not line:
-        match = re.search(r'name\s*=\s*[\"\x27]' + re.escape(name) + r'[\"\x27]', raw)
+        match = re.search(r'(?:wx78master\(|name\s*=\s*)[\"\x27]' + re.escape(name) + r'[\"\x27]', raw)
         line = raw[:match.start()].count('\n') + 1 if match else None
     if label and '总开关' in label and name.endswith('_easy') and name != 'role_easy':
         role = name
-    if name in ['WX-78 Mode', 'other_role_easy', 'Monster Night Vision', 'wathom nightvision', 'All Right Dodge', 'Role Gym']:
+    if role in {'WX-78 Easy', 'WX-78 Hard'} and not (name.startswith('WX-78 ') or name == 'wx78_module_pack'):
+        role = None
+    if name in {'WX-78 Easy', 'WX-78 Hard'}:
+        role = name
+    if name in ['other_role_easy', 'Monster Night Vision', 'wathom nightvision', 'All Right Dodge', 'Role Gym']:
         role = name if name == 'other_role_easy' else None
     opts = []
     for j in range(1, len(entry['options']) + 1):

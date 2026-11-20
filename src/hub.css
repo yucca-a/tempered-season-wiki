@@ -59,3 +59,6 @@
  .hub-library-open{width:26px;height:26px;right:6px;bottom:6px}
 }
 @media(prefers-reduced-motion:reduce){.hub-library-art{transition:none}.hub-library-entry:hover .hub-library-art,.hub-library-entry:focus-visible .hub-library-art{transform:none}}
+.not-found{min-height:72vh;display:flex;flex-direction:column;justify-content:center;gap:18px;text-align:center}
+.not-found p{color:var(--muted);margin:10px 0 0}
+.not-found-links a{font-size:14px}

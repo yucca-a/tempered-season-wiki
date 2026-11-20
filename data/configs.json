@@ -1,7 +1,7 @@
 {
-  "version": "2.8.15.0.34",
-  "sourceHash": "b2c76548b517d4b5e13efd67a78bdd2c48019443c6194c9e6592a723ab00f6b5",
-  "total": 440,
+  "version": "2.8.15.1.0",
+  "sourceHash": "1544da3b37ebe1b5f8ff3d4dbdd3cd7cfe3d1bf9c8142ed2bcaf6407512ed050",
+  "total": 449,
   "configs": [
     {
       "key": "Language In Game",
@@ -28,7 +28,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 189,
+      "line": 198,
       "references": [
         {
           "file": "content/common/common.lua",
@@ -60,7 +60,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 192,
+      "line": 201,
       "references": [
         {
           "file": "content/easy_other/ui.lua",
@@ -68,7 +68,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 136
+          "line": 152
         }
       ]
     },
@@ -97,7 +97,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 194,
+      "line": 203,
       "references": [
         {
           "file": "content/easy_other/mod.lua",
@@ -105,7 +105,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 141
+          "line": 157
         }
       ]
     },
@@ -174,11 +174,11 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 199,
+      "line": 208,
       "references": [
         {
           "file": "content/common/patch.lua",
-          "line": 447
+          "line": 483
         }
       ]
     },
@@ -202,11 +202,11 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 201,
+      "line": 210,
       "references": [
         {
           "file": "content/common/patch.lua",
-          "line": 421
+          "line": 457
         }
       ]
     },
@@ -255,7 +255,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 203,
+      "line": 212,
       "references": [
         {
           "file": "content/common/temp.lua",
@@ -271,7 +271,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 146
+          "line": 162
         }
       ]
     },
@@ -305,7 +305,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 213,
+      "line": 222,
       "references": [
         {
           "file": "content/easy_other/containersort.lua",
@@ -351,7 +351,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 225,
+      "line": 234,
       "references": [
         {
           "file": "content/common/temp.lua",
@@ -367,7 +367,43 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 146
+          "line": 162
+        }
+      ]
+    },
+    {
+      "key": "UI Dragging",
+      "label": "界面拖拽",
+      "description": "右键拖拽容器背景，左键拖拽查看模组按钮；优先使用淬炼拖拽，保留物品与功能按钮原操作",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "通用设置",
+      "group": "通用设置",
+      "roleParent": null,
+      "line": 238,
+      "references": [
+        {
+          "file": "content/easy_other/ui.lua",
+          "line": 218
+        },
+        {
+          "file": "content/easy_other/ui.lua",
+          "line": 271
+        },
+        {
+          "file": "content/modmain.lua",
+          "line": 150
         }
       ]
     },
@@ -391,7 +427,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 229,
+      "line": 241,
       "references": [
         {
           "file": "content/common/common.lua",
@@ -419,7 +455,7 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 230,
+      "line": 242,
       "references": [
         {
           "file": "content/common/common.lua",
@@ -459,39 +495,79 @@
       "mode": "通用设置",
       "group": "通用设置",
       "roleParent": null,
-      "line": 236,
+      "line": 248,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 365
+          "line": 384
+        }
+      ]
+    },
+    {
+      "key": "Wilderness Survival",
+      "label": "荒野求生录总开关",
+      "description": "默认关闭；开启后，本分类下的基础规则与各子项才按各自设置生效，独立于简单和困难模式",
+      "default": false,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "通用设置",
+      "group": "荒野求生录",
+      "roleParent": null,
+      "line": 254,
+      "references": [
+        {
+          "file": "content/modmain.lua",
+          "line": 378
         }
       ]
     },
     {
       "key": "贝爷求生",
-      "label": "贝爷求生",
+      "label": "基础生存规则",
       "description": "制作变慢、随机耐久、资源减半、制作不永久解锁科技、猪王不换金；允许磨刀与黑暗，默认关闭",
       "default": false,
       "options": [
         {
           "label": "禁用",
-          "description": "禁用贝爷求生",
+          "description": "禁用基础生存规则",
           "value": false
         },
         {
           "label": "启用",
-          "description": "启用贝爷求生",
+          "description": "启用基础生存规则",
           "value": 1
         }
       ],
       "mode": "通用设置",
-      "group": "贝爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 242,
+      "line": 257,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 363
+          "line": 380
+        },
+        {
+          "file": "content/ray/beye_actions.lua",
+          "line": 547
+        },
+        {
+          "file": "content/ray/beye_actions.lua",
+          "line": 590
+        },
+        {
+          "file": "content/ray/beye_actions.lua",
+          "line": 804
         }
       ]
     },
@@ -513,9 +589,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "贝爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 246,
+      "line": 261,
       "references": [
         {
           "file": "content/ray/beye_actions.lua",
@@ -541,9 +617,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "贝爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 249,
+      "line": 264,
       "references": [
         {
           "file": "content/ray/beye_actions.lua",
@@ -569,9 +645,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "贝爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 252,
+      "line": 267,
       "references": [
         {
           "file": "content/ray/beye_actions.lua",
@@ -597,13 +673,17 @@
         }
       ],
       "mode": "通用设置",
-      "group": "贝爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 255,
+      "line": 270,
       "references": [
         {
           "file": "content/ray/beye_actions.lua",
-          "line": 659
+          "line": 590
+        },
+        {
+          "file": "content/ray/beye_actions.lua",
+          "line": 662
         }
       ]
     },
@@ -625,41 +705,13 @@
         }
       ],
       "mode": "通用设置",
-      "group": "贝爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 258,
+      "line": 273,
       "references": [
         {
           "file": "content/ray/beye_actions.lua",
           "line": 189
-        }
-      ]
-    },
-    {
-      "key": "德爷生存",
-      "label": "德爷生存",
-      "description": "德爷极限求生模式总开关，默认关闭；子项仅在总开关开启时生效",
-      "default": false,
-      "options": [
-        {
-          "label": "禁用",
-          "description": "禁用德爷生存",
-          "value": false
-        },
-        {
-          "label": "启用",
-          "description": "启用德爷生存",
-          "value": 1
-        }
-      ],
-      "mode": "通用设置",
-      "group": "德爷生存",
-      "roleParent": null,
-      "line": 262,
-      "references": [
-        {
-          "file": "content/modmain.lua",
-          "line": 364
         }
       ]
     },
@@ -681,9 +733,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "德爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 266,
+      "line": 276,
       "references": [
         {
           "file": "content/ray/deyeshengcun.lua",
@@ -709,9 +761,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "德爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 269,
+      "line": 279,
       "references": [
         {
           "file": "content/ray/deyeshengcun.lua",
@@ -737,9 +789,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "德爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 273,
+      "line": 283,
       "references": [
         {
           "file": "content/ray/deyeshengcun.lua",
@@ -765,9 +817,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "德爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 277,
+      "line": 287,
       "references": [
         {
           "file": "content/ray/deyeshengcun.lua",
@@ -793,9 +845,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "德爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 281,
+      "line": 291,
       "references": [
         {
           "file": "content/ray/deyeshengcun.lua",
@@ -821,9 +873,9 @@
         }
       ],
       "mode": "通用设置",
-      "group": "德爷生存",
+      "group": "荒野求生录",
       "roleParent": null,
-      "line": 285,
+      "line": 295,
       "references": [
         {
           "file": "content/ray/deyeshengcun.lua",
@@ -849,13 +901,13 @@
         }
       ],
       "mode": "Ray",
-      "group": "德爷生存",
+      "group": "Ray",
       "roleParent": null,
-      "line": 290,
+      "line": 300,
       "references": [
         {
           "file": "content/easy_role/wx78_easy.lua",
-          "line": 1263
+          "line": 193
         },
         {
           "file": "content/food/beefalo.lua",
@@ -863,7 +915,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 163
+          "line": 179
         }
       ]
     },
@@ -885,9 +937,9 @@
         }
       ],
       "mode": "Ray",
-      "group": "德爷生存",
+      "group": "Ray",
       "roleParent": null,
-      "line": 293,
+      "line": 303,
       "references": [
         {
           "file": "content/ray/suijishengwuapi.lua",
@@ -913,13 +965,13 @@
         }
       ],
       "mode": "Ray",
-      "group": "德爷生存",
+      "group": "Ray",
       "roleParent": null,
-      "line": 298,
+      "line": 308,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 170
+          "line": 186
         }
       ]
     },
@@ -941,13 +993,13 @@
         }
       ],
       "mode": "Ray",
-      "group": "德爷生存",
+      "group": "Ray",
       "roleParent": null,
-      "line": 302,
+      "line": 312,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 165
+          "line": 181
         },
         {
           "file": "content/ray/shengwudamiejve.lua",
@@ -973,13 +1025,13 @@
         }
       ],
       "mode": "Ray",
-      "group": "德爷生存",
+      "group": "Ray",
       "roleParent": null,
-      "line": 306,
+      "line": 316,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 168
+          "line": 184
         }
       ]
     },
@@ -1001,9 +1053,9 @@
         }
       ],
       "mode": "Ray",
-      "group": "德爷生存",
+      "group": "Ray",
       "roleParent": null,
-      "line": 310,
+      "line": 320,
       "references": [
         {
           "file": "content/ray/yincangditu.lua",
@@ -1041,7 +1093,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 315,
+      "line": 325,
       "references": [
         {
           "file": "content/epic/antlion.lua",
@@ -1065,11 +1117,11 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 157
+          "line": 173
         },
         {
           "file": "content/modmain.lua",
-          "line": 275
+          "line": 290
         },
         {
           "file": "content/shadow_nerf.lua",
@@ -1131,7 +1183,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 318,
+      "line": 328,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1284,7 +1336,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 336,
+      "line": 346,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1387,7 +1439,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 339,
+      "line": 349,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1430,7 +1482,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 341,
+      "line": 351,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1458,7 +1510,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 354,
+      "line": 364,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1486,8 +1538,13 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 357,
-      "references": []
+      "line": 367,
+      "references": [
+        {
+          "file": "content/shadowworld.lua",
+          "line": 6
+        }
+      ]
     },
     {
       "key": "Shadow Epic Far Range",
@@ -1554,7 +1611,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 360,
+      "line": 370,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1627,7 +1684,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 364,
+      "line": 374,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1655,7 +1712,7 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 368,
+      "line": 378,
       "references": [
         {
           "file": "content/shadowworld.lua",
@@ -1693,11 +1750,11 @@
       "mode": "暗影世界",
       "group": "暗影分身改动",
       "roleParent": null,
-      "line": 371,
+      "line": 381,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 159
+          "line": 175
         },
         {
           "file": "content/shadow_nerf.lua",
@@ -1725,7 +1782,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 377,
+      "line": 387,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -1758,7 +1815,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 379,
+      "line": 389,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -1802,7 +1859,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 382,
+      "line": 392,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -1830,7 +1887,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 384,
+      "line": 394,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -1863,7 +1920,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 389,
+      "line": 399,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -1896,7 +1953,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 392,
+      "line": 402,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -1932,7 +1989,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 397,
+      "line": 407,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -1964,11 +2021,11 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 401,
+      "line": 411,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
-          "line": 916
+          "line": 918
         }
       ]
     },
@@ -1997,7 +2054,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 403,
+      "line": 413,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -2030,7 +2087,7 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 406,
+      "line": 416,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -2062,11 +2119,11 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 416,
+      "line": 426,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
-          "line": 2190
+          "line": 2176
         }
       ]
     },
@@ -2090,11 +2147,11 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 419,
+      "line": 429,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
-          "line": 2833
+          "line": 2819
         }
       ]
     },
@@ -2118,11 +2175,11 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 420,
+      "line": 430,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
-          "line": 3058
+          "line": 3044
         }
       ]
     },
@@ -2146,11 +2203,11 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 421,
+      "line": 431,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
-          "line": 2986
+          "line": 2972
         }
       ]
     },
@@ -2174,11 +2231,11 @@
       "mode": "简单模式",
       "group": "建筑改动",
       "roleParent": null,
-      "line": 424,
+      "line": 434,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
-          "line": 3115
+          "line": 3101
         }
       ]
     },
@@ -2207,7 +2264,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 428,
+      "line": 438,
       "references": [
         {
           "file": "content/easy_other/easy_mechanics.lua",
@@ -2305,7 +2362,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 431,
+      "line": 441,
       "references": [
         {
           "file": "content/easy_other/easy_mechanics.lua",
@@ -2337,7 +2394,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 435,
+      "line": 445,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
@@ -2370,7 +2427,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 437,
+      "line": 447,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2415,7 +2472,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 441,
+      "line": 451,
       "references": [
         {
           "file": "content/easy_other/easy_mechanics.lua",
@@ -2447,7 +2504,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 443,
+      "line": 453,
       "references": [
         {
           "file": "content/easy_other/easy_mechanics.lua",
@@ -2475,7 +2532,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 445,
+      "line": 455,
       "references": [
         {
           "file": "content/easy_other/easy_mechanics.lua",
@@ -2503,7 +2560,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 447,
+      "line": 457,
       "references": [
         {
           "file": "content/easy_other/easy_mechanics.lua",
@@ -2531,7 +2588,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 449,
+      "line": 459,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -2559,7 +2616,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 450,
+      "line": 460,
       "references": [
         {
           "file": "content/easy_other/um_patch.lua",
@@ -2592,11 +2649,11 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 453,
+      "line": 463,
       "references": [
         {
           "file": "content/scripts/umperformance2hm.lua",
-          "line": 248
+          "line": 465
         }
       ]
     },
@@ -2620,7 +2677,7 @@
       "mode": "简单模式",
       "group": "机制改动",
       "roleParent": null,
-      "line": 464,
+      "line": 474,
       "references": [
         {
           "file": "content/common/hardmode.lua",
@@ -2648,7 +2705,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 467,
+      "line": 477,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2676,7 +2733,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 469,
+      "line": 479,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2709,7 +2766,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 472,
+      "line": 482,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2737,7 +2794,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 476,
+      "line": 486,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2770,7 +2827,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 478,
+      "line": 488,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2798,7 +2855,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 482,
+      "line": 492,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2830,7 +2887,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 484,
+      "line": 494,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2862,7 +2919,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 486,
+      "line": 496,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2890,7 +2947,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 488,
+      "line": 498,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2918,7 +2975,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 490,
+      "line": 500,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2946,7 +3003,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 492,
+      "line": 502,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -2974,7 +3031,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 494,
+      "line": 504,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3007,7 +3064,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 496,
+      "line": 506,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3035,7 +3092,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 503,
+      "line": 513,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3063,7 +3120,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 505,
+      "line": 515,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3091,7 +3148,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 507,
+      "line": 517,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3119,7 +3176,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 509,
+      "line": 519,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3147,7 +3204,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 512,
+      "line": 522,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3175,7 +3232,7 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 515,
+      "line": 525,
       "references": [
         {
           "file": "content/epic/daywalker2.lua",
@@ -3183,7 +3240,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 83
+          "line": 94
         }
       ]
     },
@@ -3207,11 +3264,11 @@
       "mode": "简单模式",
       "group": "装备改动",
       "roleParent": null,
-      "line": 518,
+      "line": 528,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 68
+          "line": 81
         }
       ]
     },
@@ -3235,7 +3292,7 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 521,
+      "line": 531,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
@@ -3263,7 +3320,7 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 523,
+      "line": 533,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
@@ -3291,7 +3348,7 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 525,
+      "line": 535,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
@@ -3344,7 +3401,7 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 529,
+      "line": 539,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3372,7 +3429,7 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 532,
+      "line": 542,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
@@ -3400,7 +3457,7 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 534,
+      "line": 544,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
@@ -3428,11 +3485,11 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 537,
+      "line": 547,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 70
+          "line": 83
         }
       ]
     },
@@ -3456,11 +3513,11 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 540,
+      "line": 550,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
-          "line": 882
+          "line": 884
         }
       ]
     },
@@ -3484,11 +3541,11 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 543,
+      "line": 553,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
-          "line": 986
+          "line": 988
         }
       ]
     },
@@ -3512,11 +3569,11 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 544,
+      "line": 554,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
-          "line": 1426
+          "line": 1428
         }
       ]
     },
@@ -3540,11 +3597,11 @@
       "mode": "简单模式",
       "group": "道具改动",
       "roleParent": null,
-      "line": 547,
+      "line": 557,
       "references": [
         {
           "file": "content/easy_other/easy_items.lua",
-          "line": 1043
+          "line": 1045
         }
       ]
     },
@@ -3568,7 +3625,7 @@
       "mode": "简单模式",
       "group": "生物改动",
       "roleParent": null,
-      "line": 551,
+      "line": 561,
       "references": [
         {
           "file": "content/easy_other/easy_living_things.lua",
@@ -3596,7 +3653,7 @@
       "mode": "简单模式",
       "group": "生物改动",
       "roleParent": null,
-      "line": 553,
+      "line": 563,
       "references": [
         {
           "file": "content/easy_other/easy_living_things.lua",
@@ -3624,7 +3681,7 @@
       "mode": "简单模式",
       "group": "生物改动",
       "roleParent": null,
-      "line": 555,
+      "line": 565,
       "references": [
         {
           "file": "content/easy_other/easy_living_things.lua",
@@ -3652,7 +3709,7 @@
       "mode": "简单模式",
       "group": "生物改动",
       "roleParent": null,
-      "line": 557,
+      "line": 567,
       "references": [
         {
           "file": "content/easy_other/easy_living_things.lua",
@@ -3680,7 +3737,7 @@
       "mode": "简单模式",
       "group": "生物改动",
       "roleParent": null,
-      "line": 558,
+      "line": 568,
       "references": [
         {
           "file": "content/food/plant.lua",
@@ -3708,11 +3765,11 @@
       "mode": "简单模式",
       "group": "新物品",
       "roleParent": null,
-      "line": 560,
+      "line": 570,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
-          "line": 3119
+          "line": 3105
         }
       ]
     },
@@ -3736,7 +3793,7 @@
       "mode": "简单模式",
       "group": "新物品",
       "roleParent": null,
-      "line": 562,
+      "line": 572,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -3764,12 +3821,8 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 565,
+      "line": 575,
       "references": [
-        {
-          "file": "content/common/wx78_mode.lua",
-          "line": 6
-        },
         {
           "file": "content/easy_role/winona_electrical.lua",
           "line": 1
@@ -3784,7 +3837,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 85
+          "line": 96
         },
         {
           "file": "content/role/wolfgang.lua",
@@ -3793,6 +3846,10 @@
         {
           "file": "content/role/wortox.lua",
           "line": 12
+        },
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 9
         },
         {
           "file": "content/weather/dusk.lua",
@@ -3900,7 +3957,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 566,
+      "line": 576,
       "references": [
         {
           "file": "content/easy_role/skilltree_common.lua",
@@ -3928,11 +3985,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 570,
+      "line": 580,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 94
+          "line": 105
         }
       ]
     },
@@ -3956,7 +4013,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wilson_easy",
-      "line": 571,
+      "line": 581,
       "references": [
         {
           "file": "content/easy_role/wilson_easy.lua",
@@ -3984,7 +4041,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wilson_easy",
-      "line": 572,
+      "line": 582,
       "references": [
         {
           "file": "content/easy_role/wilson_easy.lua",
@@ -4012,7 +4069,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wilson_easy",
-      "line": 575,
+      "line": 585,
       "references": [
         {
           "file": "content/easy_role/skilltree_common.lua",
@@ -4095,7 +4152,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wilson_easy",
-      "line": 578,
+      "line": 588,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -4246,7 +4303,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wilson_easy",
-      "line": 580,
+      "line": 590,
       "references": [
         {
           "file": "content/easy_role/wilson_easy.lua",
@@ -4278,7 +4335,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wilson_easy",
-      "line": 583,
+      "line": 593,
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
@@ -4306,7 +4363,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wilson_easy",
-      "line": 585,
+      "line": 595,
       "references": [
         {
           "file": "content/easy_role/rightselfaction.lua",
@@ -4334,11 +4391,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 587,
+      "line": 597,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 95
+          "line": 106
         }
       ]
     },
@@ -4362,7 +4419,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "willow_easy",
-      "line": 588,
+      "line": 598,
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
@@ -4435,7 +4492,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "willow_easy",
-      "line": 592,
+      "line": 602,
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
@@ -4467,7 +4524,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "willow_easy",
-      "line": 594,
+      "line": 604,
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
@@ -4495,7 +4552,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "willow_easy",
-      "line": 596,
+      "line": 606,
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
@@ -4523,11 +4580,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 599,
+      "line": 609,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 96
+          "line": 107
         }
       ]
     },
@@ -4551,7 +4608,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wolfgang_easy",
-      "line": 600,
+      "line": 610,
       "references": [
         {
           "file": "content/easy_role/wolfgang_easy.lua",
@@ -4579,7 +4636,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wolfgang_easy",
-      "line": 601,
+      "line": 611,
       "references": [
         {
           "file": "content/easy_role/wolfgang_easy.lua",
@@ -4656,7 +4713,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wolfgang_easy",
-      "line": 603,
+      "line": 613,
       "references": [
         {
           "file": "content/easy_role/wolfgang_easy.lua",
@@ -4734,7 +4791,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wolfgang_easy",
-      "line": 605,
+      "line": 615,
       "references": [
         {
           "file": "content/easy_role/wolfgang_easy.lua",
@@ -4762,11 +4819,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 608,
+      "line": 618,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 97
+          "line": 108
         }
       ]
     },
@@ -4790,7 +4847,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wendy_easy",
-      "line": 609,
+      "line": 619,
       "references": [
         {
           "file": "content/easy_role/wendy_easy.lua",
@@ -4818,7 +4875,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wendy_easy",
-      "line": 611,
+      "line": 621,
       "references": [
         {
           "file": "content/easy_role/wendy_easy.lua",
@@ -4846,7 +4903,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wendy_easy",
-      "line": 613,
+      "line": 623,
       "references": [
         {
           "file": "content/easy_role/wendy_easy.lua",
@@ -4874,7 +4931,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wendy_easy",
-      "line": 615,
+      "line": 625,
       "references": [
         {
           "file": "content/easy_role/wendy_easy.lua",
@@ -4902,7 +4959,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wendy_easy",
-      "line": 619,
+      "line": 629,
       "references": [
         {
           "file": "content/easy_role/wendy_easy.lua",
@@ -4935,7 +4992,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wendy_easy",
-      "line": 623,
+      "line": 633,
       "references": [
         {
           "file": "content/easy_role/wendy_easy.lua",
@@ -4944,56 +5001,23 @@
       ]
     },
     {
-      "key": "WX-78 Mode",
-      "label": "WX-78方案",
-      "description": "默认沿用当前方案及旧档开关；草案测试需手动选择。其余档位独立于简单/困难总开关，下方细项仅供旧方案使用。",
-      "default": "legacy",
+      "key": "WX-78 Easy",
+      "label": "WX-78 简单改动",
+      "description": "电路融合、拆解、齿轮成长、芯片箱和无人机。开启档跟随简单模式与角色增强。沿用存档会迁移原方案设置。",
+      "default": "inherit",
       "options": [
         {
-          "label": "当前方案（兼容旧档）",
-          "description": "",
-          "value": "legacy"
-        },
-        {
-          "label": "旧方案·简单",
-          "description": "",
-          "value": "easy"
-        },
-        {
-          "label": "旧方案·困难",
-          "description": "",
-          "value": "hard"
-        },
-        {
-          "label": "草案测试",
-          "description": "",
-          "value": "draft"
-        },
-        {
-          "label": "关闭改动",
-          "description": "",
-          "value": "off"
-        }
-      ],
-      "mode": "简单模式",
-      "group": "角色改动",
-      "roleParent": null,
-      "line": 633,
-      "references": []
-    },
-    {
-      "key": "wx78_easy",
-      "label": "WX-78 legacy easy",
-      "description": "",
-      "default": true,
-      "options": [
-        {
-          "label": "禁用",
+          "label": "关闭",
           "description": "",
           "value": false
         },
         {
-          "label": "启用",
+          "label": "沿用存档",
+          "description": "",
+          "value": "inherit"
+        },
+        {
+          "label": "开启",
           "description": "",
           "value": true
         }
@@ -5001,13 +5025,18 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 647,
-      "references": []
+      "line": 642,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 14
+        }
+      ]
     },
     {
       "key": "WX-78 Safe Remove Module",
-      "label": "WX-78拆电路板无损耗",
-      "description": "",
+      "label": "WX-78 无损卸载与扫描仪跟随",
+      "description": "拆卸不扣电或耐久，扫描仪跟随换世界。",
       "default": true,
       "options": [
         {
@@ -5023,27 +5052,19 @@
       ],
       "mode": "简单模式",
       "group": "角色改动",
-      "roleParent": null,
-      "line": 648,
+      "roleParent": "WX-78 Easy",
+      "line": 644,
       "references": [
         {
-          "file": "content/common/wx78_recovery.lua",
-          "line": 110
-        },
-        {
-          "file": "content/easy_role/wx78_easy.lua",
-          "line": 5
-        },
-        {
-          "file": "content/role/wx78.lua",
-          "line": 314
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 24
         }
       ]
     },
     {
       "key": "WX-78 Integrated Upgrade Module Level",
-      "label": "WX-78同种电路板融合升级",
-      "description": "同一个电路板最多发挥Max格插脚能力,生物数据修理",
+      "label": "WX-78 同种电路融合升级",
+      "description": "最高 Lv4。同种已装电路合计也最多 4 级，等级乘插脚数不能超过总槽位。",
       "default": true,
       "options": [
         {
@@ -5059,16 +5080,40 @@
       ],
       "mode": "简单模式",
       "group": "角色改动",
-      "roleParent": null,
-      "line": 649,
+      "roleParent": "WX-78 Easy",
+      "line": 646,
       "references": [
         {
-          "file": "content/common/wx78_mode.lua",
-          "line": 14
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Salvage",
+      "label": "WX-78 拆解电路回收生物数据",
+      "description": "用电路提取器拆解未安装芯片，按配方、等级和剩余耐久回收生物数据。",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
         },
         {
-          "file": "content/easy_role/wx78_easy.lua",
-          "line": 156
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "简单模式",
+      "group": "角色改动",
+      "roleParent": "WX-78 Easy",
+      "line": 648,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 27
         }
       ]
     },
@@ -5091,19 +5136,19 @@
       ],
       "mode": "简单模式",
       "group": "角色改动",
-      "roleParent": null,
-      "line": 651,
+      "roleParent": "WX-78 Easy",
+      "line": 650,
       "references": [
         {
           "file": "content/easy_role/wx78_easy.lua",
-          "line": 461
+          "line": 31
         }
       ]
     },
     {
       "key": "wx78_module_pack",
       "label": "WX-78右键虚拟芯片容器",
-      "description": "右键自身打开6格虚拟容器只能存放芯片/扫描仪/生物数据/钳子",
+      "description": "右键自身打开9格虚拟容器只能存放芯片/扫描仪/生物数据/钳子",
       "default": true,
       "options": [
         {
@@ -5119,16 +5164,12 @@
       ],
       "mode": "简单模式",
       "group": "角色改动",
-      "roleParent": null,
-      "line": 653,
+      "roleParent": "WX-78 Easy",
+      "line": 652,
       "references": [
         {
-          "file": "content/common/wx78_mode.lua",
-          "line": 16
-        },
-        {
-          "file": "content/easy_role/wx78_easy.lua",
-          "line": 501
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 26
         }
       ]
     },
@@ -5151,12 +5192,12 @@
       ],
       "mode": "简单模式",
       "group": "角色改动",
-      "roleParent": null,
-      "line": 656,
+      "roleParent": "WX-78 Easy",
+      "line": 655,
       "references": [
         {
           "file": "content/easy_role/wx78_easy.lua",
-          "line": 1305
+          "line": 235
         }
       ]
     },
@@ -5180,11 +5221,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 658,
+      "line": 657,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 99
+          "line": 109
         }
       ]
     },
@@ -5208,7 +5249,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 659,
+      "line": 658,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5236,7 +5277,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 661,
+      "line": 660,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5264,7 +5305,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 663,
+      "line": 662,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5292,7 +5333,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 665,
+      "line": 664,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5320,7 +5361,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 667,
+      "line": 666,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5348,7 +5389,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 669,
+      "line": 668,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5376,7 +5417,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 671,
+      "line": 670,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5404,7 +5445,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 673,
+      "line": 672,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5432,7 +5473,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wickerbottom_easy",
-      "line": 675,
+      "line": 674,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -5460,11 +5501,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 677,
+      "line": 676,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 100
+          "line": 110
         }
       ]
     },
@@ -5488,7 +5529,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "woodie_easy",
-      "line": 678,
+      "line": 677,
       "references": [
         {
           "file": "content/easy_role/woodie_easy.lua",
@@ -5516,7 +5557,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "woodie_easy",
-      "line": 679,
+      "line": 678,
       "references": [
         {
           "file": "content/easy_role/woodie_easy.lua",
@@ -5544,7 +5585,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "woodie_easy",
-      "line": 681,
+      "line": 680,
       "references": [
         {
           "file": "content/easy_role/woodie_easy.lua",
@@ -5580,7 +5621,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "woodie_easy",
-      "line": 683,
+      "line": 682,
       "references": [
         {
           "file": "content/easy_role/woodie_easy.lua",
@@ -5608,7 +5649,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "woodie_easy",
-      "line": 684,
+      "line": 683,
       "references": [
         {
           "file": "content/easy_role/woodie_easy.lua",
@@ -5636,7 +5677,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "woodie_easy",
-      "line": 686,
+      "line": 685,
       "references": [
         {
           "file": "content/ray/suijishengwuapi.lua",
@@ -5664,11 +5705,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 689,
+      "line": 688,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 101
+          "line": 111
         }
       ]
     },
@@ -5692,7 +5733,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wes_easy",
-      "line": 690,
+      "line": 689,
       "references": [
         {
           "file": "content/easy_role/wes_easy.lua",
@@ -5810,7 +5851,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wes_easy",
-      "line": 691,
+      "line": 690,
       "references": [
         {
           "file": "content/easy_role/wes_easy.lua",
@@ -5842,7 +5883,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wes_easy",
-      "line": 693,
+      "line": 692,
       "references": [
         {
           "file": "content/easy_role/wes_easy.lua",
@@ -5870,7 +5911,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wes_easy",
-      "line": 695,
+      "line": 694,
       "references": [
         {
           "file": "content/easy_role/wes_easy.lua",
@@ -5898,7 +5939,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wes_easy",
-      "line": 697,
+      "line": 696,
       "references": [
         {
           "file": "content/easy_role/wes_easy.lua",
@@ -5926,11 +5967,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 699,
+      "line": 698,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 102
+          "line": 112
         }
       ]
     },
@@ -5954,7 +5995,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "waxwell_easy",
-      "line": 700,
+      "line": 699,
       "references": [
         {
           "file": "content/easy_role/waxwell_easy.lua",
@@ -5982,7 +6023,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "waxwell_easy",
-      "line": 702,
+      "line": 701,
       "references": [
         {
           "file": "content/easy_role/waxwell_easy.lua",
@@ -6010,7 +6051,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "waxwell_easy",
-      "line": 703,
+      "line": 702,
       "references": [
         {
           "file": "content/easy_role/waxwell_easy.lua",
@@ -6038,7 +6079,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "waxwell_easy",
-      "line": 704,
+      "line": 703,
       "references": [
         {
           "file": "content/easy_role/waxwell_easy.lua",
@@ -6070,7 +6111,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "waxwell_easy",
-      "line": 706,
+      "line": 705,
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
@@ -6098,7 +6139,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "waxwell_easy",
-      "line": 708,
+      "line": 707,
       "references": [
         {
           "file": "content/easy_role/waxwell_easy.lua",
@@ -6185,7 +6226,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "waxwell_easy",
-      "line": 710,
+      "line": 709,
       "references": [
         {
           "file": "content/easy_role/waxwell_easy.lua",
@@ -6217,11 +6258,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 712,
+      "line": 711,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 103
+          "line": 113
         }
       ]
     },
@@ -6245,7 +6286,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 713,
+      "line": 712,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6273,7 +6314,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 715,
+      "line": 714,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6356,7 +6397,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 716,
+      "line": 715,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6384,7 +6425,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 719,
+      "line": 718,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6412,7 +6453,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 721,
+      "line": 720,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6440,7 +6481,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 723,
+      "line": 722,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6468,7 +6509,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 725,
+      "line": 724,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6500,7 +6541,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 728,
+      "line": 727,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6528,7 +6569,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 729,
+      "line": 728,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -6560,7 +6601,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wigfrid_easy",
-      "line": 730,
+      "line": 729,
       "references": [
         {
           "file": "content/role/wigfrid.lua",
@@ -6588,11 +6629,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 731,
+      "line": 730,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 104
+          "line": 114
         }
       ]
     },
@@ -6616,7 +6657,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 732,
+      "line": 731,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6644,7 +6685,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 734,
+      "line": 733,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6692,7 +6733,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 736,
+      "line": 735,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6724,7 +6765,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 738,
+      "line": 737,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6762,7 +6803,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 740,
+      "line": 739,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6790,7 +6831,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 749,
+      "line": 748,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6818,7 +6859,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 755,
+      "line": 754,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6846,7 +6887,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "webber_easy",
-      "line": 756,
+      "line": 755,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -6874,7 +6915,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 758,
+      "line": 757,
       "references": [
         {
           "file": "content/easy_role/winona_electrical.lua",
@@ -6890,7 +6931,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 105
+          "line": 115
         }
       ]
     },
@@ -6914,7 +6955,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 759,
+      "line": 758,
       "references": [
         {
           "file": "content/easy_role/winona_easy.lua",
@@ -6942,7 +6983,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 760,
+      "line": 759,
       "references": [
         {
           "file": "content/easy_role/winona_toolbox.lua",
@@ -6970,7 +7011,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 763,
+      "line": 762,
       "references": [
         {
           "file": "content/easy_role/winona_electrical.lua",
@@ -6998,7 +7039,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 766,
+      "line": 765,
       "references": [
         {
           "file": "content/easy_role/winona_electrical.lua",
@@ -7026,7 +7067,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 769,
+      "line": 768,
       "references": [
         {
           "file": "content/easy_role/winona_easy.lua",
@@ -7054,7 +7095,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 770,
+      "line": 769,
       "references": [
         {
           "file": "content/easy_role/winona_easy.lua",
@@ -7082,7 +7123,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 772,
+      "line": 771,
       "references": [
         {
           "file": "content/easy_role/winona_easy.lua",
@@ -7165,7 +7206,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "winona_easy",
-      "line": 774,
+      "line": 773,
       "references": [
         {
           "file": "content/easy_role/winona_easy.lua",
@@ -7197,11 +7238,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 776,
+      "line": 775,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 106
+          "line": 116
         }
       ]
     },
@@ -7225,7 +7266,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "warly_easy",
-      "line": 777,
+      "line": 776,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -7253,7 +7294,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "warly_easy",
-      "line": 778,
+      "line": 777,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -7281,7 +7322,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "warly_easy",
-      "line": 780,
+      "line": 779,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -7309,7 +7350,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "warly_easy",
-      "line": 782,
+      "line": 781,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -7337,7 +7378,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "warly_easy",
-      "line": 784,
+      "line": 783,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -7370,7 +7411,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "warly_easy",
-      "line": 786,
+      "line": 785,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -7517,7 +7558,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "warly_easy",
-      "line": 792,
+      "line": 791,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -7545,11 +7586,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 794,
+      "line": 793,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 110
+          "line": 120
         }
       ]
     },
@@ -7573,7 +7614,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 795,
+      "line": 794,
       "references": [
         {
           "file": "content/easy_role/walter_easy.lua",
@@ -7601,7 +7642,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 797,
+      "line": 796,
       "references": [
         {
           "file": "content/easy_role/walter_easy.lua",
@@ -7634,7 +7675,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 799,
+      "line": 798,
       "references": [
         {
           "file": "content/easy_role/walter_easy.lua",
@@ -7752,7 +7793,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 805,
+      "line": 804,
       "references": [
         {
           "file": "content/easy_role/walter_easy.lua",
@@ -7788,7 +7829,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 808,
+      "line": 807,
       "references": [
         {
           "file": "content/easy_role/walter_easy.lua",
@@ -7816,7 +7857,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 809,
+      "line": 808,
       "references": []
     },
     {
@@ -7839,7 +7880,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 811,
+      "line": 810,
       "references": []
     },
     {
@@ -7862,7 +7903,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 814,
+      "line": 813,
       "references": [
         {
           "file": "content/common/walter_wixie_slingshot.lua",
@@ -7890,11 +7931,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "walter_easy",
-      "line": 817,
+      "line": 816,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 111
+          "line": 121
         }
       ]
     },
@@ -7918,11 +7959,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 820,
+      "line": 819,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 107
+          "line": 117
         }
       ]
     },
@@ -7946,7 +7987,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wortox_easy",
-      "line": 821,
+      "line": 820,
       "references": [
         {
           "file": "content/easy_role/wortox_easy.lua",
@@ -7974,7 +8015,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wortox_easy",
-      "line": 822,
+      "line": 821,
       "references": [
         {
           "file": "content/easy_role/wortox_easy.lua",
@@ -8002,7 +8043,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wortox_easy",
-      "line": 824,
+      "line": 823,
       "references": [
         {
           "file": "content/easy_role/wortox_easy.lua",
@@ -8030,7 +8071,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wortox_easy",
-      "line": 825,
+      "line": 824,
       "references": [
         {
           "file": "content/easy_role/wortox_easy.lua",
@@ -8058,7 +8099,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wortox_easy",
-      "line": 826,
+      "line": 825,
       "references": [
         {
           "file": "content/easy_role/wortox_easy.lua",
@@ -8086,7 +8127,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wortox_easy",
-      "line": 828,
+      "line": 827,
       "references": [
         {
           "file": "content/easy_role/wortox_easy.lua",
@@ -8114,11 +8155,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 830,
+      "line": 829,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 108
+          "line": 118
         }
       ]
     },
@@ -8142,7 +8183,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 831,
+      "line": 830,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8170,7 +8211,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 832,
+      "line": 831,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8198,7 +8239,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 833,
+      "line": 832,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8226,7 +8267,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 835,
+      "line": 834,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8254,7 +8295,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 837,
+      "line": 836,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8282,7 +8323,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 838,
+      "line": 837,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8315,7 +8356,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 839,
+      "line": 838,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8347,7 +8388,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 848,
+      "line": 847,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8375,7 +8416,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 849,
+      "line": 848,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8403,7 +8444,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 851,
+      "line": 850,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8431,7 +8472,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wormwood_easy",
-      "line": 853,
+      "line": 852,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -8459,11 +8500,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 855,
+      "line": 854,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 109
+          "line": 119
         }
       ]
     },
@@ -8487,7 +8528,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wurt_easy",
-      "line": 856,
+      "line": 855,
       "references": [
         {
           "file": "content/role/wurt.lua",
@@ -8515,7 +8556,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wurt_easy",
-      "line": 858,
+      "line": 857,
       "references": [
         {
           "file": "content/easy_role/wurt_easy.lua",
@@ -8543,7 +8584,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wurt_easy",
-      "line": 860,
+      "line": 859,
       "references": [
         {
           "file": "content/easy_role/wurt_easy.lua",
@@ -8571,7 +8612,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wurt_easy",
-      "line": 862,
+      "line": 861,
       "references": [
         {
           "file": "content/easy_role/wurt_easy.lua",
@@ -8599,7 +8640,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wurt_easy",
-      "line": 864,
+      "line": 863,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -8631,7 +8672,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wurt_easy",
-      "line": 866,
+      "line": 865,
       "references": [
         {
           "file": "content/easy_role/wurt_easy.lua",
@@ -8659,7 +8700,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wurt_easy",
-      "line": 867,
+      "line": 866,
       "references": [
         {
           "file": "content/easy_role/wurt_easy.lua",
@@ -8687,11 +8728,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 869,
+      "line": 868,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 112
+          "line": 122
         }
       ]
     },
@@ -8715,7 +8756,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 870,
+      "line": 869,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -8747,7 +8788,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 871,
+      "line": 870,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -8775,7 +8816,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 872,
+      "line": 871,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -8803,7 +8844,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 874,
+      "line": 873,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -8831,7 +8872,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 877,
+      "line": 876,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -8859,11 +8900,39 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 880,
+      "line": 879,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
           "line": 228
+        }
+      ]
+    },
+    {
+      "key": "Wanda Watch Naming",
+      "label": "溯源表／裂缝表命名",
+      "description": "拿羽毛笔右键真实怀表命名，最多32字；升级、使用后及读档保留，不消耗笔；不支持自带临时表",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "简单模式",
+      "group": "角色改动",
+      "roleParent": "wanda_easy",
+      "line": 881,
+      "references": [
+        {
+          "file": "content/modmain.lua",
+          "line": 124
         }
       ]
     },
@@ -8887,11 +8956,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 882,
+      "line": 884,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 113
+          "line": 126
         }
       ]
     },
@@ -8915,7 +8984,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 886,
+      "line": 888,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -8948,7 +9017,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 887,
+      "line": 889,
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
@@ -9074,7 +9143,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 895,
+      "line": 897,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -9110,7 +9179,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 897,
+      "line": 899,
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
@@ -9138,7 +9207,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 899,
+      "line": 901,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -9171,7 +9240,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wanda_easy",
-      "line": 900,
+      "line": 902,
       "references": [
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -9203,11 +9272,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 904,
+      "line": 906,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 114
+          "line": 127
         }
       ]
     },
@@ -9231,7 +9300,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wonkey_easy",
-      "line": 905,
+      "line": 907,
       "references": [
         {
           "file": "content/easy_role/wonkey_easy.lua",
@@ -9304,7 +9373,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wonkey_easy",
-      "line": 907,
+      "line": 909,
       "references": [
         {
           "file": "content/easy_role/wonkey_easy.lua",
@@ -9332,7 +9401,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wonkey_easy",
-      "line": 909,
+      "line": 911,
       "references": [
         {
           "file": "content/easy_role/wonkey_easy.lua",
@@ -9360,7 +9429,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wonkey_easy",
-      "line": 910,
+      "line": 912,
       "references": []
     },
     {
@@ -9383,7 +9452,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wonkey_easy",
-      "line": 911,
+      "line": 913,
       "references": [
         {
           "file": "content/easy_role/wonkey_easy.lua",
@@ -9411,7 +9480,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "wonkey_easy",
-      "line": 912,
+      "line": 914,
       "references": [
         {
           "file": "content/easy_role/wonkey_easy.lua",
@@ -9439,11 +9508,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 914,
+      "line": 916,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 115
+          "line": 128
         }
       ]
     },
@@ -9472,7 +9541,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": "other_role_easy",
-      "line": 915,
+      "line": 917,
       "references": [
         {
           "file": "content/easy_role/wathom_easy.lua",
@@ -9504,7 +9573,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 924,
+      "line": 926,
       "references": [
         {
           "file": "content/common/monster_nightvision.lua",
@@ -9548,7 +9617,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 927,
+      "line": 929,
       "references": [
         {
           "file": "content/common/monster_nightvision.lua",
@@ -9631,7 +9700,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 930,
+      "line": 932,
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
@@ -9672,7 +9741,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 932,
+      "line": 934,
       "references": [
         {
           "file": "content/easy_role/gym.lua",
@@ -9680,7 +9749,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 89
+          "line": 100
         }
       ]
     },
@@ -9704,11 +9773,11 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 938,
+      "line": 940,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 119
+          "line": 132
         }
       ]
     },
@@ -9732,7 +9801,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 940,
+      "line": 942,
       "references": [
         {
           "file": "content/easy_role/role_common.lua",
@@ -9760,7 +9829,7 @@
       "mode": "简单模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 942,
+      "line": 944,
       "references": [
         {
           "file": "content/tech/moonrockidol.lua",
@@ -9788,7 +9857,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 947,
+      "line": 949,
       "references": [
         {
           "file": "content/easy_other/containersort.lua",
@@ -9884,7 +9953,11 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 203
+          "line": 219
+        },
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 10
         },
         {
           "file": "content/tech/prototyper.lua",
@@ -9917,11 +9990,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 948,
+      "line": 950,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 208
+          "line": 224
         },
         {
           "file": "content/role/health.lua",
@@ -9954,11 +10027,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 955,
+      "line": 957,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 209
+          "line": 225
         },
         {
           "file": "content/role/sanity.lua",
@@ -9986,11 +10059,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 961,
+      "line": 963,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 210
+          "line": 226
         }
       ]
     },
@@ -10029,11 +10102,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 966,
+      "line": 968,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 204
+          "line": 220
         },
         {
           "file": "content/role/combat.lua",
@@ -10061,11 +10134,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 982,
+      "line": 984,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 205
+          "line": 221
         }
       ]
     },
@@ -10089,11 +10162,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 986,
+      "line": 988,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 206
+          "line": 222
         }
       ]
     },
@@ -10117,11 +10190,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 990,
+      "line": 992,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 207
+          "line": 223
         }
       ]
     },
@@ -10145,11 +10218,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 994,
+      "line": 996,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 211
+          "line": 227
         }
       ]
     },
@@ -10333,11 +10406,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 996,
+      "line": 998,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 212
+          "line": 228
         },
         {
           "file": "content/role/leader.lua",
@@ -10365,11 +10438,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 999,
+      "line": 1001,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 214
+          "line": 230
         }
       ]
     },
@@ -10393,7 +10466,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1001,
+      "line": 1003,
       "references": [
         {
           "file": "content/easy_other/containersort.lua",
@@ -10421,11 +10494,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1003,
+      "line": 1005,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 218
+          "line": 234
         }
       ]
     },
@@ -10454,11 +10527,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1007,
+      "line": 1009,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 217
+          "line": 233
         },
         {
           "file": "content/role/death.lua",
@@ -10490,11 +10563,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1010,
+      "line": 1012,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 220
+          "line": 236
         }
       ]
     },
@@ -10523,11 +10596,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1012,
+      "line": 1014,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 221
+          "line": 237
         },
         {
           "file": "content/role/recipe_add_material.lua",
@@ -10560,11 +10633,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1030,
+      "line": 1032,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 223
+          "line": 239
         },
         {
           "file": "content/role/clock_peril.lua",
@@ -10592,11 +10665,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1039,
+      "line": 1041,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 224
+          "line": 240
         }
       ]
     },
@@ -10620,7 +10693,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1043,
+      "line": 1045,
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
@@ -10628,7 +10701,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 225
+          "line": 241
         }
       ]
     },
@@ -10652,11 +10725,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1045,
+      "line": 1047,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 229
+          "line": 244
         }
       ]
     },
@@ -10680,7 +10753,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1047,
+      "line": 1049,
       "references": [
         {
           "file": "content/easy_role/wendy_easy.lua",
@@ -10688,14 +10761,47 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 228
+          "line": 243
         }
       ]
     },
     {
-      "key": "wx-78",
-      "label": "WX-78",
-      "description": "妥协芯片削弱;超载非三维电路增加饥饿消耗",
+      "key": "WX-78 Hard",
+      "label": "WX-78 困难改动",
+      "description": "新电路与供电规则、冲撞、组合技能和备份机器人。开启档跟随困难模式与角色调整。沿用存档会迁移原方案设置。",
+      "default": "inherit",
+      "options": [
+        {
+          "label": "关闭",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "沿用存档",
+          "description": "",
+          "value": "inherit"
+        },
+        {
+          "label": "开启",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "困难模式",
+      "group": "角色改动",
+      "roleParent": null,
+      "line": 1052,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Power",
+      "label": "WX-78 电路负载与供电",
+      "description": "一格电即可带动整板。负载决定自然充放电和饥饿，普通进食和睡眠可以补电。拔插不扣电。",
       "default": true,
       "options": [
         {
@@ -10711,12 +10817,180 @@
       ],
       "mode": "困难模式",
       "group": "角色改动",
-      "roleParent": null,
-      "line": 1050,
+      "roleParent": "WX-78 Hard",
+      "line": 1054,
       "references": [
         {
-          "file": "content/role/wx78.lua",
-          "line": 763
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 28
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Durability",
+      "label": "WX-78 电路通电耐久",
+      "description": "通电耐久 20 天，生物数据修 5 天。附身机器人暂停磨损，切换真身后继续消耗。",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "困难模式",
+      "group": "角色改动",
+      "roleParent": "WX-78 Hard",
+      "line": 1056,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Balance",
+      "label": "WX-78 电路与战斗平衡",
+      "description": "调整三维与理智电路、合唱盒、电反、受冻耗电和食用暗影燃料。",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "困难模式",
+      "group": "角色改动",
+      "roleParent": "WX-78 Hard",
+      "line": 1058,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 30
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Thermal Circuits",
+      "label": "WX-78 热能与制冷联动",
+      "description": "热能强化工作与炎热攻击，制冷让工作目标变脆并给周围降温。",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "困难模式",
+      "group": "角色改动",
+      "roleParent": "WX-78 Hard",
+      "line": 1060,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 31
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Ram",
+      "label": "WX-78 加速电路冲撞",
+      "description": "连续奔跑会加速并撞击敌人。",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "困难模式",
+      "group": "角色改动",
+      "roleParent": "WX-78 Hard",
+      "line": 1062,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 32
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Synergy",
+      "label": "WX-78 组合电路技能",
+      "description": "启用可学习的组合电路技能。热能与照明发射激光，开启冲撞时加速与电气化可联动。",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "困难模式",
+      "group": "角色改动",
+      "roleParent": "WX-78 Hard",
+      "line": 1064,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 33
+        }
+      ]
+    },
+    {
+      "key": "WX-78 Moongleam Chassis",
+      "label": "WX-78 月熠激活备份底盘",
+      "description": "月能载体可以用 1 个月熠激活自己的空闲备份底盘。",
+      "default": true,
+      "options": [
+        {
+          "label": "禁用",
+          "description": "",
+          "value": false
+        },
+        {
+          "label": "启用",
+          "description": "",
+          "value": true
+        }
+      ],
+      "mode": "困难模式",
+      "group": "角色改动",
+      "roleParent": "WX-78 Hard",
+      "line": 1066,
+      "references": [
+        {
+          "file": "content/scripts/wx78config2hm.lua",
+          "line": 34
         }
       ]
     },
@@ -10745,7 +11019,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1058,
+      "line": 1073,
       "references": [
         {
           "file": "content/easy_role/wickerbottom_easy.lua",
@@ -10757,7 +11031,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 230
+          "line": 245
         },
         {
           "file": "content/role/wickerbottom.lua",
@@ -10789,7 +11063,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1065,
+      "line": 1080,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -10797,7 +11071,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 231
+          "line": 246
         }
       ]
     },
@@ -10821,7 +11095,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1067,
+      "line": 1082,
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
@@ -10849,7 +11123,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1069,
+      "line": 1084,
       "references": [
         {
           "file": "content/easy_role/webber_easy.lua",
@@ -10857,7 +11131,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 226
+          "line": 242
         }
       ]
     },
@@ -10881,7 +11155,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1070,
+      "line": 1085,
       "references": [
         {
           "file": "content/easy_role/warly_easy.lua",
@@ -10909,7 +11183,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1072,
+      "line": 1087,
       "references": [
         {
           "file": "content/easy_role/walter_easy.lua",
@@ -10917,7 +11191,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 236
+          "line": 251
         },
         {
           "file": "content/role/walter.lua",
@@ -10945,11 +11219,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1074,
+      "line": 1089,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 236
+          "line": 251
         },
         {
           "file": "content/role/walter.lua",
@@ -10977,11 +11251,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1077,
+      "line": 1092,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 237
+          "line": 252
         }
       ]
     },
@@ -11005,7 +11279,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1079,
+      "line": 1094,
       "references": [
         {
           "file": "content/easy_role/wortox_easy.lua",
@@ -11013,7 +11287,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 233
+          "line": 248
         }
       ]
     },
@@ -11037,7 +11311,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1080,
+      "line": 1095,
       "references": [
         {
           "file": "content/easy_role/wormwood_easy.lua",
@@ -11045,7 +11319,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 232
+          "line": 247
         }
       ]
     },
@@ -11069,7 +11343,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1082,
+      "line": 1097,
       "references": [
         {
           "file": "content/easy_role/wurt_easy.lua",
@@ -11077,7 +11351,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 234
+          "line": 249
         }
       ]
     },
@@ -11101,7 +11375,7 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1086,
+      "line": 1101,
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
@@ -11113,7 +11387,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 235
+          "line": 250
         }
       ]
     },
@@ -11137,11 +11411,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1087,
+      "line": 1102,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 219
+          "line": 235
         }
       ]
     },
@@ -11265,11 +11539,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1091,
+      "line": 1106,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 216
+          "line": 232
         },
         {
           "file": "content/role/norunattack.lua",
@@ -11352,11 +11626,11 @@
       "mode": "困难模式",
       "group": "角色改动",
       "roleParent": null,
-      "line": 1095,
+      "line": 1110,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 215
+          "line": 231
         }
       ]
     },
@@ -11380,11 +11654,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1101,
+      "line": 1116,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 240
+          "line": 255
         }
       ]
     },
@@ -11413,11 +11687,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1102,
+      "line": 1117,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 242
+          "line": 257
         },
         {
           "file": "content/weather/temperature.lua",
@@ -11455,11 +11729,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1106,
+      "line": 1121,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 251
+          "line": 266
         },
         {
           "file": "content/role/clock_peril.lua",
@@ -11524,11 +11798,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1113,
+      "line": 1128,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 252
+          "line": 267
         },
         {
           "file": "content/weather/moonlight.lua",
@@ -11556,11 +11830,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1122,
+      "line": 1137,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 245
+          "line": 260
         },
         {
           "file": "content/weather/weather.lua",
@@ -11593,7 +11867,7 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1124,
+      "line": 1139,
       "references": [
         {
           "file": "content/epic/alterguardian.lua",
@@ -11601,7 +11875,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 244
+          "line": 259
         },
         {
           "file": "content/monster/lunarthrall_plant.lua",
@@ -11661,7 +11935,7 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1130,
+      "line": 1145,
       "references": [
         {
           "file": "content/weather/seasons.lua",
@@ -11694,11 +11968,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1138,
+      "line": 1153,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 243
+          "line": 258
         },
         {
           "file": "content/weather/rain.lua",
@@ -11726,11 +12000,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1142,
+      "line": 1157,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 246
+          "line": 261
         }
       ]
     },
@@ -11759,11 +12033,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1144,
+      "line": 1159,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 247
+          "line": 262
         },
         {
           "file": "content/weather/winter.lua",
@@ -11801,11 +12075,11 @@
       "mode": "困难模式",
       "group": "天气改动",
       "roleParent": null,
-      "line": 1147,
+      "line": 1162,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 248
+          "line": 263
         },
         {
           "file": "content/weather/autumn.lua",
@@ -11833,7 +12107,7 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1156,
+      "line": 1171,
       "references": [
         {
           "file": "content/common/common.lua",
@@ -11841,7 +12115,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 187
+          "line": 203
         },
         {
           "file": "content/modworldgenmain.lua",
@@ -11873,11 +12147,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1161,
+      "line": 1176,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 190
+          "line": 206
         }
       ]
     },
@@ -11901,11 +12175,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1163,
+      "line": 1178,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 191
+          "line": 207
         }
       ]
     },
@@ -11929,11 +12203,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1165,
+      "line": 1180,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 189
+          "line": 205
         }
       ]
     },
@@ -11957,11 +12231,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1167,
+      "line": 1182,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 193
+          "line": 209
         }
       ]
     },
@@ -11990,11 +12264,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1169,
+      "line": 1184,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 195
+          "line": 211
         },
         {
           "file": "content/tech/moonrockidol.lua",
@@ -12027,11 +12301,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1176,
+      "line": 1191,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 192
+          "line": 208
         },
         {
           "file": "content/tech/oceanlife.lua",
@@ -12089,7 +12363,7 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1183,
+      "line": 1198,
       "references": [
         {
           "file": "content/common/common.lua",
@@ -12126,11 +12400,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1194,
+      "line": 1209,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 194
+          "line": 210
         },
         {
           "file": "content/tech/clockwork_guard.lua",
@@ -12163,11 +12437,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1202,
+      "line": 1217,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 198
+          "line": 214
         },
         {
           "file": "content/modworldgenmain.lua",
@@ -12199,11 +12473,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1209,
+      "line": 1224,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 199
+          "line": 215
         }
       ]
     },
@@ -12232,11 +12506,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1213,
+      "line": 1228,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 200
+          "line": 216
         },
         {
           "file": "content/tech/ancient_altar.lua",
@@ -12564,11 +12838,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1220,
+      "line": 1235,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 196
+          "line": 212
         },
         {
           "file": "content/tech/rocks.lua",
@@ -12596,11 +12870,11 @@
       "mode": "困难模式",
       "group": "科技改动",
       "roleParent": null,
-      "line": 1222,
+      "line": 1237,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 197
+          "line": 213
         }
       ]
     },
@@ -12624,7 +12898,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1225,
+      "line": 1240,
       "references": [
         {
           "file": "content/easy_other/um_patch.lua",
@@ -12632,7 +12906,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 255
+          "line": 270
         }
       ]
     },
@@ -12666,11 +12940,11 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1226,
+      "line": 1241,
       "references": [
         {
           "file": "content/common/patch.lua",
-          "line": 340
+          "line": 376
         },
         {
           "file": "content/food/fooddata.lua",
@@ -12678,7 +12952,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 256
+          "line": 271
         }
       ]
     },
@@ -12712,7 +12986,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1230,
+      "line": 1245,
       "references": [
         {
           "file": "content/easy_other/um_patch.lua",
@@ -12724,7 +12998,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 257
+          "line": 272
         }
       ]
     },
@@ -12748,11 +13022,11 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1242,
+      "line": 1257,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 258
+          "line": 273
         }
       ]
     },
@@ -12781,7 +13055,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1246,
+      "line": 1261,
       "references": [
         {
           "file": "content/food/oceanfish.lua",
@@ -12789,7 +13063,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 259
+          "line": 274
         }
       ]
     },
@@ -12818,7 +13092,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1250,
+      "line": 1265,
       "references": [
         {
           "file": "content/food/container_live.lua",
@@ -12826,7 +13100,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 260
+          "line": 275
         }
       ]
     },
@@ -13150,7 +13424,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1257,
+      "line": 1272,
       "references": [
         {
           "file": "content/food/animal.lua",
@@ -13162,7 +13436,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 261
+          "line": 276
         },
         {
           "file": "content/monster/walrus.lua",
@@ -13194,11 +13468,11 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1259,
+      "line": 1274,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 262
+          "line": 277
         }
       ]
     },
@@ -13222,11 +13496,11 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1261,
+      "line": 1276,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 263
+          "line": 278
         }
       ]
     },
@@ -13345,7 +13619,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1263,
+      "line": 1278,
       "references": [
         {
           "file": "content/food/seeds.lua",
@@ -13353,7 +13627,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 266
+          "line": 281
         }
       ]
     },
@@ -13622,7 +13896,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1265,
+      "line": 1280,
       "references": [
         {
           "file": "content/food/farm_plant.lua",
@@ -13630,7 +13904,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 269
+          "line": 284
         }
       ]
     },
@@ -13654,11 +13928,11 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1266,
+      "line": 1281,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 267
+          "line": 282
         }
       ]
     },
@@ -13727,7 +14001,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1268,
+      "line": 1283,
       "references": [
         {
           "file": "content/food/nutrient.lua",
@@ -13735,7 +14009,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 268
+          "line": 283
         }
       ]
     },
@@ -14059,7 +14333,7 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1275,
+      "line": 1290,
       "references": [
         {
           "file": "content/food/plant.lua",
@@ -14067,7 +14341,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 264
+          "line": 279
         },
         {
           "file": "content/role/wickerbottom.lua",
@@ -14095,11 +14369,11 @@
       "mode": "困难模式",
       "group": "食物改动",
       "roleParent": null,
-      "line": 1279,
+      "line": 1294,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 265
+          "line": 280
         }
       ]
     },
@@ -14123,7 +14397,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1282,
+      "line": 1297,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -14131,7 +14405,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 272
+          "line": 287
         },
         {
           "file": "content/shadowworld.lua",
@@ -14164,11 +14438,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1283,
+      "line": 1298,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 281
+          "line": 296
         },
         {
           "file": "content/monster/wall.lua",
@@ -14196,11 +14470,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1287,
+      "line": 1302,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 282
+          "line": 297
         }
       ]
     },
@@ -14419,11 +14693,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1288,
+      "line": 1303,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 278
+          "line": 293
         },
         {
           "file": "content/monster/supermonster.lua",
@@ -14646,11 +14920,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1292,
+      "line": 1307,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 278
+          "line": 293
         },
         {
           "file": "content/monster/supermonster.lua",
@@ -14678,11 +14952,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1296,
+      "line": 1311,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 279
+          "line": 294
         }
       ]
     },
@@ -14706,11 +14980,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1297,
+      "line": 1312,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 280
+          "line": 295
         }
       ]
     },
@@ -14734,11 +15008,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1299,
+      "line": 1314,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 283
+          "line": 298
         }
       ]
     },
@@ -14762,11 +15036,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1301,
+      "line": 1316,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 284
+          "line": 299
         }
       ]
     },
@@ -14790,11 +15064,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1303,
+      "line": 1318,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 285
+          "line": 300
         }
       ]
     },
@@ -14818,11 +15092,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1304,
+      "line": 1319,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 286
+          "line": 301
         }
       ]
     },
@@ -14861,15 +15135,15 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1306,
+      "line": 1321,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 276
+          "line": 291
         },
         {
           "file": "content/modmain.lua",
-          "line": 290
+          "line": 305
         },
         {
           "file": "content/monster/hound.lua",
@@ -14902,11 +15176,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1312,
+      "line": 1327,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 291
+          "line": 306
         },
         {
           "file": "content/monster/walrus.lua",
@@ -14939,11 +15213,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1315,
+      "line": 1330,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 301
+          "line": 316
         },
         {
           "file": "content/monster/chess.lua",
@@ -14975,11 +15249,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1322,
+      "line": 1337,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 303
+          "line": 318
         }
       ]
     },
@@ -15003,7 +15277,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1326,
+      "line": 1341,
       "references": [
         {
           "file": "content/easy_role/wigfrid_easy.lua",
@@ -15011,7 +15285,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 293
+          "line": 308
         }
       ]
     },
@@ -15035,11 +15309,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1330,
+      "line": 1345,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 294
+          "line": 309
         }
       ]
     },
@@ -15063,11 +15337,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1332,
+      "line": 1347,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 304
+          "line": 319
         }
       ]
     },
@@ -15091,11 +15365,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1336,
+      "line": 1351,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 287
+          "line": 302
         }
       ]
     },
@@ -15119,11 +15393,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1338,
+      "line": 1353,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 292
+          "line": 307
         }
       ]
     },
@@ -15147,11 +15421,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1340,
+      "line": 1355,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 342
+          "line": 357
         }
       ]
     },
@@ -15175,11 +15449,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1342,
+      "line": 1357,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 289
+          "line": 304
         }
       ]
     },
@@ -15203,11 +15477,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1344,
+      "line": 1359,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 288
+          "line": 303
         }
       ]
     },
@@ -15231,7 +15505,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1345,
+      "line": 1360,
       "references": [
         {
           "file": "content/monster/shadowthrall.lua",
@@ -15259,11 +15533,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1347,
+      "line": 1362,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 295
+          "line": 310
         }
       ]
     },
@@ -15287,11 +15561,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1349,
+      "line": 1364,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 302
+          "line": 317
         }
       ]
     },
@@ -15320,11 +15594,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1353,
+      "line": 1368,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 296
+          "line": 311
         },
         {
           "file": "content/monster/crawlingshadow.lua",
@@ -15361,11 +15635,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1357,
+      "line": 1372,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 297
+          "line": 312
         },
         {
           "file": "content/monster/crawlingshadow.lua",
@@ -15405,11 +15679,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1360,
+      "line": 1375,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 299
+          "line": 314
         },
         {
           "file": "content/monster/crawlingshadow.lua",
@@ -15442,11 +15716,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1362,
+      "line": 1377,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 300
+          "line": 315
         },
         {
           "file": "content/monster/ruinsnightmare.lua",
@@ -15479,11 +15753,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1366,
+      "line": 1381,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 298
+          "line": 313
         },
         {
           "file": "content/monster/shadowleech.lua",
@@ -15511,11 +15785,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1374,
+      "line": 1389,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 305
+          "line": 320
         }
       ]
     },
@@ -15539,11 +15813,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1375,
+      "line": 1390,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 310
+          "line": 325
         }
       ]
     },
@@ -15572,7 +15846,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1376,
+      "line": 1391,
       "references": [
         {
           "file": "content/epic/deerclops.lua",
@@ -15580,11 +15854,11 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 276
+          "line": 291
         },
         {
           "file": "content/modmain.lua",
-          "line": 320
+          "line": 335
         }
       ]
     },
@@ -15608,11 +15882,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1382,
+      "line": 1397,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 319
+          "line": 334
         }
       ]
     },
@@ -15636,15 +15910,15 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1383,
+      "line": 1398,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 276
+          "line": 291
         },
         {
           "file": "content/modmain.lua",
-          "line": 308
+          "line": 323
         }
       ]
     },
@@ -15668,11 +15942,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1384,
+      "line": 1399,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 321
+          "line": 336
         },
         {
           "file": "content/shadowworld.lua",
@@ -15700,11 +15974,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1385,
+      "line": 1400,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 322
+          "line": 337
         }
       ]
     },
@@ -15728,11 +16002,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1388,
+      "line": 1403,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 316
+          "line": 331
         },
         {
           "file": "content/shadowworld.lua",
@@ -15760,11 +16034,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1390,
+      "line": 1405,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 317
+          "line": 332
         }
       ]
     },
@@ -15793,15 +16067,15 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1393,
+      "line": 1408,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 323
+          "line": 338
         },
         {
           "file": "content/modmain.lua",
-          "line": 325
+          "line": 340
         }
       ]
     },
@@ -15825,7 +16099,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1401,
+      "line": 1416,
       "references": [
         {
           "file": "content/easy_other/containersort.lua",
@@ -15841,7 +16115,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 309
+          "line": 324
         },
         {
           "file": "content/shadow_nerf.lua",
@@ -15869,7 +16143,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1403,
+      "line": 1418,
       "references": [
         {
           "file": "content/epic/lunarepic.lua",
@@ -15877,7 +16151,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 275
+          "line": 290
         }
       ]
     },
@@ -15906,7 +16180,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1407,
+      "line": 1422,
       "references": [
         {
           "file": "content/epic/shadowchesspieces.lua",
@@ -15914,7 +16188,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 318
+          "line": 333
         }
       ]
     },
@@ -15938,11 +16212,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1414,
+      "line": 1429,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 328
+          "line": 343
         },
         {
           "file": "content/shadowworld.lua",
@@ -15970,7 +16244,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1415,
+      "line": 1430,
       "references": [
         {
           "file": "content/easy_other/easy_structures.lua",
@@ -15978,7 +16252,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 341
+          "line": 356
         }
       ]
     },
@@ -16002,11 +16276,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1416,
+      "line": 1431,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 307
+          "line": 322
         }
       ]
     },
@@ -16050,7 +16324,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1419,
+      "line": 1434,
       "references": [
         {
           "file": "content/epic/alterguardian.lua",
@@ -16058,7 +16332,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 339
+          "line": 354
         },
         {
           "file": "content/shadowworld.lua",
@@ -16086,7 +16360,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1433,
+      "line": 1448,
       "references": [
         {
           "file": "content/epic/alterguardian.lua",
@@ -16114,7 +16388,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1434,
+      "line": 1449,
       "references": [
         {
           "file": "content/epic/alterguardian.lua",
@@ -16133,7 +16407,7 @@
     {
       "key": "alterguardian_phase4",
       "label": "天体后裔加强",
-      "description": "天体后裔的影子拥有独立AI,以及技能会实时与本体同步解锁",
+      "description": "75%/50%/25%生命解锁连招、冷火和超新星；影子独立行动、共享生命，重击释放扇形雷击",
       "default": true,
       "options": [
         {
@@ -16150,11 +16424,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1436,
+      "line": 1451,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 340
+          "line": 355
         }
       ]
     },
@@ -16188,7 +16462,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1438,
+      "line": 1454,
       "references": [
         {
           "file": "content/easy_other/easy_equipments.lua",
@@ -16200,15 +16474,15 @@
         },
         {
           "file": "content/easy_other/easy_items.lua",
-          "line": 1045
+          "line": 1047
         },
         {
           "file": "content/easy_other/easy_items.lua",
-          "line": 1045
+          "line": 1047
         },
         {
           "file": "content/modmain.lua",
-          "line": 312
+          "line": 327
         },
         {
           "file": "content/shadowworld.lua",
@@ -16219,7 +16493,7 @@
     {
       "key": "atriumstalker",
       "label": "远古织影者加强",
-      "description": "鬼手需不同玩家或武器轮换击败",
+      "description": "鬼手需不同玩家或武器轮换击败。草案另将本体的影子限制在18单位内，所有技能CD不减半，玩家影人75血。",
       "default": -1,
       "options": [
         {
@@ -16228,25 +16502,30 @@
           "value": false
         },
         {
-          "label": "启用",
+          "label": "基础加强",
           "description": "血量攻速移速翻倍,技能CD减半",
           "value": true
         },
         {
-          "label": "部分",
-          "description": "为敌人召唤暗影随从和转化敌人暗影分身",
+          "label": "默认（召影）",
+          "description": "基础加强，另为敌人召唤暗影随从并转化敌人的暗影分身",
           "value": -1
         },
         {
-          "label": "启用",
+          "label": "召影（原血量/CD）",
           "description": "禁用血量翻倍,禁用CD减半",
           "value": -2
+        },
+        {
+          "label": "草案（影子限域）",
+          "description": "基于默认档：织影者分身超出本体18单位会召回，停止范围外追击；所有技能的首次和后续CD均不减半；召唤的玩家影人固定75血。其他机制保留。",
+          "value": "draft"
         }
       ],
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1445,
+      "line": 1462,
       "references": [
         {
           "file": "content/epic/atriumstalker.lua",
@@ -16254,7 +16533,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 329
+          "line": 344
         },
         {
           "file": "content/shadowworld.lua",
@@ -16307,7 +16586,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1452,
+      "line": 1481,
       "references": [
         {
           "file": "content/epic/epic_armor.lua",
@@ -16315,7 +16594,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 330
+          "line": 345
         }
       ]
     },
@@ -16359,7 +16638,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1469,
+      "line": 1498,
       "references": [
         {
           "file": "content/epic/epic_ruin.lua",
@@ -16367,7 +16646,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 336
+          "line": 351
         }
       ]
     },
@@ -16401,7 +16680,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1478,
+      "line": 1507,
       "references": [
         {
           "file": "content/epic/pig_boss.lua",
@@ -16417,7 +16696,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 337
+          "line": 352
         }
       ]
     },
@@ -16441,7 +16720,7 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1490,
+      "line": 1519,
       "references": [
         {
           "file": "content/epic/pig_boss.lua",
@@ -16449,7 +16728,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 338
+          "line": 353
         }
       ]
     },
@@ -16668,11 +16947,11 @@
       "mode": "困难模式",
       "group": "怪物改动",
       "roleParent": null,
-      "line": 1494,
+      "line": 1523,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 344
+          "line": 359
         },
         {
           "file": "content/monster/secondlevel.lua",
@@ -16700,7 +16979,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1498,
+      "line": 1527,
       "references": [
         {
           "file": "content/epic/alterguardian.lua",
@@ -16712,7 +16991,7 @@
         },
         {
           "file": "content/epic/alterguardian_phase4_lunarrift.lua",
-          "line": 20
+          "line": 5
         },
         {
           "file": "content/epic/atriumstalker.lua",
@@ -16752,7 +17031,7 @@
         },
         {
           "file": "content/modmain.lua",
-          "line": 347
+          "line": 362
         },
         {
           "file": "content/monster/chess.lua",
@@ -17237,15 +17516,15 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1499,
+      "line": 1528,
       "references": [
         {
           "file": "content/epic/alterguardian_phase4_lunarrift.lua",
-          "line": 21
+          "line": 5
         },
         {
           "file": "content/epic/atriumstalker.lua",
-          "line": 10
+          "line": 11
         },
         {
           "file": "content/epic/dynamic_armor.lua",
@@ -17557,7 +17836,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1500,
+      "line": 1529,
       "references": [
         {
           "file": "content/epic/alterguardian.lua",
@@ -17885,11 +18164,11 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1502,
+      "line": 1531,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 350
+          "line": 365
         },
         {
           "file": "content/monster/secondlevel.lua",
@@ -18197,7 +18476,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1506,
+      "line": 1535,
       "references": [
         {
           "file": "content/epic/alterguardian.lua",
@@ -18525,7 +18804,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1508,
+      "line": 1537,
       "references": []
     },
     {
@@ -18953,7 +19232,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1509,
+      "line": 1538,
       "references": []
     },
     {
@@ -19476,7 +19755,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1510,
+      "line": 1539,
       "references": []
     },
     {
@@ -19999,7 +20278,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1511,
+      "line": 1540,
       "references": []
     },
     {
@@ -20427,7 +20706,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1512,
+      "line": 1541,
       "references": []
     },
     {
@@ -20855,7 +21134,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1513,
+      "line": 1542,
       "references": []
     },
     {
@@ -20878,7 +21157,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1514,
+      "line": 1543,
       "references": []
     },
     {
@@ -20901,7 +21180,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1515,
+      "line": 1544,
       "references": []
     },
     {
@@ -20924,7 +21203,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1516,
+      "line": 1545,
       "references": []
     },
     {
@@ -20947,7 +21226,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1517,
+      "line": 1546,
       "references": []
     },
     {
@@ -20970,7 +21249,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1519,
+      "line": 1548,
       "references": [
         {
           "file": "content/monster/secondlevel.lua",
@@ -21403,7 +21682,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1525,
+      "line": 1554,
       "references": []
     },
     {
@@ -21706,7 +21985,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1526,
+      "line": 1555,
       "references": [
         {
           "file": "content/monster/hound.lua",
@@ -22034,11 +22313,11 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1528,
+      "line": 1557,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 350
+          "line": 365
         },
         {
           "file": "content/monster/secondlevel.lua",
@@ -22346,7 +22625,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1531,
+      "line": 1560,
       "references": [
         {
           "file": "content/monster/chess.lua",
@@ -22666,7 +22945,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1533,
+      "line": 1562,
       "references": []
     },
     {
@@ -23094,7 +23373,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1534,
+      "line": 1563,
       "references": []
     },
     {
@@ -23617,7 +23896,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1535,
+      "line": 1564,
       "references": []
     },
     {
@@ -24140,7 +24419,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1536,
+      "line": 1565,
       "references": []
     },
     {
@@ -24568,7 +24847,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1537,
+      "line": 1566,
       "references": []
     },
     {
@@ -24996,7 +25275,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1538,
+      "line": 1567,
       "references": []
     },
     {
@@ -25019,7 +25298,7 @@
       "mode": "困难模式",
       "group": "额外改动",
       "roleParent": null,
-      "line": 1539,
+      "line": 1568,
       "references": []
     },
     {
@@ -25292,11 +25571,11 @@
       "mode": "困难模式",
       "group": "扩展改动",
       "roleParent": null,
-      "line": 1541,
+      "line": 1570,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 355
+          "line": 370
         },
         {
           "file": "content/ray/shengwuqishilu.lua",
@@ -25574,11 +25853,11 @@
       "mode": "困难模式",
       "group": "扩展改动",
       "roleParent": null,
-      "line": 1545,
+      "line": 1574,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 355
+          "line": 370
         },
         {
           "file": "content/ray/shengwuqishilu.lua",
@@ -25711,11 +25990,11 @@
       "mode": "困难模式",
       "group": "扩展改动",
       "roleParent": null,
-      "line": 1547,
+      "line": 1576,
       "references": [
         {
           "file": "content/modmain.lua",
-          "line": 355
+          "line": 370
         },
         {
           "file": "content/ray/shengwuqishilu.lua",

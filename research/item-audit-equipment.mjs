@@ -136,12 +136,13 @@ export const patches = [
 
  item('shadow-thurible', '暗影香炉可汲取附近影怪的生命，补充自身燃料并修理骨头装备。', 'Shadow Thurible Has Light', [
   P('获取方式', '击败远古织影者获得。当前没有新增制作配方。'),
+  P('落水', '暗影香炉落水后会浮在水面，可以捡回。'),
   P('汲影', '香炉工作时每 2.5 秒检查 18 范围内的影怪和梦魇。生命超过 100 的目标每次失去 100 生命，为香炉贡献 1% 恢复量；生命不超过 100 时直接击杀，按剩余生命折算，并在清除原本掉落的情况下再增加 1%。被骨头头盔驱使的影怪不被汲取。'),
   P('恢复顺序', '汲取后先补香炉燃料，剩余恢复量用于持有者装备的骨头头盔、骨头盔甲。困难模式恢复量减半，且修理骨头装备要求主人具有暗影魔法。麦斯威尔按暗影装备等级增加恢复量，最低为两倍；老年旺达也为两倍。'),
   P('照明与携带', '有燃料时提供夜视与照明。手持或放在地上的香炉光照半径为 18。先装备香炉，再切换其他手持物品，香炉留在身上时仍可工作，跟随照明半径为 4；空手、香炉离开主人或燃料耗尽后结束跟随。'),
   P('困难模式燃料', '困难模式把燃料容量设为原版的 5 倍，燃烧速率为 2.5 倍，因此满燃料可持续时间为原版的 2 倍。'),
   config('暗影香炉汲影照明', '骨头头盔驱使影怪需另开“骨头头盔影怪助战”。')
- ], ['原版 scripts.zip：scripts/prefabs/stalker.lua、scripts/prefabs/thurible.lua'], ['enable hard mode', 'Bone Helm No Remove']),
+ ], ['content/common/ocean_item_recovery.lua', '原版 scripts.zip：scripts/prefabs/stalker.lua、scripts/prefabs/thurible.lua'], ['enable hard mode', 'Bone Helm No Remove']),
 
  item('bone-helm', '骨头头盔损坏后保留，可用噩梦燃料修理，并驱使附近影怪攻击敌人。', 'Bone Helm No Remove', [
   P('获取方式', '击败远古织影者获得，没有新增制作配方。'),

@@ -29,7 +29,7 @@ add('world-shadow-companions', '宠物的暗影分身', 'world', ['Shadow World'
 add('world-shadow-target', '暗影分身的仇恨与距离', 'world', ['Shadow Help Self','Shadow Protect Creatures','Shadow Prefab Setting','Shadow Epic Far Range','Epic Shadow Far Range','Shadow Harder Level'], '区分本体转移仇恨、分身共享目标和距离回收。', ['content/shadowworld.lua'], [
   p('本体转移目标', '“生物转移敌人仇恨”默认仅无害生物生效；还可选择非 Boss、Boss 残血时或大部分生物。提高范围会改变随从与本体 / 分身之间的攻击分配。', '“暗影分身保护本体”开启后，分身即使已有自己的目标，也继续共享本体仇恨。关闭时保留分身独立目标行为。'),
   p('离开战场', '本体远离 Boss 的驱散距离默认 200；“分身远离回归距离”默认无限。普通生物的相应距离按 50 处理。应区分本体脱战回收分身和分身离开本体后的回归。', '“暗影世界第二周目”默认关闭；启用后，裂隙开启会使失去目标或脱离加载的分身回到本体附近。'),
-  p('界面开关与当前实现的差异', '“暗影分身仇恨玩家”的配置名称与运行读取名称不一致：界面保存的是 Shadow Prefab Setting，暗影世界读取的是 Shadow Attack Player Actively。当前源码未发现两者的转换，因此不能依靠界面这一项断言主动仇恨规则已经切换。')
+  p('暗影分身仇恨玩家', '默认关闭。开启后，符合生成条件的生物即使没有攻击目标也能放出分身。有攻击能力的分身会主动寻找玩家，随从除外。开启“暗影分身保护本体”时，分身仍按本体的仇恨规则行动。')
 ], ['Shadow World']);
 
 add('world-shadow-weaken', '虚弱之影与特殊分身', 'world', ['shadow_nerf'], '弱化分身的生命、伤害、体型和攻击频率，并为部分 Boss 使用单独规则。', ['content/shadow_nerf.lua'], [
@@ -61,12 +61,12 @@ add('world-admin-control', '允许作弊与房间管理', 'world', ['ban op'], '
 ]);
 
 add('world-seasons', '混乱之季与季节温度', 'world', ['random_seasons','weather_change'], '季节顺序、月亮风暴和连续恶劣季节共同影响世界温度。', ['content/weather/seasons.lua','content/weather/weather.lua'], [
-  t('混乱之季档位', ['值','实际规则'], [['关闭','不额外启用随机季节。'],['-1','通常混乱，启用原版月亮风暴时停止混乱。'],['-2','仅启用原版月亮风暴时通常混乱。'],['-3（默认）','仅启用原版月亮风暴时通常混乱。此档菜单写着恶劣混乱，实际运行与 −2 相同。'],['-4','始终混乱，启用原版月亮风暴时转为恶劣混乱。'],['-5','始终恶劣混乱。']]),
+  t('混乱之季档位', ['值','实际规则'], [['关闭','不额外启用随机季节。'],['-1','通常混乱，启用原版月亮风暴时停止混乱。'],['-2','仅启用原版月亮风暴时通常混乱。'],['-3（默认）','仅在原版月亮风暴存在时恶劣混乱。'],['-4','始终混乱，启用原版月亮风暴时转为恶劣混乱。'],['-5','始终恶劣混乱。']]),
   p('正常混乱与恶劣混乱', '正常混乱每次抽取与当前不同的下一季。恶劣混乱允许再次抽到同一季，候选池中秋季 1 份、其余三季各 3 份。', '原版月亮风暴已有启动任务或当前活动区域时，季节模块就会按月亮风暴状态计算。随机季节的温度还取决于前一季与后一季，连续冬季或夏季的温度曲线会随之调整。'),
   p('世界温度与兼容', '该天气体系的季节曲线使用冬季 −25、夏季 95 的基础极值；实际世界温度还会受昼夜、天气与连续季节过渡影响。', '季节模块在困难模式天气分类开启时加载，混乱关闭不等于整个天气分类关闭。启用岛屿冒险时，热带季节规则仅用于对应世界。2.8.14.98.2 修复地表误套用热带规则可能导致的开档崩溃。')
 ], weather);
 configNotes.weather_change={requires:hard,paragraphs:['这是天气分类总开关。启用后加载天气公共逻辑与季节模块，并根据各子项加载长夜、温度、湿度、风暴等；关闭某个子项不等于恢复全部原版季节规则。']};
-configNotes.random_seasons={status:'mismatch',requires:weather,paragraphs:['默认 −3 档仅在启用原版月亮风暴时进入通常混乱，实际与 −2 相同。恶劣候选池仅由 −5 或月亮风暴期间的 −4 使用。通常混乱抽取的下一季必须与当前季节不同。']};
+configNotes.random_seasons={requires:weather,paragraphs:['默认 −3 档仅在原版月亮风暴存在时进入恶劣混乱。−4 档平时通常混乱，原版月亮风暴期间恶劣混乱。−5 档始终恶劣混乱。通常混乱抽取的下一季必须与当前季节不同。']};
 
 add('world-long-night', '漫漫长夜', 'world', ['dusk_change'], '缩短黄昏和两种经典黑暗模式。', ['content/weather/dusk.lua'], [
   t('三个启用档位', ['选择','效果'], [['启用（默认）','普通四季有昼夜时，秋、冬、春的黄昏最多分别保留 2、1、3 段，超出的段数转为黑夜。夏季沿用现有时长。'],['经典 -1','黄昏使用夜间光照，查理判定会忽略夜视。'],['经典 -2','黄昏使用夜间光照，保留原有夜视判定。']]),
@@ -102,7 +102,7 @@ add('world-summer', '夏季风暴', 'world', ['summer_change'], '夏季短时风
 
 add('world-winter', '冬季寒光与雪球雪', 'world', ['winter_change'], '冬季黄昏、夜晚和洞穴中的冷光源，以及可选雪球降雪。', ['content/weather/winter.lua'], [
   p('寒光出现', '冬季黄昏、夜晚或洞穴中，活着的玩家会在阶段变化后触发附近冷光源生成。应使用火焰与热源应对，而不是只看自己是否携带照明。'),
-  p('雪球雪档位', '普通启用默认包括雪球雪；另一启用档关闭雪球雪而保留寒光。雪球对火堆的特殊处理会扣除约 33% 燃料，低燃料时还会转入原有处理。', '对玩家的降温按保暖区间削弱：低于 240 使用完整降温，240～359 使用一半，达到 360 时这一额外降温为零。当前冰冻层数代码并未使用旁边计算的保暖折扣变量，不能据此承诺高保暖完全免冻。'),
+  p('雪球雪档位', '普通启用默认包括雪球雪；另一启用档关闭雪球雪而保留寒光。雪球对火堆的特殊处理会扣除约 33% 燃料，低燃料时还会转入原有处理。', '雪球的降温受保暖值影响。低于 240 承受全额降温，达到 240 减半，达到 360 后不再降温。保暖值对雪球的冰冻层数不起作用。'),
   p('洞穴热源', '热区喷孔在冬季使用冷态热量；不能继续把它当作其他季节同样强度的热源。')
 ], weather);
 
@@ -244,11 +244,9 @@ add('creature-centipede', '巨荒蜈蚣死亡分裂', 'creatures', ['shadowthral
   p('配置范围', '它有独立开关，并受困难模式与怪物改动总开关约束；“墨荒加强”不是这个入口的上级开关。')
 ], monsters);
 
-add('creature-mimicreep', '拟态蠕虫复制选项的当前状态', 'creatures', ['mimicreep'], '该配置仍显示在界面，但本分支对应限制代码已停用。', ['content/monster/mimicreep.lua'], [
-  p('界面说明与实际状态', '界面描述为限制复制部分魔杖和护符；但当前拟态蠕虫文件中，添加排除标签和修改候选表的业务代码均被注释。'),
-  p('如何理解', '本模组这一开关目前没有加载所描述的额外复制限制。最终能否复制仍应看当前游戏与其他模组，不应把观察到的限制直接归功于此选项。')
+add('creature-mimicreep', '拟态蠕虫', 'creatures', ['mimicreep'], '拟态蠕虫会复制地上的装备。', ['content/monster/mimicreep.lua'], [
+  p('模组开关', '当前版本里，「拟态蠕虫」开关还没有生效，装备仍按原版规则复制。')
 ], monsters);
-configNotes.mimicreep={status:'inactive',requires:monsters,paragraphs:['当前 content/monster/mimicreep.lua 中修改复制候选与添加排除标签的代码全部被注释。配置仍存在，但本模组此开关不再执行界面所述的额外限制。']};
 
 add('creature-treeguards', '树精、毒桦栗树与蘑菇地精', 'creatures', ['leif'], '树精强化同时联动森林生物、树苗与月亮孢子。', ['content/epic/leif.lua'], [
   p('森林协同', '树精具有森林恢复、树苗突击与群体联动；毒桦栗树也有转换分支。树精死亡与周围同类状态会参与处理。'),
@@ -427,10 +425,10 @@ add('world-apocalypse', '怪物启示录与长期成长', 'world', ['shengwuqish
 configNotes['Shadow World'].requires=[];
 configNotes['Shadow Animals']={requires:['Shadow World'],paragraphs:['false 在这一配置中表示“大部分”，不是关闭；关闭困难模式会把运行范围强制改为宠物白名单。']};
 configNotes['Shadow Regen Period']={requires:['Shadow World'],paragraphs:['单位为秒。默认 480；界面“1”保存 false，但运行入口会转换为最短 1 秒。分身削弱可能为部分 Boss 覆盖为固定 1440 秒。']};
-configNotes['Shadow Prefab Setting']={status:'mismatch',requires:['Shadow World'],paragraphs:['界面配置键为 Shadow Prefab Setting，运行代码读取 Shadow Attack Player Actively，当前未找到名称映射。不能承诺切换这一界面选项就会切换分身主动仇恨。']};
+configNotes['Shadow Prefab Setting']={requires:['Shadow World'],paragraphs:['默认关闭。开启后，符合条件且有攻击能力的分身可以主动寻找玩家。随从仍按原有规则行动。']};
 configNotes['Random sized beefalo'].requires=['Random Sized'];
 configNotes.rain_change={requires:weather,paragraphs:['玩家常规潮湿增长在 -1/-2 档分别乘 3/6。地表春夏秋冬降水规模分别为 8/0.5/1/8 或 16/1/2/16；洞穴分别为 32/2/4/32 或 64/4/8/64，另受世界天气与随机季节调整。']};
-configNotes.winter_change={status:'mismatch',requires:weather,paragraphs:['普通档包括雪球雪，-1 档禁用雪球雪。雪球的降温随保暖区间衰减，但代码计算的冰冻层数折扣变量未实际传入，不能认为高保暖完全免疫冰冻。热区喷孔冬季使用冷态热量。']};
+configNotes.winter_change={status:'mismatch',requires:weather,paragraphs:['普通档包括雪球雪，-1 档禁用雪球雪。雪球的降温受保暖值影响。低于 240 承受全额降温，达到 240 减半，达到 360 后不再降温。保暖值对雪球的冰冻层数不起作用。','热区喷孔冬季使用冷态热量。']};
 configNotes.toadstool={status:'mismatch',requires:monsters,paragraphs:['生命减半仅在简单模式同时开启时执行，单开困难模式不会减半。其他强化包括双爆、季节毒雾、种树加快、脱战回血与回巢。']};
 configNotes.pig_boss={status:'mismatch',requires:[...monsters,'poor_armor'],paragraphs:['紫宝石触发特殊猪人挑战。冰冻和催眠设置为 20 抗性而非绝对免疫；添加位面实体抵抗的语句已注释，界面“位面抵抗、免疫负面”不能按字面全盘套用。']};
 configNotes['UM Widow']={status:'mismatch',requires:monsters,paragraphs:['需要永不妥协相应对象。触手尖刺开大/中/小茧概率为20%/30%/40%，尝试耗尽剩余耐久。奖励惩罚监听中的武器判断相互矛盾，不能把“奖励减少、概率活物”视为可靠的实际结果。']};
@@ -481,9 +479,10 @@ add('world-player-temperature', '玩家温度与保温削弱', 'world', ['temper
 ], weather);
 configNotes.temperature_change={requires:weather,paragraphs:['默认-1扣240保暖隔热，玩家低于5℃受冷伤、过热阈值较原值降低5℃；-2对应扣480、冷伤阈值10℃及过热阈值降低10℃。冬夏负保温会加快恶劣方向温变，另改暖石供热与海树催长成本。']};
 
-add('world-ocean-adventure', '冒险之海与海盗宝藏', 'world', ['oceanlife'], '沉底奖励、猴岛海盗、藏宝图与船上火坑共同改变航海收益和风险。', ['content/tech/oceanlife.lua'], [
+add('world-ocean-adventure', '冒险之海与海盗宝藏', 'world', ['oceanlife'], '沉底奖励、猴岛海盗、藏宝图与船上火坑共同改变航海收益和风险。', ['content/tech/oceanlife.lua','content/common/ocean_item_recovery.lua','content/scripts/prefabs/oceanlostandfound2hm.lua'], [
   p('沉底宝藏与海盗', '默认开启，依赖困难模式科技改动。生成沉底宝藏时有 20% 概率尝试塞入额外装备；奖池包括常用装备、传送魔杖、三叉戟、启迪之冠等，重复条目使各物品并非等概率。', '第一次被登记为找到寄居蟹隐士时会安排海盗袭击；打捞沉底宝箱事件有 2.5% 概率触发附近海盗，并为该绞盘记录480秒冷却。船长生命乘2、水手猴生命乘1.5，猴岛附近的海盗船不会按普通方式离开。'),
   p('藏宝图的用途', '已有原版 X 宝藏时，再读海盗地图可尝试另开沉底宝藏或新 X 宝藏；新的陆地宝藏避开月岛。地图也可交给猴岛女王，解除诅咒的数量按每张4个计算，香蕉按每个1个计算。', '海盗头巾在制图桌擦除时有25%概率得到地图；木头短剑被用作燃料后有15%概率给使用者掉落地图。夹夹绞盘蓝图被设置到隐士商店第五级科技，实际购买仍看商店解锁状态。'),
+  p('落水失物', '暗影香炉落水后会浮在水面。玩家落水时掉出的物品如果沉进海里，会暂存到下次挖开原版 X 宝藏。只要有失物，海盗地图就会标出那个 X。失物随地表存档保存，关闭“冒险之海”也能找回。'),
   p('火坑与档位', '普通档包含船上火焰降档风险：已燃烧足够时间、火焰从较高级降至至少第三级时可能触发；夏季可使船体冒烟，其他季节另有33%概率小漏水并清空该火源燃料。海难防风火炉被排除。', '-1 档只取消这里的船上火堆风险，保留宝藏和海盗等机制。旧注释说瓶中信不能发现隐士岛的旧限制已注释；首完贝壳任务额外袭击分支也存在实体与字符串比较问题，不应当作必然事件。')
 ], technology);
 configNotes.oceanlife={requires:technology,paragraphs:['true加载宝藏、海盗、地图、猴岛与船火机制；-1仅禁用船火降档风险。沉底奖励20%抽取额外奖池，打捞宝箱事件2.5%触发海盗。瓶中信禁止找隐士岛的旧限制已注释。']};

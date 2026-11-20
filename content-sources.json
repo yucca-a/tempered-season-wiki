@@ -1,6 +1,6 @@
 {
-  "version": "2.8.15.0.34",
-  "checkedAt": "2026-11-13",
+  "version": "2.8.15.1.0",
+  "checkedAt": "2026-11-20",
   "targetedRefresh": [
     "role-winona",
     "winona-toolbox",
@@ -75,7 +75,8 @@
     "world-shadow-companions",
     "dried-berries",
     "resource-regrowth",
-    "tempered-prefab-codes"
+    "tempered-prefab-codes",
+    "mod-interface"
   ],
   "articles": [
     {
@@ -108,8 +109,7 @@
         "epic_armor_5",
         "epic_ruin",
         "difficulty_rating",
-        "贝爷求生",
-        "德爷生存"
+        "贝爷求生"
       ],
       "auditedVersion": "2.8.15.0.25"
     },
@@ -436,8 +436,10 @@
         "Show Mod Icon In Game",
         "Disable Outdate Tip",
         "player tags limit",
-        "ignore client error"
-      ]
+        "ignore client error",
+        "UI Dragging"
+      ],
+      "auditedVersion": "2.8.15.0.46"
     },
     {
       "id": "frost-core",
@@ -1109,6 +1111,7 @@
       "id": "shadow-thurible",
       "source": [
         "content/easy_other/easy_equipments.lua",
+        "content/common/ocean_item_recovery.lua",
         "原版 scripts.zip：scripts/prefabs/stalker.lua、scripts/prefabs/thurible.lua"
       ],
       "configKeys": [
@@ -1990,23 +1993,32 @@
         "content/common/wx78_mode.lua",
         "content/common/wx78_recovery.lua",
         "content/scripts/wx78config2hm.lua",
-        "content/scripts/wx78draft2hm.lua"
+        "content/scripts/wx78draft2hm.lua",
+        "content/scripts/wx78draftmotion2hm.lua",
+        "content/scripts/wx78draftpower2hm.lua"
       ],
       "configKeys": [
         "enable easy mode",
         "role_easy",
         "enable hard mode",
         "role_nerf",
-        "wx78_easy",
+        "WX-78 Easy",
         "WX-78 Safe Remove Module",
         "WX-78 Integrated Upgrade Module Level",
+        "WX-78 Circuit Salvage",
         "WX-78 Eat Gears InCrease Data",
         "wx78_module_pack",
         "WX-78 Drone Optimization",
-        "wx-78",
+        "WX-78 Hard",
         "Random Sized",
         "right self need ctrl",
-        "WX-78 Mode"
+        "WX-78 Circuit Power",
+        "WX-78 Circuit Durability",
+        "WX-78 Circuit Balance",
+        "WX-78 Thermal Circuits",
+        "WX-78 Circuit Ram",
+        "WX-78 Circuit Synergy",
+        "WX-78 Moongleam Chassis"
       ],
       "auditedVersion": "2.8.15.0.34"
     },
@@ -2387,9 +2399,10 @@
         "Wanda Resurrect Self",
         "Wanda Dread Watch",
         "wanda",
-        "right self need ctrl"
+        "right self need ctrl",
+        "Wanda Watch Naming"
       ],
-      "auditedVersion": "2.8.15.0.34"
+      "auditedVersion": "2.8.15.0.46"
     },
     {
       "id": "role-wonkey",
@@ -3977,7 +3990,9 @@
       "source": [
         "content/modinfo.lua",
         "content/modmain.lua",
-        "content/tech/oceanlife.lua"
+        "content/tech/oceanlife.lua",
+        "content/common/ocean_item_recovery.lua",
+        "content/scripts/prefabs/oceanlostandfound2hm.lua"
       ],
       "configKeys": [
         "oceanlife"
@@ -4265,13 +4280,13 @@
         "content/ray/deyeshengcun.lua"
       ],
       "configKeys": [
+        "Wilderness Survival",
         "贝爷求生",
         "种地种树需要书",
         "做饭需要书",
         "材料制造翻倍",
         "低san采集失败",
         "捡东西变慢",
-        "德爷生存",
         "料理禁止堆叠",
         "护甲失效",
         "难以冻结",
@@ -4279,7 +4294,7 @@
         "火把传热",
         "空挥武器"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.46"
     },
     {
       "id": "difficulty-rating",
@@ -4294,9 +4309,9 @@
         "difficulty_rating",
         "enable hard mode",
         "贝爷求生",
-        "德爷生存"
+        "Wilderness Survival"
       ],
-      "auditedVersion": "2.8.15.0.23"
+      "auditedVersion": "2.8.15.0.46"
     },
     {
       "id": "um-performance-compatibility",
@@ -4460,6 +4475,90 @@
       ],
       "configKeys": [],
       "auditedVersion": "2.8.15.0.34"
+    },
+    {
+      "id": "update-2-8-15-1-0",
+      "source": [
+        "workshop/update-notes-2.8.15.1.0.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-46",
+      "source": [
+        "workshop/update-notes-2.8.15.0.46.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-45",
+      "source": [
+        "workshop/update-notes-2.8.15.0.45.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-44",
+      "source": [
+        "workshop/update-notes-2.8.15.0.44.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-43",
+      "source": [
+        "workshop/update-notes-2.8.15.0.43.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-41",
+      "source": [
+        "workshop/update-notes-2.8.15.0.41.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-40",
+      "source": [
+        "workshop/update-notes-2.8.15.0.40.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-39",
+      "source": [
+        "workshop/update-notes-2.8.15.0.39.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-38",
+      "source": [
+        "workshop/update-notes-2.8.15.0.38.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-37",
+      "source": [
+        "workshop/update-notes-2.8.15.0.37.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-36",
+      "source": [
+        "workshop/update-notes-2.8.15.0.36.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-0-35",
+      "source": [
+        "workshop/update-notes-2.8.15.0.35.txt"
+      ],
+      "configKeys": []
     },
     {
       "id": "update-2-8-15-0-34",
@@ -4746,204 +4845,213 @@
     {
       "key": "Language In Game",
       "id": "cfg-0dde00f06efd",
-      "sourceLine": 189,
+      "sourceLine": 198,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Show Mod Icon In Game",
       "id": "cfg-545fa3cd3fe3",
-      "sourceLine": 192,
+      "sourceLine": 201,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Disable Outdate Tip",
       "id": "cfg-5f52adc9beae",
-      "sourceLine": 194,
+      "sourceLine": 203,
       "status": "documented",
       "requires": []
     },
     {
       "key": "player tags limit",
       "id": "cfg-91dabffe6021",
-      "sourceLine": 199,
+      "sourceLine": 208,
       "status": "documented",
       "requires": []
     },
     {
       "key": "ignore client error",
       "id": "cfg-6a7585775341",
-      "sourceLine": 201,
+      "sourceLine": 210,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Container Sort",
       "id": "cfg-40b854deacb7",
-      "sourceLine": 203,
+      "sourceLine": 212,
       "status": "documented",
       "requires": []
     },
     {
       "key": "World Exchange",
       "id": "cfg-7602cfc6ce36",
-      "sourceLine": 213,
+      "sourceLine": 222,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Items collect",
       "id": "cfg-8f8fe352b1e6",
-      "sourceLine": 225,
+      "sourceLine": 234,
+      "status": "documented",
+      "requires": []
+    },
+    {
+      "key": "UI Dragging",
+      "id": "cfg-925e07028264",
+      "sourceLine": 238,
       "status": "documented",
       "requires": []
     },
     {
       "key": "enable easy mode",
       "id": "cfg-a5f36b151bee",
-      "sourceLine": 229,
+      "sourceLine": 241,
       "status": "documented",
       "requires": []
     },
     {
       "key": "enable hard mode",
       "id": "cfg-15029e317d71",
-      "sourceLine": 230,
+      "sourceLine": 242,
       "status": "documented",
       "requires": []
     },
     {
       "key": "difficulty_rating",
       "id": "cfg-0dee7f03de5f",
-      "sourceLine": 236,
+      "sourceLine": 248,
+      "status": "documented",
+      "requires": []
+    },
+    {
+      "key": "Wilderness Survival",
+      "id": "cfg-717596859000",
+      "sourceLine": 254,
       "status": "documented",
       "requires": []
     },
     {
       "key": "贝爷求生",
       "id": "cfg-6884d75b5e82",
-      "sourceLine": 242,
+      "sourceLine": 257,
       "status": "documented",
-      "requires": []
+      "requires": [
+        "Wilderness Survival"
+      ]
     },
     {
       "key": "种地种树需要书",
       "id": "cfg-11dc9a0e9c17",
-      "sourceLine": 246,
+      "sourceLine": 261,
       "status": "documented",
       "requires": [
-        "贝爷求生"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "做饭需要书",
       "id": "cfg-edd9e70db382",
-      "sourceLine": 249,
+      "sourceLine": 264,
       "status": "documented",
       "requires": [
-        "贝爷求生"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "材料制造翻倍",
       "id": "cfg-ac5c7ae125e5",
-      "sourceLine": 252,
+      "sourceLine": 267,
       "status": "documented",
       "requires": [
-        "贝爷求生"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "低san采集失败",
       "id": "cfg-a5cbae4ca8e3",
-      "sourceLine": 255,
+      "sourceLine": 270,
       "status": "documented",
       "requires": [
-        "贝爷求生"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "捡东西变慢",
       "id": "cfg-b72f88c0efec",
-      "sourceLine": 258,
+      "sourceLine": 273,
       "status": "documented",
       "requires": [
-        "贝爷求生"
+        "Wilderness Survival"
       ]
-    },
-    {
-      "key": "德爷生存",
-      "id": "cfg-b54d3357c820",
-      "sourceLine": 262,
-      "status": "documented",
-      "requires": []
     },
     {
       "key": "料理禁止堆叠",
       "id": "cfg-b4387fae0447",
-      "sourceLine": 266,
+      "sourceLine": 276,
       "status": "documented",
       "requires": [
-        "德爷生存"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "护甲失效",
       "id": "cfg-f6168bc3e4f7",
-      "sourceLine": 269,
+      "sourceLine": 279,
       "status": "documented",
       "requires": [
-        "德爷生存"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "难以冻结",
       "id": "cfg-bf5c626e35da",
-      "sourceLine": 273,
+      "sourceLine": 283,
       "status": "documented",
       "requires": [
-        "德爷生存"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "下雨禁火",
       "id": "cfg-4e26232cf212",
-      "sourceLine": 277,
+      "sourceLine": 287,
       "status": "documented",
       "requires": [
-        "德爷生存"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "火把传热",
       "id": "cfg-ee950d93b146",
-      "sourceLine": 281,
+      "sourceLine": 291,
       "status": "documented",
       "requires": [
-        "德爷生存"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "空挥武器",
       "id": "cfg-3a9ef22e6df7",
-      "sourceLine": 285,
+      "sourceLine": 295,
       "status": "documented",
       "requires": [
-        "德爷生存"
+        "Wilderness Survival"
       ]
     },
     {
       "key": "Random Sized",
       "id": "cfg-3a9c822c71e4",
-      "sourceLine": 290,
+      "sourceLine": 300,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Random sized beefalo",
       "id": "cfg-24e64360c7b9",
-      "sourceLine": 293,
+      "sourceLine": 303,
       "status": "documented",
       "requires": [
         "Random Sized"
@@ -4952,28 +5060,28 @@
     {
       "key": "ban op",
       "id": "cfg-44acb9062433",
-      "sourceLine": 298,
+      "sourceLine": 308,
       "status": "documented",
       "requires": []
     },
     {
       "key": "World ecosystem",
       "id": "cfg-c5018148b39a",
-      "sourceLine": 302,
+      "sourceLine": 312,
       "status": "documented",
       "requires": []
     },
     {
       "key": "World lose",
       "id": "cfg-f7ef9ab9c61e",
-      "sourceLine": 306,
+      "sourceLine": 316,
       "status": "documented",
       "requires": []
     },
     {
       "key": "World Unlock",
       "id": "cfg-3a2afa677830",
-      "sourceLine": 310,
+      "sourceLine": 320,
       "status": "documented",
       "requires": [
         "World lose"
@@ -4982,14 +5090,14 @@
     {
       "key": "Shadow World",
       "id": "cfg-3f1a9c843088",
-      "sourceLine": 315,
+      "sourceLine": 325,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Shadow Animals",
       "id": "cfg-a6d97205c3ed",
-      "sourceLine": 318,
+      "sourceLine": 328,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -4998,7 +5106,7 @@
     {
       "key": "Shadow Num Limit",
       "id": "cfg-e926d8f35fcd",
-      "sourceLine": 336,
+      "sourceLine": 346,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -5007,7 +5115,7 @@
     {
       "key": "Shadow Regen Period",
       "id": "cfg-7d9bcf9aae94",
-      "sourceLine": 339,
+      "sourceLine": 349,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -5016,7 +5124,7 @@
     {
       "key": "Shadow Help Self",
       "id": "cfg-8ae48e480378",
-      "sourceLine": 341,
+      "sourceLine": 351,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -5025,7 +5133,7 @@
     {
       "key": "Shadow Protect Creatures",
       "id": "cfg-07be8235eb65",
-      "sourceLine": 354,
+      "sourceLine": 364,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -5034,8 +5142,8 @@
     {
       "key": "Shadow Prefab Setting",
       "id": "cfg-00f4f472aa81",
-      "sourceLine": 357,
-      "status": "mismatch",
+      "sourceLine": 367,
+      "status": "documented",
       "requires": [
         "Shadow World"
       ]
@@ -5043,7 +5151,7 @@
     {
       "key": "Shadow Epic Far Range",
       "id": "cfg-21e0b81ebb4b",
-      "sourceLine": 360,
+      "sourceLine": 370,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -5052,7 +5160,7 @@
     {
       "key": "Epic Shadow Far Range",
       "id": "cfg-74838f008a18",
-      "sourceLine": 364,
+      "sourceLine": 374,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -5061,7 +5169,7 @@
     {
       "key": "Shadow Harder Level",
       "id": "cfg-a6419c39af86",
-      "sourceLine": 368,
+      "sourceLine": 378,
       "status": "documented",
       "requires": [
         "Shadow World"
@@ -5070,7 +5178,7 @@
     {
       "key": "shadow_nerf",
       "id": "cfg-549d53e9dd7f",
-      "sourceLine": 371,
+      "sourceLine": 381,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -5080,7 +5188,7 @@
     {
       "key": "Science Machine Refine Materials",
       "id": "cfg-207059e80845",
-      "sourceLine": 377,
+      "sourceLine": 387,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5089,7 +5197,7 @@
     {
       "key": "Alchemy Engine Redeem Gold Nugget",
       "id": "cfg-a16ad7563753",
-      "sourceLine": 379,
+      "sourceLine": 389,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5098,7 +5206,7 @@
     {
       "key": "Shadow Manipulator Break Down Objects",
       "id": "cfg-fc823793af2b",
-      "sourceLine": 382,
+      "sourceLine": 392,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5107,7 +5215,7 @@
     {
       "key": "Prestihatitator Redeem shadowmagic Tag",
       "id": "cfg-471583149e73",
-      "sourceLine": 384,
+      "sourceLine": 394,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5116,7 +5224,7 @@
     {
       "key": "Terra Firma Tamper Redeem Desert Stone",
       "id": "cfg-60afe5d6a1d2",
-      "sourceLine": 389,
+      "sourceLine": 399,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5125,7 +5233,7 @@
     {
       "key": "Tackle Receptacle Use Fish Redeem",
       "id": "cfg-1848673074e3",
-      "sourceLine": 392,
+      "sourceLine": 402,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5134,7 +5242,7 @@
     {
       "key": "Cartographer's Desk Make Blueprint",
       "id": "cfg-f365ff25e59e",
-      "sourceLine": 397,
+      "sourceLine": 407,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5143,7 +5251,7 @@
     {
       "key": "Make Cooking Recipe Card",
       "id": "cfg-737628a56e6b",
-      "sourceLine": 401,
+      "sourceLine": 411,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5152,7 +5260,7 @@
     {
       "key": "mannequin swap follower",
       "id": "cfg-c08d0b701dc5",
-      "sourceLine": 403,
+      "sourceLine": 413,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5161,7 +5269,7 @@
     {
       "key": "townportal use sandstone activate",
       "id": "cfg-907e8dc92fe3",
-      "sourceLine": 406,
+      "sourceLine": 416,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5170,7 +5278,7 @@
     {
       "key": "dragonfly furnace stewer",
       "id": "cfg-5102d99d4bfd",
-      "sourceLine": 416,
+      "sourceLine": 426,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5179,7 +5287,7 @@
     {
       "key": "Portable Crock Pot Multi",
       "id": "cfg-4572f108ff20",
-      "sourceLine": 419,
+      "sourceLine": 429,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -5189,7 +5297,7 @@
     {
       "key": "mushroom_light",
       "id": "cfg-0072c004072b",
-      "sourceLine": 420,
+      "sourceLine": 430,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5198,7 +5306,7 @@
     {
       "key": "meatrack_dry",
       "id": "cfg-1367b25f3a0a",
-      "sourceLine": 421,
+      "sourceLine": 431,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5207,7 +5315,7 @@
     {
       "key": "eyeturret",
       "id": "cfg-f1332687492b",
-      "sourceLine": 424,
+      "sourceLine": 434,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5216,7 +5324,7 @@
     {
       "key": "Sleep In Tent Even Danger",
       "id": "cfg-6617c92ac185",
-      "sourceLine": 428,
+      "sourceLine": 438,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5225,7 +5333,7 @@
     {
       "key": "The tent supports multiple people sharing it",
       "id": "cfg-f221f4b1a243",
-      "sourceLine": 431,
+      "sourceLine": 441,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5234,7 +5342,7 @@
     {
       "key": "Haunt Telltale Heart To Revive",
       "id": "cfg-0b82d6a07d2b",
-      "sourceLine": 435,
+      "sourceLine": 445,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5243,7 +5351,7 @@
     {
       "key": "Construction Amulet Repair Equip",
       "id": "cfg-be75b46f2192",
-      "sourceLine": 437,
+      "sourceLine": 447,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5252,7 +5360,7 @@
     {
       "key": "Use Dock kit in Cave",
       "id": "cfg-04e8b9cf0208",
-      "sourceLine": 441,
+      "sourceLine": 451,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5261,7 +5369,7 @@
     {
       "key": "Spider Gland Can Heal Monster Meat",
       "id": "cfg-db8b89275b5d",
-      "sourceLine": 443,
+      "sourceLine": 453,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5270,7 +5378,7 @@
     {
       "key": "Use Fire To Cook",
       "id": "cfg-b82c981ab279",
-      "sourceLine": 445,
+      "sourceLine": 455,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5279,7 +5387,7 @@
     {
       "key": "pickup irreplaceable item",
       "id": "cfg-16732ba3481d",
-      "sourceLine": 447,
+      "sourceLine": 457,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5288,7 +5396,7 @@
     {
       "key": "Terra Easter egg",
       "id": "cfg-770db062fff9",
-      "sourceLine": 449,
+      "sourceLine": 459,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5297,14 +5405,14 @@
     {
       "key": "um_patch",
       "id": "cfg-f18c5f17bf61",
-      "sourceLine": 450,
+      "sourceLine": 460,
       "status": "documented",
       "requires": []
     },
     {
       "key": "um_weather_particles2hm",
       "id": "cfg-1065249c7ff2",
-      "sourceLine": 453,
+      "sourceLine": 463,
       "status": "documented",
       "requires": [
         "um_patch"
@@ -5313,7 +5421,7 @@
     {
       "key": "luck value",
       "id": "cfg-49f842a7937c",
-      "sourceLine": 464,
+      "sourceLine": 474,
       "status": "mismatch",
       "requires": [
         "enable hard mode"
@@ -5322,7 +5430,7 @@
     {
       "key": "Reskin Tool Upgrade",
       "id": "cfg-d45c507c1750",
-      "sourceLine": 467,
+      "sourceLine": 477,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5331,7 +5439,7 @@
     {
       "key": "Deck Illuminator Equip Head",
       "id": "cfg-9e9a6ace2148",
-      "sourceLine": 469,
+      "sourceLine": 479,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5340,7 +5448,7 @@
     {
       "key": "Glass Cutter Leap Attack",
       "id": "cfg-e643eb5afe88",
-      "sourceLine": 472,
+      "sourceLine": 482,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5349,7 +5457,7 @@
     {
       "key": "Nightsword Infused",
       "id": "cfg-71780f523335",
-      "sourceLine": 476,
+      "sourceLine": 486,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5358,7 +5466,7 @@
     {
       "key": "Thulecite Equip Parry",
       "id": "cfg-c41e54bc33b3",
-      "sourceLine": 478,
+      "sourceLine": 488,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5367,7 +5475,7 @@
     {
       "key": "Multi Tool Is Almighty Tool",
       "id": "cfg-aed6d9cb8cd9",
-      "sourceLine": 482,
+      "sourceLine": 492,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5376,7 +5484,7 @@
     {
       "key": "Turf-Raiser Helm Plant Tree Cone",
       "id": "cfg-643d417bde48",
-      "sourceLine": 484,
+      "sourceLine": 494,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5385,7 +5493,7 @@
     {
       "key": "Shieldofterror Eat Owner",
       "id": "cfg-33b635bafd70",
-      "sourceLine": 486,
+      "sourceLine": 496,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5394,7 +5502,7 @@
     {
       "key": "Eyebrella Swell Shade",
       "id": "cfg-623ce7fd7e8b",
-      "sourceLine": 488,
+      "sourceLine": 498,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5403,7 +5511,7 @@
     {
       "key": "Scalemail Parry Freezable",
       "id": "cfg-978871c553a9",
-      "sourceLine": 490,
+      "sourceLine": 500,
       "status": "mismatch",
       "requires": [
         "enable easy mode"
@@ -5412,7 +5520,7 @@
     {
       "key": "Shadow Thurible Has Light",
       "id": "cfg-99c57054860b",
-      "sourceLine": 492,
+      "sourceLine": 502,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5421,7 +5529,7 @@
     {
       "key": "Bone Helm No Remove",
       "id": "cfg-14af2ef2e352",
-      "sourceLine": 494,
+      "sourceLine": 504,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5430,7 +5538,7 @@
     {
       "key": "Enlightened Crown Benefit From Spore",
       "id": "cfg-4f78e6cae3bc",
-      "sourceLine": 496,
+      "sourceLine": 506,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5439,7 +5547,7 @@
     {
       "key": "upgrade torch",
       "id": "cfg-71dbd0dcaeca",
-      "sourceLine": 503,
+      "sourceLine": 513,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5448,7 +5556,7 @@
     {
       "key": "Moongleam Weapon",
       "id": "cfg-03e635d8d306",
-      "sourceLine": 505,
+      "sourceLine": 515,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5457,7 +5565,7 @@
     {
       "key": "hivehat",
       "id": "cfg-61096e6ee3af",
-      "sourceLine": 507,
+      "sourceLine": 517,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5466,7 +5574,7 @@
     {
       "key": "Horizon Expandinator",
       "id": "cfg-242af8f9614b",
-      "sourceLine": 509,
+      "sourceLine": 519,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5475,7 +5583,7 @@
     {
       "key": "scraphat",
       "id": "cfg-7a75ff460e9f",
-      "sourceLine": 512,
+      "sourceLine": 522,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5484,7 +5592,7 @@
     {
       "key": "lunar shadow items",
       "id": "cfg-8814229d6760",
-      "sourceLine": 515,
+      "sourceLine": 525,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5493,14 +5601,14 @@
     {
       "key": "Celestial Jewel Upgrade Sword Lunarplant",
       "id": "cfg-010de46335b1",
-      "sourceLine": 518,
+      "sourceLine": 528,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Tackle Box Can Hold Role's Item",
       "id": "cfg-a32693d632b1",
-      "sourceLine": 521,
+      "sourceLine": 531,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5509,7 +5617,7 @@
     {
       "key": "boat use shadowheart upgrade",
       "id": "cfg-26a341078957",
-      "sourceLine": 523,
+      "sourceLine": 533,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5518,7 +5626,7 @@
     {
       "key": "beef_bell use orangegem upgrade",
       "id": "cfg-7d8c4fb02730",
-      "sourceLine": 525,
+      "sourceLine": 535,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5527,7 +5635,7 @@
     {
       "key": "New Hambat 2",
       "id": "cfg-aee974884379",
-      "sourceLine": 529,
+      "sourceLine": 539,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5536,7 +5644,7 @@
     {
       "key": "quick mast_malbatross",
       "id": "cfg-8158ccd94a5c",
-      "sourceLine": 532,
+      "sourceLine": 542,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5545,7 +5653,7 @@
     {
       "key": "elastispacer upgrade",
       "id": "cfg-0c8877be0ec7",
-      "sourceLine": 534,
+      "sourceLine": 544,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5554,14 +5662,14 @@
     {
       "key": "gelblob_storage_kit upgrade",
       "id": "cfg-3b2cfd1d2f1d",
-      "sourceLine": 537,
+      "sourceLine": 547,
       "status": "documented",
       "requires": []
     },
     {
       "key": "boat_bumper_crabking",
       "id": "cfg-e28e1575195b",
-      "sourceLine": 540,
+      "sourceLine": 550,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5570,7 +5678,7 @@
     {
       "key": "trap_teeth",
       "id": "cfg-e39bcb4ce76d",
-      "sourceLine": 543,
+      "sourceLine": 553,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5579,7 +5687,7 @@
     {
       "key": "Trap Guaranteed Catch",
       "id": "cfg-4a114ff0d8c5",
-      "sourceLine": 544,
+      "sourceLine": 554,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5588,7 +5696,7 @@
     {
       "key": "Minotaurhorn Enchant",
       "id": "cfg-70af5ae2d0dd",
-      "sourceLine": 547,
+      "sourceLine": 557,
       "status": "mismatch",
       "requires": [
         "enable easy mode"
@@ -5597,7 +5705,7 @@
     {
       "key": "Twiggy Tree Can Pickable",
       "id": "cfg-f20bf1a4e9f6",
-      "sourceLine": 551,
+      "sourceLine": 561,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5606,7 +5714,7 @@
     {
       "key": "Grass Gekko Regrow Grass",
       "id": "cfg-5b56caab5ab8",
-      "sourceLine": 553,
+      "sourceLine": 563,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5615,7 +5723,7 @@
     {
       "key": "Weed Product Can Plant",
       "id": "cfg-004d8882b5bb",
-      "sourceLine": 555,
+      "sourceLine": 565,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5624,7 +5732,7 @@
     {
       "key": "Glommer Eat Near Insects",
       "id": "cfg-a22c56fdc4bf",
-      "sourceLine": 557,
+      "sourceLine": 567,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5633,7 +5741,7 @@
     {
       "key": "Boulderbough",
       "id": "cfg-f5c033460c14",
-      "sourceLine": 558,
+      "sourceLine": 568,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -5644,7 +5752,7 @@
     {
       "key": "player_tomb",
       "id": "cfg-21b29fdfdd94",
-      "sourceLine": 560,
+      "sourceLine": 570,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5653,7 +5761,7 @@
     {
       "key": "sword_vortex2hm",
       "id": "cfg-e84e96b7f54c",
-      "sourceLine": 562,
+      "sourceLine": 572,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5662,7 +5770,7 @@
     {
       "key": "role_easy",
       "id": "cfg-2cd4e5df32a6",
-      "sourceLine": 565,
+      "sourceLine": 575,
       "status": "documented",
       "requires": [
         "enable easy mode"
@@ -5671,7 +5779,7 @@
     {
       "key": "More Skill Points",
       "id": "cfg-56790d6f0fc4",
-      "sourceLine": 566,
+      "sourceLine": 576,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5681,7 +5789,7 @@
     {
       "key": "wilson_easy",
       "id": "cfg-5ef2ba986fae",
-      "sourceLine": 570,
+      "sourceLine": 580,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5691,7 +5799,7 @@
     {
       "key": "Wilson 1 Science Bonus",
       "id": "cfg-b071ed848927",
-      "sourceLine": 571,
+      "sourceLine": 581,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5702,7 +5810,7 @@
     {
       "key": "Wilson Tech Bonus",
       "id": "cfg-07b12bfc6fdc",
-      "sourceLine": 572,
+      "sourceLine": 582,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -5713,7 +5821,7 @@
     {
       "key": "Wilson Skill Unlock",
       "id": "cfg-8b2af6b90e74",
-      "sourceLine": 575,
+      "sourceLine": 585,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5723,7 +5831,7 @@
     {
       "key": "Wilson Right Dodge",
       "id": "cfg-b810aa63dd64",
-      "sourceLine": 578,
+      "sourceLine": 588,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5734,7 +5842,7 @@
     {
       "key": "Wilson Right Self Everything Encyclopedia",
       "id": "cfg-114571e2314a",
-      "sourceLine": 580,
+      "sourceLine": 590,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5745,7 +5853,7 @@
     {
       "key": "ctrl disable right",
       "id": "cfg-05e8df5bdb45",
-      "sourceLine": 583,
+      "sourceLine": 593,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5755,7 +5863,7 @@
     {
       "key": "right self need ctrl",
       "id": "cfg-152537b8f0c7",
-      "sourceLine": 585,
+      "sourceLine": 595,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5765,7 +5873,7 @@
     {
       "key": "willow_easy",
       "id": "cfg-7b9f30ff9e3d",
-      "sourceLine": 587,
+      "sourceLine": 597,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5775,7 +5883,7 @@
     {
       "key": "Willow Attack Dry/Burning Enemy",
       "id": "cfg-11690e66f2c2",
-      "sourceLine": 588,
+      "sourceLine": 598,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5786,7 +5894,7 @@
     {
       "key": "Willow Right Self Pyrokinetics Explained",
       "id": "cfg-66efd476baaa",
-      "sourceLine": 592,
+      "sourceLine": 602,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5797,7 +5905,7 @@
     {
       "key": "Willow Fire Weapon Attack",
       "id": "cfg-457d0265abc1",
-      "sourceLine": 594,
+      "sourceLine": 604,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5808,7 +5916,7 @@
     {
       "key": "willow_improve",
       "id": "cfg-cee31707446e",
-      "sourceLine": 596,
+      "sourceLine": 606,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5819,7 +5927,7 @@
     {
       "key": "wolfgang_easy",
       "id": "cfg-eb9733551ff3",
-      "sourceLine": 599,
+      "sourceLine": 609,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5829,7 +5937,7 @@
     {
       "key": "Wolfgang break Powerup/down",
       "id": "cfg-4d3093f1b443",
-      "sourceLine": 600,
+      "sourceLine": 610,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5840,7 +5948,7 @@
     {
       "key": "Wolfgang Strong Battle Speedup",
       "id": "cfg-9d9d36849010",
-      "sourceLine": 601,
+      "sourceLine": 611,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5851,7 +5959,7 @@
     {
       "key": "Wolfgang Eat Food For Mightiness",
       "id": "cfg-0eb52e344000",
-      "sourceLine": 603,
+      "sourceLine": 613,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5862,7 +5970,7 @@
     {
       "key": "Wolfgang Pause Drain When Satiated",
       "id": "cfg-6e1533d0b00a",
-      "sourceLine": 605,
+      "sourceLine": 615,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5873,7 +5981,7 @@
     {
       "key": "wendy_easy",
       "id": "cfg-55ddf9626e32",
-      "sourceLine": 608,
+      "sourceLine": 618,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5883,7 +5991,7 @@
     {
       "key": "Wendy Low HP Abigail Damage",
       "id": "cfg-d66d60e042e0",
-      "sourceLine": 609,
+      "sourceLine": 619,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5894,7 +6002,7 @@
     {
       "key": "Pipspook Give Random Ghostly Elixir",
       "id": "cfg-9ce63f9da7ea",
-      "sourceLine": 611,
+      "sourceLine": 621,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5905,7 +6013,7 @@
     {
       "key": "Abigail Level Protect",
       "id": "cfg-58bcaddc4dd9",
-      "sourceLine": 613,
+      "sourceLine": 623,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5916,7 +6024,7 @@
     {
       "key": "Wendy Share Light From Abigail",
       "id": "cfg-0cb58b725d87",
-      "sourceLine": 615,
+      "sourceLine": 625,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5927,7 +6035,7 @@
     {
       "key": "Wendy Share Debuff From Abigail",
       "id": "cfg-58ec435d68ed",
-      "sourceLine": 619,
+      "sourceLine": 629,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5938,7 +6046,7 @@
     {
       "key": "wendy elixir_container",
       "id": "cfg-53f3a6b5ab95",
-      "sourceLine": 623,
+      "sourceLine": 633,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5947,16 +6055,9 @@
       ]
     },
     {
-      "key": "WX-78 Mode",
-      "id": "cfg-0e555972c192",
-      "sourceLine": 633,
-      "status": "documented",
-      "requires": []
-    },
-    {
-      "key": "wx78_easy",
-      "id": "cfg-cc6bd73b7d6b",
-      "sourceLine": 647,
+      "key": "WX-78 Easy",
+      "id": "cfg-1dec4da59b0f",
+      "sourceLine": 642,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -5966,62 +6067,73 @@
     {
       "key": "WX-78 Safe Remove Module",
       "id": "cfg-b19464c95c4e",
-      "sourceLine": 648,
+      "sourceLine": 644,
       "status": "documented",
       "requires": [
         "enable easy mode",
         "role_easy",
-        "wx78_easy"
+        "WX-78 Easy"
       ]
     },
     {
       "key": "WX-78 Integrated Upgrade Module Level",
       "id": "cfg-e7aee46b0ae6",
-      "sourceLine": 649,
+      "sourceLine": 646,
       "status": "documented",
       "requires": [
         "enable easy mode",
         "role_easy",
-        "wx78_easy"
+        "WX-78 Easy"
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Salvage",
+      "id": "cfg-e49b93813b53",
+      "sourceLine": 648,
+      "status": "documented",
+      "requires": [
+        "enable easy mode",
+        "role_easy",
+        "WX-78 Easy"
       ]
     },
     {
       "key": "WX-78 Eat Gears InCrease Data",
       "id": "cfg-e6e21858ac20",
-      "sourceLine": 651,
+      "sourceLine": 650,
       "status": "documented",
       "requires": [
         "enable easy mode",
         "role_easy",
-        "wx78_easy"
+        "WX-78 Easy"
       ]
     },
     {
       "key": "wx78_module_pack",
       "id": "cfg-239a6bb9fbe2",
-      "sourceLine": 653,
+      "sourceLine": 652,
       "status": "documented",
       "requires": [
         "enable easy mode",
         "role_easy",
-        "wx78_easy"
+        "WX-78 Easy"
       ]
     },
     {
       "key": "WX-78 Drone Optimization",
       "id": "cfg-7246eae16516",
-      "sourceLine": 656,
+      "sourceLine": 655,
       "status": "documented",
       "requires": [
         "enable easy mode",
         "role_easy",
-        "wx78_easy"
+        "WX-78 Easy"
       ]
     },
     {
       "key": "wickerbottom_easy",
       "id": "cfg-2c775ae08af5",
-      "sourceLine": 658,
+      "sourceLine": 657,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6031,7 +6143,7 @@
     {
       "key": "Wickerbottom Is Not Insomniac",
       "id": "cfg-896347a8f216",
-      "sourceLine": 659,
+      "sourceLine": 658,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6042,7 +6154,7 @@
     {
       "key": "Wickerbottom No Sanity Dapperness",
       "id": "cfg-2e10b5ccf646",
-      "sourceLine": 661,
+      "sourceLine": 660,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6053,7 +6165,7 @@
     {
       "key": "Wickerbottom Read Book Less Use",
       "id": "cfg-1366f9cf3cbf",
-      "sourceLine": 663,
+      "sourceLine": 662,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6064,7 +6176,7 @@
     {
       "key": "Wickerbottom Use Staff",
       "id": "cfg-2b3a80cbebf3",
-      "sourceLine": 665,
+      "sourceLine": 664,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6075,7 +6187,7 @@
     {
       "key": "Wickerbottom Daily Book",
       "id": "cfg-de89cf3b23e7",
-      "sourceLine": 667,
+      "sourceLine": 666,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6086,7 +6198,7 @@
     {
       "key": "Wickerbottom Temperature Book",
       "id": "cfg-7906a99a8583",
-      "sourceLine": 669,
+      "sourceLine": 668,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6097,7 +6209,7 @@
     {
       "key": "Knowledge is power",
       "id": "cfg-7f0be79951b7",
-      "sourceLine": 671,
+      "sourceLine": 670,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6109,7 +6221,7 @@
     {
       "key": "Wickerbottom Repair Book With Papyrus",
       "id": "cfg-3f325fe421a2",
-      "sourceLine": 673,
+      "sourceLine": 672,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6120,7 +6232,7 @@
     {
       "key": "Wickerbottom Touch Astral Altar Unlock Celestial",
       "id": "cfg-2f715a36fbc8",
-      "sourceLine": 675,
+      "sourceLine": 674,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6131,7 +6243,7 @@
     {
       "key": "woodie_easy",
       "id": "cfg-33bbcf5d64ac",
-      "sourceLine": 677,
+      "sourceLine": 676,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6141,7 +6253,7 @@
     {
       "key": "Woodie Strong Stomach Monster Meat",
       "id": "cfg-cd9fd06fa134",
-      "sourceLine": 678,
+      "sourceLine": 677,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6152,7 +6264,7 @@
     {
       "key": "Woodie Full Moon Not Become",
       "id": "cfg-d600fdb85dd9",
-      "sourceLine": 679,
+      "sourceLine": 678,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6163,7 +6275,7 @@
     {
       "key": "Woodie Hunger Wereness",
       "id": "cfg-81a2dabab9e3",
-      "sourceLine": 681,
+      "sourceLine": 680,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6174,7 +6286,7 @@
     {
       "key": "Woodie Right Self Close Transform",
       "id": "cfg-22217538a059",
-      "sourceLine": 683,
+      "sourceLine": 682,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6185,7 +6297,7 @@
     {
       "key": "Woodie Moose Stronger Charge",
       "id": "cfg-403ac8775e54",
-      "sourceLine": 684,
+      "sourceLine": 683,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6196,7 +6308,7 @@
     {
       "key": "Woodie Moose Random Scale",
       "id": "cfg-c16ab1febb50",
-      "sourceLine": 686,
+      "sourceLine": 685,
       "status": "documented",
       "requires": [
         "Random Sized"
@@ -6205,7 +6317,7 @@
     {
       "key": "wes_easy",
       "id": "cfg-a37dac3dd5f4",
-      "sourceLine": 689,
+      "sourceLine": 688,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6215,7 +6327,7 @@
     {
       "key": "Wes Normal Data Attack Work",
       "id": "cfg-be215c3dd590",
-      "sourceLine": 690,
+      "sourceLine": 689,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6226,7 +6338,7 @@
     {
       "key": "Wes Right Dodge Collide Balloon",
       "id": "cfg-87155740ba17",
-      "sourceLine": 691,
+      "sourceLine": 690,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6237,7 +6349,7 @@
     {
       "key": "Balloon Stackable Per 50 Damage",
       "id": "cfg-c731007c69f9",
-      "sourceLine": 693,
+      "sourceLine": 692,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6248,7 +6360,7 @@
     {
       "key": "Equip Balloon Increase Speed",
       "id": "cfg-3ddd403f308d",
-      "sourceLine": 695,
+      "sourceLine": 694,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -6259,7 +6371,7 @@
     {
       "key": "Equip Balloon Summon Tornado",
       "id": "cfg-4f2e63ea415c",
-      "sourceLine": 697,
+      "sourceLine": 696,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6270,7 +6382,7 @@
     {
       "key": "waxwell_easy",
       "id": "cfg-4f3d8dafbd46",
-      "sourceLine": 699,
+      "sourceLine": 698,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6280,7 +6392,7 @@
     {
       "key": "Maxwell Normal Health",
       "id": "cfg-bfc5bd296fe7",
-      "sourceLine": 700,
+      "sourceLine": 699,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6291,7 +6403,7 @@
     {
       "key": "Maxwell Eat Petals Get Dark Petals",
       "id": "cfg-2a385f92c126",
-      "sourceLine": 702,
+      "sourceLine": 701,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6302,7 +6414,7 @@
     {
       "key": "Maxwell Unlock Dark Sword/Armor",
       "id": "cfg-afe85992aba4",
-      "sourceLine": 703,
+      "sourceLine": 702,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6313,7 +6425,7 @@
     {
       "key": "Maxwell Right Lunge",
       "id": "cfg-6a89d7490ea0",
-      "sourceLine": 704,
+      "sourceLine": 703,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6324,7 +6436,7 @@
     {
       "key": "right Lunge need ctrl",
       "id": "cfg-600bcf47e14d",
-      "sourceLine": 706,
+      "sourceLine": 705,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6335,7 +6447,7 @@
     {
       "key": "Maxwell Attacked Disappear",
       "id": "cfg-f6375ee94f5b",
-      "sourceLine": 708,
+      "sourceLine": 707,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6346,7 +6458,7 @@
     {
       "key": "Maxwell Right Self Sleepytime Stories",
       "id": "cfg-1760dbde83c9",
-      "sourceLine": 710,
+      "sourceLine": 709,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6357,7 +6469,7 @@
     {
       "key": "wigfrid_easy",
       "id": "cfg-02c619ef9f11",
-      "sourceLine": 712,
+      "sourceLine": 711,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6367,7 +6479,7 @@
     {
       "key": "Wigfrid Inspiration Not Drop",
       "id": "cfg-66b5aa805e64",
-      "sourceLine": 713,
+      "sourceLine": 712,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6378,7 +6490,7 @@
     {
       "key": "Wigfrid can eat any",
       "id": "cfg-1ffd61081d61",
-      "sourceLine": 715,
+      "sourceLine": 714,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6389,7 +6501,7 @@
     {
       "key": "Wigfrid Ride Right Dodge",
       "id": "cfg-103bd925a47d",
-      "sourceLine": 716,
+      "sourceLine": 715,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -6400,7 +6512,7 @@
     {
       "key": "Wigfrid Right Self Reprise",
       "id": "cfg-261adc8f6033",
-      "sourceLine": 719,
+      "sourceLine": 718,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6411,7 +6523,7 @@
     {
       "key": "Rude Interlude Provide Battle Helm",
       "id": "cfg-fb18efb16ccd",
-      "sourceLine": 721,
+      "sourceLine": 720,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6422,7 +6534,7 @@
     {
       "key": "Startling Soliloquy Provide Battle Spear",
       "id": "cfg-8c02024f008f",
-      "sourceLine": 723,
+      "sourceLine": 722,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6433,7 +6545,7 @@
     {
       "key": "battlesong_durability_sanitygain",
       "id": "cfg-92825eae7de3",
-      "sourceLine": 725,
+      "sourceLine": 724,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6444,7 +6556,7 @@
     {
       "key": "aoespell change",
       "id": "cfg-b4a28d05f424",
-      "sourceLine": 728,
+      "sourceLine": 727,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6455,7 +6567,7 @@
     {
       "key": "Valkyrie thunder sprints without shaking",
       "id": "cfg-615312ae11c8",
-      "sourceLine": 729,
+      "sourceLine": 728,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6466,7 +6578,7 @@
     {
       "key": "Charged Elding Spear negative buff",
       "id": "cfg-c5383830892a",
-      "sourceLine": 730,
+      "sourceLine": 729,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -6478,7 +6590,7 @@
     {
       "key": "webber_easy",
       "id": "cfg-a8d90d50791b",
-      "sourceLine": 731,
+      "sourceLine": 730,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6488,7 +6600,7 @@
     {
       "key": "Webber Eat Meat Lead Wild Spider",
       "id": "cfg-0b9ddc165140",
-      "sourceLine": 732,
+      "sourceLine": 731,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6499,7 +6611,7 @@
     {
       "key": "Webber Eat Switcherdoodle Switch Spider",
       "id": "cfg-e9845703ce97",
-      "sourceLine": 734,
+      "sourceLine": 733,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6510,7 +6622,7 @@
     {
       "key": "Webber Murder Spider Get Switcherdoodle",
       "id": "cfg-a6e50f959787",
-      "sourceLine": 736,
+      "sourceLine": 735,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6521,7 +6633,7 @@
     {
       "key": "Webber 200 Sanity",
       "id": "cfg-12aa677aae49",
-      "sourceLine": 738,
+      "sourceLine": 737,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6532,7 +6644,7 @@
     {
       "key": "Webber Right Self Overcoming Arachnophobia",
       "id": "cfg-c1c22b9afc34",
-      "sourceLine": 740,
+      "sourceLine": 739,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6543,7 +6655,7 @@
     {
       "key": "Webber Uprade SpiderDen SpiderQueen",
       "id": "cfg-908f29dfa66a",
-      "sourceLine": 749,
+      "sourceLine": 748,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6554,7 +6666,7 @@
     {
       "key": "Spider Help Work",
       "id": "cfg-e4ce28681ae2",
-      "sourceLine": 755,
+      "sourceLine": 754,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6565,7 +6677,7 @@
     {
       "key": "Hat Trick",
       "id": "cfg-73f95654c9e8",
-      "sourceLine": 756,
+      "sourceLine": 755,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6576,7 +6688,7 @@
     {
       "key": "winona_easy",
       "id": "cfg-198bef91f7f0",
-      "sourceLine": 758,
+      "sourceLine": 757,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6586,7 +6698,7 @@
     {
       "key": "Winona No Hungry Builder",
       "id": "cfg-8499377ac879",
-      "sourceLine": 759,
+      "sourceLine": 758,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6597,7 +6709,7 @@
     {
       "key": "Winona Toolbox Tools",
       "id": "cfg-b896fabe7a41",
-      "sourceLine": 760,
+      "sourceLine": 759,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6608,7 +6720,7 @@
     {
       "key": "Winona Generator Ground Charging",
       "id": "cfg-8a2bc63baa02",
-      "sourceLine": 763,
+      "sourceLine": 762,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6619,7 +6731,7 @@
     {
       "key": "Winona Electrical Upgrades",
       "id": "cfg-9ce2be33bc03",
-      "sourceLine": 766,
+      "sourceLine": 765,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6630,7 +6742,7 @@
     {
       "key": "Winona Hammer Drop All Loot",
       "id": "cfg-623d462467a0",
-      "sourceLine": 769,
+      "sourceLine": 768,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6641,7 +6753,7 @@
     {
       "key": "Winona Rotating Weapon Perpetual Attack",
       "id": "cfg-afc1c8a9e70a",
-      "sourceLine": 770,
+      "sourceLine": 769,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6652,7 +6764,7 @@
     {
       "key": "Winona Control Chess",
       "id": "cfg-b22e44de0627",
-      "sourceLine": 772,
+      "sourceLine": 771,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6663,7 +6775,7 @@
     {
       "key": "Winona Right Self Hide Structures",
       "id": "cfg-9f40ed32efd6",
-      "sourceLine": 774,
+      "sourceLine": 773,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6674,7 +6786,7 @@
     {
       "key": "warly_easy",
       "id": "cfg-67a26f308056",
-      "sourceLine": 776,
+      "sourceLine": 775,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6684,7 +6796,7 @@
     {
       "key": "Warly Eat Food Double Health Sanity",
       "id": "cfg-18e14a15a168",
-      "sourceLine": 777,
+      "sourceLine": 776,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -6695,7 +6807,7 @@
     {
       "key": "Warly Food Memory Only Sanity",
       "id": "cfg-67e7fb067199",
-      "sourceLine": 778,
+      "sourceLine": 777,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6706,7 +6818,7 @@
     {
       "key": "Warly Use Perishable Weapon",
       "id": "cfg-e69a693807ef",
-      "sourceLine": 780,
+      "sourceLine": 779,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6717,7 +6829,7 @@
     {
       "key": "Warly Free Cook Per Day",
       "id": "cfg-f4131a580783",
-      "sourceLine": 782,
+      "sourceLine": 781,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6728,7 +6840,7 @@
     {
       "key": "Warly Food Collect",
       "id": "cfg-ec8f32c4a100",
-      "sourceLine": 784,
+      "sourceLine": 783,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6739,7 +6851,7 @@
     {
       "key": "Warly Right Self Action",
       "id": "cfg-a41a5049dfb4",
-      "sourceLine": 786,
+      "sourceLine": 785,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6750,7 +6862,7 @@
     {
       "key": "Warly Right Self Horticulture Abridged",
       "id": "cfg-e715e5fbb7d1",
-      "sourceLine": 792,
+      "sourceLine": 791,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -6762,7 +6874,7 @@
     {
       "key": "walter_easy",
       "id": "cfg-ee9eb6d517bf",
-      "sourceLine": 794,
+      "sourceLine": 793,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6772,7 +6884,7 @@
     {
       "key": "Walter No Damage Lose Sanity",
       "id": "cfg-2a7d9c17ace2",
-      "sourceLine": 795,
+      "sourceLine": 794,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6783,7 +6895,7 @@
     {
       "key": "Walter Has Other Pet",
       "id": "cfg-559d7e6fdae1",
-      "sourceLine": 797,
+      "sourceLine": 796,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6794,7 +6906,7 @@
     {
       "key": "Walter Throw Slingshot First Attack",
       "id": "cfg-6949c5aa4cf6",
-      "sourceLine": 799,
+      "sourceLine": 798,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6805,7 +6917,7 @@
     {
       "key": "Walter Right Dodge Longer",
       "id": "cfg-7ebdaccc3e6c",
-      "sourceLine": 805,
+      "sourceLine": 804,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -6816,7 +6928,7 @@
     {
       "key": "Walter Hide Woby",
       "id": "cfg-2d3302fc2192",
-      "sourceLine": 808,
+      "sourceLine": 807,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6827,28 +6939,28 @@
     {
       "key": "Walter Ride Better",
       "id": "cfg-a37539c34df9",
-      "sourceLine": 809,
+      "sourceLine": 808,
       "status": "inactive",
       "requires": []
     },
     {
       "key": "Walter press Ctrl can't Dodge",
       "id": "cfg-c60aac9a9395",
-      "sourceLine": 811,
+      "sourceLine": 810,
       "status": "inactive",
       "requires": []
     },
     {
       "key": "Walter Use Wixie Slingshot",
       "id": "cfg-dad376a317ef",
-      "sourceLine": 814,
+      "sourceLine": 813,
       "status": "documented",
       "requires": []
     },
     {
       "key": "Wixie No Claustrophobia",
       "id": "cfg-924061616be3",
-      "sourceLine": 817,
+      "sourceLine": 816,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6858,7 +6970,7 @@
     {
       "key": "wortox_easy",
       "id": "cfg-c6129049dfaf",
-      "sourceLine": 820,
+      "sourceLine": 819,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6868,7 +6980,7 @@
     {
       "key": "Wortox Eat Food Normal",
       "id": "cfg-e02bf2c35e51",
-      "sourceLine": 821,
+      "sourceLine": 820,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6879,7 +6991,7 @@
     {
       "key": "Wortox Has No Soul Limit",
       "id": "cfg-cb4b1c096de1",
-      "sourceLine": 822,
+      "sourceLine": 821,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6890,7 +7002,7 @@
     {
       "key": "Wortox Free Blink",
       "id": "cfg-763d65b439ed",
-      "sourceLine": 824,
+      "sourceLine": 823,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6901,7 +7013,7 @@
     {
       "key": "Wortox Use Soul Attack",
       "id": "cfg-f02a7384cff1",
-      "sourceLine": 825,
+      "sourceLine": 824,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6912,7 +7024,7 @@
     {
       "key": "Wortox damage upgrade",
       "id": "cfg-fc056627061d",
-      "sourceLine": 826,
+      "sourceLine": 825,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6923,7 +7035,7 @@
     {
       "key": "Wortox Auto Receive Soul",
       "id": "cfg-2f38006248c4",
-      "sourceLine": 828,
+      "sourceLine": 827,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6934,7 +7046,7 @@
     {
       "key": "wormwood_easy",
       "id": "cfg-f02734ce359f",
-      "sourceLine": 830,
+      "sourceLine": 829,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6944,7 +7056,7 @@
     {
       "key": "Wormwood Eat Food Normal",
       "id": "cfg-186d404e2284",
-      "sourceLine": 831,
+      "sourceLine": 830,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6955,7 +7067,7 @@
     {
       "key": "Wormwood Right Self To Hide",
       "id": "cfg-dc74fe3af300",
-      "sourceLine": 832,
+      "sourceLine": 831,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6966,7 +7078,7 @@
     {
       "key": "Wormwood Regrow Farm Plant",
       "id": "cfg-ec5e954ef557",
-      "sourceLine": 833,
+      "sourceLine": 832,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6977,7 +7089,7 @@
     {
       "key": "Wormwood TendTo Farm Plant Reduce Grow Time",
       "id": "cfg-9aa3f2515425",
-      "sourceLine": 835,
+      "sourceLine": 834,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6988,7 +7100,7 @@
     {
       "key": "Wormwood Soul Heal Soil",
       "id": "cfg-ba1c318e2122",
-      "sourceLine": 837,
+      "sourceLine": 836,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -6999,7 +7111,7 @@
     {
       "key": "Wormwood Photosynthesis",
       "id": "cfg-baba534c5b13",
-      "sourceLine": 838,
+      "sourceLine": 837,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7010,7 +7122,7 @@
     {
       "key": "Wormwood Eat Rewards Equip",
       "id": "cfg-7e40532ccc11",
-      "sourceLine": 839,
+      "sourceLine": 838,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7021,7 +7133,7 @@
     {
       "key": "Wormwood Eat Seeds Debuff",
       "id": "cfg-9635907b57ab",
-      "sourceLine": 848,
+      "sourceLine": 847,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7032,7 +7144,7 @@
     {
       "key": "Wormwood Thorns Generate Spiny Bindweed",
       "id": "cfg-ff6eb853c10e",
-      "sourceLine": 849,
+      "sourceLine": 848,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7043,7 +7155,7 @@
     {
       "key": "armor_bramble damage",
       "id": "cfg-2d5df5ac275c",
-      "sourceLine": 851,
+      "sourceLine": 850,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7054,7 +7166,7 @@
     {
       "key": "wormwood_eat_fire",
       "id": "cfg-9725c82119d6",
-      "sourceLine": 853,
+      "sourceLine": 852,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7065,7 +7177,7 @@
     {
       "key": "wurt_easy",
       "id": "cfg-afe75ed0f92e",
-      "sourceLine": 855,
+      "sourceLine": 854,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7075,7 +7187,7 @@
     {
       "key": "wurt_merm_stronger",
       "id": "cfg-1058af11fd5d",
-      "sourceLine": 856,
+      "sourceLine": 855,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -7086,7 +7198,7 @@
     {
       "key": "Wurt Eat Food Lead Wild Merm",
       "id": "cfg-692dca85cb0a",
-      "sourceLine": 858,
+      "sourceLine": 857,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7097,7 +7209,7 @@
     {
       "key": "Wurt Eat Food Loyalty Follower",
       "id": "cfg-a58f80087b21",
-      "sourceLine": 860,
+      "sourceLine": 859,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7108,7 +7220,7 @@
     {
       "key": "Mermking Won't Hungry",
       "id": "cfg-14a42d74b220",
-      "sourceLine": 862,
+      "sourceLine": 861,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7119,7 +7231,7 @@
     {
       "key": "Trade Fish with Merm",
       "id": "cfg-da62e349f29e",
-      "sourceLine": 864,
+      "sourceLine": 863,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7130,7 +7242,7 @@
     {
       "key": "Wurt can eat any",
       "id": "cfg-d59ecdd212d5",
-      "sourceLine": 866,
+      "sourceLine": 865,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7141,7 +7253,7 @@
     {
       "key": "Wurt Can Craft Book Fish",
       "id": "cfg-1614c3675c32",
-      "sourceLine": 867,
+      "sourceLine": 866,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7152,7 +7264,7 @@
     {
       "key": "wanda_easy",
       "id": "cfg-6a33b7c1604f",
-      "sourceLine": 869,
+      "sourceLine": 868,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7162,7 +7274,7 @@
     {
       "key": "Wanda Don't Auto Drop Age",
       "id": "cfg-f955007517a2",
-      "sourceLine": 870,
+      "sourceLine": 869,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7173,7 +7285,7 @@
     {
       "key": "Ageless Watch Help Temperature",
       "id": "cfg-338ef02faa99",
-      "sourceLine": 871,
+      "sourceLine": 870,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7184,7 +7296,7 @@
     {
       "key": "wanda strengthen",
       "id": "cfg-08e21ba9e7d6",
-      "sourceLine": 872,
+      "sourceLine": 871,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7195,7 +7307,7 @@
     {
       "key": "pocketwatch_heal2hm",
       "id": "cfg-af4c0cde3b2d",
-      "sourceLine": 874,
+      "sourceLine": 873,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7206,7 +7318,7 @@
     {
       "key": "pocketwatch strengthen",
       "id": "cfg-0ce87327cae6",
-      "sourceLine": 877,
+      "sourceLine": 876,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7217,7 +7329,18 @@
     {
       "key": "pocketwatch_weapon at start",
       "id": "cfg-76d278beb94b",
-      "sourceLine": 880,
+      "sourceLine": 879,
+      "status": "documented",
+      "requires": [
+        "enable easy mode",
+        "role_easy",
+        "wanda_easy"
+      ]
+    },
+    {
+      "key": "Wanda Watch Naming",
+      "id": "cfg-7cebf51df5c6",
+      "sourceLine": 881,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7228,7 +7351,7 @@
     {
       "key": "Wanda Dread Watch",
       "id": "cfg-72fac8a3daca",
-      "sourceLine": 882,
+      "sourceLine": 884,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -7238,7 +7361,7 @@
     {
       "key": "wanda Eat Petals Get Dark Petals",
       "id": "cfg-af7b40e954d6",
-      "sourceLine": 886,
+      "sourceLine": 888,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7249,7 +7372,7 @@
     {
       "key": "Wanda Right Wrapback",
       "id": "cfg-78e6dbc5d5f7",
-      "sourceLine": 887,
+      "sourceLine": 889,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7260,7 +7383,7 @@
     {
       "key": "Wanda Right Wrapfront",
       "id": "cfg-616e5b19fdaa",
-      "sourceLine": 895,
+      "sourceLine": 897,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7271,7 +7394,7 @@
     {
       "key": "right Wrapback need ctrl",
       "id": "cfg-b096dbf51a31",
-      "sourceLine": 897,
+      "sourceLine": 899,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7282,7 +7405,7 @@
     {
       "key": "Wanda Right Self Backtrek",
       "id": "cfg-380e38364193",
-      "sourceLine": 899,
+      "sourceLine": 901,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7293,7 +7416,7 @@
     {
       "key": "Wanda Resurrect Self",
       "id": "cfg-4262fb0739d1",
-      "sourceLine": 900,
+      "sourceLine": 902,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7304,7 +7427,7 @@
     {
       "key": "wonkey_easy",
       "id": "cfg-8c591d2b7344",
-      "sourceLine": 904,
+      "sourceLine": 906,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7314,7 +7437,7 @@
     {
       "key": "Start With Wonkey Disable Transform",
       "id": "cfg-c03793e39943",
-      "sourceLine": 905,
+      "sourceLine": 907,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7325,7 +7448,7 @@
     {
       "key": "Wonkey Run Wait Time",
       "id": "cfg-f5c1dfd5698f",
-      "sourceLine": 907,
+      "sourceLine": 909,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -7336,7 +7459,7 @@
     {
       "key": "Wonkey Right Self summon the powder_monkey",
       "id": "cfg-bcd80095bf74",
-      "sourceLine": 909,
+      "sourceLine": 911,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7347,7 +7470,7 @@
     {
       "key": "Wonkey Attack Steal item",
       "id": "cfg-a908570b3250",
-      "sourceLine": 910,
+      "sourceLine": 912,
       "status": "inactive",
       "requires": [
         "enable easy mode",
@@ -7358,7 +7481,7 @@
     {
       "key": "Wonkey Toss Poop",
       "id": "cfg-0f9be17be1dc",
-      "sourceLine": 911,
+      "sourceLine": 913,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7369,7 +7492,7 @@
     {
       "key": "Wonkey Remove Curse",
       "id": "cfg-4f17f671b3e0",
-      "sourceLine": 912,
+      "sourceLine": 914,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7380,7 +7503,7 @@
     {
       "key": "other_role_easy",
       "id": "cfg-9a6a7141b2da",
-      "sourceLine": 914,
+      "sourceLine": 916,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7390,7 +7513,7 @@
     {
       "key": "wathom upgrade",
       "id": "cfg-21815d541d6d",
-      "sourceLine": 915,
+      "sourceLine": 917,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7401,21 +7524,21 @@
     {
       "key": "Monster Night Vision",
       "id": "cfg-cb9a91c64ec2",
-      "sourceLine": 924,
+      "sourceLine": 926,
       "status": "documented",
       "requires": []
     },
     {
       "key": "wathom nightvision",
       "id": "cfg-dc5416f630a7",
-      "sourceLine": 927,
+      "sourceLine": 929,
       "status": "documented",
       "requires": []
     },
     {
       "key": "All Right Dodge",
       "id": "cfg-14f77d0b903f",
-      "sourceLine": 930,
+      "sourceLine": 932,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7425,7 +7548,7 @@
     {
       "key": "Role Gym",
       "id": "cfg-ba8649cd65ad",
-      "sourceLine": 932,
+      "sourceLine": 934,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7435,7 +7558,7 @@
     {
       "key": "avoidselfdmg",
       "id": "cfg-e416f60a4207",
-      "sourceLine": 938,
+      "sourceLine": 940,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7445,7 +7568,7 @@
     {
       "key": "All dumbbell heat",
       "id": "cfg-1b9143163865",
-      "sourceLine": 940,
+      "sourceLine": 942,
       "status": "documented",
       "requires": [
         "enable easy mode",
@@ -7455,7 +7578,7 @@
     {
       "key": "enter gift 2",
       "id": "cfg-a6088883773b",
-      "sourceLine": 942,
+      "sourceLine": 944,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -7466,7 +7589,7 @@
     {
       "key": "role_nerf",
       "id": "cfg-fc126e28b1a6",
-      "sourceLine": 947,
+      "sourceLine": 949,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -7475,7 +7598,7 @@
     {
       "key": "role_battle",
       "id": "cfg-6b4fc6068d6c",
-      "sourceLine": 948,
+      "sourceLine": 950,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7485,7 +7608,7 @@
     {
       "key": "role_sanity",
       "id": "cfg-780b6521db32",
-      "sourceLine": 955,
+      "sourceLine": 957,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7495,7 +7618,7 @@
     {
       "key": "role_hunger",
       "id": "cfg-46694c128607",
-      "sourceLine": 961,
+      "sourceLine": 963,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7505,7 +7628,7 @@
     {
       "key": "combat",
       "id": "cfg-9f8809a14384",
-      "sourceLine": 966,
+      "sourceLine": 968,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7515,7 +7638,7 @@
     {
       "key": "regen_danger",
       "id": "cfg-2d2070c73015",
-      "sourceLine": 982,
+      "sourceLine": 984,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7525,7 +7648,7 @@
     {
       "key": "stand_fight_danger",
       "id": "cfg-5546119580f0",
-      "sourceLine": 986,
+      "sourceLine": 988,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7535,7 +7658,7 @@
     {
       "key": "death_danger",
       "id": "cfg-e4112632cf34",
-      "sourceLine": 990,
+      "sourceLine": 992,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -7545,7 +7668,7 @@
     {
       "key": "pvp_force",
       "id": "cfg-d1d1f030d5c1",
-      "sourceLine": 994,
+      "sourceLine": 996,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7555,7 +7678,7 @@
     {
       "key": "leader",
       "id": "cfg-b25f598744d2",
-      "sourceLine": 996,
+      "sourceLine": 998,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7565,7 +7688,7 @@
     {
       "key": "haitang_curse_2",
       "id": "cfg-dfdc30f30c33",
-      "sourceLine": 999,
+      "sourceLine": 1001,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7575,7 +7698,7 @@
     {
       "key": "Items collect danger",
       "id": "cfg-08f182232014",
-      "sourceLine": 1001,
+      "sourceLine": 1003,
       "status": "mismatch",
       "requires": [
         "role_nerf"
@@ -7584,7 +7707,7 @@
     {
       "key": "soul_wild",
       "id": "cfg-fae8e2ac68d1",
-      "sourceLine": 1003,
+      "sourceLine": 1005,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7594,7 +7717,7 @@
     {
       "key": "death_curse",
       "id": "cfg-77bd0cee5d92",
-      "sourceLine": 1007,
+      "sourceLine": 1009,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7604,7 +7727,7 @@
     {
       "key": "riding_hunger",
       "id": "cfg-54ba71ee1c22",
-      "sourceLine": 1010,
+      "sourceLine": 1012,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7614,7 +7737,7 @@
     {
       "key": "recipe_add_material",
       "id": "cfg-468860c443bb",
-      "sourceLine": 1012,
+      "sourceLine": 1014,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7624,7 +7747,7 @@
     {
       "key": "clock_peril",
       "id": "cfg-c4c4aa299ac2",
-      "sourceLine": 1030,
+      "sourceLine": 1032,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7634,7 +7757,7 @@
     {
       "key": "taste",
       "id": "cfg-270fdbaac5af",
-      "sourceLine": 1039,
+      "sourceLine": 1041,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7644,7 +7767,7 @@
     {
       "key": "willow",
       "id": "cfg-ca70918e5246",
-      "sourceLine": 1043,
+      "sourceLine": 1045,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7654,7 +7777,7 @@
     {
       "key": "wolfgang",
       "id": "cfg-ec337a44813c",
-      "sourceLine": 1045,
+      "sourceLine": 1047,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7664,7 +7787,7 @@
     {
       "key": "wendy",
       "id": "cfg-5d0eb97e8e84",
-      "sourceLine": 1047,
+      "sourceLine": 1049,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7672,19 +7795,96 @@
       ]
     },
     {
-      "key": "wx-78",
-      "id": "cfg-5177c4a3cf74",
-      "sourceLine": 1050,
+      "key": "WX-78 Hard",
+      "id": "cfg-d307b0ddb6e0",
+      "sourceLine": 1052,
       "status": "documented",
       "requires": [
         "enable hard mode",
         "role_nerf"
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Power",
+      "id": "cfg-219959a78046",
+      "sourceLine": 1054,
+      "status": "documented",
+      "requires": [
+        "enable hard mode",
+        "role_nerf",
+        "WX-78 Hard"
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Durability",
+      "id": "cfg-1efc1e9ed1c3",
+      "sourceLine": 1056,
+      "status": "documented",
+      "requires": [
+        "enable hard mode",
+        "role_nerf",
+        "WX-78 Hard"
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Balance",
+      "id": "cfg-9cc09e33faaf",
+      "sourceLine": 1058,
+      "status": "documented",
+      "requires": [
+        "enable hard mode",
+        "role_nerf",
+        "WX-78 Hard"
+      ]
+    },
+    {
+      "key": "WX-78 Thermal Circuits",
+      "id": "cfg-f775d5ea5338",
+      "sourceLine": 1060,
+      "status": "documented",
+      "requires": [
+        "enable hard mode",
+        "role_nerf",
+        "WX-78 Hard"
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Ram",
+      "id": "cfg-bcc820662d42",
+      "sourceLine": 1062,
+      "status": "documented",
+      "requires": [
+        "enable hard mode",
+        "role_nerf",
+        "WX-78 Hard"
+      ]
+    },
+    {
+      "key": "WX-78 Circuit Synergy",
+      "id": "cfg-a4870eb38beb",
+      "sourceLine": 1064,
+      "status": "documented",
+      "requires": [
+        "enable hard mode",
+        "role_nerf",
+        "WX-78 Hard"
+      ]
+    },
+    {
+      "key": "WX-78 Moongleam Chassis",
+      "id": "cfg-8a7826cc647d",
+      "sourceLine": 1066,
+      "status": "documented",
+      "requires": [
+        "enable hard mode",
+        "role_nerf",
+        "WX-78 Hard"
       ]
     },
     {
       "key": "wickerbottom",
       "id": "cfg-9992f767ce6b",
-      "sourceLine": 1058,
+      "sourceLine": 1073,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7694,7 +7894,7 @@
     {
       "key": "wigfrid",
       "id": "cfg-ae1c69fee337",
-      "sourceLine": 1065,
+      "sourceLine": 1080,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7704,7 +7904,7 @@
     {
       "key": "beefalo Dodge",
       "id": "cfg-ebe989307f40",
-      "sourceLine": 1067,
+      "sourceLine": 1082,
       "status": "mismatch",
       "requires": [
         "enable easy mode",
@@ -7715,7 +7915,7 @@
     {
       "key": "webber",
       "id": "cfg-6ab4ede97338",
-      "sourceLine": 1069,
+      "sourceLine": 1084,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7725,7 +7925,7 @@
     {
       "key": "warly",
       "id": "cfg-63527f1e0273",
-      "sourceLine": 1070,
+      "sourceLine": 1085,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7735,7 +7935,7 @@
     {
       "key": "walter",
       "id": "cfg-f18f9d8baa2f",
-      "sourceLine": 1072,
+      "sourceLine": 1087,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7745,7 +7945,7 @@
     {
       "key": "wixie",
       "id": "cfg-013ce563a5e5",
-      "sourceLine": 1074,
+      "sourceLine": 1089,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7755,7 +7955,7 @@
     {
       "key": "maxwell",
       "id": "cfg-9c421d03fe85",
-      "sourceLine": 1077,
+      "sourceLine": 1092,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7765,7 +7965,7 @@
     {
       "key": "wortox",
       "id": "cfg-688c15f667ed",
-      "sourceLine": 1079,
+      "sourceLine": 1094,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7775,7 +7975,7 @@
     {
       "key": "wormwood",
       "id": "cfg-0bd4493982a1",
-      "sourceLine": 1080,
+      "sourceLine": 1095,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7785,7 +7985,7 @@
     {
       "key": "wurt",
       "id": "cfg-390dcb8df389",
-      "sourceLine": 1082,
+      "sourceLine": 1097,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7795,7 +7995,7 @@
     {
       "key": "wanda",
       "id": "cfg-47d8e1c6a8a6",
-      "sourceLine": 1086,
+      "sourceLine": 1101,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7805,7 +8005,7 @@
     {
       "key": "legion_shield",
       "id": "cfg-80b5b26c0fd1",
-      "sourceLine": 1087,
+      "sourceLine": 1102,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7815,7 +8015,7 @@
     {
       "key": "norunattack",
       "id": "cfg-84812d83299d",
-      "sourceLine": 1091,
+      "sourceLine": 1106,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7825,7 +8025,7 @@
     {
       "key": "delay_leave",
       "id": "cfg-bf537efd8cdc",
-      "sourceLine": 1095,
+      "sourceLine": 1110,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -7835,7 +8035,7 @@
     {
       "key": "weather_change",
       "id": "cfg-da816c6802bd",
-      "sourceLine": 1101,
+      "sourceLine": 1116,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -7844,7 +8044,7 @@
     {
       "key": "temperature_change",
       "id": "cfg-50464f1de3dd",
-      "sourceLine": 1102,
+      "sourceLine": 1117,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7854,7 +8054,7 @@
     {
       "key": "dusk_change",
       "id": "cfg-61d41fd152b7",
-      "sourceLine": 1106,
+      "sourceLine": 1121,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7864,7 +8064,7 @@
     {
       "key": "moonlight",
       "id": "cfg-18cae9faeeb9",
-      "sourceLine": 1113,
+      "sourceLine": 1128,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7874,7 +8074,7 @@
     {
       "key": "sandstorm",
       "id": "cfg-dd06db31be1e",
-      "sourceLine": 1122,
+      "sourceLine": 1137,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7884,7 +8084,7 @@
     {
       "key": "moonisland",
       "id": "cfg-92a2976a1d0d",
-      "sourceLine": 1124,
+      "sourceLine": 1139,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7894,8 +8094,8 @@
     {
       "key": "random_seasons",
       "id": "cfg-80e8a0636bd6",
-      "sourceLine": 1130,
-      "status": "mismatch",
+      "sourceLine": 1145,
+      "status": "documented",
       "requires": [
         "enable hard mode",
         "weather_change"
@@ -7904,7 +8104,7 @@
     {
       "key": "rain_change",
       "id": "cfg-af2a7613e21d",
-      "sourceLine": 1138,
+      "sourceLine": 1153,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7914,7 +8114,7 @@
     {
       "key": "summer_change",
       "id": "cfg-6de52a5552d3",
-      "sourceLine": 1142,
+      "sourceLine": 1157,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7924,7 +8124,7 @@
     {
       "key": "winter_change",
       "id": "cfg-49c10044e7ce",
-      "sourceLine": 1144,
+      "sourceLine": 1159,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -7934,7 +8134,7 @@
     {
       "key": "autumn_change",
       "id": "cfg-15219934664d",
-      "sourceLine": 1147,
+      "sourceLine": 1162,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7944,7 +8144,7 @@
     {
       "key": "other_change",
       "id": "cfg-475f5a6f35aa",
-      "sourceLine": 1156,
+      "sourceLine": 1171,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -7953,7 +8153,7 @@
     {
       "key": "Harder Prototyper Recipe",
       "id": "cfg-310a9c14ef54",
-      "sourceLine": 1161,
+      "sourceLine": 1176,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7963,7 +8163,7 @@
     {
       "key": "Harder Prototyper Level",
       "id": "cfg-d7e00aa3f872",
-      "sourceLine": 1163,
+      "sourceLine": 1178,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7973,7 +8173,7 @@
     {
       "key": "Harder Distilled Knowledge",
       "id": "cfg-b2327f60e418",
-      "sourceLine": 1165,
+      "sourceLine": 1180,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7983,7 +8183,7 @@
     {
       "key": "sleepingbag",
       "id": "cfg-7dd0e8e79d07",
-      "sourceLine": 1167,
+      "sourceLine": 1182,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -7993,7 +8193,7 @@
     {
       "key": "moonrockidol",
       "id": "cfg-65ae834f0ff4",
-      "sourceLine": 1169,
+      "sourceLine": 1184,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8003,7 +8203,7 @@
     {
       "key": "oceanlife",
       "id": "cfg-ab9ba9038f64",
-      "sourceLine": 1176,
+      "sourceLine": 1191,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8013,7 +8213,7 @@
     {
       "key": "worldgen",
       "id": "cfg-26f0d2fd6548",
-      "sourceLine": 1183,
+      "sourceLine": 1198,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8023,7 +8223,7 @@
     {
       "key": "clockwork_guard",
       "id": "cfg-264030de7217",
-      "sourceLine": 1194,
+      "sourceLine": 1209,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8033,7 +8233,7 @@
     {
       "key": "cave_entrance",
       "id": "cfg-e35b2cd07150",
-      "sourceLine": 1202,
+      "sourceLine": 1217,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8043,7 +8243,7 @@
     {
       "key": "ancient_statue",
       "id": "cfg-37cc7d23cf46",
-      "sourceLine": 1209,
+      "sourceLine": 1224,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8053,7 +8253,7 @@
     {
       "key": "ancient_altar",
       "id": "cfg-407ac6c54f75",
-      "sourceLine": 1213,
+      "sourceLine": 1228,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8063,7 +8263,7 @@
     {
       "key": "rocks_change",
       "id": "cfg-f9bbb7ef9f10",
-      "sourceLine": 1220,
+      "sourceLine": 1235,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8073,7 +8273,7 @@
     {
       "key": "cheap_wrap",
       "id": "cfg-140389612219",
-      "sourceLine": 1222,
+      "sourceLine": 1237,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8083,7 +8283,7 @@
     {
       "key": "food_change",
       "id": "cfg-4c57d8e7c077",
-      "sourceLine": 1225,
+      "sourceLine": 1240,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -8092,7 +8292,7 @@
     {
       "key": "fooddata_change",
       "id": "cfg-2346b778b3f0",
-      "sourceLine": 1226,
+      "sourceLine": 1241,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8102,7 +8302,7 @@
     {
       "key": "cooking_change",
       "id": "cfg-e2551966e148",
-      "sourceLine": 1230,
+      "sourceLine": 1245,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8112,7 +8312,7 @@
     {
       "key": "birds_change",
       "id": "cfg-6e9eb60a2bbc",
-      "sourceLine": 1242,
+      "sourceLine": 1257,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8122,7 +8322,7 @@
     {
       "key": "oceanfish_change",
       "id": "cfg-b14f4a24ebae",
-      "sourceLine": 1246,
+      "sourceLine": 1261,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8132,7 +8332,7 @@
     {
       "key": "container_live",
       "id": "cfg-71e647256262",
-      "sourceLine": 1250,
+      "sourceLine": 1265,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8142,7 +8342,7 @@
     {
       "key": "animal_change",
       "id": "cfg-70e1f4db8640",
-      "sourceLine": 1257,
+      "sourceLine": 1272,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8152,7 +8352,7 @@
     {
       "key": "beefalo",
       "id": "cfg-af77b735b39c",
-      "sourceLine": 1259,
+      "sourceLine": 1274,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8162,7 +8362,7 @@
     {
       "key": "koalefant",
       "id": "cfg-e1de877924e9",
-      "sourceLine": 1261,
+      "sourceLine": 1276,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8172,7 +8372,7 @@
     {
       "key": "Seeds Weed Chance",
       "id": "cfg-af61a6e6b458",
-      "sourceLine": 1263,
+      "sourceLine": 1278,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8182,7 +8382,7 @@
     {
       "key": "farm_plant_change",
       "id": "cfg-f3e3c4a69a9c",
-      "sourceLine": 1265,
+      "sourceLine": 1280,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8192,7 +8392,7 @@
     {
       "key": "farm",
       "id": "cfg-36a3bbe0659d",
-      "sourceLine": 1266,
+      "sourceLine": 1281,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8202,7 +8402,7 @@
     {
       "key": "nutrient",
       "id": "cfg-fc7f5552e1ab",
-      "sourceLine": 1268,
+      "sourceLine": 1283,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8212,7 +8412,7 @@
     {
       "key": "plant_change",
       "id": "cfg-1700732a2934",
-      "sourceLine": 1275,
+      "sourceLine": 1290,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8222,7 +8422,7 @@
     {
       "key": "action_change",
       "id": "cfg-2b1cd5a33ef6",
-      "sourceLine": 1279,
+      "sourceLine": 1294,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8232,7 +8432,7 @@
     {
       "key": "monster_change",
       "id": "cfg-3dfaa78f2356",
-      "sourceLine": 1282,
+      "sourceLine": 1297,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -8241,7 +8441,7 @@
     {
       "key": "wall_destroy",
       "id": "cfg-e63714659edd",
-      "sourceLine": 1283,
+      "sourceLine": 1298,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8251,7 +8451,7 @@
     {
       "key": "boss_no_fight",
       "id": "cfg-5173e2e5d634",
-      "sourceLine": 1287,
+      "sourceLine": 1302,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8261,7 +8461,7 @@
     {
       "key": "rangesupermonster",
       "id": "cfg-c892594abcb2",
-      "sourceLine": 1288,
+      "sourceLine": 1303,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8271,7 +8471,7 @@
     {
       "key": "specialsupermonster",
       "id": "cfg-418928aa2079",
-      "sourceLine": 1292,
+      "sourceLine": 1307,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8281,7 +8481,7 @@
     {
       "key": "calmfire",
       "id": "cfg-9a81d973a6c5",
-      "sourceLine": 1296,
+      "sourceLine": 1311,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8291,7 +8491,7 @@
     {
       "key": "nosrctarget",
       "id": "cfg-d1e0d5ac7f96",
-      "sourceLine": 1297,
+      "sourceLine": 1312,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8301,7 +8501,7 @@
     {
       "key": "moveattack",
       "id": "cfg-0b865b72ebdb",
-      "sourceLine": 1299,
+      "sourceLine": 1314,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8311,7 +8511,7 @@
     {
       "key": "flyingattack",
       "id": "cfg-e03d70101c5c",
-      "sourceLine": 1301,
+      "sourceLine": 1316,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8321,7 +8521,7 @@
     {
       "key": "bee",
       "id": "cfg-917ee46db0cd",
-      "sourceLine": 1303,
+      "sourceLine": 1318,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8331,7 +8531,7 @@
     {
       "key": "fruitfly",
       "id": "cfg-15728e26cbb4",
-      "sourceLine": 1304,
+      "sourceLine": 1319,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8341,7 +8541,7 @@
     {
       "key": "warg",
       "id": "cfg-01ba0e385d16",
-      "sourceLine": 1306,
+      "sourceLine": 1321,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8351,7 +8551,7 @@
     {
       "key": "walrus",
       "id": "cfg-3f4d0d242da2",
-      "sourceLine": 1312,
+      "sourceLine": 1327,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8361,7 +8561,7 @@
     {
       "key": "chess",
       "id": "cfg-8fe63c015a9b",
-      "sourceLine": 1315,
+      "sourceLine": 1330,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8371,7 +8571,7 @@
     {
       "key": "tentacle",
       "id": "cfg-7ee93cdab84d",
-      "sourceLine": 1322,
+      "sourceLine": 1337,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8381,7 +8581,7 @@
     {
       "key": "pigman",
       "id": "cfg-7b3ab85218ec",
-      "sourceLine": 1326,
+      "sourceLine": 1341,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8391,7 +8591,7 @@
     {
       "key": "otter",
       "id": "cfg-867ed8dcdfe8",
-      "sourceLine": 1330,
+      "sourceLine": 1345,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8401,7 +8601,7 @@
     {
       "key": "mimicreep",
       "id": "cfg-1a3ceb9d5004",
-      "sourceLine": 1332,
+      "sourceLine": 1347,
       "status": "inactive",
       "requires": [
         "enable hard mode",
@@ -8411,7 +8611,7 @@
     {
       "key": "shark",
       "id": "cfg-4f90af664b82",
-      "sourceLine": 1336,
+      "sourceLine": 1351,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8421,7 +8621,7 @@
     {
       "key": "spider",
       "id": "cfg-640fb06193d8",
-      "sourceLine": 1338,
+      "sourceLine": 1353,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8431,7 +8631,7 @@
     {
       "key": "UM Widow",
       "id": "cfg-6879b9f6fcea",
-      "sourceLine": 1340,
+      "sourceLine": 1355,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8441,7 +8641,7 @@
     {
       "key": "lunarthrall_plant",
       "id": "cfg-47e88032a7bd",
-      "sourceLine": 1342,
+      "sourceLine": 1357,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8451,7 +8651,7 @@
     {
       "key": "shadowthrall",
       "id": "cfg-d8f5b9626f0b",
-      "sourceLine": 1344,
+      "sourceLine": 1359,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8461,7 +8661,7 @@
     {
       "key": "shadow_rift",
       "id": "cfg-6a00db918936",
-      "sourceLine": 1345,
+      "sourceLine": 1360,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8472,7 +8672,7 @@
     {
       "key": "monkey",
       "id": "cfg-ab87d24bdc74",
-      "sourceLine": 1347,
+      "sourceLine": 1362,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8482,7 +8682,7 @@
     {
       "key": "krampus",
       "id": "cfg-cd181cb66fc3",
-      "sourceLine": 1349,
+      "sourceLine": 1364,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8492,7 +8692,7 @@
     {
       "key": "crawlingshadow",
       "id": "cfg-61e1d5ca4276",
-      "sourceLine": 1353,
+      "sourceLine": 1368,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8502,7 +8702,7 @@
     {
       "key": "shadowbeak",
       "id": "cfg-82477d410f1d",
-      "sourceLine": 1357,
+      "sourceLine": 1372,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8512,7 +8712,7 @@
     {
       "key": "oceanshadow",
       "id": "cfg-27ca070c5695",
-      "sourceLine": 1360,
+      "sourceLine": 1375,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8522,7 +8722,7 @@
     {
       "key": "ruinsnightmare",
       "id": "cfg-045b706c7d03",
-      "sourceLine": 1362,
+      "sourceLine": 1377,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8532,7 +8732,7 @@
     {
       "key": "shadowleech",
       "id": "cfg-0ada3a9e2d55",
-      "sourceLine": 1366,
+      "sourceLine": 1381,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8542,7 +8742,7 @@
     {
       "key": "shadowthrall_centipede",
       "id": "cfg-65579cf009b0",
-      "sourceLine": 1374,
+      "sourceLine": 1389,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8552,7 +8752,7 @@
     {
       "key": "leif",
       "id": "cfg-c37e4453350f",
-      "sourceLine": 1375,
+      "sourceLine": 1390,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8562,7 +8762,7 @@
     {
       "key": "deerclops",
       "id": "cfg-055909fac7c4",
-      "sourceLine": 1376,
+      "sourceLine": 1391,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8572,7 +8772,7 @@
     {
       "key": "antlion",
       "id": "cfg-a4bd0fec5b67",
-      "sourceLine": 1382,
+      "sourceLine": 1397,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8582,7 +8782,7 @@
     {
       "key": "bearger",
       "id": "cfg-761a2d590658",
-      "sourceLine": 1383,
+      "sourceLine": 1398,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8592,7 +8792,7 @@
     {
       "key": "dragonfly",
       "id": "cfg-4a3db7484b59",
-      "sourceLine": 1384,
+      "sourceLine": 1399,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8602,7 +8802,7 @@
     {
       "key": "beequeen",
       "id": "cfg-83aca29791fc",
-      "sourceLine": 1385,
+      "sourceLine": 1400,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8612,7 +8812,7 @@
     {
       "key": "malbatross",
       "id": "cfg-ee1665f033bd",
-      "sourceLine": 1388,
+      "sourceLine": 1403,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8622,7 +8822,7 @@
     {
       "key": "klaus",
       "id": "cfg-d568b8cd7ef6",
-      "sourceLine": 1390,
+      "sourceLine": 1405,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8632,7 +8832,7 @@
     {
       "key": "crabking",
       "id": "cfg-9dbcfdf97102",
-      "sourceLine": 1393,
+      "sourceLine": 1408,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8642,7 +8842,7 @@
     {
       "key": "sharkboi",
       "id": "cfg-2f68f4740f95",
-      "sourceLine": 1401,
+      "sourceLine": 1416,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8652,7 +8852,7 @@
     {
       "key": "gestalt",
       "id": "cfg-a7ad9ce0c4a8",
-      "sourceLine": 1403,
+      "sourceLine": 1418,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8663,7 +8863,7 @@
     {
       "key": "shadowchesspieces",
       "id": "cfg-29d8a0592d97",
-      "sourceLine": 1407,
+      "sourceLine": 1422,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8673,7 +8873,7 @@
     {
       "key": "eyeofterror",
       "id": "cfg-0d6c8dc782cb",
-      "sourceLine": 1414,
+      "sourceLine": 1429,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8683,7 +8883,7 @@
     {
       "key": "daywalker2",
       "id": "cfg-63bf31d8b224",
-      "sourceLine": 1415,
+      "sourceLine": 1430,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8693,7 +8893,7 @@
     {
       "key": "toadstool",
       "id": "cfg-86ab4ba9e5fd",
-      "sourceLine": 1416,
+      "sourceLine": 1431,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8703,7 +8903,7 @@
     {
       "key": "alterguardian",
       "id": "cfg-75b575382683",
-      "sourceLine": 1419,
+      "sourceLine": 1434,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8713,7 +8913,7 @@
     {
       "key": "banicetiles",
       "id": "cfg-aab991335130",
-      "sourceLine": 1433,
+      "sourceLine": 1448,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8724,7 +8924,7 @@
     {
       "key": "old_alterguardian",
       "id": "cfg-9e5ca8e9fbfc",
-      "sourceLine": 1434,
+      "sourceLine": 1449,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8735,7 +8935,7 @@
     {
       "key": "alterguardian_phase4",
       "id": "cfg-a2673eb22124",
-      "sourceLine": 1436,
+      "sourceLine": 1451,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8745,7 +8945,7 @@
     {
       "key": "minotaur",
       "id": "cfg-dcb561296664",
-      "sourceLine": 1438,
+      "sourceLine": 1454,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8755,7 +8955,7 @@
     {
       "key": "atriumstalker",
       "id": "cfg-05511e058417",
-      "sourceLine": 1445,
+      "sourceLine": 1462,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8765,7 +8965,7 @@
     {
       "key": "epic_armor_5",
       "id": "cfg-8e3c459226ea",
-      "sourceLine": 1452,
+      "sourceLine": 1481,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8775,14 +8975,14 @@
     {
       "key": "epic_ruin",
       "id": "cfg-23309750dc31",
-      "sourceLine": 1469,
+      "sourceLine": 1498,
       "status": "documented",
       "requires": []
     },
     {
       "key": "poor_armor",
       "id": "cfg-beafda06b601",
-      "sourceLine": 1478,
+      "sourceLine": 1507,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8792,7 +8992,7 @@
     {
       "key": "pig_boss",
       "id": "cfg-f1282b4f4dc3",
-      "sourceLine": 1490,
+      "sourceLine": 1519,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8803,7 +9003,7 @@
     {
       "key": "Monster Harder Level",
       "id": "cfg-fcf00b43c764",
-      "sourceLine": 1494,
+      "sourceLine": 1523,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8813,7 +9013,7 @@
     {
       "key": "extra_change",
       "id": "cfg-3ff20b5a2bb0",
-      "sourceLine": 1498,
+      "sourceLine": 1527,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -8822,7 +9022,7 @@
     {
       "key": "boss_health",
       "id": "cfg-6d7533d7b3df",
-      "sourceLine": 1499,
+      "sourceLine": 1528,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8832,7 +9032,7 @@
     {
       "key": "boss_speed",
       "id": "cfg-f48accd864a1",
-      "sourceLine": 1500,
+      "sourceLine": 1529,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8842,7 +9042,7 @@
     {
       "key": "boss_attackanim",
       "id": "cfg-432ef913eafb",
-      "sourceLine": 1502,
+      "sourceLine": 1531,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8852,7 +9052,7 @@
     {
       "key": "boss_attackspeed",
       "id": "cfg-394cd3e7b1bf",
-      "sourceLine": 1506,
+      "sourceLine": 1535,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8862,7 +9062,7 @@
     {
       "key": "boss_attackrange",
       "id": "cfg-698e204292d0",
-      "sourceLine": 1508,
+      "sourceLine": 1537,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8872,7 +9072,7 @@
     {
       "key": "boss_damage",
       "id": "cfg-50de78cc838e",
-      "sourceLine": 1509,
+      "sourceLine": 1538,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8882,7 +9082,7 @@
     {
       "key": "boss_damagetake",
       "id": "cfg-347174416eff",
-      "sourceLine": 1510,
+      "sourceLine": 1539,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8892,7 +9092,7 @@
     {
       "key": "boss_damagetake2",
       "id": "cfg-3fa9643b0411",
-      "sourceLine": 1511,
+      "sourceLine": 1540,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8902,7 +9102,7 @@
     {
       "key": "boss_maxdamagetake",
       "id": "cfg-dcd51bd2eaf6",
-      "sourceLine": 1512,
+      "sourceLine": 1541,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8912,7 +9112,7 @@
     {
       "key": "boss_healthregen",
       "id": "cfg-55838e798cac",
-      "sourceLine": 1513,
+      "sourceLine": 1542,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8922,7 +9122,7 @@
     {
       "key": "boss_notfreezable",
       "id": "cfg-750b3148595b",
-      "sourceLine": 1514,
+      "sourceLine": 1543,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8932,7 +9132,7 @@
     {
       "key": "boss_notsleeper",
       "id": "cfg-ece34e0ee6c4",
-      "sourceLine": 1515,
+      "sourceLine": 1544,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8942,7 +9142,7 @@
     {
       "key": "boss_ocean",
       "id": "cfg-5c0df5880486",
-      "sourceLine": 1516,
+      "sourceLine": 1545,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8952,7 +9152,7 @@
     {
       "key": "boss_notenemyregen",
       "id": "cfg-ef0308ac946b",
-      "sourceLine": 1517,
+      "sourceLine": 1546,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -8962,7 +9162,7 @@
     {
       "key": "notboss_range",
       "id": "cfg-5abd22bf89d9",
-      "sourceLine": 1519,
+      "sourceLine": 1548,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8972,7 +9172,7 @@
     {
       "key": "notboss_health",
       "id": "cfg-34a88b1cf7d2",
-      "sourceLine": 1525,
+      "sourceLine": 1554,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8982,7 +9182,7 @@
     {
       "key": "notboss_speed",
       "id": "cfg-c9d668f8880d",
-      "sourceLine": 1526,
+      "sourceLine": 1555,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -8992,7 +9192,7 @@
     {
       "key": "notboss_attackanim",
       "id": "cfg-1e20f175359f",
-      "sourceLine": 1528,
+      "sourceLine": 1557,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -9002,7 +9202,7 @@
     {
       "key": "notboss_attackspeed",
       "id": "cfg-2cf3efca856b",
-      "sourceLine": 1531,
+      "sourceLine": 1560,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -9012,7 +9212,7 @@
     {
       "key": "notboss_attackrange",
       "id": "cfg-08e36203351d",
-      "sourceLine": 1533,
+      "sourceLine": 1562,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -9022,7 +9222,7 @@
     {
       "key": "notboss_damage",
       "id": "cfg-24e238a80b9a",
-      "sourceLine": 1534,
+      "sourceLine": 1563,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -9032,7 +9232,7 @@
     {
       "key": "notboss_damagetake",
       "id": "cfg-51a3d9500a9d",
-      "sourceLine": 1535,
+      "sourceLine": 1564,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -9042,7 +9242,7 @@
     {
       "key": "notboss_damagetake2",
       "id": "cfg-abf60b563aee",
-      "sourceLine": 1536,
+      "sourceLine": 1565,
       "status": "mismatch",
       "requires": [
         "enable hard mode",
@@ -9052,7 +9252,7 @@
     {
       "key": "notboss_maxdamagetake",
       "id": "cfg-8f27ff3173b9",
-      "sourceLine": 1537,
+      "sourceLine": 1566,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -9062,7 +9262,7 @@
     {
       "key": "notboss_healthregen",
       "id": "cfg-16d33c94d751",
-      "sourceLine": 1538,
+      "sourceLine": 1567,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -9072,7 +9272,7 @@
     {
       "key": "notboss_ocean",
       "id": "cfg-6962858f9527",
-      "sourceLine": 1539,
+      "sourceLine": 1568,
       "status": "documented",
       "requires": [
         "enable hard mode",
@@ -9082,7 +9282,7 @@
     {
       "key": "shengwuqishilu",
       "id": "cfg-c78c50d20c8f",
-      "sourceLine": 1541,
+      "sourceLine": 1570,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -9091,7 +9291,7 @@
     {
       "key": "shengwuqishilu2",
       "id": "cfg-b2a077e86cb9",
-      "sourceLine": 1545,
+      "sourceLine": 1574,
       "status": "documented",
       "requires": [
         "enable hard mode"
@@ -9100,7 +9300,7 @@
     {
       "key": "shengwuqishilu3",
       "id": "cfg-057c919f3f38",
-      "sourceLine": 1547,
+      "sourceLine": 1576,
       "status": "documented",
       "requires": [
         "enable hard mode"

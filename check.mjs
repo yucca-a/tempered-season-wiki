@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {canonicalText,terminology} from './terminology.mjs';
+const {editorialState}=await import('./catalog.mjs');
 const root=fileURLToPath(new URL('./dist/',import.meta.url));
 const all=await fs.readdir(root,{recursive:true});
 const html=all.filter(f=>f.endsWith('.html'));
@@ -56,7 +57,7 @@ for(const file of ['tempered.html','um-beta/index.html']){
 }
 for(const file of ['winona-electrical-upgrades.html','um-beta/winona.html']){
  const text=pages.get(file);
- if(!text?.includes('src="navigation-index.js"')||text.includes('src="search-index.js"'))errors.push(file+': detail page loads the full-text index');
+ if(!/src="navigation-index\.js[?"]/.test(text??'')||/src="search-index\.js[?"]/.test(text))errors.push(file+': detail page loads the full-text index');
 }
 const portal=pages.get('index.html');
 for(const href of ['tempered-home.html','um-beta/index.html']){
@@ -181,14 +182,14 @@ if(coverage.unlinkedSettings.length)errors.push('Configurations without related 
 if(coverage.itemAudit?.missing.length)errors.push('Items missing source audit: '+coverage.itemAudit.missing.join(', '));
 if(coverage.entityAudit?.missing.length)errors.push('Characters/buildings/Bosses missing source audit: '+coverage.entityAudit.missing.join(', '));
 if(coverage.lifeAudit?.missing.length)errors.push('Food/creatures missing source audit: '+coverage.lifeAudit.missing.join(', '));
-for(const [file,text] of pages)if(/yucca/i.test(text))errors.push(`${file}: personal credit remains`);
+for(const [file,text] of pages)if(/yucca/i.test(text.replaceAll('wiki.yucca-a.com','')))errors.push(`${file}: personal credit remains`);
 if(/yucca/i.test(await fs.readFile(path.join(root,'search-index.js'),'utf8')))errors.push('Search index contains personal credit');
 if(context.window.WIKI_INDEX.length!==coverage.articles+coverage.configs)errors.push('Search coverage mismatch');
 for(const c of configData.configs){if(!c.options.some(o=>o.value===c.default))errors.push('Default absent '+c.key);}
 const modRoot=process.env.WIKI_TEMPERED_SOURCE;
 try{const source=await fs.readFile(modRoot?path.join(modRoot,'modinfo.lua'):new URL('../content/modinfo.lua',import.meta.url));if(createHash('sha256').update(source).digest('hex')!==configData.sourceHash)errors.push('Configuration source differs from the published snapshot; check WIKI_TEMPERED_SOURCE or rerun extract-config.py');}catch(e){if(e.code!=='ENOENT'||modRoot)throw e;}
 const provenance=JSON.parse(await fs.readFile(new URL('./content-sources.json',import.meta.url),'utf8'));
-const releaseAudit=JSON.parse(await fs.readFile(new URL('./data/release-20261113-sources.json',import.meta.url),'utf8'));
+const releaseAudit=JSON.parse(await fs.readFile(new URL('./data/release-sources.json',import.meta.url),'utf8'));
 if(releaseAudit.version!==configData.version)errors.push('Release source audit and configuration snapshot versions differ');
 if(JSON.stringify(releaseAudit.articles.map(a=>a.id).sort())!==JSON.stringify([...provenance.targetedRefresh].sort()))errors.push('Targeted release articles differ from the source audit');
 for(const article of provenance.articles)if(!article.source?.length)errors.push('Missing source reference for '+article.id);
@@ -203,6 +204,15 @@ if(modRoot){
    if(source.length!==expected.bytes||createHash('sha256').update(source).digest('hex')!==expected.sha256)errors.push('Release source changed since review: '+file);
   }catch(e){if(e.code!=='ENOENT')throw e;errors.push('Missing audited release source '+file);}
  }));
+}
+for(const id of editorialState.stale)errors.push(`editorial/${id}.md was written against older article content; merge the new facts, then refresh its basis with: node editorial-cli.mjs basis ${id}`);
+// Site files and cache safety: every local script/stylesheet must be versioned because _headers caches them for a year.
+for(const file of ['404.html','sitemap.xml','robots.txt','_headers'])if(!paths.has(file))errors.push('Missing site file '+file);
+for(const [file,text] of pages){
+ for(const [,url] of text.matchAll(/\b(?:src|href|data-index)="([^"#]+\.(?:js|css)(?:\?[^"]*)?)"/g)){
+  if(!/^(https?:)?\/\//.test(url)&&!/\?v=[0-9a-f]{10}$/.test(url))errors.push(file+': unversioned asset '+url);
+ }
+ if(file!=='404.html'&&!text.includes('rel="canonical"'))errors.push(file+': missing canonical link');
 }
 if(errors.length){console.error([...new Set(errors)].join('\n'));process.exitCode=1;}
 else console.log(`PASS: ${html.length} pages; ${links} local links and anchors; ${coverage.configs} settings / ${choiceCount} choices; ${context.window.WIKI_INDEX.length} searchable entries; JavaScript syntax.`);

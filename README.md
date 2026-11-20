@@ -1,8 +1,12 @@
 # 饥荒联机版模组 Wiki
 
-[公开首页](https://cuilian-wiki.pages.dev/)收录两套中文资料。淬炼之季百科位于 `tempered.html`，旧词条地址可继续访问。永不妥协测试版百科位于 `um-beta/`，包含按源码核对的词条、配置及制作与兑换索引。
+[公开首页](https://wiki.yucca-a.com/)收录两套中文资料。淬炼之季百科位于 `tempered.html`，旧词条地址可继续访问。永不妥协测试版百科位于 `um-beta/`，包含按源码核对的词条、配置及制作与兑换索引。
 
 测试版的版本、术语和快照刷新方式见 [永不妥协测试版维护说明](um-beta/README.md)。下方的内容来源章节说明淬炼之季的资料结构。
+
+## 正文维护
+
+玩家看到的正文放在 `editorial/`。需要重写词条时，可以运行 `node editorial-cli.mjs export <词条 ID>`。源码说明改动后，先核对正文，再运行 `node editorial-cli.mjs basis <词条 ID> --write`。
 
 ## 本地构建
 

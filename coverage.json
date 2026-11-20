@@ -1,9 +1,9 @@
 {
-  "articles": 300,
-  "configs": 440,
-  "choices": 3356,
+  "articles": 312,
+  "configs": 449,
+  "choices": 3374,
   "targetedRefresh": {
-    "version": "2.8.15.0.34",
+    "version": "2.8.15.1.0",
     "articles": [
       "role-winona",
       "winona-toolbox",
@@ -78,27 +78,29 @@
       "world-shadow-companions",
       "dried-berries",
       "resource-regrowth",
-      "tempered-prefab-codes"
+      "tempered-prefab-codes",
+      "mod-interface"
     ],
-    "count": 74
+    "count": 75
   },
   "sourceAuditVersions": {
-    "2.8.15.0.34": 27,
+    "2.8.15.0.34": 26,
     "2.8.15.0.25": 22,
-    "2.8.15.0.23": 25,
+    "2.8.15.0.23": 23,
     "2.8.14.97.4": 136,
+    "2.8.15.0.46": 4,
     "2.8.14.98.6": 1
   },
-  "groups": 19,
+  "groups": 18,
   "images": 691,
   "itemAudit": {
-    "version": "2.8.15.0.34",
+    "version": "2.8.15.1.0",
     "articles": 64,
     "items": 62,
     "missing": []
   },
   "entityAudit": {
-    "version": "2.8.15.0.34",
+    "version": "2.8.15.1.0",
     "articles": 67,
     "characters": 25,
     "buildings": 22,
@@ -106,19 +108,14 @@
     "missing": []
   },
   "lifeAudit": {
-    "version": "2.8.15.0.34",
+    "version": "2.8.15.1.0",
     "articles": 51,
     "food": 18,
     "creatures": 33,
     "missing": []
   },
-  "notedSettings": 440,
+  "notedSettings": 449,
   "implementationDifferences": [
-    {
-      "key": "Shadow Prefab Setting",
-      "label": "暗影分身仇恨玩家",
-      "status": "mismatch"
-    },
     {
       "key": "Portable Crock Pot Multi",
       "label": "便携烹饪锅批量调味",
@@ -227,11 +224,6 @@
     {
       "key": "delay_leave",
       "label": "延迟下线",
-      "status": "mismatch"
-    },
-    {
-      "key": "random_seasons",
-      "label": "混乱之季",
       "status": "mismatch"
     },
     {
