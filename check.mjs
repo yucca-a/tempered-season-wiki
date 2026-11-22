@@ -183,7 +183,7 @@ if(coverage.itemAudit?.missing.length)errors.push('Items missing source audit: '
 if(coverage.entityAudit?.missing.length)errors.push('Characters/buildings/Bosses missing source audit: '+coverage.entityAudit.missing.join(', '));
 if(coverage.lifeAudit?.missing.length)errors.push('Food/creatures missing source audit: '+coverage.lifeAudit.missing.join(', '));
 for(const [file,text] of pages)if(/yucca/i.test(text.replaceAll('wiki.yucca-a.com','')))errors.push(`${file}: personal credit remains`);
-if(/yucca/i.test(await fs.readFile(path.join(root,'search-index.js'),'utf8')))errors.push('Search index contains personal credit');
+if(/yucca/i.test((await fs.readFile(path.join(root,'search-index.js'),'utf8')).replaceAll('wiki.yucca-a.com','')))errors.push('Search index contains personal credit');
 if(context.window.WIKI_INDEX.length!==coverage.articles+coverage.configs)errors.push('Search coverage mismatch');
 for(const c of configData.configs){if(!c.options.some(o=>o.value===c.default))errors.push('Default absent '+c.key);}
 const modRoot=process.env.WIKI_TEMPERED_SOURCE;

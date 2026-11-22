@@ -305,7 +305,7 @@ export const patches = [
 export const configNotes = {
   'Minotaurhorn Enchant': {
     status: 'mismatch',
-    paragraphs: ['拿守护者之角对步行手杖、懒人魔杖、查尔斯滑行手杖使用附魔，消耗 1 个角。每件可附魔一次，等级为 Lv1。持续步行约 3 秒获得额外 10% 移速，满速时饥饿消耗为 1.33 倍。检查装备可切换撞击。远古装备强化另受远古守护者档位控制。'],
+    paragraphs: ['拿普通犀牛角对步行手杖、懒人魔杖、查尔斯滑行手杖使用附魔，消耗 1 个角。每件可附魔一次，等级为 Lv1。持续步行约 3 秒获得额外 10% 移速，满速时饥饿消耗为 1.33 倍。检查装备可切换撞击。远古装备强化另受远古守护者档位控制。'],
     requires: ['enable easy mode'],
   },
   'Make Cooking Recipe Card': {

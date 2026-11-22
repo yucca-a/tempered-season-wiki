@@ -162,7 +162,7 @@ note('beefalo', '普通牛铃要求至少10%驯化度，并限制绑定影子、
 add({
   id: 'equipment-slot-swapping', title: '手部装备换装', category: 'mechanics', tag: '操作便利',
   summary: '从自己物品栏选中另一件手部装备时，旧手持物进入这次选中物品腾出的格子。',
-  keywords: '换装 武器 格子 快捷键 数字键 手柄 装备栏 胡须槽', configKeys: [],
+  keywords: '换装 武器 格子 快捷键 数字键 手柄 装备栏 胡须槽', configKeys: ['Equipment Swap Optimization'],
   source: ['content/modmain.lua', 'content/common/equip_slot_fix.lua'],
   sections: [
     P('换装方法', '空手时，1 号格是矛、2 号格是斧头。先按 1 拿矛，1 号格空出；再按 2 拿斧头，矛进入 2 号格，1 号格保持空。再次按 2，两件手部装备在当前格与手上交换。', '这项便利默认加载，不受简单／困难模式开关控制。重复的同件装备请求不会把手中的同一件物品卸下。'),
@@ -170,3 +170,4 @@ add({
     P('额外装备栏', '旧额外装备栏模组遗漏威尔逊胡须槽时，会补回对应槽位，使两端使用一致的槽位表。'),
   ],
 });
+note('Equipment Swap Optimization', '默认开启。从自己的物品栏切换手部、头部或身体装备时，换下的装备会回到新装备腾出的格子。关闭后按原版换装。');

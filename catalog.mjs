@@ -29,7 +29,7 @@ for(const part of ['general','items','characters','world','um-compat-equipment']
     Object.assign(notes,content.configNotes??{});
   }catch(error){if(error.code!=='ERR_MODULE_NOT_FOUND')throw error;}
 }
-const originalKeys={ 'configuration':['enable easy mode','enable hard mode','World Exchange','epic_ruin'],combat:['combat'],armor:['epic_armor_5'], 'world-exchange':['World Exchange','Container Sort'], 'skill-tree':['More Skill Points'], 'night-vision':['Monster Night Vision','wathom nightvision'], wixie:['Wixie No Claustrophobia','wixie'], walter:['Walter Use Wixie Slingshot','walter'], wanda:['wanda strengthen',"Wanda Don't Auto Drop Age",'regen_danger'], eyeturret:['eyeturret'],trap:['Trap Guaranteed Catch'], containers:['Container Sort','Items collect'], frostjaw:['boss_health','sharkboi','extra_change'] };
+const originalKeys={ 'configuration':['enable easy mode','enable hard mode','World Exchange','epic_ruin'],combat:['combat'],armor:['epic_armor_5'], 'world-exchange':['World Exchange','Container Sort'], 'skill-tree':['More Skill Points'], 'night-vision':['Monster Night Vision'], wixie:['Wixie No Claustrophobia','wixie'], walter:['Walter Use Wixie Slingshot','walter'], wanda:['wanda strengthen',"Wanda Don't Auto Drop Age",'regen_danger'], eyeturret:['eyeturret'],trap:['Trap Guaranteed Catch'], containers:['Container Sort','Items collect'], frostjaw:['boss_health','sharkboi','extra_change'] };
 for(const a of articles){a.configKeys??=originalKeys[a.id]??[];a.keywords??='';a.source??=[];}
 export const itemAuditIds=new Set();
 for(const part of ['custom','equipment','utility','general']){
@@ -144,7 +144,11 @@ for(const article of articles.filter(a=>currentAuditIds.has(a.id))){
  if(article.category==='characters'||article.category==='buildings'||article.id.startsWith('boss-'))entityAuditIds.add(article.id);
  if(article.category==='food'||article.category==='creatures'&&!article.id.startsWith('boss-'))lifeAuditIds.add(article.id);
 }
-about.sections[0].paragraphs.push('淬炼之季分区以 Steam 创意工坊当前发布版为准。未涉及变更的条目沿用原有核对记录；永不妥协测试版有独立的版本和词条。');
+about.sections[0].paragraphs.push('当前资料基线为 2.8.15.0.34，收录恐惧-警告表、织影夜莓、WX-78 草案与暗影魔法续费。未涉及变更的条目沿用原有核对记录；永不妥协测试版有独立的版本和词条。');
+// The archived configuration still lists Wathom's former toggle.
+if(configData.configs.some(c=>c.key==='wathom nightvision')){
+ articles.find(a=>a.id==='night-vision').configKeys.push('wathom nightvision');
+}
 // Hand-edited player-facing text (editorial/*.md) goes on top of every research and release patch.
 export const editorialState=globalThis.WIKI_EDITORIAL_SKIP?{applied:[],stale:[],bases:Object.fromEntries(articles.map(a=>[a.id,basisOf(a)]))}:applyEditorials(articles);
 applyArticleTerminology(articles);
@@ -156,7 +160,7 @@ export function defaultChoice(config){return config.options.find(o=>o.value===co
 export function choiceText(option){return option?.label||String(option?.value);}
 export function requirements(c){
   if(notes[c.key]?.requires!==undefined)return notes[c.key].requires;
-  if(['Monster Night Vision','wathom nightvision','Walter Use Wixie Slingshot','Celestial Jewel Upgrade Sword Lunarplant','gelblob_storage_kit upgrade'].includes(c.key))return [];
+  if(['Monster Night Vision','Walter Use Wixie Slingshot','Celestial Jewel Upgrade Sword Lunarplant','gelblob_storage_kit upgrade'].includes(c.key))return [];
   if(c.mode==='暗影世界'&&c.key!=='Shadow World')return ['Shadow World'];
   if(c.mode==='Ray')return c.key==='Random sized beefalo'?['Random Sized']:[];
   if(c.mode==='简单模式'){

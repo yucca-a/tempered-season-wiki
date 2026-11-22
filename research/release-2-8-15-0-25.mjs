@@ -23,11 +23,11 @@ export function refreshRelease25(articles,notes){
    '切换前未完成的咸鱼跨层存取继续恢复，离线玩家的待领取物品仍保留。再次保存和重启不会把已经恢复的物品重新发一份。地面、洞穴及额外分片需要采用一致版本和设置。',
   ];
   a.sections.push(P('关闭空间的按钮','使用为爽原版穿越时，关闭暗影空间会同步隐藏整理、穿越和暂停按钮，不再残留一秒的暂停按钮。'));
- },['content/easy_other/containersort.lua','content/scripts/components/shadowbank2hm.lua','content/scripts/exchangexianyurecovery2hm.lua','content/scripts/shadowvaultproxy2hm.lua']);
+ },['content/easy_other/containersort.lua','content/scripts/components/shadowbank2hm.lua','content/scripts/exchangexianyurecovery2hm.lua','content/scripts/pocketproxy2hm.lua']);
  for(const id of ['containers','tackle-station'])revise(id,a=>{
   a.sections.push({...P('咸鱼版切回原版','帽子和钓具旧物品会尝试恢复到原版空间，保留已有库存。容量不足时剩余物品继续保存，腾出位置后恢复；钓具入口会对应当前有效空间。'),links:['world-exchange']});
   if(id==='containers')a.sections.find(s=>s.title==='穿越与空间切换').paragraphs[1]='旧配置统一迁移为爽原版；地面和洞穴须同时更新且档位一致。原版／枢纽的手动切换保留各自库存，咸鱼版切回原版另有物品恢复。';
- },['content/scripts/exchangexianyurecovery2hm.lua','content/scripts/shadowvaultproxy2hm.lua']);
+ },['content/scripts/exchangexianyurecovery2hm.lua','content/scripts/pocketproxy2hm.lua']);
  revise('right-click-actions',a=>{
   a.summary='武器、角色和勋章技能保留普通右键；发生冲突时用 Ctrl＋右键选择淬炼技能。';
   a.sections[0]=P('技能冲突时的操作','装备、角色专属技能或勋章技能当前可用时，普通右键优先使用它们，Ctrl＋右键使用淬炼提供的角色技能。例如能奔雷冲刺时普通右键冲刺、Ctrl＋右键盈能；灵魂勋章可以跳跃时普通右键灵魂跳跃、Ctrl＋右键盈能。',

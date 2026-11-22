@@ -1,7 +1,7 @@
 {
-  "version": "2.8.15.1.0",
-  "checkedAt": "2026-11-20",
-  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.0 source. Each article retains its own review version.",
+  "version": "2.8.15.1.8",
+  "checkedAt": "2026-11-22",
+  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.8 source. Each article retains its own review version.",
   "articles": [
     {
       "id": "getting-started",
@@ -42,7 +42,6 @@
       "source": [
         "content/modinfo.lua",
         "content/scripts/exchangemode2hm.lua",
-        "content/easy_other/shadowvault.lua",
         "content/scripts/difficultyrating2hm.lua"
       ],
       "configKeys": [],
@@ -78,9 +77,7 @@
       "configKeys": [
         "enable hard mode",
         "monster_change",
-        "epic_armor_5",
-        "extra_change",
-        "boss_health"
+        "epic_armor_5"
       ],
       "auditedVersion": "2.8.15.0.23"
     },
@@ -92,14 +89,13 @@
         "content/easy_other/exchangemodes2hm.lua",
         "content/easy_other/exchangeclassic2hm.lua",
         "content/easy_other/shadowbank2hm.lua",
-        "content/easy_other/shadowvault.lua",
         "content/scripts/exchangemode2hm.lua",
         "content/scripts/components/exchangevariants2hm.lua",
-        "content/scripts/exchangeoriginalmigration2hm.lua",
+        "content/scripts/exchangesolo2hm.lua",
         "content/easy_other/containersort.lua",
         "content/scripts/components/shadowbank2hm.lua",
         "content/scripts/exchangexianyurecovery2hm.lua",
-        "content/scripts/shadowvaultproxy2hm.lua"
+        "content/scripts/pocketproxy2hm.lua"
       ],
       "configKeys": [
         "Container Sort",
@@ -165,7 +161,7 @@
         "content/easy_other/exchangemodes2hm.lua",
         "content/scripts/exchangemode2hm.lua",
         "content/scripts/exchangexianyurecovery2hm.lua",
-        "content/scripts/shadowvaultproxy2hm.lua",
+        "content/scripts/pocketproxy2hm.lua",
         "content/weather/temperature.lua",
         "content/scripts/prefabs/backpackicon2hm.lua"
       ],
@@ -382,7 +378,7 @@
         "原版 scripts.zip：scripts/recipes.lua",
         "原版 scripts.zip：scripts/tuning.lua",
         "content/scripts/exchangexianyurecovery2hm.lua",
-        "content/scripts/shadowvaultproxy2hm.lua"
+        "content/scripts/pocketproxy2hm.lua"
       ],
       "configKeys": [
         "enable easy mode",
@@ -1015,6 +1011,29 @@
       "auditedVersion": "2.8.15.0.34"
     },
     {
+      "id": "mechanic-extra-stats",
+      "source": [
+        "content/extra/extra.lua",
+        "content/extra/frostjaw_trade.lua",
+        "content/modmain.lua"
+      ],
+      "configKeys": [
+        "extra_change",
+        "boss_health",
+        "notboss_health",
+        "boss_speed",
+        "notboss_speed",
+        "boss_damage",
+        "notboss_damage",
+        "boss_attackspeed",
+        "boss_attackrange",
+        "notboss_attackrange",
+        "notboss_range",
+        "boss_health_wixie"
+      ],
+      "auditedVersion": "2.8.15.0.46"
+    },
+    {
       "id": "world-player-temperature",
       "source": [
         "content/modinfo.lua",
@@ -1123,24 +1142,18 @@
         "content/modmain.lua",
         "content/common/equip_slot_fix.lua"
       ],
-      "configKeys": [],
+      "configKeys": [
+        "Equipment Swap Optimization"
+      ],
       "auditedVersion": "2.8.15.0.23"
     },
     {
       "id": "shadow-nexus",
       "source": [
-        "content/easy_other/shadowvault.lua",
-        "content/easy_other/shadowvaultshared.lua",
-        "content/easy_other/shadowvaultplayer.lua",
-        "content/scripts/shadowvaultconfig2hm.lua",
-        "content/scripts/shadowvaultnative2hm.lua",
-        "content/scripts/shadowvaultshared2hm.lua",
-        "content/scripts/components/shadowvault2hm.lua",
-        "content/scripts/shadowvaultitems2hm.lua"
+        "content/modinfo.lua",
+        "content/easy_other/exchangemodes2hm.lua"
       ],
       "configKeys": [
-        "Container Sort",
-        "Items collect",
         "World Exchange"
       ],
       "auditedVersion": "2.8.15.0.23"
@@ -1363,16 +1376,16 @@
       "bytes": 5010
     },
     "content/common/bugfix.lua": {
-      "sha256": "819d4478995485ad8290244928216ad37a4790fdac740fb0a5196a2f067d2516",
-      "bytes": 5676
+      "sha256": "c70e3098d7512aec8ca7cf0a8881abcc9aec4c00fb443223beb0d38279be0403",
+      "bytes": 9945
     },
     "content/common/combat_rewards.lua": {
       "sha256": "b398270408be8b4ed108e07f30c713ea6295b8ff1c7d84796f870f9872ba91fd",
       "bytes": 2851
     },
     "content/common/common.lua": {
-      "sha256": "cbb9654d40251d65f55f98df7d63a6b91aaf8e37918e52b4f19ed958a3bac9d4",
-      "bytes": 50375
+      "sha256": "06d2e79321ac85434e459c2b6869c60fa118d04d39ba83d1e933cef65a96dd18",
+      "bytes": 52787
     },
     "content/common/curse.lua": {
       "sha256": "ae21938ad0f54c7260b5cf8def2de1e081ea705a758e7c8b3bbdb3fc13b9719a",
@@ -1383,8 +1396,8 @@
       "bytes": 2112
     },
     "content/common/equip_slot_fix.lua": {
-      "sha256": "0056c647ea3493500f24a4ec0417d38c27e1b3090a693865710e99a5f5d226ed",
-      "bytes": 2119
+      "sha256": "ece845d4f5875ca99d1b308f8889b68a540c20ede4471fb483ae3af44cece798",
+      "bytes": 2142
     },
     "content/common/food_util.lua": {
       "sha256": "136a17796337bbf593b8eabe0bbbd5987ef6e6ecc492dd69eeb3063433387e41",
@@ -1395,16 +1408,16 @@
       "bytes": 4099
     },
     "content/common/monster_nightvision.lua": {
-      "sha256": "1cd29d6e9f959126aa425c3105de413d66d6351d7ea3c5238782609a1c8ccf15",
-      "bytes": 9734
+      "sha256": "9b87dd4ac2a4cb22bf62da74be446c8608accf91ac2a521634f1654848081cf4",
+      "bytes": 12024
     },
     "content/common/patch.lua": {
       "sha256": "6243d300bd151bac29f964cfd543989b31d871003ddd1ce1d5bb8caa76821a91",
       "bytes": 30949
     },
     "content/common/um_compat_fixes.lua": {
-      "sha256": "1db88e0e7832311f661c6856f103b5e9389d6ea7a80381a1d96abe282a1b5281",
-      "bytes": 2923
+      "sha256": "7047901fe680f6ec6850887b1694d0ee3cf3ef85202df26fc6302f50d9cf3cde",
+      "bytes": 4110
     },
     "content/common/walter_wixie_slingshot.lua": {
       "sha256": "03ad5ed587e5a1689a9032d9246c73328c35f80fb573db9d8c760a3af6ffb1ce",
@@ -1419,32 +1432,32 @@
       "bytes": 11645
     },
     "content/easy_other/containersort.lua": {
-      "sha256": "181d7ac2272ff458ded7cd07fee6f643560296ed5cac7739a9fbd049ace4ee3a",
-      "bytes": 230168
+      "sha256": "f01b70e8c0346327d2a2c5e05b315f0db4246ad4641476c838e645037e4040b6",
+      "bytes": 229791
     },
     "content/easy_other/easy_equipments.lua": {
-      "sha256": "12b75770ff6ca45ac9a6f80a6cb94f841fb00f21933621ddee2a95f3a2350212",
-      "bytes": 297012
+      "sha256": "982890bf4de77e87b58b0fe6901a6a2cc410cd75ee8eaa098b4932cacfab424c",
+      "bytes": 295820
     },
     "content/easy_other/easy_items.lua": {
-      "sha256": "04735a3e89c06d28e29496d412b4a7fe640257e99bca0731e1c9bed11c23b5e3",
-      "bytes": 79859
+      "sha256": "d0d844e3cfb223344a33a900d1d24e0f0b38e45477a92a5a3464bd4315d72430",
+      "bytes": 78712
     },
     "content/easy_other/easy_mechanics.lua": {
-      "sha256": "b5db2a5de8cdba21edb0886e122e27aa502dcf2494ea558a02f3d6c8a3295cbe",
-      "bytes": 34736
+      "sha256": "093ef9960d1209d614c8ee7f69a2d559c7e235fa04b4aeb761b4a0d0a0ede40e",
+      "bytes": 37376
     },
     "content/easy_other/easy_structures.lua": {
-      "sha256": "0b689d2a3ac61626fb71554b1a4a24640e28a4dc338c87ea42d84579247405a8",
-      "bytes": 172951
+      "sha256": "98d8ff1f7b9a7a8c4cc11406c30ef276027bed6c193c0017bd343cb4b251c18e",
+      "bytes": 169646
     },
     "content/easy_other/exchangeclassic2hm.lua": {
       "sha256": "975620502a474e41c4be42a5a96f4f51b9d9f1cacdd2cc135dc65004b7901a73",
       "bytes": 9654
     },
     "content/easy_other/exchangemodes2hm.lua": {
-      "sha256": "941be967d51996c4441ca69a4191a739ec56ef3cb3d992ddcd832d509d4b4a79",
-      "bytes": 2274
+      "sha256": "a3c722ab73e24b5e0a3750da227fcba13065b5a8cea307952428115bf8d4e4fe",
+      "bytes": 2814
     },
     "content/easy_other/eyeturret2hm.lua": {
       "sha256": "7e660d8b5277a8183a6ea7a0eb700a3617aeeb1dd8594f5b1f1be8fbd5c28e8d",
@@ -1466,18 +1479,6 @@
       "sha256": "b1c55e11e5927e21691fa6beff9b4a7116f2ba310138e777b9dd8178a941c744",
       "bytes": 7288
     },
-    "content/easy_other/shadowvault.lua": {
-      "sha256": "ba7cb03fc6d9236fdae8c47abf1eb62ceef780f5d8dc75af7201b8d2aa31d2a4",
-      "bytes": 7151
-    },
-    "content/easy_other/shadowvaultplayer.lua": {
-      "sha256": "492afa994f0949c1dde573796d931d8e2f44de11534d291fa6b447ba4a7c7fcb",
-      "bytes": 1396
-    },
-    "content/easy_other/shadowvaultshared.lua": {
-      "sha256": "34061a51b76b0348ce34cc585df40578c29ae082d30cf1af4af6fd88dc5b7222",
-      "bytes": 6965
-    },
     "content/easy_other/ui.lua": {
       "sha256": "3dd560b5a309181cae4e32c34f0a98f1bf1166e23dea17f06d6295f3eba28f3b",
       "bytes": 19275
@@ -1487,16 +1488,16 @@
       "bytes": 11857
     },
     "content/easy_other/um_patch.lua": {
-      "sha256": "4c35a4e2e0873c2016eeb8622499d818144132d5c65cfcfd1b2c66535ae69668",
-      "bytes": 40053
+      "sha256": "7be1d8000ddea00e838eb1d81982785cea146a7220f2460d50f64c34885e7fa0",
+      "bytes": 46414
     },
     "content/easy_role/attackaction.lua": {
       "sha256": "80d0d922d9caefd78b84db3d089bf4cc4748ef72f619a206942a4cd2d81935b2",
       "bytes": 3021
     },
     "content/easy_role/rightaction.lua": {
-      "sha256": "651ab63a7391faca75080ccb8f47fc0b85bdb3b79f32d5e69bdbee0affef8034",
-      "bytes": 63551
+      "sha256": "b3be50238259841d86515f6624b82f6f83b53aa22f471a1b6c5356b56a264685",
+      "bytes": 64695
     },
     "content/easy_role/rightselfaction.lua": {
       "sha256": "49e37964f6c9e27c59f744a99deacca323a55066638ce8fa1f94d5cecabff2ba",
@@ -1555,36 +1556,40 @@
       "bytes": 17066
     },
     "content/epic/alterguardian.lua": {
-      "sha256": "8b556072f82fc72d3e0bb7af6e590bf12dbe9dc5d89092442e90c90b33dde6b7",
-      "bytes": 140990
+      "sha256": "a43a5812d86f74ef98319ac7c38e23696bab2add2c55e94779f930d8756a58bc",
+      "bytes": 146146
     },
     "content/epic/antlion.lua": {
       "sha256": "aec66c7e11692422043ac441aa9232d40af4a898d0813ddade062d7aed43a99f",
       "bytes": 57625
     },
     "content/epic/atriumstalker.lua": {
-      "sha256": "667af88d68b3e8b317f509127baf5dfbba9ffaa75a4901c17fe08b839198d972",
-      "bytes": 31369
+      "sha256": "0b20117fcfa33947d5645e495976aa2fb1fcfcbda782e0d3b701319d18bede94",
+      "bytes": 31409
     },
     "content/epic/dynamic_armor.lua": {
-      "sha256": "868ee3562f34eee078b91489c288eb593225437b0e0340eed590add8661be3b5",
-      "bytes": 6886
+      "sha256": "cec20f4b46de11e407a01027edca861e69f4ed0b4a639305a51c35e87d107684",
+      "bytes": 6162
     },
     "content/epic/minotaur.lua": {
-      "sha256": "7083edf79e18fdd90699d5a922452a633afea040dfac1b0808e3a7a8f833622a",
-      "bytes": 57592
+      "sha256": "6c8253f9d065cd3a6a40a87ebcce039859c7abbb26910cc2f112ae7851ea6d4e",
+      "bytes": 57633
     },
     "content/epic/minotaur_old.lua": {
-      "sha256": "704452e6cad7db135b75d90380a7f42a4388d9e149a2f923b5eadc68d63009c1",
-      "bytes": 42826
+      "sha256": "4063864b1da3f63b6c5ab8ff756c9bf289184da9f21d3da8bd4990756b86b446",
+      "bytes": 42867
     },
     "content/epic/sharkboi.lua": {
-      "sha256": "f2da61685618fb21f0dbfa85ce47dcc5e9f84aaf5a1a5a24e97d590f6a7c3993",
-      "bytes": 68078
+      "sha256": "e946a61058adf41ca4a6c830f7210513c5530252753442d8042166883c6ff7d4",
+      "bytes": 66243
     },
     "content/epic/sword_lunarplant_moonfire2hm.lua": {
       "sha256": "aeb4087efa455ea42449ef021d8148f03455356bd077d480c24fbe2fdedd9e4e",
       "bytes": 24477
+    },
+    "content/extra/extra.lua": {
+      "sha256": "f3754a3baa8cd9f12faa2516cae0e220eb98d04e91c028aa21b02fcf687776f7",
+      "bytes": 23205
     },
     "content/extra/frostjaw_trade.lua": {
       "sha256": "511107f1988c9ee648b576164a4d0f3442a1c274249cbb334ca2075c8832b89d",
@@ -1595,8 +1600,8 @@
       "bytes": 11994
     },
     "content/food/beefalo.lua": {
-      "sha256": "4199760c03606741ac5cb7a6fd0c6d96e9c6d13d9b906e17250f7de248cbe5f0",
-      "bytes": 9128
+      "sha256": "4b4116fdb0b726230f58e1f77009650d85fbceb019bd6564169007edff58ef75",
+      "bytes": 13006
     },
     "content/food/cooking.lua": {
       "sha256": "d0327b2e80a8319a324dc8d604e7a1074fb35db44984bf6dd53f54868b5baad2",
@@ -1607,16 +1612,16 @@
       "bytes": 1835
     },
     "content/food/plant.lua": {
-      "sha256": "0bea508fa2d9f96e3b4712248c2990dcbe03b23879c6f68dadf69a8a042a1b63",
-      "bytes": 16655
+      "sha256": "f951c0bf83006dee1b54d46fd3f7ff001fcbf9b60dc7b9dd7c8f318ca762bcf7",
+      "bytes": 17173
     },
     "content/modinfo.lua": {
-      "sha256": "1544da3b37ebe1b5f8ff3d4dbdd3cd7cfe3d1bf9c8142ed2bcaf6407512ed050",
-      "bytes": 148161
+      "sha256": "3a1bb2755d89b1effbe4c235b2867ca438e3109027eaf8feed9d6b6fce8ef5b7",
+      "bytes": 149312
     },
     "content/modmain.lua": {
-      "sha256": "dd1f60dcbd2ff553d2ba6ddf6abd1f9ce9590261c5c7d7f0f3339ae17d77b1a9",
-      "bytes": 24113
+      "sha256": "c4bb62a9fceddd81c104e1ca4387e604a33e344e2c433a3a8978376e94a44c90",
+      "bytes": 24326
     },
     "content/modservercreationmain.lua": {
       "sha256": "99db4e3bbd200b199c5e08c44ff1e9a12ba0594f5a0bfb66eb759604e514d5aa",
@@ -1643,8 +1648,8 @@
       "bytes": 11332
     },
     "content/ray/suijishengwuapi.lua": {
-      "sha256": "6cfe8fd591903dd49ea96a1dd02bd0258db206457f83108a66daf020ffdf4b6d",
-      "bytes": 35264
+      "sha256": "e384af3eb4cbd1b14ca5fdb440c2f741c5155f55fb4d80c251b72bdc4f73004c",
+      "bytes": 35835
     },
     "content/role/clock_peril.lua": {
       "sha256": "a745e39fdd55f7ab6447a34a3e8d9cf29276929806dc61de96126a7d2d222474",
@@ -1715,12 +1720,12 @@
       "bytes": 4335
     },
     "content/scripts/components/dynamicarmor2hm.lua": {
-      "sha256": "adad8fbdd940935a278f80014e826c80299e0a964e910a348585c4aafba88d32",
-      "bytes": 7110
+      "sha256": "00a032a33da1809d72d1590ddfa937b4904b2ed8fac04c530df9cb5adb59f3bd",
+      "bytes": 6996
     },
     "content/scripts/components/exchangevariants2hm.lua": {
-      "sha256": "a3b851f95a52155f56a88338350a611fd444d0a435dfa45c6aec2c54688cda50",
-      "bytes": 11643
+      "sha256": "47695bd863151438bedb80aa808648377191c05bdcfffb77c7ef49be23011534",
+      "bytes": 6910
     },
     "content/scripts/components/hambat2hm.lua": {
       "sha256": "6c99c81ff8bfcaa06f58f80b8283d7aefcb4e31814973572bf2073ce840c8ad2",
@@ -1754,10 +1759,6 @@
       "sha256": "4a5eca1ac4aa439560f63ade6452c606f7b03590a6646cdb8667dc48a1512957",
       "bytes": 25884
     },
-    "content/scripts/components/shadowvault2hm.lua": {
-      "sha256": "7faf3d93baa7a0efb27c6c81217c47c26693000ab7957e1deaa36db89f57ea8e",
-      "bytes": 65521
-    },
     "content/scripts/cookingredientcollect2hm.lua": {
       "sha256": "679b99a116726211edf25f77cd92ef0b87850f5d716641c770458de7b74e99eb",
       "bytes": 5911
@@ -1771,16 +1772,16 @@
       "bytes": 8522
     },
     "content/scripts/exchangemode2hm.lua": {
-      "sha256": "42bd11f58ade1d66ee538f6a5b87d85d0710dd6f6c93210635428b5bf88defe8",
-      "bytes": 593
+      "sha256": "acd4c486f885d291ae7dd1e86269877ecdd23b49aa92327c89604ddaa4143a67",
+      "bytes": 499
     },
-    "content/scripts/exchangeoriginalmigration2hm.lua": {
-      "sha256": "044a562175e9f807fd3864a96d6ee9926b1e5a6177e90a583b2cdba51b2fc457",
-      "bytes": 8396
+    "content/scripts/exchangesolo2hm.lua": {
+      "sha256": "f63eaa680f5f0a278baaad6c28fefc0f86fa441d4af802a5ee24dbc858f71684",
+      "bytes": 6449
     },
     "content/scripts/exchangexianyurecovery2hm.lua": {
-      "sha256": "acbea70f68e695768fb8868fc554767e015a0b36ac9af2f4658273ddd5b4bc84",
-      "bytes": 3678
+      "sha256": "4a856971e61dedb60bfa99b9291d35f120c790f8792957938300f58a2c150113",
+      "bytes": 3856
     },
     "content/scripts/eyebrellashade2hm.lua": {
       "sha256": "64daeb3ddec3f41b9459ae11433667da42d38771f45b9499ae475ace42287df5",
@@ -1803,16 +1804,20 @@
       "bytes": 859
     },
     "content/scripts/keybindingmodel2hm.lua": {
-      "sha256": "326b2a5ae5ffcd92e8602d2f35da9c6ae074cf6e8d6c6eb21b319d6cb167abeb",
-      "bytes": 7095
+      "sha256": "967e1b792f17dbb80a01458565bd99fb4136a8d57c5ee8a40d11805183a0427b",
+      "bytes": 7929
     },
     "content/scripts/keybindings2hm.lua": {
-      "sha256": "e7d99e85bd2e7eae7d7ee34dbd1a277687bdbf9d9173cf60ed13dae2644fd26d",
-      "bytes": 18215
+      "sha256": "3ba142f4c82e020c408d62a2f611959de61948b6cb5747b66ca0d2352cc51988",
+      "bytes": 20516
     },
     "content/scripts/keybindingscreen2hm.lua": {
-      "sha256": "d68efb4b69a6c1fb439bc442de5ba6ccb7b0d72e8679e5d67b9a115d888c8bbe",
-      "bytes": 8831
+      "sha256": "32a3a42e72f4374f19213d84e35e806d17f1dc59f6140f985e91e2de5e2e6115",
+      "bytes": 9248
+    },
+    "content/scripts/pocketproxy2hm.lua": {
+      "sha256": "707b2f062f778d0fbeddbf37dfdcc9bce68dbf93e262907f2eba74ef106b9ab8",
+      "bytes": 2288
     },
     "content/scripts/prefabs/backpackicon2hm.lua": {
       "sha256": "c8806a7e1d94a336a140a56cd7bb8f07c273d5720f88e678dc0a3150eca631d4",
@@ -1911,8 +1916,8 @@
       "bytes": 3228
     },
     "content/scripts/seasonwiki2hm.lua": {
-      "sha256": "6feb8b5aa685d16334c2180bd282538282dc7b6cc0adc0608a13f441123eced9",
-      "bytes": 525
+      "sha256": "286d8fe46a3eedcf0de9743e2e5a3835332eeb4e92ccc0d3bf342bc302f32748",
+      "bytes": 519
     },
     "content/scripts/shadowhalloween2hm.lua": {
       "sha256": "8d3369b1e39e77e3cc30179f983a2a2a55ba3f4977b7625220f15ba13f783e81",
@@ -1922,33 +1927,13 @@
       "sha256": "7a93d4e006b225292b479dd7b375d70441245dcb87e7db9deaa029d1964cf719",
       "bytes": 6091
     },
-    "content/scripts/shadowvaultconfig2hm.lua": {
-      "sha256": "dde3656c89f380caac92d0cd8538cb378f211afbca04f5bcacbebd33900ed803",
-      "bytes": 8635
-    },
-    "content/scripts/shadowvaultitems2hm.lua": {
-      "sha256": "7367f61fc182bea7d920a0e2dc019aefc1c63b244d7a4aafd2acd9e5939610d8",
-      "bytes": 8142
-    },
-    "content/scripts/shadowvaultnative2hm.lua": {
-      "sha256": "462cf3f9156157fb35e5882403e66b1c6e8f8686bd600ad42f5c86c703f4fe1e",
-      "bytes": 22355
-    },
-    "content/scripts/shadowvaultproxy2hm.lua": {
-      "sha256": "19e41b38f53afb96f2e72b222f9108e066b4ea55a97ae097b0c2b839a6fa300f",
-      "bytes": 2851
-    },
-    "content/scripts/shadowvaultshared2hm.lua": {
-      "sha256": "cb4e3f3bcc585fe9348252c4dd039cfcf20b6e3797f7c86bc98cbe196c45446f",
-      "bytes": 16832
-    },
     "content/scripts/umcompatguard2hm.lua": {
       "sha256": "2e2cd9bdcebd27a679a648d2ded3786adf36b31f571215bb857ed4dd161c2271",
       "bytes": 8679
     },
     "content/scripts/umcompatprofiles2hm.lua": {
-      "sha256": "8a7eb34a7fd2a8bb25de4d252ea527d121338c0f8a0e3e260add3d805219c654",
-      "bytes": 13734
+      "sha256": "38881382ec21cffb9a09e23ec9ff570080f67fee144e0e0f9993c2321749c498",
+      "bytes": 14304
     },
     "content/scripts/umperformance2hm.lua": {
       "sha256": "2007fcc02b3fb9b875c6c6ae5a6ddbd8ddd94b2012a9794effaf6e5bf7380857",
@@ -1983,8 +1968,8 @@
       "bytes": 2733
     },
     "content/scripts/wixieconfig2hm.lua": {
-      "sha256": "49f6e47f7acefcff6b3dda63eb6c9daa1ea9993b1ef8256bea8bc2d13eb2c334",
-      "bytes": 5641
+      "sha256": "321e5f282120a4328d68cdd44a5596c4a663da292ccf8d1106e50d6db336323c",
+      "bytes": 5637
     },
     "content/scripts/wx78config2hm.lua": {
       "sha256": "79d2ca266ffe581c6459d66686a85ff4915ff71e4ad4b2c12a87842ef3e121ef",
@@ -1995,16 +1980,16 @@
       "bytes": 12500
     },
     "content/scripts/wx78draftmotion2hm.lua": {
-      "sha256": "f50bcb328616c4a507a55689f592768a2e77ca780a4c8d5397319cf034ff2e64",
-      "bytes": 21516
+      "sha256": "a7cd77cbf7a0330f081905eeb69e9e6f88117a6d7f2bfc2112d39ce7f828ef8c",
+      "bytes": 21850
     },
     "content/scripts/wx78draftpower2hm.lua": {
       "sha256": "0322f16afb91db27e5e06b7e13493068a21dc734fa52cf3743997bbbac60e0c9",
       "bytes": 17309
     },
     "content/shadowworld.lua": {
-      "sha256": "57db52fa78b8be659e7de2faa26bbb62907df778bf9394059a04243d7aad9040",
-      "bytes": 87358
+      "sha256": "22fa8c0e15503163007dfac84e020d3651c7e013c60178ee4102aaf2b2854b52",
+      "bytes": 92384
     },
     "content/tech/ancient_altar.lua": {
       "sha256": "b5b603c5d82947ca1380ee329c8139c1fc71fb4fb7669e276c6b3c43d35832ae",
@@ -2027,8 +2012,8 @@
       "bytes": 11401
     },
     "content/tech/prototyperlevel.lua": {
-      "sha256": "c78480f01ab5e7cef7ae26290afdb0fb047805a0f8dfd6249a904c5acf45ae3e",
-      "bytes": 18431
+      "sha256": "222b1818ec9f5d060f42f8a0103dc39be68f0cba2b56a292b5c65614199b9693",
+      "bytes": 19381
     },
     "content/tech/sleep.lua": {
       "sha256": "15b8c4be05fe04ab443293cc9dd388cceeb7b26858a38abe840bd5fe655bcb71",

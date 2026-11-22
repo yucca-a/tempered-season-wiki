@@ -326,7 +326,7 @@ export const configNotes = {
     requires: ['enable easy mode']
   },
   'Sleep In Tent Even Danger': {
-    paragraphs: ['解除入睡时的附近危险检查。默认还请求转移仇恨，−1 不强制脱离仇恨。毛皮铺盖、帐篷、遮阳篷可消耗 1 个睡袋升级：次数翻倍并补满、全天使用、每次换日恢复 1 次；之后再用睡袋可补满耐久。当前原版帐篷和遮阳篷 15→30 次，毛皮铺盖 3→6 次。'],
+    paragraphs: ['放宽附近有危险时的入睡限制。默认还请求转移仇恨，−1 不强制脱离仇恨。毛皮铺盖有 4 次耐久，升级后有 8 次。毛皮铺盖和草席卷可防查理，入睡动画播完前中断不消耗。', '毛皮铺盖、帐篷和遮阳篷可消耗 1 个睡袋升级，耐久翻倍并补满。升级后全天可用，换日恢复 1 次，再用睡袋可补满耐久。'],
     requires: ['enable easy mode']
   },
   'The tent supports multiple people sharing it': {

@@ -43,5 +43,8 @@ export function refreshRelease44(articles,notes){
   const wanda=touch('role-wanda');
   if(!wanda.configKeys.includes('Wanda Watch Naming'))wanda.configKeys.push('Wanda Watch Naming');
 
+  notes['boss_health_wixie']={requires:['enable hard mode','extra_change','boss_health'],paragraphs:['只在“BOSS血量”大于 1 倍且启用永不妥协时有意义，决定永不妥协的暗影薇希怎样套用这个倍率。“限伤兼容”（默认）：血量和每轮撤退门槛（原本 500 点）一起乘倍率。“倍率兼容”：血量和 500 点撤退门槛不变，改为把它的攻击伤害乘倍率。两档都会按倍率增加掉落。']};
+  const extra=touch('mechanic-extra-stats');
+  if(!extra.configKeys.includes('boss_health_wixie'))extra.configKeys.push('boss_health_wixie');
   return updated;
 }

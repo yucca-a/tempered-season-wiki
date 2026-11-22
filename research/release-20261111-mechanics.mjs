@@ -47,7 +47,7 @@ configuration.sections = [
 ];
 
 const faq = clone(initial, 'faq');
-faq.source = source('modinfo.lua', 'scripts/exchangemode2hm.lua', 'easy_other/shadowvault.lua', 'scripts/difficultyrating2hm.lua');
+faq.source = source('modinfo.lua', 'scripts/exchangemode2hm.lua', 'scripts/difficultyrating2hm.lua');
 faq.sections[1] = { ...P('暗影空间提示等待，是需要其他玩家同意吗？',
   '不需要其他玩家投票。先确认所有分片已更新且穿越档位一致；首次升级旧枢纽时会恢复旧空间并保存迁移结果，完成前相关入口暂时不能打开。',
   '暗影枢纽中其他分片离线、主世界不可用或物品暂时不能安全转移，也可能需要等待。不要把等待提示理解为可以删除旧记录或清空容器。'), links: ['world-exchange', 'shadow-nexus'] };
@@ -73,18 +73,17 @@ const combat = amend(clone(initial, 'combat'), {
 
 const armor = amend(clone(initial, 'armor'), {
   source: source('modmain.lua', 'modinfo.lua', 'epic/dynamic_armor.lua', 'scripts/components/dynamicarmor2hm.lua', 'scripts/prefabs/dynamicarmor_indicator2hm.lua', 'scripts/combatconfig2hm.lua'),
-  configKeys: ['enable hard mode', 'monster_change', 'epic_armor_5', 'extra_change', 'boss_health'],
-  summary: '近期实际掉血超过最大生命20%后逐渐减伤；停手1秒后，压力每秒至少消退400点生命对应的额度。',
+  configKeys: ['enable hard mode', 'monster_change', 'epic_armor_5'],
+  summary: 'Boss 最近 10 秒实际掉血越多，动态减伤越强，最高减伤 40%。',
   sections: [
     P('生效条件', '需要困难模式、怪物改动与巨兽装甲“遇强则坚”。旧默认1档迁移到此机制；禁用和传统1～5档仍可在新菜单中明确选择。'),
     T('单次伤害与动态压力', ['项目', '规则'], [
       ['单次伤害', '现有防御结算后，最多造成目标最大生命10%的掉血；更低的既有上限仍有效'],
-      ['压力累积', '按最终实际掉血累积；所有攻击者和伤害来源共用同一份压力'],
-      ['开始动态减伤', '压力达到最大生命20%后逐渐增加减伤'],
-      ['高压力区间', '20%～30%之间连续增加减伤，接近30%时接近100%'],
+      ['实际掉血', '统计最近 10 秒所有伤害来源造成的实际掉血'],
+      ['开始动态减伤', '累计掉血超过最大生命的 15% 后逐步减伤'],
+      ['减伤上限', '累计掉血达到最大生命的 50% 时减伤 40%'],
     ]),
-    P('连续输出与停手恢复', '连续受伤时，压力仍以“最大生命×2%÷√额外血量倍率”每秒消退。每次受伤后1秒内，只使用这个比例衰减；停手满1秒后，每秒衰减改为该值与400点生命额度中的较大者。不是停手后才开始衰减，也不是每秒给Boss回复400点生命。', '额外血量倍率按本模组生效的Boss血量配置及明确提供的外部倍率计算，不会简单把Boss最终生命当成倍率。多人不另增伤害额度。'),
-    T('不计400点保底时的衰减示例', ['额外血量倍率', '每秒消退占最大生命'], [['1倍', '2%'], ['4倍', '1%'], ['9倍', '约0.667%']]),
+    P('连续输出与停手恢复', '较早受到的伤害会逐渐淡出统计。Boss 连续 10 秒没挨打，动态减伤消失。'),
     P('可见提示与存档', '动态减伤生效时会出现随减伤强弱变化的淡红微光。压力支持保存读档及适配Boss的阶段继承；离线经过的现实时间不作为游戏内衰减时间。'),
     P('适用范围与火药', '作用于符合条件的巨兽，排除蚁狮、果蝇王和暗影分身。蚁狮沙尘暴减伤由它自己的技能控制。火药保留原版爆炸抗性，再受单次上限与动态装甲约束；没有额外爆炸记忆、定时无敌、回血或陨石。', '直接设定生命、强制击杀和脚本阶段变化不等于普通攻击掉血。'),
     R('combat', 'configuration'),
@@ -93,10 +92,10 @@ const armor = amend(clone(initial, 'armor'), {
 
 const worldExchange = amend(clone(initial, 'world-exchange'), {
   title: '穿越机制与暗影空间',
-  summary: '为爽原版、咸鱼版和暗影枢纽三种机制各自保存库存；旧设置默认迁移到为爽原版。',
+  summary: '为爽原版可和在线的另一层整箱交换。单人档可以使用随角色保存的两页空间。',
   keywords: '穿越 末影箱 暗影空间 钓具 原版 咸鱼 暗影枢纽 地面 洞穴 多分片 旧档 迁移',
   configKeys: ['Container Sort', 'Items collect', 'World Exchange'],
-  source: source('modinfo.lua', 'modmain.lua', 'easy_other/exchangemodes2hm.lua', 'easy_other/exchangeclassic2hm.lua', 'easy_other/shadowbank2hm.lua', 'easy_other/shadowvault.lua', 'scripts/exchangemode2hm.lua', 'scripts/components/exchangevariants2hm.lua', 'scripts/exchangeoriginalmigration2hm.lua'),
+  source: source('modinfo.lua', 'modmain.lua', 'easy_other/exchangemodes2hm.lua', 'easy_other/exchangeclassic2hm.lua', 'easy_other/shadowbank2hm.lua', 'scripts/exchangemode2hm.lua', 'scripts/components/exchangevariants2hm.lua', 'scripts/exchangesolo2hm.lua'),
   sections: [
     T('三种机制与关闭选项', ['档位', '玩法与范围'], [
       ['为爽原版（默认）', '沿用整箱交换：使用容器穿越按钮，和其他在线分片对应空间交换整箱物品；保留辅助暂停按钮'],
@@ -113,19 +112,12 @@ const worldExchange = amend(clone(initial, 'world-exchange'), {
 });
 
 const shadowNexus = {
-  id: 'shadow-nexus', new: true, title: '暗影枢纽与共享空间', category: 'mechanics', tag: '容器',
-  summary: '选择暗影枢纽后，主世界托管各层空间；暗影和钓具能跨层同时存取。',
-  keywords: '暗影枢纽 暗影箱 钓具 共享空间 跨层 同时 离线 私人容器 牛铃',
-  configKeys: ['Container Sort', 'Items collect', 'World Exchange'],
-  source: source('easy_other/shadowvault.lua', 'easy_other/shadowvaultshared.lua', 'easy_other/shadowvaultplayer.lua', 'scripts/shadowvaultconfig2hm.lua', 'scripts/shadowvaultnative2hm.lua', 'scripts/shadowvaultshared2hm.lua', 'scripts/components/shadowvault2hm.lua', 'scripts/shadowvaultitems2hm.lua'),
-  sections: [
-    P('打开和切换', '在“穿越机制”明确选择“暗影枢纽”。正常打开暗影入口或钓具入口，使用容器穿越按钮切换所属分片的空间。暗影与钓具是不同容器家族，不会混成同一个物品栏。'),
-    P('跨层同时使用', '暗影空间、钓具空间允许不同层玩家同时打开并存取同一空间。各人的界面随物品变化刷新；同一件物品只能由一次操作取得，冲突时应等待刷新后重试。', '动态扩容的第三方共享容器保留其原生容量与升级管理，按整页交接，不能由此推断也支持与暗影／钓具完全相同的同时存取。'),
-    P('主世界与离线分片', '空间由主世界托管，因此主世界必须可用。已经托管到主世界的暗影或钓具空间，可在其所属层暂时离线时访问；尚未完成接入、正在交接或等待旧档恢复的空间需先完成相应步骤。第三方动态容器按整页交接，若页面仍由其他层持有、尚未归还，而该层离线，可能需要等待该层恢复。'),
-    P('无法转移的物品与私人容器', '私人离线掉落容器不作为公共空间接管。有宠物关联的牛铃、受保护或暂时不能安全转移的模组物品，可能让相应原箱保留在本地使用；关闭容器并移开阻塞物后会自动重试接入。不要为了接入枢纽而销毁物品。'),
-    P('保存、重启与回档', '使用游戏正常保存、关服和回档流程。回档或重启后，入口会重新对应有效容器；空间暂时锁定时等待恢复，不要把空白或失效入口当成可以重建库存的依据。枢纽保存机制不代表任意第三方物品和任意模组组合都已完成验收。'),
-    R('world-exchange', 'containers', 'tackle-station', 'possessed-magician-hat'),
-  ], auditedVersion: version,
+  id: 'shadow-nexus', new: true, title: '暗影枢纽（已退役）', category: 'mechanics', tag: '容器',
+  summary: '暗影枢纽已退役，默认使用为爽原版穿越。',
+  keywords: '暗影枢纽 暗影箱 穿越 旧版本',
+  configKeys: ['World Exchange'],
+  source: source('modinfo.lua', 'easy_other/exchangemodes2hm.lua'),
+  sections: [R('world-exchange', 'containers')], auditedVersion: version,
 };
 
 const containers = clone(itemPatches, 'containers');
@@ -203,7 +195,7 @@ export const patches = [gettingStarted, configuration, faq, combat, armor, world
 export const configNotes = {
   'World Exchange': { requires: [], paragraphs: ['默认为爽原版。操作界面由容器整理收集按钮或道具快捷收集存放提供；要显示容器穿越按钮，需开启容器整理收集按钮。关闭按钮不会删除旧空间的托管与恢复记录。三种机制为原版整箱交换、咸鱼双空间远端存取与主世界托管的暗影枢纽，另可关闭空间切换。', '旧配置值统一迁移原版，旧枢纽物品恢复后送回所属层；新菜单明确选档会保留。各机制独立保留库存，不能把切档视为合并全部物品。地面、洞穴及其他分片须同时更新且设置一致。暗影／钓具跨层同时存取属于暗影枢纽。'] },
   combat: { requires: ['enable hard mode', 'role_nerf'], paragraphs: ['默认锋芒渐敛；普通角色2.5倍起递减趋近4倍，沃尔夫冈3.5→5倍，沃托姆4→5.5倍，骑乘2.5→4倍，位面2→3.5倍。没有溢出减伤或移速补偿。旧默认1档自动迁移，新菜单传统1档可明确保留。'] },
-  epic_armor_5: { requires: ['enable hard mode', 'monster_change'], paragraphs: ['默认遇强则坚。单次掉血不高于最大生命10%；实际掉血累积的压力在20%～30%之间递增减伤。每秒比例衰减为最大生命2%÷√额外血量倍率，停手1秒后另保证至少400点生命额度／秒的衰减。', '淡红微光表示动态减伤强弱。排除蚁狮、果蝇王及暗影分身。保留禁用与传统1～5档，不附带传统无敌期、回血或陨石。'] },
+  epic_armor_5: { requires: ['enable hard mode', 'monster_change'], paragraphs: ['默认遇强则坚。单次掉血最多为最大生命的 10%。最近 10 秒实际掉血超过最大生命的 15% 后开始逐步减伤，达到 50% 时减伤 40%。', '淡红微光表示动态减伤强弱。排除蚁狮、果蝇王及暗影分身。保留禁用与传统 1～5 档。'] },
   cooking_change: { requires: hard, paragraphs: ['−1燃料锅为默认；−2再使多数食材度减0.25；−3再启用五格锅与鲜度、填充物／配方规则。五格兼容永不妥协正式／测试版，以及测试版开启后的动态料理属性，也适配能力勋章红晶锅、棱镜月炆宝炊。', '龙鳞火炉仍用四份食材＋红宝石专用槽。五格档下，火炉按原食材度和原配方条件计算；成品仍受50%～70%鲜度饥饿折扣。必要动态料理适配不随可选妥协补丁关闭而撤回。'] },
   difficulty_rating: { requires: [], paragraphs: ['默认开启。在聊天或控制台输入 /nd，普通玩家可私下查询本模组实际生效配置相对默认的净变化。≤−5简单，−4～3默认，4～6困难，≥7地狱；每个设置最多计一次。没有全服定时或入服广播。'] },
   '贝爷求生': { requires: [], paragraphs: ['独立总开关，默认关闭。开启后加入制作变慢、随机初始耐久与熟练度、资源减半、制作不永久解锁、猪王不换金及磨刀、全员读书、黑暗免疫等配套规则。子项需此开关，不依赖简单／困难模式。'] },

@@ -102,7 +102,7 @@ add('world-summer', '夏季风暴', 'world', ['summer_change'], '夏季短时风
 
 add('world-winter', '冬季寒光与雪球雪', 'world', ['winter_change'], '冬季黄昏、夜晚和洞穴中的冷光源，以及可选雪球降雪。', ['content/weather/winter.lua'], [
   p('寒光出现', '冬季黄昏、夜晚或洞穴中，活着的玩家会在阶段变化后触发附近冷光源生成。应使用火焰与热源应对，而不是只看自己是否携带照明。'),
-  p('雪球雪档位', '普通启用默认包括雪球雪；另一启用档关闭雪球雪而保留寒光。雪球对火堆的特殊处理会扣除约 33% 燃料，低燃料时还会转入原有处理。', '雪球的降温受保暖值影响。低于 240 承受全额降温，达到 240 减半，达到 360 后不再降温。保暖值对雪球的冰冻层数不起作用。'),
+  p('雪球雪档位', '普通启用默认包括雪球雪；另一启用档关闭雪球雪而保留寒光。雪球对火堆的特殊处理会扣除约 33% 燃料，低燃料时还会转入原有处理。', '雪球的降温和冰冻层数都受保暖值影响。低于 240 承受全额效果，达到 240 减半，达到 360 后雪球就不再降温或累积冰冻。'),
   p('洞穴热源', '热区喷孔在冬季使用冷态热量；不能继续把它当作其他季节同样强度的热源。')
 ], weather);
 
@@ -244,8 +244,8 @@ add('creature-centipede', '巨荒蜈蚣死亡分裂', 'creatures', ['shadowthral
   p('配置范围', '它有独立开关，并受困难模式与怪物改动总开关约束；“墨荒加强”不是这个入口的上级开关。')
 ], monsters);
 
-add('creature-mimicreep', '拟态蠕虫', 'creatures', ['mimicreep'], '拟态蠕虫会复制地上的装备。', ['content/monster/mimicreep.lua'], [
-  p('模组开关', '当前版本里，「拟态蠕虫」开关还没有生效，装备仍按原版规则复制。')
+add('creature-mimicreep', '拟态蠕虫', 'creatures', ['mimicreep'], '拟态蠕虫会复制地上的装备。默认禁止它复制五种魔杖和三种护符。', ['content/monster/mimicreep.lua'], [
+  p('不能复制的装备', '开启“拟态蠕虫”后，它无法复制传送魔杖、懒人魔杖、拆解魔杖、唤星者魔杖、唤月者魔杖、懒人护符、建造护符和魔光护符。')
 ], monsters);
 
 add('creature-treeguards', '树精、毒桦栗树与蘑菇地精', 'creatures', ['leif'], '树精强化同时联动森林生物、树苗与月亮孢子。', ['content/epic/leif.lua'], [
@@ -428,7 +428,7 @@ configNotes['Shadow Regen Period']={requires:['Shadow World'],paragraphs:['单�
 configNotes['Shadow Prefab Setting']={requires:['Shadow World'],paragraphs:['默认关闭。开启后，符合条件且有攻击能力的分身可以主动寻找玩家。随从仍按原有规则行动。']};
 configNotes['Random sized beefalo'].requires=['Random Sized'];
 configNotes.rain_change={requires:weather,paragraphs:['玩家常规潮湿增长在 -1/-2 档分别乘 3/6。地表春夏秋冬降水规模分别为 8/0.5/1/8 或 16/1/2/16；洞穴分别为 32/2/4/32 或 64/4/8/64，另受世界天气与随机季节调整。']};
-configNotes.winter_change={status:'mismatch',requires:weather,paragraphs:['普通档包括雪球雪，-1 档禁用雪球雪。雪球的降温受保暖值影响。低于 240 承受全额降温，达到 240 减半，达到 360 后不再降温。保暖值对雪球的冰冻层数不起作用。','热区喷孔冬季使用冷态热量。']};
+configNotes.winter_change={requires:weather,paragraphs:['普通档包括雪球雪，-1 档禁用雪球雪。雪球的降温和冰冻层数在保暖值达到 240 时减半，达到 360 时归零。热区喷孔冬季使用冷态热量。']};
 configNotes.toadstool={status:'mismatch',requires:monsters,paragraphs:['生命减半仅在简单模式同时开启时执行，单开困难模式不会减半。其他强化包括双爆、季节毒雾、种树加快、脱战回血与回巢。']};
 configNotes.pig_boss={status:'mismatch',requires:[...monsters,'poor_armor'],paragraphs:['紫宝石触发特殊猪人挑战。冰冻和催眠设置为 20 抗性而非绝对免疫；添加位面实体抵抗的语句已注释，界面“位面抵抗、免疫负面”不能按字面全盘套用。']};
 configNotes['UM Widow']={status:'mismatch',requires:monsters,paragraphs:['需要永不妥协相应对象。触手尖刺开大/中/小茧概率为20%/30%/40%，尝试耗尽剩余耐久。奖励惩罚监听中的武器判断相互矛盾，不能把“奖励减少、概率活物”视为可靠的实际结果。']};

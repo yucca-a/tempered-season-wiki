@@ -80,7 +80,7 @@ for i in range(1, len(lua.globals().configuration_options) + 1):
         role = None
     if name in {'WX-78 Easy', 'WX-78 Hard'}:
         role = name
-    if name in ['other_role_easy', 'Monster Night Vision', 'wathom nightvision', 'All Right Dodge', 'Role Gym']:
+    if name in ['other_role_easy', 'Monster Night Vision', 'All Right Dodge', 'Role Gym']:
         role = name if name == 'other_role_easy' else None
     opts = []
     for j in range(1, len(entry['options']) + 1):

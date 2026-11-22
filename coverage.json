@@ -1,9 +1,9 @@
 {
-  "articles": 312,
-  "configs": 449,
-  "choices": 3374,
+  "articles": 320,
+  "configs": 450,
+  "choices": 3376,
   "targetedRefresh": {
-    "version": "2.8.15.1.0",
+    "version": "2.8.15.1.8",
     "articles": [
       "role-winona",
       "winona-toolbox",
@@ -79,28 +79,29 @@
       "dried-berries",
       "resource-regrowth",
       "tempered-prefab-codes",
-      "mod-interface"
+      "mod-interface",
+      "mechanic-extra-stats"
     ],
-    "count": 75
+    "count": 76
   },
   "sourceAuditVersions": {
     "2.8.15.0.34": 26,
     "2.8.15.0.25": 22,
     "2.8.15.0.23": 23,
-    "2.8.14.97.4": 136,
-    "2.8.15.0.46": 4,
+    "2.8.14.97.4": 135,
+    "2.8.15.0.46": 5,
     "2.8.14.98.6": 1
   },
   "groups": 18,
   "images": 691,
   "itemAudit": {
-    "version": "2.8.15.1.0",
+    "version": "2.8.15.1.8",
     "articles": 64,
     "items": 62,
     "missing": []
   },
   "entityAudit": {
-    "version": "2.8.15.1.0",
+    "version": "2.8.15.1.8",
     "articles": 67,
     "characters": 25,
     "buildings": 22,
@@ -108,13 +109,13 @@
     "missing": []
   },
   "lifeAudit": {
-    "version": "2.8.15.1.0",
+    "version": "2.8.15.1.8",
     "articles": 51,
     "food": 18,
     "creatures": 33,
     "missing": []
   },
-  "notedSettings": 449,
+  "notedSettings": 450,
   "implementationDifferences": [
     {
       "key": "Portable Crock Pot Multi",
@@ -227,11 +228,6 @@
       "status": "mismatch"
     },
     {
-      "key": "winter_change",
-      "label": "冬季寒光",
-      "status": "mismatch"
-    },
-    {
       "key": "moonrockidol",
       "label": "暗影之门",
       "status": "mismatch"
@@ -250,11 +246,6 @@
       "key": "beefalo",
       "label": "牦牛改动",
       "status": "mismatch"
-    },
-    {
-      "key": "mimicreep",
-      "label": "拟态蠕虫",
-      "status": "inactive"
     },
     {
       "key": "UM Widow",
