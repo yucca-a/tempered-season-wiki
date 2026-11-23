@@ -97,7 +97,7 @@ export const toolExpansionArticles=[
    ['渔获','落网点约 2 个地面距离单位内的漂浮物可一并打捞。测试版另外尝试捕捉范围内的海鱼，最多收 2 条，鱼重按该鱼种的最低重量生成。'],
    ['耐久','新网有 22 点耐久，每次成功收网至少扣 1 点。按捕到的每条鱼的最低重量再追加消耗。低于 100 加 2 点，100 至不足 200 加 3 点，200 及以上加 4 点。两条最重档海鱼合计会消耗 9 点耐久。'],
   ],
-  sources:[recipe(242),prefab('uncompromising_fishingnet',60),prefab('uncompromising_fishingnet',67),beta('init/init_actions.lua',636),
+  sources:[recipe(242),prefab('uncompromising_fishingnet',60),prefab('uncompromising_fishingnet',67),beta('init/init_actions.lua',634),
     beta('postinit/components/fishingnet.lua',28),beta('postinit/components/fishingnet.lua',36),beta('postinit/components/fishingnet.lua',48),
     beta('postinit/components/fishingnet.lua',53),beta('postinit/components/fishingnet.lua',64),beta('postinit/components/fishingnet.lua',162),
     beta('scripts/stategraphs/SGuncompromising_fishingnetvisualizer.lua',92),names(427)],
@@ -126,7 +126,7 @@ export const toolExpansionArticles=[
    ['治疗与风暴视野','对可治疗的角色使用，消耗 1 份并基础回复 8 生命，8 分钟内视野按护目镜方式处理。重复涂抹会把计时重置为 8 分钟，死亡会结束效果。遇到暴风雪时仍需单独准备保暖。',null,[link('snowstorms.html','暴风雪防护')]],
    ['角色差异','沃姆伍德的专属老兵诅咒生效时，治疗部分改成缓慢回复，视野增益仍正常施加。',null,[link('wormwood.html','沃姆伍德的治疗机制')]],
   ],
-  sources:[recipe(177),recipe(178),prefab('um_beehive_moon',233),prefab('um_eyebalm',38),prefab('um_eyebalm',55),prefab('um_eyebalm',60),
+  sources:[recipe(177),recipe(178),prefab('um_beehive_moon',236),prefab('um_eyebalm',38),prefab('um_eyebalm',55),prefab('um_eyebalm',60),
     prefab('um_eyebalm',76),beta('postinit/player.lua',276),beta('postinit/sim.lua',168),...healingSources,names(734),names(735),names(745)],
  },
  {
@@ -141,5 +141,35 @@ export const toolExpansionArticles=[
   sources:[recipe(252),prefab('sludgestack',10),prefab('sludgestack',275),beta('postinit/prefabs/shark.lua',9),
     prefab('sludge_sack',21),prefab('sludge_sack',32),prefab('sludge_sack',69),prefab('sludge_sack',83),prefab('sludge_sack',98),prefab('sludge_sack',103),
     beta('init/init_containers.lua',688),prefab('uncompromising_rat',148),names(448),names(451),names(452),names(457)],
+ },
+ {
+  id:'um-fyrite',category:'new-items',prefab:'um_fyrite',title:'黄铁矿',
+  aliases:['Fyrite','火铁矿','洞穴爆炸矿'],
+  summary:'洞穴熔岩区产出的易爆矿物。放在地上遇到地震会在 8–9 秒后爆炸，被鼹鼠吞下也会立刻引爆。',
+  configs:['magma_caves'],
+  sections:[
+   ['地震与鼹鼠引爆','黄铁矿带有 explosive、molebait 和 quakedebris 标签。收进背包或容器后安全；若丢在地上遇到洞穴地震，会持续冒出电火花，8–9 秒后仍在地面就会原地引爆。洞穴里的鼹鼠一旦把黄铁矿叼进嘴里也会立刻触发爆炸。'],
+  ],
+  sources:[prefab('um_fyrite',10),prefab('um_fyrite',32),prefab('um_fyrite',73),names(740)],
+ },
+ {
+  id:'rat-tail',category:'new-items',prefab:'rat_tail',title:'鼠尾',
+  aliases:['Rat Tail','老鼠尾巴','鼠潮战利品'],
+  summary:'鼠潮掉落战利品，可交给猪王换取 2 倍肉价值的金块，或作为配方材料使用。',
+  configs:['rat_raids'],
+  sections:[
+   ['用途与交易','单格上限为小物品堆叠（40）。交给猪王可按两倍普通肉的价值换金块；属于难吃食物类型（饱食 5 / 生命 0），同时用于鼠潮相关制作。',null,[link('rat-raids.html','鼠潮与鼠穴')]],
+  ],
+  sources:[prefab('rat_tail',29),prefab('rat_tail',39),names(157)],
+ },
+ {
+  id:'glass-scales',category:'new-items',prefab:'glass_scales',title:'启迪鳞片',
+  aliases:['Glass Scales','月光龙蝇鳞片','玻璃鳞片'],
+  summary:'击杀月光龙蝇固定掉落 1 片，用于制作月鳞甲。',
+  configs:['wiltfly'],
+  sections:[
+   ['获取与用途','击杀月光龙蝇固定掉落 1 片启迪鳞片，是制作月鳞甲的核心材料。',null,[link('summer-dragonflies.html','时令龙蝇与月光龙蝇'),link('moon-scale-armor.html','月鳞甲')]],
+  ],
+  sources:[prefab('glass_scales',2),prefab('glass_scales',43),names(53)],
  },
 ];

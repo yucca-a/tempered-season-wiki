@@ -41,10 +41,10 @@ export const characterArticles=[
    ['警钟','开启旺达平衡调整后，装有燃料的警钟按年龄应用伤害倍率。年轻为 1 倍，中年为 68/51，老年为 102/51。该段调整要求旺达未骑乘。'],
    ['第二次机会表','同一开关启用后，复活目标当前生命上限惩罚低于 75% 时，额外增加 25 个百分点。旺达以鬼魂作祟成功自救时，表会损毁并掉出拆解物。'],
    ['给锚点命名','溯源表可以给锚点命名，制成裂缝表时沿用名称。已标记的裂缝表需要目标分片可用，打开裂缝后回到溯源表，保留锚点与名称，并进入溯源表冷却。命名逻辑独立于旺达平衡开关。'],
-   ['老兵诅咒','旺达实际获得诅咒后，特定暗影生物和梦魇生物造成的伤害会先被替换为按最大生命值换算的老化伤害，再按原有老化流程结算。'],
+   ['老兵诅咒','6.0.4 版本已暂时注释停用旺达专属老兵诅咒的暗影老化替换回调，当前仅保留常规老兵诅咒交互。'],
   ],
   related:[link('veterans-curse','老兵诅咒')],
-  sources:[cfg(426),role('wanda',18),role('wanda',22),role('wanda',45),role('wanda',111),role('wanda',174),beta('postinit/components/oldager.lua',5),names(91)],
+  sources:[cfg(426),role('wanda',22),role('wanda',111),role('wanda',174),beta('postinit/components/oldager.lua',5),names(91)],
  },
  {
   id:'wes',category:'characters',icon:'wes',title:'韦斯',aliases:['Wes','小丑','哑剧演员','韦斯仇恨','蝙蝠仇恨'],
@@ -88,7 +88,7 @@ export const characterArticles=[
    ['老兵诅咒','沃尔特实际获得诅咒后，符合条件的受伤会增加理智上限惩罚，最多 75%。普通伤害取绝对值的 50%，持续伤害取 25%，再按基础最大理智和防护修正换算。后续受伤通常重置一天计时，恢复程序每次扣除 10 个百分点。'],
   ],
   related:[link('veterans-curse','老兵诅咒'),link('wixie','薇克茜')],
-  sources:[cfg(258),cfg(261),beta('init/init_postinit.lua',342),beta('wixie_postinit/prefabs/wobysmall.lua',30),beta('wixie_postinit/prefabs/wobysmall.lua',60),beta('wixie_postinit/prefabs/wobysmall.lua',134),beta('wixie_postinit/prefabs/wobybig.lua',43),beta('wixie_postinit/widgets/controls.lua',26),role('walter',10),role('walter',16),role('walter',33),names(81),cn('init/init_strings/init_strings.lua',879)],
+  sources:[cfg(258),cfg(261),beta('init/init_postinit.lua',343),beta('wixie_postinit/prefabs/wobysmall.lua',30),beta('wixie_postinit/prefabs/wobysmall.lua',60),beta('wixie_postinit/prefabs/wobysmall.lua',134),beta('wixie_postinit/prefabs/wobybig.lua',43),beta('wixie_postinit/widgets/controls.lua',26),role('walter',10),role('walter',16),role('walter',33),names(81),cn('init/init_strings/init_strings.lua',879)],
  },
  {
   id:'wurt',category:'characters',icon:'wurt',title:'沃特',aliases:['Wurt','鱼妹','鱼人妹','烤稻米','月亮鱼人'],

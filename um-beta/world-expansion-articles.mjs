@@ -17,9 +17,9 @@ export const worldExpansionArticles=[
    ['地形位置','新地表同时开启世界生成总开关与连帽森林时，改造原来的 Forest hunters 区域。该区域保留月台和海象房间，另有连帽入口、蜘蛛林和红杉林等房间。岛屿冒险的海难任务表另加专用连帽森林，房间组合与地表不同。'],
    ['黑寡妇与活动石板','蛛网巢和虫茧指向黑寡妇战区。蜘蛛林和海象区域的一些活动石板下藏有连帽伏击蜘蛛。想找宝石可先查看黑寡妇的触发方式与能掉宝石的茧型。',null,[link('hooded-widow.html#hooded-widow-s1','黑寡妇的开战方式'),link('hooded-widower.html','连帽伏击蜘蛛'),link('gemology.html#gemology-s10','虫茧附魔宝石')]],
    ['森林生物','沿狐穴找蕨狐，穿过高齿蕨时留意蚜虫。果蝠出没于猪笼草附近，啄木鸟则从树冠区飞入。',null,[link('fern-fox.html','蕨狐与狐穴'),link('aphid.html','蚜虫'),link('hooded-fern.html','高齿蕨'),link('fruitbat.html','果蝠'),link('boomberry-plant.html','爆汁蓝莓植株与猪笼草'),link('woodpecker.html','啄木鸟与鸟巢')]],
-   ['巨型红杉的资源','完好的巨型红杉需要 25 点砍伐工作量。砍伐会从树冠抖落树枝、木头，也可能有青蛙或蜘蛛。砍到终点会再抖落一批资源，可能含鸟蛋、羽毛或鸟巢。树干留下并开始 3 天再生计时。'],
+   ['巨型红杉的资源与庇护','完好的巨型红杉需要 25 点砍伐工作量。砍伐会从树冠抖落树枝、木头，也可能有青蛙或蜘蛛。砍到终点会再抖落一批资源，可能含鸟蛋、羽毛或鸟巢。树干留下并开始 3 天再生计时。6.0.4 起巨型红杉的树冠也会正确计入庇护所组件，为树下角色提供树冠遮阳与避雨效果。'],
   ],
-  sources:[worldgen,cfg(539),task('giant_trees',4),task('giant_trees',11),task('giant_trees',55),task('giant_trees',84),room('gianttreesrooms',146),room('gianttreesrooms',173),room('gianttreesrooms',258),prefab('widowwebspawner',10),prefab('giant_tree',98),prefab('giant_tree',361),prefab('giant_tree',430),prefab('giant_tree',441),prefab('giant_tree',452),cn(233),cn(252),cn(304)],
+  sources:[worldgen,cfg(539),task('giant_trees',4),task('giant_trees',11),task('giant_trees',55),task('giant_trees',84),room('gianttreesrooms',146),room('gianttreesrooms',173),room('gianttreesrooms',258),prefab('widowwebspawner',10),prefab('giant_tree',98),prefab('giant_tree',361),prefab('giant_tree',416),prefab('giant_tree',427),prefab('giant_tree',452),beta('postinit/components/sheltered.lua',8),cn(233),cn(252),cn(304)],
  },
  {
   id:'boiling-springs',category:'world',icon:'um_hotspring',title:'沸腾温泉与龙蝇荒地',aliases:['Boiling Springs','Broiling Hills','沸腾地带','温泉','浴球','泡澡','温暖洞穴'],
@@ -63,7 +63,7 @@ export const worldExpansionArticles=[
    ['清理蜂巢','腐臭蜂巢有 900 生命，受击时会放出蜂群。野外腐臭蜂有 250 生命、34 点基础攻击。清醒时死亡通常会爆出孢子，对符合条件的玩家造成 25 点伤害，装备蜂帽可免这次爆炸伤害。电击命中后会令仍存活的腐臭蜂立即死亡，近身时也要留意孢子。击破蜂巢固定掉 3 份腐臭蜂蜜和 1 个同名的腐臭蜂巢材料。'],
    ['月亮风暴与配置','当前风暴节点脚本检查 LUNAR_BEES，菜单的腐臭蜂开关实际生成 MOON_BEES。月岛世界生成读取的是正确的菜单键，可以作为稳定的寻找路线。'],
   ],
-  sources:[worldgen,cfg(558),cfg(871),task('moonisland',1),task('moonisland',19),room('UM_moonisland',1),room('UM_moonisland',31),prefab('um_beehive_moon',125),prefab('um_beehive_moon',208),prefab('um_beehive_moon',233),prefab('um_bee_moon',116),prefab('um_bee_moon',133),prefab('um_bee_moon',153),prefab('um_bee_moon',257),prefab('um_bee_moon',264),beta('postinit/components/moonstorms.lua',40),beta('init/init_configs.lua',21),cn(732),cn(734),cn(735),cn(744)],
+  sources:[worldgen,cfg(558),cfg(871),task('moonisland',1),task('moonisland',19),room('UM_moonisland',1),room('UM_moonisland',31),prefab('um_beehive_moon',125),prefab('um_beehive_moon',211),prefab('um_beehive_moon',236),prefab('um_bee_moon',116),prefab('um_bee_moon',133),prefab('um_bee_moon',153),prefab('um_bee_moon',257),prefab('um_bee_moon',264),beta('postinit/components/moonstorms.lua',40),beta('init/init_configs.lua',21),cn(732),cn(734),cn(735),cn(744)],
  },
  {
   id:'rimeweed',category:'world',icon:'rimeweed_main',title:'尖刺霜草与局部暴雪',aliases:['Spiny Rimeweed','Rimeweed','霜草荆棘','霜花','霜冻藤蔓','霜鞭','局部暴雪'],

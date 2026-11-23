@@ -16,7 +16,7 @@ export const surfaceBossArticles=[
    ['掉落','默认档击杀掉落大肉 ×8、独眼巨鹿眼球 ×1 和独眼巨鹿雕塑草图。老兵诅咒房间设置为默认或始终开启时，掉落表另加诅咒鹿角。'],
   ],
   related:[related('veterans-curse','老兵诅咒与额外掉落'),related('cursed-antler','诅咒鹿角'),related('crystal-cursed-antler','晶体诅咒鹿角')],
-  sources:[cfg(944),cfg(1111),beta('init/init_tuning.lua',672),hp(62),beta('init/init_postinit.lua',400),beta('scripts/components/deerclopsspawner.lua',170),beta('postinit/prefabs/deerclops.lua',91),beta('postinit/prefabs/deerclops.lua',141),beta('postinit/prefabs/deerclops.lua',203),beta('postinit/stategraphs/SGdeerclops.lua',231),beta('postinit/stategraphs/SGdeerclops.lua',316),beta('postinit/stategraphs/SGdeerclops.lua',351),beta('postinit/stategraphs/SGdeerclops.lua',412),drops(17),names(222)],
+  sources:[cfg(944),cfg(1111),beta('init/init_tuning.lua',670),hp(62),beta('init/init_postinit.lua',401),beta('scripts/components/deerclopsspawner.lua',170),beta('postinit/prefabs/deerclops.lua',91),beta('postinit/prefabs/deerclops.lua',141),beta('postinit/prefabs/deerclops.lua',203),beta('postinit/stategraphs/SGdeerclops.lua',231),beta('postinit/stategraphs/SGdeerclops.lua',316),beta('postinit/stategraphs/SGdeerclops.lua',351),beta('postinit/stategraphs/SGdeerclops.lua',412),drops(17),names(222)],
  },
  {
   id:'bearger',category:'creatures',title:'熊獾',aliases:['熊大','Bearger','秋季 Boss','诅咒熊爪'],icon:'bearger',
@@ -28,7 +28,7 @@ export const surfaceBossArticles=[
    ['掉落','默认档击杀掉落大肉 ×8、熊皮 ×1 和熊獾雕塑草图。平时脱落毛丛，调高生命设置会给每次脱落额外抽取机会。老兵诅咒房间设置为默认或始终开启时，另掉诅咒熊爪。'],
   ],
   related:[related('veterans-curse','老兵诅咒与额外掉落')],
-  sources:[cfg(945),cfg(1041),hp(62),hp(381),beta('init/init_postinit.lua',410),beta('postinit/components/beargerspawner.lua',42),beta('postinit/prefabs/bearger.lua',75),beta('postinit/prefabs/bearger.lua',99),beta('postinit/stategraphs/SGbearger.lua',18),beta('postinit/stategraphs/SGbearger.lua',93),drops(16),names(327)],
+  sources:[cfg(945),cfg(1041),hp(62),hp(381),beta('init/init_postinit.lua',411),beta('postinit/components/beargerspawner.lua',42),beta('postinit/prefabs/bearger.lua',75),beta('postinit/prefabs/bearger.lua',99),beta('postinit/stategraphs/SGbearger.lua',18),beta('postinit/stategraphs/SGbearger.lua',93),drops(16),names(327)],
  },
  {
   id:'moose-goose',category:'creatures',title:'麋鹿鹅',aliases:['鹿鹅','鹅鹿','春鹅','Moose','Goose','Moose/Goose','麋鹿鹅幼崽'],icon:'moose',
@@ -40,7 +40,7 @@ export const surfaceBossArticles=[
    ['掉落','默认档击杀掉落大肉 ×6、鸟腿 ×2、麋鹿鹅羽毛至少 3 根和麋鹿鹅雕塑草图。另有两次独立 33% 的额外羽毛判定。老兵诅咒房间设置为默认或始终开启时，另掉羽毛长袍。'],
   ],
   related:[related('veterans-curse','老兵诅咒与额外掉落')],
-  sources:[cfg(947),cfg(1251),hp(62),beta('init/init_postinit.lua',405),beta('postinit/prefabs/moose.lua',52),beta('postinit/prefabs/moose.lua',75),beta('postinit/prefabs/moose.lua',120),beta('postinit/stategraphs/SGmoose.lua',17),beta('postinit/stategraphs/SGmoose.lua',76),beta('postinit/stategraphs/SGmoose.lua',175),drops(30),names(342)],
+  sources:[cfg(947),cfg(1251),hp(62),beta('init/init_postinit.lua',406),beta('postinit/prefabs/moose.lua',52),beta('postinit/prefabs/moose.lua',75),beta('postinit/prefabs/moose.lua',120),beta('postinit/stategraphs/SGmoose.lua',17),beta('postinit/stategraphs/SGmoose.lua',76),beta('postinit/stategraphs/SGmoose.lua',175),drops(30),names(342)],
  },
  {
   id:'dragonfly',category:'creatures',title:'龙蝇',aliases:['龙蝇巢','普通龙蝇','岩浆虫','龙鳞火炉','Dragonfly','Lavae','熔岩口器'],icon:'dragonfly',
@@ -100,6 +100,6 @@ export const surfaceBossArticles=[
    ['掉落','默认档击杀后有刺耳三叉戟蓝图、帝王蟹雕塑草图、帝王蟹保险杠套装、藤壶、漂流瓶等。用珍珠的珍珠激活时，击杀还会掉出未激活天体贡品，并返还开裂珍珠。测试版固定追加休眠海螺。老兵诅咒房间设置为默认或始终开启时，另掉诅咒蟹钳。'],
   ],
   related:[related('veterans-curse','老兵诅咒与额外掉落')],
-  sources:[cfg(1083),hp(23),hp(62),beta('init/init_tuning.lua',644),drops(19),drops(34),names(297),names(377)],
+  sources:[cfg(1083),hp(23),hp(62),beta('init/init_tuning.lua',642),drops(19),drops(34),names(297),names(377)],
  },
 ];

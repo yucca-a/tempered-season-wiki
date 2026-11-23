@@ -15,7 +15,7 @@ export const caveBossArticles = [
       ['打法', '冲锋时用侧跑绕柱，看到它被柱子绊停再回身输出，注意撞击后周围的落石。生命低于 60% 后，蓄力跳可能接连续跳，低于 30% 后连段更长，等它真正落地停住再贴近。它还会喷出多轮黏液，落点附近会受到 50 点伤害并扣 5 理智，部分黏液会生成大暗影触手。'],
       ['掉落与二级附魔装备', '击败后会掉守护者之角、肉、支柱脚手架蓝图、雕塑草图和测试版追加的骷髅箱蓝图，随后出现大号华丽箱子。老兵诅咒房间设置为默认或始终开启时，首领额外掉犀牛帽。世界尚未记录找到远古钥匙时，箱内会放入一把。其余战利品随机抽取，包括铥矿、齿轮、普通宝石与遗迹装备。铥矿棒、懒人魔杖或唤星者魔杖若抽中，会带一项随机二级附魔，附魔耐久全满。提高首领生命档会增加箱内额外战利品的机会，远古钥匙排除在复制范围外。', null, [{ href: 'gemology.html#gemology-s10', label: '回到宝石学的高品质来源' }, { href: 'gemology.html#gemology-s6', label: '查二级附魔效果' }, { href: 'ancient-fuelweaver.html', label: '远古钥匙的下一站' }, { href: 'gore-horn-hat.html', label: '犀牛帽的冲锋与充能' }]],
     ],
-    sources: [cfg(959), cfg(999), health(2), health(227), health(263), beta('init/init_postinit.lua', 422), prefab('minotaur', 15), prefab('minotaur', 118), prefab('minotaur_drops', 6), prefab('vetcurse_drops', 20), beta('postinit/stategraphs/SGminotaur.lua', 141), beta('postinit/stategraphs/SGminotaur.lua', 213), beta('scripts/prefabs/shadow_goo.lua', 73), beta('scripts/prefabs/shadow_goo.lua', 274), beta('init/init_gemology/misc.lua', 105), beta('init/init_gemology/misc.lua', 118), beta('init/init_gemology/misc.lua', 152), names(325), names(338)],
+    sources: [cfg(959), cfg(999), health(2), health(227), health(263), beta('init/init_postinit.lua', 423), prefab('minotaur', 15), prefab('minotaur', 118), prefab('minotaur_drops', 6), prefab('vetcurse_drops', 20), beta('postinit/stategraphs/SGminotaur.lua', 141), beta('postinit/stategraphs/SGminotaur.lua', 213), beta('scripts/prefabs/shadow_goo.lua', 73), beta('scripts/prefabs/shadow_goo.lua', 274), beta('init/init_gemology/misc.lua', 105), beta('init/init_gemology/misc.lua', 118), beta('init/init_gemology/misc.lua', 152), names(325), names(338)],
   },
   {
     id: 'ancient-fuelweaver', category: 'creatures', icon: 'stalker_atrium', title: '远古织影者',
@@ -63,7 +63,7 @@ export const caveBossArticles = [
       ['打法与生命', '默认第一阶段 10,000 生命，第二阶段入场 13,000、上限 20,000，第三阶段入场 14,000、上限 22,500。三段的入场值和上限按同一档位缩放。第一阶段躲滚动和落地冲击，第二阶段从突刺和旋转路线侧面拉开，第三阶段离开启迪陷阱及激光的覆盖区，等连续攻击结束再靠近。'],
       ['奖励', '第一阶段掉月岩，第二阶段掉月岩与月亮碎片。第三阶段掉启迪碎片、月亮碎片、雕塑草图和测试版追加的约束静电蓝图。用镐开采被击败后的残骸可拿启迪之冠，抬高生命档也会作用于残骸掉落。'],
     ],
-    sources: [cfg(1069), health(38), health(572), prefab('alterguardian', 5), beta('init/init_postinit.lua', 188)],
+    sources: [cfg(1069), health(38), health(572), prefab('alterguardian', 5), beta('init/init_postinit.lua', 189)],
   },
   {
     id: 'shadow-pieces', category: 'creatures', icon: 'shadow_knight', title: '暗影棋子',
@@ -75,7 +75,7 @@ export const caveBossArticles = [
       ['主教重做打法', '默认开启重做。暗影主教在攻击中短暂无敌，会尝试传送到目标附近，然后朝选定方向冲锋。一级到三级分别连续 3／4／5 轮，攻击伤害为 15／25／35。看见转向蓄势就往侧面横移，等整轮结束再打。想缩短高等级主教阶段，可以优先解决它。'],
       ['暗影心房与王冠', '三级棋子击败后掉暗影心房、暗夜剑和暗夜甲，开启重做时加掉暗影王冠。二级开始就有额外噩梦燃料。提高房间里的棋子生命档也会为适用战利品增加额外掉落。', null, [{ href: 'ancient-fuelweaver.html#ancient-fuelweaver-s1', label: '用暗影心房召唤远古织影者' }]],
     ],
-    sources: [cfg(967), cfg(1293), health(68), health(351), health(560), beta('init/init_postinit.lua', 540), beta('init/init_tuning.lua', 686), prefab('shadowchesspieces', 15), beta('postinit/stategraphs/SGshadow_bishop.lua', 45), beta('postinit/stategraphs/SGshadow_bishop.lua', 61), beta('postinit/stategraphs/SGshadow_bishop.lua', 139), beta('postinit/stategraphs/SGshadow_bishop.lua', 242), names(213)],
+    sources: [cfg(967), cfg(1293), health(68), health(351), health(560), beta('init/init_postinit.lua', 540), beta('init/init_tuning.lua', 684), prefab('shadowchesspieces', 15), beta('postinit/stategraphs/SGshadow_bishop.lua', 45), beta('postinit/stategraphs/SGshadow_bishop.lua', 61), beta('postinit/stategraphs/SGshadow_bishop.lua', 139), beta('postinit/stategraphs/SGshadow_bishop.lua', 242), names(213)],
   },
   {
     id: 'great-depths-worm', category: 'creatures', icon: 'worm_boss', title: '巨大洞穴蠕虫',
