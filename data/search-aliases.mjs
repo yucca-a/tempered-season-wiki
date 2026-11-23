@@ -27,7 +27,7 @@ export const articleAliases = {
  'horizon-expandinator': ['废铁单片眼镜', '单片眼镜', '大视野', '高视野', '望远镜'],
  'scrap-hat': ['废铁头盔', '废铁帽', '疯猪帽'],
  'eyebrella': ['巨鹿伞', '眼伞'],
- 'terror-shield': ['盾牌', '克眼盾', '眼盾', '泰拉盾', '克眼面具', '眼面具'],
+ 'terror-shield': ['盾牌', '克盾', '克头', '克眼盾', '眼盾', '泰拉盾', '克眼面具', '眼面具'],
  'advanced-torches': ['亮茄火炬', '纯粹辉煌火炬', '辉煌火炬', '绝望石火炬', '绝望火炬', '升级火炬'],
  'moongleam-weapons': ['月熠', '月亮武器'],
  'upgraded-beefalo-bell': ['牛铃', '橙牛铃', '橙宝石牛铃', '随身牛铃'],

@@ -34,55 +34,25 @@
   save('dst-wiki-recent',next);
  }
 
- let hay;
+ let hay, lastQueryKey='', lastParsed=null;
  const compact=s=>normalize(s).replace(/[\s.\-_·、()（）/]/g,'');
- const filterSynonyms=[
-  [['老瓦头','瓦头','老瓦甲','瓦甲','瓦套','老瓦套','瓦器头盔','瓦器盔甲','warbis','wagpunk'],['warbis','wagpunk','w.a.r.b.i.s.']],
-  [['犀牛角'],['守护者之角','远古守护者']],
-  [['瓜皮头','刮皮头','刮地皮头'],['刮地皮头盔']],
-  [['熊罐','熊桶'],['极地熊獾桶']],
-  [['影刀'],['暗夜剑']],
-  [['影甲'],['魂甲']],
-  [['眼球塔'],['眼睛炮塔']],
-  [['三基佬'],['暗影棋子']],
-  [['蛤蟆','毒蛤'],['毒菌蟾蜍']],
-  [['蜂后'],['蜂王']],
-  [['熊大'],['熊獾']],
-  [['巨鹿'],['独眼巨鹿']],
-  [['织影'],['远古织影者']],
-  [['火女'],['薇洛']],
-  [['老麦'],['麦斯威尔']],
-  [['老奶奶'],['薇克巴顿']],
-  [['机器人','wx78'],['wx-78']],
-  [['女工'],['薇诺娜']],
-  [['女武神'],['薇格弗德']],
-  [['植物人'],['沃姆伍德']],
-  [['小恶魔'],['沃拓克斯']],
-  [['表姐'],['旺达']],
-  [['鱼妹'],['沃特']],
-  [['大厨'],['沃利']],
-  [['大力士'],['沃尔夫冈']],
-  [['蜘蛛人'],['韦伯']],
-  [['鬼女'],['温蒂']],
- ];
- function expandFilterTerm(t){
-  const tc=compact(t), out=new Set([t,tc]);
-  for(const [triggers,targets] of filterSynonyms){
-   if(triggers.some(k=>tc===compact(k)||tc.includes(compact(k)))){
-    for(const v of targets){out.add(v);out.add(compact(v));}
-   }
-  }
-  return [...out].filter(Boolean);
- }
  function matches(id,q){
   if(!q)return true;
+  const eng=window.WIKI_SEARCH_ENGINE;
+  if(eng){
+   hay??=new Map(index.map(a=>[a.id,eng.prepareItem(a)]));
+   const item=hay.get(id);
+   if(!item)return false;
+   if(q!==lastQueryKey){lastQueryKey=q;lastParsed=eng.parseQuery(q);}
+   return eng.scoreEntry(item,lastParsed).score>0;
+  }
   hay??=new Map(index.map(a=>{
    const full=normalize([a.title,a.summary,a.keywords,a.text,a.category,...(a.aliases??[])].join(' '));
    return [a.id,{full,compact:compact(full)}];
   }));
   const item=hay.get(id);
   if(!item)return false;
-  return q.split(' ').filter(Boolean).every(t=>expandFilterTerm(t).some(v=>item.full.includes(v)||item.compact.includes(v)));
+  return q.split(' ').filter(Boolean).every(t=>{const tc=compact(t);return item.full.includes(t)||item.compact.includes(tc);});
  }
 
  const setHidden=(node,value)=>{if(node&&node.hidden!==value)node.hidden=value;};
