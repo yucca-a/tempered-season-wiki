@@ -30,7 +30,7 @@ export const articleAliases = {
  'terror-shield': ['盾牌', '克眼盾', '眼盾', '泰拉盾', '克眼面具', '眼面具'],
  'advanced-torches': ['亮茄火炬', '纯粹辉煌火炬', '辉煌火炬', '绝望石火炬', '绝望火炬', '升级火炬'],
  'moongleam-weapons': ['月熠', '月亮武器'],
- 'upgraded-beefalo-bell': ['牛铃', '橙牛铃', '犀牛角牛铃', '随身牛铃'],
+ 'upgraded-beefalo-bell': ['牛铃', '橙牛铃', '橙宝石牛铃', '随身牛铃'],
  'possessed-magician-hat': ['魔术帽', '暗影魔术帽', '老麦帽子', '随身魔术帽'],
  'anti-slip-boots': ['防滑鞋', '防滑靴', '腿靴', '出逃腿靴', '旧靴子', '溜冰鞋'],
  'eternal-boots': ['永恒腿靴', '永恒防滑靴', '永恒鞋'],

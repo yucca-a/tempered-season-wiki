@@ -158,6 +158,7 @@ oceanfish_small_5_inv oceanfish_small_9_inv orangemooneye palmcone_scale petals 
 robin_winter saddle_shadow sculptingtable security_pulse_cage_full seeds seeds_cooked sleepbomb slurper_pelt
 slurtle_shellpieces spice_garlic spider_healer spider_hider spider_warrior spidereggsack steelwool trinket_1
 trinket_6 trinket_25 trunk_winter turf_marsh walrushat wetgoop woodcarvedhat wx78_shadowdrone_debuffer wx78module_light2
+wagpunkhat armorwagpunk shadow_battleaxe shadow_beef_bell slingshot slingshotammo_moonglass cookingrecipecard dock_kit mighty_gym winona_battery_high alterguardianhatshard
 '''.split())
 # dryplants2hm uses the raw produce art, with two Quagmire sprite overrides.
 dry_plants = 'carrot corn pumpkin eggplant durian pomegranate dragonfruit watermelon tomato potato asparagus onion garlic pepper fig cave_banana cactus_meat'.split()
@@ -172,7 +173,7 @@ with ZipFile(GAME/'images.zip') as archive:
         texpath = 'images/' + tree.find('Texture').get('filename')
         for element in tree.findall('./Elements/Element'):
             name = element.get('name').removesuffix('.tex')
-            if name not in names and not re.fullmatch(r'avatar_(wilson|willow|wolfgang|wendy|wx78|wickerbottom|woodie|wes|waxwell|wigfrid|webber|winona|warly|walter|wortox|wormwood|wurt|wanda|wonkey)',name): continue
+            if name not in names and not re.fullmatch(r'avatar_(wilson|willow|wolfgang|wendy|wx78|wickerbottom|woodie|wes|waxwell|wathgrithr|wigfrid|webber|winona|warly|walter|wortox|wormwood|wurt|wanda|wonkey)',name): continue
             if atlas is None: atlas = decode(archive.read(texpath))
             w,h=atlas.size
             u1,u2,v1,v2=(float(element.get(k)) for k in ('u1','u2','v1','v2'))
@@ -180,7 +181,7 @@ with ZipFile(GAME/'images.zip') as archive:
             name=name.removeprefix('avatar_')
             save(crop,name)
             manifest[name]={'path':'assets/icons/'+name+'.png','source':'DST images.zip/'+texpath}
-    for character in 'wilson willow wolfgang wendy wx78 wickerbottom woodie wes waxwell wigfrid webber winona warly walter wortox wormwood wurt wanda wonkey'.split():
+    for character in 'wilson willow wolfgang wendy wx78 wickerbottom woodie wes waxwell wathgrithr wigfrid webber winona warly walter wortox wormwood wurt wanda wonkey'.split():
         target=f'images/avatars/avatar_{character}.tex'
         if target in archive.namelist():
             save(decode(archive.read(target)),character)
@@ -201,6 +202,16 @@ for name in ['zaspberry', 'viperfruit']:
     if file.is_file():
         save(decode(file.read_bytes()), name)
         manifest[name] = {'path': f'assets/icons/{name}.png', 'source': f'Uncompromising Mode Workshop 2039181790/{asset}'}
+for name in ['wixie', 'wathom']:
+    asset = f'images/avatars/avatar_{name}.tex'
+    file = um / asset
+    if file.is_file():
+        save(decode(file.read_bytes()), name)
+        manifest[name] = {'path': f'assets/icons/{name}.png', 'source': f'Uncompromising Mode Workshop 2039181790/{asset}'}
+    elif (ROOT / 'wiki/assets/um-beta' / f'{name}.png').is_file():
+        manifest[name] = {'path': f'assets/um-beta/{name}.png', 'source': f'assets/um-beta/{name}.png'}
+if (ROOT / 'wiki/assets/um-beta/um_buttery_fly.png').is_file():
+    manifest['um_buttery_fly'] = {'path': 'assets/um-beta/um_buttery_fly.png', 'source': 'UM beta Workshop 3193922031/images/inventoryimages/um_buttery_fly.tex', 'atlas': 'images/inventoryimages/um_buttery_fly.xml'}
 labels={}
 localized_names=set()
 localized_by_prefab={}
@@ -219,7 +230,7 @@ for plant in dry_plants:
 labels.update({'霜冻核心':'frostcore2hm','寒霜之祠':'frostshrine2hm','灵魂瓶':'bottle_soul','涡流':'sword_vortex2hm','裂开的不老表':'pocketwatch_heal2hm','永恒-出逃腿靴':'bootleg2hm','小糖豆':'smallcandy2hm','猪鼻胡萝卜蛋糕':'carrotcake2hm','四季鱼汤':'tropicalbouillabaisse2hm','哀悼之穴':'tomb_repair','眼球炮塔':'eyeturret_item','沃特':'wurt'})
 labels.update(aliases)
 labels.update({'恐惧-警告表':'pocketwatch_weapon','织影夜莓':'devil_heart2hm','天体洋葱':'onion_celestial2hm','防滑·出逃腿靴':'bootleg_2hm','永恒·出逃腿靴':'bootleg2hm','薇诺娜的器械箱':'winona_toolbox2hm'})
-for label, name in {'闪电蓝莓': 'zaspberry', '暗影蓝莓': 'viperfruit'}.items():
+for label, name in {'闪电蓝莓': 'zaspberry', '暗影蓝莓': 'viperfruit', '薇格弗德': 'wathgrithr', '薇希': 'wixie', '沃托姆': 'wathom', '黄油蝴蝶': 'um_buttery_fly'}.items():
     if name in manifest:
         labels[label] = name
 (ROOT/'wiki/data/icon-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

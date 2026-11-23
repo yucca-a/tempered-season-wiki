@@ -58,8 +58,9 @@ const temperedOverrides={
 
 const characterMechanics=new Set([
  'skill-tree','night-vision','right-click-actions','character-mode-switches','skill-keybindings',
+ 'walter','wanda','wixie',
 ]);
-const modCharacters=new Set(['role-wathom','role-wixie','wixie']);
+const modCharacters=new Set(['role-wathom','role-wixie']);
 const qualityMechanics=new Set([
  'equipment-repair','login-irreplaceables','science-level-rules','fire-cooking',
  'equipment-slot-swapping','world-forgotten-map','world-admin-control','prototype-costs',
