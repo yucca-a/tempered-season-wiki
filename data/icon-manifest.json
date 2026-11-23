@@ -1915,6 +1915,110 @@
     "path": "assets/icons/waxwell.png",
     "source": "DST images.zip/images/avatars.tex"
   },
+  "sb_crawlinghorror": {
+    "path": "assets/icons/sb_crawlinghorror.png",
+    "source": "DST images.zip/images/scrapbook_icons1.tex"
+  },
+  "sb_fused_shadeling": {
+    "path": "assets/icons/sb_fused_shadeling.png",
+    "source": "DST images.zip/images/scrapbook_icons1.tex"
+  },
+  "sb_daywalker2": {
+    "path": "assets/icons/sb_daywalker2.png",
+    "source": "DST images.zip/images/scrapbook_icons1.tex"
+  },
+  "sb_beefalo": {
+    "path": "assets/icons/sb_beefalo.png",
+    "source": "DST images.zip/images/scrapbook_icons1.tex"
+  },
+  "sb_eyeofterror": {
+    "path": "assets/icons/sb_eyeofterror.png",
+    "source": "DST images.zip/images/scrapbook_icons1.tex"
+  },
+  "sb_glommer": {
+    "path": "assets/icons/sb_glommer.png",
+    "source": "DST images.zip/images/scrapbook_icons1.tex"
+  },
+  "sb_malbatross": {
+    "path": "assets/icons/sb_malbatross.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_oceanhorror": {
+    "path": "assets/icons/sb_oceanhorror.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_lunarthrall_plant": {
+    "path": "assets/icons/sb_lunarthrall_plant.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_mutatedwarg": {
+    "path": "assets/icons/sb_mutatedwarg.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_lordfruitfly": {
+    "path": "assets/icons/sb_lordfruitfly.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_monkey": {
+    "path": "assets/icons/sb_monkey.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_koalefant_summer": {
+    "path": "assets/icons/sb_koalefant_summer.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_knight": {
+    "path": "assets/icons/sb_knight.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_leif": {
+    "path": "assets/icons/sb_leif.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_krampus": {
+    "path": "assets/icons/sb_krampus.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_ruinsnightmare": {
+    "path": "assets/icons/sb_ruinsnightmare.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_pigman": {
+    "path": "assets/icons/sb_pigman.png",
+    "source": "DST images.zip/images/scrapbook_icons2.tex"
+  },
+  "sb_spiderqueen": {
+    "path": "assets/icons/sb_spiderqueen.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
+  "sb_tentacle": {
+    "path": "assets/icons/sb_tentacle.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
+  "sb_warg": {
+    "path": "assets/icons/sb_warg.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
+  "sb_shadowthrall_horns": {
+    "path": "assets/icons/sb_shadowthrall_horns.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
+  "sb_terrorbeak": {
+    "path": "assets/icons/sb_terrorbeak.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
+  "sb_walrus": {
+    "path": "assets/icons/sb_walrus.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
+  "sb_sharkboi": {
+    "path": "assets/icons/sb_sharkboi.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
+  "sb_shark": {
+    "path": "assets/icons/sb_shark.png",
+    "source": "DST images.zip/images/scrapbook_icons3.tex"
+  },
   "bootleg2hm": {
     "path": "assets/icons/bootleg2hm.png",
     "source": "content/images/inventoryimages/bootleg2hm.tex"

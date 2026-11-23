@@ -186,6 +186,27 @@ with ZipFile(GAME/'images.zip') as archive:
         if target in archive.namelist():
             save(decode(archive.read(target)),character)
             manifest[character]={'path':'assets/icons/'+character+'.png','source':'DST images.zip/'+target}
+    scrapbook_names = {
+        'beefalo', 'koalefant_summer', 'glommer', 'walrus', 'krampus', 'tentacle', 'spiderqueen',
+        'warg', 'mutatedwarg', 'malbatross', 'sharkboi', 'eyeofterror', 'daywalker2', 'crawlinghorror',
+        'terrorbeak', 'oceanhorror', 'ruinsnightmare', 'fused_shadeling', 'shadowthrall_horns',
+        'lunarthrall_plant', 'monkey', 'leif', 'knight', 'lordfruitfly', 'shark', 'pigman',
+    }
+    for xmlname in ['images/scrapbook_icons1.xml', 'images/scrapbook_icons2.xml', 'images/scrapbook_icons3.xml']:
+        if xmlname not in archive.namelist(): continue
+        tree = ET.fromstring(archive.read(xmlname))
+        atlas = None
+        texpath = 'images/' + tree.find('Texture').get('filename')
+        for element in tree.findall('./Elements/Element'):
+            name = element.get('name').removesuffix('.tex')
+            if name not in scrapbook_names: continue
+            if atlas is None: atlas = decode(archive.read(texpath))
+            w, h = atlas.size
+            u1, u2, v1, v2 = (float(element.get(k)) for k in ('u1', 'u2', 'v1', 'v2'))
+            crop = atlas.crop((round(u1*w), round((1-v2)*h), round(u2*w), round((1-v1)*h)))
+            key = 'sb_' + name
+            save(crop, key)
+            manifest[key] = {'path': 'assets/icons/' + key + '.png', 'source': 'DST images.zip/' + texpath}
 for file in (ROOT/'content/images/inventoryimages').glob('*.tex'):
     save(decode(file.read_bytes()),file.stem)
     manifest[file.stem]={'path':'assets/icons/'+file.stem+'.png','source':str(file.relative_to(ROOT)).replace('\\','/')}
