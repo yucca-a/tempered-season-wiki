@@ -1,9 +1,9 @@
 {
-  "articles": 320,
-  "configs": 450,
-  "choices": 3376,
+  "articles": 321,
+  "configs": 452,
+  "choices": 3380,
   "targetedRefresh": {
-    "version": "2.8.15.1.8",
+    "version": "2.8.15.1.9",
     "articles": [
       "role-winona",
       "winona-toolbox",
@@ -95,13 +95,13 @@
   "groups": 18,
   "images": 691,
   "itemAudit": {
-    "version": "2.8.15.1.8",
+    "version": "2.8.15.1.9",
     "articles": 64,
     "items": 62,
     "missing": []
   },
   "entityAudit": {
-    "version": "2.8.15.1.8",
+    "version": "2.8.15.1.9",
     "articles": 67,
     "characters": 25,
     "buildings": 22,
@@ -109,13 +109,13 @@
     "missing": []
   },
   "lifeAudit": {
-    "version": "2.8.15.1.8",
+    "version": "2.8.15.1.9",
     "articles": 51,
     "food": 18,
     "creatures": 33,
     "missing": []
   },
-  "notedSettings": 450,
+  "notedSettings": 452,
   "implementationDifferences": [
     {
       "key": "Portable Crock Pot Multi",
@@ -196,11 +196,6 @@
       "key": "Wonkey Run Wait Time",
       "label": "芜猴助跑时间缩短",
       "status": "mismatch"
-    },
-    {
-      "key": "Wonkey Attack Steal item",
-      "label": "芜猴攻击偷取物品",
-      "status": "inactive"
     },
     {
       "key": "enter gift 2",

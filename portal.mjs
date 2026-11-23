@@ -9,10 +9,13 @@ const sun='<svg class="hub-sun" width="18" height="18" viewBox="0 0 24 24" fill=
 function libraryTile(library,icon){
  return `<article class="hub-library hub-library-${library.id}">
   <a class="hub-library-entry" href="${esc(library.href)}">
-   <span class="hub-library-art"><img src="${esc(library.cover)}" alt="" width="192" height="192"><span class="hub-library-open" aria-hidden="true">${icon('arrow',16)}</span></span>
-   <span class="hub-library-copy"><strong>${esc(library.name)}</strong><span class="hub-library-version">${esc(library.version)}</span></span>
+   <span class="hub-library-art"><img src="${esc(library.cover)}" alt="" width="112" height="112"></span>
+   <span class="hub-library-copy">
+    <span class="hub-library-head"><strong>${esc(library.name)}</strong><span class="hub-library-open" aria-hidden="true">${icon('arrow',15)}</span></span>
+    <span class="hub-library-version">${esc(library.version)}</span>
+    <span class="hub-library-summary">${esc(library.summary)}</span>
+   </span>
   </a>
-  <p class="hub-library-summary">${esc(library.summary)}</p>
   <nav class="hub-library-links" aria-label="${esc(library.name)}快捷入口">${library.links.map(([href,label])=>`<a href="${esc(href)}">${esc(label)}</a>`).join('')}</nav>
  </article>`;
 }
@@ -36,22 +39,30 @@ export async function buildPortal(out,libraries,icon){
 <body data-wiki="hub">
  <a class="skip-link" href="#main">跳到模组目录</a>
  <header class="hub-header">
-  <a class="hub-brand" href="index.html" aria-label="模组 Wiki 总览">
-   <span class="hub-brand-mark">${icon('book',21)}</span><span><strong>模组 Wiki</strong><small>饥荒联机版</small></span>
-  </a>
-  <div class="search-box hub-search" role="search" aria-label="搜索两套 Wiki">
-   ${icon('search',17)}<label class="sr-only" for="header-search">搜索两个 Wiki</label>
-   <input id="header-search" type="search" placeholder="搜索词条、物品、配方或配置" autocomplete="off">
-   <button type="button" data-search aria-label="搜索两个 Wiki" title="打开全站搜索 (Ctrl+K)"><kbd>Ctrl K</kbd><span class="hub-search-text">搜索</span></button>
+  <div class="hub-header-inner">
+   <a class="hub-brand" href="index.html" aria-label="模组 Wiki 总览">
+    <span class="hub-brand-mark">${icon('book',20)}</span><span><strong>模组 Wiki</strong><small>饥荒联机版</small></span>
+   </a>
+   <div class="search-box hub-search" role="search" aria-label="搜索两套 Wiki">
+    ${icon('search',16)}<label class="sr-only" for="header-search">搜索两个 Wiki</label>
+    <input id="header-search" type="search" placeholder="搜索词条、物品、配方或配置…" autocomplete="off">
+    <button type="button" data-search aria-label="搜索两个 Wiki" title="打开全站搜索 (Ctrl+K)"><kbd>Ctrl K</kbd><span class="hub-search-text">搜索</span></button>
+   </div>
+   <button type="button" class="hub-theme" data-hub-theme aria-label="切换到深色模式" title="切换主题">${moon}${sun}</button>
   </div>
-  <button type="button" class="hub-theme" data-hub-theme aria-label="切换到深色模式" title="切换主题">${moon}${sun}</button>
  </header>
  <main class="hub-main" id="main" tabindex="-1">
   <div class="hub-intro">
+   <span class="hub-eyebrow">DON'T STARVE TOGETHER · CHINESE WIKI</span>
    <h1>饥荒联机版模组 Wiki</h1>
+   <p>源码核对的玩法词条、房间配置、制作配方与图鉴，按 <kbd>Ctrl K</kbd> 可跨模组直搜。</p>
   </div>
   <section class="hub-launchpad" aria-label="模组目录">
    ${libraries.map(library=>libraryTile(library,icon)).join('')}
+  </section>
+  <section class="hub-recent" id="hub-recent" aria-labelledby="hub-recent-title" hidden>
+   <header><h2 id="hub-recent-title">最近浏览</h2><button type="button" id="hub-recent-clear">清空</button></header>
+   <div class="hub-recent-list" id="hub-recent-list"></div>
   </section>
   <footer class="hub-footer">
    <span>资料来源</span>

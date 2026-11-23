@@ -24,14 +24,20 @@ export function refreshRelease44(articles,notes){
     '难以冻结':['子项默认开启（需要先开总开关）。同一个目标被冻住后 23 秒内不会再被冻住，单次冰冻最多持续 4 秒。'],
     '下雨禁火':['子项默认开启（需要先开总开关）。下雨时点不着火，火把和打火机会立刻熄灭；龙鳞火炉、咩咩雕像和防雨火炉类不受影响。身边 3 格内有能挡雨的大树时不算淋雨。'],
     '火把传热':['子项默认开启（需要先开总开关）。点燃的火把、打火机火焰本身是一个小热源，能给身边 4 格内的人取暖。'],
+    wilderness_hayfever:['默认关闭。春季第二天起，地表和洞穴都可能打喷嚏，每次掉 3 理智。蜂后复巢前暂停自然发作，部分食物和风扇可延后。'],
     '空挥武器':['默认关闭。攻击时原地挥武器，不会自动走到最远攻击距离。'],
   };
   for(const [key,paragraphs] of Object.entries(survival))notes[key]={requires:key===W?[]:[W],paragraphs};
+  notes.wilderness_pollen_mites={requires:[W,'wilderness_hayfever'],paragraphs:['默认关闭。春天地表会出现螨巢。螨群可以附身，每叮咬玩家一次掉 1 生命，喷嚏提前 5 秒。']};
   for(const a of articles){
     if(a.configKeys?.includes('德爷生存'))a.configKeys=a.configKeys.filter(k=>k!=='德爷生存');
   }
   const modes=touch('survival-modes');
   modes.configKeys=[W,...modes.configKeys.filter(k=>k!==W)];
+  for(const key of ['wilderness_hayfever','wilderness_pollen_mites'])if(!modes.configKeys.includes(key))modes.configKeys.push(key);
+  modes.source.push('content/ray/hayfever.lua', 'content/scripts/components/wildernesshayfever2hm.lua',
+    'content/ray/pollenmites.lua', 'content/scripts/components/pollenmitedenspawner2hm.lua',
+    'content/scripts/prefabs/pollenmites2hm.lua', 'content/scripts/pollenmitebehavior2hm.lua');
   const rating=touch('difficulty-rating');
   if(!rating.configKeys.includes(W))rating.configKeys.push(W);
 
@@ -46,5 +52,7 @@ export function refreshRelease44(articles,notes){
   notes['boss_health_wixie']={requires:['enable hard mode','extra_change','boss_health'],paragraphs:['只在“BOSS血量”大于 1 倍且启用永不妥协时有意义，决定永不妥协的暗影薇希怎样套用这个倍率。“限伤兼容”（默认）：血量和每轮撤退门槛（原本 500 点）一起乘倍率。“倍率兼容”：血量和 500 点撤退门槛不变，改为把它的攻击伤害乘倍率。两档都会按倍率增加掉落。']};
   const extra=touch('mechanic-extra-stats');
   if(!extra.configKeys.includes('boss_health_wixie'))extra.configKeys.push('boss_health_wixie');
+  // 2.8.15.1.9: the steal option key now matches modinfo, so the option works.
+  notes['Wonkey Attack Steal item']={requires:['enable easy mode','role_easy','wonkey_easy'],paragraphs:['默认开启。芜猴每次打中目标会从它身上偷一件东西；芜猴自己放下船套装时有 50% 概率放出海盗船。']};
   return updated;
 }

@@ -1,7 +1,7 @@
 {
-  "version": "2.8.15.1.8",
+  "version": "2.8.15.1.9",
   "checkedAt": "2026-11-22",
-  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.8 source. Each article retains its own review version.",
+  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.9 source. Each article retains its own review version.",
   "articles": [
     {
       "id": "getting-started",
@@ -1166,7 +1166,13 @@
         "content/ray/beye.lua",
         "content/ray/beye_actions.lua",
         "content/ray/beye_crafting.lua",
-        "content/ray/deyeshengcun.lua"
+        "content/ray/deyeshengcun.lua",
+        "content/ray/hayfever.lua",
+        "content/scripts/components/wildernesshayfever2hm.lua",
+        "content/ray/pollenmites.lua",
+        "content/scripts/components/pollenmitedenspawner2hm.lua",
+        "content/scripts/prefabs/pollenmites2hm.lua",
+        "content/scripts/pollenmitebehavior2hm.lua"
       ],
       "configKeys": [
         "Wilderness Survival",
@@ -1181,7 +1187,9 @@
         "难以冻结",
         "下雨禁火",
         "火把传热",
-        "空挥武器"
+        "空挥武器",
+        "wilderness_hayfever",
+        "wilderness_pollen_mites"
       ],
       "auditedVersion": "2.8.15.0.46"
     },
@@ -1616,12 +1624,12 @@
       "bytes": 17173
     },
     "content/modinfo.lua": {
-      "sha256": "3a1bb2755d89b1effbe4c235b2867ca438e3109027eaf8feed9d6b6fce8ef5b7",
-      "bytes": 149312
+      "sha256": "f4bd1b05d5619d45f73809219f4cd5132056e0a3fd2c91f403258b88d099587c",
+      "bytes": 150273
     },
     "content/modmain.lua": {
-      "sha256": "c4bb62a9fceddd81c104e1ca4387e604a33e344e2c433a3a8978376e94a44c90",
-      "bytes": 24326
+      "sha256": "fbdd3d4d721aaefefd8293ad1f0c013e34cd9874bcf2adbbe63553334595d817",
+      "bytes": 24836
     },
     "content/modservercreationmain.lua": {
       "sha256": "99db4e3bbd200b199c5e08c44ff1e9a12ba0594f5a0bfb66eb759604e514d5aa",
@@ -1646,6 +1654,14 @@
     "content/ray/deyeshengcun.lua": {
       "sha256": "d64a62217d528c2ed0a56d1982c9ad0b8a0009ae3c601d19f8d12df139a52fa9",
       "bytes": 11332
+    },
+    "content/ray/hayfever.lua": {
+      "sha256": "28f84ded20ba1c624f001f7ac255e3d2dfd0feecb54711f752a003c1a954f879",
+      "bytes": 8542
+    },
+    "content/ray/pollenmites.lua": {
+      "sha256": "7f91ad7372d23749c0070114d13cfaef015cae493c24631aa2f87bec56f3c4fb",
+      "bytes": 1446
     },
     "content/ray/suijishengwuapi.lua": {
       "sha256": "e384af3eb4cbd1b14ca5fdb440c2f741c5155f55fb4d80c251b72bdc4f73004c",
@@ -1747,6 +1763,10 @@
       "sha256": "5c23d809f3fe4d813eb923eabbbb3bdf6126575761d32abb80c4546f01e404c5",
       "bytes": 955
     },
+    "content/scripts/components/pollenmitedenspawner2hm.lua": {
+      "sha256": "f1967656a3236e5b9c3c03c988f1bd37d6bfb166c4d70ba4909c702823c65256",
+      "bytes": 4925
+    },
     "content/scripts/components/removeleaveinventory2hm.lua": {
       "sha256": "f0c2779cef6fbc24d0f528cb013bbffd9b235ac741e107d55460c6c58472f3fe",
       "bytes": 19908
@@ -1759,6 +1779,10 @@
       "sha256": "4a5eca1ac4aa439560f63ade6452c606f7b03590a6646cdb8667dc48a1512957",
       "bytes": 25884
     },
+    "content/scripts/components/wildernesshayfever2hm.lua": {
+      "sha256": "194211e1e56377e9ca6b8ae018927b188525ed194a17ce1acfc228c04e24ffcd",
+      "bytes": 6138
+    },
     "content/scripts/cookingredientcollect2hm.lua": {
       "sha256": "679b99a116726211edf25f77cd92ef0b87850f5d716641c770458de7b74e99eb",
       "bytes": 5911
@@ -1768,8 +1792,8 @@
       "bytes": 8673
     },
     "content/scripts/difficultyrating2hm.lua": {
-      "sha256": "9c1163f50d1aa46e0f5a29ec5884115e31581633743983549daae6000f286df0",
-      "bytes": 8522
+      "sha256": "9dbbdc9b9631c3995a38418820f20a76db43c5875b7e5bd04119155348c87299",
+      "bytes": 8636
     },
     "content/scripts/exchangemode2hm.lua": {
       "sha256": "acd4c486f885d291ae7dd1e86269877ecdd23b49aa92327c89604ddaa4143a67",
@@ -1818,6 +1842,10 @@
     "content/scripts/pocketproxy2hm.lua": {
       "sha256": "707b2f062f778d0fbeddbf37dfdcc9bce68dbf93e262907f2eba74ef106b9ab8",
       "bytes": 2288
+    },
+    "content/scripts/pollenmitebehavior2hm.lua": {
+      "sha256": "12482f3c7bf47b1618e1e645b0b6e644d4aa743399e5ba4f1e022618a2d6427a",
+      "bytes": 5485
     },
     "content/scripts/prefabs/backpackicon2hm.lua": {
       "sha256": "c8806a7e1d94a336a140a56cd7bb8f07c273d5720f88e678dc0a3150eca631d4",
@@ -1879,6 +1907,10 @@
       "sha256": "e945726209784b1aaa6bdea12c2df01850c2085ae8ffa85ee6cb5bea4c1ff933",
       "bytes": 8673
     },
+    "content/scripts/prefabs/pollenmites2hm.lua": {
+      "sha256": "64a6006631a462957c86a3e4db835b6ea11155c45b6cd5b539718059645fd594",
+      "bytes": 12857
+    },
     "content/scripts/prefabs/shadowhutch2hm.lua": {
       "sha256": "44c5840247080b5335016acdc7a695061c845cbb6da170d7e5920d185969a417",
       "bytes": 21042
@@ -1904,8 +1936,8 @@
       "bytes": 2925
     },
     "content/scripts/prefabs2hm.lua": {
-      "sha256": "4040670f257f61a6417512f1c845900e6716f35e7e3cadec44ca9062ebd18e66",
-      "bytes": 3887
+      "sha256": "7910d2e99740a65e9b3dc44818c3f4fdbc49bff5efe5916eb9f8fa5018e98590",
+      "bytes": 3910
     },
     "content/scripts/progressivecombat2hm.lua": {
       "sha256": "236d24d6395b3052a3b0546c50526ebde86bc767ddd289d37a1b5ede3a740f66",

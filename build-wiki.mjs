@@ -13,6 +13,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const rawValue=v=>typeof v==='string'?`"${v}"`:String(v);
 const href=id=>`${id}.html`;
 const releaseIndex=[
+ ['2.8.15.1.9','荒野求生录春季花粉症与果蝇照料修复'],
  ['2.8.15.1.8','旧档修复、WX-78 与刮地皮头盔优化'],
  ['2.8.15.1.7','牛牛驯养、快捷收集与整理、天体英雄优化'],
  ['2.8.15.1.6','格子钉选、单人穿越与首领调整'],
@@ -153,54 +154,72 @@ function configStrip(a){
  const rows=a.configKeys.map(k=>{const c=configMap.get(k);return `<tr><th scope="row">${configLink(k)}</th><td>${esc(optionSummary(c))}</td><td>${c.requires.length?c.requires.map(configLink).join('、'):'无模式前提'}${c.note.conditions?`<small>${rich(c.note.conditions,a.id)}</small>`:''}</td></tr>`;}).join('');
  return `<details class="article-config"><summary>相关配置 <span>${a.configKeys.length}</span></summary><p class="entry-config-note">以下为模组默认值，实际效果取决于房间设置。点击配置名称可查看全部档位。</p><div class="table-wrap entry-config-table" tabindex="0" role="region" aria-label="${esc(a.title)}相关配置"><table><thead><tr><th scope="col">配置</th><th scope="col">默认</th><th scope="col">还需开启</th></tr></thead><tbody>${rows}</tbody></table></div></details>`;
 }
-const {ordered,articleHTML,shell,visual,categoryNav,settingsIntro}=createUI({articles,configs,groups,categories,meta,esc,icon,articleIcon,sectionHTML,configStrip,counts});
-const changes=articles.filter(article=>article.release).slice(0,3).map(article=>
- `<li><a href="${href(article.id)}"><strong>${esc(article.title)}</strong><span>${esc(article.summary)}</span>${icon('arrow',15)}</a></li>`).join('');
+const {ordered,articleHTML,shell,visual,categoryNav,settingsIntro,groupSidebar}=createUI({articles,configs,groups,categories,meta,esc,icon,articleIcon,sectionHTML,configStrip,counts});
+const changes=articles.filter(article=>article.release).slice(0,5).map((article,idx)=>
+ `<li><a href="${href(article.id)}"><strong class="release-ver">${esc(article.title)}</strong>${idx===0?'<span class="release-badge">当前</span>':''}<span>${esc(article.summary)}</span>${icon('arrow',14)}</a></li>`).join('');
+const topicCardCount=cid=>articles.filter(a=>a.topic===cid||a.relatedTopics?.includes(cid)).length;
+const homeTopicCards=categories.map(cat=>{
+ const img=cat.icon&&iconManifest[cat.icon]?.path;
+ return `<a class="home-topic-card" href="tempered.html?category=${cat.id}#encyclopedia">${img?`<img src="${img}" alt="" width="36" height="36" loading="lazy">`: `<span class="home-topic-icon">${icon('book',20)}</span>`}<span><strong>${esc(cat.name)} <small>${topicCardCount(cat.id)}</small></strong><small>${esc(cat.description||'')}</small></span>${icon('arrow',14)}</a>`;
+}).join('');
 const overview=`<article class="tempered-overview">
  <header class="tempered-intro">
-  <img src="assets/workshop-cover.png" alt="" width="144" height="144">
-  <div>
+  <img src="assets/workshop-cover.png" alt="" width="128" height="128">
+  <div class="tempered-intro-copy">
    <p class="tempered-version">v${esc(meta.version)}${meta.date?` · ${esc(meta.date)}`:''}</p>
    <h1>淬炼之季</h1>
    <p>《<a href="${esc(meta.originalWorkshop)}" target="_blank" rel="noopener noreferrer">为爽而虐</a>》的二改模组。开启暗影世界、体验战斗险境，并按房间偏好调整角色、生物和生存机制。</p>
-   <a class="tempered-enter" href="tempered.html#encyclopedia">进入词条 ${icon('arrow',16)}</a>
+   <div class="tempered-cta-row">
+    <a class="tempered-enter" href="tempered.html#encyclopedia">进入词条 ${icon('arrow',15)}</a>
+    <a class="tempered-secondary-cta" href="settings.html">配置大全 <span>${counts.configs}</span></a>
+    <a class="tempered-secondary-cta" href="getting-started.html">新手入门</a>
+   </div>
   </div>
  </header>
+ <section class="home-topics" aria-labelledby="home-topics-title">
+  <header class="section-bar"><h2 id="home-topics-title">按板块浏览</h2><a href="directory.html">全部 ${counts.articles} 篇索引 ${icon('arrow',13)}</a></header>
+  <div class="home-topic-grid">${homeTopicCards}</div>
+ </section>
  <nav class="tempered-quick-links" aria-label="常用入口">
-  <a href="getting-started.html">新手入门</a>
+  <span class="quick-links-label">热门直达</span>
   <a href="world-shadow.html">暗影世界</a>
+  <a href="combat.html">战斗险境</a>
+  <a href="armor.html">巨兽装甲</a>
   <a href="containers.html">快捷收集与存放</a>
   <a href="world-random-size.html">随机生物大小</a>
-  <a href="settings.html">配置大全</a>
+  <a href="role-wx78.html">WX-78 电路</a>
+  <a href="settings-guide.html">配置阅读指南</a>
  </nav>
  <section class="tempered-changes" aria-labelledby="recent-changes">
-  <header><h2 id="recent-changes">近期更新</h2><a href="tempered.html?category=updates#encyclopedia">全部版本 ${icon('arrow',13)}</a></header>
+  <header class="section-bar"><h2 id="recent-changes">近期更新</h2><a href="tempered.html?category=updates#encyclopedia">全部版本 ${icon('arrow',13)}</a></header>
   <ul>${changes}</ul>
  </section>
 </article>`;
 await fs.writeFile(path.join(out,'tempered-home.html'),shell('overview','模组主页','淬炼之季模组简介、近期更新和百科入口。',overview));
-const home='<header class="catalog-home-link" data-default-category="updates"><a href="tempered-home.html">← 淬炼之季主页</a><h1>淬炼百科</h1></header>'+categoryNav('<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ordered.map(a=>articleHTML(a,true)).join(''));
+const home='<header class="catalog-home-link" data-default-category="featured"><div><h1>淬炼百科</h1><p>收录 '+counts.articles+' 篇源码核对词条，支持按分类、子分类或关键字快速定位。</p></div><a class="catalog-directory-link" href="directory.html">分类总览 '+icon('arrow',13)+'</a></header>'+categoryNav('<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或切换分类。</div>'+ordered.map(a=>articleHTML(a,true)).join(''));
 await fs.writeFile(path.join(out,'tempered.html'),shell('index','百科全览',`${counts.articles}篇玩法解析与${counts.configs}项配置，淬炼之季中文Wiki。`,home));
 const configHTML=c=>{
  const opt=defaultChoice(c),warn=c.note.status==='inactive'?'当前未生效':c.note.status?'与菜单说明不同':'';
  const optionDescription=o=>{if(['boss_damagetake','boss_damagetake2','notboss_damagetake','notboss_damagetake2'].includes(c.key))return typeof o.value==='number'?`实际保留 ${Math.round((1-o.value)*100)}% ${c.key.endsWith('2')?'生命损失':'战斗伤害'}；当前计算为 1−${o.value}。`:'不额外修改此项伤害比例。';return o.description||(o.value===false?'此档采用界面所示的禁用或范围选择，具体行为见上方说明。':c.description||'按此档位选择，作用范围见上方说明。');};
  const opts=c.options.map(o=>`<tr ${o.value===c.default?'class="default-row"':''}><td>${esc(choiceText(o))}${o.value===c.default?'<span class="default-badge">默认</span>':''}</td><td>${esc(optionDescription(o))}</td><td><code>${esc(rawValue(o.value))}</code></td></tr>`).join('');
  const related=articles.filter(a=>a.configKeys.includes(c.key));
- return `<details class="config-card" id="${c.id}" data-config="${c.id}" data-mode="${esc(c.mode)}" data-group="${c.groupId}" data-default="${c.default===false?'off':'on'}"><summary><span class="config-summary-copy"><span class="config-title">${esc(c.label)}${warn?'<em class="warning-badge">'+warn+'</em>':''}</span><span class="config-summary-note">${esc(c.note.paragraphs?.[0]||c.description||'展开查看作用、生效条件与全部档位。')}</span></span><span class="config-default"><span>默认</span><strong>${esc(choiceText(opt))}</strong></span></summary><div class="config-content"><p class="config-path">${esc(c.mode)} / ${esc(c.group)} <a href="#${c.id}" class="config-anchor" aria-label="定位${esc(c.label)}">#</a></p><p class="config-description">${rich(c.description||c.label)}</p>${c.note.paragraphs?.length?`<div class="${warn?'implementation-note':'config-explanation'}">${warn?`<strong>${warn}</strong>`:''}${c.note.paragraphs.map(p=>`<p>${rich(p)}</p>`).join('')}</div>`:''}<div class="requirements"><span>生效条件</span>${c.requires.length?c.requires.map(configLink).join('<span class="plus">+</span>'):'<span>不依赖简单 / 困难模式的分类总开关</span>'}${c.note.conditions?`<p>${rich(c.note.conditions)}</p>`:''}</div><h3>可选档位 <span>${c.options.length}</span></h3><div class="table-wrap" tabindex="0" role="region" aria-label="${esc(c.label)}可选档位"><table><thead><tr><th>界面选项</th><th>档位说明</th><th>存档值</th></tr></thead><tbody>${opts}</tbody></table></div>${related.length?`<div class="related-links"><span>玩法解析</span>${related.map(a=>articleLink(a.id)).join('')}</div>`:''}<details class="source-note"><summary>服主配置键与核对来源</summary><code>${esc(c.key)}</code><p>配置定义：modinfo.lua 第 ${c.line} 行。${c.references.length?'关联实现：'+[...new Set(c.references.map(r=>r.file))].map(esc).join('、'):''}</p></details></div></details>`;
+ return `<details class="config-card" id="${c.id}" data-config="${c.id}" data-mode="${esc(c.mode)}" data-group="${c.groupId}" data-default="${c.default===false?'off':'on'}"><summary><span class="config-summary-copy"><span class="config-title">${esc(c.label)}${warn?'<em class="warning-badge">'+warn+'</em>':''}</span><span class="config-summary-note">${esc(c.note.paragraphs?.[0]||c.description||'展开查看作用、生效条件与全部档位。')}</span></span><span class="config-default" data-default-state="${c.default===false?'off':'on'}"><span>默认</span><strong>${esc(choiceText(opt))}</strong></span></summary><div class="config-content"><p class="config-path">${esc(c.mode)} / ${esc(c.group)} <a href="#${c.id}" class="config-anchor" aria-label="定位${esc(c.label)}">#</a></p><p class="config-description">${rich(c.description||c.label)}</p>${c.note.paragraphs?.length?`<div class="${warn?'implementation-note':'config-explanation'}">${warn?`<strong>${warn}</strong>`:''}${c.note.paragraphs.map(p=>`<p>${rich(p)}</p>`).join('')}</div>`:''}<div class="requirements"><span>生效条件</span>${c.requires.length?c.requires.map(configLink).join('<span class="plus">+</span>'):'<span>不依赖简单 / 困难模式的分类总开关</span>'}${c.note.conditions?`<p>${rich(c.note.conditions)}</p>`:''}</div><h3>可选档位 <span>${c.options.length}</span></h3><div class="table-wrap" tabindex="0" role="region" aria-label="${esc(c.label)}可选档位"><table><thead><tr><th>界面选项</th><th>档位说明</th><th>存档值</th></tr></thead><tbody>${opts}</tbody></table></div>${related.length?`<div class="related-links"><span>玩法解析</span>${related.map(a=>articleLink(a.id)).join('')}</div>`:''}<details class="source-note"><summary>服主配置键与核对来源</summary><code>${esc(c.key)}</code><p>配置定义：modinfo.lua 第 ${c.line} 行。${c.references.length?'关联实现：'+[...new Set(c.references.map(r=>r.file))].map(esc).join('、'):''}</p></details></div></details>`;
 };
-const settings=settingsIntro()+'<div class="empty-state" id="config-empty" hidden>没有匹配的设置，请调整搜索或筛选条件。</div>'+groups.map(g=>'<section class="config-group" data-config-group="'+g.id+'"><h2 id="'+g.id+'">'+(g.mode===g.name?'':'<span class="config-mode-label" data-mode="'+esc(g.mode)+'">'+esc(g.mode)+'</span>')+esc(g.name)+'<small>'+g.configs.length+' 项</small></h2>'+g.configs.map(configHTML).join('')+'</section>').join('');
-await fs.writeFile(path.join(out,'settings.html'),shell('settings','配置大全',`全部${counts.configs}项模组配置、默认值、档位、生效条件和注意事项。`,settings));
-const directory=`<div class="wiki-heading"><div><span class="eyebrow">ALL ENTRIES</span><h1>分类索引</h1><p>按模组的实际改动查阅角色、机制和物品。</p></div></div><div class="reading-tabs"><a href="tempered.html">百科全览</a><a href="settings.html">配置大全 <span>${counts.configs}</span></a><a class="active" href="directory.html">分类索引</a></div>${categories.map(cat=>`<section class="directory-group"><h2>${cat.name}<small>${articles.filter(a=>a.topic===cat.id).length} 篇</small></h2><div class="directory-grid">${articles.filter(a=>a.topic===cat.id).map(a=>{const img=visual(a);return `<a href="${href(a.id)}">${img?`<img src="${img}" width="36" height="36" alt="" loading="lazy">`:`<span class="directory-symbol">${icon('book')}</span>`}<span><strong>${esc(a.title)}</strong><small>${esc(a.summary)}</small></span></a>`;}).join('')}</div></section>`).join('')}`;
+const settings=settingsIntro()+'<div class="empty-state" id="config-empty" hidden>没有匹配的设置，请调整搜索或筛选条件。</div>'+groups.map(g=>'<section class="config-group" data-config-group="'+g.id+'" data-group-mode="'+esc(g.mode)+'"><h2 id="'+g.id+'">'+(g.mode===g.name?'':'<span class="config-mode-label" data-mode="'+esc(g.mode)+'">'+esc(g.mode)+'</span>')+esc(g.name)+'<small data-group-count>'+g.configs.length+' 项</small></h2>'+g.configs.map(configHTML).join('')+'</section>').join('');
+const settingsSidebar=groupSidebar(groups,{title:'配置分组'});
+await fs.writeFile(path.join(out,'settings.html'),shell('settings','配置大全',`全部${counts.configs}项模组配置、默认值、档位、生效条件和注意事项。`,settings,'',settingsSidebar));
+const directoryJump=`<nav class="directory-jump" aria-label="快速跳转分类">${categories.map(cat=>`<a href="#dir-${cat.id}">${esc(cat.name)} <small>${articles.filter(a=>a.topic===cat.id).length}</small></a>`).join('')}</nav>`;
+const directory=`<div class="wiki-heading"><div><span class="eyebrow">ALL ENTRIES</span><h1>分类索引</h1><p>按模组板块一次浏览全部 ${counts.articles} 篇角色、机制、物品与更新词条。</p></div>${directoryJump}</div>${categories.map(cat=>`<section class="directory-group" id="dir-${cat.id}"><h2>${cat.name}<small>${articles.filter(a=>a.topic===cat.id).length} 篇</small></h2><div class="directory-grid">${articles.filter(a=>a.topic===cat.id).map(a=>{const img=visual(a);return `<a href="${href(a.id)}">${img?`<span class="dir-icon-wrap"><img src="${img}" width="36" height="36" alt="" loading="lazy"></span>`:`<span class="directory-symbol">${icon('book',18)}</span>`}<span><strong>${esc(a.title)}</strong><small>${esc(a.summary)}</small></span></a>`;}).join('')}</div></section>`).join('')}`;
 await fs.writeFile(path.join(out,'directory.html'),shell('directory','分类索引','按分类查阅全部机制、角色、道具、建筑、食物与生物条目。',directory));
 for(const a of articles){
- const toc=`<aside class="toc" aria-label="本页目录"><h2>本页目录</h2><nav>${a.sections.map((s,i)=>`<a href="#${a.id}-s${i+1}">${esc(s.title)}</a>`).join('')}</nav>${a.configKeys.length?`<h2>相关配置</h2><div class="toc-config">${a.configKeys.map(configLink).join('')}</div>`:''}</aside>`;
+ const toc=`<aside class="toc" aria-label="本页目录"><div class="toc-inner"><h2>本页目录</h2><nav>${a.sections.map((s,i)=>`<a href="#${a.id}-s${i+1}">${esc(s.title)}</a>`).join('')}</nav>${a.configKeys.length?`<h2>相关配置 <small>${a.configKeys.length}</small></h2><div class="toc-config">${a.configKeys.slice(0,12).map(configLink).join('')}${a.configKeys.length>12?`<a class="toc-more-cfg" href="#${a.id}-settings">查看全部 ${a.configKeys.length} 项 →</a>`:''}</div>`:''}</div></aside>`;
  const peers=articles.filter(p=>p.topic===a.topic),position=peers.findIndex(p=>p.id===a.id);
- const adjacent='<nav class="adjacent-entries" aria-label="继续查阅">'+[peers[position-1],peers[position+1]].map((p,i)=>p?'<a href="'+p.id+'.html"><small>'+(i===0?'上一篇':'继续阅读')+'</small><strong>'+esc(p.title)+'</strong></a>':'<span></span>').join('')+'</nav>';
- const body=`<nav class="breadcrumbs" aria-label="当前位置"><a href="tempered.html">百科首页</a><span>/</span><a href="tempered.html?category=${a.topic}#encyclopedia">${catName(a.topic)}</a><span>/</span><span>${esc(a.title)}</span></nav>${articleHTML(a)}${adjacent}<div class="article-bottom"><span>按 v${meta.version} 核对 · ${meta.date}</span><a href="tempered.html#entry-${a.id}">返回词条索引 ${icon('arrow',13)}</a></div>`;
+ const adjacent='<nav class="adjacent-entries" aria-label="继续查阅">'+[peers[position-1],peers[position+1]].map((p,i)=>p?'<a href="'+p.id+'.html"><small>'+(i===0?'← 上一篇':'下一篇 →')+'</small><strong>'+esc(p.title)+'</strong></a>':'<span></span>').join('')+'</nav>';
+ const body=`<nav class="breadcrumbs" aria-label="当前位置"><a href="tempered.html">百科首页</a><span>/</span><a href="tempered.html?category=${a.topic}#encyclopedia">${catName(a.topic)}</a><span>/</span><span>${esc(a.title)}</span></nav>${articleHTML(a)}${adjacent}<div class="article-bottom"><span>按 v${meta.version} 核对 · ${meta.date}</span><a href="tempered.html?category=${a.topic}#entry-${a.id}">返回${catName(a.topic)} ${icon('arrow',13)}</a></div>`;
  await fs.writeFile(path.join(out,href(a.id)),shell(a.id,a.title,a.summary,body,toc));
 }
-const articleIndex=articles.map(a=>({id:a.id,href:href(a.id),kind:'article',title:a.title,category:catName(a.topic),categoryId:a.topic,topic:a.topic,summary:a.summary,aliases:a.aliases??[],keywords:[a.keywords,...a.configKeys].join(' '),text:a.sections.map(s=>[s.title,s.callout,...(s.paragraphs??[]),...(s.list??[]),...(s.table?.rows.flat()??[]),...(s.body?.filter(x=>x.rows).slice(1).flatMap(x=>x.rows.flat())??[]),...(s.body?.filter(x=>x.heading).map(x=>x.heading)??[])].filter(Boolean).join(' ')).join(' ')}));
-const configIndex=configs.map(c=>({id:c.id,href:'settings.html#'+c.id,kind:'config',title:c.label,category:c.mode+' / '+c.group,summary:c.note.paragraphs?.[0]||c.description||`默认：${optionSummary(c)}`,keywords:c.key,text:[c.description,...(c.note.paragraphs??[]),...c.options.flatMap(o=>[o.label,o.description,rawValue(o.value)]),...c.requires.map(k=>configMap.get(k).label)].join(' '),status:c.note.status||''}));
+const articleIndex=articles.map(a=>({id:a.id,href:href(a.id),kind:'article',title:a.title,category:catName(a.topic),categoryId:a.topic,topic:a.topic,summary:a.summary,aliases:a.aliases??[],keywords:[a.keywords,...a.configKeys].join(' '),text:a.sections.map(s=>[s.title,s.callout,...(s.paragraphs??[]),...(s.list??[]),...(s.table?.rows.flat()??[]),...(s.body?.filter(x=>x.rows).slice(1).flatMap(x=>x.rows.flat())??[]),...(s.body?.filter(x=>x.heading).map(x=>x.heading)??[])].filter(Boolean).join(' ')).join(' '),image:visual(a)??undefined}));
+const configIndex=configs.map(c=>({id:c.id,href:'settings.html#'+c.id,kind:'config',title:c.label,category:c.mode+' / '+c.group,defaultValue:choiceText(defaultChoice(c)),summary:c.note.paragraphs?.[0]||c.description||`默认：${optionSummary(c)}`,keywords:c.key,text:[c.description,...(c.note.paragraphs??[]),...c.options.flatMap(o=>[o.label,o.description,rawValue(o.value)]),...c.requires.map(k=>configMap.get(k).label)].join(' '),status:c.note.status||''}));
 await fs.writeFile(path.join(out,'search-index.js'),`window.WIKI_INDEX=${JSON.stringify([...articleIndex,...configIndex]).replaceAll('<','\\u003c')};\n`);
 await fs.writeFile(path.join(out,'navigation-index.js'),`window.WIKI_INDEX=${JSON.stringify(articleIndex.map(({id,title,summary,href,category,aliases,kind,image})=>({id,title,summary,href,category,aliases,kind,image}))).replaceAll('<','\\u003c')};\n`);
 await fs.cp(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});

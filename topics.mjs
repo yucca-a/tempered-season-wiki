@@ -7,7 +7,6 @@ const sharedTopics=[
 ];
 
 export const temperedTopics=[
- {id:'updates',name:'更新内容',utility:true},
  {...sharedTopics.find(topic=>topic.id==='characters'),children:[
   {id:'default-characters',name:'默认角色'},
   {id:'mod-characters',name:'模组角色'},
@@ -24,22 +23,23 @@ export const temperedTopics=[
   {id:'creature-hostile',name:'敌对生物'},
   {id:'creature-bosses',name:'巨兽与首领'},
  ]},
- {id:'new-items',name:'全新内容',icon:'blueprint',children:[
+ {id:'new-items',name:'全新内容',icon:'blueprint',description:'模组新增的装备、建筑、食物与道具',children:[
   {id:'new-equipment',name:'装备与武器'},
   {id:'new-buildings',name:'建筑与设施'},
   {id:'new-food',name:'食物与作物'},
   {id:'new-tools',name:'道具与弹药'},
  ]},
- {id:'quality-of-life',name:'生活质量改动',icon:'gears',children:[
+ {id:'quality-of-life',name:'生活质量改动',icon:'gears',description:'日常便利机制、作物与环境规则',children:[
   {id:'qol-mechanics',name:'机制改动'},
   {id:'qol-survival',name:'生存环境'},
  ]},
- {id:'mechanics',name:'其他改动',icon:'gears',children:[
+ {id:'mechanics',name:'其他改动',icon:'nightmarefuel',description:'暗影世界、战斗险境与核心系统',children:[
   {id:'world',name:'暗影世界'},
   {id:'other-danger',name:'险境与战斗'},
   {id:'other-mechanics',name:'其他机制'},
  ]},
- {id:'start',name:'入门与说明',utility:true},
+ {id:'start',name:'入门与说明',icon:'torch',description:'新手入门、配置阅读指南与模组说明',utility:true},
+ {id:'updates',name:'更新内容',icon:'cartographydesk',description:'各版本更新日志与历史改动记录',utility:true},
 ];
 
 export const betaTopics=[

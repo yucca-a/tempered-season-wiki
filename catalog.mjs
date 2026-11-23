@@ -8,6 +8,7 @@ import { refreshRelease25 } from './research/release-2-8-15-0-25.mjs';
 import { refreshDocumentationGaps } from './research/release-20261111-gaps.mjs';
 import { applyArticleTerminology, canonicalDocument } from './terminology.mjs';
 import { applyEditorials, basisOf } from './editorial.mjs';
+import { articleAliases } from './data/search-aliases.mjs';
 export { meta };
 export const categories = [
   {id:'start',name:'入门与说明'}, {id:'mechanics',name:'战斗与生存'}, {id:'world',name:'暗影世界与季节'},
@@ -152,6 +153,10 @@ if(configData.configs.some(c=>c.key==='wathom nightvision')){
 // Hand-edited player-facing text (editorial/*.md) goes on top of every research and release patch.
 export const editorialState=globalThis.WIKI_EDITORIAL_SKIP?{applied:[],stale:[],bases:Object.fromEntries(articles.map(a=>[a.id,basisOf(a)]))}:applyEditorials(articles);
 applyArticleTerminology(articles);
+for(const article of articles){
+ const extra=articleAliases[article.id];
+ if(extra?.length)article.aliases=[...new Set([...(article.aliases??[]),...extra])].filter(a=>a&&a!==article.title);
+}
 for(const key of Object.keys(notes))notes[key]=canonicalDocument(notes[key]);
 const configByKey=new Map(configData.configs.map(c=>[c.key,c]));
 export const configId=key=>'cfg-'+createHash('sha1').update(key).digest('hex').slice(0,12);
