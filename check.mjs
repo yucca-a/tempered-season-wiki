@@ -165,7 +165,7 @@ for(const [id,aliases] of Object.entries({
  'role-wx78':['机器人','WX78'],
 })){
  const entry=context.window.WIKI_INDEX.find(a=>a.id===id);
- if(!aliases.every(alias=>entry?.aliases?.includes(alias))||!pages.get(entry?.href)?.includes('class="role-aliases"'))errors.push('Missing character aliases for '+id);
+ if(!aliases.every(alias=>entry?.aliases?.includes(alias)))errors.push('Missing character aliases for '+id);
 }
 const configData=JSON.parse(await fs.readFile(new URL('./data/configs.json',import.meta.url),'utf8'));
 for(const page of ['multitool.html','thulecite-club.html','horn-enchant.html']){

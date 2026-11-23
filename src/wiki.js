@@ -36,24 +36,25 @@
 
  let hay, lastQueryKey='', lastParsed=null;
  const compact=s=>normalize(s).replace(/[\s.\-_·、()（）/]/g,'');
- function matches(id,q){
-  if(!q)return true;
+ function scoreEntryId(id,q){
+  if(!q)return 1;
   const eng=window.WIKI_SEARCH_ENGINE;
   if(eng){
    hay??=new Map(index.map(a=>[a.id,eng.prepareItem(a)]));
    const item=hay.get(id);
-   if(!item)return false;
+   if(!item)return 0;
    if(q!==lastQueryKey){lastQueryKey=q;lastParsed=eng.parseQuery(q);}
-   return eng.scoreEntry(item,lastParsed).score>0;
+   return eng.scoreEntry(item,lastParsed).score;
   }
   hay??=new Map(index.map(a=>{
    const full=normalize([a.title,a.summary,a.keywords,a.text,a.category,...(a.aliases??[])].join(' '));
    return [a.id,{full,compact:compact(full)}];
   }));
   const item=hay.get(id);
-  if(!item)return false;
-  return q.split(' ').filter(Boolean).every(t=>{const tc=compact(t);return item.full.includes(t)||item.compact.includes(tc);});
+  if(!item)return 0;
+  return q.split(' ').filter(Boolean).every(t=>{const tc=compact(t);return item.full.includes(t)||item.compact.includes(tc);})?1:0;
  }
+ const matches=(id,q)=>scoreEntryId(id,q)>0;
 
  const setHidden=(node,value)=>{if(node&&node.hidden!==value)node.hidden=value;};
  const setText=(node,value)=>{value=String(value);if(node&&node.textContent!==value)node.textContent=value;};
@@ -164,10 +165,12 @@
   visibleAnchor=anchorEntry;
   let count=0;
   for(const node of entryNodes){
+   const score=anchorEntry?(node===anchorEntry?1:0):scoreEntryId(node.dataset.entry,q);
    const visible=anchorEntry
     ? node===anchorEntry
-    : matches(node.dataset.entry,q)&&matchesCategory(node,effectiveCat)&&(!onlyBookmarks||bookmarks.has(node.dataset.entry));
+    : score>0&&matchesCategory(node,effectiveCat)&&(!onlyBookmarks||bookmarks.has(node.dataset.entry));
    setHidden(node,!visible);
+   node.style.order=q&&visible?String(-score):'';
    if(!node.hidden)count++;
   }
   const showMixedTags=effectiveCat==='featured'||effectiveCat==='all'||!!q||onlyBookmarks;
