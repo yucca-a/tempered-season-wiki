@@ -84,7 +84,7 @@ export const itemChangesArticles=[
   sources:[cfg(1439),beta('postinit/prefabs/eyebrella.lua',20),beta('init/init_durability.lua',125)],
  },
  {
-  id:'scalemail-buff',category:'items',icon:'armor_dragonfly',title:'鳞甲召唤岩浆虫',aliases:['Scalemail Buff','火甲','龙鳞甲','随从岩浆虫'],
+  id:'scalemail-buff',category:'items',icon:'armordragonfly',title:'鳞甲召唤岩浆虫',aliases:['Scalemail Buff','火甲','龙鳞甲','随从岩浆虫'],
   summary:'装备鳞甲时会召唤最多 3 只友方岩浆虫替你作战，阵亡后 8 秒自动复活。',
   configs:['scalemailbuff'],
   sections:[

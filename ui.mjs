@@ -152,7 +152,7 @@ export function createUI({articles,configs,groups,categories,meta,esc,icon,artic
   const isArticle=!['overview','index','settings','directory','recipes','field-guide','sources','legacy-items','ingredient-changes'].includes(current);
   const items=id==='tempered'
    ? [['tempered-home.html','主页',current==='overview'],[home,'百科',current==='index'||isArticle],[settings,'配置大全',current==='settings'],['directory.html','分类索引',current==='directory']]
-   : [[home,'百科',current==='index'||isArticle],[settings,'配置大全',current==='settings'],['recipes.html','制作与兑换',current==='recipes'||current==='ingredient-changes'],['field-guide.html','实体图鉴',current==='field-guide']];
+   : [[home,'百科',current==='index'||isArticle],[settings,'配置大全',current==='settings'],['recipes.html','制作与兑换',current==='recipes'||current==='ingredient-changes'],['field-guide.html','实体图鉴',current==='field-guide'],['directory.html','分类索引',current==='directory']];
   return `<nav class="header-nav" aria-label="主导航">${items.map(([href,label,active])=>`<a href="${href}"${active?' aria-current="page"':''}>${label}</a>`).join('')}</nav>`;
  }
 

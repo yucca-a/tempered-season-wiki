@@ -43,8 +43,35 @@ export const temperedTopics=[
 ];
 
 export const betaTopics=[
- {id:'world',name:'世界改动',icon:'lantern',description:'地形、世界生成与季节天气'},
- ...sharedTopics,
+ {id:'world',name:'世界改动',icon:'lantern',description:'地形、世界生成与季节天气',children:[
+  {id:'world-weather',name:'季节与天气'},
+  {id:'world-biomes',name:'地形与植物'},
+ ]},
+ {id:'characters',name:'角色改动',icon:'wilson',description:'角色能力、技能、操作与兼容',children:[
+  {id:'beta-mod-characters',name:'新增与重做角色'},
+  {id:'beta-vanilla-characters',name:'原版角色改动'},
+ ]},
+ {id:'mechanics',name:'机制改动',icon:'gears',description:'战斗、生存和共享玩法规则',children:[
+  {id:'mech-survival',name:'核心生存规则'},
+  {id:'mech-systems',name:'宝石、烹饪与模式'},
+ ]},
+ {id:'items',name:'物品改动',icon:'hammer',description:'原有道具、装备、建筑和食物的变化',children:[
+  {id:'item-gear',name:'装备与工具'},
+  {id:'item-structures',name:'建筑与容器'},
+  {id:'item-food-farm',name:'食物与农作物'},
+ ]},
+ {id:'creatures',name:'生物改动',icon:'deerclops_eyeball',description:'普通生物、敌怪、首领与掉落',children:[
+  {id:'creature-bosses',name:'首领与巨兽'},
+  {id:'creature-new',name:'新增与遗迹怪物'},
+  {id:'creature-reworks',name:'原版生物改动'},
+ ]},
+ {id:'new-items',name:'新增物品',icon:'blueprint',description:'模组新增的装备、道具、建筑与料理',children:[
+  {id:'new-vetcurse',name:'老兵诅咒神装'},
+  {id:'new-weapons',name:'武器、炸弹与弹弓'},
+  {id:'new-gear-tools',name:'护甲、头盔与工具'},
+  {id:'new-dishes',name:'新增锅料理'},
+  {id:'new-buildings-misc',name:'建筑与材料'},
+ ]},
 ];
 
 const newTemperedItems=new Set([
@@ -151,5 +178,38 @@ export function temperedSubtopic({id,topic,category}){
    if(isShadowWorld(id))return 'world';
    if(id.includes('-danger')||id.startsWith('mechanic-')||['combat','armor','survival-modes'].includes(id))return 'other-danger';
    return 'other-mechanics';
+ }
+}
+
+const betaWeather=new Set(['snowstorms','autumn-weather','winter-burning','spring-tornadoes','summer-heat-smog','rimeweed']);
+const betaModChars=new Set(['winky','wixie','wathom','walter','winona']);
+const betaMechSurvival=new Set(['max-health-penalties','burning-loot-longpig','winter-growth-limbo','veterans-curse','freeze-immunity']);
+const betaItemStructures=new Set(['inventory-backpacks','clothing-pockets','infinite-blueprints','compost-over-rot','crafting-and-collisions','scaled-chest-buff','lazy-deserter','sleeping-rework','merm-houses','birdcage-feeding','icebox-tweaks']);
+const betaItemFood=new Set(['farm-crops-and-seeds','mushrooms-and-planter','beebox-and-honey','ingredient-uses']);
+const betaBosses=new Set(['creature-guide','summer-dragonflies','hooded-widow','ancient-guardian','ancient-fuelweaver','toadstool','nightmare-werepig','celestial-champion','shadow-pieces','great-depths-worm','deerclops','bearger','moose-goose','dragonfly','bee-queen','klaus','antlion','crab-king','eyes-of-terror','harder-treeguard','harder-spider-queen','boss-health-adjustments']);
+const betaCreatureReworks=new Set(['pigking-guards','harder-krampus','elemental-hounds','spider-and-bat-reworks','adjusted-butterflies','frog-reworks','pig-and-werepig-reworks','beefalo-and-koalefant-reworks','walrus-and-other-mobs','slurtles','rock-lobster','marotter']);
+const betaVetcurse=new Set(['gore-horn-hat','silk-sack','cursed-antler','crystal-cursed-antler','bearger-claw','slobber-lobber','feather-frock','klaus-amulet','crab-claw','um-beegun','moonfly-lantern']);
+const betaWeapons=new Set(['dreadstone-shield','beak-basher','widows-grasp','charlies-slider','slingshot-gnasher','slingshot-matilda','slingshot-jessie','slingshot-claire','honey-rounds','wixie-slingshot-ammo-guide','jawed-scythe','um-ice-sicle','rimeweed-whip','rat-whip','bugzapper','um-magnerang','um-flamethrower','um-blowdarts','um-tentaclespike-moon','um-boomberry-bomb','um-bomb-moon','um-fyre-bomb','um-beemine-moon','um-bear-traps','um-detonator']);
+const betaDishes=new Set(['beefalowings','californiaking','devilsfruitcake','liceloaf','simpsalad','snotroast','theatercorn','um-deviled-eggs','viperjam','zaspberryparfait','um-chiles-en-nogada','um-kebab','blueberrypancakes','um-boom-tart','um-boomberrypie','um-sponge-cake','snowcone','seafoodpaella','um-ghost-fajita','um-rimeweed-spagett','um-rimeweed-tequila','stuffed-peeper-poppers','um-durian-cream-marshcake','um-rice-pudding']);
+const betaBuildingsMisc=new Set(['air-conditioner','skullchest','astral-projector','um-scrapper','um-fyrite','rat-tail','glass-scales']);
+
+export function betaSubtopic({id,category}){
+ switch(category){
+  case 'world':return betaWeather.has(id)?'world-weather':'world-biomes';
+  case 'characters':return betaModChars.has(id)?'beta-mod-characters':'beta-vanilla-characters';
+  case 'mechanics':return betaMechSurvival.has(id)?'mech-survival':'mech-systems';
+  case 'items':
+   if(betaItemStructures.has(id))return 'item-structures';
+   if(betaItemFood.has(id))return 'item-food-farm';
+   return 'item-gear';
+  case 'creatures':
+   if(betaBosses.has(id))return 'creature-bosses';
+   return betaCreatureReworks.has(id)?'creature-reworks':'creature-new';
+  case 'new-items':
+   if(betaVetcurse.has(id))return 'new-vetcurse';
+   if(betaWeapons.has(id))return 'new-weapons';
+   if(betaDishes.has(id))return 'new-dishes';
+   if(betaBuildingsMisc.has(id))return 'new-buildings-misc';
+   return 'new-gear-tools';
  }
 }

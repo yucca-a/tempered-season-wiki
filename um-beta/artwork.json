@@ -63,6 +63,14 @@
     "height": 47,
     "workshop": true
   },
+  "beargerclaw": {
+    "path": "assets/um-beta/beargerclaw.png",
+    "source": "images/inventoryimages/beargerclaw.tex",
+    "atlas": "images/inventoryimages/beargerclaw.xml",
+    "width": 57,
+    "height": 64,
+    "workshop": true
+  },
   "beefalowings": {
     "path": "assets/um-beta/beefalowings.png",
     "source": "images/inventoryimages/beefalowings.tex",
@@ -151,6 +159,14 @@
     "height": 512,
     "workshop": true
   },
+  "crabclaw": {
+    "path": "assets/um-beta/crabclaw.png",
+    "source": "images/inventoryimages/crabclaw.tex",
+    "atlas": "images/inventoryimages/crabclaw.xml",
+    "width": 57,
+    "height": 55,
+    "workshop": true
+  },
   "critter_figgy_builder": {
     "path": "assets/um-beta/critter_figgy_builder.png",
     "source": "images/inventoryimages/critter_figgy_builder.tex",
@@ -196,6 +212,14 @@
     "source": "images/inventoryimages/driftwoodfishingrod.tex",
     "atlas": "images/inventoryimages/driftwoodfishingrod.xml",
     "width": 59,
+    "height": 61,
+    "workshop": true
+  },
+  "feather_frock": {
+    "path": "assets/um-beta/feather_frock.png",
+    "source": "images/inventoryimages/feather_frock.tex",
+    "atlas": "images/inventoryimages/feather_frock.xml",
+    "width": 63,
     "height": 61,
     "workshop": true
   },
@@ -293,6 +317,14 @@
     "atlas": "images/inventoryimages/jawed_scythe.xml",
     "width": 63,
     "height": 63,
+    "workshop": true
+  },
+  "klaus_amulet": {
+    "path": "assets/um-beta/klaus_amulet.png",
+    "source": "images/inventoryimages/klaus_amulet.tex",
+    "atlas": "images/inventoryimages/klaus_amulet.xml",
+    "width": 42,
+    "height": 58,
     "workshop": true
   },
   "liceloaf": {
@@ -461,6 +493,14 @@
     "atlas": "images/scrapbook/rimeweed_main.xml",
     "width": 54,
     "height": 96,
+    "workshop": true
+  },
+  "rimeweed_whip": {
+    "path": "assets/um-beta/rimeweed_whip.png",
+    "source": "images/inventoryimages/rimeweed_whip.tex",
+    "atlas": "images/inventoryimages/rimeweed_whip.xml",
+    "width": 48,
+    "height": 62,
     "workshop": true
   },
   "rockjawleather": {
@@ -661,6 +701,14 @@
     "atlas": "images/inventoryimages/slingshotammo_tremor.xml",
     "width": 51,
     "height": 52,
+    "workshop": true
+  },
+  "slobberlobber": {
+    "path": "assets/um-beta/slobberlobber.png",
+    "source": "images/inventoryimages/slobberlobber.tex",
+    "atlas": "images/inventoryimages/slobberlobber.xml",
+    "width": 61,
+    "height": 62,
     "workshop": true
   },
   "sludge": {
@@ -933,6 +981,14 @@
     "atlas": "images/inventoryimages/um_bee_moon.xml",
     "width": 50,
     "height": 62,
+    "workshop": true
+  },
+  "um_beegun": {
+    "path": "assets/um-beta/um_beegun.png",
+    "source": "images/inventoryimages/um_beegun.tex",
+    "atlas": "images/inventoryimages/um_beegun.xml",
+    "width": 62,
+    "height": 59,
     "workshop": true
   },
   "um_beehive_moon": {
@@ -1479,6 +1535,14 @@
     "height": 30,
     "workshop": true
   },
+  "um_moonfly_lantern": {
+    "path": "assets/um-beta/um_moonfly_lantern.png",
+    "source": "images/inventoryimages/um_moonfly_lantern.tex",
+    "atlas": "images/inventoryimages/um_moonfly_lantern.xml",
+    "width": 60,
+    "height": 62,
+    "workshop": true
+  },
   "um_moss": {
     "path": "assets/um-beta/um_moss.png",
     "source": "images/inventoryimages/um_moss.tex",
@@ -1679,6 +1743,14 @@
     "height": 50,
     "workshop": true
   },
+  "um_tentaclespike_moon": {
+    "path": "assets/um-beta/um_tentaclespike_moon.png",
+    "source": "images/inventoryimages/um_tentaclespike_moon.tex",
+    "atlas": "images/inventoryimages/um_tentaclespike_moon.xml",
+    "width": 43,
+    "height": 47,
+    "workshop": true
+  },
   "um_tentaclespot_moon": {
     "path": "assets/um-beta/um_tentaclespot_moon.png",
     "source": "images/inventoryimages/um_tentaclespot_moon.tex",
@@ -1839,6 +1911,14 @@
     "height": 96,
     "workshop": true
   },
+  "cookiecutterhat": {
+    "path": "assets/um-beta/cookiecutterhat.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 64,
+    "height": 64,
+    "workshop": false
+  },
   "decrease_hunger": {
     "path": "assets/um-beta/decrease_hunger.png",
     "source": "images/inventoryimages1.tex",
@@ -1895,12 +1975,12 @@
     "height": 61,
     "workshop": false
   },
-  "alterguardianhatshard": {
-    "path": "assets/um-beta/alterguardianhatshard.png",
+  "beefalo": {
+    "path": "assets/um-beta/beefalo.png",
     "source": "images/inventoryimages1.tex",
     "atlas": "images/inventoryimages1.xml",
-    "width": 57,
-    "height": 46,
+    "width": 63,
+    "height": 51,
     "workshop": false
   },
   "boatpatch": {
@@ -1959,6 +2039,14 @@
     "height": 56,
     "workshop": false
   },
+  "amulet": {
+    "path": "assets/um-beta/amulet.png",
+    "source": "images/inventoryimages1.tex",
+    "atlas": "images/inventoryimages1.xml",
+    "width": 47,
+    "height": 54,
+    "workshop": false
+  },
   "asparagus_seeds": {
     "path": "assets/um-beta/asparagus_seeds.png",
     "source": "images/inventoryimages1.tex",
@@ -1999,6 +2087,14 @@
     "height": 58,
     "workshop": false
   },
+  "icecream": {
+    "path": "assets/um-beta/icecream.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 61,
+    "height": 55,
+    "workshop": false
+  },
   "firenettles_dried": {
     "path": "assets/um-beta/firenettles_dried.png",
     "source": "images/inventoryimages2.tex",
@@ -2013,6 +2109,14 @@
     "atlas": "images/inventoryimages2.xml",
     "width": 64,
     "height": 37,
+    "workshop": false
+  },
+  "mushroom_farm": {
+    "path": "assets/um-beta/mushroom_farm.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 60,
+    "height": 64,
     "workshop": false
   },
   "moonstorm_spark": {
@@ -2045,6 +2149,14 @@
     "atlas": "images/inventoryimages2.xml",
     "width": 63,
     "height": 54,
+    "workshop": false
+  },
+  "dug_berrybush": {
+    "path": "assets/um-beta/dug_berrybush.png",
+    "source": "images/inventoryimages2.tex",
+    "atlas": "images/inventoryimages2.xml",
+    "width": 64,
+    "height": 64,
     "workshop": false
   },
   "mandrake": {
@@ -2207,6 +2319,14 @@
     "height": 61,
     "workshop": false
   },
+  "spider": {
+    "path": "assets/um-beta/spider.png",
+    "source": "images/inventoryimages3.tex",
+    "atlas": "images/inventoryimages3.xml",
+    "width": 64,
+    "height": 44,
+    "workshop": false
+  },
   "slingshotammo_scrapfeather": {
     "path": "assets/um-beta/slingshotammo_scrapfeather.png",
     "source": "images/inventoryimages3.tex",
@@ -2255,6 +2375,14 @@
     "height": 56,
     "workshop": false
   },
+  "telestaff": {
+    "path": "assets/um-beta/telestaff.png",
+    "source": "images/inventoryimages3.tex",
+    "atlas": "images/inventoryimages3.xml",
+    "width": 64,
+    "height": 60,
+    "workshop": false
+  },
   "tomato_seeds": {
     "path": "assets/um-beta/tomato_seeds.png",
     "source": "images/inventoryimages3.tex",
@@ -2285,6 +2413,14 @@
     "atlas": "images/inventoryimages4.xml",
     "width": 64,
     "height": 42,
+    "workshop": false
+  },
+  "wateringcan": {
+    "path": "assets/um-beta/wateringcan.png",
+    "source": "images/inventoryimages4.tex",
+    "atlas": "images/inventoryimages4.xml",
+    "width": 64,
+    "height": 54,
     "workshop": false
   },
   "yotc_seedpacket_rare": {
@@ -2319,6 +2455,14 @@
     "height": 96,
     "workshop": false
   },
+  "frog": {
+    "path": "assets/um-beta/frog.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
   "cave_vent_mite": {
     "path": "assets/um-beta/cave_vent_mite.png",
     "source": "images/scrapbook_icons1.tex",
@@ -2329,6 +2473,22 @@
   },
   "alterguardian_phase1": {
     "path": "assets/um-beta/alterguardian_phase1.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "firehound": {
+    "path": "assets/um-beta/firehound.png",
+    "source": "images/scrapbook_icons1.tex",
+    "atlas": "images/scrapbook_icons1.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "eyeofterror": {
+    "path": "assets/um-beta/eyeofterror.png",
     "source": "images/scrapbook_icons1.tex",
     "atlas": "images/scrapbook_icons1.xml",
     "width": 96,
@@ -2383,6 +2543,14 @@
     "height": 96,
     "workshop": false
   },
+  "pigking": {
+    "path": "assets/um-beta/pigking.png",
+    "source": "images/scrapbook_icons2.tex",
+    "atlas": "images/scrapbook_icons2.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
   "rocky": {
     "path": "assets/um-beta/rocky.png",
     "source": "images/scrapbook_icons2.tex",
@@ -2409,6 +2577,14 @@
   },
   "slurtle": {
     "path": "assets/um-beta/slurtle.png",
+    "source": "images/scrapbook_icons3.tex",
+    "atlas": "images/scrapbook_icons3.xml",
+    "width": 96,
+    "height": 96,
+    "workshop": false
+  },
+  "spiderqueen": {
+    "path": "assets/um-beta/spiderqueen.png",
     "source": "images/scrapbook_icons3.tex",
     "atlas": "images/scrapbook_icons3.xml",
     "width": 96,

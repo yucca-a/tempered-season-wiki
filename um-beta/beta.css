@@ -47,6 +47,39 @@
  border: 1px solid var(--beta-line);
  box-shadow: var(--shadow-xs);
 }
+.beta-cta-row {
+ margin-top: 14px;
+}
+.beta-topic-grid {
+ margin: 18px 0 14px;
+}
+.beta-quick-links {
+ margin: 0;
+ padding-top: 12px;
+ border-top: 1px solid var(--line);
+}
+[data-wiki="um-beta"] .home-topic-card:hover,
+[data-wiki="um-beta"] .home-topic-card:focus-visible {
+ border-color: var(--beta-ink);
+ background: var(--beta-tint);
+}
+[data-wiki="um-beta"] .home-topic-card img {
+ object-fit: contain;
+}
+[data-wiki="um-beta"] .tempered-enter {
+ background: var(--beta-ink);
+ border-color: var(--beta-ink);
+}
+[data-wiki="um-beta"] .tempered-enter:hover {
+ background: var(--accent-hover);
+ border-color: var(--accent-hover);
+}
+[data-wiki="um-beta"] .tempered-secondary-cta:hover,
+[data-wiki="um-beta"] .tempered-quick-links a:hover {
+ border-color: var(--beta-ink);
+ color: var(--beta-ink);
+ background: var(--beta-tint);
+}
 
 [data-wiki="um-beta"] .config-group > h2 .config-mode-label {
  color: var(--beta-ink);

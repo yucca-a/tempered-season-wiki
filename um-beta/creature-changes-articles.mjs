@@ -16,7 +16,7 @@ export const creatureChangesArticles=[
   sources:[cfg(852),cfg(855),beta('postinit/prefabs/cave.lua',49),beta('scripts/prefabs/ancient_trepidation.lua',269),beta('scripts/prefabs/ancient_trepidation.lua',352),beta('scripts/prefabs/ancient_trepidation.lua',360),beta('scripts/prefabs/ancient_trepidation_anchor.lua',76)],
  },
  {
-  id:'clockwork-amalgams',category:'creatures',icon:'chessjunk1',title:'发条融合怪',aliases:['Clockwork Amalgams','发条融合','残破发条','废料发条'],
+  id:'clockwork-amalgams',category:'creatures',icon:'gears',title:'发条融合怪',aliases:['Clockwork Amalgams','发条融合','残破发条','废料发条'],
   summary:'洞穴遗迹中的残破发条装置和发条战损会唤醒发条融合怪加入战斗。',
   configs:['amalgams'],
   sections:[

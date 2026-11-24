@@ -3,7 +3,7 @@ import path from 'node:path';
 import {createUI} from '../ui.mjs';
 import {canonicalText,localizedName} from '../terminology.mjs';
 import {buildPortal} from '../portal.mjs';
-import {betaTopics} from '../topics.mjs';
+import {betaTopics,betaSubtopic} from '../topics.mjs';
 import {articles,auditedVersion,auditedCnVersion} from './articles.mjs';
 import {configName,groupName,techName,extraNames} from './labels.mjs';
 import {itemGroups} from './items.mjs';
@@ -34,8 +34,9 @@ const articleIcons={
  gemology:'um_gemologyforge',winky:'winky',wixie:'wixie',wathom:'wathom',
  'summer-dragonflies':'moonmaw_dragonfly','dreadstone-shield':'wathgrithr_shield_dreadstone','beak-basher':'beakbasher',
  'veterans-curse':'veteranshrine','thermal-stone':'heatrock','sewing-kit':'sewing_kit',
+ 'spring-tornadoes':'staff_tornado','scalemail-buff':'armordragonfly','clockwork-amalgams':'gears',
 };
-const entryArticles=articles.map(a=>({...a,tag:'公开测试版',
+const entryArticles=articles.map(a=>({...a,tag:'公开测试版',subtopic:betaSubtopic(a),
  configKeys:a.configs,sections:a.sections.map(([title,text,guide,links])=>({title,text,links,
   guide:guide?.makeRows?{...guide,rows:guide.makeRows(snapshot.geodePools)}:guide}))}));
 const articleById=new Map(entryArticles.map(a=>[a.id,a]));
@@ -196,8 +197,8 @@ export async function buildHub(out,tempered,icon,temperedIndex){
    summary:'暗影世界、战斗险境与角色改动。',source:'about.html',
    links:[['directory.html','分类索引'],['settings.html','配置大全']]},
   {id:'beta',name:'永不妥协测试版',href:'um-beta/index.html',cover:artwork.cover.path,version:'Public Beta · v'+betaVersion,
-   summary:'测试版角色、宝石学、季节与配方。',source:'um-beta/sources.html',
-   links:[['um-beta/configs.html','配置大全'],['um-beta/'+newItemsHref,'新增物品'],['um-beta/recipes.html','制作与兑换']]},
+   summary:'测试版角色、宝石学、季节、首领与全配方。',source:'um-beta/sources.html',
+   links:[['um-beta/directory.html','分类索引'],['um-beta/configs.html','配置大全'],['um-beta/recipes.html','制作与兑换']]},
  ],icon);
 
  const meta={version:betaVersion,workshop};
@@ -220,9 +221,23 @@ export async function buildHub(out,tempered,icon,temperedIndex){
  await render('field-guide.html','field-guide','游戏实体图鉴','按名称和游戏代码查询测试版实体。',
   titleBlock('永不妥协测试版','游戏实体图鉴','共 '+guideEntries.length+' 项，可按中英文名称或游戏代码搜索。收录游戏图鉴、动态生成的地皮与料理，以及独立测试世界实际注册的模组具名实体。原版改动索引列出测试世界中实际挂载的脚本和行号。部分回调还会检查条件，自然出现条件与具体玩法请查对应专题。')+
   '<nav class="section-related-links">'+Object.entries(guideTypes).map(([type,label])=>link('#type-'+type,label)).join(' · ')+'</nav>'+guideBody);
- const itemCards=[...primaryItemCards,...extraEntries].map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}">${item.legacyId?`<span class="beta-legacy-anchor" id="entry-${item.legacyId}"></span>`:''}<a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
- const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" data-default-category="featured" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">查阅首领打法、季节威胁、角色改动和宝石学，也可以按房间配置找默认值，或按材料查制作与兑换。</p></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="start-paths">${startLink(newItemsHref,'um_gemologyforge','新增物品','从物品直达配方或玩法')}${startLink('configs.html','gears','配置大全','分类核对房间与客户端选项')}${startLink('recipes.html','blueprint','制作与兑换','按科技、材料和使用条件查找')}</div><div class="welcome-foot"><span>常查 ${link('field-guide.html','实体图鉴与代码')} · ${link('creature-guide.html','生物与首领')} · ${link('index.html?category=characters#encyclopedia','角色')} · ${link('gemology.html','宝石学')} · ${link('cooking-guide.html','料理速查')} · ${link('snowstorms.html','暴风雪')}</span><span>${count.articles} 篇词条 · ${count.configs} 项配置 · ${recipeEntries.length} 条配方</span></div></section>`;
- await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav('<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或分类。</div>'+ui.ordered.filter(a=>!primaryItemIds.has(a.id)).map(a=>ui.articleHTML(a,true)).join('')+`<div class="beta-topic-items">${itemCards}</div>`));
+ const legacyAnchorById=new Map(primaryItemCards.filter(item=>item.legacyId).map(item=>[item.id,{legacyId:item.legacyId,href:item.href,title:item.title}]));
+ const extraItemCards=extraEntries.map(item=>`<article class="beta-topic-item" id="entry-${item.id}" data-entry="${item.id}" data-category="${item.category}" data-subcategory="${item.category==='new-items'?'new-buildings-misc':'item-gear'}"><a href="${item.href}">${artImage(item.prefab,44)}<span><strong>${esc(item.title)}</strong><small>${esc(item.summary)}</small></span>${icon('arrow',16)}</a></article>`).join('');
+ const betaTopicCards=categories.map(cat=>{
+  const img=cat.icon&&artFor(cat.icon);
+  const cnt=entryArticles.filter(a=>a.category===cat.id).length;
+  return `<a class="home-topic-card" href="index.html?category=${cat.id}#encyclopedia">${img?`<img src="../${esc(img.path)}" alt="" width="36" height="36" loading="lazy">`:`<span class="home-topic-icon">${icon('book',20)}</span>`}<span><strong>${esc(cat.name)} <small>${cnt}</small></strong><small>${esc(cat.description||'')}</small></span>${icon('arrow',14)}</a>`;
+ }).join('');
+ const welcome=`<section class="wiki-welcome beta-welcome" id="welcome" data-default-category="featured" aria-labelledby="welcome-title"><div class="welcome-topline"><span>UNCOMPROMISING MODE</span><a href="sources.html">Public Beta · v${esc(betaVersion)} ${icon('arrow',12)}</a></div><div class="beta-welcome-copy"><div><p class="eyebrow">中文源码百科</p><h1 id="welcome-title">永不妥协测试版</h1><p class="welcome-copy">收录 ${count.articles} 篇源码核对词条与全部 ${count.configs} 项配置，覆盖角色改动、宝石学、四季灾害、首领打法与制作兑换。</p><div class="tempered-cta-row beta-cta-row"><a class="tempered-enter" href="#encyclopedia">浏览词条 ${icon('arrow',15)}</a><a class="tempered-secondary-cta" href="configs.html">配置大全 <span>${count.configs}</span></a><a class="tempered-secondary-cta" href="recipes.html">制作与兑换 <span>${recipeEntries.length}</span></a><a class="tempered-secondary-cta" href="directory.html">分类索引 <span>${count.articles}</span></a></div></div><img class="beta-cover" src="../${artwork.cover.path}" width="${artwork.cover.width}" height="${artwork.cover.height}" alt="永不妥协测试版工坊封面" fetchpriority="high"></div>${reviewedNotice}<div class="home-topic-grid beta-topic-grid">${betaTopicCards}</div><nav class="tempered-quick-links beta-quick-links" aria-label="热门直达"><span class="quick-links-label">热门直达</span><a href="gemology.html">宝石学与附魔</a><a href="veterans-curse.html">老兵诅咒与神装</a><a href="creature-guide.html">生物与首领速查</a><a href="cooking-guide.html">新增锅料理</a><a href="snowstorms.html">暴风雪</a><a href="spring-tornadoes.html">春季龙卷风</a><a href="max-health-penalties.html">生命上限惩罚</a><a href="field-guide.html">实体图鉴</a></nav></section>`;
+ const renderedCards=ui.ordered.map(a=>{
+  const html=ui.articleHTML(a,true);
+  const legacy=legacyAnchorById.get(a.id);
+  return legacy?html.replace('</article>',`<span class="beta-legacy-anchor" id="entry-${legacy.legacyId}"></span><a href="${legacy.href}" class="sr-only">${esc(legacy.title)}</a></article>`):html;
+ }).join('');
+ await render('index.html','index','百科全览','永不妥协公开测试版的中文词条、配置与配方索引。',welcome+ui.categoryNav('<div class="empty-state" id="entry-empty" hidden>没有匹配的词条，请调整搜索或切换分类。</div>'+renderedCards+(extraItemCards?`<div class="beta-topic-items">${extraItemCards}</div>`:'')));
+ const directoryJump=`<nav class="directory-jump" aria-label="快速跳转分类">${categories.map(cat=>`<a href="#dir-${cat.id}">${esc(cat.name)} <small>${entryArticles.filter(a=>a.category===cat.id).length}</small></a>`).join('')}</nav>`;
+ const directory=`<div class="wiki-heading"><div><span class="eyebrow">ALL ENTRIES</span><h1>分类索引</h1><p>按模组板块一次浏览全部 ${count.articles} 篇角色、机制、物品、世界与生物词条。</p></div>${directoryJump}</div>${categories.map(cat=>`<section class="directory-group" id="dir-${cat.id}"><h2>${cat.name}<small>${entryArticles.filter(a=>a.category===cat.id).length} 篇</small></h2><div class="directory-grid">${entryArticles.filter(a=>a.category===cat.id).map(a=>{const art=artFor(a.icon??a.prefab??articleIcons[a.id]);return `<a href="${articleHref(a)}">${art?`<span class="dir-icon-wrap"><img src="../${esc(art.path)}" width="36" height="36" alt="" loading="lazy"></span>`:`<span class="directory-symbol">${icon('book',18)}</span>`}<span><strong>${esc(a.title)}</strong><small>${esc(a.summary)}</small></span></a>`;}).join('')}</div></section>`).join('')}`;
+ await render('directory.html','directory','分类索引','按分类查阅永不妥协测试版全部词条。',directory);
  for(const a of entryArticles){
   const category=categories.find(c=>c.id===a.category);
   const peers=ui.ordered.filter(p=>p.category===a.category);
