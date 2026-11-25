@@ -1,7 +1,7 @@
 {
-  "version": "2.8.15.1.9",
-  "checkedAt": "2026-11-22",
-  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.9 source. Each article retains its own review version.",
+  "version": "2.8.15.1.19",
+  "checkedAt": "2026-11-25",
+  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.19 source. Each article retains its own review version.",
   "articles": [
     {
       "id": "getting-started",
@@ -33,9 +33,10 @@
         "epic_armor_5",
         "epic_ruin",
         "difficulty_rating",
-        "贝爷求生"
+        "贝爷求生",
+        "Host Tick Rate"
       ],
-      "auditedVersion": "2.8.15.0.25"
+      "auditedVersion": "2.8.15.1.19"
     },
     {
       "id": "faq",
@@ -636,6 +637,28 @@
       "auditedVersion": "2.8.15.0.34"
     },
     {
+      "id": "role-wes",
+      "source": [
+        "content/modinfo.lua",
+        "content/modmain.lua",
+        "content/easy_role/wes_easy.lua",
+        "content/easy_role/rightaction.lua"
+      ],
+      "configKeys": [
+        "enable easy mode",
+        "role_easy",
+        "wes_easy",
+        "Wes Normal Data Attack Work",
+        "Wes Right Dodge Collide Balloon",
+        "Balloon Stackable Per 50 Damage",
+        "Equip Balloon Increase Speed",
+        "Equip Balloon Summon Tornado",
+        "right self need ctrl",
+        "Wes Backstab Attack"
+      ],
+      "auditedVersion": "2.8.15.1.19"
+    },
+    {
       "id": "role-wigfrid",
       "source": [
         "content/modinfo.lua",
@@ -794,6 +817,35 @@
       "auditedVersion": "2.8.15.0.34"
     },
     {
+      "id": "role-wurt",
+      "source": [
+        "content/modinfo.lua",
+        "content/modmain.lua",
+        "content/easy_role/wurt_easy.lua",
+        "content/role/wurt.lua",
+        "content/common/monster_nightvision.lua"
+      ],
+      "configKeys": [
+        "enable easy mode",
+        "role_easy",
+        "enable hard mode",
+        "role_nerf",
+        "wurt_easy",
+        "Wurt Eat Food Lead Wild Merm",
+        "Wurt Eat Food Loyalty Follower",
+        "Mermking Won't Hungry",
+        "Trade Fish with Merm",
+        "Wurt can eat any",
+        "Wurt Can Craft Book Fish",
+        "wurt_merm_stronger",
+        "wurt",
+        "right self need ctrl",
+        "Monster Night Vision",
+        "uncivilized_merm_speech"
+      ],
+      "auditedVersion": "2.8.15.1.19"
+    },
+    {
       "id": "role-wanda",
       "source": [
         "content/modinfo.lua",
@@ -937,9 +989,10 @@
       ],
       "configKeys": [
         "Random Sized",
-        "Random sized beefalo"
+        "Random sized beefalo",
+        "Hills Protection"
       ],
-      "auditedVersion": "2.8.15.0.25"
+      "auditedVersion": "2.8.15.1.19"
     },
     {
       "id": "world-moon-island",
@@ -1251,9 +1304,10 @@
         "weather_change",
         "temperature_change",
         "monster_change",
-        "wall_destroy"
+        "wall_destroy",
+        "knobbly_tree"
       ],
-      "auditedVersion": "2.8.15.0.25"
+      "auditedVersion": "2.8.15.1.19"
     },
     {
       "id": "environment-temperature-sources",
@@ -1384,16 +1438,16 @@
       "bytes": 5010
     },
     "content/common/bugfix.lua": {
-      "sha256": "c70e3098d7512aec8ca7cf0a8881abcc9aec4c00fb443223beb0d38279be0403",
-      "bytes": 9945
+      "sha256": "2003a614a39df7ceb94f533b4e0d5d9a2dcf99c24f0925c602ea97ab91afee62",
+      "bytes": 10915
     },
     "content/common/combat_rewards.lua": {
-      "sha256": "b398270408be8b4ed108e07f30c713ea6295b8ff1c7d84796f870f9872ba91fd",
-      "bytes": 2851
+      "sha256": "18b46536a0f50a7632c127db542cf15b7f15ae7507f70b5c8f0ffd533425de96",
+      "bytes": 3536
     },
     "content/common/common.lua": {
-      "sha256": "06d2e79321ac85434e459c2b6869c60fa118d04d39ba83d1e933cef65a96dd18",
-      "bytes": 52787
+      "sha256": "fd3e6b6203cb4a23a9055782112c06dc6866847c434ad31a0a22c43e13b54eae",
+      "bytes": 54562
     },
     "content/common/curse.lua": {
       "sha256": "ae21938ad0f54c7260b5cf8def2de1e081ea705a758e7c8b3bbdb3fc13b9719a",
@@ -1404,28 +1458,28 @@
       "bytes": 2112
     },
     "content/common/equip_slot_fix.lua": {
-      "sha256": "ece845d4f5875ca99d1b308f8889b68a540c20ede4471fb483ae3af44cece798",
-      "bytes": 2142
+      "sha256": "2e198495272724ef1d5fa26744ec054ba95413e20bee643071f17b97e488df27",
+      "bytes": 3260
     },
     "content/common/food_util.lua": {
       "sha256": "136a17796337bbf593b8eabe0bbbd5987ef6e6ecc492dd69eeb3063433387e41",
       "bytes": 13933
     },
     "content/common/frostshrine_skin.lua": {
-      "sha256": "6405eec5a2d389f763fb309fabc24fd02c10490bc6af1d922fd4c4e30c363841",
-      "bytes": 4099
+      "sha256": "c4be98621c9feee1dbc3cbaea46bbaaa599b9c1f626faebd77539ffa6999558e",
+      "bytes": 6970
     },
     "content/common/monster_nightvision.lua": {
       "sha256": "9b87dd4ac2a4cb22bf62da74be446c8608accf91ac2a521634f1654848081cf4",
       "bytes": 12024
     },
     "content/common/patch.lua": {
-      "sha256": "6243d300bd151bac29f964cfd543989b31d871003ddd1ce1d5bb8caa76821a91",
-      "bytes": 30949
+      "sha256": "032d3cf36b32e95cb98c175c624ca3d0be119576fbe1e756d9baeacccc0b3a44",
+      "bytes": 31492
     },
     "content/common/um_compat_fixes.lua": {
-      "sha256": "7047901fe680f6ec6850887b1694d0ee3cf3ef85202df26fc6302f50d9cf3cde",
-      "bytes": 4110
+      "sha256": "9dd5eed092e0af48221495fdb2fd7277cd6d67662ca555e0a0f248858f5c6722",
+      "bytes": 11479
     },
     "content/common/walter_wixie_slingshot.lua": {
       "sha256": "03ad5ed587e5a1689a9032d9246c73328c35f80fb573db9d8c760a3af6ffb1ce",
@@ -1440,24 +1494,24 @@
       "bytes": 11645
     },
     "content/easy_other/containersort.lua": {
-      "sha256": "f01b70e8c0346327d2a2c5e05b315f0db4246ad4641476c838e645037e4040b6",
-      "bytes": 229791
+      "sha256": "09a2d7ece2fe78af2dd81e5f71708092a11c754fb6c72d44a097961905b5e777",
+      "bytes": 231814
     },
     "content/easy_other/easy_equipments.lua": {
-      "sha256": "982890bf4de77e87b58b0fe6901a6a2cc410cd75ee8eaa098b4932cacfab424c",
-      "bytes": 295820
+      "sha256": "6bffdbb16fa90f48f7e284c09e087f7e552adfcdd224237406e21aec39b975d4",
+      "bytes": 297300
     },
     "content/easy_other/easy_items.lua": {
-      "sha256": "d0d844e3cfb223344a33a900d1d24e0f0b38e45477a92a5a3464bd4315d72430",
-      "bytes": 78712
+      "sha256": "3dba67d94e98bced63d04af81b8e3e1e52cb547fc5747190856eff0f3670ebab",
+      "bytes": 78809
     },
     "content/easy_other/easy_mechanics.lua": {
       "sha256": "093ef9960d1209d614c8ee7f69a2d559c7e235fa04b4aeb761b4a0d0a0ede40e",
       "bytes": 37376
     },
     "content/easy_other/easy_structures.lua": {
-      "sha256": "98d8ff1f7b9a7a8c4cc11406c30ef276027bed6c193c0017bd343cb4b251c18e",
-      "bytes": 169646
+      "sha256": "3f5865f42ab186577ab75f7126ea09f921616c9cc5df09d35f7a6b72e77039ce",
+      "bytes": 170567
     },
     "content/easy_other/exchangeclassic2hm.lua": {
       "sha256": "975620502a474e41c4be42a5a96f4f51b9d9f1cacdd2cc135dc65004b7901a73",
@@ -1468,12 +1522,12 @@
       "bytes": 2814
     },
     "content/easy_other/eyeturret2hm.lua": {
-      "sha256": "7e660d8b5277a8183a6ea7a0eb700a3617aeeb1dd8594f5b1f1be8fbd5c28e8d",
-      "bytes": 23509
+      "sha256": "322cc6b1be7b64e7fbcb0b4a9ca5abb1b3cc156b658b22e6a5041c0be9e449c6",
+      "bytes": 23652
     },
     "content/easy_other/lunar_shadow_items.lua": {
-      "sha256": "be04fcab7f11ef26cae447c94aea60799a268bab3da3dc189a2c6387e2b69802",
-      "bytes": 62426
+      "sha256": "34dc9a4c4b94efcdbf6e98ba798f4538d08e6473d2121aade2153a43437bffb0",
+      "bytes": 62956
     },
     "content/easy_other/magician_private2hm.lua": {
       "sha256": "b12c3dfaebe8dde29113087a49b7ecdd9d648e7236d3d4204a3a419c0636d2e6",
@@ -1488,8 +1542,8 @@
       "bytes": 7288
     },
     "content/easy_other/ui.lua": {
-      "sha256": "3dd560b5a309181cae4e32c34f0a98f1bf1166e23dea17f06d6295f3eba28f3b",
-      "bytes": 19275
+      "sha256": "7b9b6bbe3daa6d40e2db1df662c3365f6588942d9386d865680c64a356522469",
+      "bytes": 19325
     },
     "content/easy_other/um_food_stats.lua": {
       "sha256": "bcdebae95d9af26c1f7d6424afb1246401bcc041a7e8dcd82bd1973cb64b14f5",
@@ -1504,44 +1558,48 @@
       "bytes": 3021
     },
     "content/easy_role/rightaction.lua": {
-      "sha256": "b3be50238259841d86515f6624b82f6f83b53aa22f471a1b6c5356b56a264685",
-      "bytes": 64695
+      "sha256": "1ed04fccf1a728d667cfb4560aa4abf948365b5c8fdb645f05b29249c76c5a65",
+      "bytes": 64835
     },
     "content/easy_role/rightselfaction.lua": {
-      "sha256": "49e37964f6c9e27c59f744a99deacca323a55066638ce8fa1f94d5cecabff2ba",
-      "bytes": 8838
+      "sha256": "f6b3f664988fa8d3d92647df505325867f9d7d949a3b7165a7ebe4162e0958e3",
+      "bytes": 8873
     },
     "content/easy_role/role_common.lua": {
       "sha256": "4860a456fb2b279dac8f544b0adab4c64a1f4260556ab17a18db018f7f9fbf7f",
       "bytes": 1282
     },
     "content/easy_role/walter_easy.lua": {
-      "sha256": "5e3e27bd932143221c8a37a4eddbf57b84d75490c76fb8813841ae804f7b7984",
-      "bytes": 45909
+      "sha256": "53d394ec8b3fbe0c2d6718382091c2bbe3e254a7770119ea87c0e72ae45ae885",
+      "bytes": 45908
     },
     "content/easy_role/wanda_dreadwatch2hm.lua": {
-      "sha256": "6daa77f2d80af6e223f81af841e677004aedbdca7d3026eb58c545619a8dfc24",
-      "bytes": 8677
+      "sha256": "2cd1a9adf36f80988b344fcd86f32b8948eaa1125da24d4d2701da190686772e",
+      "bytes": 8199
     },
     "content/easy_role/wanda_easy.lua": {
       "sha256": "b128554599473f23a38f87d8514c6f94f3f6e142d79831cb247cd21096989e00",
       "bytes": 23191
     },
     "content/easy_role/webber_easy.lua": {
-      "sha256": "b88cb247736cc2b51cbc6a96ebc81af9a960d8ddeafada0165f319a9303fd887",
-      "bytes": 26549
+      "sha256": "07ced9862e5e49fe81d78b663f05bb3d61ae38d7f6e716038dd1a0e89877581a",
+      "bytes": 26660
     },
     "content/easy_role/wendy_easy.lua": {
-      "sha256": "1553bc4f411c1e9e6ff244a121814e118da6de4858cb5ddf20d449f01ad462c8",
-      "bytes": 51056
+      "sha256": "3877f7cabda13baf12b2f6b1da0266e2c0ea530798d834fe608c2506b53821a0",
+      "bytes": 51187
+    },
+    "content/easy_role/wes_easy.lua": {
+      "sha256": "e15be7b8c8685531a8543983f3c410c9b0394e23b07ae4900a033f587f7965e7",
+      "bytes": 34290
     },
     "content/easy_role/wigfrid_easy.lua": {
-      "sha256": "75f9f27172e73d28ab58a78fcb95e363e7f62d49d1afc2846e1ec89b500d7ab0",
-      "bytes": 73895
+      "sha256": "93a649ff918f6e3a2b02a8fca3fcbc5dd5ac275025de57faa9754a09eba3e27a",
+      "bytes": 72878
     },
     "content/easy_role/winona_easy.lua": {
-      "sha256": "b0ac740ffa373db2401327e8fb42acb7981bb7e2da01961450ff470efd0dc30c",
-      "bytes": 8214
+      "sha256": "a43fcbca5f41b576eb42f953750f148a52b4e3ee816880a589d1d32a49cfeb15",
+      "bytes": 8221
     },
     "content/easy_role/winona_electrical.lua": {
       "sha256": "3a7e588b7949097073aefdf8d6016e0bfb0a2c29012bfc224efbaecbd6b8263d",
@@ -1552,24 +1610,28 @@
       "bytes": 3391
     },
     "content/easy_role/wonkey_easy.lua": {
-      "sha256": "fde2609697b1084b2d878dbc10ce12c089151d46e34d81e51f3b5a16e8716f1d",
-      "bytes": 21211
+      "sha256": "2c3c666bb4f10a359bf233c7a444d5e660f027dc6678f153210e476639368447",
+      "bytes": 20711
     },
     "content/easy_role/wortox_easy.lua": {
-      "sha256": "944c48838b48ba7a6af4a65075bf6b0dbe161216a7591581677459d3deeb7718",
-      "bytes": 17835
+      "sha256": "8166576d0a6368bfb707916e5c9f85e76f629a15b06bd678dd1cb296cf40b45f",
+      "bytes": 17892
+    },
+    "content/easy_role/wurt_easy.lua": {
+      "sha256": "8565c227bedb762f775d3c7caaacbe32eab0fbaadb95dee442e3449f74bf148f",
+      "bytes": 20549
     },
     "content/easy_role/wx78_easy.lua": {
       "sha256": "7f18ccae1dfb112f4e530b118f2fffba6289a0237e26f8a03e9e65345be2b035",
       "bytes": 17066
     },
     "content/epic/alterguardian.lua": {
-      "sha256": "a43a5812d86f74ef98319ac7c38e23696bab2add2c55e94779f930d8756a58bc",
-      "bytes": 146146
+      "sha256": "5c21519900eac2c780efe9832f3a8cb01868a45a297bf6bce7518a85b5d91d14",
+      "bytes": 146327
     },
     "content/epic/antlion.lua": {
-      "sha256": "aec66c7e11692422043ac441aa9232d40af4a898d0813ddade062d7aed43a99f",
-      "bytes": 57625
+      "sha256": "8858bad828914bb8ae94e63e248dd3b200315d2ddcd0ab3b582f1b66f7935abc",
+      "bytes": 56793
     },
     "content/epic/atriumstalker.lua": {
       "sha256": "0b20117fcfa33947d5645e495976aa2fb1fcfcbda782e0d3b701319d18bede94",
@@ -1580,24 +1642,24 @@
       "bytes": 6162
     },
     "content/epic/minotaur.lua": {
-      "sha256": "6c8253f9d065cd3a6a40a87ebcce039859c7abbb26910cc2f112ae7851ea6d4e",
-      "bytes": 57633
+      "sha256": "06b92701f843b641b9f0fa172c221e0a6c9e9b6a93be6a0c0ac93a26547eff8d",
+      "bytes": 57690
     },
     "content/epic/minotaur_old.lua": {
-      "sha256": "4063864b1da3f63b6c5ab8ff756c9bf289184da9f21d3da8bd4990756b86b446",
-      "bytes": 42867
+      "sha256": "878528e6d1fe2e958dbd96c5088a9aa4eabcf0dc9d083eade057942b1c7bb6c0",
+      "bytes": 42924
     },
     "content/epic/sharkboi.lua": {
-      "sha256": "e946a61058adf41ca4a6c830f7210513c5530252753442d8042166883c6ff7d4",
-      "bytes": 66243
+      "sha256": "e6a3107cfddc6d4d1b0774d1ddf951d1bc0af29b502133c1507ac24b087991e5",
+      "bytes": 66263
     },
     "content/epic/sword_lunarplant_moonfire2hm.lua": {
-      "sha256": "aeb4087efa455ea42449ef021d8148f03455356bd077d480c24fbe2fdedd9e4e",
-      "bytes": 24477
+      "sha256": "53e70a17c47b8a7f12efca51cec80001f28eacb92d0b51422e8fafba8cf9f39a",
+      "bytes": 25041
     },
     "content/extra/extra.lua": {
-      "sha256": "f3754a3baa8cd9f12faa2516cae0e220eb98d04e91c028aa21b02fcf687776f7",
-      "bytes": 23205
+      "sha256": "c4b3a0ef49cfd7652071b31eb1b5c1b8d965de945f7e5f88bd1337c067ee2259",
+      "bytes": 23245
     },
     "content/extra/frostjaw_trade.lua": {
       "sha256": "511107f1988c9ee648b576164a4d0f3442a1c274249cbb334ca2075c8832b89d",
@@ -1608,8 +1670,8 @@
       "bytes": 11994
     },
     "content/food/beefalo.lua": {
-      "sha256": "4b4116fdb0b726230f58e1f77009650d85fbceb019bd6564169007edff58ef75",
-      "bytes": 13006
+      "sha256": "a004710eaa380f4597c886a29d574b20157df0ca8114562e5541e5cd112773db",
+      "bytes": 13500
     },
     "content/food/cooking.lua": {
       "sha256": "d0327b2e80a8319a324dc8d604e7a1074fb35db44984bf6dd53f54868b5baad2",
@@ -1620,40 +1682,40 @@
       "bytes": 1835
     },
     "content/food/plant.lua": {
-      "sha256": "f951c0bf83006dee1b54d46fd3f7ff001fcbf9b60dc7b9dd7c8f318ca762bcf7",
-      "bytes": 17173
+      "sha256": "f5d742803b60e36d069f947340cb2326cacac28d07260598e81b2819ae501d22",
+      "bytes": 17168
     },
     "content/modinfo.lua": {
-      "sha256": "f4bd1b05d5619d45f73809219f4cd5132056e0a3fd2c91f403258b88d099587c",
-      "bytes": 150273
+      "sha256": "ac3c598ea2859fde7d5e90a101f0f8c63b58686081be5e0eec4d23a4c7d5e81b",
+      "bytes": 153055
     },
     "content/modmain.lua": {
-      "sha256": "fbdd3d4d721aaefefd8293ad1f0c013e34cd9874bcf2adbbe63553334595d817",
-      "bytes": 24836
+      "sha256": "0afaf3d0c6328dbf399288a09bb6fe202d5ec609bbf530bc636c2d752efc5521",
+      "bytes": 25860
     },
     "content/modservercreationmain.lua": {
-      "sha256": "99db4e3bbd200b199c5e08c44ff1e9a12ba0594f5a0bfb66eb759604e514d5aa",
-      "bytes": 8143
+      "sha256": "83d3c7f17f0162a4c6adcddfc21672d44751cc287e22eba7cf4548c60babf5ea",
+      "bytes": 8477
     },
     "content/monster/wall.lua": {
-      "sha256": "d6070e15ea90f548e49ad6e781f1571d15b24dd7a26c7f0da5e6e133a58a358f",
-      "bytes": 16176
+      "sha256": "d9b60184b778f1349bde886e9cb97a831cb07c59c55d3181f1017d22d71039d2",
+      "bytes": 14625
     },
     "content/ray/beye.lua": {
-      "sha256": "33cff4ea1a296f2d2a62d198bb40ee34d69561bc3f16973cac269ec54dea8aaa",
-      "bytes": 11057
+      "sha256": "e9adc4aa23c2835e420a57c0309e5bd8ace303a97407254a12c5f5fbcdcbceea",
+      "bytes": 10773
     },
     "content/ray/beye_actions.lua": {
-      "sha256": "d90e9c42556eaef6340454a0e52001aebbffefc77141f34d6960c9e23b8c9d1b",
-      "bytes": 31075
+      "sha256": "4bdc980a841f944574d66a480a9ef4699826a38c274bc911d4bff332b3cf6e0d",
+      "bytes": 31187
     },
     "content/ray/beye_crafting.lua": {
       "sha256": "768739698a5190bb4c9eeb837d5815aa969c363e43bccc85f086e538f9e3aee2",
       "bytes": 7552
     },
     "content/ray/deyeshengcun.lua": {
-      "sha256": "d64a62217d528c2ed0a56d1982c9ad0b8a0009ae3c601d19f8d12df139a52fa9",
-      "bytes": 11332
+      "sha256": "d7d853573506b27557b03fc6f44cee670a23373337fbde9709b022d01bfabb94",
+      "bytes": 11325
     },
     "content/ray/hayfever.lua": {
       "sha256": "28f84ded20ba1c624f001f7ac255e3d2dfd0feecb54711f752a003c1a954f879",
@@ -1664,16 +1726,16 @@
       "bytes": 1446
     },
     "content/ray/suijishengwuapi.lua": {
-      "sha256": "e384af3eb4cbd1b14ca5fdb440c2f741c5155f55fb4d80c251b72bdc4f73004c",
-      "bytes": 35835
+      "sha256": "dc0fe5db01ad4de6a7f0d656cfba9d97443bae2f9f7b8def2d38f1d0ff672cdb",
+      "bytes": 36133
     },
     "content/role/clock_peril.lua": {
-      "sha256": "a745e39fdd55f7ab6447a34a3e8d9cf29276929806dc61de96126a7d2d222474",
-      "bytes": 3196
+      "sha256": "3484bc413bfa76d23a01debe4ed3bf25c4cb6aacc745d9c0811cbe9f8cee8259",
+      "bytes": 3207
     },
     "content/role/combat.lua": {
-      "sha256": "76d865fad63a6f70b2f6a17aa74277be6b5a4a799f3d718565c48bfc158942b8",
-      "bytes": 27112
+      "sha256": "d5836f2da53e11360a4ab47f35ae4b57e8c6e1e7176f8e79f34a2d26d687d264",
+      "bytes": 27053
     },
     "content/role/combat_progressive.lua": {
       "sha256": "661cd8e3d1843cf8260c528368f73a1d622de1440c9387ab3f36ecd7beac29ff",
@@ -1684,16 +1746,16 @@
       "bytes": 9235
     },
     "content/role/haitang_curse_2.lua": {
-      "sha256": "7b99bff70de134a86bc6a3efa106ac9b937e210b51aeee8b20cbd0b638101534",
-      "bytes": 3542
+      "sha256": "c84c08af1758b89ea1d02649ac67d893f813f1e8e19552548b6518dbc0d9bf39",
+      "bytes": 3858
     },
     "content/role/hunger.lua": {
-      "sha256": "e5cc8ca005dbdf373e18ee0802cd1beb28bac6d16b1bd54f919db3687f97953a",
-      "bytes": 14352
+      "sha256": "5e2947d58a75b37ef7c7921ca9582770a0b909e38831f6cd940d2c8928e6e7a4",
+      "bytes": 14302
     },
     "content/role/walter.lua": {
-      "sha256": "90a3ab6f2de09038d2fd4012384a286d3cd5e4b1a8ed8cc0d2a083f2baef5878",
-      "bytes": 11879
+      "sha256": "1f4508408c398f1dea37d87f3d526cfde8125a668455e221229bb566d70685ad",
+      "bytes": 10780
     },
     "content/role/wanda.lua": {
       "sha256": "9889386b04fa1ade55f401274cb2b225a8164c4ce4ab924fd27665f7b44e1b62",
@@ -1704,20 +1766,24 @@
       "bytes": 995
     },
     "content/role/wendy.lua": {
-      "sha256": "a76e84ffd9d43e85d6e0ba9baa2a73cec19c46e37f755321fd771e4fb431242f",
-      "bytes": 21387
+      "sha256": "39ed9130a56c245e86ef9e629a605b95e607b03a82d987f9876548e2b6b090cb",
+      "bytes": 21417
     },
     "content/role/wigfrid.lua": {
-      "sha256": "c38f0174d61c8089a3ab556128fa4a9ed1216135d7df406561d3dc28cce09109",
-      "bytes": 10268
+      "sha256": "9f40d1f875d11715068fb60ba49fdba589476a8339082443d94ca2b237dced0d",
+      "bytes": 8633
     },
     "content/role/wortox.lua": {
       "sha256": "860997fe14a304ebdfa0be763aef865794cff73028a8fa532e182fbf7514ce91",
       "bytes": 2738
     },
+    "content/role/wurt.lua": {
+      "sha256": "69b1ef0c10e741603a22e421f1ee74b9692dc3e7703e83df79656c1e5af199a1",
+      "bytes": 4023
+    },
     "content/role/wx78.lua": {
-      "sha256": "3ee149e081a9b7bd57c7d380dd889f987b296d2721c1f0bf64b2c9ea46481436",
-      "bytes": 15869
+      "sha256": "b7ed38264739ea5ea34d5f398b04dcacf155e3472512ccbb5c6d762efe3222b1",
+      "bytes": 16011
     },
     "content/scripts/bootlegnonslip2hm.lua": {
       "sha256": "be354f731b231001d2912293e5b04bde32c11079a59215d4914809eb4b7a3970",
@@ -1752,12 +1818,12 @@
       "bytes": 4377
     },
     "content/scripts/components/hattrickparent2hm.lua": {
-      "sha256": "50fcbec25582618a5079a286a7bfaa00e36c0a2f36fbf2d1d639019805d3e8b1",
-      "bytes": 4917
+      "sha256": "f0bfd1b10e8ce148f77374b8718925336dacd132afa6824c78590a3c73ac6ce9",
+      "bytes": 5109
     },
     "content/scripts/components/passive_shadows2hm.lua": {
-      "sha256": "399147d166583890397e267ded7a7b1bd5033fe3c336e8f6afe7d53aefc37301",
-      "bytes": 4572
+      "sha256": "39d8c611006b8ebb68b8a30024c4f404076d5dde5d7a876cf1da4829fc57b94c",
+      "bytes": 4699
     },
     "content/scripts/components/persistent2hm.lua": {
       "sha256": "5c23d809f3fe4d813eb923eabbbb3bdf6126575761d32abb80c4546f01e404c5",
@@ -1828,12 +1894,12 @@
       "bytes": 859
     },
     "content/scripts/keybindingmodel2hm.lua": {
-      "sha256": "967e1b792f17dbb80a01458565bd99fb4136a8d57c5ee8a40d11805183a0427b",
-      "bytes": 7929
+      "sha256": "46218192e56c1ffeedc25e804fa20b542896adedbfc07bc1eff53126b5d9c5bd",
+      "bytes": 9171
     },
     "content/scripts/keybindings2hm.lua": {
-      "sha256": "3ba142f4c82e020c408d62a2f611959de61948b6cb5747b66ca0d2352cc51988",
-      "bytes": 20516
+      "sha256": "04de346bd47b312f4b62b1ed75da60639d6a2ff5f6ca56bbf89b06297af58d98",
+      "bytes": 21516
     },
     "content/scripts/keybindingscreen2hm.lua": {
       "sha256": "32a3a42e72f4374f19213d84e35e806d17f1dc59f6140f985e91e2de5e2e6115",
@@ -1864,15 +1930,15 @@
       "bytes": 6569
     },
     "content/scripts/prefabs/devil_heart2hm.lua": {
-      "sha256": "755993d3e8112c0558f21faad657bb2f35898e034a8acd7715cd1b2c5e785bb2",
-      "bytes": 1632
+      "sha256": "2b52920e2de21e59dffd12ce4d8f937beeb2825db2527bd0b42f022ab44d222c",
+      "bytes": 3521
     },
     "content/scripts/prefabs/devilfruits2hm.lua": {
-      "sha256": "4284a222a30a2d5768eb10ad4546e872f0ff0441f511b92ce354bd28aa91b528",
-      "bytes": 7964
+      "sha256": "bb0d07b43a78b148d1dfc52ffbdee7978272474eabc4236ef729a06ca7b4c81a",
+      "bytes": 7996
     },
     "content/scripts/prefabs/devilplants2hm.lua": {
-      "sha256": "e45180b1d1d509cbe1b1c8abdcd2b9f71f3a496b0be929320c02a4fc5e2d866c",
+      "sha256": "98b06d83132913df4a55231989cd89b53fc1182183bd09bf0ed74654aca8734b",
       "bytes": 13846
     },
     "content/scripts/prefabs/dryberries2hm.lua": {
@@ -1892,8 +1958,8 @@
       "bytes": 2748
     },
     "content/scripts/prefabs/frostshrine2hm.lua": {
-      "sha256": "c8766132a1bbf58e4332194b0f110bcaec2eabe15a08497cf1e2a1986c2bf38f",
-      "bytes": 10686
+      "sha256": "57a06842f61b99e0d9c6d4b4e5f98a4f566a7d90ced70ae9c94447c73e2a3490",
+      "bytes": 10590
     },
     "content/scripts/prefabs/magician_private_container2hm.lua": {
       "sha256": "17d79da29f43777de6ca63dec0615531a057cd3fa542e00eeeb459f348a627f2",
@@ -1924,8 +1990,8 @@
       "bytes": 1828
     },
     "content/scripts/prefabs/watch_weapon_horn2hm.lua": {
-      "sha256": "d7ce7af5bfffc0d680b48a47795a32f2d01f994592c1f0d97fe4861da4a8e4dd",
-      "bytes": 7740
+      "sha256": "ba1b4c95453f81ba55cfdfc1cc28df9ef2110b391ff6dc269e0a49c54a4d35d1",
+      "bytes": 7803
     },
     "content/scripts/prefabs/winona_electrical2hm.lua": {
       "sha256": "1be4c41d428eb7bb1e3d8c7e7bd605d862c4a392badadf5fee8d1f02ce3adf18",
@@ -1964,8 +2030,8 @@
       "bytes": 8679
     },
     "content/scripts/umcompatprofiles2hm.lua": {
-      "sha256": "38881382ec21cffb9a09e23ec9ff570080f67fee144e0e0f9993c2321749c498",
-      "bytes": 14304
+      "sha256": "1a1a8d2b711b7dff5e95ae454c0fb0152d7bb50ee4d63658504e4566e295358c",
+      "bytes": 14507
     },
     "content/scripts/umperformance2hm.lua": {
       "sha256": "2007fcc02b3fb9b875c6c6ae5a6ddbd8ddd94b2012a9794effaf6e5bf7380857",
@@ -1980,8 +2046,8 @@
       "bytes": 3432
     },
     "content/scripts/umwortox2hm.lua": {
-      "sha256": "cb89a905d5e79c93093a2ca16d465f29677aa1a23267d68d1937183aec7b69a7",
-      "bytes": 1659
+      "sha256": "96e8e1621e0eef9b07873473b775bc44dbdcbf687396f2feeee789b592d24b30",
+      "bytes": 2867
     },
     "content/scripts/weaponinfusionview2hm.lua": {
       "sha256": "a5e7b93601649c2902ad4a040534293463ba1b5e77547bbc639c2b0662066c06",
@@ -2016,20 +2082,20 @@
       "bytes": 21850
     },
     "content/scripts/wx78draftpower2hm.lua": {
-      "sha256": "0322f16afb91db27e5e06b7e13493068a21dc734fa52cf3743997bbbac60e0c9",
-      "bytes": 17309
+      "sha256": "e4319020eec08338b69197556a3a43801bd32cfc21eb35c770f251620508ba31",
+      "bytes": 17753
     },
     "content/shadowworld.lua": {
-      "sha256": "22fa8c0e15503163007dfac84e020d3651c7e013c60178ee4102aaf2b2854b52",
-      "bytes": 92384
+      "sha256": "420a2ef3bee2be24a433d6be93c8c5dc9fbf6a4c149b5ab84fb04653b720b5b0",
+      "bytes": 93286
     },
     "content/tech/ancient_altar.lua": {
       "sha256": "b5b603c5d82947ca1380ee329c8139c1fc71fb4fb7669e276c6b3c43d35832ae",
       "bytes": 7728
     },
     "content/tech/ancient_statue.lua": {
-      "sha256": "2788606ba011e5f4b724918bd268018c162a1d6f48a6765d8f7458294a888e80",
-      "bytes": 4916
+      "sha256": "560ec00f389852f1ee835ee78d7621d395ea4b3cfffb45af2aa62cb398431fae",
+      "bytes": 4927
     },
     "content/tech/common.lua": {
       "sha256": "d6f3846dc1ba5e19678a7b78f6598e795760cb5fb9ec4373871540711074fe2e",
@@ -2044,20 +2110,20 @@
       "bytes": 11401
     },
     "content/tech/prototyperlevel.lua": {
-      "sha256": "222b1818ec9f5d060f42f8a0103dc39be68f0cba2b56a292b5c65614199b9693",
-      "bytes": 19381
+      "sha256": "d52bba211a90743b1e48daeb53dfc716692a2687bbd2d1b543640abfbea99c26",
+      "bytes": 19439
     },
     "content/tech/sleep.lua": {
-      "sha256": "15b8c4be05fe04ab443293cc9dd388cceeb7b26858a38abe840bd5fe655bcb71",
-      "bytes": 4271
+      "sha256": "faa1f5b06819c4e4c7a71a70d98d3b361ccd877f10fb6887e7210e45b5dfb08c",
+      "bytes": 4225
     },
     "content/weather/autumn.lua": {
       "sha256": "cfd03b976dfa306ee8edc29d77ddaa2562907aaddef5fd20f1e92aabda197f0d",
       "bytes": 5132
     },
     "content/weather/moonisland.lua": {
-      "sha256": "cc8bee1f401541fbbdf75b7322a7d402ddcb4548af89b929422f7c6d80a806a2",
-      "bytes": 20512
+      "sha256": "6969ee2559a7d785741b60a3d4479665ac87e09057a63837698771e40d59a7aa",
+      "bytes": 21895
     },
     "content/weather/temperature.lua": {
       "sha256": "6dcdebb24c08b55c7b548b8a8e543badd381bcf60c7bd6b0daa396b4a84f7f7a",

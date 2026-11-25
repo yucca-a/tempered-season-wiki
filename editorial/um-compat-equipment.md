@@ -10,6 +10,10 @@
 
 @相关 um-item-compatibility winona-electrical-upgrades role-winona role-wendy um-performance-compatibility
 
+## 月龙提灯与 Moonglow
+
+骑普通牛或大体型牛时，月龙提灯显示妥协测试版自己的握柄和灯身。Moonglow 沿用原版打火机的物品图标。
+
 ## 修补工具包
 
 开启妥协测试版宝石学后，拿起修补工具包对装备右键修理。淬炼补丁会取消工具包本身的可修补状态，也会在服务端拒绝用工具包修理另一个工具包。

@@ -1,9 +1,9 @@
 {
-  "articles": 321,
-  "configs": 452,
-  "choices": 3380,
+  "articles": 329,
+  "configs": 457,
+  "choices": 3392,
   "targetedRefresh": {
-    "version": "2.8.15.1.9",
+    "version": "2.8.15.1.19",
     "articles": [
       "role-winona",
       "winona-toolbox",
@@ -80,28 +80,31 @@
       "resource-regrowth",
       "tempered-prefab-codes",
       "mod-interface",
-      "mechanic-extra-stats"
+      "mechanic-extra-stats",
+      "role-wurt",
+      "role-wes"
     ],
-    "count": 76
+    "count": 78
   },
   "sourceAuditVersions": {
     "2.8.15.0.34": 26,
-    "2.8.15.0.25": 22,
+    "2.8.15.1.19": 5,
     "2.8.15.0.23": 23,
-    "2.8.14.97.4": 135,
+    "2.8.15.0.25": 19,
+    "2.8.14.97.4": 133,
     "2.8.15.0.46": 5,
     "2.8.14.98.6": 1
   },
-  "groups": 18,
+  "groups": 19,
   "images": 528,
   "itemAudit": {
-    "version": "2.8.15.1.9",
+    "version": "2.8.15.1.19",
     "articles": 64,
     "items": 62,
     "missing": []
   },
   "entityAudit": {
-    "version": "2.8.15.1.9",
+    "version": "2.8.15.1.19",
     "articles": 67,
     "characters": 25,
     "buildings": 22,
@@ -109,13 +112,13 @@
     "missing": []
   },
   "lifeAudit": {
-    "version": "2.8.15.1.9",
+    "version": "2.8.15.1.19",
     "articles": 51,
     "food": 18,
     "creatures": 33,
     "missing": []
   },
-  "notedSettings": 452,
+  "notedSettings": 457,
   "implementationDifferences": [
     {
       "key": "Portable Crock Pot Multi",

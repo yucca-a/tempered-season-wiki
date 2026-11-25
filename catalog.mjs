@@ -4,6 +4,7 @@ import { articles as initial, meta } from './content.mjs';
 import { refreshWorldArticles } from './research/release-20261111-world.mjs';
 import { refreshRelease34 } from './research/release-2-8-15-0-34.mjs';
 import { refreshRelease44 } from './research/release-2-8-15-0-44.mjs';
+import { refreshRelease119 } from './research/release-2-8-15-1-19.mjs';
 import { refreshRelease25 } from './research/release-2-8-15-0-25.mjs';
 import { refreshDocumentationGaps } from './research/release-20261111-gaps.mjs';
 import { applyArticleTerminology, canonicalDocument } from './terminology.mjs';
@@ -140,6 +141,7 @@ for(const id of refreshRelease25(articles,notes))currentAuditIds.add(id);
 for(const id of refreshDocumentationGaps(articles,notes))currentAuditIds.add(id);
 for(const id of refreshRelease34(articles,notes))currentAuditIds.add(id);
 for(const id of refreshRelease44(articles,notes))currentAuditIds.add(id);
+for(const id of refreshRelease119(articles,notes))currentAuditIds.add(id);
 for(const article of articles.filter(a=>currentAuditIds.has(a.id))){
  if(article.category==='items')itemAuditIds.add(article.id);
  if(article.category==='characters'||article.category==='buildings'||article.id.startsWith('boss-'))entityAuditIds.add(article.id);
