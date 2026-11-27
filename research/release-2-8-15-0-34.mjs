@@ -38,10 +38,10 @@ export function refreshRelease34(articles,notes){
     s.links=['dread-alarming-clock'];
   });
   add({
-    id:'shadowweaver-nightberry',title:'织影夜莓',category:'food',tag:'首领战利品',icon:'devil_heart2hm',
+    id:'shadowweaver-nightberry',title:'织影夜莓',category:'food',tag:'首领战利品',icon:'nightberry_fuelweaver2hm',
     summary:'正常击杀强化远古织影者可得，也可在暗影术基座制作。首次食用后，受到的伤害会分 10 次结算。',
-    aliases:['只因拟态梅','恶魔之心','Shadowweaver Nightberry'],keywords:'devil_heart2hm 缓伤 夜莓',
-    configKeys:['enable hard mode','monster_change','atriumstalker'],source:['content/modmain.lua','content/epic/atriumstalker.lua','content/scripts/prefabs/devil_heart2hm.lua'],
+    aliases:['只因拟态梅','恶魔之心','Shadowweaver Nightberry'],keywords:'nightberry_fuelweaver2hm 缓伤 夜莓',
+    configKeys:['enable hard mode','monster_change','atriumstalker'],source:['content/modmain.lua','content/epic/atriumstalker.lua','content/scripts/prefabs/nightberry_fuelweaver2hm.lua'],
     sections:[
       section('掉落与制作','开启困难模式、怪物改动与“远古织影者加强”后，正常击杀远古织影者额外掉落 1 个织影夜莓。大门失效、织影者消散时不掉。也可在暗影术基座用 4 个暗影碎布和 4 个夜莓制作，每次都需要靠近制作站。'),
       section('食用与缓伤','基础食物属性为 25 饥饿、0 生命、0 理智。玩家食用后永久获得缓伤，同一角色再次食用不会叠加。符合条件的一次扣血会按减伤后的数值分成 10 份，每 0.3 秒扣一份，多次受伤分别计时。分期扣血仍可致死。'),

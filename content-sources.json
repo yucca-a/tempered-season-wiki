@@ -1,6 +1,6 @@
 {
-  "version": "2.8.15.1.19",
-  "checkedAt": "2026-11-25",
+  "version": "2.8.15.1.20",
+  "checkedAt": "2026-11-27",
   "targetedRefresh": [
     "role-winona",
     "winona-toolbox",
@@ -4422,7 +4422,7 @@
       "source": [
         "content/modmain.lua",
         "content/epic/atriumstalker.lua",
-        "content/scripts/prefabs/devil_heart2hm.lua"
+        "content/scripts/prefabs/nightberry_fuelweaver2hm.lua"
       ],
       "configKeys": [
         "enable hard mode",
@@ -4481,6 +4481,13 @@
       ],
       "configKeys": [],
       "auditedVersion": "2.8.15.0.34"
+    },
+    {
+      "id": "update-2-8-15-1-20",
+      "source": [
+        "workshop/update-notes-2.8.15.1.20.txt"
+      ],
+      "configKeys": []
     },
     {
       "id": "update-2-8-15-1-19",

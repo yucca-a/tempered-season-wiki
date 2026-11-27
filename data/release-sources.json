@@ -1,7 +1,7 @@
 {
-  "version": "2.8.15.1.19",
-  "checkedAt": "2026-11-25",
-  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.19 source. Each article retains its own review version.",
+  "version": "2.8.15.1.20",
+  "checkedAt": "2026-11-27",
+  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.20 source. Each article retains its own review version.",
   "articles": [
     {
       "id": "getting-started",
@@ -1367,7 +1367,7 @@
       "source": [
         "content/modmain.lua",
         "content/epic/atriumstalker.lua",
-        "content/scripts/prefabs/devil_heart2hm.lua"
+        "content/scripts/prefabs/nightberry_fuelweaver2hm.lua"
       ],
       "configKeys": [
         "enable hard mode",
@@ -1466,8 +1466,8 @@
       "bytes": 13933
     },
     "content/common/frostshrine_skin.lua": {
-      "sha256": "c4be98621c9feee1dbc3cbaea46bbaaa599b9c1f626faebd77539ffa6999558e",
-      "bytes": 6970
+      "sha256": "258ba976cfe56bf8e2b851c2e76dcdada218ecb6909990080a980aa9bad267f6",
+      "bytes": 9080
     },
     "content/common/monster_nightvision.lua": {
       "sha256": "9b87dd4ac2a4cb22bf62da74be446c8608accf91ac2a521634f1654848081cf4",
@@ -1494,24 +1494,24 @@
       "bytes": 11645
     },
     "content/easy_other/containersort.lua": {
-      "sha256": "09a2d7ece2fe78af2dd81e5f71708092a11c754fb6c72d44a097961905b5e777",
-      "bytes": 231814
+      "sha256": "c69fdd19015392a9d88f8caf4eafc7aa63f590ce6c7d2e154f09c4408b572da9",
+      "bytes": 232447
     },
     "content/easy_other/easy_equipments.lua": {
-      "sha256": "6bffdbb16fa90f48f7e284c09e087f7e552adfcdd224237406e21aec39b975d4",
-      "bytes": 297300
+      "sha256": "b11c05e3798ca4306405db706512f346aaf171ff89d43772545c1050353f3256",
+      "bytes": 297335
     },
     "content/easy_other/easy_items.lua": {
-      "sha256": "3dba67d94e98bced63d04af81b8e3e1e52cb547fc5747190856eff0f3670ebab",
-      "bytes": 78809
+      "sha256": "1c2d8c58b6719df0927abc1f8b659908a4172de78efcbee4ebd25fe85f27a633",
+      "bytes": 79052
     },
     "content/easy_other/easy_mechanics.lua": {
       "sha256": "093ef9960d1209d614c8ee7f69a2d559c7e235fa04b4aeb761b4a0d0a0ede40e",
       "bytes": 37376
     },
     "content/easy_other/easy_structures.lua": {
-      "sha256": "3f5865f42ab186577ab75f7126ea09f921616c9cc5df09d35f7a6b72e77039ce",
-      "bytes": 170567
+      "sha256": "e200bf4afbaf2ca0c063eea1adee0c605a9d0bd489db76df60333e0a7918044b",
+      "bytes": 170150
     },
     "content/easy_other/exchangeclassic2hm.lua": {
       "sha256": "975620502a474e41c4be42a5a96f4f51b9d9f1cacdd2cc135dc65004b7901a73",
@@ -1634,8 +1634,8 @@
       "bytes": 56793
     },
     "content/epic/atriumstalker.lua": {
-      "sha256": "0b20117fcfa33947d5645e495976aa2fb1fcfcbda782e0d3b701319d18bede94",
-      "bytes": 31409
+      "sha256": "43b1c9ecc0e060ce360b5ea1d72203fd6d53ff06df5c6569fc41a9a310759d94",
+      "bytes": 31698
     },
     "content/epic/dynamic_armor.lua": {
       "sha256": "cec20f4b46de11e407a01027edca861e69f4ed0b4a639305a51c35e87d107684",
@@ -1686,12 +1686,12 @@
       "bytes": 17168
     },
     "content/modinfo.lua": {
-      "sha256": "ac3c598ea2859fde7d5e90a101f0f8c63b58686081be5e0eec4d23a4c7d5e81b",
+      "sha256": "d47a8ea3ef79ffcbbcfb6bc03655bd7a7c52822e8301b1ec874908d0324480ce",
       "bytes": 153055
     },
     "content/modmain.lua": {
-      "sha256": "0afaf3d0c6328dbf399288a09bb6fe202d5ec609bbf530bc636c2d752efc5521",
-      "bytes": 25860
+      "sha256": "07560afc390aef2945632496d7411485a0511eaad9cf0bcf6a3ce45fa2e72103",
+      "bytes": 26854
     },
     "content/modservercreationmain.lua": {
       "sha256": "83d3c7f17f0162a4c6adcddfc21672d44751cc287e22eba7cf4548c60babf5ea",
@@ -1706,8 +1706,8 @@
       "bytes": 10773
     },
     "content/ray/beye_actions.lua": {
-      "sha256": "4bdc980a841f944574d66a480a9ef4699826a38c274bc911d4bff332b3cf6e0d",
-      "bytes": 31187
+      "sha256": "07caf01957e5ed53c3302373a3110a9af8703b97ee5646511e159c6e6797aed7",
+      "bytes": 31406
     },
     "content/ray/beye_crafting.lua": {
       "sha256": "768739698a5190bb4c9eeb837d5815aa969c363e43bccc85f086e538f9e3aee2",
@@ -1726,8 +1726,8 @@
       "bytes": 1446
     },
     "content/ray/suijishengwuapi.lua": {
-      "sha256": "dc0fe5db01ad4de6a7f0d656cfba9d97443bae2f9f7b8def2d38f1d0ff672cdb",
-      "bytes": 36133
+      "sha256": "72014da6779f4ddb6e26b9ce50f7c0d85daab89a88e757f4c4fc6625734405a1",
+      "bytes": 36432
     },
     "content/role/clock_peril.lua": {
       "sha256": "3484bc413bfa76d23a01debe4ed3bf25c4cb6aacc745d9c0811cbe9f8cee8259",
@@ -1866,8 +1866,8 @@
       "bytes": 499
     },
     "content/scripts/exchangesolo2hm.lua": {
-      "sha256": "f63eaa680f5f0a278baaad6c28fefc0f86fa441d4af802a5ee24dbc858f71684",
-      "bytes": 6449
+      "sha256": "5326e29c70c312dc7b6a9fc5f94974deeeff0129da7817662178799d44cd824a",
+      "bytes": 8209
     },
     "content/scripts/exchangexianyurecovery2hm.lua": {
       "sha256": "4a856971e61dedb60bfa99b9291d35f120c790f8792957938300f58a2c150113",
@@ -1929,10 +1929,6 @@
       "sha256": "eba9a8bb10e28c8b3c3196aadf603bf663c7b6784ab223801e8e46ab59b88242",
       "bytes": 6569
     },
-    "content/scripts/prefabs/devil_heart2hm.lua": {
-      "sha256": "2b52920e2de21e59dffd12ce4d8f937beeb2825db2527bd0b42f022ab44d222c",
-      "bytes": 3521
-    },
     "content/scripts/prefabs/devilfruits2hm.lua": {
       "sha256": "bb0d07b43a78b148d1dfc52ffbdee7978272474eabc4236ef729a06ca7b4c81a",
       "bytes": 7996
@@ -1964,6 +1960,10 @@
     "content/scripts/prefabs/magician_private_container2hm.lua": {
       "sha256": "17d79da29f43777de6ca63dec0615531a057cd3fa542e00eeeb459f348a627f2",
       "bytes": 935
+    },
+    "content/scripts/prefabs/nightberry_fuelweaver2hm.lua": {
+      "sha256": "3acde7272de616feff4683a2497aac98275044381decc751e90db2d5ccc74a63",
+      "bytes": 3436
     },
     "content/scripts/prefabs/onion_celestial2hm.lua": {
       "sha256": "82b77a114c72fe15357a6f17e4ea00a0b5ed9e9a415181a4d837fc46b4bcb907",
@@ -2002,8 +2002,8 @@
       "bytes": 2925
     },
     "content/scripts/prefabs2hm.lua": {
-      "sha256": "7910d2e99740a65e9b3dc44818c3f4fdbc49bff5efe5916eb9f8fa5018e98590",
-      "bytes": 3910
+      "sha256": "e9b57b7e6853b123c5026011de2e33303ca5e6fa5cc8742b0767d0b2cb042520",
+      "bytes": 3999
     },
     "content/scripts/progressivecombat2hm.lua": {
       "sha256": "236d24d6395b3052a3b0546c50526ebde86bc767ddd289d37a1b5ede3a740f66",
@@ -2086,8 +2086,8 @@
       "bytes": 17753
     },
     "content/shadowworld.lua": {
-      "sha256": "420a2ef3bee2be24a433d6be93c8c5dc9fbf6a4c149b5ab84fb04653b720b5b0",
-      "bytes": 93286
+      "sha256": "aa819c9bffc8e3d2572f2ea24eab2a266a5d52730071840cdb69618e69742c05",
+      "bytes": 94227
     },
     "content/tech/ancient_altar.lua": {
       "sha256": "b5b603c5d82947ca1380ee329c8139c1fc71fb4fb7669e276c6b3c43d35832ae",
