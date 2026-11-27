@@ -250,7 +250,7 @@ add('wixie', '维希的幽闭恐惧和弹弓困难调整各有独立开关，不
 ], hard, ['content/role/walter.lua', 'content/common/walter_wixie_slingshot.lua']);
 
 // 明确纠正旧文和配置提示中与执行代码不同的部分。
-note('Willow Attack Dry/Burning Enemy', '非骑牛近战打燃烧目标+10%；火焰狂热期间每次非骑牛近战命中叠1层+5%（最多4层），合并上限+30%（最高×1.30），5秒未命中后每秒衰1层，且每次命中延长狂热15秒（上限60秒）。', [...easy, 'willow_easy']);
+note('Willow Attack Dry/Burning Enemy', '非骑牛近战打燃烧目标+10%；狂热焚烧期间每次非骑牛近战命中叠1层+5%（最多4层），合并上限+30%（最高×1.30），5秒未命中后每秒衰1层，且每次命中延长狂热焚烧15秒（上限60秒）。', [...easy, 'willow_easy']);
 note('Wolfgang Pause Drain When Satiated', '饥饿达到或超过所选值便暂停力量流失，默认≥100。永不妥协饥饿力量机制开启时跳过此覆盖。', [...easy, 'wolfgang_easy']);
 note('Wolfgang break Powerup/down', '不在健身房或举重状态时，把力量变化动作截到第10帧，约0.33秒，并非仅在战斗中才生效。', [...easy, 'wolfgang_easy']);
 note('Wendy Low HP Abigail Damage', '阿比盖尔伤害倍率＝1＋温蒂已损失生命比例×0.5。半血时×1.25，接近空血时接近×1.5，默认关闭。', [...easy, 'wendy_easy']);
