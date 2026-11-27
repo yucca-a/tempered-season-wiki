@@ -13,6 +13,12 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const rawValue=v=>typeof v==='string'?`"${v}"`:String(v);
 const href=id=>`${id}.html`;
 const releaseIndex=[
+ ['2.8.15.1.26','混乱之季/天体性能优化、熊獾伯尼巨大化贴图、玩偶调整与角色修复'],
+ ['2.8.15.1.25','薇洛月夜灼烧首次施放修复、狂热/燃烧延长上限与妥测黑寡妇兼容'],
+ ['2.8.15.1.24','薇洛狂热叠层、大伯尼分身续火与吸火控火优化'],
+ ['2.8.15.1.23','补充独立维护分支版权声明与画师 @萌星 美术来源'],
+ ['2.8.15.1.22','合并 2.8.15.1.21 全部改动（薇洛重做、天体三阶段优化与黑寡妇修复）'],
+ ['2.8.15.1.21','薇洛全量平衡重做、天体三阶段激光/月火合批优化与黑寡妇召唤修复'],
  ['2.8.15.1.20','熊獾玩偶与伯尼皮肤、暗影犀牛角/冻干独立、全生物影子血量统一与单人穿越修复'],
  ['2.8.15.1.19','疙瘩树加强、彼岸花之墓皮肤与战歌/牛铃/Boss/快捷键修复'],
  ['2.8.15.1.18','快捷收集、WX-78 夜视、韦斯分身与沃托克斯/沃托姆修复'],
@@ -88,7 +94,7 @@ await fs.mkdir(path.join(root,'releases'),{recursive:true});
 for(const [v,releaseTitle] of releaseIndex){
  const file=`update-notes-${v}.txt`,copy=path.join(root,'releases',file);
  try{await fs.copyFile(path.join(root,'../workshop',file),copy);}catch(e){if(e.code!=='ENOENT')throw e;}
- const releaseText=(await fs.readFile(copy,'utf8')).replace(/，由 Yucca 持续维护与调整/g,'');
+ const releaseText=(await fs.readFile(copy,'utf8')).replace(/，由 Yucca 持续维护与调整/g,'').replace(/（Yucca \/ 咸鱼）/g,'');
  await fs.writeFile(copy,releaseText);
  const lines=releaseText.replace(/^\uFEFF/,'').trim().split(/\r?\n/);if(lines[0].startsWith(v)||lines[0].startsWith('淬炼之季 '+v))lines.shift();
  const sections=[];let section={title:'更新内容',paragraphs:[],list:[]};
