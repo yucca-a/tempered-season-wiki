@@ -1,9 +1,9 @@
 {
-  "articles": 336,
+  "articles": 340,
   "configs": 461,
   "choices": 3400,
   "targetedRefresh": {
-    "version": "2.8.15.1.26",
+    "version": "2.8.15.1.30",
     "articles": [
       "role-winona",
       "winona-toolbox",
@@ -100,13 +100,13 @@
   "groups": 19,
   "images": 528,
   "itemAudit": {
-    "version": "2.8.15.1.26",
+    "version": "2.8.15.1.30",
     "articles": 64,
     "items": 62,
     "missing": []
   },
   "entityAudit": {
-    "version": "2.8.15.1.26",
+    "version": "2.8.15.1.30",
     "articles": 67,
     "characters": 25,
     "buildings": 22,
@@ -114,7 +114,7 @@
     "missing": []
   },
   "lifeAudit": {
-    "version": "2.8.15.1.26",
+    "version": "2.8.15.1.30",
     "articles": 51,
     "food": 18,
     "creatures": 33,

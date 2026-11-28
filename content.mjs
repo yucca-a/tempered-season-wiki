@@ -1,4 +1,4 @@
-export const meta = { version: '2.8.15.1.26', date: '2026-11-27', workshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3832182265', originalWorkshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2886753796' };
+export const meta = { version: '2.8.15.1.30', date: '2026-11-28', workshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3832182265', originalWorkshop: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2886753796' };
 export const categories = [
   { id: 'start', name: '开始游玩', symbol: '01', description: '了解模组，找到适合自己的起点。' },
   { id: 'mechanics', name: '核心机制', symbol: '02', description: '战斗、生存与两个世界之间的规则。' },
@@ -18,7 +18,7 @@ export const articles = [
   { id: 'configuration', title: '模组设置速查', category: 'start', tag: '配置', summary: '核心开关的默认值、生效条件与旧存档设置。', keywords: '配置 设置 默认 开关 简单模式 困难模式', source: ['content/modinfo.lua', 'development/gameplay-options-2026-11-04.txt'], sections: [
     { title: '先检查上级开关', paragraphs: ['多数子选项需要其所属模式和分类总开关一起开启。某个选项显示为启用，并不代表它在当前房间已经生效。明确标注“独立开关”的功能另行判断。'] },
     { title: '常用设置', table: { headers: ['选项', '当前默认', '生效条件 / 说明'], rows: [
-      ['战斗险境', '锋芒渐敛', '困难模式 + 角色改动'], ['巨兽装甲', '遇强则坚', '困难模式 + 怪物改动'], ['穿越机制', '世界协同（实验性）', '需开启容器按钮；所有分片档位一致'], ['巨兽摧毁', '80%', '旧档中的 100% 自动按 80% 生效，可重新选回 100%'], ['陷阱必中', '开启', '简单模式；可单独关闭'], ['怪物角色夜视', '开启', '包含沃托姆的回声视觉优化；不依赖模式或角色总开关'], ['维希：移除幽闭恐惧', '开启', '简单模式 + 角色加强；仅启用永不妥协时显示'], ['维希（Wixie）', '开启', '困难模式 + 角色改动；仅启用永不妥协时显示'], ['沃尔特可使用维希弹弓', '开启', '仅启用永不妥协时显示；沃尔特使用原版弹药'], ['永不妥协补丁', '开启', '需要加载永不妥协；旧有启用档统一视为开启'],
+      ['战斗险境', '锋芒渐敛', '困难模式 + 角色改动'], ['巨兽装甲', '遇强则坚', '困难模式 + 怪物改动'], ['穿越机制', '世界协同（实验性）', '需开启容器按钮；所有分片档位一致'], ['巨兽摧毁', '80%', '旧档中的 100% 自动按 80% 生效，可重新选回 100%'], ['陷阱必中', '开启', '简单模式；可单独关闭'], ['怪物角色夜视', '开启', '包含沃托姆的回声视觉优化；不依赖模式或角色总开关'], ['维希：移除幽闭恐惧', '开启', '简单模式 + 角色加强；仅启用永不妥协时显示'], ['维希（Wixie）', '开启', '困难模式 + 角色改动；仅启用永不妥协时显示'], ['沃尔特可使用维希弹弓', '关闭（开勋章自动开启）', '仅启用永不妥协时显示；开启后双方可按所持弹弓互通路线'], ['永不妥协补丁', '开启', '需要加载永不妥协；旧有启用档统一视为开启'],
     ] } },
     { title: '旧存档为什么不同', paragraphs: ['多数明确保存的设置会保留，例如传统战斗险境或传统巨兽装甲。升级时，旧穿越设置默认迁移到世界协同，旧版 100% 巨兽摧毁迁移到 80%。升级后仍可手动调整。', '游戏内查看模组配置时，优先展示当前世界实际设置，包括已关闭项目和非默认值。'] },
     { title: '进一步阅读', links: ['combat', 'armor', 'world-exchange', 'mechanic-epic-ruin', 'night-vision', 'wixie', 'um-item-compatibility'] },
@@ -72,7 +72,7 @@ export const articles = [
     { title: '多人动作表现', paragraphs: ['弹弓动作速度按发射者选择配置，避免不同角色、不同饥饿值玩家之间互相影响动作时间线。'], links: ['walter'] },
   ] },
   { id: 'walter', title: '沃尔特 · 弹弓权限', category: 'characters', tag: '角色', summary: '原版、改装与维希专属弹弓的使用范围。', keywords: 'Walter 沃尔特 弹弓 装弹 蓄力 废料框架', source: ['workshop/update-notes-2.8.14.97.2.txt', 'workshop/update-notes-2.8.14.97.3.txt'], sections: [
-    { title: '开关只影响维希专属弹弓', paragraphs: ['“沃尔特可使用维希弹弓”默认开启，只控制维希专属弹弓。沃尔特使用原版及改装弹弓时，无论该项是否开启，都应能正常装备、装弹和射击。'] },
+    { title: '开关只影响维希专属弹弓', paragraphs: ['“沃尔特可使用维希弹弓”默认关闭，启用能力勋章时自动开启。开启后沃尔特可使用维希弹弓并在其上装填对应维希弹药，按所持弹弓切换路线；沃尔特使用原版及改装弹弓时，无论该项是否开启，都只装填原版弹药并走原版路线。'] },
     { title: '永不妥协兼容', paragraphs: ['兼容正式版与测试版。已修复开启上述选项后原版弹弓误变近身推击的问题。', '2.8.14.97.3 修复废料框架弹弓及升级版的蓄力、松键发射问题，并补齐升级废料框架弹弓的普通射击权限。'] },
     { title: '相关条目', links: ['wixie', 'update-2-8-14-97-3'] },
   ] },

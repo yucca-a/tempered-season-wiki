@@ -1,6 +1,6 @@
 {
-  "version": "2.8.15.1.26",
-  "sourceHash": "f57b8b8fd076167617fffc914117b30f5a57596d4f8a28cd398e638ef165e499",
+  "version": "2.8.15.1.30",
+  "sourceHash": "7a171c96e75bd91888527e602b671478dea597303531ee2dddde13726fb391f1",
   "total": 461,
   "configs": [
     {
@@ -178,7 +178,7 @@
       "references": [
         {
           "file": "content/common/patch.lua",
-          "line": 499
+          "line": 512
         }
       ]
     },
@@ -206,7 +206,7 @@
       "references": [
         {
           "file": "content/common/patch.lua",
-          "line": 473
+          "line": 486
         }
       ]
     },
@@ -4591,7 +4591,7 @@
         },
         {
           "file": "content/easy_role/willow_easy.lua",
-          "line": 288
+          "line": 315
         }
       ]
     },
@@ -4664,11 +4664,11 @@
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
-          "line": 179
+          "line": 206
         },
         {
           "file": "content/easy_role/willow_easy.lua",
-          "line": 181
+          "line": 208
         }
       ]
     },
@@ -4724,7 +4724,7 @@
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
-          "line": 363
+          "line": 390
         }
       ]
     },
@@ -4752,7 +4752,7 @@
       "references": [
         {
           "file": "content/easy_role/willow_easy.lua",
-          "line": 437
+          "line": 464
         }
       ]
     },
@@ -8114,8 +8114,8 @@
     {
       "key": "Walter Use Wixie Slingshot",
       "label": "沃尔特可使用维希弹弓",
-      "description": "仅在启用永不妥协时显示，默认开启。沃尔特可用原版弹药操作维希专属弹弓，专属弹药由维希制作和使用。",
-      "default": true,
+      "description": "仅在启用永不妥协时显示，默认关闭；启用能力勋章时自动开启。开启后沃尔特可用维希弹弓并制作/装填对应维希弹药（按所持弹弓切换路线），维希也可佩戴童心/童真勋章操作沃尔特弹弓（摘下勋章时自动卸下改装弹弓）。",
+      "default": false,
       "options": [
         {
           "label": "禁用",
@@ -8134,8 +8134,12 @@
       "line": 873,
       "references": [
         {
+          "file": "content/common/um_medal_walter.lua",
+          "line": 62
+        },
+        {
           "file": "content/common/walter_wixie_slingshot.lua",
-          "line": 8
+          "line": 10
         }
       ]
     },
@@ -9909,7 +9913,7 @@
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
-          "line": 275
+          "line": 296
         },
         {
           "file": "content/easy_role/role_common.lua",
@@ -11640,7 +11644,7 @@
       "references": [
         {
           "file": "content/easy_role/rightaction.lua",
-          "line": 577
+          "line": 598
         },
         {
           "file": "content/easy_role/wanda_easy.lua",
@@ -13261,7 +13265,7 @@
       "references": [
         {
           "file": "content/common/patch.lua",
-          "line": 392
+          "line": 405
         },
         {
           "file": "content/food/fooddata.lua",

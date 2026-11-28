@@ -1,7 +1,7 @@
 {
-  "version": "2.8.15.1.26",
-  "checkedAt": "2026-11-27",
-  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.26 source. Each article retains its own review version.",
+  "version": "2.8.15.1.30",
+  "checkedAt": "2026-11-28",
+  "method": "Cumulative targeted articles and their source fingerprints in the 2.8.15.1.30 source. Each article retains its own review version.",
   "articles": [
     {
       "id": "getting-started",
@@ -1494,24 +1494,24 @@
       "bytes": 14401
     },
     "content/common/frostshrine_skin.lua": {
-      "sha256": "36ea580cb43621d340be1b46022aa60c8ecc59c5ae0a4705a5ec9b8a9dcf7baa",
-      "bytes": 9542
+      "sha256": "a27c6f7608233d7e624090662ffcffdcdbc48b4e5819feb7fea8137fb86d9a13",
+      "bytes": 9951
     },
     "content/common/monster_nightvision.lua": {
       "sha256": "2f87c6b762d908c7b2471367b58d0a57733214d300799ffbd4b9ec8b12d65512",
       "bytes": 12439
     },
     "content/common/patch.lua": {
-      "sha256": "43096e008fcc6c49b6c7b0bb516762d7acff4f7f85a2ba67bf18e739615d5eb4",
-      "bytes": 31960
+      "sha256": "8f50f2b6611b397d0ffb5a79fe9d01979551dc986ce8976845611b7d3efbe2bb",
+      "bytes": 43401
     },
     "content/common/um_compat_fixes.lua": {
-      "sha256": "d676e126dcfd3343dee6abbb5ddb4cbece49da0598a15a72a5481deb4640c223",
-      "bytes": 11898
+      "sha256": "33797e16ec3beb43658c0c2096bc1960753d0be6f6f196ff7c0ef4eda8c38ee0",
+      "bytes": 14196
     },
     "content/common/walter_wixie_slingshot.lua": {
-      "sha256": "1f193701c8f5b5991f1ae98ef8ed5dafe20c8b29934927bfa4298ba499e31ac2",
-      "bytes": 16362
+      "sha256": "36616b23448bc3661de3031d6283985a726f46857c4949bc88f9737bae2b672f",
+      "bytes": 20734
     },
     "content/common/wx78_mode.lua": {
       "sha256": "e98f1db8c0a1cc126fda0a05970df12cbe86a8fe9a1c6046ea086f0213a24a6f",
@@ -1526,8 +1526,8 @@
       "bytes": 232967
     },
     "content/easy_other/easy_equipments.lua": {
-      "sha256": "e266c25f406b01bfa7cf9eb4685fd38bc3e5e36ca01bdf27efca6b33870198a0",
-      "bytes": 297851
+      "sha256": "748112e5fa6803208695309a8f2edb27b9a16d8280d0a57cb23378a87d220285",
+      "bytes": 297888
     },
     "content/easy_other/easy_items.lua": {
       "sha256": "221960b6dc01167034d5350284b030d822af919c1736acecf6ebd98999e04b52",
@@ -1550,8 +1550,8 @@
       "bytes": 3229
     },
     "content/easy_other/eyeturret2hm.lua": {
-      "sha256": "21b29b78ce6099970593840e36b90206defb83f35fb677d0308099d802883ade",
-      "bytes": 24071
+      "sha256": "5eea3ba1d55286330c28d9737a2139e8e15f1a6519ca217d6eefd5aa8612a616",
+      "bytes": 27125
     },
     "content/easy_other/lunar_shadow_items.lua": {
       "sha256": "46f73b0039a16bf7b6653d9a767b90ba1626eefe36503f228ad212dd36cf86e9",
@@ -1578,20 +1578,20 @@
       "bytes": 12272
     },
     "content/easy_other/um_patch.lua": {
-      "sha256": "ff02a65447590978c32cdbcbe0abc2356c5534f36b28817eeffa7f858496256c",
-      "bytes": 46732
+      "sha256": "8bf9d0cd28c322d983677b859167792944c36b3b8c9248fb83ac966ffef14ecf",
+      "bytes": 48363
     },
     "content/easy_role/attackaction.lua": {
       "sha256": "80d0d922d9caefd78b84db3d089bf4cc4748ef72f619a206942a4cd2d81935b2",
       "bytes": 3021
     },
     "content/easy_role/rightaction.lua": {
-      "sha256": "88524273d4e45ebed5e047ad934830d79c64810c44ba4e79f734dba0f6974a2b",
-      "bytes": 65303
+      "sha256": "3c393a1a4f32d12025714d04fa278980322ee4903267b648411014958fd0a4df",
+      "bytes": 66075
     },
     "content/easy_role/rightselfaction.lua": {
-      "sha256": "17b3d3c8f192a7a81d7165c9ecf9b0f4934ca3abede1a0636160d0a1b35de950",
-      "bytes": 9341
+      "sha256": "06bf785334216354bc101479fc9c9ee7db7b3af8950d543ef7936ba7df2e7237",
+      "bytes": 9753
     },
     "content/easy_role/role_common.lua": {
       "sha256": "4860a456fb2b279dac8f544b0adab4c64a1f4260556ab17a18db018f7f9fbf7f",
@@ -1626,8 +1626,8 @@
       "bytes": 73346
     },
     "content/easy_role/willow_easy.lua": {
-      "sha256": "2d865f739dee9c2aa42389a6bcf8735961591c613d62192f26f7581f85573676",
-      "bytes": 32436
+      "sha256": "e32ce8a5e655edfbe48d68417d317c9fd1d29d10cad33541ceb6e65bf3079f10",
+      "bytes": 34125
     },
     "content/easy_role/winona_easy.lua": {
       "sha256": "59717703e8cf53724917a29b646bcde647e37e4c4c044ddaeb5571c3d7060cc6",
@@ -1690,8 +1690,8 @@
       "bytes": 25509
     },
     "content/extra/extra.lua": {
-      "sha256": "d77ab969ea92bfdc067a563fcf910fd6990007bd1a8245011cca907b94f6ff04",
-      "bytes": 23713
+      "sha256": "96cc3babca5069bc7e3e7e74a06c49c66625fcc0c2fc081a7e4f382c6544192a",
+      "bytes": 24808
     },
     "content/extra/frostjaw_trade.lua": {
       "sha256": "90b47e13c2a5f7fa9e0008290dab23a8244905d1ac16d74a6154b7cf3caba90c",
@@ -1718,12 +1718,12 @@
       "bytes": 17636
     },
     "content/modinfo.lua": {
-      "sha256": "f57b8b8fd076167617fffc914117b30f5a57596d4f8a28cd398e638ef165e499",
-      "bytes": 156486
+      "sha256": "7a171c96e75bd91888527e602b671478dea597303531ee2dddde13726fb391f1",
+      "bytes": 156798
     },
     "content/modmain.lua": {
-      "sha256": "258a51adf998dd763d4d3b3a8648b400fb7b6f312d17e25728bb8a243019316e",
-      "bytes": 27833
+      "sha256": "b92affae2224f5ab6ab08fe14285da893d45da3d28f2d23119fe7d763df87be4",
+      "bytes": 27873
     },
     "content/modservercreationmain.lua": {
       "sha256": "fe53410eced1c8127800fb8e80a7e59bfafde0acacf8d77b77654494ecc4d6f5",
@@ -1934,8 +1934,8 @@
       "bytes": 9586
     },
     "content/scripts/keybindings2hm.lua": {
-      "sha256": "506a9c48cbcbf82aa4ec1761026a139f54719b55dc0852ad64e9e37e33550a07",
-      "bytes": 21931
+      "sha256": "2003f314bcc847804f3e887c943a90ba88c705fea0d617d35596df033385e31d",
+      "bytes": 24853
     },
     "content/scripts/keybindingscreen2hm.lua": {
       "sha256": "6bdcd22d960de7bf110b9d83f76333cd3b6bcdb427e49d7505a921ec9c3d9515",
@@ -2118,8 +2118,8 @@
       "bytes": 22265
     },
     "content/scripts/wx78draftpower2hm.lua": {
-      "sha256": "0153e66f4f8df4b66bd2ba8f0caa53fd5ef35183be3b9a403ea1607133ec71ff",
-      "bytes": 18168
+      "sha256": "c99bd07f10a94215cb30d9f03d324b4ab258f1f9aa2df796a04311382ad9ca3b",
+      "bytes": 19480
     },
     "content/shadowworld.lua": {
       "sha256": "fa4b67b973d4f4a61aed2d4942434884b263b8217f2b3e30f80f4888cda9b728",

@@ -1,6 +1,6 @@
 {
-  "version": "2.8.15.1.26",
-  "checkedAt": "2026-11-27",
+  "version": "2.8.15.1.30",
+  "checkedAt": "2026-11-28",
   "targetedRefresh": [
     "role-winona",
     "winona-toolbox",
@@ -4486,6 +4486,34 @@
       ],
       "configKeys": [],
       "auditedVersion": "2.8.15.0.34"
+    },
+    {
+      "id": "update-2-8-15-1-30",
+      "source": [
+        "workshop/update-notes-2.8.15.1.30.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-1-29",
+      "source": [
+        "workshop/update-notes-2.8.15.1.29.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-1-28",
+      "source": [
+        "workshop/update-notes-2.8.15.1.28.txt"
+      ],
+      "configKeys": []
+    },
+    {
+      "id": "update-2-8-15-1-27",
+      "source": [
+        "workshop/update-notes-2.8.15.1.27.txt"
+      ],
+      "configKeys": []
     },
     {
       "id": "update-2-8-15-1-26",
